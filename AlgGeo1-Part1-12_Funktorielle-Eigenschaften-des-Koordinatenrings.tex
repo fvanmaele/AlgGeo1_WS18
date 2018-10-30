@@ -1,0 +1,92 @@
+\selectlanguage{english}%
+
+\section{Funktorielle Eigenschaften von $\Gamma(X)$}
+
+\subsection*{Satz 29}
+
+Für einen Morphismus $X\xrightarrow{f}Y$ affiner algebraischer Mengen
+definiert 
+\begin{align*}
+\Gamma(f):\hom(Y=\Gamma(Y),\mathbb{A}^{1}(k)) & \rightarrow\hom(X=\Gamma(X),\mathbb{A}^{1}(k))\\
+g & \mapsto g\circ f
+\end{align*}
+
+ein Homomorphismus von $k$-Algebren. Der so definierte \emph{kontravariante}
+Funktor
+\[
+\Gamma:\{\text{affine algebraische Mengen\}}\rightarrow\{\text{red. endl. erz. }k\text{-Alg.}\}
+\]
+
+liefert eine Kategorienäquivalenz, der durch Einschränkung eine Äquivalenz
+\[
+\Gamma:\{\text{irred. aff. alg. Meng.\}}\rightarrow\{\text{integere endl. erz. }k\text{-Alg.\}}
+\]
+
+induziert.
+
+\subsubsection*{Beweis (Satz 29)}
+
+$Y\xrightarrow{g}\mathbb{A}^{1}(k)\in\Gamma(Y)$ ist Morphismus. $\Rightarrow g\circ f:X\xrightarrow{f}Y\xrightarrow{g}\mathbb{A}^{1}(k)$
+ist ..., d.h. $\in\Gamma(X)$. 
+
+$\Gamma(f):\Gamma(Y)\rightarrow\Gamma(X)$ ist ein $k$-Alg.-Hom.
+und Kompositions....  (nach Bemerkung 24) mit $\Gamma(\text{id}_{X})=\text{id}_{\Gamma(X)}$.
+Da ferner $\Gamma(f_{1}\circ f_{2})=\Gamma(f_{2})\circ\Gamma(f_{1})$
+aus der Definition folgt, ist $\Gamma$ ein kontravarianter Funktor.
+
+\paragraph{Behauptung}
+
+$\Gamma$ ist volltreu, d.h.
+\begin{align*}
+\Gamma:\hom(X,Y) & \rightarrow\hom(\Gamma(Y),\Gamma(X))\\
+f & \mapsto\Gamma(f)
+\end{align*}
+
+ist \emph{bijektiv} für alle affinen algebraischen Mengen $X,Y$.
+
+\paragraph{Beweis}
+
+Wir konstruieren eine Umkehrabbildung wie folgt: Zu $\varphi:\Gamma(Y)\rightarrow\Gamma(X)$
+für $X\subseteq\mathbb{A}^{n}$, $Y\subseteq\mathbb{A}^{n}$ existiert:
+\[
+\xymatrix{k[T_{1}',\ldots,T_{k}']\ar[r]^{\tilde{\varphi}}\ar@{->>}[d] & k[T_{1},\ldots,T_{m}]\ar@{->>}[d]\\
+\Gamma(Y)\ar[r] & \Gamma(X)
+}
+\]
+kommutiert ($\tilde{\varphi}(T_{1}'):=$ impede  liften $\varphi(\pi(T_{i}'))$
+in  $k[\underline{T}]$). Definiere
+\begin{align*}
+f:X & \rightarrow Y\\
+x=(x_{1},\ldots,x_{n}) & \mapsto(\tilde{\varphi}(T_{1}')(x_{1},\ldots,x_{n}),\ldots,\tilde{\varphi}(T_{n}')(x_{1},\ldots,x_{n}))
+\end{align*}
+
+
+\paragraph{Behauptung}
+
+$\Gamma$ ist essentiell surjektiv, d.h. zu jeder reduzierten endlich
+erzeugten $k$-Algebra $A$ existiert eine affine algebraische Menge
+$X$ mit $A\cong\Gamma(X)$.
+
+\paragraph{Beweis}
+
+Da nach Voraussetzung $A\cong k[T]/\mathfrak{A}$ für Radikalideal
+$\mathfrak{A}$, können wir etwa $X:=V(\mathfrak{A})\subseteq\mathbb{A}^{n}(k)$
+setzen. Der Rest folgt aus Satz 28.
+
+\subsection*{Satz 30}
+
+Sei $f:X\rightarrow Y$ ein Morphismus und $\Gamma(f):\Gamma(Y)\rightarrow\Gamma(X)$
+der zugehörige Homomorphismus der Koordinatenringe. Dann gilt $\forall x\in X$:
+$\Gamma(f)^{-1}(\mathfrak{m}_{x})=\mathfrak{m}_{f}(x)$.
+
+\subsubsection*{Beweis (Satz 30)}
+
+Setting: 
+\begin{align*}
+\mathfrak{m}_{f(x)}=\{g\mid g(f(x))=0\}\subset\hom(Y,\mathbb{A}^{1})=\Gamma(Y) & \xrightarrow{\Gamma(f)}\Gamma(X)=\hom(X,\mathbb{A}^{1})\supset\{k\mid k(x))=0\}\\
+g & \mapsto g\circ f
+\end{align*}
+
+$\Gamma(f)^{-1}(\mathfrak{m}_{x})=\{g\in\Gamma(Y)\mid g\circ f(x)\neq0\}=\mathfrak{m}_{f(x)}$,
+da $\Gamma(f)(g)(x)=g(f(x))$.\selectlanguage{ngerman}%
+

@@ -1,0 +1,335 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\begin_modules
+theorems-ams
+theorems-ams-extended
+theorems-sec
+enumitem
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+
+\lang ngerman
+Korrespondenz zwischen Radikalidealen und affinen algebraischen Mengen
+\end_layout
+
+\begin_layout Standard
+
+\lang ngerman
+Sei 
+\begin_inset Formula $V(\mathfrak{A})\subseteq\mathbb{A}^{n}(k)$
+\end_inset
+
+ affin algebraische Menge, 
+\begin_inset Formula $\mathfrak{A}\subset k[\underline{T}]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\lang ngerman
+Es gilt:
+\series default
+ 
+\begin_inset Formula $V(\mathfrak{A})=V(\text{rad\,}\mathfrak{A})$
+\end_inset
+
+ mit 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\rad\mathfrak{A}=\{f\in k[\underline{T}]\mid f^{n}\in\mathfrak{A}$
+\end_inset
+
+ für 
+\begin_inset Formula $n>0\}$
+\end_inset
+
+, da
+\begin_inset Formula 
+\[
+f^{n}(x)=0\Leftrightarrow f(x)=0,
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang ngerman
+d.h.
+ verschiedene Ideale können dieselbe algebraische Menge beschreiben.
+\end_layout
+
+\begin_layout Subsection
+
+\lang ngerman
+Definition 9
+\end_layout
+
+\begin_layout Standard
+
+\lang ngerman
+Für eine Teilmenge 
+\begin_inset Formula $Z\subseteq\mathbb{A}^{n}(k)$
+\end_inset
+
+ bezeichne
+\begin_inset Formula 
+\[
+I(Z)=\{f\in k[\underline{T}]\mid f(x)=0\ \forall x\in Z\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang ngerman
+das Ideal aller auf 
+\begin_inset Formula $Z$
+\end_inset
+
+ verschwindenden Polynomfunktionen.
+\end_layout
+
+\begin_layout Subsection
+
+\lang ngerman
+Satz 10
+\end_layout
+
+\begin_layout Enumerate
+
+\lang ngerman
+\begin_inset Formula $\mathfrak{A}\subset k[\underline{T}]$
+\end_inset
+
+ Ideal 
+\begin_inset Formula $\Rightarrow I(V(\mathfrak{A}))=\rad(\mathfrak{A})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\lang ngerman
+\begin_inset Formula $Z\subseteq\mathbb{A}^{n}(k)$
+\end_inset
+
+ Teilmenge 
+\begin_inset Formula $\Rightarrow V(I(Z))=\overline{Z}$
+\end_inset
+
+, der Abschluss von 
+\begin_inset Formula $Z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang ngerman
+Beweis (Satz 10)
+\end_layout
+
+\begin_layout Standard
+
+\lang ngerman
+Algebra II, Übungsaufgabe.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\lang ngerman
+TODO
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang ngerman
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang ngerman
+\begin_inset Formula $\mathfrak{A}$
+\end_inset
+
+ heißt 
+\series bold
+Radikalideal
+\series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\lang ngerman
+Radikalideal
+\end_layout
+
+\end_inset
+
+, wenn 
+\begin_inset Formula $\mathfrak{A}=\rad(\mathfrak{A})$
+\end_inset
+
+, oder äquivalent wenn 
+\begin_inset Formula $\faktor{k[\underline{T}]}{\mathfrak{A}}$
+\end_inset
+
+ 
+\emph on
+reduziert
+\emph default
+ ist, d.h.
+ keine nilpotente Elemente hat.
+\end_layout
+
+\begin_layout Subsection
+
+\lang ngerman
+Korollar 11
+\end_layout
+
+\begin_layout Standard
+
+\lang ngerman
+Wir erhalten eine 1-1 Korrespondenz
+\begin_inset Formula 
+\begin{align*}
+\{\text{abg. Mengen }\subseteq\mathbb{A}^{n}\} & \leftrightarrow\{\text{Radikalideale }\mathfrak{A}\subset k[\underline{T}]\}\\
+Z & \mapsto I(Z)\\
+V(\mathfrak{A}) & \mapsfrom\mathfrak{A}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang ngerman
+die sich zu einer 1-1 Korrespondenz
+\begin_inset Formula 
+\begin{align*}
+\left\{ \text{Punkte in }\mathbb{A}^{n}\right\}  & \leftrightarrow\left\{ \text{max. Ideale in }k[\underline{T}]\right\} \\
+x=(x_{1},\ldots,x_{n}) & \mapsto\begin{array}{rl}
+\mathfrak{m}_{x} & =I(\{x\})\\
+ & =\ker(k[\underline{T}]\rightarrow k,\ T_{i}\mapsto x_{i})
+\end{array}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang ngerman
+einschränkt.
+\end_layout
+
+\end_body
+\end_document

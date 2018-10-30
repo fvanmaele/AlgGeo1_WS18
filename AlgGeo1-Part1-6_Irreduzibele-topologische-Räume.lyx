@@ -1,0 +1,544 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\begin_modules
+theorems-ams
+theorems-ams-extended
+theorems-sec
+enumitem
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+
+\lang ngerman
+Irreduzibele topologische Räume
+\end_layout
+
+\begin_layout Standard
+
+\lang ngerman
+Die folgenden topologische Begriffe sind nur interessant, da 
+\begin_inset Formula $\mathbb{A}^{n}(k)$
+\end_inset
+
+ (
+\begin_inset Formula $n>0$
+\end_inset
+
+) kein Hausdorff'scher Raum ist.
+\end_layout
+
+\begin_layout Subsection
+
+\lang ngerman
+Definition 11
+\end_layout
+
+\begin_layout Standard
+
+\lang ngerman
+Ein topologischer Raum 
+\begin_inset Formula $X$
+\end_inset
+
+ heißt 
+\series bold
+irreduzibel
+\series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\lang ngerman
+irreduzibel
+\end_layout
+
+\end_inset
+
+, wenn 
+\begin_inset Formula $X\neq\emptyset$
+\end_inset
+
+ und 
+\begin_inset Formula $X$
+\end_inset
+
+ sich 
+\emph on
+nicht
+\emph default
+ als Vereinigung zweier echter abgeschlossenen Teilmengen darstellen lässt,
+ d.h
+\begin_inset Formula 
+\[
+X=A_{1}\cup A_{2},\ A_{i}\ \text{abg.}\quad\Rightarrow\quad A_{1}=X\text{ oder }A_{2}=X.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang ngerman
+\begin_inset Formula $Z\subset X$
+\end_inset
+
+ heißt irreduzibel, falls 
+\begin_inset Formula $Z$
+\end_inset
+
+ mit der induzierten Topologie irreduzibel ist.
+\end_layout
+
+\begin_layout Subsection
+
+\lang ngerman
+Satz 12
+\end_layout
+
+\begin_layout Standard
+
+\lang ngerman
+Für einen topologischen Raum 
+\begin_inset Formula $X$
+\end_inset
+
+ sind äquivalent:
+\end_layout
+
+\begin_layout Enumerate
+
+\lang ngerman
+\begin_inset Formula $X$
+\end_inset
+
+ ist irreduzibel.
+\end_layout
+
+\begin_layout Enumerate
+
+\lang ngerman
+Je zwei nichtleere offenen Teilmengen von 
+\begin_inset Formula $X$
+\end_inset
+
+ haben nicht-leeren Durchschnitt.
+\end_layout
+
+\begin_layout Enumerate
+
+\lang ngerman
+Jede nichtleere offene Teilmenge 
+\begin_inset Formula $U\subset X$
+\end_inset
+
+ ist dicht in 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\lang ngerman
+Jede nichtleere offene Teilmenge 
+\begin_inset Formula $U\subset X$
+\end_inset
+
+ ist zusammenhängend.
+\end_layout
+
+\begin_layout Enumerate
+
+\lang ngerman
+Jede nichtleere offene Teilmenge 
+\begin_inset Formula $U\subset X$
+\end_inset
+
+ ist irreduzibel.
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang ngerman
+Beweis (Satz 12)
+\end_layout
+
+\begin_layout Standard
+
+\lang ngerman
+\begin_inset Formula $(i)\Leftrightarrow(ii)$
+\end_inset
+
+ Komplementsmengen.
+\end_layout
+
+\begin_layout Standard
+
+\lang ngerman
+\begin_inset Formula $(ii)\Leftrightarrow(iii)$
+\end_inset
+
+ da: 
+\begin_inset Formula $(U\subset X$
+\end_inset
+
+ dicht 
+\begin_inset Formula $\Leftrightarrow U\cap O\neq\emptyset$
+\end_inset
+
+ für jedes offene 
+\begin_inset Formula $\emptyset\neq O\subset X$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+
+\lang ngerman
+\begin_inset Formula $(iii)\Rightarrow(iv)$
+\end_inset
+
+ klar.
+\end_layout
+
+\begin_layout Standard
+
+\lang ngerman
+\begin_inset Formula $(iv)\Rightarrow(iii)$
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $\emptyset\neq U$
+\end_inset
+
+ offen und zusammenhängend.
+\end_layout
+
+\begin_layout Standard
+
+\lang ngerman
+\begin_inset Formula $\Rightarrow U=U_{1}\sqcup U_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang ngerman
+\begin_inset Formula $\emptyset\neq U_{i}\underset{\text{offen}}{\subset}U\underset{\text{offen}}{\subset}X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang ngerman
+\begin_inset Formula $\Rightarrow U_{1}\cap U_{2}=\emptyset$
+\end_inset
+
+, Widerspruch zu (iii).
+\end_layout
+
+\begin_layout Standard
+
+\lang ngerman
+\begin_inset Formula $(v)\Rightarrow(i)$
+\end_inset
+
+ klar 
+\begin_inset Formula $(U=X)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\lang ngerman
+\begin_inset Formula $(iii)\Rightarrow(v)$
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $\emptyset\neq U\underset{\text{offen}}{\subset}X$
+\end_inset
+
+.
+ Ist 
+\begin_inset Formula $\emptyset\neq V\underset{\text{offen}}{\subset}U\Rightarrow V\underset{\text{offen}}{\subseteq}X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang ngerman
+\begin_inset Formula $\Rightarrow V$
+\end_inset
+
+ dicht in 
+\begin_inset Formula $X$
+\end_inset
+
+, irreduzibel 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\lang ngerman
+?
+\end_layout
+
+\end_inset
+
+ in 
+\begin_inset Formula $U$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang ngerman
+\begin_inset Formula $\overset{(iii)\Rightarrow(i)}{\Rightarrow}U$
+\end_inset
+
+ irreduzibel.
+\end_layout
+
+\begin_layout Subsection
+
+\lang ngerman
+Lemma 13
+\end_layout
+
+\begin_layout Standard
+
+\lang ngerman
+Eine Teilmenge 
+\begin_inset Formula $Y$
+\end_inset
+
+ ist genau dann irreduzibel, wenn ihr Abschluss 
+\begin_inset Formula $\overline{Y}$
+\end_inset
+
+ dies 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ist.
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang ngerman
+Beweis (Lemma 13)
+\end_layout
+
+\begin_layout Standard
+
+\lang ngerman
+\begin_inset Formula $Y$
+\end_inset
+
+ irreduzibel 
+\begin_inset Formula $\Leftrightarrow\forall U,V\subset X$
+\end_inset
+
+ offen mit 
+\begin_inset Formula $U\cap Y\neq\emptyset\neq V\cap Y$
+\end_inset
+
+ gilt 
+\begin_inset Formula $Y\cap(U\cap V)\neq\emptyset$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang ngerman
+\begin_inset Formula $\Leftrightarrow\overline{Y}$
+\end_inset
+
+ irreduzibel.
+\end_layout
+
+\begin_layout Subsection
+
+\lang ngerman
+Definition 14
+\end_layout
+
+\begin_layout Standard
+
+\lang ngerman
+Eine maximale irreduzibele Teilmenge eines topologischen Raumes 
+\begin_inset Formula $X$
+\end_inset
+
+ heißt 
+\series bold
+irreduzibele Komponente
+\series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\lang ngerman
+irreduzibele Komponente
+\end_layout
+
+\end_inset
+
+ von 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+
+\lang ngerman
+Bemerkung 15
+\end_layout
+
+\begin_layout Enumerate
+
+\lang ngerman
+Jede irreduzibele Komponente ist abgeschlossen nach Lemma 14.
+\end_layout
+
+\begin_layout Enumerate
+
+\lang ngerman
+\begin_inset Formula $X$
+\end_inset
+
+ ist Vereinigung seiner irreduzibelen Komponenten, 
+\emph on
+denn
+\emph default
+: 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\lang ngerman
+die Menge der irreduzibelen Teilmengen von 
+\begin_inset Formula $X$
+\end_inset
+
+ ist 
+\series bold
+induktiv geordnet
+\series default
+: für jede aufsteigende Kette irreduzibeler Teilmengen ist die Vereinigung
+ wieder irreduzibel.
+ (Satz 13 (ii)).
+ Mit dem 
+\series bold
+Lemma von Zorn
+\series default
+ folgt: Jede irreduzibele Teilmenge ist in einer irreduzibelen Komponente
+ enthalten.
+ Damit ist jeder Punkt in einer irreduzibelen Komponente enthalten.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

@@ -1,0 +1,105 @@
+\selectlanguage{english}%
+
+\paragraph*{Affine algebraische Mengen als Räume von Funktionen}
+
+\section{Der affine Koordinatensatz}
+
+Sei $X\subseteq\mathbb{A}^{n}(k)$ abgeschlossen. Für den surjektiven
+(Def. von Morphismen) $k$-Algebren-Homomorphismus
+\begin{align*}
+k[I] & \xrightarrow{\varphi}\hom(X,\mathbb{A}^{1}(k))\\
+f & \mapsto(x\mapsto f(x)),
+\end{align*}
+
+wobei die Morphismen in folgende Weise eine $k$-Algebra bilden:
+\begin{align*}
+(f+g)(x) & :=f(x)+g(x)\\
+(fg)(x) & :=f(x)g(x)\\
+(\alpha f)(x) & :=\alpha f(x)
+\end{align*}
+
+mit $f,g\in\hom(X,\mathbb{A}^{1}(k))$, $\alpha\in k$. Es gilt:
+\[
+\ker\varphi=I(X)
+\]
+
+
+\subsection*{Definition 26}
+
+$\Gamma(X):=k[I]/I(X)\cong\hom(X,\mathbb{A}^{1}(k))$ heißt der \textbf{affine
+Koordinatenring }von $X$.
+
+Für $x=(x_{1},\ldots,x_{n})\in X$ gilt:
+\begin{align*}
+\mathfrak{m}_{x}:=\  & \ker(\Gamma(X)\twoheadrightarrow k,\,f\mapsto f(x))\\
+=\  & \{f\in\Gamma(X)\mid f(x)=0\}\\
+=\  & \text{Bild von }(T_{1}-x_{1},\ldots,T_{n}-x_{n})\\
+=\  & \ker(\Gamma(\mathbb{A}^{n}(k))\twoheadrightarrow k)
+\end{align*}
+
+unter der Projektion $\pi:k[\underline{T}]=\Gamma(\mathbb{A}^{n}(k))\twoheadrightarrow\Gamma(X)$.
+Es ist $\mathfrak{m}_{x}$ ein maximales Ideal von $\Gamma(X)$ mit
+$\Gamma(X)/\mathfrak{m}_{x}=k$.
+
+Für ein Ideal $\mathfrak{A}\subset\Gamma(X)$ setze
+\[
+V(\mathfrak{A})=\{x\in X\mid f(x)=0\ \forall f\in\mathfrak{A}\}=V(\pi^{-1}(\mathfrak{A}))\cap X.
+\]
+
+Dies sind genau die abgeschlossenen Mengen von $X$ als Teilraum in
+$\mathbb{A}^{n}(k)$ mit der induzierten Topologie, diese wird auch
+\textbf{Zariski-Topologie} genannt.
+
+Für $f\in\Gamma(X)$ setze:
+\[
+D(f)=\{x\in X\mid f(x)\neq0\}=X\backslash V(f).
+\]
+
+
+\subsection*{Lemma 27}
+
+Die offenen Mengen $D(f)$, $f\in\Gamma(X)$, bilden eine Basis der
+Topologie, d.h.
+\[
+\forall U\subset X\text{ offen }\exists f_{i}\in\Gamma(X),\,i\in I,\,\text{mit }U=\bigcup_{i\in I}D(f_{i})
+\]
+
+
+\subsubsection*{Beweis (Lemma 27)}
+
+$U=X\backslash V(\mathfrak{A})$ für ein $\mathfrak{A}\subset\Gamma(X)$,
+$\mathfrak{A}=\langle f_{1},\ldots,f_{n}\rangle$ . Wegen
+\[
+V(\mathfrak{A})=\bigcap_{i=1}^{n}V(f_{i})
+\]
+
+folgt
+\[
+U=\bigcup_{i=1}^{n}D(f_{i})
+\]
+
+Es reichen also sogar endlich viele $f_{i}$! 
+
+\subsection*{Satz 28}
+
+Der Koordinatenring $\Gamma(X)$ einer affinen algebraischen Menge
+$X$ ist eine endlich erzeugte $k$-Algebra, die reduziert ist (d.h.
+keine nilpotenten Elemente $\neq0$ enthält). Ferner:
+\[
+X\text{ irreduzibel}\Leftrightarrow\Gamma(X)\text{ ist integer}
+\]
+
+
+\subsubsection*{Beweis (Satz 28)}
+
+$k[\underline{T}]\twoheadrightarrow\Gamma(X)$ impliziert ``endlich
+erzeugte $k$-Algebra''. $\Gamma(X)$ irreduzibel ist äquivalent
+dazu, dass $I(X)=\text{rad }I(X)$. 
+
+(Satz 10. ii) + Korollar 11: $X=V(\mathfrak{A})$: $I(X)=\text{rad }\mathfrak{A}=I(X)$
+
+$\Rightarrow\text{rad }I(X)=\text{rad rad }\mathfrak{A}=\text{rad }\mathfrak{A}=I(X)$).
+
+$X$ irreduzibel $\overset{Lem.17}{\Leftrightarrow}I(X)$ Primideal
+$\Leftrightarrow\Gamma(X)=k[T]/T(X)$ integer. \selectlanguage{ngerman}%
+

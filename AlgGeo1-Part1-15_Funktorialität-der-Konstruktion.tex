@@ -1,0 +1,47 @@
+\selectlanguage{english}%
+
+\section{Funktorialität der Konstruktion}
+
+\subsection*{Satz 38 (orig. 35)}
+
+Sei $f:X\rightarrow Y$ eine stetige Abbildung zwischen irreduzibler
+affiner algebraischen Mengen. Es sind äquivalent:
+\begin{enumerate}
+\item $f$ ist ein Morphismus affiner algebraischen Mengen.
+\item $\forall g\in\Gamma(Y)$ gilt $g\circ f\in\Gamma(X)$.
+\item $f$ ist ein von Räumen von Funktionen, d.h. für alle $U\subseteq Y$
+offen und alle $g\in\mathcal{O}_{Y}(U)$ gilt $g\circ f\in\mathcal{O}_{X}(f^{-1}(U))$.
+\end{enumerate}
+
+\subsection*{Beweis (Satz 38)}
+
+$(i)\Leftrightarrow(ii)$ Satz 29.
+
+$(iii)\Rightarrow(ii)$ $U:=Y$ + Satz 33.
+
+$(ii)\Rightarrow(iii)$ Betrachte $\varphi:\Gamma(Y)\rightarrow\Gamma(X)$,
+$h\mapsto h\circ f$. Aufgrund des Verklebungsaxioms reicht es, die
+Bedingung für $U$ von der Form $\mathcal{D}(g)$ zu zeigen: Es gilt
+\[
+f^{-1}(\mathcal{D}(g))=\{x\in X\mid\underbrace{g(f(x))}_{=\varphi(g)(x)}\neq0\}=\mathcal{D}(\varphi(g))
+\]
+Deswegen induziert $\varphi$
+\begin{align*}
+H & \longmapsto H\circ f\\
+\mathcal{O}_{Y}(\mathcal{D}(g)) & \phantom{\longrightarrow}\mathcal{O}_{X}(D(\varphi(g)))\\
+=\Gamma(Y)_{g} & \longrightarrow=\Gamma(X)_{\varphi(g)}\\
+\frac{h}{g} & \longmapsto\frac{h\circ f}{(g\circ f)^{n}}
+\end{align*}
+mit $h\circ f\in\Gamma(X)$ nach Voraussetzung und $\varphi(g)=g\circ f\in\Gamma(X)$
+nach Voraussetzung.
+
+Insgesamt haben wir:
+
+\subsection*{Theorem 39 (orig. 36)}
+
+Die obige Konstruktion definiert einen volltreuen Funktor
+\[
+\text{\{irred. aff. abg. Mengen über }k\}\rightarrow\{\text{Räume mit Funktionen über }k\}
+\]
+\selectlanguage{ngerman}%
+

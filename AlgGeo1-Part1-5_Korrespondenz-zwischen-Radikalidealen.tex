@@ -1,0 +1,60 @@
+
+\section{Korrespondenz zwischen Radikalidealen und affinen algebraischen Mengen}
+
+Sei $V(\mathfrak{A})\subseteq\mathbb{A}^{n}(k)$ affin algebraische
+Menge, $\mathfrak{A}\subset k[\underline{T}]$.
+
+\textbf{Es gilt:} $V(\mathfrak{A})=V(\text{rad\,}\mathfrak{A})$ mit
+ $\rad\mathfrak{A}=\{f\in k[\underline{T}]\mid f^{n}\in\mathfrak{A}$
+für $n>0\}$, da
+\[
+f^{n}(x)=0\Leftrightarrow f(x)=0,
+\]
+
+d.h. verschiedene Ideale können dieselbe algebraische Menge beschreiben.
+
+\subsection{Definition 9}
+
+Für eine Teilmenge $Z\subseteq\mathbb{A}^{n}(k)$ bezeichne
+\[
+I(Z)=\{f\in k[\underline{T}]\mid f(x)=0\ \forall x\in Z\}
+\]
+
+das Ideal aller auf $Z$ verschwindenden Polynomfunktionen.
+
+\subsection{Satz 10}
+\begin{enumerate}
+\item $\mathfrak{A}\subset k[\underline{T}]$ Ideal $\Rightarrow I(V(\mathfrak{A}))=\rad(\mathfrak{A})$.
+\item $Z\subseteq\mathbb{A}^{n}(k)$ Teilmenge $\Rightarrow V(I(Z))=\overline{Z}$,
+der Abschluss von $Z$.
+\end{enumerate}
+
+\subsubsection{Beweis (Satz 10)}
+
+Algebra II, Übungsaufgabe. 
+
+\medskip{}
+
+$\mathfrak{A}$ heißt \textbf{Radikalideal}\index{Radikalideal},
+wenn $\mathfrak{A}=\rad(\mathfrak{A})$, oder äquivalent wenn $\faktor{k[\underline{T}]}{\mathfrak{A}}$
+\emph{reduziert} ist, d.h. keine nilpotente Elemente hat.
+
+\subsection{Korollar 11}
+
+Wir erhalten eine 1-1 Korrespondenz
+\begin{align*}
+\{\text{abg. Mengen }\subseteq\mathbb{A}^{n}\} & \leftrightarrow\{\text{Radikalideale }\mathfrak{A}\subset k[\underline{T}]\}\\
+Z & \mapsto I(Z)\\
+V(\mathfrak{A}) & \mapsfrom\mathfrak{A}
+\end{align*}
+
+die sich zu einer 1-1 Korrespondenz
+\begin{align*}
+\left\{ \text{Punkte in }\mathbb{A}^{n}\right\}  & \leftrightarrow\left\{ \text{max. Ideale in }k[\underline{T}]\right\} \\
+x=(x_{1},\ldots,x_{n}) & \mapsto\begin{array}{rl}
+\mathfrak{m}_{x} & =I(\{x\})\\
+ & =\ker(k[\underline{T}]\rightarrow k,\ T_{i}\mapsto x_{i})
+\end{array}
+\end{align*}
+
+einschränkt.

@@ -1,0 +1,295 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\begin_modules
+theorems-ams
+theorems-ams-extended
+theorems-sec
+enumitem
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Morphismen von affinen algebraischen Mengen
+\end_layout
+
+\begin_layout Subsection*
+Definition 23
+\end_layout
+
+\begin_layout Standard
+Seien 
+\begin_inset Formula $X\subseteq\mathbb{A}^{m}(k)$
+\end_inset
+
+, 
+\begin_inset Formula $Y\subseteq\mathbb{A}^{n}(k)$
+\end_inset
+
+ affine algebraische Mengen.
+ Ein 
+\series bold
+Morphismus
+\series default
+ 
+\begin_inset Formula $X\rightarrow Y$
+\end_inset
+
+ affiner algebraischer Mengen ist eine Abbildung 
+\begin_inset Formula $f:X\rightarrow Y$
+\end_inset
+
+ der zugrundeliegenden Mengen, sodass 
+\begin_inset Formula $f_{1},\ldots,f_{n}\in k[T_{1},\ldots,T_{m}]$
+\end_inset
+
+ existieren, derart dass 
+\begin_inset Formula $\forall x\in X$
+\end_inset
+
+ gilt:
+\begin_inset Formula 
+\[
+f(x)=(f_{1}(x),\ldots,f_{n}(x)).
+\]
+
+\end_inset
+
+
+\emph on
+Bezeichne 
+\emph default
+dafür 
+\begin_inset Formula $\hom(X,Y)$
+\end_inset
+
+ Menge der Morphismen 
+\begin_inset Formula $X\rightarrow Y$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Bemerkung 24
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f:X\rightarrow Y$
+\end_inset
+
+ lässt sich immer fortsetzen zu einem Morphismus 
+\begin_inset Formula 
+\[
+f:\mathbb{A}^{n}(k)\rightarrow\mathbb{A}^{m}(k)
+\]
+
+\end_inset
+
+ (aber nicht eindeutig, es sei denn 
+\begin_inset Formula $X=\mathbb{A}^{m}(k)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Komposition
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+format
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+X\xrightarrow[f_{1},\ldots,f_{n}\in k[T_{1},\ldots,T_{m}]{]}{f}Y\xrightarrow[g_{1},\ldots,g_{r}\in k[T_{1}',\ldots,T_{m}']{]}{g}Z
+\]
+
+\end_inset
+
+ mit 
+\begin_inset Formula $X\subseteq\mathbb{A}^{m}(k)$
+\end_inset
+
+, 
+\begin_inset Formula $Y\subseteq\mathbb{A}^{n}(k)$
+\end_inset
+
+, 
+\begin_inset Formula $Z\subseteq\mathbb{A}^{r}(k)$
+\end_inset
+
+.
+ Es folgt:
+\begin_inset Formula 
+\begin{align*}
+g(f(x))=\, & (g_{1}(f_{1}(x),\ldots,f_{n}(x)),\ldots,g_{r}(f_{1}(x),\ldots,f_{n}(x))\\
+:=\, & h_{1}(x),\ldots,h_{r}(x)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+d.h.
+ 
+\begin_inset Formula $g\circ f$
+\end_inset
+
+ ist durch Polynome 
+\begin_inset Formula $h_{i}\in k[T_{1},\ldots,T_{m}]$
+\end_inset
+
+ gegeben, d.h.
+ 
+\begin_inset Formula $g\circ f$
+\end_inset
+
+ ist wieder ein Morphismus affiner algebrasischer Mengen.
+ Wir erhalten die 
+\series bold
+Kategorie affiner algebraischer Mengen
+\series default
+.
+\end_layout
+
+\begin_layout Subsection*
+Beispiel 25
+\end_layout
+
+\begin_layout Enumerate
+Sei die Abbildung
+\begin_inset Formula 
+\begin{align*}
+\mathbb{A}^{1}(k) & \rightarrow V(T_{2}-T_{1}^{2})\subseteq\mathbb{A}^{2}(k)\\
+x & \mapsto(x,x^{2}).
+\end{align*}
+
+\end_inset
+
+Diese Abbildung ist sogar ein 
+\emph on
+Isomorphismus 
+\emph default
+affiner algebraischer Mengen, da die Umkehrabbildung
+\begin_inset Formula 
+\[
+(x,y)\mapsto x
+\]
+
+\end_inset
+
+ebenfalls ein Morphismus ist.
+\end_layout
+
+\begin_layout Enumerate
+Sei char
+\begin_inset Formula $(k)\neq2$
+\end_inset
+
+.
+ Die Abbildung
+\begin_inset Formula 
+\begin{align*}
+\mathbb{A}^{1}(k) & \rightarrow V(T_{2}^{2}-T_{1}^{2}(T_{1}+1))\\
+x & \mapsto(x^{2}-1,x(x^{2}-1))
+\end{align*}
+
+\end_inset
+
+ist ein Morphismus, aber 
+\emph on
+nicht 
+\emph default
+bijektiv, da 
+\begin_inset Formula $1,-1$
+\end_inset
+
+ beide auf 
+\begin_inset Formula $(0,0)$
+\end_inset
+
+ abgebildet werden.
+\end_layout
+
+\end_body
+\end_document

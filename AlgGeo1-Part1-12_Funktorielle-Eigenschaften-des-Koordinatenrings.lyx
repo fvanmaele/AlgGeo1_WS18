@@ -1,0 +1,424 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\begin_modules
+theorems-ams
+theorems-ams-extended
+theorems-sec
+enumitem
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Funktorielle Eigenschaften von 
+\begin_inset Formula $\Gamma(X)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Satz 29
+\end_layout
+
+\begin_layout Standard
+Für einen Morphismus 
+\begin_inset Formula $X\xrightarrow{f}Y$
+\end_inset
+
+ affiner algebraischer Mengen definiert 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbb{A}^{n}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\Gamma(f):\hom(Y=\Gamma(Y),\mathbb{A}^{1}(k)) & \rightarrow\hom(X=\Gamma(X),\mathbb{A}^{1}(k))\\
+g & \mapsto g\circ f
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ein Homomorphismus von 
+\begin_inset Formula $k$
+\end_inset
+
+-Algebren.
+ Der so definierte 
+\emph on
+kontravariante
+\emph default
+ Funktor
+\begin_inset Formula 
+\[
+\Gamma:\{\text{affine algebraische Mengen\}}\rightarrow\{\text{red. endl. erz. }k\text{-Alg.}\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+liefert eine Kategorienäquivalenz, der durch Einschränkung eine Äquivalenz
+\begin_inset Formula 
+\[
+\Gamma:\{\text{irred. aff. alg. Meng.\}}\rightarrow\{\text{integere endl. erz. }k\text{-Alg.\}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+induziert.
+\end_layout
+
+\begin_layout Subsubsection*
+Beweis (Satz 29)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Y\xrightarrow{g}\mathbb{A}^{1}(k)\in\Gamma(Y)$
+\end_inset
+
+ ist Morphismus.
+ 
+\begin_inset Formula $\Rightarrow g\circ f:X\xrightarrow{f}Y\xrightarrow{g}\mathbb{A}^{1}(k)$
+\end_inset
+
+ ist ..., d.h.
+ 
+\begin_inset Formula $\in\Gamma(X)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Gamma(f):\Gamma(Y)\rightarrow\Gamma(X)$
+\end_inset
+
+ ist ein 
+\begin_inset Formula $k$
+\end_inset
+
+-Alg.-Hom.
+ und Kompositions....
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ (nach Bemerkung 24) mit 
+\begin_inset Formula $\Gamma(\text{id}_{X})=\text{id}_{\Gamma(X)}$
+\end_inset
+
+.
+ Da ferner 
+\begin_inset Formula $\Gamma(f_{1}\circ f_{2})=\Gamma(f_{2})\circ\Gamma(f_{1})$
+\end_inset
+
+ aus der Definition folgt, ist 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ ein kontravarianter Funktor.
+\end_layout
+
+\begin_layout Paragraph
+Behauptung
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ ist volltreu, d.h.
+\begin_inset Formula 
+\begin{align*}
+\Gamma:\hom(X,Y) & \rightarrow\hom(\Gamma(Y),\Gamma(X))\\
+f & \mapsto\Gamma(f)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ist 
+\emph on
+bijektiv
+\emph default
+ für alle affinen algebraischen Mengen 
+\begin_inset Formula $X,Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Beweis
+\end_layout
+
+\begin_layout Standard
+Wir konstruieren eine Umkehrabbildung wie folgt: Zu 
+\begin_inset Formula $\varphi:\Gamma(Y)\rightarrow\Gamma(X)$
+\end_inset
+
+ für 
+\begin_inset Formula $X\subseteq\mathbb{A}^{n}$
+\end_inset
+
+, 
+\begin_inset Formula $Y\subseteq\mathbb{A}^{n}$
+\end_inset
+
+ existiert:
+\begin_inset Formula 
+\[
+\xymatrix{k[T_{1}',\ldots,T_{k}']\ar[r]^{\tilde{\varphi}}\ar@{->>}[d] & k[T_{1},\ldots,T_{m}]\ar@{->>}[d]\\
+\Gamma(Y)\ar[r] & \Gamma(X)
+}
+\]
+
+\end_inset
+
+kommutiert (
+\begin_inset Formula $\tilde{\varphi}(T_{1}'):=$
+\end_inset
+
+ impede 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+?
+\end_layout
+
+\end_inset
+
+ liften 
+\begin_inset Formula $\varphi(\pi(T_{i}'))$
+\end_inset
+
+ in 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $k[\underline{T}]$
+\end_inset
+
+).
+ Definiere
+\begin_inset Formula 
+\begin{align*}
+f:X & \rightarrow Y\\
+x=(x_{1},\ldots,x_{n}) & \mapsto(\tilde{\varphi}(T_{1}')(x_{1},\ldots,x_{n}),\ldots,\tilde{\varphi}(T_{n}')(x_{1},\ldots,x_{n}))
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Behauptung
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ ist essentiell surjektiv, d.h.
+ zu jeder reduzierten endlich erzeugten 
+\begin_inset Formula $k$
+\end_inset
+
+-Algebra 
+\begin_inset Formula $A$
+\end_inset
+
+ existiert eine affine algebraische Menge 
+\begin_inset Formula $X$
+\end_inset
+
+ mit 
+\begin_inset Formula $A\cong\Gamma(X)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Beweis
+\end_layout
+
+\begin_layout Standard
+Da nach Voraussetzung 
+\begin_inset Formula $A\cong k[T]/\mathfrak{A}$
+\end_inset
+
+ für Radikalideal 
+\begin_inset Formula $\mathfrak{A}$
+\end_inset
+
+, können wir etwa 
+\begin_inset Formula $X:=V(\mathfrak{A})\subseteq\mathbb{A}^{n}(k)$
+\end_inset
+
+ setzen.
+ Der Rest folgt aus Satz 28.
+\end_layout
+
+\begin_layout Subsection*
+Satz 30
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $f:X\rightarrow Y$
+\end_inset
+
+ ein Morphismus und 
+\begin_inset Formula $\Gamma(f):\Gamma(Y)\rightarrow\Gamma(X)$
+\end_inset
+
+ der zugehörige Homomorphismus der Koordinatenringe.
+ Dann gilt 
+\begin_inset Formula $\forall x\in X$
+\end_inset
+
+: 
+\begin_inset Formula $\Gamma(f)^{-1}(\mathfrak{m}_{x})=\mathfrak{m}_{f}(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+Beweis (Satz 30)
+\end_layout
+
+\begin_layout Standard
+Setting: 
+\begin_inset Formula 
+\begin{align*}
+\mathfrak{m}_{f(x)}=\{g\mid g(f(x))=0\}\subset\hom(Y,\mathbb{A}^{1})=\Gamma(Y) & \xrightarrow{\Gamma(f)}\Gamma(X)=\hom(X,\mathbb{A}^{1})\supset\{k\mid k(x))=0\}\\
+g & \mapsto g\circ f
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Gamma(f)^{-1}(\mathfrak{m}_{x})=\{g\in\Gamma(Y)\mid g\circ f(x)\neq0\}=\mathfrak{m}_{f(x)}$
+\end_inset
+
+, da 
+\begin_inset Formula $\Gamma(f)(g)(x)=g(f(x))$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document

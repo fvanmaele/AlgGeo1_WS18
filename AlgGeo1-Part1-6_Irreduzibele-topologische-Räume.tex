@@ -1,0 +1,87 @@
+
+\section{Irreduzibele topologische Räume}
+
+Die folgenden topologische Begriffe sind nur interessant, da $\mathbb{A}^{n}(k)$
+($n>0$) kein Hausdorff'scher Raum ist.
+
+\subsection{Definition 11}
+
+Ein topologischer Raum $X$ heißt \textbf{irreduzibel}\index{irreduzibel},
+wenn $X\neq\emptyset$ und $X$ sich \emph{nicht} als Vereinigung
+zweier echter abgeschlossenen Teilmengen darstellen lässt, d.h
+\[
+X=A_{1}\cup A_{2},\ A_{i}\ \text{abg.}\quad\Rightarrow\quad A_{1}=X\text{ oder }A_{2}=X.
+\]
+
+$Z\subset X$ heißt irreduzibel, falls $Z$ mit der induzierten Topologie
+irreduzibel ist.
+
+\subsection{Satz 12}
+
+Für einen topologischen Raum $X$ sind äquivalent:
+\begin{enumerate}
+\item $X$ ist irreduzibel.
+\item Je zwei nichtleere offenen Teilmengen von $X$ haben nicht-leeren
+Durchschnitt.
+\item Jede nichtleere offene Teilmenge $U\subset X$ ist dicht in $X$.
+\item Jede nichtleere offene Teilmenge $U\subset X$ ist zusammenhängend.
+\item Jede nichtleere offene Teilmenge $U\subset X$ ist irreduzibel.
+\end{enumerate}
+
+\subsubsection{Beweis (Satz 12)}
+
+$(i)\Leftrightarrow(ii)$ Komplementsmengen.
+
+$(ii)\Leftrightarrow(iii)$ da: $(U\subset X$ dicht $\Leftrightarrow U\cap O\neq\emptyset$
+für jedes offene $\emptyset\neq O\subset X$)
+
+$(iii)\Rightarrow(iv)$ klar.
+
+$(iv)\Rightarrow(iii)$. Sei $\emptyset\neq U$ offen und zusammenhängend.
+
+$\Rightarrow U=U_{1}\sqcup U_{2}$
+
+$\emptyset\neq U_{i}\underset{\text{offen}}{\subset}U\underset{\text{offen}}{\subset}X$
+
+$\Rightarrow U_{1}\cap U_{2}=\emptyset$, Widerspruch zu (iii).
+
+$(v)\Rightarrow(i)$ klar $(U=X)$.
+
+$(iii)\Rightarrow(v)$. Sei $\emptyset\neq U\underset{\text{offen}}{\subset}X$.
+Ist $\emptyset\neq V\underset{\text{offen}}{\subset}U\Rightarrow V\underset{\text{offen}}{\subseteq}X$
+
+$\Rightarrow V$ dicht in $X$, irreduzibel  in $U$
+
+$\overset{(iii)\Rightarrow(i)}{\Rightarrow}U$ irreduzibel.
+
+\subsection{Lemma 13}
+
+Eine Teilmenge $Y$ ist genau dann irreduzibel, wenn ihr Abschluss
+$\overline{Y}$ dies ist.
+
+\subsubsection{Beweis (Lemma 13)}
+
+$Y$ irreduzibel $\Leftrightarrow\forall U,V\subset X$ offen mit
+$U\cap Y\neq\emptyset\neq V\cap Y$ gilt $Y\cap(U\cap V)\neq\emptyset$
+
+$\Leftrightarrow\overline{Y}$ irreduzibel.
+
+\subsection{Definition 14}
+
+Eine maximale irreduzibele Teilmenge eines topologischen Raumes $X$
+heißt \textbf{irreduzibele Komponente}\index{irreduzibele Komponente}
+von $X$.
+
+\subsection{Bemerkung 15}
+\begin{enumerate}
+\item Jede irreduzibele Komponente ist abgeschlossen nach Lemma 14.
+\item $X$ ist Vereinigung seiner irreduzibelen Komponenten, \emph{denn}: 
+
+die Menge der irreduzibelen Teilmengen von $X$ ist \textbf{induktiv
+geordnet}: für jede aufsteigende Kette irreduzibeler Teilmengen ist
+die Vereinigung wieder irreduzibel. (Satz 13 (ii)). Mit dem \textbf{Lemma
+von Zorn} folgt: Jede irreduzibele Teilmenge ist in einer irreduzibelen
+Komponente enthalten. Damit ist jeder Punkt in einer irreduzibelen
+Komponente enthalten.
+\end{enumerate}
+

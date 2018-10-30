@@ -1,0 +1,148 @@
+\selectlanguage{english}%
+
+\section{Der Raum mit Funktionen zu einer affin algebraischen Menge}
+\begin{description}
+\item [{Ziel.}] $X\subseteq\mathbb{A}^{n}(k)\mapsto(X,\mathcal{O}_{X})$
+als irreduzibele affine algebraische Menge bzw. Zariski-Topologie.
+D.h. wir müssen Menge von Funktionen $\mathcal{O}_{X}(U)$ auf $U$,
+$U\subset X$ offen, definieren. Diese werden als Teilmengen des Funktionenkörpers
+$K(X)$ definiert (dazu $X$ irreduzibel, später bei Schemata fällt
+diese Bedingung weg!)
+\end{description}
+
+\subsection*{Definition 33}
+
+$K(X):=\text{Quot}(\Gamma(X))$ heißt \textbf{Funktionenkörper} von
+$X$ ($\Gamma(X)$ ist für $X$ irreduzibel nullteilerfrei).
+
+Elemente $\frac{f}{g}\in K(X)$, $f,g\in\Gamma(X)=\hom(X,\mathbb{A}^{1}(k))$,
+$g\neq0$ lassen sich zumindest als Funktion auf der offenen Menge
+$\mathcal{D}(g)\subset X$ auffassen, wenn auch nicht i.A. auf ganz
+$X$.
+
+\subsection*{Lemma 34}
+
+Gilt für $\frac{f_{1}}{g_{1}},\frac{f_{2}}{g_{2}}\in K(X)$ ($f_{i},g_{i}\in\Gamma(X))$
+und einer offenen Teilmenge $\emptyset\neq U\subset\mathcal{D}(g_{1}g_{2})$
+\[
+\frac{f_{1}(x)}{g_{1}(x)}=\frac{f_{2}(x)}{g_{2}(x)}\qquad\forall x\in U,
+\]
+
+dann folgt $\frac{f_{1}}{g_{1}}=\frac{f_{2}}{g_{2}}$ in $K(X)$.
+
+\subsubsection*{Beweis (Lemma 34)}
+
+Ohne Einschränkung der Allgemeinheit: $g_{1}=g_{2}=g$ (sonst Erweitern!)
+
+$\Rightarrow(f_{1}-f_{2})(x)=0$ $\forall x\in U$
+
+$\Rightarrow\emptyset\neq U\subset V(f_{1}-f_{2})\subset X$ dicht
+
+d.h. $V(f_{1}-f_{2})=X$.
+
+$f_{1}-f_{2}\in IV(f_{1}-f_{2})=I(X)\equiv(0)$ in $\Gamma(X)$
+
+$\Rightarrow f_{1}-f_{2}=0$.
+
+\subsection*{Definition 35}
+
+Sei $X$ eine irreduzibele affine algebraische Menge, $U\subset X$
+offen. Sei $\Gamma(X)_{\mathfrak{m}_{x}}$ Lokalisierung von $\Gamma(X)$
+bzgl. das maximale Ideal $\mathfrak{m}_{x}$ in $x\in X$.
+
+$\mathcal{O}_{X}(U):=\bigcap_{x\in U}\Gamma(X)_{\mathfrak{m}_{x}}\subset K(X)$
+
+d.h. für jedes $x\in U$ lässt sich $f\in\mathcal{O}_{X}(U)$ schreiben
+als $\frac{h}{g}$ mit $g(x)\neq0$.
+
+(Wenn $f\in\Gamma(X)$ bezeichne $\Gamma(X)_{f}$ die Lokalisierung
+von $\Gamma(X)$ bzgl. der multiplikativ abgeschlossenen Teilmenge
+$\{1,f,f^{2},\ldots,f^{n}\ldots\}$.  Dann lässt sich
+\[
+\Gamma(X)_{\mathfrak{m}_{x}}=\bigcup_{f\in\Gamma(X)\backslash\mathfrak{m}_{x}}\Gamma(X)_{f}\subset K(X)
+\]
+
+``$\supset$'' klar, ``$\subset$'' $\frac{g}{f}$ mit $f(x)\neq0$
+d.h. $f\notin\mathfrak{m}_{x}$ $\Rightarrow\frac{g}{f}\in\Gamma(X)_{f}$.
+
+\paragraph{Es gilt:}
+\begin{enumerate}
+\item $\mathcal{O}_{x}(U)\rightarrow\text{Abb}(U,k)$, $f\mapsto(x\mapsto f(x):=\frac{g(x)}{f(x)}\in k)$
+ist injektiv (Lemma 34) und wohldefiniert (kürzen/Erweitern) wobei
+$g,h\in\Gamma(X)$ mit $h\notin\mathfrak{m}_{x}$ mit $f=\frac{g}{h}$
+nach Definition von $\mathcal{O}_{X}(U)$ existiert.
+\item F{[}r $V\subset U\subset X$ offen kommutiert das folgende Diagramm
+\item \textbf{Verklebungseigenschaft.} Sei $U=\bigcup_{i\in I}U_{i}$. Nach
+Definition ist 
+\begin{align*}
+\mathcal{O}_{X}(U) & =\bigcap_{i}\mathcal{O}_{X}(U_{i})\subset K(X)\\
+\ni f:U\rightarrow k & \quad\ni f_{i}:U_{i}\rightarrow k
+\end{align*}
+. $\Rightarrow(X,\mathcal{O}_{X})$ ist Raum mit Funktionen, \textbf{der
+zur irreduziblen affin algebraische Menge gehörige Raum von Funktionen.} 
+\end{enumerate}
+
+\subsection*{Satz 36 (orig. 33)}
+
+Für $(X,\mathcal{O}_{X})$ zu $X$ wie oben und $f\in\Gamma(X)$ gilt:
+\[
+\mathcal{O}_{X}(D(f))=\Gamma(X)_{f},
+\]
+
+insbesondere $\mathcal{O}_{X}(X)=\Gamma(X)$.
+
+\subsubsection*{Beweis (Satz 36)}
+
+$\Gamma(X)\subset\mathcal{D}(f)$ klar, da $f(x)\neq0$ $\forall x\in\mathcal{D}(f)$
+bzw. $f\in P(X)\backslash\mathfrak{m}_{x}$. 
+
+Sei nun $g$ in $\mathcal{O}_{X}(\mathcal{D}(f))$ gegeben, $(*)$
+und $\mathfrak{A}:=\{h\in\Gamma(X)\mid hg\in\Gamma(X)\}\subset\Gamma(X)$
+Ideal.
+
+Dazu: $g\in\Gamma(X)_{g}$
+
+$\Leftrightarrow g=\frac{k}{g^{n}}$ für ein $n$ und $k\in\Gamma(X)$
+
+$\Leftrightarrow f^{n}\in\mathfrak{A}$ für ein $n$.
+
+d.h. zu zeigen: $f\in\text{rad}(\mathfrak{A})=IV(\mathfrak{A})$ (Hilbertsche
+Nullstellensatz)
+
+$\Leftrightarrow f(x)=0$ $\forall x\in V(\mathfrak{A})$
+
+Ist dazu $x\in X$ mit $f(x)\neq0$, wo $x\in\mathcal{D}(f)$, so
+existiert nach Voraussetzung $(*)$ $f_{1},f_{2}\in\Gamma(X)$, $f_{2}\notin\mathfrak{m}_{x}$
+mit $g=\frac{f_{1}}{f_{2}}$
+
+$\Rightarrow f_{2}\in\mathfrak{A}$. Da $f_{2}(x)\neq0$:
+
+$\Rightarrow x\notin V(\mathfrak{A})$.
+
+\subsection*{Bemerkung 37 (orig. 34)}
+\begin{enumerate}
+\item Im allgemeinen existierten für $f\in\mathcal{O}_{x}(U)$ \textbf{nicht}
+$g,h\in\Gamma(X)$ mit $f=\frac{g}{h}$ und $h(x)\neq0$ $\forall x\in U$.
+\item \textbf{Alternative Definition von $\mathcal{O}_{X}$ I.}
+
+$\mathcal{O}_{X}(\mathcal{D}(f)):=\Gamma(X)_{f}$ $\forall f\in\Gamma(X)$
+
+Da $\mathcal{D}(f)$ Basis der Topologie, kann es höchstens einen
+Raum mit Funktionen geben mit dieser Eigenschaft, es bleibt die Existenz
+zu zeigen.
+\item \textbf{Alternative Definition von $\mathcal{O}_{X}$ II.}
+
+direkt von einer integeren endlich erzeugten $k$-Algebra $A$ ausgehend
+(die $X$ bis auf Isomorphie festlegt), aber ohne ``Koordinaten''
+zu wählen.
+
+$X:=\{\mathfrak{m}\subseteq A\mid$ max. Ideale\}
+
+$V(\mathfrak{A}):=\{\mathfrak{m}\subseteq A$ max. $\mid\mathfrak{m}\supseteq\mathfrak{A}\}$,
+$\mathfrak{A}\subset A$ Ideal, sind die \textbf{abgeschlossenen}
+Mengen.
+
+$\mathcal{O}_{X}(U):=\bigcap_{\mathfrak{m}\in U}A_{\mathfrak{m}}\subset\text{Quot}(A)$
+für $U\subset X$ offen (vgl. später Schemata).\selectlanguage{ngerman}%
+\end{enumerate}
+
