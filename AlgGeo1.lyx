@@ -20,7 +20,7 @@ theorems-sec
 \maintain_unincluded_children false
 \language ngerman
 \language_package default
-\inputencoding utf8
+\inputencoding auto
 \fontencoding global
 \font_roman "default" "default"
 \font_sans "default" "default"
@@ -337,10 +337,6 @@ filename "Part1/AlgGeo1-Part1-16_Definition-von-Praevarietaeten.lyx"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 
 \end_layout
 
