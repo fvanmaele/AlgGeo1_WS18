@@ -1,0 +1,85 @@
+
+\section{Quasikompakte und noethersche topologische Räume}
+
+\subsection{Definition 18}
+
+Ein topologischer Raum $X$ heißt \textbf{quasikompakt}\index{quasikompakt},
+wenn jede offene Überdeckung von $X$ eine \emph{endliche} Teilüberdeckung
+enthält. (,,quasi`` deutet an, dass $X$ in der Regel nicht Hausdorff'sch
+ist!). Er heißt \textbf{noethersch}\index{noethersch}, wenn jede
+absteigende Kette
+\[
+X\supseteq Z_{1}\supseteq Z_{2}\supseteq\cdots
+\]
+
+abgeschlossener Teilmengen von $X$ stationär wird ($\Leftrightarrow$
+jede aufsteigende Kette offener Teilmengen wird stationär).
+
+\subsection{Lemma 19}
+
+Sei $X$ ein noetherscher topologischer Raum. Dann gilt:
+\begin{enumerate}
+\item Jede abgeschlossene Teilmenge $Z$ von $X$ ist noethersch.
+\item Jede offene Teilmenge $U$ von $X$ ist quasikompakt.
+\item Jeder abgeschlossene Teilraum $Z$ von $X$ besitzt nur endlich viele
+irreduzibele Komponenten.
+\end{enumerate}
+
+\subsubsection{Beweis (Lemma 19)}
+\begin{enumerate}
+\item Nach Definition, da abgeschlossene Mengen von $Z$ auch solche von
+$X$ sind.
+\item $U=\bigcup_{i\in I}U_{i}$ offen ; $\mathbb{A}$ nicht quasikompakt.
+Dann ist $I_{1}\subset I_{2}\subset\cdots\subset I$ endliche Teilmenge
+mit
+\[
+V_{1}\subsetneq V_{2}\subsetneq\cdots\neq U\quad\text{für }V_{j}=\bigcup_{i\in I}U_{i}.
+\]
+Widerspruch zu noethersch.
+\item Es reicht zu zeigen: Jeder noethersche Raum ist Vereinigung endlich
+vieler irreduzibeler Teilmengen.
+
+$X$ noethersch $\overset{\text{Zorn}}{\Rightarrow}$ Jede nicht-leere
+Menge von algebraischen Teilmengen in $X$ besitzt ein minimales Element.
+\[
+\mathbb{A}:\quad\emptyset\neq\mathcal{M}\coloneqq\left\{ Z\subset X\text{ abg.}\mid Z\text{ ist \textbf{nicht} endl. Ver. irred. Mengen}\right\} 
+\]
+$\Rightarrow\exists$ minimales Element, sagen wir $Z$, in $\mathcal{M}$.
+
+$\Rightarrow Z$ ist nicht irreduzibel.
+
+$\Rightarrow Z=Z_{1}\cup Z_{2}$ mit $Z_{1},Z_{2}\subsetneq Z$ abgeschlossen.
+
+$\overset{Z\text{ minimal}}{\Rightarrow}Z_{1},Z_{2}\notin\mathcal{M}$
+$\Rightarrow Z\notin\mathcal{M}$. Widerspruch.
+\end{enumerate}
+
+\subsection{Satz 20}
+
+Jeder abgeschlossene Teilraum $X\subseteq\mathbb{A}^{n}(k)$ ist noethersch.
+
+\subsubsection{Beweis (Satz 20)}
+
+Nach dem obigen Lemma ist nur zu zeigen, dass $\mathbb{A}^{n}(k)$
+noethersch ist.
+
+Absteigende Ketten abgeschlossener Teilmengen $\stackrel[\text{Kor. 11}]{I()}{\leftrightarrow}$
+aufsteigende Ketten von (Radikal-)Ideale in $k[\underline{T}]$. Da
+$k[\underline{T}]$ nach dem Hilbertschen Basissatz noethersch ist,
+werden letzere Ketten stationär.
+
+\subsection{Korollar 21 (Primärzerlegung)}
+
+Sei $\mathfrak{A}=\rad(\mathfrak{A})\subseteq k[\underline{T}]$ ein
+Radikalideal. Dann gilt: $\mathfrak{A}$ ist Durchschnitt von endlich
+vielen Primidealen, die sich jeweils nicht enthalten; diese Darstellung
+ist eindeutig bis auf Reihenfolge.
+
+\subsubsection{Beweis (Korollar 21)}
+
+$V(\mathfrak{A})=\bigcup_{i=1}^{n}V(\mathfrak{b}_{i})$, $\mathfrak{b}_{i}$
+Primideal, h
+\[
+\mathfrak{A}=\rad(\mathfrak{A})=I(V(\mathfrak{A}))=\bigcap_{i=1}^{n}\underbrace{I(V(\mathfrak{b}_{i}))}_{\mathfrak{b}_{i}'\text{ max. Primideale (L. 17)}}
+\]
+

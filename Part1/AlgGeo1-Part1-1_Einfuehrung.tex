@@ -1,0 +1,63 @@
+
+\section{Einführung}
+
+\textbf{Algebraische Geometrie}\index{Algebraische Geometrie} kann
+man verstehen, als das Studium von Systemen polynomialer Gleichungen
+(in mehreren Variabelen). Damit ist die algebraische Geometrie eine
+Verallgemeinerung der \textbf{linearen Algebra}, also statt $X$ auch
+$X^{n}$, und auch der \textbf{Algebra}, durch Polynome in \emph{mehreren
+}Variabelen.
+
+\subsection{Frage}
+
+Sei $k$ ein (algebraisch abgeschlossener) Körper, und $f_{1},\ldots,f_{m}\in k[T_{1},\ldots,T_{n}]$
+gegeben. Was sind die ``geometrischen Eigenschaften'' der Nullstellenmenge
+\[
+V(f_{1},\ldots,f_{n})\coloneqq\{(t_{1},\ldots,t_{n})\in k^{n}\mid f_{i}(t_{1},\ldots,t_{n})=0\ \forall i\}
+\]
+
+
+\subsection{Beispiel 1}
+
+$f=T_{2}^{2}-T_{1}^{2}(T_{1}-1)\in k[T_{1},T_{2}]$. Die Nullstellenmenge
+für $k=\mathbb{R}$ (\emph{aber: }trügerisch, da $\mathbb{R}$ nicht
+algebraisch abgeschlossen!)
+
+\begin{figure}
+\caption{$T_{2}^{2}=T_{1}^{2}(T_{1}-1)=T_{1}^{3}-T_{1}^{2}$}
+\end{figure}
+
+
+\paragraph{Dimension 1. }
+
+Glatte und singulären Punkten: $(0,0)$ singulär. Alle anderen Punkte
+verletzen eine eindeutig bestimmte Tangente.
+
+\begin{figure}[h]
+\caption{\textbf{Spitze} und \textbf{Doppelpunkt}}
+\end{figure}
+
+Vergleiche den \textbf{Satz über implizite Funktionen}. (Analysis,
+Differentialgeometrie) 
+
+$V(f)$ ist lokal diffeomorph zu $\mathbb{R}$ (= reelle Gerade) im
+Punkt $(x_{1},x_{2})$ genau dann, wenn die Jacobi-Matrix 
+\[
+\left(\frac{\partial f}{\partial T_{1}},\frac{\partial f}{\partial T_{2}}\right)=\left(T_{1}(3T_{1}-2),\ 2T_{2}\right)
+\]
+ hat Rang 1 in $(x_{1},x_{2})$. Das ist äquivalent dazu, dass $(x_{1},x_{2})\neq(0,0)$.
+Dies lässt sich rein formal über beliebigen Grundkörpern \textbf{algebraisch}
+formulieren.
+
+\subsection{Methoden.}
+
+GAGA - Géometrie algébrique, géometrique analytique (Serre)\medskip{}
+
+\begin{tabular}{|c|c|}
+\hline 
+Komplexe Geometrie ($\mathbb{C}$), Differentialgeometrie $(\mathbb{R})$ & Algebraische Geometrie\tabularnewline
+\hline 
+\hline 
+Analytische Hilfsmittel & Kommutative Algebra\tabularnewline
+\hline 
+\end{tabular}
