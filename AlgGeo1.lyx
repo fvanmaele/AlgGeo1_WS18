@@ -20,7 +20,7 @@ theorems-sec
 \maintain_unincluded_children false
 \language ngerman
 \language_package default
-\inputencoding auto
+\inputencoding utf8
 \fontencoding global
 \font_roman "default" "default"
 \font_sans "default" "default"
@@ -183,7 +183,7 @@ Prä-Varietäten
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand input
-filename "Part1/AlgGeo1-Part1-1_Einführung.lyx"
+filename "Part1/AlgGeo1-Part1-1_Einfuehrung.lyx"
 
 \end_inset
 
@@ -233,7 +233,7 @@ filename "Part1/AlgGeo1-Part1-5_Korrespondenz-zwischen-Radikalidealen.lyx"
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand input
-filename "Part1/AlgGeo1-Part1-6_Irreduzibele-topologische-Räume.lyx"
+filename "Part1/AlgGeo1-Part1-6_Irreduzibele-topologische-Raeume.lyx"
 
 \end_inset
 
@@ -253,7 +253,7 @@ filename "Part1/AlgGeo1-Part1-7_Irreduzibele-algebraische-Mengen.lyx"
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand input
-filename "Part1/AlgGeo1-Part1-8_Quasikompakte-und-noethersche-topologische-Räume.lyx"
+filename "Part1/AlgGeo1-Part1-8_Quasikompakte-und-noethersche-topologische-Raeume.lyx"
 
 \end_inset
 
@@ -273,7 +273,7 @@ filename "Part1/AlgGeo1-Part1-9_Morphismen-von-affinen-algebraischen-Mengen.lyx"
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand input
-filename "Part1/AlgGeo1-Part1-10_Unzulänglichkeiten.lyx"
+filename "Part1/AlgGeo1-Part1-10_Unzulaenglichkeiten.lyx"
 
 \end_inset
 
@@ -303,7 +303,7 @@ filename "Part1/AlgGeo1-Part1-12_Funktorielle-Eigenschaften-des-Koordinatenrings
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand input
-filename "Part1/AlgGeo1-Part1-13_Räume-mit-Funktionen.lyx"
+filename "Part1/AlgGeo1-Part1-13_Raeume-mit-Funktionen.lyx"
 
 \end_inset
 
@@ -323,7 +323,7 @@ filename "Part1/AlgGeo1-Part1-14_Der-Raum-mit-Funktionen-zu-einer-affin-algebrai
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand input
-filename "Part1/AlgGeo1-Part1-15_Funktorialität-der-Konstruktion.lyx"
+filename "Part1/AlgGeo1-Part1-15_Funktorialitaet-der-Konstruktion.lyx"
 
 \end_inset
 
@@ -333,7 +333,7 @@ filename "Part1/AlgGeo1-Part1-15_Funktorialität-der-Konstruktion.lyx"
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand input
-filename "Part1/AlgGeo1-Part1-16_Definition-von-Prävarietäten.lyx"
+filename "Part1/AlgGeo1-Part1-16_Definition-von-Praevarietaeten.lyx"
 
 \end_inset
 

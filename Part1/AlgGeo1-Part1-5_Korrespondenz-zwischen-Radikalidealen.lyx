@@ -13,7 +13,7 @@ theorems-sec
 enumitem
 \end_modules
 \maintain_unincluded_children false
-\language english
+\language ngerman
 \language_package default
 \inputencoding auto
 \fontencoding global
@@ -64,7 +64,7 @@ enumitem
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\quotes_language german
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -78,14 +78,10 @@ enumitem
 \begin_body
 
 \begin_layout Section
-
-\lang ngerman
 Korrespondenz zwischen Radikalidealen und affinen algebraischen Mengen
 \end_layout
 
 \begin_layout Standard
-
-\lang ngerman
 Sei 
 \begin_inset Formula $V(\mathfrak{A})\subseteq\mathbb{A}^{n}(k)$
 \end_inset
@@ -100,7 +96,6 @@ Sei
 \begin_layout Standard
 
 \series bold
-\lang ngerman
 Es gilt:
 \series default
  
@@ -137,21 +132,15 @@ f^{n}(x)=0\Leftrightarrow f(x)=0,
 \end_layout
 
 \begin_layout Standard
-
-\lang ngerman
 d.h.
  verschiedene Ideale können dieselbe algebraische Menge beschreiben.
 \end_layout
 
 \begin_layout Subsection
-
-\lang ngerman
 Definition 9
 \end_layout
 
 \begin_layout Standard
-
-\lang ngerman
 Für eine Teilmenge 
 \begin_inset Formula $Z\subseteq\mathbb{A}^{n}(k)$
 \end_inset
@@ -168,8 +157,6 @@ I(Z)=\{f\in k[\underline{T}]\mid f(x)=0\ \forall x\in Z\}
 \end_layout
 
 \begin_layout Standard
-
-\lang ngerman
 das Ideal aller auf 
 \begin_inset Formula $Z$
 \end_inset
@@ -178,14 +165,10 @@ das Ideal aller auf
 \end_layout
 
 \begin_layout Subsection
-
-\lang ngerman
 Satz 10
 \end_layout
 
 \begin_layout Enumerate
-
-\lang ngerman
 \begin_inset Formula $\mathfrak{A}\subset k[\underline{T}]$
 \end_inset
 
@@ -197,8 +180,6 @@ Satz 10
 \end_layout
 
 \begin_layout Enumerate
-
-\lang ngerman
 \begin_inset Formula $Z\subseteq\mathbb{A}^{n}(k)$
 \end_inset
 
@@ -214,22 +195,16 @@ Satz 10
 \end_layout
 
 \begin_layout Subsubsection
-
-\lang ngerman
 Beweis (Satz 10)
 \end_layout
 
 \begin_layout Standard
-
-\lang ngerman
 Algebra II, Übungsaufgabe.
  
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-
-\lang ngerman
 TODO
 \end_layout
 
@@ -239,8 +214,6 @@ TODO
 \end_layout
 
 \begin_layout Standard
-
-\lang ngerman
 \begin_inset VSpace defskip
 \end_inset
 
@@ -248,8 +221,6 @@ TODO
 \end_layout
 
 \begin_layout Standard
-
-\lang ngerman
 \begin_inset Formula $\mathfrak{A}$
 \end_inset
 
@@ -262,8 +233,6 @@ Radikalideal
 status open
 
 \begin_layout Plain Layout
-
-\lang ngerman
 Radikalideal
 \end_layout
 
@@ -286,14 +255,10 @@ reduziert
 \end_layout
 
 \begin_layout Subsection
-
-\lang ngerman
 Korollar 11
 \end_layout
 
 \begin_layout Standard
-
-\lang ngerman
 Wir erhalten eine 1-1 Korrespondenz
 \begin_inset Formula 
 \begin{align*}
@@ -308,8 +273,6 @@ V(\mathfrak{A}) & \mapsfrom\mathfrak{A}
 \end_layout
 
 \begin_layout Standard
-
-\lang ngerman
 die sich zu einer 1-1 Korrespondenz
 \begin_inset Formula 
 \begin{align*}
@@ -326,8 +289,6 @@ x=(x_{1},\ldots,x_{n}) & \mapsto\begin{array}{rl}
 \end_layout
 
 \begin_layout Standard
-
-\lang ngerman
 einschränkt.
 \end_layout
 
