@@ -3,19 +3,65 @@
 
 ,,Offene Teilmengen von affinen Varietäten (abgeschlossene beliebige
  Prävarietäten) sind wieder Prävarietäten`` (aber i.A. nicht affin!)
-\begin{lem}
-$X$ affine Varietät: $f\in\mathcal{O}_{X}(X)$. $\mathcal{D}(f)\subseteq X$.
+\begin{lem}[orig. 41]
+Sei $X$ affine Varietät, $f\in\mathcal{O}_{X}(X)$, $\mathcal{D}(f)\subseteq X$.
+Die Lokalisierung von $\Gamma(X)=\mathcal{O}_{X}(X)$ in $f$,
 \[
-\Gamma(X)_{f}=\Gamma(X)[T](Tf-1)
+\Gamma(X)_{f}=\Gamma(X)[T]/(Tf-1)
 \]
 
-Lokalisierung von $\Gamma(X)=\mathcal{O}_{x}(X)$ in $f$, ist integere
-endlich erzeugte $k$-Algebra. $(Y,\mathcal{O}_{Y})$ bezeichnet die
-zugehörige Varietät.
+ist eine integere endlich erzeugte $k$-Algebra. Dabei $(Y,\mathcal{O}_{Y})$
+bezeichnet die zugehörige Varietät. Es folgt:
+\[
+(D(f),\mathcal{O}_{X|_{D(f)}})\cong(Y,\mathcal{O}_{Y})
+\]
 
-$\Rightarrow(D(f),\mathcal{O}_{X|_{D(f)}})\cong(Y,\mathcal{O}_{Y})$
-als Räume mit Funktionen. 
-
-d.h. $(D(f),\mathcal{O}_{X|_{D(f)}})$ ist affine Varietät.
+als Räume mit Funktionen, d.h. $(D(f),\mathcal{O}_{X|_{D(f)}})$ ist
+affine Varietät.
 \end{lem}
+\begin{proof}
+$\mathcal{O}_{X}(\mathcal{D}(f))=\mathcal{O}_{X}(X)_{f}$ muss affiner
+Koordinatenring von $(\mathcal{D}(f),\mathcal{O}_{X|_{\mathcal{D}(f)}})$
+sein, wenn letzterer Raum von Funktionen affin ist. $X\subseteq\mathbb{A}^{n}(k)$
+korrespondiert zu dem Radikalideal:
+\begin{align*}
+\mathfrak{A} & =I(X)\subseteq k[T_{1},\ldots,T_{n}]\ \subset\ \mathfrak{A}'=(\mathfrak{A},fT_{n+1}-1)\subseteq k[T_{1},\ldots,T_{n+1}]
+\end{align*}
+
+mit Koordinatenringen:
+\begin{align*}
+\Gamma(X) & =k[T_{1},\ldots,T_{n}]/\mathfrak{A}\\
+\Gamma(Y) & =\Gamma(X)_{f}=(k[T_{1},\ldots,T_{n}]/\mathfrak{A})[T_{n+1}]/(T_{n+1}f-1)\\
+ & =k[T_{1},\ldots,T_{n+1}]/\mathfrak{A}'
+\end{align*}
+
+Für $Y=V(\mathfrak{A}')\subseteq\mathbb{A}^{n+1}(k)$ induziert die
+Abbildung
+\[
+\xymatrix{Y\subseteq\mathbb{A}^{n+1}(k)\ar@{-->}[d] & (x_{1},\ldots,x_{n+1})\ar@{|->}[d] & T_{i}\\
+X\subseteq\mathbb{A}^{n}(k) & (x_{1},\ldots,x_{n}) & T_{i}\ar@{|->}[u]
+}
+\]
+
+eine Bijketion $Y\xrightarrow{j}\mathcal{D}_{X}(f)$  mit Umkehrabbildung
+\begin{claim*}
+$j$ ist Isomorphismus von Räumen mit Funktionen:
+\begin{enumerate}
+\item $j$ ist \emph{stetig} (als Einschränkung stetiger Funktionen) $\checkmark$
+\item $j$ ist \emph{offen}: $g\in\Gamma(X)$, $\Gamma(Y)=\Gamma(X)_{f}$,
+$\frac{g}{f^{n}}\in\Gamma(X)_{f}$,
+\begin{align*}
+j\left(D_{Y}\left(\frac{g}{f^{n}}\right)\right) & =j\left(\mathcal{D}_{Y}(gf)\right) & f\text{ Einheit}\\
+ & =\mathcal{D}_{X}(gf)\text{ offen}
+\end{align*}
+
+$\Rightarrow j$ Homömorphismus.
+\item $j$ induziert $\forall g\in\Gamma(X)$ Isomorphismen:
+\begin{align*}
+\mathcal{O}_{X}(\mathcal{D}(fg)) & \longrightarrow\Gamma(Y)_{g}\\
+s & \longmapsto s\circ j
+\end{align*}
+\end{enumerate}
+\end{claim*}
+\end{proof}
 

@@ -1,9 +1,6 @@
-\selectlanguage{english}%
 
 \section{Funktorialität der Konstruktion}
-
-\subsection*{Satz 38 (orig. 35)}
-
+\begin{prop}[orig. 35]
 Sei $f:X\rightarrow Y$ eine stetige Abbildung zwischen irreduzibler
 affiner algebraischen Mengen. Es sind äquivalent:
 \begin{enumerate}
@@ -12,20 +9,25 @@ affiner algebraischen Mengen. Es sind äquivalent:
 \item $f$ ist ein von Räumen von Funktionen, d.h. für alle $U\subseteq Y$
 offen und alle $g\in\mathcal{O}_{Y}(U)$ gilt $g\circ f\in\mathcal{O}_{X}(f^{-1}(U))$.
 \end{enumerate}
+\end{prop}
+\begin{proof}
+\mbox{}
+\begin{itemize}
+\item $(i)\Leftrightarrow(ii)$ 
 
-\subsection*{Beweis (Satz 38)}
+Satz 29.
+\item $(iii)\Rightarrow(ii)$ 
 
-$(i)\Leftrightarrow(ii)$ Satz 29.
+$U:=Y$ + Satz 33.
+\item $(ii)\Rightarrow(iii)$.
 
-$(iii)\Rightarrow(ii)$ $U:=Y$ + Satz 33.
-
-$(ii)\Rightarrow(iii)$ Betrachte $\varphi:\Gamma(Y)\rightarrow\Gamma(X)$,
-$h\mapsto h\circ f$. Aufgrund des Verklebungsaxioms reicht es, die
-Bedingung für $U$ von der Form $\mathcal{D}(g)$ zu zeigen: Es gilt
+Betrachte $\varphi:\Gamma(Y)\rightarrow\Gamma(X)$, $h\mapsto h\circ f$.
+Aufgrund des Verklebungsaxioms reicht es, die Bedingung für $U$ von
+der Form $\mathcal{D}(g)$ zu zeigen: Es gilt:
 \[
 f^{-1}(\mathcal{D}(g))=\{x\in X\mid\underbrace{g(f(x))}_{=\varphi(g)(x)}\neq0\}=\mathcal{D}(\varphi(g))
 \]
-Deswegen induziert $\varphi$
+Deswegen induziert $\varphi$:
 \begin{align*}
 H & \longmapsto H\circ f\\
 \mathcal{O}_{Y}(\mathcal{D}(g)) & \phantom{\longrightarrow}\mathcal{O}_{X}(D(\varphi(g)))\\
@@ -35,13 +37,13 @@ H & \longmapsto H\circ f\\
 mit $h\circ f\in\Gamma(X)$ nach Voraussetzung und $\varphi(g)=g\circ f\in\Gamma(X)$
 nach Voraussetzung.
 
+\end{itemize}
 Insgesamt haben wir:
-
-\subsection*{Theorem 39 (orig. 36)}
-
+\end{proof}
+\begin{thm}[orig. 36]
 Die obige Konstruktion definiert einen volltreuen Funktor
 \[
 \text{\{irred. aff. abg. Mengen über }k\}\rightarrow\{\text{Räume mit Funktionen über }k\}
 \]
-\selectlanguage{ngerman}%
+\end{thm}
 

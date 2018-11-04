@@ -158,29 +158,40 @@ liefert eine Kategorienäquivalenz, der durch Einschränkung eine Äquivalenz
 induziert.
 \end_layout
 
-\begin_layout Subsubsection*
-Beweis (Satz 29)
-\end_layout
-
-\begin_layout Standard
+\begin_layout Proof
 \begin_inset Formula $Y\xrightarrow{g}\mathbb{A}^{1}(k)\in\Gamma(Y)$
 \end_inset
 
  ist Morphismus.
- 
-\begin_inset Formula $\Rightarrow g\circ f:X\xrightarrow{f}Y\xrightarrow{g}\mathbb{A}^{1}(k)$
+ Es folgt:
+\begin_inset Formula 
+\[
+g\circ f:X\xrightarrow{f}Y\xrightarrow{g}\mathbb{A}^{1}(k)
+\]
+
 \end_inset
 
- ist ..., d.h.
+ 
+\end_layout
+
+\begin_layout Proof
+ist ..., 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+???
+\end_layout
+
+\end_inset
+
+ d.h.
  
 \begin_inset Formula $\in\Gamma(X)$
 \end_inset
 
 .
  
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula $\Gamma(f):\Gamma(Y)\rightarrow\Gamma(X)$
 \end_inset
 
@@ -192,10 +203,10 @@ Beweis (Satz 29)
  und Kompositions....
  
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
-
+???
 \end_layout
 
 \end_inset
@@ -216,11 +227,8 @@ status collapsed
  ein kontravarianter Funktor.
 \end_layout
 
-\begin_layout Paragraph
-Behauptung
-\end_layout
-
-\begin_layout Standard
+\begin_deeper
+\begin_layout Claim*
 \begin_inset Formula $\Gamma$
 \end_inset
 
@@ -233,10 +241,6 @@ f & \mapsto\Gamma(f)
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 ist 
 \emph on
 bijektiv
@@ -248,11 +252,7 @@ bijektiv
 .
 \end_layout
 
-\begin_layout Paragraph
-Beweis
-\end_layout
-
-\begin_layout Standard
+\begin_layout Proof
 Wir konstruieren eine Umkehrabbildung wie folgt: Zu 
 \begin_inset Formula $\varphi:\Gamma(Y)\rightarrow\Gamma(X)$
 \end_inset
@@ -279,12 +279,12 @@ kommutiert (
 \begin_inset Formula $\tilde{\varphi}(T_{1}'):=$
 \end_inset
 
- impede 
+ 
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-?
+???
 \end_layout
 
 \end_inset
@@ -308,7 +308,7 @@ status open
 \end_inset
 
 ).
- Definiere
+ Definiere:
 \begin_inset Formula 
 \begin{align*}
 f:X & \rightarrow Y\\
@@ -320,11 +320,7 @@ x=(x_{1},\ldots,x_{n}) & \mapsto(\tilde{\varphi}(T_{1}')(x_{1},\ldots,x_{n}),\ld
 
 \end_layout
 
-\begin_layout Paragraph
-Behauptung
-\end_layout
-
-\begin_layout Standard
+\begin_layout Claim*
 \begin_inset Formula $\Gamma$
 \end_inset
 
@@ -348,12 +344,18 @@ Behauptung
 .
 \end_layout
 
-\begin_layout Paragraph
-Beweis
+\begin_layout Proof
+Da nach Voraussetzung
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO
 \end_layout
 
-\begin_layout Standard
-Da nach Voraussetzung 
+\end_inset
+
+ 
 \begin_inset Formula $A\cong k[T]/\mathfrak{A}$
 \end_inset
 
@@ -369,11 +371,8 @@ Da nach Voraussetzung
  Der Rest folgt aus Satz 28.
 \end_layout
 
-\begin_layout Subsection*
-Satz 30
-\end_layout
-
-\begin_layout Standard
+\end_deeper
+\begin_layout Proposition
 Sei 
 \begin_inset Formula $f:X\rightarrow Y$
 \end_inset
@@ -394,15 +393,13 @@ Sei
 .
 \end_layout
 
-\begin_layout Subsubsection*
-Beweis (Satz 30)
-\end_layout
-
-\begin_layout Standard
-Setting: 
+\begin_layout Proof
+Setting:
 \begin_inset Formula 
 \begin{align*}
-\mathfrak{m}_{f(x)}=\{g\mid g(f(x))=0\}\subset\hom(Y,\mathbb{A}^{1})=\Gamma(Y) & \xrightarrow{\Gamma(f)}\Gamma(X)=\hom(X,\mathbb{A}^{1})\supset\{k\mid k(x))=0\}\\
+\mathfrak{m}_{f(x)} & =\{g\mid g(f(x))=0\}\subset\hom(Y,\mathbb{A}^{1})\\
+ & =\Gamma(Y)\xrightarrow{\Gamma(f)}\Gamma(X)\\
+ & =\hom(X,\mathbb{A}^{1})\supset\{k\mid k(x))=0\}\\
 g & \mapsto g\circ f
 \end{align*}
 
@@ -411,11 +408,23 @@ g & \mapsto g\circ f
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Formula $\Gamma(f)^{-1}(\mathfrak{m}_{x})=\{g\in\Gamma(Y)\mid g\circ f(x)\neq0\}=\mathfrak{m}_{f(x)}$
+\begin_layout Proof
+Es ist:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\Gamma(f)^{-1}(\mathfrak{m}_{x})=\{g\in\Gamma(Y)\mid g\circ f(x)\neq0\}=\mathfrak{m}_{f(x)},
+\]
+
 \end_inset
 
-, da 
+
+\end_layout
+
+\begin_layout Proof
+da 
 \begin_inset Formula $\Gamma(f)(g)(x)=g(f(x))$
 \end_inset
 

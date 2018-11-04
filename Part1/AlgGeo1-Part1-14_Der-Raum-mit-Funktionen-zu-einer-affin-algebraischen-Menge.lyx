@@ -12,7 +12,7 @@ theorems-ams-extended
 enumitem
 \end_modules
 \maintain_unincluded_children false
-\language english
+\language ngerman
 \language_package default
 \inputencoding auto
 \fontencoding global
@@ -63,7 +63,7 @@ enumitem
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\quotes_language german
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -80,26 +80,20 @@ enumitem
 Der Raum mit Funktionen zu einer affin algebraischen Menge
 \end_layout
 
-\begin_layout Description
+\begin_layout Standard
+
+\series bold
 Ziel.
+
+\series default
  
 \begin_inset Formula $X\subseteq\mathbb{A}^{n}(k)\mapsto(X,\mathcal{O}_{X})$
 \end_inset
 
  als irreduzibele affine algebraische Menge bzw.
  Zariski-Topologie.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-D.h.
- wir müssen Menge von Funktionen 
+ D.h.
+ wir müssen Mengen von Funktionen 
 \begin_inset Formula $\mathcal{O}_{X}(U)$
 \end_inset
 
@@ -117,27 +111,13 @@ D.h.
 \end_inset
 
  definiert (dazu 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-?
-\end_layout
-
-\end_inset
-
-
 \begin_inset Formula $X$
 \end_inset
 
  irreduzibel, später bei Schemata fällt diese Bedingung weg!)
 \end_layout
 
-\begin_layout Subsection*
-Definition 33
-\end_layout
-
-\begin_layout Standard
+\begin_layout Definition
 \begin_inset Formula $K(X):=\text{Quot}(\Gamma(X))$
 \end_inset
 
@@ -149,6 +129,7 @@ Funktionenkörper
 \begin_inset Formula $X$
 \end_inset
 
+.
  (
 \begin_inset Formula $\Gamma(X)$
 \end_inset
@@ -157,10 +138,10 @@ Funktionenkörper
 \begin_inset Formula $X$
 \end_inset
 
- irreduzibel nullteilerfrei).
+ irreduzibel nullteilerfrei.)
 \end_layout
 
-\begin_layout Standard
+\begin_layout Definition
 Elemente 
 \begin_inset Note Note
 status open
@@ -195,11 +176,7 @@ status open
 .
 \end_layout
 
-\begin_layout Subsection*
-Lemma 34
-\end_layout
-
-\begin_layout Standard
+\begin_layout Lemma
 Gilt für 
 \begin_inset Formula $\frac{f_{1}}{g_{1}},\frac{f_{2}}{g_{2}}\in K(X)$
 \end_inset
@@ -223,7 +200,7 @@ Gilt für
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Lemma
 dann folgt 
 \begin_inset Formula $\frac{f_{1}}{g_{1}}=\frac{f_{2}}{g_{2}}$
 \end_inset
@@ -235,11 +212,7 @@ dann folgt
 .
 \end_layout
 
-\begin_layout Subsubsection*
-Beweis (Lemma 34)
-\end_layout
-
-\begin_layout Standard
+\begin_layout Proof
 Ohne Einschränkung der Allgemeinheit: 
 \begin_inset Formula $g_{1}=g_{2}=g$
 \end_inset
@@ -257,7 +230,7 @@ status open
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Proof
 \begin_inset Formula $\Rightarrow(f_{1}-f_{2})(x)=0$
 \end_inset
 
@@ -268,14 +241,14 @@ status open
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Proof
 \begin_inset Formula $\Rightarrow\emptyset\neq U\subset V(f_{1}-f_{2})\subset X$
 \end_inset
 
  dicht
 \end_layout
 
-\begin_layout Standard
+\begin_layout Proof
 d.h.
  
 \begin_inset Formula $V(f_{1}-f_{2})=X$
@@ -284,7 +257,7 @@ d.h.
 .
 \end_layout
 
-\begin_layout Standard
+\begin_layout Proof
 \begin_inset Formula $f_{1}-f_{2}\in IV(f_{1}-f_{2})=I(X)\equiv(0)$
 \end_inset
 
@@ -295,18 +268,14 @@ d.h.
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Proof
 \begin_inset Formula $\Rightarrow f_{1}-f_{2}=0$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Subsection*
-Definition 35
-\end_layout
-
-\begin_layout Standard
+\begin_layout Definition
 Sei 
 \begin_inset Formula $X$
 \end_inset
@@ -336,14 +305,18 @@ Sei
 .
 \end_layout
 
-\begin_layout Standard
-\begin_inset Formula $\mathcal{O}_{X}(U):=\bigcap_{x\in U}\Gamma(X)_{\mathfrak{m}_{x}}\subset K(X)$
+\begin_layout Definition
+\begin_inset Formula 
+\[
+\mathcal{O}_{X}(U):=\bigcap_{x\in U}\Gamma(X)_{\mathfrak{m}_{x}}\subset K(X)
+\]
+
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Definition
 d.h.
  für jedes 
 \begin_inset Formula $x\in U$
@@ -554,12 +527,17 @@ der zur irreduziblen affin algebraische Menge gehörige Raum von Funktionen.
  
 \end_layout
 
-\begin_layout Subsection*
-Satz 36 (orig.
- 33)
+\begin_layout Proposition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+orig.
+ 33
 \end_layout
 
-\begin_layout Standard
+\end_inset
+
 Für 
 \begin_inset Formula $(X,\mathcal{O}_{X})$
 \end_inset
@@ -583,7 +561,7 @@ Für
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Proposition
 insbesondere 
 \begin_inset Formula $\mathcal{O}_{X}(X)=\Gamma(X)$
 \end_inset
@@ -591,11 +569,7 @@ insbesondere
 .
 \end_layout
 
-\begin_layout Subsubsection*
-Beweis (Satz 36)
-\end_layout
-
-\begin_layout Standard
+\begin_layout Proof
 \begin_inset Formula $\Gamma(X)\subset\mathcal{D}(f)$
 \end_inset
 
@@ -616,7 +590,7 @@ Beweis (Satz 36)
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Proof
 Sei nun 
 \begin_inset Formula $g$
 \end_inset
@@ -636,7 +610,7 @@ Sei nun
  Ideal.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Proof
 Dazu: 
 \begin_inset Formula $g\in\Gamma(X)_{g}$
 \end_inset
@@ -644,7 +618,7 @@ Dazu:
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Proof
 \begin_inset Formula $\Leftrightarrow g=\frac{k}{g^{n}}$
 \end_inset
 
@@ -659,7 +633,7 @@ Dazu:
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Proof
 \begin_inset Formula $\Leftrightarrow f^{n}\in\mathfrak{A}$
 \end_inset
 
@@ -670,7 +644,7 @@ Dazu:
 .
 \end_layout
 
-\begin_layout Standard
+\begin_layout Proof
 d.h.
  zu zeigen: 
 \begin_inset Formula $f\in\text{rad}(\mathfrak{A})=IV(\mathfrak{A})$
@@ -679,7 +653,7 @@ d.h.
  (Hilbertsche Nullstellensatz)
 \end_layout
 
-\begin_layout Standard
+\begin_layout Proof
 \begin_inset Formula $\Leftrightarrow f(x)=0$
 \end_inset
 
@@ -690,7 +664,7 @@ d.h.
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Proof
 Ist dazu 
 \begin_inset Formula $x\in X$
 \end_inset
@@ -722,7 +696,7 @@ Ist dazu
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Proof
 \begin_inset Formula $\Rightarrow f_{2}\in\mathfrak{A}$
 \end_inset
 
@@ -734,18 +708,28 @@ Ist dazu
 :
 \end_layout
 
-\begin_layout Standard
+\begin_layout Proof
 \begin_inset Formula $\Rightarrow x\notin V(\mathfrak{A})$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Subsection*
-Bemerkung 37 (orig.
- 34)
+\begin_layout Remark
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+orig.
+ 34
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Enumerate
 Im allgemeinen existierten für 
 \begin_inset Formula $f\in\mathcal{O}_{x}(U)$
@@ -881,6 +865,7 @@ abgeschlossenen
  später Schemata).
 \end_layout
 
+\end_deeper
 \end_deeper
 \end_body
 \end_document

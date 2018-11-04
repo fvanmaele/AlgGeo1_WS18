@@ -12,7 +12,7 @@ theorems-ams-extended
 enumitem
 \end_modules
 \maintain_unincluded_children false
-\language english
+\language ngerman
 \language_package default
 \inputencoding auto
 \fontencoding global
@@ -63,7 +63,7 @@ enumitem
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\quotes_language german
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -80,12 +80,17 @@ enumitem
 Funktorialität der Konstruktion
 \end_layout
 
-\begin_layout Subsection*
-Satz 38 (orig.
- 35)
+\begin_layout Proposition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+orig.
+ 35
 \end_layout
 
-\begin_layout Standard
+\end_inset
+
 Sei 
 \begin_inset Formula $f:X\rightarrow Y$
 \end_inset
@@ -94,6 +99,7 @@ Sei
  Es sind äquivalent:
 \end_layout
 
+\begin_deeper
 \begin_layout Enumerate
 \begin_inset Formula $f$
 \end_inset
@@ -132,33 +138,63 @@ Sei
 .
 \end_layout
 
-\begin_layout Subsection*
-Beweis (Satz 38)
+\end_deeper
+\begin_layout Proof
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{}
 \end_layout
 
-\begin_layout Standard
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
 \begin_inset Formula $(i)\Leftrightarrow(ii)$
 \end_inset
 
- Satz 29.
+ 
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
+Satz 29.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
 \begin_inset Formula $(iii)\Rightarrow(ii)$
 \end_inset
 
  
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
 \begin_inset Formula $U:=Y$
 \end_inset
 
  + Satz 33.
 \end_layout
 
-\begin_layout Standard
+\end_deeper
+\begin_layout Itemize
 \begin_inset Formula $(ii)\Rightarrow(iii)$
 \end_inset
 
- Betrachte 
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Betrachte 
 \begin_inset Formula $\varphi:\Gamma(Y)\rightarrow\Gamma(X)$
 \end_inset
 
@@ -175,7 +211,7 @@ Beweis (Satz 38)
 \begin_inset Formula $\mathcal{D}(g)$
 \end_inset
 
- zu zeigen: Es gilt
+ zu zeigen: Es gilt:
 \begin_inset Formula 
 \[
 f^{-1}(\mathcal{D}(g))=\{x\in X\mid\underbrace{g(f(x))}_{=\varphi(g)(x)}\neq0\}=\mathcal{D}(\varphi(g))
@@ -187,7 +223,7 @@ Deswegen induziert
 \begin_inset Formula $\varphi$
 \end_inset
 
-
+:
 \begin_inset Formula 
 \begin{align*}
 H & \longmapsto H\circ f\\
@@ -209,16 +245,23 @@ mit
  nach Voraussetzung.
 \end_layout
 
-\begin_layout Standard
+\end_deeper
+\end_deeper
+\begin_layout Proof
 Insgesamt haben wir:
 \end_layout
 
-\begin_layout Subsection*
-Theorem 39 (orig.
- 36)
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+orig.
+ 36
 \end_layout
 
-\begin_layout Standard
+\end_inset
+
 Die obige Konstruktion definiert einen volltreuen Funktor
 \begin_inset Formula 
 \[

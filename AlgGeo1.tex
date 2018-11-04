@@ -38,6 +38,8 @@
   \newtheorem{lem}[thm]{\protect\lemmaname}
   \theoremstyle{remark}
   \newtheorem{rem}[thm]{\protect\remarkname}
+  \theoremstyle{remark}
+  \newtheorem*{claim*}{\protect\claimname}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
 \usepackage{mathtools}
@@ -49,6 +51,7 @@
 \makeatother
 
 \usepackage{babel}
+  \addto\captionsenglish{\renewcommand{\claimname}{Claim}}
   \addto\captionsenglish{\renewcommand{\corollaryname}{Corollary}}
   \addto\captionsenglish{\renewcommand{\definitionname}{Definition}}
   \addto\captionsenglish{\renewcommand{\examplename}{Example}}
@@ -57,6 +60,7 @@
   \addto\captionsenglish{\renewcommand{\questionname}{Question}}
   \addto\captionsenglish{\renewcommand{\remarkname}{Remark}}
   \addto\captionsenglish{\renewcommand{\theoremname}{Theorem}}
+  \addto\captionsngerman{\renewcommand{\claimname}{Behauptung}}
   \addto\captionsngerman{\renewcommand{\corollaryname}{Korollar}}
   \addto\captionsngerman{\renewcommand{\definitionname}{Definition}}
   \addto\captionsngerman{\renewcommand{\examplename}{Beispiel}}
@@ -65,6 +69,7 @@
   \addto\captionsngerman{\renewcommand{\questionname}{Frage}}
   \addto\captionsngerman{\renewcommand{\remarkname}{Bemerkung}}
   \addto\captionsngerman{\renewcommand{\theoremname}{Theorem}}
+  \providecommand{\claimname}{Behauptung}
   \providecommand{\corollaryname}{Korollar}
   \providecommand{\definitionname}{Definition}
   \providecommand{\examplename}{Beispiel}

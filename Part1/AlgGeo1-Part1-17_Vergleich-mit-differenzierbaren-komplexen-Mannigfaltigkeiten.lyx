@@ -87,11 +87,8 @@ theorems-ams-extended
 \begin_layout Standard
 Ein Morphismus von Prävarietäten ist ein Morphismus der entsprechenden Räume
  mit Funktionen.
- Insbesondere sind also affine Varietäten Prävarietäten!
-\end_layout
-
-\begin_layout Standard
-Später: Varietät = 
+ Insbesondere sind also affine Varietäten Prävarietäten! Später sehen wir:
+ Varietät = 
 \begin_inset Quotes gld
 \end_inset
 
@@ -99,11 +96,8 @@ separierte Prävarietät
 \begin_inset Quotes grd
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-Affine Varietäten sind stets 
+.
+ Affine Varietäten sind stets 
 \begin_inset Quotes gld
 \end_inset
 
@@ -120,10 +114,7 @@ affinen Prävarietäten
 \end_inset
 
  zu reden.
-\end_layout
-
-\begin_layout Standard
-Ist 
+ Ist 
 \begin_inset Formula $X$
 \end_inset
 
@@ -175,11 +166,7 @@ Differential/Komplexe Geometrie
 Mannigfaltigkeiten werden via Kartenabbildungen mit differenzierbaren/holomorphe
 n Übergangsabbildungen definiert (hier problematisch, da offene Teile affiner
  algebraischer Mengen i.A.
- keine solche Struktur wider besitzen.)
-\end_layout
-
-\begin_layout Standard
-Jedoch:
+ keine solche Struktur wider besitzen.) Jedoch:
 \begin_inset Formula 
 \begin{align*}
 \text{\{diff. Mfgkt.\}} & \longrightarrow\text{\{Räume mit Fkt.}/\mathbb{R}\}\\
@@ -194,11 +181,8 @@ X & \longmapsto(X,\mathcal{O}_{X})\\
 
 \begin_layout Standard
 ist ein volltreuer Funktor.
-\end_layout
-
-\begin_layout Standard
-Daher kann man differenzierbare Mannigfaltigkeiten auch als diejenigen Räume
- mit Funktionen über 
+ Daher kann man differenzierbare Mannigfaltigkeiten auch als diejenigen
+ Räume mit Funktionen über 
 \begin_inset Formula $\mathbb{R}$
 \end_inset
 

@@ -89,26 +89,45 @@ geringten Raumes
 \begin_inset Quotes erd
 \end_inset
 
- später.)
-\end_layout
-
-\begin_layout Standard
-Sei 
+ später.) Sei 
 \begin_inset Formula $k$
 \end_inset
 
  ein nicht notwendig algebraisch abgeschlossenen Körper.
 \end_layout
 
-\begin_layout Subsection*
-Definition 31
+\begin_layout Definition
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{}
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Enumerate
 Ein 
 \series bold
 Raum mit Funktionen
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Raum mit Funktionen
+\end_layout
+
+\end_inset
+
  besteht aus den folgenden Daten:
 \end_layout
 
@@ -118,7 +137,7 @@ ein topologischer Raum
 \begin_inset Formula $X$
 \end_inset
 
-
+;
 \end_layout
 
 \begin_layout Itemize
@@ -144,7 +163,7 @@ Sind
 \end_inset
 
  offen und 
-\begin_inset Formula $f\in G(U)$
+\begin_inset Formula $f\in\mathcal{O}(U)$
 \end_inset
 
  so ist 
@@ -159,19 +178,33 @@ Sind
 \end_layout
 
 \begin_layout Enumerate
-(Verklebungsaxiom) Sind 
+(
+\series bold
+Verklebungsaxiom
+\series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Verklebungsaxiom
+\end_layout
+
+\end_inset
+
+) Sind 
 \begin_inset Formula $U_{i}\subset X$
 \end_inset
 
-, 
+ offen, 
 \begin_inset Formula $i\in I$
 \end_inset
 
-, offen, ist 
+, ist 
 \begin_inset Formula $U=\bigcup_{i\in I}U_{i}$
 \end_inset
 
- und sind 
+, und sind 
 \begin_inset Formula $f_{i}\in\mathcal{O}(U_{i})$
 \end_inset
 
@@ -182,7 +215,7 @@ Sind
  gegeben mit
 \begin_inset Formula 
 \[
-f_{i}|_{U_{i}\cap U_{j}}=f_{j}|_{U_{i}\cap U_{j}}\ \forall i,j\in I
+f_{i}|_{U_{i}\cap U_{j}}=f_{j}|_{U_{i}\cap U_{j}}\quad\forall i,j\in I
 \]
 
 \end_inset
@@ -199,16 +232,16 @@ in
 \begin_inset Formula $\mathcal{O}(U)$
 \end_inset
 
- (bzw.
+, bzw.
  
 \begin_inset Formula $\exists_{1}f\in\mathcal{O}(U)$
 \end_inset
 
  mit 
-\begin_inset Formula $f|_{U_{i}}=f_{i})$
+\begin_inset Formula $f|_{U_{i}}=f_{i}$
 \end_inset
 
-
+.
 \end_layout
 
 \end_deeper
@@ -221,22 +254,14 @@ Bezeichne
 \begin_inset Formula $\mathcal{O}_{X}$
 \end_inset
 
- bzw.
- den o.g.
- Familie 
+ der oben genannten Familie 
 \begin_inset Formula $(X,\mathcal{O}_{X})$
 \end_inset
 
- o.g.
- Familie 
-\begin_inset Formula $(X,\mathcal{O}_{X})$
-\end_inset
-
- oder kurz 
+, oder kurz bezeichne 
 \begin_inset Formula $X$
 \end_inset
 
- bez.
  den Raum mit Funktionen.
 \end_layout
 
@@ -246,6 +271,16 @@ Ein
 \series bold
 Morphismus
 \series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Raum mit Funktionen ! Morphismus
+\end_layout
+
+\end_inset
+
  
 \begin_inset Formula $(X,\mathcal{O}_{X})\rightarrow(Y,\mathcal{O}_{Y})$
 \end_inset
@@ -254,7 +289,7 @@ Morphismus
 \begin_inset Formula $g:X\rightarrow Y$
 \end_inset
 
-, so dass fuer alle 
+, so dass für alle 
 \begin_inset Formula $V\subseteq Y$
 \end_inset
 
@@ -274,19 +309,21 @@ liegt in
 \begin_inset Formula $\mathcal{O}_{X}(g^{-1}(V))$
 \end_inset
 
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Diagramm 2
-\end_layout
+.
+\begin_inset Formula 
+\[
+\xymatrix{X\ar[r]^{g} & Y\\
+g^{1}(V)\ar[r]^{g|}\ar[d]_{f\circ g|_{f^{-1}(V)}}\ar@{^{(}->}[u] & V\ar[d]^{f}\ar@{^{(}->}[u]_{\text{offen}}\\
+K\ar@{=}[r] & K
+}
+\]
 
 \end_inset
 
 
 \end_layout
 
+\end_deeper
 \begin_layout Standard
 Die Räume von Funktionen über 
 \begin_inset Formula $K$
@@ -295,11 +332,16 @@ Die Räume von Funktionen über
  bilden eine Kategorie.
 \end_layout
 
-\begin_layout Subsection*
-Definition 32 (offene Unterräume von Funktionen)
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+offene Unterräume von Funktionen
 \end_layout
 
-\begin_layout Standard
+\end_inset
+
 Für 
 \begin_inset Formula $(X,\mathcal{O}_{X})$
 \end_inset
@@ -327,20 +369,16 @@ Für
 .
 \end_layout
 
-\begin_layout Paragraph
-Ab jetzt
-\end_layout
-
 \begin_layout Standard
-Betrachten wir Räume von Funktionen über 
+
+\series bold
+Ab jetzt
+\series default
+ betrachten wir Räume von Funktionen über 
 \begin_inset Formula $k$
 \end_inset
 
- 
-\series bold
-algebraisch abgeschlossen
-\series default
-.
+ algebraisch abgeschlossen.
 \end_layout
 
 \end_body

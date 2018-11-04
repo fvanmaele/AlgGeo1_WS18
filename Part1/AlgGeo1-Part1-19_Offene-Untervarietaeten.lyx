@@ -111,22 +111,41 @@ status open
 \end_layout
 
 \begin_layout Lemma
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+orig.
+ 41
+\end_layout
+
+\end_inset
+
+Sei 
 \begin_inset Formula $X$
 \end_inset
 
- affine Varietät: 
+ affine Varietät, 
 \begin_inset Formula $f\in\mathcal{O}_{X}(X)$
 \end_inset
 
-.
- 
+, 
 \begin_inset Formula $\mathcal{D}(f)\subseteq X$
 \end_inset
 
 .
+ Die Lokalisierung von 
+\begin_inset Formula $\Gamma(X)=\mathcal{O}_{X}(X)$
+\end_inset
+
+ in 
+\begin_inset Formula $f$
+\end_inset
+
+,
 \begin_inset Formula 
 \[
-\Gamma(X)_{f}=\Gamma(X)[T](Tf-1)
+\Gamma(X)_{f}=\Gamma(X)[T]/(Tf-1)
 \]
 
 \end_inset
@@ -135,42 +154,21 @@ status open
 \end_layout
 
 \begin_layout Lemma
-Lokalisierung von 
-\begin_inset Formula $\Gamma(X)=\mathcal{O}_{x}(X)$
-\end_inset
-
- in 
-\begin_inset Formula $f$
-\end_inset
-
-, ist integere endlich erzeugte 
+ist eine integere endlich erzeugte 
 \begin_inset Formula $k$
 \end_inset
 
 -Algebra.
- 
+ Dabei 
 \begin_inset Formula $(Y,\mathcal{O}_{Y})$
 \end_inset
 
  bezeichnet die zugehörige Varietät.
-\end_layout
-
-\begin_layout Lemma
-\begin_inset Formula $\Rightarrow(D(f),\mathcal{O}_{X|_{D(f)}})\cong(Y,\mathcal{O}_{Y})$
-\end_inset
-
- als Räume mit Funktionen.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Todo: 
-\begin_inset Formula $\mathcal{D}(f)$
-\end_inset
-
-
-\end_layout
+ Es folgt:
+\begin_inset Formula 
+\[
+(D(f),\mathcal{O}_{X|_{D(f)}})\cong(Y,\mathcal{O}_{Y})
+\]
 
 \end_inset
 
@@ -178,7 +176,7 @@ Todo:
 \end_layout
 
 \begin_layout Lemma
-d.h.
+als Räume mit Funktionen, d.h.
  
 \begin_inset Formula $(D(f),\mathcal{O}_{X|_{D(f)}})$
 \end_inset
@@ -186,5 +184,179 @@ d.h.
  ist affine Varietät.
 \end_layout
 
+\begin_layout Proof
+\begin_inset Formula $\mathcal{O}_{X}(\mathcal{D}(f))=\mathcal{O}_{X}(X)_{f}$
+\end_inset
+
+ muss affiner Koordinatenring von 
+\begin_inset Formula $(\mathcal{D}(f),\mathcal{O}_{X|_{\mathcal{D}(f)}})$
+\end_inset
+
+ sein, wenn letzterer Raum von Funktionen affin ist.
+ 
+\begin_inset Formula $X\subseteq\mathbb{A}^{n}(k)$
+\end_inset
+
+ korrespondiert zu dem Radikalideal:
+\begin_inset Formula 
+\begin{align*}
+\mathfrak{A} & =I(X)\subseteq k[T_{1},\ldots,T_{n}]\ \subset\ \mathfrak{A}'=(\mathfrak{A},fT_{n+1}-1)\subseteq k[T_{1},\ldots,T_{n+1}]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+mit Koordinatenringen:
+\begin_inset Formula 
+\begin{align*}
+\Gamma(X) & =k[T_{1},\ldots,T_{n}]/\mathfrak{A}\\
+\Gamma(Y) & =\Gamma(X)_{f}=(k[T_{1},\ldots,T_{n}]/\mathfrak{A})[T_{n+1}]/(T_{n+1}f-1)\\
+ & =k[T_{1},\ldots,T_{n+1}]/\mathfrak{A}'
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Für 
+\begin_inset Formula $Y=V(\mathfrak{A}')\subseteq\mathbb{A}^{n+1}(k)$
+\end_inset
+
+ induziert die Abbildung
+\begin_inset Formula 
+\[
+\xymatrix{Y\subseteq\mathbb{A}^{n+1}(k)\ar@{-->}[d] & (x_{1},\ldots,x_{n+1})\ar@{|->}[d] & T_{i}\\
+X\subseteq\mathbb{A}^{n}(k) & (x_{1},\ldots,x_{n}) & T_{i}\ar@{|->}[u]
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+eine Bijketion 
+\begin_inset Formula $Y\xrightarrow{j}\mathcal{D}_{X}(f)$
+\end_inset
+
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Notation?
+\end_layout
+
+\end_inset
+
+ mit Umkehrabbildung 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $(x_{0},\ldots,x_{n})^{\frac{1}{f(x_{0},\ldots,x_{n})}}\mapsfrom(x_{0},\ldots,x_{n})$
+\end_inset
+
+ ???
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Claim*
+\begin_inset Formula $j$
+\end_inset
+
+ ist Isomorphismus von Räumen mit Funktionen:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $j$
+\end_inset
+
+ ist 
+\emph on
+stetig
+\emph default
+ (als Einschränkung stetiger Funktionen) 
+\begin_inset Formula $\checkmark$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $j$
+\end_inset
+
+ ist 
+\emph on
+offen
+\emph default
+: 
+\begin_inset Formula $g\in\Gamma(X)$
+\end_inset
+
+, 
+\begin_inset Formula $\Gamma(Y)=\Gamma(X)_{f}$
+\end_inset
+
+, 
+\begin_inset Formula $\frac{g}{f^{n}}\in\Gamma(X)_{f}$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{align*}
+j\left(D_{Y}\left(\frac{g}{f^{n}}\right)\right) & =j\left(\mathcal{D}_{Y}(gf)\right) & f\text{ Einheit}\\
+ & =\mathcal{D}_{X}(gf)\text{ offen}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow j$
+\end_inset
+
+ Homömorphismus.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $j$
+\end_inset
+
+ induziert 
+\begin_inset Formula $\forall g\in\Gamma(X)$
+\end_inset
+
+ Isomorphismen:
+\begin_inset Formula 
+\begin{align*}
+\mathcal{O}_{X}(\mathcal{D}(fg)) & \longrightarrow\Gamma(Y)_{g}\\
+s & \longmapsto s\circ j
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
 \end_body
 \end_document

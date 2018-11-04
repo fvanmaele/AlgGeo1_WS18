@@ -80,8 +80,12 @@ enumitem
 Prävarietäten
 \end_layout
 
-\begin_layout Description
+\begin_layout Standard
+
+\series bold
 Ziel.
+
+\series default
  Klasse der affinen abgeschlossenen Mengen, aufgefasst als Räume mit Funktionen
  durch Verkleben vergrößern.
 \end_layout
@@ -105,22 +109,39 @@ zusammenhängend
 Definition von Prävarietäten
 \end_layout
 
-\begin_layout Subsection*
-Definition 40 (orig.
- 37)
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+orig.
+ 37
 \end_layout
 
-\begin_layout Standard
+\end_inset
+
 Eine affine Varietät ist ein Raum mit Funktionen, der isomorph ist zu den
  Raum mit Funktionen einer irreduziblen affinen algebraischen Menge.
 \end_layout
 
-\begin_layout Subsection*
-Definition 41 (orig.
- 38)
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
-\begin_layout Standard
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+orig.
+ 38
+\end_layout
+
+\end_inset
+
 Eine 
 \series bold
 Prävarietät
@@ -149,7 +170,7 @@ endliche
  eine affine Varietät ist.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Definition
 Ein 
 \series bold
 Morphismus von Prävarietäten

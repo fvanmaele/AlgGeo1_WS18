@@ -1,27 +1,22 @@
-\selectlanguage{english}%
 
 \section{Der Raum mit Funktionen zu einer affin algebraischen Menge}
-\begin{description}
-\item [{Ziel.}] $X\subseteq\mathbb{A}^{n}(k)\mapsto(X,\mathcal{O}_{X})$
+
+\textbf{Ziel.} $X\subseteq\mathbb{A}^{n}(k)\mapsto(X,\mathcal{O}_{X})$
 als irreduzibele affine algebraische Menge bzw. Zariski-Topologie.
-D.h. wir müssen Menge von Funktionen $\mathcal{O}_{X}(U)$ auf $U$,
+D.h. wir müssen Mengen von Funktionen $\mathcal{O}_{X}(U)$ auf $U$,
 $U\subset X$ offen, definieren. Diese werden als Teilmengen des Funktionenkörpers
 $K(X)$ definiert (dazu $X$ irreduzibel, später bei Schemata fällt
 diese Bedingung weg!)
-\end{description}
-
-\subsection*{Definition 33}
-
+\begin{defn}
 $K(X):=\text{Quot}(\Gamma(X))$ heißt \textbf{Funktionenkörper} von
-$X$ ($\Gamma(X)$ ist für $X$ irreduzibel nullteilerfrei).
+$X$. ($\Gamma(X)$ ist für $X$ irreduzibel nullteilerfrei.)
 
 Elemente $\frac{f}{g}\in K(X)$, $f,g\in\Gamma(X)=\hom(X,\mathbb{A}^{1}(k))$,
 $g\neq0$ lassen sich zumindest als Funktion auf der offenen Menge
 $\mathcal{D}(g)\subset X$ auffassen, wenn auch nicht i.A. auf ganz
 $X$.
-
-\subsection*{Lemma 34}
-
+\end{defn}
+\begin{lem}
 Gilt für $\frac{f_{1}}{g_{1}},\frac{f_{2}}{g_{2}}\in K(X)$ ($f_{i},g_{i}\in\Gamma(X))$
 und einer offenen Teilmenge $\emptyset\neq U\subset\mathcal{D}(g_{1}g_{2})$
 \[
@@ -29,9 +24,8 @@ und einer offenen Teilmenge $\emptyset\neq U\subset\mathcal{D}(g_{1}g_{2})$
 \]
 
 dann folgt $\frac{f_{1}}{g_{1}}=\frac{f_{2}}{g_{2}}$ in $K(X)$.
-
-\subsubsection*{Beweis (Lemma 34)}
-
+\end{lem}
+\begin{proof}
 Ohne Einschränkung der Allgemeinheit: $g_{1}=g_{2}=g$ (sonst Erweitern!)
 
 $\Rightarrow(f_{1}-f_{2})(x)=0$ $\forall x\in U$
@@ -43,18 +37,19 @@ d.h. $V(f_{1}-f_{2})=X$.
 $f_{1}-f_{2}\in IV(f_{1}-f_{2})=I(X)\equiv(0)$ in $\Gamma(X)$
 
 $\Rightarrow f_{1}-f_{2}=0$.
-
-\subsection*{Definition 35}
-
+\end{proof}
+\begin{defn}
 Sei $X$ eine irreduzibele affine algebraische Menge, $U\subset X$
 offen. Sei $\Gamma(X)_{\mathfrak{m}_{x}}$ Lokalisierung von $\Gamma(X)$
 bzgl. das maximale Ideal $\mathfrak{m}_{x}$ in $x\in X$.
 
-$\mathcal{O}_{X}(U):=\bigcap_{x\in U}\Gamma(X)_{\mathfrak{m}_{x}}\subset K(X)$
+\[
+\mathcal{O}_{X}(U):=\bigcap_{x\in U}\Gamma(X)_{\mathfrak{m}_{x}}\subset K(X)
+\]
 
 d.h. für jedes $x\in U$ lässt sich $f\in\mathcal{O}_{X}(U)$ schreiben
 als $\frac{h}{g}$ mit $g(x)\neq0$.
-
+\end{defn}
 (Wenn $f\in\Gamma(X)$ bezeichne $\Gamma(X)_{f}$ die Lokalisierung
 von $\Gamma(X)$ bzgl. der multiplikativ abgeschlossenen Teilmenge
 $\{1,f,f^{2},\ldots,f^{n}\ldots\}$.  Dann lässt sich
@@ -81,18 +76,16 @@ Definition ist
 . $\Rightarrow(X,\mathcal{O}_{X})$ ist Raum mit Funktionen, \textbf{der
 zur irreduziblen affin algebraische Menge gehörige Raum von Funktionen.} 
 \end{enumerate}
-
-\subsection*{Satz 36 (orig. 33)}
-
-Für $(X,\mathcal{O}_{X})$ zu $X$ wie oben und $f\in\Gamma(X)$ gilt:
+\begin{prop}[orig. 33]
+Für $(X,\mathcal{O}_{X})$ zu $X$ wie oben und $f\in\Gamma(X)$
+gilt:
 \[
 \mathcal{O}_{X}(D(f))=\Gamma(X)_{f},
 \]
 
 insbesondere $\mathcal{O}_{X}(X)=\Gamma(X)$.
-
-\subsubsection*{Beweis (Satz 36)}
-
+\end{prop}
+\begin{proof}
 $\Gamma(X)\subset\mathcal{D}(f)$ klar, da $f(x)\neq0$ $\forall x\in\mathcal{D}(f)$
 bzw. $f\in P(X)\backslash\mathfrak{m}_{x}$. 
 
@@ -118,8 +111,8 @@ mit $g=\frac{f_{1}}{f_{2}}$
 $\Rightarrow f_{2}\in\mathfrak{A}$. Da $f_{2}(x)\neq0$:
 
 $\Rightarrow x\notin V(\mathfrak{A})$.
-
-\subsection*{Bemerkung 37 (orig. 34)}
+\end{proof}
+\begin{rem}[orig. 34]
 \begin{enumerate}
 \item Im allgemeinen existierten für $f\in\mathcal{O}_{x}(U)$ \textbf{nicht}
 $g,h\in\Gamma(X)$ mit $f=\frac{g}{h}$ und $h(x)\neq0$ $\forall x\in U$.
@@ -143,6 +136,7 @@ $\mathfrak{A}\subset A$ Ideal, sind die \textbf{abgeschlossenen}
 Mengen.
 
 $\mathcal{O}_{X}(U):=\bigcap_{\mathfrak{m}\in U}A_{\mathfrak{m}}\subset\text{Quot}(A)$
-für $U\subset X$ offen (vgl. später Schemata).\selectlanguage{ngerman}%
+für $U\subset X$ offen (vgl. später Schemata).
 \end{enumerate}
+\end{rem}
 
