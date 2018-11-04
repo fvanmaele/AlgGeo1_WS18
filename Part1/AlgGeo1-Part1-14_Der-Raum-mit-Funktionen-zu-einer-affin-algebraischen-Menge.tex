@@ -17,7 +17,7 @@ $\mathcal{D}(g)\subset X$ auffassen, wenn auch nicht i.A. auf ganz
 $X$.
 \end{defn}
 \begin{lem}
-Gilt für $\frac{f_{1}}{g_{1}},\frac{f_{2}}{g_{2}}\in K(X)$ ($f_{i},g_{i}\in\Gamma(X))$
+Gilt für $\frac{f_{1}}{g_{1}},\frac{f_{2}}{g_{2}}\in K(X)$, $f_{i},g_{i}\in\Gamma(X)$,
 und einer offenen Teilmenge $\emptyset\neq U\subset\mathcal{D}(g_{1}g_{2})$
 \[
 \frac{f_{1}(x)}{g_{1}(x)}=\frac{f_{2}(x)}{g_{2}(x)}\qquad\forall x\in U,
@@ -26,15 +26,16 @@ und einer offenen Teilmenge $\emptyset\neq U\subset\mathcal{D}(g_{1}g_{2})$
 dann folgt $\frac{f_{1}}{g_{1}}=\frac{f_{2}}{g_{2}}$ in $K(X)$.
 \end{lem}
 \begin{proof}
-Ohne Einschränkung der Allgemeinheit: $g_{1}=g_{2}=g$ (sonst Erweitern!)
+Sei ohne Einschränkung der Allgemeinheit $g_{1}=g_{2}=g$. (Sonst
+Erweitern!) 
 
-$\Rightarrow(f_{1}-f_{2})(x)=0$ $\forall x\in U$
+$\Rightarrow(f_{1}-f_{2})(x)=0$ $\forall x\in U$.
 
-$\Rightarrow\emptyset\neq U\subset V(f_{1}-f_{2})\subset X$ dicht
-
+$\Rightarrow\emptyset\neq U\subset V(f_{1}-f_{2})\subset X$ dicht,
 d.h. $V(f_{1}-f_{2})=X$.
 
-$f_{1}-f_{2}\in IV(f_{1}-f_{2})=I(X)\equiv(0)$ in $\Gamma(X)$
+$\phantom{\Rightarrow\ }$$f_{1}-f_{2}\in IV(f_{1}-f_{2})=I(X)\equiv(0)$
+in $\Gamma(X)$ 
 
 $\Rightarrow f_{1}-f_{2}=0$.
 \end{proof}
@@ -50,31 +51,39 @@ bzgl. das maximale Ideal $\mathfrak{m}_{x}$ in $x\in X$.
 d.h. für jedes $x\in U$ lässt sich $f\in\mathcal{O}_{X}(U)$ schreiben
 als $\frac{h}{g}$ mit $g(x)\neq0$.
 \end{defn}
-(Wenn $f\in\Gamma(X)$ bezeichne $\Gamma(X)_{f}$ die Lokalisierung
+Wenn $f\in\Gamma(X)$ bezeichne $\Gamma(X)_{f}$ die Lokalisierung
 von $\Gamma(X)$ bzgl. der multiplikativ abgeschlossenen Teilmenge
-$\{1,f,f^{2},\ldots,f^{n}\ldots\}$.  Dann lässt sich
+$\{1,f,f^{2},\ldots,f^{n}\ldots\}$. Dann lässt sich
 \[
 \Gamma(X)_{\mathfrak{m}_{x}}=\bigcup_{f\in\Gamma(X)\backslash\mathfrak{m}_{x}}\Gamma(X)_{f}\subset K(X)
 \]
 
-``$\supset$'' klar, ``$\subset$'' $\frac{g}{f}$ mit $f(x)\neq0$
-d.h. $f\notin\mathfrak{m}_{x}$ $\Rightarrow\frac{g}{f}\in\Gamma(X)_{f}$.
+schreiben. ``$\supset$'' klar, ``$\subset$'' $\frac{g}{f}$
+mit $f(x)\neq0$ d.h. $f\notin\mathfrak{m}_{x}$ $\Rightarrow\frac{g}{f}\in\Gamma(X)_{f}$.
+
 
 \paragraph{Es gilt:}
 \begin{enumerate}
-\item $\mathcal{O}_{x}(U)\rightarrow\text{Abb}(U,k)$, $f\mapsto(x\mapsto f(x):=\frac{g(x)}{f(x)}\in k)$
-ist injektiv (Lemma 34) und wohldefiniert (kürzen/Erweitern) wobei
+\item Für $V\subset U\subset X$ offen kommutiert das folgende Diagramm:
+\[
+\xymatrix{\mathcal{O}_{X}(V)\ar@{^{(}->}[r] & \text{Abb}(V,k)\\
+\mathcal{O}_{X}(U)\ar@{^{(}->}[r]\ar@{^{(}->}[u] & \text{Abb}(U,k)\ar[u]_{\text{Einschränkungsabb.}}
+}
+\]
+mit $\mathcal{O}_{X}(U)\subset\mathcal{O}_{X}(V)$ nach Definition.
+\item $\mathcal{O}_{X}(U)\rightarrow\text{Abb}(U,k)$, $f\mapsto(x\mapsto f(x):=\frac{g(x)}{f(x)}\in k)$
+ist injektiv (Lemma 34) und wohldefiniert (kürzen/Erweitern), wobei
 $g,h\in\Gamma(X)$ mit $h\notin\mathfrak{m}_{x}$ mit $f=\frac{g}{h}$
 nach Definition von $\mathcal{O}_{X}(U)$ existiert.
-\item F{[}r $V\subset U\subset X$ offen kommutiert das folgende Diagramm
 \item \textbf{Verklebungseigenschaft.} Sei $U=\bigcup_{i\in I}U_{i}$. Nach
 Definition ist 
 \begin{align*}
 \mathcal{O}_{X}(U) & =\bigcap_{i}\mathcal{O}_{X}(U_{i})\subset K(X)\\
 \ni f:U\rightarrow k & \quad\ni f_{i}:U_{i}\rightarrow k
 \end{align*}
-. $\Rightarrow(X,\mathcal{O}_{X})$ ist Raum mit Funktionen, \textbf{der
-zur irreduziblen affin algebraische Menge gehörige Raum von Funktionen.} 
+{[}Diagramm fehlt{]}. $\Rightarrow(X,\mathcal{O}_{X})$ ist Raum
+mit Funktionen, \textbf{der zur irreduziblen affin algebraische Menge
+gehörige Raum von Funktionen.} 
 \end{enumerate}
 \begin{prop}[orig. 33]
 Für $(X,\mathcal{O}_{X})$ zu $X$ wie oben und $f\in\Gamma(X)$
@@ -113,27 +122,30 @@ $\Rightarrow f_{2}\in\mathfrak{A}$. Da $f_{2}(x)\neq0$:
 $\Rightarrow x\notin V(\mathfrak{A})$.
 \end{proof}
 \begin{rem}[orig. 34]
+\mbox{}
 \begin{enumerate}
-\item Im allgemeinen existierten für $f\in\mathcal{O}_{x}(U)$ \textbf{nicht}
+\item Im allgemeinen existieren für $f\in\mathcal{O}_{x}(U)$ \textbf{nicht}
 $g,h\in\Gamma(X)$ mit $f=\frac{g}{h}$ und $h(x)\neq0$ $\forall x\in U$.
-\item \textbf{Alternative Definition von $\mathcal{O}_{X}$ I.}
-
-$\mathcal{O}_{X}(\mathcal{D}(f)):=\Gamma(X)_{f}$ $\forall f\in\Gamma(X)$
-
-Da $\mathcal{D}(f)$ Basis der Topologie, kann es höchstens einen
+\item \textbf{Alternative Definition von $\mathcal{O}_{X}$, I.}
+\[
+\mathcal{O}_{X}(\mathcal{D}(f)):=\Gamma(X)_{f},\quad\forall f\in\Gamma(X).
+\]
+Da $\mathcal{D}(f)$ Basis der Topologie ist, kann es höchstens einen
 Raum mit Funktionen geben mit dieser Eigenschaft, es bleibt die Existenz
 zu zeigen.
-\item \textbf{Alternative Definition von $\mathcal{O}_{X}$ II.}
+\item \textbf{Alternative Definition von $\mathcal{O}_{X}$, II.}
 
-direkt von einer integeren endlich erzeugten $k$-Algebra $A$ ausgehend
+Direkt von einer integeren endlich erzeugten $k$-Algebra $A$ ausgehend
 (die $X$ bis auf Isomorphie festlegt), aber ohne ``Koordinaten''
 zu wählen.
+\begin{align*}
+X & :=\{\mathfrak{m}\subseteq A\mid\text{max. Ideale}\}
+\end{align*}
+Die \textbf{abgeschlossen Mengen} sind gegeben durch:
 
-$X:=\{\mathfrak{m}\subseteq A\mid$ max. Ideale\}
-
-$V(\mathfrak{A}):=\{\mathfrak{m}\subseteq A$ max. $\mid\mathfrak{m}\supseteq\mathfrak{A}\}$,
-$\mathfrak{A}\subset A$ Ideal, sind die \textbf{abgeschlossenen}
-Mengen.
+\[
+V(\mathfrak{A}):=\{\mathfrak{m}\subseteq A\text{ max.}\mid\mathfrak{m}\supseteq\mathfrak{A}\},\quad\mathfrak{A}\subset A\text{ Ideal}.
+\]
 
 $\mathcal{O}_{X}(U):=\bigcap_{\mathfrak{m}\in U}A_{\mathfrak{m}}\subset\text{Quot}(A)$
 für $U\subset X$ offen (vgl. später Schemata).

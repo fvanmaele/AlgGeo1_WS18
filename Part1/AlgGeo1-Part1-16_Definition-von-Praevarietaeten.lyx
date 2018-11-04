@@ -120,8 +120,22 @@ orig.
 
 \end_inset
 
-Eine affine Varietät ist ein Raum mit Funktionen, der isomorph ist zu den
- Raum mit Funktionen einer irreduziblen affinen algebraischen Menge.
+Eine 
+\series bold
+affine Varietät
+\series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+affine Varietät
+\end_layout
+
+\end_inset
+
+ ist ein Raum mit Funktionen, der isomorph ist zu den Raum mit Funktionen
+ einer irreduziblen affinen algebraischen Menge.
 \end_layout
 
 \begin_layout Standard
@@ -175,12 +189,12 @@ Ein
 \series bold
 Morphismus von Prävarietäten
 \series default
- ist ein Morphismus der entsprechend 
+ ist ein Morphismus der entsprechenden 
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-
+??
 \end_layout
 
 \end_inset

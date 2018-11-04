@@ -143,16 +143,6 @@ Funktionenkörper
 
 \begin_layout Definition
 Elemente 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-?
-\end_layout
-
-\end_inset
-
-
 \begin_inset Formula $\frac{f}{g}\in K(X)$
 \end_inset
 
@@ -181,11 +171,11 @@ Gilt für
 \begin_inset Formula $\frac{f_{1}}{g_{1}},\frac{f_{2}}{g_{2}}\in K(X)$
 \end_inset
 
- (
-\begin_inset Formula $f_{i},g_{i}\in\Gamma(X))$
+, 
+\begin_inset Formula $f_{i},g_{i}\in\Gamma(X)$
 \end_inset
 
- und einer offenen Teilmenge 
+, und einer offenen Teilmenge 
 \begin_inset Formula $\emptyset\neq U\subset\mathcal{D}(g_{1}g_{2})$
 \end_inset
 
@@ -213,16 +203,17 @@ dann folgt
 \end_layout
 
 \begin_layout Proof
-Ohne Einschränkung der Allgemeinheit: 
+Sei ohne Einschränkung der Allgemeinheit 
 \begin_inset Formula $g_{1}=g_{2}=g$
 \end_inset
 
- (sonst Erweitern!) 
+.
+ (Sonst Erweitern!) 
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-
+Todo
 \end_layout
 
 \end_inset
@@ -238,18 +229,14 @@ status open
 \begin_inset Formula $\forall x\in U$
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Proof
 \begin_inset Formula $\Rightarrow\emptyset\neq U\subset V(f_{1}-f_{2})\subset X$
 \end_inset
 
- dicht
-\end_layout
-
-\begin_layout Proof
-d.h.
+ dicht, d.h.
  
 \begin_inset Formula $V(f_{1}-f_{2})=X$
 \end_inset
@@ -258,11 +245,25 @@ d.h.
 \end_layout
 
 \begin_layout Proof
+\begin_inset Formula $\phantom{\Rightarrow\ }$
+\end_inset
+
+
 \begin_inset Formula $f_{1}-f_{2}\in IV(f_{1}-f_{2})=I(X)\equiv(0)$
 \end_inset
 
  in 
 \begin_inset Formula $\Gamma(X)$
+\end_inset
+
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+todo
+\end_layout
+
 \end_inset
 
 
@@ -338,7 +339,7 @@ d.h.
 \end_layout
 
 \begin_layout Standard
-(Wenn 
+Wenn 
 \begin_inset Formula $f\in\Gamma(X)$
 \end_inset
 
@@ -356,16 +357,6 @@ d.h.
 \end_inset
 
 .
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
  Dann lässt sich
 \begin_inset Formula 
 \[
@@ -378,6 +369,8 @@ status open
 \end_layout
 
 \begin_layout Standard
+schreiben.
+ 
 \begin_inset Quotes eld
 \end_inset
 
@@ -419,6 +412,17 @@ status open
 \end_inset
 
 .
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Todo
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph
@@ -426,14 +430,36 @@ Es gilt:
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $\mathcal{O}_{x}(U)\rightarrow\text{Abb}(U,k)$
+Für 
+\begin_inset Formula $V\subset U\subset X$
+\end_inset
+
+ offen kommutiert das folgende Diagramm:
+\begin_inset Formula 
+\[
+\xymatrix{\mathcal{O}_{X}(V)\ar@{^{(}->}[r] & \text{Abb}(V,k)\\
+\mathcal{O}_{X}(U)\ar@{^{(}->}[r]\ar@{^{(}->}[u] & \text{Abb}(U,k)\ar[u]_{\text{Einschränkungsabb.}}
+}
+\]
+
+\end_inset
+
+mit 
+\begin_inset Formula $\mathcal{O}_{X}(U)\subset\mathcal{O}_{X}(V)$
+\end_inset
+
+ nach Definition.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathcal{O}_{X}(U)\rightarrow\text{Abb}(U,k)$
 \end_inset
 
 , 
 \begin_inset Formula $f\mapsto(x\mapsto f(x):=\frac{g(x)}{f(x)}\in k)$
 \end_inset
 
- ist injektiv (Lemma 34) und wohldefiniert (kürzen/Erweitern) wobei 
+ ist injektiv (Lemma 34) und wohldefiniert (kürzen/Erweitern), wobei 
 \begin_inset Formula $g,h\in\Gamma(X)$
 \end_inset
 
@@ -450,25 +476,6 @@ Es gilt:
 \end_inset
 
  existiert.
-\end_layout
-
-\begin_layout Enumerate
-F[r 
-\begin_inset Formula $V\subset U\subset X$
-\end_inset
-
- offen kommutiert das folgende Diagramm 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Diag.
- 2
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Enumerate
@@ -504,7 +511,7 @@ status open
 
 \end_inset
 
-
+[Diagramm fehlt]
 \begin_inset Note Note
 status open
 
@@ -727,11 +734,24 @@ orig.
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
-Im allgemeinen existierten für 
+Im allgemeinen existieren für 
 \begin_inset Formula $f\in\mathcal{O}_{x}(U)$
 \end_inset
 
@@ -765,31 +785,24 @@ Alternative Definition von
 \begin_inset Formula $\mathcal{O}_{X}$
 \end_inset
 
- I.
-\end_layout
+, I.
+\series default
 
-\begin_deeper
-\begin_layout Standard
-\begin_inset Formula $\mathcal{O}_{X}(\mathcal{D}(f)):=\Gamma(X)_{f}$
+\begin_inset Formula 
+\[
+\mathcal{O}_{X}(\mathcal{D}(f)):=\Gamma(X)_{f},\quad\forall f\in\Gamma(X).
+\]
+
 \end_inset
 
- 
-\begin_inset Formula $\forall f\in\Gamma(X)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 Da 
 \begin_inset Formula $\mathcal{D}(f)$
 \end_inset
 
- Basis der Topologie, kann es höchstens einen Raum mit Funktionen geben
+ Basis der Topologie ist, kann es höchstens einen Raum mit Funktionen geben
  mit dieser Eigenschaft, es bleibt die Existenz zu zeigen.
 \end_layout
 
-\end_deeper
 \begin_layout Enumerate
 
 \series bold
@@ -797,12 +810,12 @@ Alternative Definition von
 \begin_inset Formula $\mathcal{O}_{X}$
 \end_inset
 
- II.
+, II.
 \end_layout
 
 \begin_deeper
 \begin_layout Standard
-direkt von einer integeren endlich erzeugten 
+Direkt von einer integeren endlich erzeugten 
 \begin_inset Formula $k$
 \end_inset
 
@@ -823,34 +836,29 @@ Koordinaten
 \end_inset
 
  zu wählen.
-\end_layout
+\begin_inset Formula 
+\begin{align*}
+X & :=\{\mathfrak{m}\subseteq A\mid\text{max. Ideale}\}
+\end{align*}
 
-\begin_layout Standard
-\begin_inset Formula $X:=\{\mathfrak{m}\subseteq A\mid$
 \end_inset
 
- max.
- Ideale}
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $V(\mathfrak{A}):=\{\mathfrak{m}\subseteq A$
-\end_inset
-
- max.
- 
-\begin_inset Formula $\mid\mathfrak{m}\supseteq\mathfrak{A}\}$
-\end_inset
-
-, 
-\begin_inset Formula $\mathfrak{A}\subset A$
-\end_inset
-
- Ideal, sind die 
+Die 
 \series bold
-abgeschlossenen
+abgeschlossen Mengen
 \series default
- Mengen.
+ sind gegeben durch:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+V(\mathfrak{A}):=\{\mathfrak{m}\subseteq A\text{ max.}\mid\mathfrak{m}\supseteq\mathfrak{A}\},\quad\mathfrak{A}\subset A\text{ Ideal}.
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard

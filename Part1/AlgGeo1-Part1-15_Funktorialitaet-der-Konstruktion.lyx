@@ -189,7 +189,7 @@ Satz 29.
 \begin_inset Formula $(ii)\Rightarrow(iii)$
 \end_inset
 
-.
+
 \end_layout
 
 \begin_deeper
@@ -227,8 +227,9 @@ Deswegen induziert
 \begin_inset Formula 
 \begin{align*}
 H & \longmapsto H\circ f\\
-\mathcal{O}_{Y}(\mathcal{D}(g)) & \phantom{\longrightarrow}\mathcal{O}_{X}(D(\varphi(g)))\\
-=\Gamma(Y)_{g} & \longrightarrow=\Gamma(X)_{\varphi(g)}\\
+\mathcal{O}_{Y}(\mathcal{D}(g)) & \longrightarrow\mathcal{O}_{X}(D(\varphi(g)))\\
+ & \shortparallel\\
+\Gamma(Y)_{g} & \longrightarrow\Gamma(X)_{\varphi(g)}\\
 \frac{h}{g} & \longmapsto\frac{h\circ f}{(g\circ f)^{n}}
 \end{align*}
 
