@@ -9,11 +9,10 @@
 \begin_modules
 theorems-ams
 theorems-ams-extended
-theorems-sec
 enumitem
 \end_modules
 \maintain_unincluded_children false
-\language english
+\language ngerman
 \language_package default
 \inputencoding auto
 \fontencoding global
@@ -64,7 +63,7 @@ enumitem
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\quotes_language german
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -78,20 +77,27 @@ enumitem
 \begin_body
 
 \begin_layout Section
-
-\lang ngerman
 Affine algebraische Mengen
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Definition
+\begin_inset ERT
+status open
 
-\lang ngerman
-Definition 4
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{}
 \end_layout
 
-\begin_layout Itemize
+\end_inset
 
-\lang ngerman
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
 \begin_inset Formula $\mathbb{A}^{n}(k)$
 \end_inset
 
@@ -111,8 +117,6 @@ Definition 4
 \end_layout
 
 \begin_layout Itemize
-
-\lang ngerman
 Abgeschlossene Teilmengen von 
 \begin_inset Formula $\mathbb{A}^{n}(k)$
 \end_inset
@@ -120,15 +124,8 @@ Abgeschlossene Teilmengen von
  heißen affine abgeschlossene Mengen.
 \end_layout
 
-\begin_layout Subsection
-
-\lang ngerman
-Beispiel 5
-\end_layout
-
-\begin_layout Standard
-
-\lang ngerman
+\end_deeper
+\begin_layout Example
 Da 
 \begin_inset Formula $k[T]$
 \end_inset
@@ -154,41 +151,53 @@ Da
 \end_inset
 
  (endliche Teilmengen).
- 
-\begin_inset Note Note
+\begin_inset Note Comment
 status open
 
 \begin_layout Plain Layout
+Für 
+\begin_inset Formula $f\in k$
+\end_inset
 
-\lang ngerman
-TODO
+ ist 
+\begin_inset Formula $V(f)=\mathbb{A}^{1}$
+\end_inset
+
+, denn die Einheiten im Polynomring 
+\begin_inset Formula $k[T]$
+\end_inset
+
+ sind gegeben durch 
+\begin_inset Formula $k^{\times}$
+\end_inset
+
+, und Ideale erzeugt von einer Einheit bilden den ganzen Ring.
+ (siehe Algebra 1)
 \end_layout
 
 \end_inset
 
-Insbesondere sieht man, dass die Zariski-Topologie im Allgemeinen nicht
+ Insbesondere sieht man, dass die Zariski-Topologie im Allgemeinen nicht
  Hausdorff ist.
  
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
 
-\lang ngerman
-Beispiel 6
+
 \end_layout
 
-\begin_layout Standard
-
-\lang ngerman
+\begin_layout Example
 \begin_inset Formula $\mathbb{A}^{2}(k)$
 \end_inset
 
  hat zumindestens als abgeschlossene Mengen:
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
-
-\lang ngerman
 \begin_inset Formula $\emptyset$
 \end_inset
 
@@ -200,8 +209,6 @@ Beispiel 6
 \end_layout
 
 \begin_layout Itemize
-
-\lang ngerman
 Einpunktige Mengen: 
 \begin_inset Formula $\{(x_{1},x_{2})=V(T_{1}-x_{1},T_{2}-x_{2})$
 \end_inset
@@ -210,8 +217,6 @@ Einpunktige Mengen:
 \end_layout
 
 \begin_layout Itemize
-
-\lang ngerman
 \begin_inset Formula $V(f)$
 \end_inset
 
@@ -220,11 +225,21 @@ Einpunktige Mengen:
 \end_inset
 
  irreduzibel.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Definition von irreduzibel -> abh.
+ führt zu Prim- oder Maximalideal?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-
-\lang ngerman
 Ferner alle endliche Vereneigungen dieser Liste.
  (Dies sind in der Tat alle, denn später sehen wir: 
 \begin_inset Quotes eld
@@ -257,5 +272,6 @@ Krull-Dimension
 .)
 \end_layout
 
+\end_deeper
 \end_body
 \end_document

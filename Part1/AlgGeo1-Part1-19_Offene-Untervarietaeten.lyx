@@ -14,9 +14,9 @@
 \end_preamble
 \use_default_options true
 \begin_modules
+enumitem
 theorems-ams
 theorems-ams-extended
-enumitem
 \end_modules
 \maintain_unincluded_children false
 \language ngerman
@@ -38,6 +38,7 @@ enumitem
 \output_sync 0
 \bibtex_command default
 \index_command default
+\float_placement h
 \paperfontsize default
 \spacing single
 \use_hyperref false
@@ -84,99 +85,105 @@ enumitem
 \begin_body
 
 \begin_layout Section
-Irreduzibele affine algebraische Mengen
+Offene Untervarietäten
+\end_layout
+
+\begin_layout Standard
+\begin_inset Quotes gld
+\end_inset
+
+Offene Teilmengen von affinen Varietäten (abgeschlossene beliebige 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+?
+\end_layout
+
+\end_inset
+
+ Prävarietäten) sind wieder Prävarietäten
+\begin_inset Quotes grd
+\end_inset
+
+ (aber i.A.
+ nicht affin!)
 \end_layout
 
 \begin_layout Lemma
-Eine abgeschlossene Teilmenge 
-\begin_inset Formula $Z\subseteq\mathbb{A}^{n}(k)$
+\begin_inset Formula $X$
 \end_inset
 
- ist genau dann irreduzibel, wenn 
-\begin_inset Formula $I(Z)$
-\end_inset
-
- ein Primideal ist.
- Insbesondere ist 
-\begin_inset Formula $\mathbb{A}^{n}$
-\end_inset
-
- irreduzibel.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-da der Polynomring ein Integritätsring ist
-\end_layout
-
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Proof
-\begin_inset Formula $Z$
-\end_inset
-
- irreduzibel ist äquivalent zu 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-noethersch/endlich erzeugt
-\end_layout
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{align*}
- & (Z=\underbrace{V(\mathfrak{A})}_{\bigcap V(f_{i})}\cup\underbrace{V(\mathfrak{b})}_{\bigcap V(g_{j})}\quad\Rightarrow\quad V(\mathfrak{A})=Z\text{ oder }V(\mathfrak{b})=Z).\\
-\Leftrightarrow\  & \forall f,g\in k[\underline{T}]:\ V(fg)=V(f)\cup V(g)\supseteq Z:\ V(f)\supset Z\text{ oder }V(g)\supseteq Z.\\
-(*)\Leftrightarrow\  & \forall f,g\in k[\underline{T}]:\ fg\in I(V(fg))\subseteq I(Z):\ f\in I(Z)\text{ oder }g\in I(Z).\\
-\Leftrightarrow\  & I(Z)\text{ ist Primideal.}
-\end{align*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proof
-(*): 
-\begin_inset Formula $V(I(Z))=Z$
-\end_inset
-
-, 
-\begin_inset Formula $I(V(\mathfrak{A}))=\rad(\mathfrak{A})$
+ affine Varietät: 
+\begin_inset Formula $f\in\mathcal{O}_{X}(X)$
 \end_inset
 
 .
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO; vgl.
- Übungsblatt 2
-\end_layout
-
+\begin_inset Formula $\mathcal{D}(f)\subseteq X$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Remark
-Die Korrespondenz aus Korollar 11 schränkt sich ein zu
+.
 \begin_inset Formula 
 \[
-\{\text{irred. abg. Teilmengen }\subseteq\mathbb{A}^{n}\}\overset{1:1}{\leftrightarrow}\{\text{Primideale in }k[\underline{T}]\}
+\Gamma(X)_{f}=\Gamma(X)[T](Tf-1)
 \]
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Lemma
+Lokalisierung von 
+\begin_inset Formula $\Gamma(X)=\mathcal{O}_{x}(X)$
+\end_inset
+
+ in 
+\begin_inset Formula $f$
+\end_inset
+
+, ist integere endlich erzeugte 
+\begin_inset Formula $k$
+\end_inset
+
+-Algebra.
+ 
+\begin_inset Formula $(Y,\mathcal{O}_{Y})$
+\end_inset
+
+ bezeichnet die zugehörige Varietät.
+\end_layout
+
+\begin_layout Lemma
+\begin_inset Formula $\Rightarrow(D(f),\mathcal{O}_{X|_{D(f)}})\cong(Y,\mathcal{O}_{Y})$
+\end_inset
+
+ als Räume mit Funktionen.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Todo: 
+\begin_inset Formula $\mathcal{D}(f)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+d.h.
+ 
+\begin_inset Formula $(D(f),\mathcal{O}_{X|_{D(f)}})$
+\end_inset
+
+ ist affine Varietät.
 \end_layout
 
 \end_body

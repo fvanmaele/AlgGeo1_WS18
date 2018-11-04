@@ -1,4 +1,3 @@
-\selectlanguage{english}%
 
 \paragraph*{Affine algebraische Mengen als Räume von Funktionen}
 
@@ -23,9 +22,7 @@ mit $f,g\in\hom(X,\mathbb{A}^{1}(k))$, $\alpha\in k$. Es gilt:
 \ker\varphi=I(X)
 \]
 
-
-\subsection*{Definition 26}
-
+\begin{defn}
 $\Gamma(X):=k[I]/I(X)\cong\hom(X,\mathbb{A}^{1}(k))$ heißt der \textbf{affine
 Koordinatenring }von $X$.
 
@@ -39,67 +36,58 @@ Für $x=(x_{1},\ldots,x_{n})\in X$ gilt:
 
 unter der Projektion $\pi:k[\underline{T}]=\Gamma(\mathbb{A}^{n}(k))\twoheadrightarrow\Gamma(X)$.
 Es ist $\mathfrak{m}_{x}$ ein maximales Ideal von $\Gamma(X)$ mit
-$\Gamma(X)/\mathfrak{m}_{x}=k$.
-
-Für ein Ideal $\mathfrak{A}\subset\Gamma(X)$ setze
+$\Gamma(X)/\mathfrak{m}_{x}=k$. Für ein Ideal $\mathfrak{A}\subset\Gamma(X)$
+setze
 \[
 V(\mathfrak{A})=\{x\in X\mid f(x)=0\ \forall f\in\mathfrak{A}\}=V(\pi^{-1}(\mathfrak{A}))\cap X.
 \]
 
 Dies sind genau die abgeschlossenen Mengen von $X$ als Teilraum in
 $\mathbb{A}^{n}(k)$ mit der induzierten Topologie, diese wird auch
-\textbf{Zariski-Topologie} genannt.
-
-Für $f\in\Gamma(X)$ setze:
+\textbf{Zariski-Topologie} genannt. Für $f\in\Gamma(X)$ setze:
 \[
-D(f)=\{x\in X\mid f(x)\neq0\}=X\backslash V(f).
+D(f):=\{x\in X\mid f(x)\neq0\}=X\backslash V(f).
 \]
-
-
-\subsection*{Lemma 27}
-
+\end{defn}
+\begin{lem}
 Die offenen Mengen $D(f)$, $f\in\Gamma(X)$, bilden eine Basis der
 Topologie, d.h.
 \[
-\forall U\subset X\text{ offen }\exists f_{i}\in\Gamma(X),\,i\in I,\,\text{mit }U=\bigcup_{i\in I}D(f_{i})
+\forall U\subset X\text{ offen }\exists f_{i}\in\Gamma(X),\,i\in I,\quad\text{mit }U=\bigcup_{i\in I}D(f_{i})
 \]
-
-
-\subsubsection*{Beweis (Lemma 27)}
-
+\end{lem}
+\begin{proof}
 $U=X\backslash V(\mathfrak{A})$ für ein $\mathfrak{A}\subset\Gamma(X)$,
 $\mathfrak{A}=\langle f_{1},\ldots,f_{n}\rangle$ . Wegen
 \[
-V(\mathfrak{A})=\bigcap_{i=1}^{n}V(f_{i})
-\]
-
-folgt
-\[
-U=\bigcup_{i=1}^{n}D(f_{i})
+V(\mathfrak{A})=\bigcap_{i=1}^{n}V(f_{i})\quad\Rightarrow\quad U=\bigcup_{i=1}^{n}D(f_{i})
 \]
 
 Es reichen also sogar endlich viele $f_{i}$! 
-
-\subsection*{Satz 28}
-
+\end{proof}
+\begin{prop}
 Der Koordinatenring $\Gamma(X)$ einer affinen algebraischen Menge
 $X$ ist eine endlich erzeugte $k$-Algebra, die reduziert ist (d.h.
-keine nilpotenten Elemente $\neq0$ enthält). Ferner:
+keine nilpotenten Elemente $\neq0$ enthält). Ferner ist $X$ irreduzibel
+genau dann, wenn $\Gamma(X)$ integer ist.
+\end{prop}
+\begin{proof}
+$k[\underline{T}]\twoheadrightarrow\Gamma(X)$ impliziert ``endlich
+erzeugte $k$-Algebra''. Es ist:
 \[
-X\text{ irreduzibel}\Leftrightarrow\Gamma(X)\text{ ist integer}
+\Gamma(X)\text{ irreduzibel }\Leftrightarrow I(X)=\rad I(X).
 \]
 
+Denn mit Satz 10.ii) und Korollar 11 folgt:
+\begin{align*}
+X & =V(\mathfrak{A}):\,I(X)=\rad\mathfrak{A}\\
+\Rightarrow\rad I(X) & =\rad\rad\mathfrak{A}=\rad\mathfrak{A}=I(X).
+\end{align*}
 
-\subsubsection*{Beweis (Satz 28)}
+Mit Lemma 17 folgt: $X$ irreduzibel
 
-$k[\underline{T}]\twoheadrightarrow\Gamma(X)$ impliziert ``endlich
-erzeugte $k$-Algebra''. $\Gamma(X)$ irreduzibel ist äquivalent
-dazu, dass $I(X)=\text{rad }I(X)$. 
+$\phantom{\quad}\Leftrightarrow I(X)$ Primideal.
 
-(Satz 10. ii) + Korollar 11: $X=V(\mathfrak{A})$: $I(X)=\text{rad }\mathfrak{A}=I(X)$
-
-$\Rightarrow\text{rad }I(X)=\text{rad rad }\mathfrak{A}=\text{rad }\mathfrak{A}=I(X)$).
-
-$X$ irreduzibel $\overset{Lem.17}{\Leftrightarrow}I(X)$ Primideal
-$\Leftrightarrow\Gamma(X)=k[T]/T(X)$ integer. \selectlanguage{ngerman}%
+$\phantom{\quad}\Leftrightarrow\Gamma(X)=k[T]/T(X)$.
+\end{proof}
 

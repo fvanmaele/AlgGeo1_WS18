@@ -5,11 +5,15 @@
 \save_transient_properties true
 \origin unavailable
 \textclass article
+\begin_preamble
+\usepackage{mathtools}
+\usepackage{faktor}
+\DeclareMathOperator{\rad}{rad}
+\end_preamble
 \use_default_options true
 \begin_modules
 theorems-ams
 theorems-ams-extended
-theorems-sec
 enumitem
 \end_modules
 \maintain_unincluded_children false
@@ -91,33 +95,24 @@ Sei
 \end_inset
 
 .
+
+\series bold
+ Es gilt:
+\series default
+ 
+\begin_inset Formula 
+\[
+V(\mathfrak{A})=V(\rad\mathfrak{A})
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-
-\series bold
-Es gilt:
-\series default
- 
-\begin_inset Formula $V(\mathfrak{A})=V(\text{rad\,}\mathfrak{A})$
-\end_inset
-
- mit 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Formula $\rad\mathfrak{A}=\{f\in k[\underline{T}]\mid f^{n}\in\mathfrak{A}$
-\end_inset
-
- für 
-\begin_inset Formula $n>0\}$
+mit 
+\begin_inset Formula $\rad\mathfrak{A}=\{f\in k[\underline{T}]\mid f^{n}\in\mathfrak{A}\text{ für }n>0\}$
 \end_inset
 
 , da
@@ -136,11 +131,7 @@ d.h.
  verschiedene Ideale können dieselbe algebraische Menge beschreiben.
 \end_layout
 
-\begin_layout Subsection
-Definition 9
-\end_layout
-
-\begin_layout Standard
+\begin_layout Definition
 Für eine Teilmenge 
 \begin_inset Formula $Z\subseteq\mathbb{A}^{n}(k)$
 \end_inset
@@ -156,7 +147,7 @@ I(Z)=\{f\in k[\underline{T}]\mid f(x)=0\ \forall x\in Z\}
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Definition
 das Ideal aller auf 
 \begin_inset Formula $Z$
 \end_inset
@@ -164,27 +155,44 @@ das Ideal aller auf
  verschwindenden Polynomfunktionen.
 \end_layout
 
-\begin_layout Subsection
-Satz 10
+\begin_layout Proposition
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{}
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Enumerate
+Sei 
 \begin_inset Formula $\mathfrak{A}\subset k[\underline{T}]$
 \end_inset
 
- Ideal 
-\begin_inset Formula $\Rightarrow I(V(\mathfrak{A}))=\rad(\mathfrak{A})$
+ Ideal.
+ Dann ist 
+\begin_inset Formula $I(V(\mathfrak{A}))=\rad(\mathfrak{A})$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Enumerate
+Sei 
 \begin_inset Formula $Z\subseteq\mathbb{A}^{n}(k)$
 \end_inset
 
- Teilmenge 
-\begin_inset Formula $\Rightarrow V(I(Z))=\overline{Z}$
+ Teilmenge.
+ Dann ist 
+\begin_inset Formula $V(I(Z))=\overline{Z}$
 \end_inset
 
 , der Abschluss von 
@@ -194,23 +202,9 @@ Satz 10
 .
 \end_layout
 
-\begin_layout Subsubsection
-Beweis (Satz 10)
-\end_layout
-
-\begin_layout Standard
-Algebra II, Übungsaufgabe.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO
-\end_layout
-
-\end_inset
-
-
+\end_deeper
+\begin_layout Proof
+Übungsblatt 2.
 \end_layout
 
 \begin_layout Standard
@@ -243,7 +237,7 @@ Radikalideal
 \end_inset
 
 , oder äquivalent wenn 
-\begin_inset Formula $\faktor{k[\underline{T}]}{\mathfrak{A}}$
+\begin_inset Formula $k[\underline{T}]/\mathfrak{A}$
 \end_inset
 
  
@@ -254,11 +248,7 @@ reduziert
  keine nilpotente Elemente hat.
 \end_layout
 
-\begin_layout Subsection
-Korollar 11
-\end_layout
-
-\begin_layout Standard
+\begin_layout Corollary
 Wir erhalten eine 1-1 Korrespondenz
 \begin_inset Formula 
 \begin{align*}
@@ -272,7 +262,7 @@ V(\mathfrak{A}) & \mapsfrom\mathfrak{A}
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Corollary
 die sich zu einer 1-1 Korrespondenz
 \begin_inset Formula 
 \begin{align*}
@@ -288,7 +278,7 @@ x=(x_{1},\ldots,x_{n}) & \mapsto\begin{array}{rl}
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Corollary
 einschränkt.
 \end_layout
 

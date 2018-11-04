@@ -5,15 +5,21 @@
 \save_transient_properties true
 \origin unavailable
 \textclass article
+\begin_preamble
+\usepackage{mathtools}
+\usepackage{faktor}
+\DeclareMathOperator{\rad}{rad}
+\renewcommand{\labelenumi}{(\roman{enumi})}
+\renewcommand{\labelenumii}{\arabic{enumii}.}
+\end_preamble
 \use_default_options true
 \begin_modules
 theorems-ams
 theorems-ams-extended
-theorems-sec
 enumitem
 \end_modules
 \maintain_unincluded_children false
-\language english
+\language ngerman
 \language_package default
 \inputencoding auto
 \fontencoding global
@@ -64,7 +70,7 @@ enumitem
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\quotes_language german
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -85,11 +91,7 @@ Funktorielle Eigenschaften von
 
 \end_layout
 
-\begin_layout Subsection*
-Satz 29
-\end_layout
-
-\begin_layout Standard
+\begin_layout Proposition
 Für einen Morphismus 
 \begin_inset Formula $X\xrightarrow{f}Y$
 \end_inset
@@ -119,7 +121,7 @@ g & \mapsto g\circ f
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Proposition
 ein Homomorphismus von 
 \begin_inset Formula $k$
 \end_inset
@@ -140,7 +142,7 @@ kontravariante
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Proposition
 liefert eine Kategorienäquivalenz, der durch Einschränkung eine Äquivalenz
 \begin_inset Formula 
 \[
@@ -152,7 +154,7 @@ liefert eine Kategorienäquivalenz, der durch Einschränkung eine Äquivalenz
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Proposition
 induziert.
 \end_layout
 

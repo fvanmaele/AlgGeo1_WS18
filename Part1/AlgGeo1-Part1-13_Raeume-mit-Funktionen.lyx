@@ -9,7 +9,6 @@
 \begin_modules
 theorems-ams
 theorems-ams-extended
-theorems-sec
 enumitem
 \end_modules
 \maintain_unincluded_children false

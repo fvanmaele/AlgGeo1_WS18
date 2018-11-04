@@ -9,11 +9,10 @@
 \begin_modules
 theorems-ams
 theorems-ams-extended
-theorems-sec
 enumitem
 \end_modules
 \maintain_unincluded_children false
-\language english
+\language ngerman
 \language_package default
 \inputencoding auto
 \fontencoding global
@@ -64,7 +63,7 @@ enumitem
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\quotes_language german
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -78,22 +77,12 @@ enumitem
 \begin_body
 
 \begin_layout Section
-
-\lang ngerman
 Die Zariski-Topologie
 \end_layout
 
-\begin_layout Subsection
-
-\lang ngerman
-Definition 2
-\end_layout
-
-\begin_layout Standard
-
-\lang ngerman
+\begin_layout Definition
 Sei 
-\begin_inset Formula $M\subset k[T_{1},\ldots,T_{n}]\eqqcolon k[\underline{T}]$
+\begin_inset Formula $M\subset k[T_{1},\ldots,T_{n}]=:k[\underline{T}]$
 \end_inset
 
  eine Teilmenge.
@@ -108,9 +97,7 @@ V(M)=\{(t_{1},\ldots,t_{n})\in k\mid f(t_{1},\ldots,t_{n})=0\ \boldsymbol{\foral
 
 \end_layout
 
-\begin_layout Standard
-
-\lang ngerman
+\begin_layout Definition
 bezeichnen wir die gemeinsame 
 \series bold
 Nullstellen-(Verschwindungs-)Menge
@@ -120,8 +107,6 @@ Nullstellen-(Verschwindungs-)Menge
 status open
 
 \begin_layout Plain Layout
-
-\lang ngerman
 Nullstellen-Menge
 \end_layout
 
@@ -144,14 +129,10 @@ Nullstellen-Menge
 \end_layout
 
 \begin_layout Subsection
-
-\lang ngerman
 Eigenschaften
 \end_layout
 
 \begin_layout Itemize
-
-\lang ngerman
 \begin_inset Formula $V(M)=V(\mathfrak{A})$
 \end_inset
 
@@ -179,8 +160,6 @@ erzeugte Ideal
 \end_layout
 
 \begin_layout Itemize
-
-\lang ngerman
 Da 
 \begin_inset Formula $k[\underline{T}]$
 \end_inset
@@ -201,8 +180,6 @@ V(M)=V(f_{1},\ldots,f_{n})\qquad\text{falls }\mathfrak{A}=\langle f_{1},\ldots,f
 \end_layout
 
 \begin_layout Itemize
-
-\lang ngerman
 \begin_inset Formula $V(-)$
 \end_inset
 
@@ -217,15 +194,7 @@ inklusionsumkehrend
 .
 \end_layout
 
-\begin_layout Subsection
-
-\lang ngerman
-Satz 3
-\end_layout
-
-\begin_layout Standard
-
-\lang ngerman
+\begin_layout Proposition
 Die Mengen 
 \begin_inset Formula $V(\mathfrak{A})$
 \end_inset
@@ -251,8 +220,6 @@ Zariski-Topologie
 status open
 
 \begin_layout Plain Layout
-
-\lang ngerman
 Zariski-Topologie
 \end_layout
 
@@ -261,9 +228,8 @@ Zariski-Topologie
 .
 \end_layout
 
+\begin_deeper
 \begin_layout Enumerate
-
-\lang ngerman
 \begin_inset Formula $\emptyset=V\left((1)\right)$
 \end_inset
 
@@ -276,8 +242,6 @@ Zariski-Topologie
 \end_layout
 
 \begin_layout Enumerate
-
-\lang ngerman
 \begin_inset Formula $\bigcap_{i\in I}V(\mathfrak{A}_{i})=V\left(\sum_{i\in I}\mathfrak{A}_{i}\right)$
 \end_inset
 
@@ -289,8 +253,6 @@ Zariski-Topologie
 \end_layout
 
 \begin_layout Enumerate
-
-\lang ngerman
 \begin_inset Formula $V(\mathfrak{A})\cup V(\mathfrak{B})=V(\mathfrak{AB})$
 \end_inset
 
@@ -301,23 +263,17 @@ Zariski-Topologie
  Ideale.
 \end_layout
 
-\begin_layout Subsubsection
-
-\lang ngerman
-Beweis (Satz 3)
-\end_layout
-
-\begin_layout Standard
-
-\lang ngerman
+\end_deeper
+\begin_layout Proof
 Übung / Algebra II.
  
+\end_layout
+
+\begin_layout Proof
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-
-\lang ngerman
 TODO
 \end_layout
 
@@ -328,8 +284,6 @@ TODO
 status open
 
 \begin_layout Plain Layout
-
-\lang ngerman
 \begin_inset Formula $(1)$
 \end_inset
 

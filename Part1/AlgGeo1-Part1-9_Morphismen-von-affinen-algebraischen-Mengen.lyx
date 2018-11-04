@@ -9,7 +9,6 @@
 \begin_modules
 theorems-ams
 theorems-ams-extended
-theorems-sec
 enumitem
 \end_modules
 \maintain_unincluded_children false
@@ -81,11 +80,7 @@ enumitem
 Morphismen von affinen algebraischen Mengen
 \end_layout
 
-\begin_layout Subsection*
-Definition 23
-\end_layout
-
-\begin_layout Standard
+\begin_layout Definition
 Seien 
 \begin_inset Formula $X\subseteq\mathbb{A}^{m}(k)$
 \end_inset
@@ -139,23 +134,23 @@ dafür
  
 \end_layout
 
-\begin_layout Subsection*
-Bemerkung 24
-\end_layout
-
-\begin_layout Standard
+\begin_layout Remark
 \begin_inset Formula $f:X\rightarrow Y$
 \end_inset
 
  lässt sich immer fortsetzen zu einem Morphismus 
 \begin_inset Formula 
 \[
-f:\mathbb{A}^{n}(k)\rightarrow\mathbb{A}^{m}(k)
+f:\mathbb{A}^{n}(k)\rightarrow\mathbb{A}^{m}(k),
 \]
 
 \end_inset
 
- (aber nicht eindeutig, es sei denn 
+
+\end_layout
+
+\begin_layout Remark
+aber nicht eindeutig, es sei denn 
 \begin_inset Formula $X=\mathbb{A}^{m}(k)$
 \end_inset
 
@@ -167,24 +162,18 @@ Komposition
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-format
-\end_layout
-
-\end_inset
-
-
 \begin_inset Formula 
 \[
-X\xrightarrow[f_{1},\ldots,f_{n}\in k[T_{1},\ldots,T_{m}]{]}{f}Y\xrightarrow[g_{1},\ldots,g_{r}\in k[T_{1}',\ldots,T_{m}']{]}{g}Z
+\xymatrix@C=9pc{X\ar[r]_{f}^{f_{1},\ldots,f_{n}\in k[T_{1},\ldots,T_{m}]} & Y\ar[r]_{g}^{g_{1},\ldots,g_{r}\in k[T_{1}',\ldots,T_{m}']} & Z}
 \]
 
 \end_inset
 
- mit 
+
+\end_layout
+
+\begin_layout Standard
+mit 
 \begin_inset Formula $X\subseteq\mathbb{A}^{m}(k)$
 \end_inset
 
@@ -232,10 +221,23 @@ Kategorie affiner algebraischer Mengen
 .
 \end_layout
 
-\begin_layout Subsection*
-Beispiel 25
+\begin_layout Example
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{}
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Enumerate
 Sei die Abbildung
 \begin_inset Formula 
@@ -291,5 +293,6 @@ bijektiv, da
  abgebildet werden.
 \end_layout
 
+\end_deeper
 \end_body
 \end_document

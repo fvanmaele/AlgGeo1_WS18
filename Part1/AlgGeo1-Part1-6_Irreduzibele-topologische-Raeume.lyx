@@ -5,15 +5,21 @@
 \save_transient_properties true
 \origin unavailable
 \textclass article
+\begin_preamble
+\usepackage{mathtools}
+\usepackage{faktor}
+\DeclareMathOperator{\rad}{rad}
+\renewcommand{\labelenumi}{(\roman{enumi})}
+\renewcommand{\labelenumii}{\arabic{enumii}.}
+\end_preamble
 \use_default_options true
 \begin_modules
 theorems-ams
 theorems-ams-extended
-theorems-sec
 enumitem
 \end_modules
 \maintain_unincluded_children false
-\language english
+\language ngerman
 \language_package default
 \inputencoding auto
 \fontencoding global
@@ -64,7 +70,7 @@ enumitem
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\quotes_language german
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -78,14 +84,10 @@ enumitem
 \begin_body
 
 \begin_layout Section
-
-\lang ngerman
 Irreduzibele topologische Räume
 \end_layout
 
 \begin_layout Standard
-
-\lang ngerman
 Die folgenden topologische Begriffe sind nur interessant, da 
 \begin_inset Formula $\mathbb{A}^{n}(k)$
 \end_inset
@@ -97,15 +99,7 @@ Die folgenden topologische Begriffe sind nur interessant, da
 ) kein Hausdorff'scher Raum ist.
 \end_layout
 
-\begin_layout Subsection
-
-\lang ngerman
-Definition 11
-\end_layout
-
-\begin_layout Standard
-
-\lang ngerman
+\begin_layout Definition
 Ein topologischer Raum 
 \begin_inset Formula $X$
 \end_inset
@@ -119,8 +113,6 @@ irreduzibel
 status open
 
 \begin_layout Plain Layout
-
-\lang ngerman
 irreduzibel
 \end_layout
 
@@ -150,9 +142,7 @@ X=A_{1}\cup A_{2},\ A_{i}\ \text{abg.}\quad\Rightarrow\quad A_{1}=X\text{ oder }
 
 \end_layout
 
-\begin_layout Standard
-
-\lang ngerman
+\begin_layout Definition
 \begin_inset Formula $Z\subset X$
 \end_inset
 
@@ -163,15 +153,13 @@ X=A_{1}\cup A_{2},\ A_{i}\ \text{abg.}\quad\Rightarrow\quad A_{1}=X\text{ oder }
  mit der induzierten Topologie irreduzibel ist.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Proposition
+\begin_inset CommandInset label
+LatexCommand label
+name "prop:irreduzibel-top"
 
-\lang ngerman
-Satz 12
-\end_layout
+\end_inset
 
-\begin_layout Standard
-
-\lang ngerman
 Für einen topologischen Raum 
 \begin_inset Formula $X$
 \end_inset
@@ -179,9 +167,8 @@ Für einen topologischen Raum
  sind äquivalent:
 \end_layout
 
+\begin_deeper
 \begin_layout Enumerate
-
-\lang ngerman
 \begin_inset Formula $X$
 \end_inset
 
@@ -189,8 +176,6 @@ Für einen topologischen Raum
 \end_layout
 
 \begin_layout Enumerate
-
-\lang ngerman
 Je zwei nichtleere offenen Teilmengen von 
 \begin_inset Formula $X$
 \end_inset
@@ -199,8 +184,6 @@ Je zwei nichtleere offenen Teilmengen von
 \end_layout
 
 \begin_layout Enumerate
-
-\lang ngerman
 Jede nichtleere offene Teilmenge 
 \begin_inset Formula $U\subset X$
 \end_inset
@@ -213,8 +196,6 @@ Jede nichtleere offene Teilmenge
 \end_layout
 
 \begin_layout Enumerate
-
-\lang ngerman
 Jede nichtleere offene Teilmenge 
 \begin_inset Formula $U\subset X$
 \end_inset
@@ -223,8 +204,6 @@ Jede nichtleere offene Teilmenge
 \end_layout
 
 \begin_layout Enumerate
-
-\lang ngerman
 Jede nichtleere offene Teilmenge 
 \begin_inset Formula $U\subset X$
 \end_inset
@@ -232,29 +211,48 @@ Jede nichtleere offene Teilmenge
  ist irreduzibel.
 \end_layout
 
-\begin_layout Subsubsection
+\end_deeper
+\begin_layout Proof
+\begin_inset ERT
+status open
 
-\lang ngerman
-Beweis (Satz 12)
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{}
 \end_layout
 
-\begin_layout Standard
+\end_inset
 
-\lang ngerman
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
 \begin_inset Formula $(i)\Leftrightarrow(ii)$
 \end_inset
 
- Komplementsmengen.
+
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
+Komplementsmengen.
+\end_layout
 
-\lang ngerman
+\end_deeper
+\begin_layout Itemize
 \begin_inset Formula $(ii)\Leftrightarrow(iii)$
 \end_inset
 
- da: 
-\begin_inset Formula $(U\subset X$
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Es ist: 
+\begin_inset Formula $U\subset X$
 \end_inset
 
  dicht 
@@ -265,138 +263,149 @@ Beweis (Satz 12)
 \begin_inset Formula $\emptyset\neq O\subset X$
 \end_inset
 
-)
+.
 \end_layout
 
-\begin_layout Standard
-
-\lang ngerman
+\end_deeper
+\begin_layout Itemize
 \begin_inset Formula $(iii)\Rightarrow(iv)$
 \end_inset
 
- klar.
+
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
+Klar.
+ 
+\begin_inset Note Note
+status open
 
-\lang ngerman
+\begin_layout Plain Layout
+TODO
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
 \begin_inset Formula $(iv)\Rightarrow(iii)$
 \end_inset
 
-.
- Sei 
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Sei 
 \begin_inset Formula $\emptyset\neq U$
 \end_inset
 
  offen und zusammenhängend.
-\end_layout
+ Es folgt:
+\begin_inset Formula 
+\[
+U=U_{1}\sqcup U_{2},\qquad\emptyset\neq U_{i}\underset{\text{offen}}{\subset}U\underset{\text{offen}}{\subset}X
+\]
 
-\begin_layout Standard
-
-\lang ngerman
-\begin_inset Formula $\Rightarrow U=U_{1}\sqcup U_{2}$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-
-\lang ngerman
-\begin_inset Formula $\emptyset\neq U_{i}\underset{\text{offen}}{\subset}U\underset{\text{offen}}{\subset}X$
+Damit ist 
+\begin_inset Formula $U_{1}\cap U_{2}=\emptyset$
 \end_inset
 
-
+, ein Widerspruch zu (iii).
 \end_layout
 
-\begin_layout Standard
-
-\lang ngerman
-\begin_inset Formula $\Rightarrow U_{1}\cap U_{2}=\emptyset$
-\end_inset
-
-, Widerspruch zu (iii).
-\end_layout
-
-\begin_layout Standard
-
-\lang ngerman
+\end_deeper
+\begin_layout Itemize
 \begin_inset Formula $(v)\Rightarrow(i)$
 \end_inset
 
- klar 
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Klar.
+ 
 \begin_inset Formula $(U=X)$
 \end_inset
 
-.
+
 \end_layout
 
-\begin_layout Standard
-
-\lang ngerman
+\end_deeper
+\begin_layout Itemize
 \begin_inset Formula $(iii)\Rightarrow(v)$
 \end_inset
 
-.
- Sei 
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Sei 
 \begin_inset Formula $\emptyset\neq U\underset{\text{offen}}{\subset}X$
 \end_inset
 
 .
  Ist 
-\begin_inset Formula $\emptyset\neq V\underset{\text{offen}}{\subset}U\Rightarrow V\underset{\text{offen}}{\subseteq}X$
+\begin_inset Formula $\emptyset\neq V\underset{\text{offen}}{\subset}U$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-
-\lang ngerman
-\begin_inset Formula $\Rightarrow V$
+, so ist 
+\begin_inset Formula $V\underset{\text{offen}}{\subseteq}X$
 \end_inset
 
- dicht in 
+.
+ Es folgt: 
+\begin_inset Formula $V$
+\end_inset
+
+ ist dicht in 
 \begin_inset Formula $X$
 \end_inset
 
-, irreduzibel 
+ und irreduzibel in 
+\begin_inset Formula $U$
+\end_inset
+
+.
+ Mit 
+\begin_inset Formula $(iii)\Rightarrow(i)$
+\end_inset
+
+ folgt, dass 
+\begin_inset Formula $U$
+\end_inset
+
+ irreduzibel ist.
+ 
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-
-\lang ngerman
-?
+TODO
 \end_layout
 
 \end_inset
 
- in 
-\begin_inset Formula $U$
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Lemma
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:irreduzibel-abschluss"
+
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-
-\lang ngerman
-\begin_inset Formula $\overset{(iii)\Rightarrow(i)}{\Rightarrow}U$
-\end_inset
-
- irreduzibel.
-\end_layout
-
-\begin_layout Subsection
-
-\lang ngerman
-Lemma 13
-\end_layout
-
-\begin_layout Standard
-
-\lang ngerman
 Eine Teilmenge 
 \begin_inset Formula $Y$
 \end_inset
@@ -405,32 +414,17 @@ Eine Teilmenge
 \begin_inset Formula $\overline{Y}$
 \end_inset
 
- dies 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
+ dies ist.
 \end_layout
 
-\end_inset
-
-ist.
-\end_layout
-
-\begin_layout Subsubsection
-
-\lang ngerman
-Beweis (Lemma 13)
-\end_layout
-
-\begin_layout Standard
-
-\lang ngerman
+\begin_layout Proof
 \begin_inset Formula $Y$
 \end_inset
 
- irreduzibel 
+ irreduzibel.
+\end_layout
+
+\begin_layout Proof
 \begin_inset Formula $\Leftrightarrow\forall U,V\subset X$
 \end_inset
 
@@ -438,31 +432,32 @@ Beweis (Lemma 13)
 \begin_inset Formula $U\cap Y\neq\emptyset\neq V\cap Y$
 \end_inset
 
- gilt 
+, gilt 
 \begin_inset Formula $Y\cap(U\cap V)\neq\emptyset$
 \end_inset
 
-
+.
 \end_layout
 
-\begin_layout Standard
-
-\lang ngerman
+\begin_layout Proof
 \begin_inset Formula $\Leftrightarrow\overline{Y}$
 \end_inset
 
  irreduzibel.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO
 \end_layout
 
-\begin_layout Subsection
+\end_inset
 
-\lang ngerman
-Definition 14
+
 \end_layout
 
-\begin_layout Standard
-
-\lang ngerman
+\begin_layout Definition
 Eine maximale irreduzibele Teilmenge eines topologischen Raumes 
 \begin_inset Formula $X$
 \end_inset
@@ -476,8 +471,6 @@ irreduzibele Komponente
 status open
 
 \begin_layout Plain Layout
-
-\lang ngerman
 irreduzibele Komponente
 \end_layout
 
@@ -490,21 +483,28 @@ irreduzibele Komponente
 .
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Remark
+\begin_inset ERT
+status open
 
-\lang ngerman
-Bemerkung 15
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{}
 \end_layout
 
-\begin_layout Enumerate
+\end_inset
 
-\lang ngerman
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
 Jede irreduzibele Komponente ist abgeschlossen nach Lemma 14.
 \end_layout
 
 \begin_layout Enumerate
-
-\lang ngerman
 \begin_inset Formula $X$
 \end_inset
 
@@ -517,8 +517,6 @@ denn
 
 \begin_deeper
 \begin_layout Standard
-
-\lang ngerman
 die Menge der irreduzibelen Teilmengen von 
 \begin_inset Formula $X$
 \end_inset
@@ -530,7 +528,17 @@ induktiv geordnet
 : für jede aufsteigende Kette irreduzibeler Teilmengen ist die Vereinigung
  wieder irreduzibel.
  (Satz 13 (ii)).
- Mit dem 
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO
+\end_layout
+
+\end_inset
+
+Mit dem 
 \series bold
 Lemma von Zorn
 \series default
@@ -539,6 +547,7 @@ Lemma von Zorn
  Damit ist jeder Punkt in einer irreduzibelen Komponente enthalten.
 \end_layout
 
+\end_deeper
 \end_deeper
 \end_body
 \end_document

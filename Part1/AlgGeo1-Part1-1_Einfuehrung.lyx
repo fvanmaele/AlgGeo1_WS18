@@ -6,8 +6,13 @@
 \origin unavailable
 \textclass article
 \use_default_options true
+\begin_modules
+enumitem
+theorems-ams
+theorems-ams-extended
+\end_modules
 \maintain_unincluded_children false
-\language english
+\language ngerman
 \language_package default
 \inputencoding auto
 \fontencoding global
@@ -27,6 +32,7 @@
 \bibtex_command default
 \index_command default
 \paperfontsize default
+\spacing single
 \use_hyperref false
 \papersize default
 \use_geometry false
@@ -57,7 +63,7 @@
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\quotes_language german
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -71,15 +77,12 @@
 \begin_body
 
 \begin_layout Section
-
-\lang ngerman
 Einführung
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-\lang ngerman
 Algebraische Geometrie
 \series default
 
@@ -87,8 +90,6 @@ Algebraische Geometrie
 status open
 
 \begin_layout Plain Layout
-
-\lang ngerman
 Algebraische Geometrie
 \end_layout
 
@@ -119,15 +120,7 @@ mehreren
 Variabelen.
 \end_layout
 
-\begin_layout Subsection
-
-\lang ngerman
-Frage
-\end_layout
-
-\begin_layout Standard
-
-\lang ngerman
+\begin_layout Question*
 Sei 
 \begin_inset Formula $k$
 \end_inset
@@ -150,8 +143,6 @@ geometrischen Eigenschaften
 status open
 
 \begin_layout Plain Layout
-
-\lang ngerman
 n-dim affine Raum
 \end_layout
 
@@ -160,7 +151,7 @@ n-dim affine Raum
 
 \begin_inset Formula 
 \[
-V(f_{1},\ldots,f_{n})\coloneqq\{(t_{1},\ldots,t_{n})\in k^{n}\mid f_{i}(t_{1},\ldots,t_{n})=0\ \forall i\}
+V(f_{1},\ldots,f_{n}):=\{(t_{1},\ldots,t_{n})\in k^{n}\mid f_{i}(t_{1},\ldots,t_{n})=0\ \forall i\}
 \]
 
 \end_inset
@@ -168,15 +159,8 @@ V(f_{1},\ldots,f_{n})\coloneqq\{(t_{1},\ldots,t_{n})\in k^{n}\mid f_{i}(t_{1},\l
 
 \end_layout
 
-\begin_layout Subsection
-
-\lang ngerman
-Beispiel 1
-\end_layout
-
-\begin_layout Standard
-
-\lang ngerman
+\begin_layout Example
+Sei 
 \begin_inset Formula $f=T_{2}^{2}-T_{1}^{2}(T_{1}-1)\in k[T_{1},T_{2}]$
 \end_inset
 
@@ -193,25 +177,19 @@ trügerisch, da
 \begin_inset Formula $\mathbb{R}$
 \end_inset
 
- nicht algebraisch abgeschlossen!)
+ nicht algebraisch abgeschlossen!) ist gegeben durch:
 \end_layout
 
 \begin_layout Standard
-
-\lang ngerman
 \begin_inset Float figure
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
-
-\lang ngerman
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\lang ngerman
 \begin_inset Formula $T_{2}^{2}=T_{1}^{2}(T_{1}-1)=T_{1}^{3}-T_{1}^{2}$
 \end_inset
 
@@ -231,7 +209,6 @@ status open
 \begin_layout Paragraph
 
 \series bold
-\lang ngerman
 Dimension 1.
 
 \series default
@@ -239,8 +216,6 @@ Dimension 1.
 \end_layout
 
 \begin_layout Standard
-
-\lang ngerman
 Glatte und singulären Punkten: 
 \begin_inset Formula $(0,0)$
 \end_inset
@@ -250,8 +225,6 @@ Glatte und singulären Punkten:
 \end_layout
 
 \begin_layout Standard
-
-\lang ngerman
 \begin_inset Float figure
 placement h
 wide false
@@ -259,14 +232,11 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
-\lang ngerman
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
 
 \series bold
-\lang ngerman
 Spitze
 \series default
  und 
@@ -285,8 +255,6 @@ Doppelpunkt
 \end_layout
 
 \begin_layout Standard
-
-\lang ngerman
 Vergleiche den 
 \series bold
 Satz über implizite Funktionen
@@ -296,8 +264,6 @@ Satz über implizite Funktionen
 \end_layout
 
 \begin_layout Standard
-
-\lang ngerman
 \begin_inset Formula $V(f)$
 \end_inset
 
@@ -334,15 +300,11 @@ algebraisch
  formulieren.
 \end_layout
 
-\begin_layout Subsection
-
-\lang ngerman
+\begin_layout Paragraph
 Methoden.
 \end_layout
 
 \begin_layout Standard
-
-\lang ngerman
 GAGA - Géometrie algébrique, géometrique analytique (Serre)
 \begin_inset VSpace defskip
 \end_inset
@@ -351,8 +313,6 @@ GAGA - Géometrie algébrique, géometrique analytique (Serre)
 \end_layout
 
 \begin_layout Standard
-
-\lang ngerman
 \begin_inset Tabular
 <lyxtabular version="3" rows="2" columns="2">
 <features tabularvalignment="middle">
@@ -363,8 +323,6 @@ GAGA - Géometrie algébrique, géometrique analytique (Serre)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang ngerman
 Komplexe Geometrie (
 \begin_inset Formula $\mathbb{C}$
 \end_inset
@@ -382,8 +340,6 @@ Komplexe Geometrie (
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang ngerman
 Algebraische Geometrie
 \end_layout
 
@@ -395,8 +351,6 @@ Algebraische Geometrie
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang ngerman
 Analytische Hilfsmittel
 \end_layout
 
@@ -406,8 +360,6 @@ Analytische Hilfsmittel
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang ngerman
 Kommutative Algebra
 \end_layout
 

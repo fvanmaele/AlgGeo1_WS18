@@ -1,0 +1,511 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{mathtools}
+\usepackage{faktor}
+\DeclareMathOperator{\rad}{rad}
+\renewcommand{\labelenumi}{(\roman{enumi})}
+\renewcommand{\labelenumii}{\arabic{enumii}.}
+\end_preamble
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams
+theorems-ams-extended
+\end_modules
+\maintain_unincluded_children false
+\language ngerman
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language german
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Topologische Eigenschaften von Prävarietäten
+\end_layout
+
+\begin_layout Lemma
+Für einen topologischen Raum 
+\begin_inset Formula $X$
+\end_inset
+
+ und 
+\begin_inset Formula $U\subseteq X$
+\end_inset
+
+ offen haben wir eine Bijektion
+\begin_inset Formula 
+\begin{align*}
+\{Y\subseteq U\text{ irred. abg.}\} & \longleftrightarrow\{Z\subseteq X\text{ irred. abg. mit }Z\cap U\neq\emptyset\}\\
+Y & \longmapsto\overline{Y}\text{ (Abschluss in }X)\\
+Z\cap U & \longmapsfrom Z
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Lemma 14: 
+\begin_inset Formula $Y\subseteq X$
+\end_inset
+
+ irreduzibel 
+\begin_inset Formula $\Leftrightarrow\overline{Y}\subseteq X$
+\end_inset
+
+ irreduzibel.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $Y\subseteq U$
+\end_inset
+
+ abgeschlossen 
+\begin_inset Formula $\Leftrightarrow\exists A\subset X$
+\end_inset
+
+ abgecshlossen: 
+\begin_inset Formula $Y=U\cap A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Rightarrow Y\subseteq\overline{Y}\subseteq A$
+\end_inset
+
+ 
+\begin_inset Formula $\Rightarrow Y=U\cap\overline{Y}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $Y$
+\end_inset
+
+ irreduzibel in 
+\begin_inset Formula $U$
+\end_inset
+
+ 
+\begin_inset Formula $\Rightarrow Y$
+\end_inset
+
+ irreduzibel in 
+\begin_inset Formula $X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ (14) 
+\begin_inset Formula $\overline{Y}$
+\end_inset
+
+ irreduzibel
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Rightarrow Y\mapsto\overline{Y}\mapsto\overline{Y}\cap U=Y$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\checkmark$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\emptyset\neq\underbrace{Z\cap U}_{\text{irred. (S. 13v.)}}\underset{\text{offen}}{\subset}Z$
+\end_inset
+
+ damit dicht da 
+\begin_inset Formula $Z$
+\end_inset
+
+ irreduzibel (Satz 13.ii)
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ Abbildung 
+\begin_inset Formula $\leftarrow$
+\end_inset
+
+ wohldefiniert 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Die Abbildung ist wohldefiniert
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Rightarrow\overline{Z\cap U}=Z$
+\end_inset
+
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+notiz über dem Gleichheitszeichen...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition
+Sei 
+\begin_inset Formula $(X,\mathcal{O}_{X})$
+\end_inset
+
+ eine Prävarietät.
+\end_layout
+
+\begin_layout Proposition
+\begin_inset Formula $\Rightarrow X$
+\end_inset
+
+ noethersch (insbesondere quasikompakt) 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+und irreduzibel.
+\end_layout
+
+\begin_layout Proof
+Sei 
+\begin_inset Formula $X=\bigcup_{i=1}^{n}$
+\end_inset
+
+ endliche eff.
+ aff.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+???
+\end_layout
+
+\end_inset
+
+Überdeckung und 
+\begin_inset Formula $X\supseteq Z_{1}\supseteq Z_{2}\supseteq\cdots$
+\end_inset
+
+ eine absteigende Kette abgeschlossener Teilmengen.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Rightarrow U_{i}\cap Z_{1}\supseteq U_{i}\cap Z_{2}\supseteq\cdots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ abgeschlossene Teilmengen in 
+\begin_inset Formula $U_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Rightarrow\forall i$
+\end_inset
+
+ 
+\begin_inset Formula $\exists n_{i}$
+\end_inset
+
+: 
+\begin_inset Formula $U_{i}\cap Z_{n_{i}}=U_{i}\cap Z_{i+m}$
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO
+\end_layout
+
+\end_inset
+
+ Setzen von 
+\begin_inset Formula $n:=\max n_{i}$
+\end_inset
+
+ liefert:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\forall i=1,\ldots,n$
+\end_inset
+
+ 
+\begin_inset Formula $\forall m\geq n$
+\end_inset
+
+: 
+\begin_inset Formula $U_{i}\cap Z_{m}=U_{i}\cap Z_{m+1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Rightarrow(Z_{i})$
+\end_inset
+
+ wird stationär da 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+?
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $Z_{m}=\bigcup U_{i}\cap Z_{m}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Rightarrow X$
+\end_inset
+
+ noethersch.
+\end_layout
+
+\begin_layout Proof
+Zeige, 
+\begin_inset Formula $X$
+\end_inset
+
+ ist irreduzibel:
+\end_layout
+
+\begin_layout Proof
+Sei 
+\begin_inset Formula $X=X_{1}\cup\cdots\cup X_{n}$
+\end_inset
+
+ die Zerlegung in irreduzibele Komponenten.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\mathbb{A}$
+\end_inset
+
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Induktionsanfang? vgl.
+ erstere Vorlesungen
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $n\geq2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Rightarrow\exists i_{0}\in\{2,\ldots,n\}$
+\end_inset
+
+: 
+\begin_inset Formula $X_{1}\cap X_{i_{0}}\neq\emptyset$
+\end_inset
+
+.
+ (Andernfalls gilt: 
+\begin_inset Formula $X=X_{1}\sqcup\underbrace{X\backslash X_{1}}_{=X_{2}\cup\cdots\cup X_{n}\text{ abg.}}$
+\end_inset
+
+.
+ Widerspruch zu 
+\begin_inset Formula $X$
+\end_inset
+
+ zusammenhängend.)
+\end_layout
+
+\begin_layout Proof
+Sei ohne Einschränkung 
+\begin_inset Formula $i_{0}=2$
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $x\in X_{1}\cap X_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $x\in U\subset X$
+\end_inset
+
+ offene affine Überdeckung (d.h.
+ affine Varietät).
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $U$
+\end_inset
+
+ irreduzibel 
+\begin_inset Formula $\Rightarrow\overline{U}$
+\end_inset
+
+ (Abschluss in 
+\begin_inset Formula $X$
+\end_inset
+
+) 
+\begin_inset Formula $\subseteq X_{j}$
+\end_inset
+
+ für ein 
+\begin_inset Formula $j\in\{1,\ldots,n\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+Jedoch
+\series default
+: 
+\begin_inset Formula $x\in X_{i}\cap U\subseteq U$
+\end_inset
+
+ irreduzibel ist 
+\begin_inset Formula $\underbrace{\overline{X_{i}\cap U}}_{\subset\overline{U}\subset X_{i}}=X_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $i=1,2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Rightarrow X_{1},X_{2}\subseteq X_{j}$
+\end_inset
+
+.
+ Widerspruch zu maximale Komponente.
+\end_layout
+
+\end_body
+\end_document

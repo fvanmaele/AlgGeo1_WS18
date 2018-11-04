@@ -5,15 +5,21 @@
 \save_transient_properties true
 \origin unavailable
 \textclass article
+\begin_preamble
+\usepackage{mathtools}
+\usepackage{faktor}
+\DeclareMathOperator{\rad}{rad}
+\renewcommand{\labelenumi}{(\roman{enumi})}
+\renewcommand{\labelenumii}{\arabic{enumii}.}
+\end_preamble
 \use_default_options true
 \begin_modules
 theorems-ams
 theorems-ams-extended
-theorems-sec
 enumitem
 \end_modules
 \maintain_unincluded_children false
-\language english
+\language ngerman
 \language_package default
 \inputencoding auto
 \fontencoding global
@@ -64,7 +70,7 @@ enumitem
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\quotes_language german
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -147,11 +153,7 @@ mit
 
 \end_layout
 
-\begin_layout Subsection*
-Definition 26
-\end_layout
-
-\begin_layout Standard
+\begin_layout Definition
 \begin_inset Formula $\Gamma(X):=k[I]/I(X)\cong\hom(X,\mathbb{A}^{1}(k))$
 \end_inset
 
@@ -166,7 +168,7 @@ von
 .
 \end_layout
 
-\begin_layout Standard
+\begin_layout Definition
 Für 
 \begin_inset Formula $x=(x_{1},\ldots,x_{n})\in X$
 \end_inset
@@ -185,7 +187,7 @@ Für
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Definition
 unter der Projektion 
 \begin_inset Formula $\pi:k[\underline{T}]=\Gamma(\mathbb{A}^{n}(k))\twoheadrightarrow\Gamma(X)$
 \end_inset
@@ -204,10 +206,7 @@ unter der Projektion
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-Für ein Ideal 
+ Für ein Ideal 
 \begin_inset Formula $\mathfrak{A}\subset\Gamma(X)$
 \end_inset
 
@@ -222,7 +221,7 @@ V(\mathfrak{A})=\{x\in X\mid f(x)=0\ \forall f\in\mathfrak{A}\}=V(\pi^{-1}(\math
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Definition
 Dies sind genau die abgeschlossenen Mengen von 
 \begin_inset Formula $X$
 \end_inset
@@ -236,17 +235,14 @@ Dies sind genau die abgeschlossenen Mengen von
 Zariski-Topologie
 \series default
  genannt.
-\end_layout
-
-\begin_layout Standard
-Für 
+ Für 
 \begin_inset Formula $f\in\Gamma(X)$
 \end_inset
 
  setze:
 \begin_inset Formula 
 \[
-D(f)=\{x\in X\mid f(x)\neq0\}=X\backslash V(f).
+D(f):=\{x\in X\mid f(x)\neq0\}=X\backslash V(f).
 \]
 
 \end_inset
@@ -254,11 +250,7 @@ D(f)=\{x\in X\mid f(x)\neq0\}=X\backslash V(f).
 
 \end_layout
 
-\begin_layout Subsection*
-Lemma 27
-\end_layout
-
-\begin_layout Standard
+\begin_layout Lemma
 Die offenen Mengen 
 \begin_inset Formula $D(f)$
 \end_inset
@@ -270,7 +262,7 @@ Die offenen Mengen
 , bilden eine Basis der Topologie, d.h.
 \begin_inset Formula 
 \[
-\forall U\subset X\text{ offen }\exists f_{i}\in\Gamma(X),\,i\in I,\,\text{mit }U=\bigcup_{i\in I}D(f_{i})
+\forall U\subset X\text{ offen }\exists f_{i}\in\Gamma(X),\,i\in I,\quad\text{mit }U=\bigcup_{i\in I}D(f_{i})
 \]
 
 \end_inset
@@ -278,11 +270,7 @@ Die offenen Mengen
 
 \end_layout
 
-\begin_layout Subsubsection*
-Beweis (Lemma 27)
-\end_layout
-
-\begin_layout Standard
+\begin_layout Proof
 \begin_inset Formula $U=X\backslash V(\mathfrak{A})$
 \end_inset
 
@@ -315,7 +303,7 @@ Ideal geeignet
  Wegen
 \begin_inset Formula 
 \[
-V(\mathfrak{A})=\bigcap_{i=1}^{n}V(f_{i})
+V(\mathfrak{A})=\bigcap_{i=1}^{n}V(f_{i})\quad\Rightarrow\quad U=\bigcup_{i=1}^{n}D(f_{i})
 \]
 
 \end_inset
@@ -323,19 +311,7 @@ V(\mathfrak{A})=\bigcap_{i=1}^{n}V(f_{i})
 
 \end_layout
 
-\begin_layout Standard
-folgt
-\begin_inset Formula 
-\[
-U=\bigcup_{i=1}^{n}D(f_{i})
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
+\begin_layout Proof
 Es reichen also sogar endlich viele 
 \begin_inset Formula $f_{i}$
 \end_inset
@@ -353,11 +329,7 @@ todo
 
 \end_layout
 
-\begin_layout Subsection*
-Satz 28
-\end_layout
-
-\begin_layout Standard
+\begin_layout Proposition
 Der Koordinatenring 
 \begin_inset Formula $\Gamma(X)$
 \end_inset
@@ -376,22 +348,18 @@ Der Koordinatenring
 \end_inset
 
  enthält).
- Ferner:
-\begin_inset Formula 
-\[
-X\text{ irreduzibel}\Leftrightarrow\Gamma(X)\text{ ist integer}
-\]
-
+ Ferner ist 
+\begin_inset Formula $X$
 \end_inset
 
+ irreduzibel genau dann, wenn 
+\begin_inset Formula $\Gamma(X)$
+\end_inset
 
+ integer ist.
 \end_layout
 
-\begin_layout Subsubsection*
-Beweis (Satz 28)
-\end_layout
-
-\begin_layout Standard
+\begin_layout Proof
 \begin_inset Formula $k[\underline{T}]\twoheadrightarrow\Gamma(X)$
 \end_inset
 
@@ -408,62 +376,50 @@ endlich erzeugte
 \end_inset
 
 .
- 
-\begin_inset Formula $\Gamma(X)$
-\end_inset
-
- irreduzibel ist äquivalent dazu, dass 
-\begin_inset Formula $I(X)=\text{rad }I(X)$
-\end_inset
-
-.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
+ Es ist:
+\begin_inset Formula 
+\[
+\Gamma(X)\text{ irreduzibel }\Leftrightarrow I(X)=\rad I(X).
+\]
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
-(Satz 10.
- ii) + Korollar 11: 
-\begin_inset Formula $X=V(\mathfrak{A})$
-\end_inset
+\begin_layout Proof
+Denn mit Satz 10.ii) und Korollar 11 folgt:
+\begin_inset Formula 
+\begin{align*}
+X & =V(\mathfrak{A}):\,I(X)=\rad\mathfrak{A}\\
+\Rightarrow\rad I(X) & =\rad\rad\mathfrak{A}=\rad\mathfrak{A}=I(X).
+\end{align*}
 
-: 
-\begin_inset Formula $I(X)=\text{rad }\mathfrak{A}=I(X)$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Formula $\Rightarrow\text{rad }I(X)=\text{rad rad }\mathfrak{A}=\text{rad }\mathfrak{A}=I(X)$
-\end_inset
-
-).
-\end_layout
-
-\begin_layout Standard
+\begin_layout Proof
+Mit Lemma 17 folgt: 
 \begin_inset Formula $X$
 \end_inset
 
- irreduzibel 
-\begin_inset Formula $\overset{Lem.17}{\Leftrightarrow}I(X)$
+ irreduzibel
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\phantom{\quad}\Leftrightarrow I(X)$
 \end_inset
 
- Primideal 
-\begin_inset Formula $\Leftrightarrow\Gamma(X)=k[T]/T(X)$
+ Primideal.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\phantom{\quad}\Leftrightarrow\Gamma(X)=k[T]/T(X)$
 \end_inset
 
- integer.
- 
+.
 \end_layout
 
 \end_body

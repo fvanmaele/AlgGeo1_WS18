@@ -5,15 +5,21 @@
 \save_transient_properties true
 \origin unavailable
 \textclass article
+\begin_preamble
+\usepackage{mathtools}
+\usepackage{faktor}
+\DeclareMathOperator{\rad}{rad}
+\renewcommand{\labelenumi}{(\roman{enumi})}
+\renewcommand{\labelenumii}{\arabic{enumii}.}
+\end_preamble
 \use_default_options true
 \begin_modules
 theorems-ams
 theorems-ams-extended
-theorems-sec
 enumitem
 \end_modules
 \maintain_unincluded_children false
-\language english
+\language ngerman
 \language_package default
 \inputencoding auto
 \fontencoding global
@@ -64,7 +70,7 @@ enumitem
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\quotes_language german
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -78,20 +84,10 @@ enumitem
 \begin_body
 
 \begin_layout Section
-
-\lang ngerman
 Quasikompakte und noethersche topologische Räume
 \end_layout
 
-\begin_layout Subsection
-
-\lang ngerman
-Definition 18
-\end_layout
-
-\begin_layout Standard
-
-\lang ngerman
+\begin_layout Definition
 Ein topologischer Raum 
 \begin_inset Formula $X$
 \end_inset
@@ -105,8 +101,6 @@ quasikompakt
 status open
 
 \begin_layout Plain Layout
-
-\lang ngerman
 quasikompakt
 \end_layout
 
@@ -143,8 +137,6 @@ noethersch
 status open
 
 \begin_layout Plain Layout
-
-\lang ngerman
 noethersch
 \end_layout
 
@@ -161,9 +153,7 @@ X\supseteq Z_{1}\supseteq Z_{2}\supseteq\cdots
 
 \end_layout
 
-\begin_layout Standard
-
-\lang ngerman
+\begin_layout Definition
 abgeschlossener Teilmengen von 
 \begin_inset Formula $X$
 \end_inset
@@ -175,15 +165,7 @@ abgeschlossener Teilmengen von
  jede aufsteigende Kette offener Teilmengen wird stationär).
 \end_layout
 
-\begin_layout Subsection
-
-\lang ngerman
-Lemma 19
-\end_layout
-
-\begin_layout Standard
-
-\lang ngerman
+\begin_layout Lemma
 Sei 
 \begin_inset Formula $X$
 \end_inset
@@ -192,9 +174,8 @@ Sei
  Dann gilt:
 \end_layout
 
+\begin_deeper
 \begin_layout Enumerate
-
-\lang ngerman
 Jede abgeschlossene Teilmenge 
 \begin_inset Formula $Z$
 \end_inset
@@ -207,8 +188,6 @@ Jede abgeschlossene Teilmenge
 \end_layout
 
 \begin_layout Enumerate
-
-\lang ngerman
 Jede offene Teilmenge 
 \begin_inset Formula $U$
 \end_inset
@@ -221,8 +200,6 @@ Jede offene Teilmenge
 \end_layout
 
 \begin_layout Enumerate
-
-\lang ngerman
 Jeder abgeschlossene Teilraum 
 \begin_inset Formula $Z$
 \end_inset
@@ -234,15 +211,25 @@ Jeder abgeschlossene Teilraum
  besitzt nur endlich viele irreduzibele Komponenten.
 \end_layout
 
-\begin_layout Subsubsection
+\end_deeper
+\begin_layout Proof
+\begin_inset ERT
+status open
 
-\lang ngerman
-Beweis (Lemma 19)
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{}
 \end_layout
 
-\begin_layout Enumerate
+\end_inset
 
-\lang ngerman
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
 Nach Definition, da abgeschlossene Mengen von 
 \begin_inset Formula $Z$
 \end_inset
@@ -255,22 +242,10 @@ Nach Definition, da abgeschlossene Mengen von
 \end_layout
 
 \begin_layout Enumerate
-
-\lang ngerman
 \begin_inset Formula $U=\bigcup_{i\in I}U_{i}$
 \end_inset
 
- offen 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-; 
+ offen; 
 \begin_inset Formula $\mathbb{A}$
 \end_inset
 
@@ -291,31 +266,35 @@ Widerspruch zu noethersch.
 \end_layout
 
 \begin_layout Enumerate
-
-\lang ngerman
 Es reicht zu zeigen: Jeder noethersche Raum ist Vereinigung endlich vieler
  irreduzibeler Teilmengen.
+ Da 
+\begin_inset Formula $X$
+\end_inset
+
+ noethersch ist, folgt mit dem 
+\emph on
+Lemma von Zorn
+\emph default
+ dass jede nicht-leere Menge von algebraischen Teilmengein in 
+\begin_inset Formula $X$
+\end_inset
+
+ ein minimales Element besitzt.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO
 \end_layout
 
-\begin_deeper
-\begin_layout Standard
-
-\lang ngerman
-\begin_inset Formula $X$
 \end_inset
 
- noethersch 
-\begin_inset Formula $\overset{\text{Zorn}}{\Rightarrow}$
-\end_inset
 
- Jede nicht-leere Menge von algebraischen Teilmengen in 
-\begin_inset Formula $X$
-\end_inset
-
- besitzt ein minimales Element.
 \begin_inset Formula 
 \[
-\mathbb{A}:\quad\emptyset\neq\mathcal{M}\coloneqq\left\{ Z\subset X\text{ abg.}\mid Z\text{ ist \textbf{nicht} endl. Ver. irred. Mengen}\right\} 
+\mathbb{A}:\quad\emptyset\neq\mathcal{M}:=\left\{ Z\subset X\text{ abg.}\mid Z\text{ ist \textbf{nicht} endl. Ver. irred. Mengen}\right\} 
 \]
 
 \end_inset
@@ -335,9 +314,8 @@ Es reicht zu zeigen: Jeder noethersche Raum ist Vereinigung endlich vieler
 .
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
-
-\lang ngerman
 \begin_inset Formula $\Rightarrow Z$
 \end_inset
 
@@ -345,8 +323,6 @@ Es reicht zu zeigen: Jeder noethersche Raum ist Vereinigung endlich vieler
 \end_layout
 
 \begin_layout Standard
-
-\lang ngerman
 \begin_inset Formula $\Rightarrow Z=Z_{1}\cup Z_{2}$
 \end_inset
 
@@ -358,12 +334,21 @@ Es reicht zu zeigen: Jeder noethersche Raum ist Vereinigung endlich vieler
 \end_layout
 
 \begin_layout Standard
-
-\lang ngerman
-\begin_inset Formula $\overset{Z\text{ minimal}}{\Rightarrow}Z_{1},Z_{2}\notin\mathcal{M}$
+\begin_inset Formula $\Rightarrow$
 \end_inset
 
- 
+ (
+\begin_inset Formula $Z$
+\end_inset
+
+ minimal) 
+\begin_inset Formula $Z_{1},Z_{2}\notin\mathcal{M}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula $\Rightarrow Z\notin\mathcal{M}$
 \end_inset
 
@@ -372,15 +357,8 @@ Es reicht zu zeigen: Jeder noethersche Raum ist Vereinigung endlich vieler
 \end_layout
 
 \end_deeper
-\begin_layout Subsection
-
-\lang ngerman
-Satz 20
-\end_layout
-
-\begin_layout Standard
-
-\lang ngerman
+\end_deeper
+\begin_layout Proposition
 Jeder abgeschlossene Teilraum 
 \begin_inset Formula $X\subseteq\mathbb{A}^{n}(k)$
 \end_inset
@@ -388,15 +366,7 @@ Jeder abgeschlossene Teilraum
  ist noethersch.
 \end_layout
 
-\begin_layout Subsubsection
-
-\lang ngerman
-Beweis (Satz 20)
-\end_layout
-
-\begin_layout Standard
-
-\lang ngerman
+\begin_layout Proof
 Nach dem obigen Lemma ist nur zu zeigen, dass 
 \begin_inset Formula $\mathbb{A}^{n}(k)$
 \end_inset
@@ -404,14 +374,25 @@ Nach dem obigen Lemma ist nur zu zeigen, dass
  noethersch ist.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Proof
+Absteigende Ketten abgeschlossener Teilmengen sind nach 
+\emph on
+Korollar 11
+\emph default
+ 
+\begin_inset Note Note
+status open
 
-\lang ngerman
-Absteigende Ketten abgeschlossener Teilmengen 
-\begin_inset Formula $\stackrel[\text{Kor. 11}]{I()}{\leftrightarrow}$
+\begin_layout Plain Layout
+\begin_inset Formula $I()$
 \end_inset
 
- aufsteigende Ketten von (Radikal-)Ideale in 
+
+\end_layout
+
+\end_inset
+
+in 1-1 Korrespondenz mit aufsteigenden Ketten von (Radikal-)Ideale in 
 \begin_inset Formula $k[\underline{T}]$
 \end_inset
 
@@ -423,15 +404,16 @@ Absteigende Ketten abgeschlossener Teilmengen
  nach dem Hilbertschen Basissatz noethersch ist, werden letzere Ketten stationär.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Corollary
+\begin_inset Argument 1
+status open
 
-\lang ngerman
-Korollar 21 (Primärzerlegung)
+\begin_layout Plain Layout
+Primärzerlegung
 \end_layout
 
-\begin_layout Standard
+\end_inset
 
-\lang ngerman
 Sei 
 \begin_inset Formula $\mathfrak{A}=\rad(\mathfrak{A})\subseteq k[\underline{T}]$
 \end_inset
@@ -445,15 +427,7 @@ Sei
  enthalten; diese Darstellung ist eindeutig bis auf Reihenfolge.
 \end_layout
 
-\begin_layout Subsubsection
-
-\lang ngerman
-Beweis (Korollar 21)
-\end_layout
-
-\begin_layout Standard
-
-\lang ngerman
+\begin_layout Proof
 \begin_inset Formula $V(\mathfrak{A})=\bigcup_{i=1}^{n}V(\mathfrak{b}_{i})$
 \end_inset
 
@@ -461,7 +435,26 @@ Beweis (Korollar 21)
 \begin_inset Formula $\mathfrak{b}_{i}$
 \end_inset
 
- Primideal, h
+ Primideal.
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+Stationäre Kette folgt aus noethersch (Satz 21); mit Bemerkung 16 bzw.
+ Lemma 17 folgt, dass die 
+\begin_inset Formula $\mathfrak{b}_{i}$
+\end_inset
+
+ Primideale sind.
+\end_layout
+
+\end_inset
+
+ 
+\color blue
+Mit Satz 10 folgt:
+\color inherit
+
 \begin_inset Formula 
 \[
 \mathfrak{A}=\rad(\mathfrak{A})=I(V(\mathfrak{A}))=\bigcap_{i=1}^{n}\underbrace{I(V(\mathfrak{b}_{i}))}_{\mathfrak{b}_{i}'\text{ max. Primideale (L. 17)}}

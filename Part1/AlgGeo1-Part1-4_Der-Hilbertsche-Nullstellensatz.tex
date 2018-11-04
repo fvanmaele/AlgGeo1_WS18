@@ -1,8 +1,6 @@
 
 \section{Der Hilbertsche Nullstellensatz}
-
-\subsection{Satz 7}
-
+\begin{prop}
 Sei $K$ ein (nicht notwendig algebraisch abgeschlossener) Körper,
 und $A$ eine endlich erzeugte $K$-Algebra. Dann ist $A$ Jacobson'sch,
 d.h. für jedes Primideal $\mathfrak{p}\subset A$ gilt:
@@ -11,17 +9,17 @@ d.h. für jedes Primideal $\mathfrak{p}\subset A$ gilt:
 \]
 
 Ist $\mathfrak{m}\subset A$ ein maximales Ideal, so ist die Körpererweiterung
-$K\subset\faktor{A}{\mathfrak{m}}$ endlich.
-
-\subsubsection{Beweis (Satz 7)}
-
+$K\subset A/\mathfrak{m}$ endlich.
+\end{prop}
+\begin{proof}
 Algebra II / kommutative Algebra.
-
-\subsection{Korollar 8}
+\end{proof}
+\begin{cor}
+\mbox{}
 \begin{enumerate}
 \item Sei $A$ eine e.e. (endlich erzeugte) $k$-Algebra ($k$ sei algebraisch
 abgeschlossen), $\mathfrak{m}\subseteq A$ ein maximales Ideal. Dann
-ist $\faktor{A}{\mathfrak{m}}=k$. 
+ist $A/\mathfrak{m}=k$. 
 \item Jedes maximale Ideal $\mathfrak{m}\subset k[\underline{T}]$ hat die
 Form $\mathfrak{m}=(T_{1}-x_{1},\ldots,T_{n}-x_{n})$ mit $x_{1},\ldots,x_{n}\in k$.
 \item Für ein $k$-Ideal  $\mathfrak{A}\subset k[\underline{T}]$ gilt:
@@ -29,18 +27,20 @@ Form $\mathfrak{m}=(T_{1}-x_{1},\ldots,T_{n}-x_{n})$ mit $x_{1},\ldots,x_{n}\in 
 \rad(\mathfrak{A)=\sqrt{\mathfrak{A}}}\overset{(i)}{=}\bigcap_{\mathfrak{A}\subseteq\mathfrak{p}\subseteq k[\underline{T}]}\mathfrak{p}=\bigcap_{\mathfrak{A}\subseteq\mathfrak{m}\text{ max.}\subseteq k[\underline{T}]}\mathfrak{m}
 \]
 \end{enumerate}
-
-\subsubsection{Beweis (Korollar 8)}
+\end{cor}
+\begin{proof}
+\mbox{}
 \begin{enumerate}
-\item $k\rightarrow A\rightarrow\faktor{A}{\mathfrak{m}}$ ist Isomorphismus,
- da $k$ keine echte algebraische Körpererweiterung besteht.
+\item $k\rightarrow A\rightarrow A/\mathfrak{m}$ ist Isomorphismus,  da
+$k$ keine echte algebraische Körpererweiterung besteht.
 \item Es ist
 \begin{align*}
-k[T_{1},\ldots,T_{n}] & \longrightarrow\faktor{T}{\mathfrak{m}}=k\\
+k[T_{1},\ldots,T_{n}] & \longrightarrow T/\mathfrak{m}=k\\
 T_{i} & \longmapsto x_{i}
 \end{align*}
 Es folgt: $\mathfrak{m}=(T_{1}-x_{1},\ldots,T_{n}-x_{n})$, da letztes
 bereits maximal. ($\supseteq$ klar.)
 \item (i) Algebra II. (ii) Theorem.
 \end{enumerate}
+\end{proof}
 

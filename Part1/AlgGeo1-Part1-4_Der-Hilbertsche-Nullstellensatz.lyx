@@ -5,15 +5,20 @@
 \save_transient_properties true
 \origin unavailable
 \textclass article
+\begin_preamble
+\usepackage{mathtools}
+\usepackage{faktor}
+\DeclareMathOperator{\rad}{rad}
+\end_preamble
 \use_default_options true
+\master ../AlgGeo1.lyx
 \begin_modules
 theorems-ams
 theorems-ams-extended
-theorems-sec
 enumitem
 \end_modules
 \maintain_unincluded_children false
-\language english
+\language ngerman
 \language_package default
 \inputencoding auto
 \fontencoding global
@@ -64,7 +69,7 @@ enumitem
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\quotes_language german
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -78,20 +83,10 @@ enumitem
 \begin_body
 
 \begin_layout Section
-
-\lang ngerman
 Der Hilbertsche Nullstellensatz
 \end_layout
 
-\begin_layout Subsection
-
-\lang ngerman
-Satz 7
-\end_layout
-
-\begin_layout Standard
-
-\lang ngerman
+\begin_layout Proposition
 Sei 
 \begin_inset Formula $K$
 \end_inset
@@ -125,41 +120,40 @@ Sei
 
 \end_layout
 
-\begin_layout Standard
-
-\lang ngerman
+\begin_layout Proposition
 Ist 
 \begin_inset Formula $\mathfrak{m}\subset A$
 \end_inset
 
  ein maximales Ideal, so ist die Körpererweiterung 
-\begin_inset Formula $K\subset\faktor{A}{\mathfrak{m}}$
+\begin_inset Formula $K\subset A/\mathfrak{m}$
 \end_inset
 
  endlich.
 \end_layout
 
-\begin_layout Subsubsection
-
-\lang ngerman
-Beweis (Satz 7)
-\end_layout
-
-\begin_layout Standard
-
-\lang ngerman
+\begin_layout Proof
 Algebra II / kommutative Algebra.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Corollary
+\begin_inset ERT
+status open
 
-\lang ngerman
-Korollar 8
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{}
 \end_layout
 
-\begin_layout Enumerate
+\end_inset
 
-\lang ngerman
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
 Sei 
 \begin_inset Formula $A$
 \end_inset
@@ -179,7 +173,7 @@ Sei
 
  ein maximales Ideal.
  Dann ist 
-\begin_inset Formula $\faktor{A}{\mathfrak{m}}=k$
+\begin_inset Formula $A/\mathfrak{m}=k$
 \end_inset
 
 .
@@ -188,8 +182,6 @@ Sei
 status open
 
 \begin_layout Plain Layout
-
-\lang ngerman
 TODO
 \end_layout
 
@@ -199,8 +191,6 @@ TODO
 \end_layout
 
 \begin_layout Enumerate
-
-\lang ngerman
 Jedes maximale Ideal 
 \begin_inset Formula $\mathfrak{m}\subset k[\underline{T}]$
 \end_inset
@@ -217,8 +207,6 @@ Jedes maximale Ideal
 \end_layout
 
 \begin_layout Enumerate
-
-\lang ngerman
 Für ein 
 \begin_inset Formula $k$
 \end_inset
@@ -228,8 +216,6 @@ Für ein
 status open
 
 \begin_layout Plain Layout
-
-\lang ngerman
 TODO
 \end_layout
 
@@ -250,16 +236,26 @@ TODO
 
 \end_layout
 
-\begin_layout Subsubsection
+\end_deeper
+\begin_layout Proof
+\begin_inset ERT
+status open
 
-\lang ngerman
-Beweis (Korollar 8)
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{}
 \end_layout
 
-\begin_layout Enumerate
+\end_inset
 
-\lang ngerman
-\begin_inset Formula $k\rightarrow A\rightarrow\faktor{A}{\mathfrak{m}}$
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $k\rightarrow A\rightarrow A/\mathfrak{m}$
 \end_inset
 
  ist Isomorphismus, 
@@ -267,8 +263,6 @@ Beweis (Korollar 8)
 status open
 
 \begin_layout Plain Layout
-
-\lang ngerman
 Morphismus aus Körper ist injektiv
 \end_layout
 
@@ -282,12 +276,10 @@ Morphismus aus Körper ist injektiv
 \end_layout
 
 \begin_layout Enumerate
-
-\lang ngerman
 Es ist
 \begin_inset Formula 
 \begin{align*}
-k[T_{1},\ldots,T_{n}] & \longrightarrow\faktor{T}{\mathfrak{m}}=k\\
+k[T_{1},\ldots,T_{n}] & \longrightarrow T/\mathfrak{m}=k\\
 T_{i} & \longmapsto x_{i}
 \end{align*}
 
@@ -306,11 +298,10 @@ Es folgt:
 \end_layout
 
 \begin_layout Enumerate
-
-\lang ngerman
 (i) Algebra II.
  (ii) Theorem.
 \end_layout
 
+\end_deeper
 \end_body
 \end_document

@@ -1,31 +1,37 @@
 
 \section{Affine algebraische Mengen}
-
-\subsection{Definition 4}
+\begin{defn}
+\mbox{}
 \begin{itemize}
 \item $\mathbb{A}^{n}(k)$, der affine Raum der Dimension $n$ (über $k$),
 bezeichne $k^{n}$ mit der Zariski-Topologie.
 \item Abgeschlossene Teilmengen von $\mathbb{A}^{n}(k)$ heißen affine abgeschlossene
 Mengen.
 \end{itemize}
-
-\subsection{Beispiel 5}
-
+\end{defn}
+\begin{example}
 Da $k[T]$ ein Hauptidealring ist, sind die abgeschlossen Mengen in
 $\mathbb{A}^{1}(k)$: $\emptyset$, $\mathbb{A}^{1}$, Mengen der
-Form $V(f)$, $f\in k[T]\backslash\{k\}$ (endliche Teilmengen). Insbesondere
-sieht man, dass die Zariski-Topologie im Allgemeinen nicht Hausdorff
-ist. 
-
-\subsection{Beispiel 6}
-
+Form $V(f)$, $f\in k[T]\backslash\{k\}$ (endliche Teilmengen).%
+\begin{comment}
+Für $f\in k$ ist $V(f)=\mathbb{A}^{1}$, denn die Einheiten im Polynomring
+$k[T]$ sind gegeben durch $k^{\times}$, und Ideale erzeugt von einer
+Einheit bilden den ganzen Ring. (siehe Algebra 1)
+\end{comment}
+{} Insbesondere sieht man, dass die Zariski-Topologie im Allgemeinen
+nicht Hausdorff ist. 
+\end{example}
+%
+\begin{example}
 $\mathbb{A}^{2}(k)$ hat zumindestens als abgeschlossene Mengen:
 \begin{itemize}
 \item $\emptyset$, $\mathbb{A}^{2}$;
 \item Einpunktige Mengen: $\{(x_{1},x_{2})=V(T_{1}-x_{1},T_{2}-x_{2})$;
-\item $V(f)$, $f\in k[T_{1},T_{2}]$ irreduzibel.
+\item $V(f)$, $f\in k[T_{1},T_{2}]$ irreduzibel. 
 \end{itemize}
 Ferner alle endliche Vereneigungen dieser Liste. (Dies sind in der
 Tat alle, denn später sehen wir: ``irreduzibele'' abgeschlossene
 Mengen entsprechen den \emph{Primidealen}, und $k[T_{1},T_{2}]$ hat
 ``Krull-Dimension $2$''.)
+\end{example}
+
