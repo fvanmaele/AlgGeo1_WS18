@@ -1,0 +1,13 @@
+*~
+*#
+*.aux
+*.log
+*.synctex.gz
+*.idx
+*.toc
+*.zip
+*.eps
+_region_.*
+*.html*
+temp
+Thumbs.db
