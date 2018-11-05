@@ -111,6 +111,13 @@ status open
 \end_layout
 
 \begin_layout Lemma
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:koordinatenring-lokalisierung"
+
+\end_inset
+
+
 \begin_inset Argument 1
 status open
 
@@ -241,7 +248,7 @@ X\subseteq\mathbb{A}^{n}(k) & (x_{1},\ldots,x_{n}) & T_{i}\ar@{|->}[u]
 \end_layout
 
 \begin_layout Proof
-eine Bijketion 
+eine Bijektion 
 \begin_inset Formula $Y\xrightarrow{j}\mathcal{D}_{X}(f)$
 \end_inset
 
@@ -256,16 +263,7 @@ Notation?
 \end_inset
 
  mit Umkehrabbildung 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset Formula $(x_{0},\ldots,x_{n})^{\frac{1}{f(x_{0},\ldots,x_{n})}}\mapsfrom(x_{0},\ldots,x_{n})$
-\end_inset
-
- ???
-\end_layout
-
+\begin_inset Formula $(x_{0},\ldots,x_{n},\frac{1}{f(x_{0},\ldots,x_{n}})\mapsfrom(x_{0},\ldots,x_{n})$
 \end_inset
 
 
@@ -353,10 +351,192 @@ s & \longmapsto s\circ j
 
 \end_inset
 
+mit 
+\begin_inset Formula $\mathcal{O}_{X}(\mathcal{D}(fg))=\Gamma(X)_{fg}=(\Gamma(X)_{f})_{g}=\Gamma(Y)_{g}$
+\end_inset
 
+.
+ Mit dem Verklebungsaxiom folgt: 
+\begin_inset Formula $j$
+\end_inset
+
+ ist Morphismus von Raum mit Funktionen.
 \end_layout
 
 \end_deeper
 \end_deeper
+\begin_layout Proposition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+orig.
+ 42
+\end_layout
+
+\end_inset
+
+Sei 
+\begin_inset Formula $(X,\mathcal{O}_{X})$
+\end_inset
+
+ Prävarietät, 
+\begin_inset Formula $\emptyset\neq U\subseteq X$
+\end_inset
+
+ offen.
+ Dann ist 
+\begin_inset Formula $(U,\mathcal{O}_{X|_{U}})$
+\end_inset
+
+ eine Prävarietät und 
+\begin_inset Formula $U\hookrightarrow X$
+\end_inset
+
+ ist Morphismus von Prävarietäten.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $X$
+\end_inset
+
+ ist irreduzibel, also folgt mit Satz 13, dass 
+\begin_inset Formula $U$
+\end_inset
+
+ zusammenhängend ist.
+ Nach Voraussetzung ist 
+\begin_inset Formula $X=\bigcup X_{i}$
+\end_inset
+
+ eine affine offene Überdeckung.
+ Es folgt:
+\begin_inset Formula 
+\[
+U=\bigcup_{i}(\underbrace{X_{i}\cap U}_{\text{offen in }X_{i}})=\bigcup_{i,j}\mathcal{D}_{X_{i}}(f_{i_{j}})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+und 
+\begin_inset Formula $\mathcal{D}_{X_{i}}(f_{i_{j}})$
+\end_inset
+
+ ist eine affine Varietät nach Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:koordinatenring-lokalisierung"
+
+\end_inset
+
+.
+ Da 
+\begin_inset Formula $X$
+\end_inset
+
+ noethersch ist, folgt mit Lemma 20, dass 
+\begin_inset Formula $U$
+\end_inset
+
+ quasikompakt ist.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ Es reicht eine endliche Überdeckung.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Rightarrow U$
+\end_inset
+
+ Prävarietät.
+ 
+\begin_inset Formula $\checkmark$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Die Abbildung 
+\begin_inset Formula $\begin{array}{ccc}
+U & \overset{i}{\hookrightarrow} & X\\
+U\cap V & \subseteq & V
+\end{array}$
+\end_inset
+
+ ist stetig.
+ (Klar.) Für 
+\begin_inset Formula $f\in\mathcal{O}_{X}(V)$
+\end_inset
+
+ gilt mit dem Einschränkungsaxiom 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO; original notes unclear
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\mathcal{O}_{X|_{U}}(U\cap V)=\mathcal{O}_{X}(U\cap V)\ni f\circ i=f|_{U\cap V}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Also ist 
+\begin_inset Formula $i$
+\end_inset
+
+ Morphismus von Prävarietäten.
+\end_layout
+
+\begin_layout Standard
+Die offenen affinen Teilmengen einer Prävarietät 
+\begin_inset Formula $X$
+\end_inset
+
+ (
+\begin_inset Formula $\hat{=}U\subset X$
+\end_inset
+
+ offen und 
+\begin_inset Formula $(U,\mathcal{O}_{X|_{U}})$
+\end_inset
+
+ affine Varietät) bilden eine Basis der Topologie von 
+\begin_inset Formula $X$
+\end_inset
+
+, da 
+\begin_inset Formula $X$
+\end_inset
+
+ durch offene affine Untervarietäten überdeckt wird und letzere diese Eigenschaf
+t haben nach Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:koordinatenring-lokalisierung"
+
+\end_inset
+
+.
+\end_layout
+
 \end_body
 \end_document

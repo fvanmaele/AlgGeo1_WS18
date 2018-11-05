@@ -4,8 +4,9 @@
 ,,Offene Teilmengen von affinen Varietäten (abgeschlossene beliebige
  Prävarietäten) sind wieder Prävarietäten`` (aber i.A. nicht affin!)
 \begin{lem}[orig. 41]
-Sei $X$ affine Varietät, $f\in\mathcal{O}_{X}(X)$, $\mathcal{D}(f)\subseteq X$.
-Die Lokalisierung von $\Gamma(X)=\mathcal{O}_{X}(X)$ in $f$,
+\label{lem:koordinatenring-lokalisierung}Sei $X$ affine Varietät,
+$f\in\mathcal{O}_{X}(X)$, $\mathcal{D}(f)\subseteq X$. Die Lokalisierung
+von $\Gamma(X)=\mathcal{O}_{X}(X)$ in $f$,
 \[
 \Gamma(X)_{f}=\Gamma(X)[T]/(Tf-1)
 \]
@@ -43,7 +44,8 @@ X\subseteq\mathbb{A}^{n}(k) & (x_{1},\ldots,x_{n}) & T_{i}\ar@{|->}[u]
 }
 \]
 
-eine Bijketion $Y\xrightarrow{j}\mathcal{D}_{X}(f)$  mit Umkehrabbildung
+eine Bijektion $Y\xrightarrow{j}\mathcal{D}_{X}(f)$  mit Umkehrabbildung
+$(x_{0},\ldots,x_{n},\frac{1}{f(x_{0},\ldots,x_{n}})\mapsfrom(x_{0},\ldots,x_{n})$
 \begin{claim*}
 $j$ ist Isomorphismus von Räumen mit Funktionen:
 \begin{enumerate}
@@ -61,7 +63,43 @@ $\Rightarrow j$ Homömorphismus.
 \mathcal{O}_{X}(\mathcal{D}(fg)) & \longrightarrow\Gamma(Y)_{g}\\
 s & \longmapsto s\circ j
 \end{align*}
+mit $\mathcal{O}_{X}(\mathcal{D}(fg))=\Gamma(X)_{fg}=(\Gamma(X)_{f})_{g}=\Gamma(Y)_{g}$.
+Mit dem Verklebungsaxiom folgt: $j$ ist Morphismus von Raum mit Funktionen.
 \end{enumerate}
 \end{claim*}
 \end{proof}
+\begin{prop}[orig. 42]
+Sei $(X,\mathcal{O}_{X})$ Prävarietät, $\emptyset\neq U\subseteq X$
+offen. Dann ist $(U,\mathcal{O}_{X|_{U}})$ eine Prävarietät und $U\hookrightarrow X$
+ist Morphismus von Prävarietäten.
+\end{prop}
+\begin{proof}
+$X$ ist irreduzibel, also folgt mit Satz 13, dass $U$ zusammenhängend
+ist. Nach Voraussetzung ist $X=\bigcup X_{i}$ eine affine offene
+Überdeckung. Es folgt:
+\[
+U=\bigcup_{i}(\underbrace{X_{i}\cap U}_{\text{offen in }X_{i}})=\bigcup_{i,j}\mathcal{D}_{X_{i}}(f_{i_{j}})
+\]
 
+und $\mathcal{D}_{X_{i}}(f_{i_{j}})$ ist eine affine Varietät nach
+Lemma \ref{lem:koordinatenring-lokalisierung}. Da $X$ noethersch
+ist, folgt mit Lemma 20, dass $U$ quasikompakt ist.
+
+$\Rightarrow$ Es reicht eine endliche Überdeckung.
+
+$\Rightarrow U$ Prävarietät. $\checkmark$
+
+Die Abbildung $\begin{array}{ccc}
+U & \overset{i}{\hookrightarrow} & X\\
+U\cap V & \subseteq & V
+\end{array}$ ist stetig. (Klar.) Für $f\in\mathcal{O}_{X}(V)$ gilt mit dem Einschränkungsaxiom
+\[
+\mathcal{O}_{X|_{U}}(U\cap V)=\mathcal{O}_{X}(U\cap V)\ni f\circ i=f|_{U\cap V}
+\]
+
+Also ist $i$ Morphismus von Prävarietäten.
+\end{proof}
+Die offenen affinen Teilmengen einer Prävarietät $X$ ($\hat{=}U\subset X$
+offen und $(U,\mathcal{O}_{X|_{U}})$ affine Varietät) bilden eine
+Basis der Topologie von $X$, da $X$ durch offene affine Untervarietäten
+überdeckt wird und letzere diese Eigenschaft haben nach Lemma \ref{lem:koordinatenring-lokalisierung}.

@@ -84,8 +84,369 @@ theorems-ams-extended
 
 \begin_body
 
+\begin_layout Section
+Abgeschlossene Unterprävarietäten
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ Prävarietät, 
+\begin_inset Formula $Z\subseteq X$
+\end_inset
+
+ abgeschlossen irreduzibel.
+\end_layout
+
 \begin_layout Standard
 
+\series bold
+Ziel.
+
+\series default
+ 
+\begin_inset Formula $(Z,\mathcal{O}_{Z}')$
+\end_inset
+
+ Raum von Funktionen erklären.
+ Definiere dazu:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathcal{O}_{Z}':=\{f\in\text{Abb}(U,k)\mid\forall x\in U\ \exists x\in V\subseteq X\text{ offen},\ g\in\mathcal{O}_{X}(V)\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+mit 
+\begin_inset Formula $f_{|_{U\cap V}}=g_{|_{U\cap V}}$
+\end_inset
+
+ für 
+\begin_inset Formula $U\subset Z$
+\end_inset
+
+ offen.
+ Damit ist 
+\begin_inset Formula $(Z,\mathcal{O}'_{Z})$
+\end_inset
+
+ Raum von Funktionen (klar!
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+) mit 
+\begin_inset Formula $\mathcal{O}'_{X}=\mathcal{O}_{X}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Lemma
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+orig.
+ 46
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $X\subseteq\mathbb{A}^{n}(k)$
+\end_inset
+
+ irreduzible affine algebraische Menge, und 
+\begin_inset Formula $Z\subset X$
+\end_inset
+
+ sei ein irreduzibler abgeschlossener Teil.
+ Dann ist 
+\begin_inset Formula $(Z,\mathcal{O}_{Z})=(Z,\mathcal{O}'_{Z})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Lemma
+Bezeichne ab jetzt stets 
+\begin_inset Formula $\mathcal{O}_{Z}$
+\end_inset
+
+ für 
+\begin_inset Formula $\mathcal{O}_{Z'}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $Z\subseteq X$
+\end_inset
+
+ ist in beiden Fällen mit der Teilraumtopologie ausgestattet! Ferner wissen
+ wir, dass der Morphismus 
+\begin_inset Formula $Z\hookrightarrow X$
+\end_inset
+
+ affiner algebraischer Mengen einen Morphismus 
+\begin_inset Formula $(Z,\mathcal{O}_{Z})\rightarrow(X,\mathcal{O}_{X})$
+\end_inset
+
+ von Prävarietäten induziert.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Behauptung
+\end_layout
+
+\end_inset
+
+Nach Definition von 
+\begin_inset Formula $\mathcal{O}'$
+\end_inset
+
+ folgt dann:
+\begin_inset Formula 
+\[
+\mathcal{O}'_{Z}\subseteq\mathcal{O}_{Z}(U)\quad\text{für }U\subseteq Z\ \text{offen}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Beweis
+\end_layout
+
+\end_inset
+
+Dies gilt da: 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Was ist 
+\begin_inset Formula $V_{x}$
+\end_inset
+
+?
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+x\in V_{x} & \subseteq X\cup V\\
+f_{|_{U\cap V_{x}}} & =g_{x|_{U\cap V_{x}}}\in\mathcal{O}_{Z}(U\cap V_{x})
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+mit 
+\begin_inset Formula $g\in\mathcal{O}_{X}(V_{x})$
+\end_inset
+
+ 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ (Morphismus!) 
+\begin_inset Formula $g_{|_{Zcap}V_{x}}\in\mathcal{O}_{Z}(Z\cap V_{x})$
+\end_inset
+
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Rightarrow g_{x|_{U\cap V_{x}}}\in\mathcal{O}_{Z}(U\cap V_{x})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+Verklebungsaxiom 
+\begin_inset Formula $\Rightarrow f\in\mathcal{O}_{Z}(U)$
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\checkmark$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Sei 
+\begin_inset Formula $f\in\mathcal{O}_{Z}(U)$
+\end_inset
+
+ und 
+\begin_inset Formula $x\in U$
+\end_inset
+
+ beliebig.
+ Es folgt: 
+\begin_inset Formula $\exists h\in\Gamma(Z)$
+\end_inset
+
+ mit 
+\begin_inset Formula $x\in\mathcal{D}(h)\subseteq U$
+\end_inset
+
+ und
+\begin_inset Formula 
+\[
+f_{|_{\mathcal{D}(h)}}=\frac{g}{h^{n}}\in\Gamma(Z)_{h}=\mathcal{O}_{Z}(\mathcal{D}(h))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+für 
+\begin_inset Formula $h\geq0$
+\end_inset
+
+, 
+\begin_inset Formula $g\in\Gamma(Z)$
+\end_inset
+
+ geieignet.
+ Lifte 
+\begin_inset Formula $g,h\in\Gamma(Z)\twoheadleftarrow\Gamma(X)$
+\end_inset
+
+ zu 
+\begin_inset Formula $\overline{g},\overline{h}\in\Gamma(X)$
+\end_inset
+
+ und setze 
+\begin_inset Formula $V:=D(\overline{h})\subseteq X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Rightarrow x\in V$
+\end_inset
+
+, 
+\begin_inset Formula $\frac{\overline{g}}{\overline{h}^{n}}\in\mathcal{O}_{X}(\mathcal{D}(\overline{h}))$
+\end_inset
+
+ und 
+\begin_inset Formula $f_{|_{U\cap V}}=\frac{\overline{g}}{\overline{h}^{n}}|_{U\cap V}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Rightarrow f\in\mathcal{O}'_{Z}(U)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Corollary
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+orig.
+ 47
+\end_layout
+
+\end_inset
+
+Wenn 
+\begin_inset Formula $X$
+\end_inset
+
+ eine Prävarietät ist, und 
+\begin_inset Formula $Z\subseteq X$
+\end_inset
+
+ irreduzibel abgeschlossen.
+ Dann ist 
+\begin_inset Formula $(Z,\mathcal{O}_{Z})$
+\end_inset
+
+ ebenfalls eine Prävarietät.
+\end_layout
+
+\begin_layout Proof
+Es ist 
+\begin_inset Formula $X=\bigcup_{\text{endl.}}X_{i}$
+\end_inset
+
+ endliche affine offene Überdeckung.
+ Damit ist 
+\begin_inset Formula 
+\[
+Z=\bigcup\left(Z\cap X_{i}\right):=\bigcup Z_{i}
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+mit 
+\begin_inset Formula $(Z_{i},\mathcal{O}_{Z_{i}})$
+\end_inset
+
+ affine Varietät nach Lemma 46.
 \end_layout
 
 \end_body

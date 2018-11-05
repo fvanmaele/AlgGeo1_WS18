@@ -118,6 +118,13 @@ Ziel.
 \end_layout
 
 \begin_layout Definition
+\begin_inset CommandInset label
+LatexCommand label
+name "def:Funktionenkoerper"
+
+\end_inset
+
+
 \begin_inset Formula $K(X):=\text{Quot}(\Gamma(X))$
 \end_inset
 
@@ -848,9 +855,6 @@ Die
 abgeschlossen Mengen
 \series default
  sind gegeben durch:
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula 
 \[
 V(\mathfrak{A}):=\{\mathfrak{m}\subseteq A\text{ max.}\mid\mathfrak{m}\supseteq\mathfrak{A}\},\quad\mathfrak{A}\subset A\text{ Ideal}.

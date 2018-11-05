@@ -90,13 +90,20 @@ geringten Raumes
 \end_inset
 
  später.) Sei 
-\begin_inset Formula $k$
+\begin_inset Formula $K$
 \end_inset
 
  ein nicht notwendig algebraisch abgeschlossenen Körper.
 \end_layout
 
 \begin_layout Definition
+\begin_inset CommandInset label
+LatexCommand label
+name "def:raum-mit-funktionen"
+
+\end_inset
+
+
 \begin_inset ERT
 status open
 
@@ -333,6 +340,13 @@ Die Räume von Funktionen über
 \end_layout
 
 \begin_layout Definition
+\begin_inset CommandInset label
+LatexCommand label
+name "def:offene-unterraeume-von-funktionen"
+
+\end_inset
+
+
 \begin_inset Argument 1
 status open
 

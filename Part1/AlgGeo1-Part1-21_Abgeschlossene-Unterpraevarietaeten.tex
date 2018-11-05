@@ -1,0 +1,71 @@
+
+\section{Abgeschlossene Unterprävarietäten}
+
+Sei $X$ Prävarietät, $Z\subseteq X$ abgeschlossen irreduzibel.
+
+\textbf{Ziel.} $(Z,\mathcal{O}_{Z}')$ Raum von Funktionen erklären.
+Definiere dazu:
+
+\[
+\mathcal{O}_{Z}':=\{f\in\text{Abb}(U,k)\mid\forall x\in U\ \exists x\in V\subseteq X\text{ offen},\ g\in\mathcal{O}_{X}(V)\}
+\]
+
+mit $f_{|_{U\cap V}}=g_{|_{U\cap V}}$ für $U\subset Z$ offen. Damit
+ist $(Z,\mathcal{O}'_{Z})$ Raum von Funktionen (klar!) mit $\mathcal{O}'_{X}=\mathcal{O}_{X}$.
+\begin{lem}[orig. 46]
+$X\subseteq\mathbb{A}^{n}(k)$ irreduzible affine algebraische Menge,
+und $Z\subset X$ sei ein irreduzibler abgeschlossener Teil. Dann
+ist $(Z,\mathcal{O}_{Z})=(Z,\mathcal{O}'_{Z})$.
+
+Bezeichne ab jetzt stets $\mathcal{O}_{Z}$ für $\mathcal{O}_{Z'}$.
+\end{lem}
+\begin{proof}
+$Z\subseteq X$ ist in beiden Fällen mit der Teilraumtopologie ausgestattet!
+Ferner wissen wir, dass der Morphismus $Z\hookrightarrow X$ affiner
+algebraischer Mengen einen Morphismus $(Z,\mathcal{O}_{Z})\rightarrow(X,\mathcal{O}_{X})$
+von Prävarietäten induziert. Nach Definition von $\mathcal{O}'$
+folgt dann:
+\[
+\mathcal{O}'_{Z}\subseteq\mathcal{O}_{Z}(U)\quad\text{für }U\subseteq Z\ \text{offen}.
+\]
+
+Dies gilt da: 
+\begin{align*}
+x\in V_{x} & \subseteq X\cup V\\
+f_{|_{U\cap V_{x}}} & =g_{x|_{U\cap V_{x}}}\in\mathcal{O}_{Z}(U\cap V_{x})
+\end{align*}
+
+mit $g\in\mathcal{O}_{X}(V_{x})$ $\Rightarrow$ (Morphismus!) $g_{|_{Zcap}V_{x}}\in\mathcal{O}_{Z}(Z\cap V_{x})$
+ 
+
+Verklebungsaxiom $\Rightarrow f\in\mathcal{O}_{Z}(U)$. 
+
+Sei $f\in\mathcal{O}_{Z}(U)$ und $x\in U$ beliebig. Es folgt: $\exists h\in\Gamma(Z)$
+mit $x\in\mathcal{D}(h)\subseteq U$ und
+\[
+f_{|_{\mathcal{D}(h)}}=\frac{g}{h^{n}}\in\Gamma(Z)_{h}=\mathcal{O}_{Z}(\mathcal{D}(h))
+\]
+
+für $h\geq0$, $g\in\Gamma(Z)$ geieignet. Lifte $g,h\in\Gamma(Z)\twoheadleftarrow\Gamma(X)$
+zu $\overline{g},\overline{h}\in\Gamma(X)$ und setze $V:=D(\overline{h})\subseteq X$.
+
+$\Rightarrow x\in V$, $\frac{\overline{g}}{\overline{h}^{n}}\in\mathcal{O}_{X}(\mathcal{D}(\overline{h}))$
+und $f_{|_{U\cap V}}=\frac{\overline{g}}{\overline{h}^{n}}|_{U\cap V}$.
+
+$\Rightarrow f\in\mathcal{O}'_{Z}(U)$.
+\end{proof}
+\begin{cor}[orig. 47]
+Wenn $X$ eine Prävarietät ist, und $Z\subseteq X$ irreduzibel abgeschlossen.
+Dann ist $(Z,\mathcal{O}_{Z})$ ebenfalls eine Prävarietät.
+\end{cor}
+\begin{proof}
+Es ist $X=\bigcup_{\text{endl.}}X_{i}$ endliche affine offene Überdeckung.
+Damit ist 
+\[
+Z=\bigcup\left(Z\cap X_{i}\right):=\bigcup Z_{i}
+\]
+ 
+
+mit $(Z_{i},\mathcal{O}_{Z_{i}})$ affine Varietät nach Lemma 46.
+\end{proof}
+

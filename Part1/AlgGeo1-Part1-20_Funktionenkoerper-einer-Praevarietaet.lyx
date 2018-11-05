@@ -84,9 +84,395 @@ theorems-ams-extended
 
 \begin_body
 
-\begin_layout Standard
+\begin_layout Section
+Funktionenkörper einer Prävarietät
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+orig.
+ 43
+\end_layout
+
+\end_inset
+
+Für eine Prävarietät 
+\begin_inset Formula $X$
+\end_inset
+
+ sind die rationalen Funktionenkörper aller nicht-leeren affinen offenen
+ Teilmengen in natürlicher Weise zu einander isomorph.
+ Dieser Körper nennen wir den 
+\series bold
+rationalen Funktionenkörper 
+\series default
+von 
+\begin_inset Formula $X$
+\end_inset
+
+: 
+\begin_inset Formula $K(X)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\emptyset\neq U$
+\end_inset
+
+, 
+\begin_inset Formula $V\subset X$
+\end_inset
+
+ affine offene Untervarietät.
+ Da 
+\begin_inset Formula $X$
+\end_inset
+
+ irreduzibel ist, gilt nach 
+\emph on
+Satz 40
+\emph default
+:
+\begin_inset Formula 
+\[
+\emptyset\neq U\cap V\subset U\text{ offen}.
+\]
+
+\end_inset
+
 
 \end_layout
 
+\begin_layout Proof
+Nach Definition von 
+\begin_inset Formula $\mathcal{O}_{X}$
+\end_inset
+
+ ist 
+\begin_inset Formula 
+\[
+\mathcal{O}_{X}(U)\subseteq\mathcal{O}_{X}(U\cap V)\subset K(U)=\text{Quot}(\mathcal{O}_{X}(U)).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Das impliziert 
+\begin_inset Formula $\text{Quot}(\mathcal{O}_{X}(U\cap V))=K(U)$
+\end_inset
+
+.
+ Aus Symmetriegründen ist aber 
+\begin_inset Formula $K(V)=\text{Quot}(\mathcal{O}_{X}(U\cap V))$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remark
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+orig.
+ 44
+\end_layout
+
+\end_inset
+
+Das Bild 
+\begin_inset Formula $K(\ )$
+\end_inset
+
+ des Funktionenkörpers ist 
+\series bold
+nicht
+\series default
+ funktoriell! Für 
+\begin_inset Formula $X\xrightarrow{f}Y$
+\end_inset
+
+ Morphismus affiner Varietäten ist die Abbildung auf den Koordinatenringen
+ 
+\begin_inset Formula $\Gamma(Y)\rightarrow\Gamma(X)$
+\end_inset
+
+ i.A.
+ 
+\series bold
+nicht
+\series default
+ injektiv, also gibt es kein 
+\begin_inset Formula $K(Y)\hookrightarrow K(X)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remark
+
+\emph on
+Jedoch
+\emph default
+: Eine Isomorphie 
+\begin_inset Formula $X\xrightarrow{\sim}Y$
+\end_inset
+
+ induziert 
+\begin_inset Formula $K(Y)\xrightarrow{\sim}K(X)$
+\end_inset
+
+.
+ Allgemeiner sei 
+\begin_inset Formula $X\rightarrow Y$
+\end_inset
+
+ Morphismus mit Bild 
+\begin_inset Formula $\subset Y$
+\end_inset
+
+ offen (
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ dicht.
+ Später 
+\begin_inset Formula $X\rightarrow Y$
+\end_inset
+
+ 
+\series bold
+dominant
+\series default
+, d.h.
+ Bild 
+\begin_inset Formula $\subset Y$
+\end_inset
+
+ dicht.) induziert in funktioreller Weise eine Abbildung 
+\begin_inset Formula $K(Y)\hookrightarrow K(X)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proposition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+orig.
+ 45
+\end_layout
+
+\end_inset
+
+Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ eine Prävarietät, 
+\begin_inset Formula $V\subseteq U\subseteq X$
+\end_inset
+
+ offen.
+ Es folgt:
+\end_layout
+
+\begin_layout Proposition
+\begin_inset Formula $\mathcal{O}_{X}(U)\subset K(X)$
+\end_inset
+
+ 
+\begin_inset Formula $k$
+\end_inset
+
+-Unteralgebra.
+\end_layout
+
+\begin_layout Proposition
+\begin_inset Formula $\mathcal{O}(U)\rightarrow\mathcal{O}(V)$
+\end_inset
+
+ ist Inklusion von Teilmengen des Funktionenkörpers 
+\begin_inset Formula $K(X)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proposition
+Insbesondere gilt für 
+\begin_inset Formula $U,V\subset X$
+\end_inset
+
+ offen:
+\begin_inset Formula 
+\[
+\mathcal{O}_{X}(U\cup V)=\mathcal{O}_{X}(U)\cap\mathcal{O}_{X}(V).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+2.
+\end_layout
+
+\end_inset
+
+Sei 
+\begin_inset Formula $\mathcal{O}(X)\ni f:X\rightarrow k$
+\end_inset
+
+.
+ Dann ist 
+\begin_inset Formula $f^{-1}(0)\subseteq X$
+\end_inset
+
+ abgeschlossen, da für 
+\begin_inset Formula $W\subseteq X$
+\end_inset
+
+ offen affin beliebig gilt:
+\begin_inset Formula 
+\[
+f^{-1}(0)\cap W=V(f_{|_{W}}).
+\]
+
+\end_inset
+
+Dazu macht man sich klar: 
+\begin_inset Quotes gld
+\end_inset
+
+abgeschlossen
+\begin_inset Quotes grd
+\end_inset
+
+ ist eine lokale Eigenschaft, und die 
+\begin_inset Formula $W$
+\end_inset
+
+ bilden eine Basis der Topologie.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow\mathcal{O}(U)\hookrightarrow\mathcal{O}(V)$
+\end_inset
+
+, 
+\begin_inset Formula $f\mapsto\sigma$
+\end_inset
+
+ injektiv für 
+\begin_inset Formula $\emptyset\neq V\subseteq U\subset X$
+\end_inset
+
+ offen.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow V\subset f^{-1}(0)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow f^{-1}(0)=U$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow f\equiv0$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+1.
+\end_layout
+
+\end_inset
+
+(i) 
+\begin_inset Formula $U\supset W$
+\end_inset
+
+ offen affine Varietät.
+ 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\xymatrix{\mathcal{O}(W)\ar[r]\subset & K(W)\ k\text{-Varietät}\\
+\mathcal{O}(U)\ar@{^{(}->}[u]
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Verklebungsaxiom: 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Diag.1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_body
 \end_document

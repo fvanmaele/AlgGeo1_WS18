@@ -84,8 +84,473 @@ theorems-ams-extended
 
 \begin_body
 
+\begin_layout Section*
+Beispiele (Projektiver Raum und projektive Varietäten)
+\end_layout
+
+\begin_layout Section
+Homogene Polynome
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+orig.
+ 48
+\end_layout
+
+\end_inset
+
+Ein Polynom 
+\begin_inset Formula $f\in k[X_{0},\ldots,X_{n}]$
+\end_inset
+
+ heißt 
+\series bold
+homogen vom Grad
+\series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+homogen
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $d\in\mathbb{Z}_{\geq0}$
+\end_inset
+
+, wenn 
+\begin_inset Formula $f$
+\end_inset
+
+ die Summe von Monomen von Grad 
+\begin_inset Formula $d$
+\end_inset
+
+ ist.
+ (Insbesondere ist für jedes 
+\begin_inset Formula $d$
+\end_inset
+
+ das Nullpolynom homogen von Grad 
+\begin_inset Formula $d$
+\end_inset
+
+.)
+\end_layout
+
+\begin_layout Definition
+
+\emph on
+Bezeichne
+\emph default
+ 
+\begin_inset Formula $k[X_{0},\ldots,X_{n}]_{d}$
+\end_inset
+
+ der Untervektorraum der Polynome vom Grad 
+\begin_inset Formula $d$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remark
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+orig.
+ 49
+\end_layout
+
+\end_inset
+
+Da #
+\begin_inset Formula $k$
+\end_inset
+
+ unendlich ist, ist 
+\begin_inset Formula $f$
+\end_inset
+
+ homogen vom Grad 
+\begin_inset Formula $d$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Remark
+\begin_inset Formula $\Leftrightarrow f(\lambda x_{0},\ldots,\lambda x_{n})=\lambda^{d}f(x_{0},\ldots,x_{n})$
+\end_inset
+
+ 
+\begin_inset Formula $\forall x_{0},\ldots,x_{n}\in k$
+\end_inset
+
+, 
+\begin_inset Formula $\lambda\in k^{\times}$
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+Es gilt: 
+\begin_inset Formula $k[X_{0},\ldots X_{n}]=\bigoplus_{d\geq0}k[X_{0},\ldots,X_{n}]_{d}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Lemma
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+orig.
+ 50
+\end_layout
+
+\end_inset
+
+Für 
+\begin_inset Formula $i\in\{0,\ldots,n\}$
+\end_inset
+
+ und 
+\begin_inset Formula $d\geq0$
+\end_inset
+
+ haben wir bijektive 
+\begin_inset Formula $k$
+\end_inset
+
+-lineare Abbildungen
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $f(t_{0},\ldots,t_{n})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+k[X_{0},\ldots,X_{n}]_{d} & \longrightarrow\text{Polynome in }k[T_{0},\ldots,\hat{T}_{i},\ldots,T_{n}]\text{ v. Grad }\leq d\\
+f & \overset{\Phi_{i}^{d}}{\longmapsto}f(T_{0},\ldots,\underbrace{1}_{i},\ldots,T_{n})\\
+g\left(\frac{x_{0}}{x_{i}},\ldots,\frac{\hat{x_{i}}}{x_{i}},\ldots,\frac{x_{n}}{x_{i}}\right) & \overset{\Psi_{i}^{d}}{\longmapsfrom}g
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+
+\series bold
+Dehomogenisierung 
+\series default
+bzw.
+ 
+\series bold
+Homogenisierung.
+\end_layout
+
+\begin_layout Proof
+Es reicht, 
+\begin_inset Formula $\Psi_{i}^{d}\circ\Phi_{i}^{d}=\text{id}$
+\end_inset
+
+, 
+\begin_inset Formula $\Phi_{i}^{d}\circ\Psi_{i}^{d}=\text{id}$
+\end_inset
+
+ auf Monomen nachzurechnen, da alle Abbildungen 
+\begin_inset Formula $k$
+\end_inset
+
+-linear sind.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Oft ist es nützlich, 
+\begin_inset Formula $k[T_{0},\ldots,\hat{T_{i}},\ldots,T_{n}]$
+\end_inset
+
+ mit 
+\begin_inset Formula $k\left[\frac{x_{0}}{x_{i}},\ldots,\frac{\hat{x_{i}}}{x_{i}},\ldots,\frac{x_{n}}{x_{i}}\right]\underset{\text{Unterring}}{\subset}k(X_{0},\ldots,X_{n})$
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $x$
+\end_inset
+
+/
+\begin_inset Formula $X$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Definition des projektiven Raumes
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $X_{1}=X_{2}=\mathbb{A}^{1}$
+\end_inset
+
+, 
+\begin_inset Formula $\tilde{U}_{1}\subseteq X_{1}=\tilde{U}_{2}\subseteq X_{2}=\mathbb{A}\backslash\{0\}$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{align*}
+\tilde{U}_{1} & \overset{\sim}{\longrightarrow}\tilde{U}_{2}\\
+x & \longmapsto\frac{1}{x}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Verkleben von 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ und 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+ entlang 
+\begin_inset Formula $\tilde{U}_{1}$
+\end_inset
+
+ und 
+\begin_inset Formula $\tilde{U}_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbb{P}^{1}=\mathbb{A}^{1}\cup\{\infty\}=U_{1}\cup U_{2}$
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Bild 2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Allgemein: 
+\begin_inset Formula 
+\[
+\mathbb{P}^{n}=\bigcup_{i=1}^{n+1}U_{i}=\mathbb{A}^{n}\cup\mathbb{P}^{n-1}=\mathbb{A}^{n}\sqcup\mathbb{A}^{n-1}\sqcup\cdots\sqcup\mathbb{A}^{1}\sqcup\mathbb{A}^{0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Idee: 
+\begin_inset Formula $\mathbb{P}^{2}\supseteq\mathbb{A}^{2}$
+\end_inset
+
+: Zwei verschiedene Geraden in 
+\begin_inset Formula $\mathbb{P}^{2}$
+\end_inset
+
+ schneiden sich genau in einem Punkt.
+\end_layout
+
 \begin_layout Standard
 
+\series bold
+Als Menge
+\series default
+:
+\begin_inset Formula 
+\begin{align*}
+\mathbb{P}^{n}(k): & =\{\text{Ursprungsgeraden in }k^{n+1}\}=\{1\text{-dim. }k\text{-UVR}\}\\
+ & =(k^{n+1}\backslash\{0\})/k^{\times}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Repräsentanten dieser Klasse entsprechen: 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\langle(x_{0},\ldots x_{n})\rangle_{k\text{-linear}}\longmapsfrom(x_{0}:\ldots:x_{n})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Äquivalenzrelation: 
+\begin_inset Formula $(x_{0},\ldots,x_{n})\sim(x_{0}',\ldots,x_{n}')\Leftrightarrow\exists\lambda\in k^{\times}$
+\end_inset
+
+ mit 
+\begin_inset Formula $x_{i}=\lambda x_{i}'$
+\end_inset
+
+ 
+\begin_inset Formula $\forall i$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Bezeichne
+\series default
+ Klassen 
+\begin_inset Formula $(x_{0}:\ldots:x_{n})$
+\end_inset
+
+, 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ 
+\series bold
+homogene
+\series default
+ Koordinaten auf 
+\begin_inset Formula $\mathbb{P}^{n}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+U_{i}:=\{(x_{0}:\cdots:x_{n})\in\mathbb{P}^{n}\mid x_{i}\neq0\}\subseteq\mathbb{P}^{n}(k),\ 0\leq i\leq n
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ist wohldefiniert 
+\begin_inset Formula $\Leftrightarrow x_{i}=1$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+\mathbb{P}^{n}(k)=\bigcup_{i=0}^{n}U_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Einen Isomorphismus 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Bild 3
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+U_{i} & \stackrel[\chi_{i}]{\cong}{\longrightarrow}\mathbb{A}^{n}(k)\\
+(x_{0}:\ldots:x_{n}) & \longmapsto\left(\frac{x_{0}}{x_{i}},\ldots,\frac{\hat{x}_{i}}{x_{i}},\ldots,\frac{x_{n}}{x_{i}}\right)\\
+(t_{0}:\cdots t_{i-1}:1:t_{i+1}:\cdots t_{n}) & \longmapsfrom(t_{0},\ldots,\hat{t}_{i},\ldots,t_{n})
+\end{align*}
+
+\end_inset
+
+ 
 \end_layout
 
 \end_body

@@ -1,0 +1,77 @@
+
+\section{Funktionenkörper einer Prävarietät}
+\begin{defn}[orig. 43]
+Für eine Prävarietät $X$ sind die rationalen Funktionenkörper aller
+nicht-leeren affinen offenen Teilmengen in natürlicher Weise zu einander
+isomorph. Dieser Körper nennen wir den \textbf{rationalen Funktionenkörper
+}von $X$: $K(X)$.
+\end{defn}
+\begin{proof}
+$\emptyset\neq U$, $V\subset X$ affine offene Untervarietät. Da
+$X$ irreduzibel ist, gilt nach \emph{Satz 40}:
+\[
+\emptyset\neq U\cap V\subset U\text{ offen}.
+\]
+
+Nach Definition von $\mathcal{O}_{X}$ ist 
+\[
+\mathcal{O}_{X}(U)\subseteq\mathcal{O}_{X}(U\cap V)\subset K(U)=\text{Quot}(\mathcal{O}_{X}(U)).
+\]
+
+Das impliziert $\text{Quot}(\mathcal{O}_{X}(U\cap V))=K(U)$. Aus
+Symmetriegründen ist aber $K(V)=\text{Quot}(\mathcal{O}_{X}(U\cap V))$.
+\end{proof}
+\begin{rem}[orig. 44]
+Das Bild $K(\ )$ des Funktionenkörpers ist \textbf{nicht} funktoriell!
+Für $X\xrightarrow{f}Y$ Morphismus affiner Varietäten ist die Abbildung
+auf den Koordinatenringen $\Gamma(Y)\rightarrow\Gamma(X)$ i.A. \textbf{nicht}
+injektiv, also gibt es kein $K(Y)\hookrightarrow K(X)$.
+
+\emph{Jedoch}: Eine Isomorphie $X\xrightarrow{\sim}Y$ induziert $K(Y)\xrightarrow{\sim}K(X)$.
+Allgemeiner sei $X\rightarrow Y$ Morphismus mit Bild $\subset Y$
+offen ($\Rightarrow$ dicht. Später $X\rightarrow Y$ \textbf{dominant},
+d.h. Bild $\subset Y$ dicht.) induziert in funktioreller Weise eine
+Abbildung $K(Y)\hookrightarrow K(X)$.
+\end{rem}
+\begin{prop}[orig. 45]
+Sei $X$ eine Prävarietät, $V\subseteq U\subseteq X$ offen. Es folgt:
+
+$\mathcal{O}_{X}(U)\subset K(X)$ $k$-Unteralgebra.
+
+$\mathcal{O}(U)\rightarrow\mathcal{O}(V)$ ist Inklusion von Teilmengen
+des Funktionenkörpers $K(X)$.
+
+Insbesondere gilt für $U,V\subset X$ offen:
+\[
+\mathcal{O}_{X}(U\cup V)=\mathcal{O}_{X}(U)\cap\mathcal{O}_{X}(V).
+\]
+\end{prop}
+\begin{proof}
+\mbox{}
+\begin{enumerate}
+\item[2.] Sei $\mathcal{O}(X)\ni f:X\rightarrow k$. Dann ist $f^{-1}(0)\subseteq X$
+abgeschlossen, da für $W\subseteq X$ offen affin beliebig gilt:
+\[
+f^{-1}(0)\cap W=V(f_{|_{W}}).
+\]
+Dazu macht man sich klar: ,,abgeschlossen`` ist eine lokale Eigenschaft,
+und die $W$ bilden eine Basis der Topologie. 
+
+$\Rightarrow\mathcal{O}(U)\hookrightarrow\mathcal{O}(V)$, $f\mapsto\sigma$
+injektiv für $\emptyset\neq V\subseteq U\subset X$ offen.
+
+$\Rightarrow V\subset f^{-1}(0)$ 
+
+$\Rightarrow f^{-1}(0)=U$ 
+
+$\Rightarrow f\equiv0$.
+\item[1.] (i) $U\supset W$ offen affine Varietät. $\Rightarrow$
+\[
+\xymatrix{\mathcal{O}(W)\ar[r]\subset & K(W)\ k\text{-Varietät}\\
+\mathcal{O}(U)\ar@{^{(}->}[u]
+}
+\]
+\item Verklebungsaxiom: 
+\end{enumerate}
+\end{proof}
+

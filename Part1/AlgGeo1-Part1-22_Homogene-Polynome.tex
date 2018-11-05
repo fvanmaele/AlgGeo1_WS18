@@ -1,0 +1,92 @@
+
+\section*{Beispiele (Projektiver Raum und projektive Varietäten)}
+
+\section{Homogene Polynome}
+\begin{defn}[orig. 48]
+Ein Polynom $f\in k[X_{0},\ldots,X_{n}]$ heißt \textbf{homogen vom
+Grad}\index{homogen} $d\in\mathbb{Z}_{\geq0}$, wenn $f$ die Summe
+von Monomen von Grad $d$ ist. (Insbesondere ist für jedes $d$ das
+Nullpolynom homogen von Grad $d$.)
+
+\emph{Bezeichne} $k[X_{0},\ldots,X_{n}]_{d}$ der Untervektorraum
+der Polynome vom Grad $d$.
+\end{defn}
+\begin{rem}[orig. 49]
+Da \#$k$ unendlich ist, ist $f$ homogen vom Grad $d$. 
+
+$\Leftrightarrow f(\lambda x_{0},\ldots,\lambda x_{n})=\lambda^{d}f(x_{0},\ldots,x_{n})$
+$\forall x_{0},\ldots,x_{n}\in k$, $\lambda\in k^{\times}$. 
+
+Es gilt: $k[X_{0},\ldots X_{n}]=\bigoplus_{d\geq0}k[X_{0},\ldots,X_{n}]_{d}$.
+\end{rem}
+\begin{lem}[orig. 50]
+Für $i\in\{0,\ldots,n\}$ und $d\geq0$ haben wir bijektive $k$-lineare
+Abbildungen
+\begin{align*}
+k[X_{0},\ldots,X_{n}]_{d} & \longrightarrow\text{Polynome in }k[T_{0},\ldots,\hat{T}_{i},\ldots,T_{n}]\text{ v. Grad }\leq d\\
+f & \overset{\Phi_{i}^{d}}{\longmapsto}f(T_{0},\ldots,\underbrace{1}_{i},\ldots,T_{n})\\
+g\left(\frac{x_{0}}{x_{i}},\ldots,\frac{\hat{x_{i}}}{x_{i}},\ldots,\frac{x_{n}}{x_{i}}\right) & \overset{\Psi_{i}^{d}}{\longmapsfrom}g
+\end{align*}
+
+\textbf{Dehomogenisierung }bzw. \textbf{Homogenisierung.}
+\end{lem}
+\begin{proof}
+Es reicht, $\Psi_{i}^{d}\circ\Phi_{i}^{d}=\text{id}$, $\Phi_{i}^{d}\circ\Psi_{i}^{d}=\text{id}$
+auf Monomen nachzurechnen, da alle Abbildungen $k$-linear sind. 
+\end{proof}
+Oft ist es nützlich, $k[T_{0},\ldots,\hat{T_{i}},\ldots,T_{n}]$ mit
+$k\left[\frac{x_{0}}{x_{i}},\ldots,\frac{\hat{x_{i}}}{x_{i}},\ldots,\frac{x_{n}}{x_{i}}\right]\underset{\text{Unterring}}{\subset}k(X_{0},\ldots,X_{n})$.
+
+
+\subsection{Definition des projektiven Raumes}
+
+Sei $X_{1}=X_{2}=\mathbb{A}^{1}$, $\tilde{U}_{1}\subseteq X_{1}=\tilde{U}_{2}\subseteq X_{2}=\mathbb{A}\backslash\{0\}$.
+\begin{align*}
+\tilde{U}_{1} & \overset{\sim}{\longrightarrow}\tilde{U}_{2}\\
+x & \longmapsto\frac{1}{x}
+\end{align*}
+
+Verkleben von $X_{1}$ und $X_{2}$ entlang $\tilde{U}_{1}$ und $\tilde{U}_{2}$
+
+$\mathbb{P}^{1}=\mathbb{A}^{1}\cup\{\infty\}=U_{1}\cup U_{2}$. 
+
+Allgemein: 
+\[
+\mathbb{P}^{n}=\bigcup_{i=1}^{n+1}U_{i}=\mathbb{A}^{n}\cup\mathbb{P}^{n-1}=\mathbb{A}^{n}\sqcup\mathbb{A}^{n-1}\sqcup\cdots\sqcup\mathbb{A}^{1}\sqcup\mathbb{A}^{0}
+\]
+
+Idee: $\mathbb{P}^{2}\supseteq\mathbb{A}^{2}$: Zwei verschiedene
+Geraden in $\mathbb{P}^{2}$ schneiden sich genau in einem Punkt.
+
+\textbf{Als Menge}:
+\begin{align*}
+\mathbb{P}^{n}(k): & =\{\text{Ursprungsgeraden in }k^{n+1}\}=\{1\text{-dim. }k\text{-UVR}\}\\
+ & =(k^{n+1}\backslash\{0\})/k^{\times}
+\end{align*}
+
+Repräsentanten dieser Klasse entsprechen: 
+\[
+\langle(x_{0},\ldots x_{n})\rangle_{k\text{-linear}}\longmapsfrom(x_{0}:\ldots:x_{n})
+\]
+
+Äquivalenzrelation: $(x_{0},\ldots,x_{n})\sim(x_{0}',\ldots,x_{n}')\Leftrightarrow\exists\lambda\in k^{\times}$
+mit $x_{i}=\lambda x_{i}'$ $\forall i$
+
+\textbf{Bezeichne} Klassen $(x_{0}:\ldots:x_{n})$, $x_{i}$ \textbf{homogene}
+Koordinaten auf $\mathbb{P}^{n}$
+\[
+U_{i}:=\{(x_{0}:\cdots:x_{n})\in\mathbb{P}^{n}\mid x_{i}\neq0\}\subseteq\mathbb{P}^{n}(k),\ 0\leq i\leq n
+\]
+
+ist wohldefiniert $\Leftrightarrow x_{i}=1$.
+\[
+\mathbb{P}^{n}(k)=\bigcup_{i=0}^{n}U_{i}
+\]
+
+Einen Isomorphismus 
+\begin{align*}
+U_{i} & \stackrel[\chi_{i}]{\cong}{\longrightarrow}\mathbb{A}^{n}(k)\\
+(x_{0}:\ldots:x_{n}) & \longmapsto\left(\frac{x_{0}}{x_{i}},\ldots,\frac{\hat{x}_{i}}{x_{i}},\ldots,\frac{x_{n}}{x_{i}}\right)\\
+(t_{0}:\cdots t_{i-1}:1:t_{i+1}:\cdots t_{n}) & \longmapsfrom(t_{0},\ldots,\hat{t}_{i},\ldots,t_{n})
+\end{align*}
+ 
