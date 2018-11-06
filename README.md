@@ -1,4 +1,4 @@
-# AlgGeo1_WS2018_19
+# AlgGeo1_WS18
 <dl>
 <dt><b>Semester</b></dt>
 <dd>WS 2018/19, Universität Heidelberg</dd>
