@@ -17,11 +17,11 @@ eigentliche Vorlesung oder die angegebene Literatur.
 
 ## Hilfe gesucht!
 
-Mit den folgenden Punkten könnte der Übersetzer Hilfe gebrauchen:
+Bei den folgenden Punkten könnte der Übersetzer Hilfe gebrauchen:
 
 * Nachlesen des Stoffs! Der Großanteil wird *während der Vorlesung*
-  gesetzt, also ist es leicht, dass sich Fehler einschleichen.
-* Vorsehen von Lemmata, Definitionen, usw. mit schlagtreffenden
+  gesetzt, also passiert es leicht, dass sich Fehler einschleichen.
+* Versehen von Lemmata, Definitionen, usw. mit schlagtreffenden
   Labels.  (`\label`) Diese verwendet
   [Gerby](https://gerby-project.github.io/) insbesondere.
 * Ergänzen von fehlenden Grafiken und kommutativen Diagrammen.
