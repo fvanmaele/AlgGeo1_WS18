@@ -41,7 +41,18 @@ theorems-ams-extended
 \float_placement h
 \paperfontsize 12
 \spacing onehalf
-\use_hyperref false
+\use_hyperref true
+\pdf_title "Algebraische Geometrie I"
+\pdf_author "Prof. Dr. Venjakob"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
 \papersize default
 \use_geometry true
 \use_package amsmath 1
@@ -187,7 +198,7 @@ Prä-Varietäten
 
 \begin_layout Standard
 \begin_inset CommandInset include
-LatexCommand input
+LatexCommand include
 filename "Part1/AlgGeo1-Part1-1_Einfuehrung.lyx"
 
 \end_inset
@@ -197,7 +208,7 @@ filename "Part1/AlgGeo1-Part1-1_Einfuehrung.lyx"
 
 \begin_layout Standard
 \begin_inset CommandInset include
-LatexCommand input
+LatexCommand include
 filename "Part1/AlgGeo1-Part1-2_Die-Zariski-Topologie.lyx"
 
 \end_inset
@@ -207,7 +218,7 @@ filename "Part1/AlgGeo1-Part1-2_Die-Zariski-Topologie.lyx"
 
 \begin_layout Standard
 \begin_inset CommandInset include
-LatexCommand input
+LatexCommand include
 filename "Part1/AlgGeo1-Part1-3_Affine-algebraische-Mengen.lyx"
 
 \end_inset
@@ -217,7 +228,7 @@ filename "Part1/AlgGeo1-Part1-3_Affine-algebraische-Mengen.lyx"
 
 \begin_layout Standard
 \begin_inset CommandInset include
-LatexCommand input
+LatexCommand include
 filename "Part1/AlgGeo1-Part1-4_Der-Hilbertsche-Nullstellensatz.lyx"
 
 \end_inset
@@ -227,7 +238,7 @@ filename "Part1/AlgGeo1-Part1-4_Der-Hilbertsche-Nullstellensatz.lyx"
 
 \begin_layout Standard
 \begin_inset CommandInset include
-LatexCommand input
+LatexCommand include
 filename "Part1/AlgGeo1-Part1-5_Korrespondenz-zwischen-Radikalidealen.lyx"
 
 \end_inset
@@ -237,7 +248,7 @@ filename "Part1/AlgGeo1-Part1-5_Korrespondenz-zwischen-Radikalidealen.lyx"
 
 \begin_layout Standard
 \begin_inset CommandInset include
-LatexCommand input
+LatexCommand include
 filename "Part1/AlgGeo1-Part1-6_Irreduzibele-topologische-Raeume.lyx"
 
 \end_inset
@@ -247,7 +258,7 @@ filename "Part1/AlgGeo1-Part1-6_Irreduzibele-topologische-Raeume.lyx"
 
 \begin_layout Standard
 \begin_inset CommandInset include
-LatexCommand input
+LatexCommand include
 filename "Part1/AlgGeo1-Part1-7_Irreduzibele-algebraische-Mengen.lyx"
 
 \end_inset
@@ -257,7 +268,7 @@ filename "Part1/AlgGeo1-Part1-7_Irreduzibele-algebraische-Mengen.lyx"
 
 \begin_layout Standard
 \begin_inset CommandInset include
-LatexCommand input
+LatexCommand include
 filename "Part1/AlgGeo1-Part1-8_Quasikompakte-und-noethersche-topologische-Raeume.lyx"
 
 \end_inset
@@ -267,7 +278,7 @@ filename "Part1/AlgGeo1-Part1-8_Quasikompakte-und-noethersche-topologische-Raeum
 
 \begin_layout Standard
 \begin_inset CommandInset include
-LatexCommand input
+LatexCommand include
 filename "Part1/AlgGeo1-Part1-9_Morphismen-von-affinen-algebraischen-Mengen.lyx"
 
 \end_inset
@@ -277,7 +288,7 @@ filename "Part1/AlgGeo1-Part1-9_Morphismen-von-affinen-algebraischen-Mengen.lyx"
 
 \begin_layout Standard
 \begin_inset CommandInset include
-LatexCommand input
+LatexCommand include
 filename "Part1/AlgGeo1-Part1-10_Unzulaenglichkeiten.lyx"
 
 \end_inset
@@ -287,7 +298,7 @@ filename "Part1/AlgGeo1-Part1-10_Unzulaenglichkeiten.lyx"
 
 \begin_layout Standard
 \begin_inset CommandInset include
-LatexCommand input
+LatexCommand include
 filename "Part1/AlgGeo1-Part1-11_Der-affine-Koordinatensatz.lyx"
 
 \end_inset
@@ -297,7 +308,7 @@ filename "Part1/AlgGeo1-Part1-11_Der-affine-Koordinatensatz.lyx"
 
 \begin_layout Standard
 \begin_inset CommandInset include
-LatexCommand input
+LatexCommand include
 filename "Part1/AlgGeo1-Part1-12_Funktorielle-Eigenschaften-des-Koordinatenrings.lyx"
 
 \end_inset
@@ -307,7 +318,7 @@ filename "Part1/AlgGeo1-Part1-12_Funktorielle-Eigenschaften-des-Koordinatenrings
 
 \begin_layout Standard
 \begin_inset CommandInset include
-LatexCommand input
+LatexCommand include
 filename "Part1/AlgGeo1-Part1-13_Raeume-mit-Funktionen.lyx"
 
 \end_inset
@@ -317,7 +328,7 @@ filename "Part1/AlgGeo1-Part1-13_Raeume-mit-Funktionen.lyx"
 
 \begin_layout Standard
 \begin_inset CommandInset include
-LatexCommand input
+LatexCommand include
 filename "Part1/AlgGeo1-Part1-14_Der-Raum-mit-Funktionen-zu-einer-affin-algebraischen-Menge.lyx"
 
 \end_inset
@@ -327,7 +338,7 @@ filename "Part1/AlgGeo1-Part1-14_Der-Raum-mit-Funktionen-zu-einer-affin-algebrai
 
 \begin_layout Standard
 \begin_inset CommandInset include
-LatexCommand input
+LatexCommand include
 filename "Part1/AlgGeo1-Part1-15_Funktorialitaet-der-Konstruktion.lyx"
 
 \end_inset
@@ -337,7 +348,7 @@ filename "Part1/AlgGeo1-Part1-15_Funktorialitaet-der-Konstruktion.lyx"
 
 \begin_layout Standard
 \begin_inset CommandInset include
-LatexCommand input
+LatexCommand include
 filename "Part1/AlgGeo1-Part1-16_Definition-von-Praevarietaeten.lyx"
 
 \end_inset
@@ -347,7 +358,7 @@ filename "Part1/AlgGeo1-Part1-16_Definition-von-Praevarietaeten.lyx"
 
 \begin_layout Standard
 \begin_inset CommandInset include
-LatexCommand input
+LatexCommand include
 filename "Part1/AlgGeo1-Part1-17_Vergleich-mit-differenzierbaren-komplexen-Mannigfaltigkeiten.lyx"
 
 \end_inset
@@ -357,7 +368,7 @@ filename "Part1/AlgGeo1-Part1-17_Vergleich-mit-differenzierbaren-komplexen-Manni
 
 \begin_layout Standard
 \begin_inset CommandInset include
-LatexCommand input
+LatexCommand include
 filename "Part1/AlgGeo1-Part1-18_Topologische-Eigenschaften-von-Praevarietaeten.lyx"
 
 \end_inset
@@ -367,7 +378,7 @@ filename "Part1/AlgGeo1-Part1-18_Topologische-Eigenschaften-von-Praevarietaeten.
 
 \begin_layout Standard
 \begin_inset CommandInset include
-LatexCommand input
+LatexCommand include
 filename "Part1/AlgGeo1-Part1-19_Offene-Untervarietaeten.lyx"
 
 \end_inset
@@ -377,7 +388,7 @@ filename "Part1/AlgGeo1-Part1-19_Offene-Untervarietaeten.lyx"
 
 \begin_layout Standard
 \begin_inset CommandInset include
-LatexCommand input
+LatexCommand include
 filename "Part1/AlgGeo1-Part1-20_Funktionenkoerper-einer-Praevarietaet.lyx"
 
 \end_inset
@@ -387,7 +398,7 @@ filename "Part1/AlgGeo1-Part1-20_Funktionenkoerper-einer-Praevarietaet.lyx"
 
 \begin_layout Standard
 \begin_inset CommandInset include
-LatexCommand input
+LatexCommand include
 filename "Part1/AlgGeo1-Part1-21_Abgeschlossene-Unterpraevarietaeten.lyx"
 
 \end_inset
@@ -397,8 +408,58 @@ filename "Part1/AlgGeo1-Part1-21_Abgeschlossene-Unterpraevarietaeten.lyx"
 
 \begin_layout Standard
 \begin_inset CommandInset include
-LatexCommand input
+LatexCommand include
 filename "Part1/AlgGeo1-Part1-22_Homogene-Polynome.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "Part1/AlgGeo1-Part1-23_Definition-des-projektiven-Raumes.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "Part1/AlgGeo1-Part1-24_Projektive-Varietaeten.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "Part1/AlgGeo1-Part1-25_Koordinatenwechsel-im-projektiven-Raum.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "Part1/AlgGeo1-Part1-26_Lineare-Unterraeume-des-projektiven-Raums.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "Part1/AlgGeo1-Part1-27_Kegel.lyx"
 
 \end_inset
 

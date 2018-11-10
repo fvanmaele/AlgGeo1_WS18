@@ -7,11 +7,13 @@
 \geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2cm}
 \pagestyle{headings}
 \usepackage{color}
+\usepackage{babel}
 \usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{amssymb}
+\usepackage{cancel}
 \usepackage{stmaryrd}
 \usepackage{stackrel}
 \usepackage{makeidx}
@@ -19,6 +21,13 @@
 \usepackage{setspace}
 \usepackage[all]{xy}
 \onehalfspacing
+\usepackage[unicode=true,
+ bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
+ breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
+ {hyperref}
+\hypersetup{pdftitle={Algebraische Geometrie I},
+ pdfauthor={Prof. Dr. Venjakob}}
+\usepackage{breakurl}
 
 \makeatletter
 
@@ -46,6 +55,8 @@
   \newtheorem{rem}[thm]{\protect\remarkname}
   \theoremstyle{remark}
   \newtheorem*{claim*}{\protect\claimname}
+  \theoremstyle{definition}
+  \newtheorem*{example*}{\protect\examplename}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
 \usepackage{mathtools}
@@ -56,7 +67,6 @@
 
 \makeatother
 
-\usepackage{babel}
   \addto\captionsenglish{\renewcommand{\claimname}{Claim}}
   \addto\captionsenglish{\renewcommand{\corollaryname}{Corollary}}
   \addto\captionsenglish{\renewcommand{\definitionname}{Definition}}
@@ -114,49 +124,59 @@ Geometrie}
 
 \part{Prä-Varietäten}
 
-\input{Part1/AlgGeo1-Part1-1_Einfuehrung.tex}
+\include{Part1/AlgGeo1-Part1-1_Einfuehrung}
 
-\input{Part1/AlgGeo1-Part1-2_Die-Zariski-Topologie.tex}
+\include{Part1/AlgGeo1-Part1-2_Die-Zariski-Topologie}
 
-\input{Part1/AlgGeo1-Part1-3_Affine-algebraische-Mengen.tex}
+\include{Part1/AlgGeo1-Part1-3_Affine-algebraische-Mengen}
 
-\input{Part1/AlgGeo1-Part1-4_Der-Hilbertsche-Nullstellensatz.tex}
+\include{Part1/AlgGeo1-Part1-4_Der-Hilbertsche-Nullstellensatz}
 
-\input{Part1/AlgGeo1-Part1-5_Korrespondenz-zwischen-Radikalidealen.tex}
+\include{Part1/AlgGeo1-Part1-5_Korrespondenz-zwischen-Radikalidealen}
 
-\input{Part1/AlgGeo1-Part1-6_Irreduzibele-topologische-Raeume.tex}
+\include{Part1/AlgGeo1-Part1-6_Irreduzibele-topologische-Raeume}
 
-\input{Part1/AlgGeo1-Part1-7_Irreduzibele-algebraische-Mengen.tex}
+\include{Part1/AlgGeo1-Part1-7_Irreduzibele-algebraische-Mengen}
 
-\input{Part1/AlgGeo1-Part1-8_Quasikompakte-und-noethersche-topologische-Raeume.tex}
+\include{Part1/AlgGeo1-Part1-8_Quasikompakte-und-noethersche-topologische-Raeume}
 
-\input{Part1/AlgGeo1-Part1-9_Morphismen-von-affinen-algebraischen-Mengen.tex}
+\include{Part1/AlgGeo1-Part1-9_Morphismen-von-affinen-algebraischen-Mengen}
 
-\input{Part1/AlgGeo1-Part1-10_Unzulaenglichkeiten.tex}
+\include{Part1/AlgGeo1-Part1-10_Unzulaenglichkeiten}
 
-\input{Part1/AlgGeo1-Part1-11_Der-affine-Koordinatensatz.tex}
+\include{Part1/AlgGeo1-Part1-11_Der-affine-Koordinatensatz}
 
-\input{Part1/AlgGeo1-Part1-12_Funktorielle-Eigenschaften-des-Koordinatenrings.tex}
+\include{Part1/AlgGeo1-Part1-12_Funktorielle-Eigenschaften-des-Koordinatenrings}
 
-\input{Part1/AlgGeo1-Part1-13_Raeume-mit-Funktionen.tex}
+\include{Part1/AlgGeo1-Part1-13_Raeume-mit-Funktionen}
 
-\input{Part1/AlgGeo1-Part1-14_Der-Raum-mit-Funktionen-zu-einer-affin-algebraischen-Menge.tex}
+\include{Part1/AlgGeo1-Part1-14_Der-Raum-mit-Funktionen-zu-einer-affin-algebraischen-Menge}
 
-\input{Part1/AlgGeo1-Part1-15_Funktorialitaet-der-Konstruktion.tex}
+\include{Part1/AlgGeo1-Part1-15_Funktorialitaet-der-Konstruktion}
 
-\input{Part1/AlgGeo1-Part1-16_Definition-von-Praevarietaeten.tex}
+\include{Part1/AlgGeo1-Part1-16_Definition-von-Praevarietaeten}
 
-\input{Part1/AlgGeo1-Part1-17_Vergleich-mit-differenzierbaren-komplexen-Mannigfaltigkeiten.tex}
+\include{Part1/AlgGeo1-Part1-17_Vergleich-mit-differenzierbaren-komplexen-Mannigfaltigkeiten}
 
-\input{Part1/AlgGeo1-Part1-18_Topologische-Eigenschaften-von-Praevarietaeten.tex}
+\include{Part1/AlgGeo1-Part1-18_Topologische-Eigenschaften-von-Praevarietaeten}
 
-\input{Part1/AlgGeo1-Part1-19_Offene-Untervarietaeten.tex}
+\include{Part1/AlgGeo1-Part1-19_Offene-Untervarietaeten}
 
-\input{Part1/AlgGeo1-Part1-20_Funktionenkoerper-einer-Praevarietaet.tex}
+\include{Part1/AlgGeo1-Part1-20_Funktionenkoerper-einer-Praevarietaet}
 
-\input{Part1/AlgGeo1-Part1-21_Abgeschlossene-Unterpraevarietaeten.tex}
+\include{Part1/AlgGeo1-Part1-21_Abgeschlossene-Unterpraevarietaeten}
 
-\input{Part1/AlgGeo1-Part1-22_Homogene-Polynome.tex}
+\include{Part1/AlgGeo1-Part1-22_Homogene-Polynome}
+
+\include{Part1/AlgGeo1-Part1-23_Definition-des-projektiven-Raumes}
+
+\include{Part1/AlgGeo1-Part1-24_Projektive-Varietaeten}
+
+\include{Part1/AlgGeo1-Part1-25_Koordinatenwechsel-im-projektiven-Raum}
+
+\include{Part1/AlgGeo1-Part1-26_Lineare-Unterraeume-des-projektiven-Raums}
+
+\include{Part1/AlgGeo1-Part1-27_Kegel}
 
 \newpage{}
 
