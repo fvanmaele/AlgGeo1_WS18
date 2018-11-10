@@ -1,30 +1,30 @@
 
-\section{Der Hilbertsche Nullstellensatz}
-\begin{prop}
-Sei $K$ ein (nicht notwendig algebraisch abgeschlossener) Körper,
+\section{Der Hilbertsche Nullstellensatz}\label{sec:nullstellensatz}
+\begin{prop}\label{prop:nullstellensatz}
+Sei $K$ ein (nicht notwendigerweise algebraisch abgeschlossener) Körper,
 und $A$ eine endlich erzeugte $K$-Algebra. Dann ist $A$ Jacobson'sch,
-d.h. für jedes Primideal $\mathfrak{p}\subset A$ gilt:
+d.h. für jedes Primideal $\mathfrak{p}\unlhd A$ gilt:
 \[
-\mathfrak{p}=\bigcap_{\mathfrak{m}\supseteq\mathfrak{p}}\mathfrak{m},\quad\mathfrak{m}\text{ max. Ideale}
+\mathfrak{p}=\bigcap_{\mathfrak{m}\supseteq\mathfrak{p}}\mathfrak{m},\quad\mathfrak{m}\text{ maximales Ideal}
 \]
 
-Ist $\mathfrak{m}\subset A$ ein maximales Ideal, so ist die Körpererweiterung
-$K\subset A/\mathfrak{m}$ endlich.
+Ist $\mathfrak{m}\unlhd A$ ein maximales Ideal, so ist die Körpererweiterung
+$K\subseteq A/\mathfrak{m}$ endlich.
 \end{prop}
 \begin{proof}
 Algebra II / kommutative Algebra.
 \end{proof}
-\begin{cor}
+\begin{cor}\label{cor:nullstellensatz}
 \mbox{}
 \begin{enumerate}
 \item Sei $A$ eine e.e. (endlich erzeugte) $k$-Algebra ($k$ sei algebraisch
-abgeschlossen), $\mathfrak{m}\subseteq A$ ein maximales Ideal. Dann
+abgeschlossen), $\mathfrak{m}\unlhd A$ ein maximales Ideal. Dann
 ist $A/\mathfrak{m}=k$. 
-\item Jedes maximale Ideal $\mathfrak{m}\subset k[\underline{T}]$ hat die
+\item Jedes maximale Ideal $\mathfrak{m}\unlhd k[\underline{T}]$ ist von der
 Form $\mathfrak{m}=(T_{1}-x_{1},\ldots,T_{n}-x_{n})$ mit $x_{1},\ldots,x_{n}\in k$.
-\item Für ein $k$-Ideal  $\mathfrak{A}\subset k[\underline{T}]$ gilt:
+\item Für ein Ideal  $\mathfrak{a}\unlhd k[\underline{T}]$ gilt:
 \[
-\rad(\mathfrak{A)=\sqrt{\mathfrak{A}}}\overset{(i)}{=}\bigcap_{\mathfrak{A}\subseteq\mathfrak{p}\subseteq k[\underline{T}]}\mathfrak{p}=\bigcap_{\mathfrak{A}\subseteq\mathfrak{m}\text{ max.}\subseteq k[\underline{T}]}\mathfrak{m}
+\rad(\mathfrak{a})=\sqrt{\mathfrak{a}}\overset{(i)}{=}\bigcap_{\mathfrak{a}\subseteq\mathfrak{p}\unlhd k[\underline{T}], \mathfrak{p} \text{prim}}\mathfrak{p}\overset{(ii)}{=}\bigcap_{\mathfrak{a}\subseteq\mathfrak{m}\unlhd k[\underline{T}], \mathfrak{m} \text{maximal}}\mathfrak{m}
 \]
 \end{enumerate}
 \end{cor}
@@ -32,14 +32,14 @@ Form $\mathfrak{m}=(T_{1}-x_{1},\ldots,T_{n}-x_{n})$ mit $x_{1},\ldots,x_{n}\in 
 \mbox{}
 \begin{enumerate}
 \item $k\rightarrow A\rightarrow A/\mathfrak{m}$ ist Isomorphismus,  da
-$k$ keine echte algebraische Körpererweiterung besteht.
+$k$ keine echte algebraische Körpererweiterung besitzt.
 \item Es ist
 \begin{align*}
-k[T_{1},\ldots,T_{n}] & \longrightarrow T/\mathfrak{m}=k\\
-T_{i} & \longmapsto x_{i}
+k[T_{1},\ldots,T_{n}] & \twoheadrightarrow k[\underline{T}]/\mathfrak{m}=k\\
+T_{i} & \mapsto x_{i}
 \end{align*}
-Es folgt: $\mathfrak{m}=(T_{1}-x_{1},\ldots,T_{n}-x_{n})$, da letztes
-bereits maximal. ($\supseteq$ klar.)
+surjektiv. Es folgt: $\mathfrak{m}=(T_{1}-x_{1},\ldots,T_{n}-x_{n})$, da letzteres
+bereits maximal ist. ($\supseteq$ klar.)
 \item (i) Algebra II. (ii) Theorem.
 \end{enumerate}
 \end{proof}

@@ -1,6 +1,6 @@
 
-\section{Topologische Eigenschaften von Prävarietäten}
-\begin{lem}
+\section{Topologische Eigenschaften von Prävarietäten}\label{sec:topologische-eigenschaften-von-praevarietaeten}
+\begin{lem}\label{lem:bijektion-irred-teilraeume}
 Für einen topologischen Raum $X$ und $U\subseteq X$ offen haben
 wir eine Bijektion
 \begin{align*}
@@ -10,66 +10,63 @@ Z\cap U & \longmapsfrom Z
 \end{align*}
 \end{lem}
 \begin{proof}
-Lemma 14: $Y\subseteq X$ irreduzibel $\Leftrightarrow\overline{Y}\subseteq X$
+Lemma \ref{lem:irreduzibel-abschluss}: $Y\subseteq X$ irreduzibel $\Leftrightarrow\overline{Y}\subseteq X$
 irreduzibel.
 
-$Y\subseteq U$ abgeschlossen $\Leftrightarrow\exists A\subset X$
-abgecshlossen: $Y=U\cap A$.
+$Y\subseteq U$ abgeschlossen $\Leftrightarrow\exists A\subseteq X$
+abgeschlossen: $Y=U\cap A$.
 
 $\Rightarrow Y\subseteq\overline{Y}\subseteq A$ $\Rightarrow Y=U\cap\overline{Y}$
 
 $Y$ irreduzibel in $U$ $\Rightarrow Y$ irreduzibel in $X$
 
-$\Rightarrow$ (14) $\overline{Y}$ irreduzibel
+$\Rightarrow$ $\overline{Y}$ irreduzibel nach \ref{lem:irreduzibel-abschluss}
 
 $\Rightarrow Y\mapsto\overline{Y}\mapsto\overline{Y}\cap U=Y$. $\checkmark$
 
-$\emptyset\neq\underbrace{Z\cap U}_{\text{irred. (S. 13v.)}}\underset{\text{offen}}{\subset}Z$
-damit dicht da $Z$ irreduzibel (Satz 13.ii)
+$\emptyset\neq Z\cap U \subseteq Z$
+damit dicht da $Z$ irreduzibel (Satz \ref{prop:charakterisierung-irreduzibel} ii. und v.)
 
-$\Rightarrow$ Abbildung $\leftarrow$ wohldefiniert 
+Also ist die Abbildung $\leftarrow$ wohldefiniert.
 
 $\Rightarrow\overline{Z\cap U}=Z$ 
 \end{proof}
-\begin{prop}
+\begin{prop}\label{prop:praevarietaeten-noethersch-irreduzibel}
 Sei $(X,\mathcal{O}_{X})$ eine Prävarietät.
 
-$\Rightarrow X$ noethersch (insbesondere quasikompakt) und irreduzibel.
+Dann ist $X$ noethersch (insbesondere quasikompakt) und irreduzibel.
 \end{prop}
 \begin{proof}
-Sei $X=\bigcup_{i=1}^{n}$ endliche eff. aff. Überdeckung und $X\supseteq Z_{1}\supseteq Z_{2}\supseteq\cdots$
+Sei $X=\bigcup_{i=1}^{n}$ endliche offene aff. Überdeckung und $X\supseteq Z_{1}\supseteq Z_{2}\supseteq\cdots$
 eine absteigende Kette abgeschlossener Teilmengen.
 
 $\Rightarrow U_{i}\cap Z_{1}\supseteq U_{i}\cap Z_{2}\supseteq\cdots$
+, ist eine absteigende Kette abgeschlossener Teilmengen von $U_{i}$
 
-$\Rightarrow$ abgeschlossene Teilmengen in $U_{i}$
-
-$\Rightarrow\forall i$ $\exists n_{i}$: $U_{i}\cap Z_{n_{i}}=U_{i}\cap Z_{i+m}$.
- Setzen von $n:=\max n_{i}$ liefert:
+$\Rightarrow\forall i$ $\exists n_{i} \in \mathbb{N}$: $U_{i}\cap Z_{n_{i}}=U_{i}\cap Z_{i+m}$ für alle $m \in \mathbb{N}$.
+ Setzen wir $n:=\max n_{i}$, so folgt:
 
 $\forall i=1,\ldots,n$ $\forall m\geq n$: $U_{i}\cap Z_{m}=U_{i}\cap Z_{m+1}$
 
-$\Rightarrow(Z_{i})$ wird stationär da $Z_{m}=\bigcup U_{i}\cap Z_{m}$.
+$\Rightarrow(Z_{i})_{i}$ wird stationär da $Z_{m}=\bigcup_{i} U_{i}\cap Z_{m}$.
 
-$\Rightarrow X$ noethersch.
+$X$ ist demnach noethersch.
 
-Zeige, $X$ ist irreduzibel:
+$X$ ist weiter irreduzibel:
 
-Sei $X=X_{1}\cup\cdots\cup X_{n}$ die Zerlegung in irreduzibele Komponenten.
+Sei $X=X_{1}\cup\cdots\cup X_{n}$ die Zerlegung in irreduzible Komponenten.
 
-$\mathbb{A}$ $n\geq2$
+Angenommen es wäre $n\geq2$.
 
 $\Rightarrow\exists i_{0}\in\{2,\ldots,n\}$: $X_{1}\cap X_{i_{0}}\neq\emptyset$.
-(Andernfalls gilt: $X=X_{1}\sqcup\underbrace{X\backslash X_{1}}_{=X_{2}\cup\cdots\cup X_{n}\text{ abg.}}$.
-Widerspruch zu $X$ zusammenhängend.)
+(Andernfalls gilt: $X=X_{1}\sqcup\underbrace{X\backslash X_{1}}_{=X_{2}\cup\cdots\cup X_{n}\text{ abg.}}$, im Widerspruch dazu, dass $X$ zusammenhängend ist.)
 
-Sei ohne Einschränkung $i_{0}=2$. Sei $x\in X_{1}\cap X_{2}$, $x\in U\subset X$
-offene affine Überdeckung (d.h. affine Varietät).
+Sei ohne Einschränkung $i_{0}=2$. Sei $x\in X_{1}\cap X_{2}$, $x\in U\subseteq X$ offen, affin (d.h. affine Varietät).
 
 $U$ irreduzibel $\Rightarrow\overline{U}$ (Abschluss in $X$) $\subseteq X_{j}$
 für ein $j\in\{1,\ldots,n\}$
 
-\textbf{Jedoch}: $x\in X_{i}\cap U\subseteq U$ irreduzibel ist $\underbrace{\overline{X_{i}\cap U}}_{\subset\overline{U}\subset X_{i}}=X_{i}$,
+\textbf{Jedoch}: Da $x\in X_{i}\cap U\subseteq U$ irreduzibel ist, ist $\underbrace{\overline{X_{i}\cap U}}_{\subseteq\overline{U}\subseteq X_{i}}=X_{i}$,
 $i=1,2$
 
 $\Rightarrow X_{1},X_{2}\subseteq X_{j}$. Widerspruch zu maximale

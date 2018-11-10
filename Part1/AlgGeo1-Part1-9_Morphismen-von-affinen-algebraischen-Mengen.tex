@@ -1,21 +1,21 @@
 \selectlanguage{english}%
 
-\section{Morphismen von affinen algebraischen Mengen}
-\begin{defn}
+\section{Morphismen von affinen algebraischen Mengen}\label{sec:morphismen-alg-mengen}
+\begin{defn}\label{def:morphismus-alg-mengen}
 Seien $X\subseteq\mathbb{A}^{m}(k)$, $Y\subseteq\mathbb{A}^{n}(k)$
 affine algebraische Mengen. Ein \textbf{Morphismus} $X\rightarrow Y$
 affiner algebraischer Mengen ist eine Abbildung $f:X\rightarrow Y$
 der zugrundeliegenden Mengen, sodass $f_{1},\ldots,f_{n}\in k[T_{1},\ldots,T_{m}]$
 existieren, derart dass $\forall x\in X$ gilt:
 \[
-f(x)=(f_{1}(x),\ldots,f_{n}(x)).
+f(x)=(f_{1}(x),\ldots,f_{n}(x)) \in Y.
 \]
-\emph{Bezeichne }dafür $\hom(X,Y)$ Menge der Morphismen $X\rightarrow Y$. 
+Es bezeichne $\hom(X,Y)$ die Menge der Morphismen $X \to Y$. 
 \end{defn}
-\begin{rem}
+\begin{rem}\label{rem:morphismen-fortsetzbarkeit}
 $f:X\rightarrow Y$ lässt sich immer fortsetzen zu einem Morphismus
 \[
-f:\mathbb{A}^{n}(k)\rightarrow\mathbb{A}^{m}(k),
+f:\mathbb{A}^{m}(k)\rightarrow\mathbb{A}^{n}(k),
 \]
 
 aber nicht eindeutig, es sei denn $X=\mathbb{A}^{m}(k)$.
@@ -24,20 +24,20 @@ aber nicht eindeutig, es sei denn $X=\mathbb{A}^{m}(k)$.
 \paragraph{Komposition}
 
 \[
-\xymatrix@C=9pc{X\ar[r]_{f}^{f_{1},\ldots,f_{n}\in k[T_{1},\ldots,T_{m}]} & Y\ar[r]_{g}^{g_{1},\ldots,g_{r}\in k[T_{1}',\ldots,T_{m}']} & Z}
+\xymatrix@C=9pc{X\ar[r]^{f}_{f_{1},\ldots,f_{n}\in k[T_{1},\ldots,T_{m}]} & Y\ar[r]^{g}_{g_{1},\ldots,g_{r}\in k[T_{1}',\ldots,T_{m}']} & Z}
 \]
 
 mit $X\subseteq\mathbb{A}^{m}(k)$, $Y\subseteq\mathbb{A}^{n}(k)$,
 $Z\subseteq\mathbb{A}^{r}(k)$. Es folgt:
 \begin{align*}
 g(f(x))=\, & (g_{1}(f_{1}(x),\ldots,f_{n}(x)),\ldots,g_{r}(f_{1}(x),\ldots,f_{n}(x))\\
-:=\, & h_{1}(x),\ldots,h_{r}(x)
+=:\, & (h_{1}(x),\ldots,h_{r}(x))
 \end{align*}
 
 d.h. $g\circ f$ ist durch Polynome $h_{i}\in k[T_{1},\ldots,T_{m}]$
-gegeben, d.h. $g\circ f$ ist wieder ein Morphismus affiner algebrasischer
+gegeben, also ist $g\circ f$ wieder ein Morphismus affiner algebraischer
 Mengen. Wir erhalten die \textbf{Kategorie affiner algebraischer Mengen}.
-\begin{example}
+\begin{example}\label{bsp:morphismen-alg-mengen}
 \mbox{}
 \begin{enumerate}
 \item Sei die Abbildung

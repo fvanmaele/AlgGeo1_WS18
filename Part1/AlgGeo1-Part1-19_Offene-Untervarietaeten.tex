@@ -1,42 +1,41 @@
 
-\section{Offene Untervarietäten}
+\section{Offene Untervarietäten}\label{sec:offene-untervarietaeten}
 
-,,Offene Teilmengen von affinen Varietäten (abgeschlossene beliebige
- Prävarietäten) sind wieder Prävarietäten`` (aber i.A. nicht affin!)
-\begin{lem}[orig. 41]
-\label{lem:koordinatenring-lokalisierung}Sei $X$ affine Varietät,
-$f\in\mathcal{O}_{X}(X)$, $\mathcal{D}(f)\subseteq X$. Die Lokalisierung
-von $\Gamma(X)=\mathcal{O}_{X}(X)$ in $f$,
+Offene Teilmengen von affinen Varietäten (und allgemeiner beliebigen
+ Prävarietäten) sind wieder Prävarietäten. (aber i.A. nicht affin!)
+\begin{lem}[orig. 41]\label{lem:basisoffene-teilmengen-sind-affin}
+Sei $X$ eine affine Varietät, $f\in\mathcal{O}_{X}(X)$, $D(f)\subseteq X$. Die Lokalisierung
+von $\Gamma(X)=\mathcal{O}_{X}(X)$ an $f$,
 \[
 \Gamma(X)_{f}=\Gamma(X)[T]/(Tf-1)
 \]
 
-ist eine integere endlich erzeugte $k$-Algebra. Dabei $(Y,\mathcal{O}_{Y})$
-bezeichnet die zugehörige Varietät. Es folgt:
+ist eine integre, endlich erzeugte $k$-Algebra. $(Y,\mathcal{O}_{Y})$
+bezeichne die zugehörige affine Varietät. Dann gilt:
 \[
-(D(f),\mathcal{O}_{X|_{D(f)}})\cong(Y,\mathcal{O}_{Y})
+(D(f),\mathcal{O}_{X}|_{D(f)})\cong(Y,\mathcal{O}_{Y})
 \]
 
 als Räume mit Funktionen, d.h. $(D(f),\mathcal{O}_{X|_{D(f)}})$ ist
-affine Varietät.
+selbst affine Varietät.
 \end{lem}
 \begin{proof}
-$\mathcal{O}_{X}(\mathcal{D}(f))=\mathcal{O}_{X}(X)_{f}$ muss affiner
+$\mathcal{O}_{X}(D(f))=\mathcal{O}_{X}(X)_{f}$ muss affiner
 Koordinatenring von $(\mathcal{D}(f),\mathcal{O}_{X|_{\mathcal{D}(f)}})$
 sein, wenn letzterer Raum von Funktionen affin ist. $X\subseteq\mathbb{A}^{n}(k)$
 korrespondiert zu dem Radikalideal:
 \begin{align*}
-\mathfrak{A} & =I(X)\subseteq k[T_{1},\ldots,T_{n}]\ \subset\ \mathfrak{A}'=(\mathfrak{A},fT_{n+1}-1)\subseteq k[T_{1},\ldots,T_{n+1}]
+\mathfrak{a} & :=I(X)\unlhd k[T_1, \ldots, T_n]\ \subseteq\ \mathfrak{a}':=(\mathfrak{a},fT_{n+1}-1)\subseteq k[T_{1},\ldots,T_{n+1}]
 \end{align*}
 
 mit Koordinatenringen:
 \begin{align*}
-\Gamma(X) & =k[T_{1},\ldots,T_{n}]/\mathfrak{A}\\
-\Gamma(Y) & =\Gamma(X)_{f}=(k[T_{1},\ldots,T_{n}]/\mathfrak{A})[T_{n+1}]/(T_{n+1}f-1)\\
- & =k[T_{1},\ldots,T_{n+1}]/\mathfrak{A}'
+\Gamma(X) & =k[T_{1},\ldots,T_{n}]/\mathfrak{a}\\
+\Gamma(Y) & =\Gamma(X)_{f}=(k[T_{1},\ldots,T_{n}]/\mathfrak{a})[T_{n+1}]/(T_{n+1}f-1)\\
+ & \cong k[T_{1},\ldots,T_{n+1}]/\mathfrak{a}'
 \end{align*}
 
-Für $Y=V(\mathfrak{A}')\subseteq\mathbb{A}^{n+1}(k)$ induziert die
+Für $Y=V(\mathfrak{a}')\subseteq\mathbb{A}^{n+1}(k)$ induziert die
 Abbildung
 \[
 \xymatrix{Y\subseteq\mathbb{A}^{n+1}(k)\ar@{-->}[d] & (x_{1},\ldots,x_{n+1})\ar@{|->}[d] & T_{i}\\
@@ -44,62 +43,56 @@ X\subseteq\mathbb{A}^{n}(k) & (x_{1},\ldots,x_{n}) & T_{i}\ar@{|->}[u]
 }
 \]
 
-eine Bijektion $Y\xrightarrow{j}\mathcal{D}_{X}(f)$  mit Umkehrabbildung
-$(x_{0},\ldots,x_{n},\frac{1}{f(x_{0},\ldots,x_{n}})\mapsfrom(x_{0},\ldots,x_{n})$
+eine Bijektion $Y\xrightarrow{j} D_{X}(f)$  mit Umkehrabbildung
+$(x_{0},\ldots,x_{n},\frac{1}{f(x_{0},\ldots,x_{n})})\mapsfrom(x_{0},\ldots,x_{n})$
 \begin{claim*}
 $j$ ist Isomorphismus von Räumen mit Funktionen:
 \begin{enumerate}
-\item $j$ ist \emph{stetig} (als Einschränkung stetiger Funktionen) $\checkmark$
-\item $j$ ist \emph{offen}: $g\in\Gamma(X)$, $\Gamma(Y)=\Gamma(X)_{f}$,
-$\frac{g}{f^{n}}\in\Gamma(X)_{f}$,
+\item $j$ ist \emph{stetig} (als Einschränkung einer stetigen Abbildung) $\checkmark$
+\item $j$ ist \emph{offen}: Für $\frac{g}{f^{n}}\in\Gamma(X)_{f} = \Gamma(Y)$ mit $g\in\Gamma(X)$ gilt
 \begin{align*}
-j\left(D_{Y}\left(\frac{g}{f^{n}}\right)\right) & =j\left(\mathcal{D}_{Y}(gf)\right) & f\text{ Einheit}\\
- & =\mathcal{D}_{X}(gf)\text{ offen}
+j\left(D_{Y}\left(\frac{g}{f^{n}}\right)\right) & =j\left(D_{Y}(gf)\right) & f\text{ Einheit}\\
+ & =D_{X}(gf)\text{ offen}
 \end{align*}
 
 $\Rightarrow j$ Homömorphismus.
 \item $j$ induziert $\forall g\in\Gamma(X)$ Isomorphismen:
 \begin{align*}
-\mathcal{O}_{X}(\mathcal{D}(fg)) & \longrightarrow\Gamma(Y)_{g}\\
+\mathcal{O}_{X}(D(fg)) & \longrightarrow\Gamma(Y)_{g}\\
 s & \longmapsto s\circ j
 \end{align*}
-mit $\mathcal{O}_{X}(\mathcal{D}(fg))=\Gamma(X)_{fg}=(\Gamma(X)_{f})_{g}=\Gamma(Y)_{g}$.
-Mit dem Verklebungsaxiom folgt: $j$ ist Morphismus von Raum mit Funktionen.
+mit $\mathcal{O}_{X}(D(fg))=\Gamma(X)_{fg}=\Gamma(X)_{f})_{g}=\Gamma(Y)_{g}$.
+Mit dem Verklebungsaxiom folgt: $j$ ist Morphismus von Räumen mit Funktionen.
 \end{enumerate}
 \end{claim*}
 \end{proof}
-\begin{prop}[orig. 42]
+\begin{prop}[orig. 42]\label{prop:offener-teilraum-praevarietaet}
 Sei $(X,\mathcal{O}_{X})$ Prävarietät, $\emptyset\neq U\subseteq X$
-offen. Dann ist $(U,\mathcal{O}_{X|_{U}})$ eine Prävarietät und $U\hookrightarrow X$
+offen. Dann ist $(U,\mathcal{O}_{X}|_{U})$ eine Prävarietät und $U\hookrightarrow X$
 ist Morphismus von Prävarietäten.
 \end{prop}
 \begin{proof}
-$X$ ist irreduzibel, also folgt mit Satz 13, dass $U$ zusammenhängend
-ist. Nach Voraussetzung ist $X=\bigcup X_{i}$ eine affine offene
+$X$ ist irreduzibel, also folgt mit Satz \ref{prop:charakterisierung-irreduzibel}, dass $U$ zusammenhängend
+ist. Nach Voraussetzung besitzt $X=\bigcup_{i} X_{i}$ eine affine, offene
 Überdeckung. Es folgt:
 \[
-U=\bigcup_{i}(\underbrace{X_{i}\cap U}_{\text{offen in }X_{i}})=\bigcup_{i,j}\mathcal{D}_{X_{i}}(f_{i_{j}})
+U=\bigcup_{i}(\underbrace{X_{i}\cap U}_{\text{offen in }X_{i}})=\bigcup_{i,j} D_{X_{i}}(f_{i,j})
 \]
 
-und $\mathcal{D}_{X_{i}}(f_{i_{j}})$ ist eine affine Varietät nach
-Lemma \ref{lem:koordinatenring-lokalisierung}. Da $X$ noethersch
-ist, folgt mit Lemma 20, dass $U$ quasikompakt ist.
+und $D_{X_{i}}(f_{i,j})$ ist eine affine Varietät nach
+Lemma \ref{lem:basisoffene-teilmengen-sind-affin}. Da $X$ noethersch
+ist, folgt mit Lemma \ref{lem:eigenschaften-noethersch}, dass $U$ quasikompakt ist.
 
-$\Rightarrow$ Es reicht eine endliche Überdeckung.
+$\Rightarrow$ Es existiert eine endliche Teilüberdeckung, also ist $U$ Prävarietät. $\checkmark$
 
-$\Rightarrow U$ Prävarietät. $\checkmark$
-
-Die Abbildung $\begin{array}{ccc}
-U & \overset{i}{\hookrightarrow} & X\\
-U\cap V & \subseteq & V
-\end{array}$ ist stetig. (Klar.) Für $f\in\mathcal{O}_{X}(V)$ gilt mit dem Einschränkungsaxiom
+Die kanonische Inklusion $U \xhookrightarrow{i} X$ ist sicher stetig. Für $f\in\mathcal{O}_{X}(V), V \subseteq X$ offen gilt mit dem Einschränkungsaxiom
 \[
-\mathcal{O}_{X|_{U}}(U\cap V)=\mathcal{O}_{X}(U\cap V)\ni f\circ i=f|_{U\cap V}
+\mathcal{O}_{X}|_{U}(U\cap V)=\mathcal{O}_{X}(U\cap V)\ni f\circ i=f|_{U\cap V}
 \]
 
 Also ist $i$ Morphismus von Prävarietäten.
 \end{proof}
-Die offenen affinen Teilmengen einer Prävarietät $X$ ($\hat{=}U\subset X$
-offen und $(U,\mathcal{O}_{X|_{U}})$ affine Varietät) bilden eine
+Die offenen affinen Teilmengen einer Prävarietät $X$ ($\hat{=} U\subseteq X$
+offen mit $(U,\mathcal{O}_{X}|_{U})$ affine Varietät) bilden eine
 Basis der Topologie von $X$, da $X$ durch offene affine Untervarietäten
-überdeckt wird und letzere diese Eigenschaft haben nach Lemma \ref{lem:koordinatenring-lokalisierung}.
+überdeckt wird und letzere diese Eigenschaft nach Lemma \ref{lem:basisoffene-teilmengen-sind-affin} haben.

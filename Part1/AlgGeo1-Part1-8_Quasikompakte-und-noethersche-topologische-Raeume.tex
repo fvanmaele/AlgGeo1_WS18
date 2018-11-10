@@ -1,8 +1,8 @@
 
-\section{Quasikompakte und noethersche topologische Räume}
-\begin{defn}
+\section{Quasikompakte und noethersche topologische Räume}\label{sec:quasikompakt-noethersch}
+\begin{defn}\label{def:quasikompakt/noethersch}
 Ein topologischer Raum $X$ heißt \textbf{quasikompakt}\index{quasikompakt},
-wenn jede offene Überdeckung von $X$ eine \emph{endliche} Teilüberdeckung
+falls jede offene Überdeckung von $X$ eine \emph{endliche} Teilüberdeckung
 enthält. (,,quasi`` deutet an, dass $X$ in der Regel nicht Hausdorff'sch
 ist!). Er heißt \textbf{noethersch}\index{noethersch}, wenn jede
 absteigende Kette
@@ -13,13 +13,13 @@ X\supseteq Z_{1}\supseteq Z_{2}\supseteq\cdots
 abgeschlossener Teilmengen von $X$ stationär wird ($\Leftrightarrow$
 jede aufsteigende Kette offener Teilmengen wird stationär).
 \end{defn}
-\begin{lem}
+\begin{lem}\label{lem:eigenschaften-noethersch}
 Sei $X$ ein noetherscher topologischer Raum. Dann gilt:
 \begin{enumerate}
-\item Jede abgeschlossene Teilmenge $Z$ von $X$ ist noethersch.
-\item Jede offene Teilmenge $U$ von $X$ ist quasikompakt.
-\item Jeder abgeschlossene Teilraum $Z$ von $X$ besitzt nur endlich viele
-irreduzibele Komponenten.
+\item Jede abgeschlossene Teilmenge $Z \subseteq X$ ist noethersch.
+\item Jede offene Teilmenge $U \subseteq X$ ist quasikompakt.
+\item Jeder abgeschlossene Teilraum $Z \subseteq X$ besitzt nur endlich viele
+irreduzible Komponenten.
 \end{enumerate}
 \end{lem}
 \begin{proof}
@@ -27,19 +27,19 @@ irreduzibele Komponenten.
 \begin{enumerate}
 \item Nach Definition, da abgeschlossene Mengen von $Z$ auch solche von
 $X$ sind.
-\item $U=\bigcup_{i\in I}U_{i}$ offen; $\mathbb{A}$ nicht quasikompakt.
-Dann ist $I_{1}\subset I_{2}\subset\cdots\subset I$ endliche Teilmenge
+\item $U=\bigcup_{i\in I}U_{i}$ offen; Angenommen $U$ wäre nicht quasikompakt.
+Dann gibt es eine Folge $I_{1}\subseteq I_{2}\subseteq\cdots\subseteq I$ von Teilmengen
 mit
 \[
-V_{1}\subsetneq V_{2}\subsetneq\cdots\neq U\quad\text{für }V_{j}=\bigcup_{i\in I}U_{i}.
+V_{1}\subsetneq V_{2}\subsetneq\cdots\neq U\quad\text{für }V_{j}=\bigcup_{i\in I_{j}}U_{i}.
 \]
 Widerspruch zu noethersch.
 \item Es reicht zu zeigen: Jeder noethersche Raum ist Vereinigung endlich
-vieler irreduzibeler Teilmengen. Da $X$ noethersch ist, folgt mit
-dem \emph{Lemma von Zorn} dass jede nicht-leere Menge von algebraischen
-Teilmengein in $X$ ein minimales Element besitzt. 
+vieler irreduzibler Teilmengen. Da $X$ noethersch ist, folgt mit
+dem \emph{Lemma von Zorn} dass jede nichtleere Menge von algebraischen
+Teilmengen in $X$ ein minimales Element besitzt. 
 \[
-\mathbb{A}:\quad\emptyset\neq\mathcal{M}:=\left\{ Z\subset X\text{ abg.}\mid Z\text{ ist \textbf{nicht} endl. Ver. irred. Mengen}\right\} 
+\text{Angenommen:} \mathcal{M}:=\left\{ Z\subseteq X\text{ abg.}\mid Z\text{ ist \textbf{nicht} endl. Vereinigung irred. Mengen}\right\} \text{ wäre nichtleer.}
 \]
 $\Rightarrow\exists$ minimales Element, sagen wir $Z$, in $\mathcal{M}$.
 
@@ -53,7 +53,7 @@ $\Rightarrow Z\notin\mathcal{M}$. Widerspruch.
 
 \end{enumerate}
 \end{proof}
-\begin{prop}
+\begin{prop}\label{prop:algebraische-mengen-noethersch}
 Jeder abgeschlossene Teilraum $X\subseteq\mathbb{A}^{n}(k)$ ist noethersch.
 \end{prop}
 \begin{proof}
@@ -61,18 +61,18 @@ Nach dem obigen Lemma ist nur zu zeigen, dass $\mathbb{A}^{n}(k)$
 noethersch ist.
 
 Absteigende Ketten abgeschlossener Teilmengen sind nach \emph{Korollar
-11} in 1-1 Korrespondenz mit aufsteigenden Ketten von (Radikal-)Ideale
+11} in 1-1 Korrespondenz mit aufsteigenden Ketten von (Radikal-)Idealen
 in $k[\underline{T}]$. Da $k[\underline{T}]$ nach dem Hilbertschen
 Basissatz noethersch ist, werden letzere Ketten stationär.
 \end{proof}
-\begin{cor}[Primärzerlegung]
-Sei $\mathfrak{A}=\rad(\mathfrak{A})\subseteq k[\underline{T}]$
-ein Radikalideal. Dann gilt: $\mathfrak{A}$ ist Durchschnitt von
-endlich vielen Primidealen, die sich jeweils nicht enthalten; diese
+\begin{cor}[Primärzerlegung]\label{cor:primaerzerlegung}
+Sei $\mathfrak{a}=\rad(\mathfrak{a})\unlhd k[\underline{T}]$
+ein Radikalideal. Dann gilt: $\mathfrak{a}$ ist Durchschnitt von
+endlich vielen Primidealen, die sich jeweils paarweise nicht enthalten; diese
 Darstellung ist eindeutig bis auf Reihenfolge.
 \end{cor}
 \begin{proof}
-$V(\mathfrak{A})=\bigcup_{i=1}^{n}V(\mathfrak{b}_{i})$, $\mathfrak{b}_{i}$
+$V(\mathfrak{a})=\bigcup_{i=1}^{n}V(\mathfrak{b}_{i})$, $\mathfrak{b}_{i}$
 Primideal.%
 \begin{comment}
 Stationäre Kette folgt aus noethersch (Satz 21); mit Bemerkung 16
@@ -80,7 +80,7 @@ bzw. Lemma 17 folgt, dass die $\mathfrak{b}_{i}$ Primideale sind.
 \end{comment}
 {} \textcolor{blue}{Mit Satz 10 folgt:}
 \[
-\mathfrak{A}=\rad(\mathfrak{A})=I(V(\mathfrak{A}))=\bigcap_{i=1}^{n}\underbrace{I(V(\mathfrak{b}_{i}))}_{\mathfrak{b}_{i}'\text{ max. Primideale (L. 17)}}
+\mathfrak{a}=\rad(\mathfrak{a})=I(V(\mathfrak{a}))=\bigcap_{i=1}^{n}\underbrace{I(V(\mathfrak{b}_{i}))}_{\mathfrak{b}_{i}\text{ minimale Primideale (\ref{lem:charakterisierung-irreduzibel-alg})}}
 \]
 \end{proof}
 
