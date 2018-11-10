@@ -1,0 +1,799 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{mathtools}
+\usepackage{faktor}
+\DeclareMathOperator{\rad}{rad}
+\renewcommand{\labelenumi}{(\roman{enumi})}
+\renewcommand{\labelenumii}{\arabic{enumii}.}
+\end_preamble
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams
+theorems-ams-extended
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Projektive Varietäten
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+orig.
+ 54
+\end_layout
+
+\end_inset
+
+Abgeschlossene Unterprävarietäten eines projektiven Raumes 
+\begin_inset Formula $\mathbb{P}^{n}(k)$
+\end_inset
+
+ heißen 
+\series bold
+projektive Varietäten
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+Vorsicht: für 
+\begin_inset Formula $x=(x_{0}:\ldots:x_{n})\in\mathbb{P}^{n}$
+\end_inset
+
+, 
+\begin_inset Formula $f\in k[X_{0},\ldots,X_{n}]$
+\end_inset
+
+ ist 
+\begin_inset Formula $f(x_{1},\ldots,x_{n})$
+\end_inset
+
+ 
+\emph on
+nicht
+\emph default
+ wohldefiniert, da von Repräsentaten abhängig, d.h.
+ 
+\begin_inset Formula $f$
+\end_inset
+
+ kann 
+\emph on
+nicht
+\series bold
+\emph default
+ 
+\series default
+als Funktion auf 
+\begin_inset Formula $\mathbb{P}^{n}$
+\end_inset
+
+ aufgefasst werden.
+ Für 
+\emph on
+homogene
+\series bold
+\emph default
+ 
+\series default
+Polynome 
+\begin_inset Formula $f_{1},\ldots,f_{n}\in k[X_{0},\ldots X_{n}]$
+\end_inset
+
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+m/n
+\end_layout
+
+\end_inset
+
+ (nicht notwendig vom selben Grad) können wir demnoch die Verschwindungsmengen
+ definieren:
+\begin_inset Formula 
+\[
+V_{+}(f_{1},\ldots,f_{n})=\{(x_{0}:\cdots:x_{n})\in\mathbb{P}^{n}\mid f_{j}(x_{0},\ldots,x_{n})=0\ \forall j\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Da 
+\begin_inset Formula $V_{+}(f_{1},\ldots,f_{n})\cap U_{i}=V(\Phi_{i}(f_{1}),\ldots,\Phi_{i}(f_{m}))$
+\end_inset
+
+ ist 
+\begin_inset Formula $V_{+}(f_{1},\ldots,f_{m})$
+\end_inset
+
+ abgeschlossen in 
+\begin_inset Formula $\mathbb{P}^{n}$
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+m/n
+\end_layout
+
+\end_inset
+
+Ist 
+\begin_inset Formula $V_{+}(f_{1},\ldots,f_{n})$
+\end_inset
+
+ irreduzibel, so erhalten wir eine projektive Varietät.
+ In der Tat entstehen alle projektiven Varietäten auf diese Weise.
+\end_layout
+
+\begin_layout Proposition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+orig.
+ 55
+\end_layout
+
+\end_inset
+
+Sei 
+\begin_inset Formula $Z\subseteq\mathbb{P}^{n}(k)$
+\end_inset
+
+ eine projektive Varietät.
+ Dann existieren homogene Polynome 
+\begin_inset Formula $f_{1},\ldots,f_{n}\in k[X_{0},\ldots,X_{n}]$
+\end_inset
+
+, 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+m/n
+\end_layout
+
+\end_inset
+
+so dass
+\begin_inset Formula 
+\[
+Z=V_{+}(f_{1},\ldots,f_{n})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition
+gilt.
+\end_layout
+
+\begin_layout Proof
+Betrachte: 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: Diagramm
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\begin{array}{cc}
+\\
+\\
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $f|_{f^{-1}(U_{i})}:f^{-1}(U_{i})\longrightarrow U_{i}$
+\end_inset
+
+ ist Morphismus von Prävarietäten.
+ Dann ist 
+\begin_inset Formula $f$
+\end_inset
+
+ selber ein Morphismus von Prävarietäten.
+\begin_inset Formula 
+\begin{align*}
+\overline{Y}:= & Y\cup\{0\}\text{ Abschluss von }Y\text{ in }\mathbb{A}^{n+1}(k)\\
+\mathfrak{A}:= & I(\overline{Y})\subseteq k[X_{0},\ldots,X_{n}]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Behauptung: 
+\begin_inset Formula $\mathfrak{A}$
+\end_inset
+
+ wird von homogenen Polynomen erzeugt
+\emph on
+.
+ Denn:
+\emph default
+ für 
+\begin_inset Formula $g\in\mathfrak{A}$
+\end_inset
+
+, 
+\begin_inset Formula $g=\sum_{d}g_{d}$
+\end_inset
+
+ Zerlegung in homogene Bestandteile vom Grad 
+\begin_inset Formula $d$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\overline{Y}$
+\end_inset
+
+ ist Vereinigung von Ursprungsgeraden im 
+\begin_inset Formula $k^{n+1}$
+\end_inset
+
+, d.h.
+ 
+\begin_inset Formula $\forall\lambda\in k^{\times}$
+\end_inset
+
+ gilt:
+\begin_inset Formula 
+\[
+g(x_{0},\ldots,x_{n})=0\ \Leftrightarrow\ g(\lambda x_{0},\ldots,\lambda x_{n})=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Beweis durch Widerspruch.
+ Nicht alle 
+\begin_inset Formula $g_{d}$
+\end_inset
+
+ liegen in 
+\begin_inset Formula $\mathfrak{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Rightarrow\exists(x_{0},\ldots,x_{n})\in\mathbb{A}^{n+1}(k)$
+\end_inset
+
+, so dass 
+\begin_inset Formula $g(x_{0},\ldots,x_{n})=0$
+\end_inset
+
+, aber 
+\begin_inset Formula $g_{d_{0}}(x_{0},\ldots,x_{n})\neq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Rightarrow0\,\cancel{\equiv}\,\sum_{d}g_{d}(x_{0},\ldots,x_{n})T^{d}\in k[T]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Rightarrow(\exists\lambda\in k^{\times})$
+\end_inset
+
+ 
+\begin_inset Formula $0\neq\sum_{d}g_{d}(x_{0},\ldots,x_{n})\lambda^{d}=\sum_{d}g_{d}(\lambda x_{0},\ldots,\lambda x_{n})=g(\lambda x_{0},\ldots,\lambda x_{n})=0$
+\end_inset
+
+.
+ Widerspruch.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Rightarrow\mathfrak{A}=(f_{1},\ldots,f_{m})$
+\end_inset
+
+, 
+\begin_inset Formula $f_{j}$
+\end_inset
+
+ homogen.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Rightarrow Z=V_{+}(f_{1},\ldots,f_{m})$
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+m/n
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{align*}
+Z\ni(x_{0}:\cdots:x_{n}) & \Leftrightarrow(\lambda x_{0},\ldots,\lambda x_{n})\in\overline{Y}\ \forall\lambda\in k^{\times}\text{ und }\neq0\\
+ & \Leftrightarrow f_{i}(x_{0},\ldots,x_{n})=0\ \forall1\leq i\leq n,\ (x_{0},\ldots,x_{n})\in\mathbb{P}^{n}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Zu Bemerkung 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+orig., add label
+\end_layout
+
+\end_inset
+
+49 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: Add diagramm
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nach Satz 51 und Definition von 
+\begin_inset Formula $\mathcal{O}_{Z}'$
+\end_inset
+
+ folgt: Ist 
+\begin_inset Formula $X$
+\end_inset
+
+ eine projektive Varietät und 
+\begin_inset Formula $U\subset X$
+\end_inset
+
+ offen, so können wir 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathcal{O}_{X}(U)=\{f:U\rightarrow k\mid\forall x\in U\ \exists x\in V\underset{\text{offen}}{\subset}U,\ g,h\in k[X_{0},\ldots,X_{n}]$
+\end_inset
+
+ homogen vom gleichen Grad mit 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $h(v)\neq0,\ f(v)=\frac{g(v)}{h(v)},\ \forall v\in V\}$
+\end_inset
+
+.
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ (*) 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+displayed, add label
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Insbesondere gilt:
+\end_layout
+
+\begin_layout Proposition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+orig.
+ 56
+\end_layout
+
+\end_inset
+
+Seien 
+\begin_inset Formula $V\subseteq\mathbb{P}^{m}(k)$
+\end_inset
+
+, 
+\begin_inset Formula $W\subset\mathbb{P}^{n}(k)$
+\end_inset
+
+ projektive Varietäten und
+\begin_inset Formula 
+\[
+V\subseteq\mathbb{P}^{m}(k)\xrightarrow{\phi}W\subseteq\mathbb{P}^{n}(k)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition
+eine Abbildung.
+ Dann ist 
+\begin_inset Formula $\phi$
+\end_inset
+
+ eine Morphismus genau dann, wenn es zu jedem 
+\begin_inset Formula $x\in V$
+\end_inset
+
+ eine offene Menge 
+\begin_inset Formula $x\in U_{x}\subset V$
+\end_inset
+
+ und homogene Polynome 
+\begin_inset Formula $f_{0},\ldots,f_{n}\subseteq k[X_{0},\ldots,X_{m}]$
+\end_inset
+
+ vom selben Grad existiert mit
+\begin_inset Formula 
+\[
+\phi(y)=(f_{0}(y),\ldots,f_{n}(y))\quad\forall y\in U_{x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+, Übung.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $\Leftarrow$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\phi$
+\end_inset
+
+ stetig: Sei 
+\begin_inset Formula $Z\subseteq W$
+\end_inset
+
+ abgeschlossen.
+ Ohne Einschränkung 
+\begin_inset Formula $Z=V_{+}(g)\cap W$
+\end_inset
+
+ für ein homogenes Polynom 
+\begin_inset Formula $g$
+\end_inset
+
+.
+ Dann berechnet sich das Urbild
+\begin_inset Formula 
+\[
+\phi^{-1}(Z)=V_{+}(g\circ\phi)\cap V.
+\]
+
+\end_inset
+
+Auf 
+\begin_inset Formula $U_{x}$
+\end_inset
+
+, 
+\begin_inset Formula $x\in V$
+\end_inset
+
+, ist 
+\begin_inset Formula $g\circ\phi$
+\end_inset
+
+ als homogenes Polynom in 
+\begin_inset Formula $X_{0},\ldots,X_{n}$
+\end_inset
+
+ gegeben.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow V(g\circ\phi)\cap U_{x}=\phi^{-1}(Z)\cap U_{x}$
+\end_inset
+
+ abgeschlossen in 
+\begin_inset Formula $U_{x}$
+\end_inset
+
+ für alle 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow\phi^{-1}(Z)\subseteq V$
+\end_inset
+
+ abgeschlossen.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Zu zeigen: 
+\begin_inset Formula $\forall W'\subseteq W$
+\end_inset
+
+ offen, 
+\begin_inset Formula $g\in\mathcal{O}_{W}(W')$
+\end_inset
+
+ ist 
+\begin_inset Formula $g\circ\phi\in\mathcal{O}_{V}(\phi^{-1}(W'))$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ (*) Es ex.
+ eine offene Umgebung 
+\begin_inset Formula $W_{y}$
+\end_inset
+
+ in 
+\begin_inset Formula $W'$
+\end_inset
+
+ mit 
+\begin_inset Formula $g=\frac{h}{q}$
+\end_inset
+
+ auf 
+\begin_inset Formula $W_{y}$
+\end_inset
+
+, 
+\begin_inset Formula $h,q$
+\end_inset
+
+ homogen vom Grad 
+\begin_inset Formula $d$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow\phi_{|U_{x}\cap\phi^{-1}(W_{y}):=\tilde{U}_{x}}$
+\end_inset
+
+ ist auch von dieser Gestalt.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ (*) 
+\begin_inset Formula $\frac{h(f_{0},\ldots,f_{n})}{q(f_{0},\ldots,f_{n})}=g\circ\phi_{|\tilde{U}_{x}}\in\mathcal{O}_{V}(\tilde{U}_{x})$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ (Verkleben) 
+\begin_inset Formula $g\circ\phi\in\mathcal{O}_{V}(\phi^{-1}(V))$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_body
+\end_document

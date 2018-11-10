@@ -33,7 +33,7 @@ int main() {
   bool document_begin = true;
   int counter{};
   int all_pages{};
-  
+
   while (std::getline(std::cin, line)) {
     switch (counter) {
     case 0 :
@@ -83,7 +83,7 @@ int main() {
       break;
     }
   }
-  
+
   // process last stack entry
   if (!s.empty()) {
     Bookmark B_last = s.top();

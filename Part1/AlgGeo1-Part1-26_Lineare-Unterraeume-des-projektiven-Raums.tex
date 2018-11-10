@@ -1,0 +1,53 @@
+\selectlanguage{english}%
+
+\section{Lineare Unterräume von $\mathbb{P}^{n}$}
+
+Sei $\varphi:k^{n+1}\rightarrow k^{n+1}$ ein \emph{injektiver} Homomorphismus
+von $k$-Vektorräumen. $\varphi$ induziert eine injektive Abbildung:
+\[
+\imath:\mathbb{P}^{n}(k)\rightarrow\mathbb{P}^{n}(k)
+\]
+
+der ein Morphismus von Prävarietäten ist nach Satz 56. Das Bild von
+$\imath$ ist eine abgeschlossene Untervarietät. Ist $A=(a_{ij})\in M_{l\times(n+1)}$
+mit $\text{im}(\varphi)=\ker(k^{n+1}\xrightarrow{A}k)$ und
+\[
+f_{i}:=\sum_{j=0}^{n}a_{ij}X_{j}\in k[X_{0},\ldots,X_{n}],
+\]
+
+so identifiziert $\imath$ $\mathbb{P}^{n}(k)$ mit $V_{+}(f_{1},\ldots,f_{l})$.
+(Die Abbildung $\imath:\mathbb{P}^{n}(k)\rightarrow V_{+}(f_{1},\ldots,f_{l})$
+ist ein Isomorphismus von Prävarietäten, mit Umkehrabbildung $\varphi^{-1}:\varphi(k^{n+1})\rightarrow k^{n+1}$
+induziert.)
+\begin{example*}
+$\mathbb{P}^{m}=V_{+}(X_{m+1},\ldots,X_{n})\subset\mathbb{P}^{n}$.
+Solche Unterräume heißen \textbf{lineare Unterräume} (der Dimension
+$m$).
+
+$m=0$: Punkte
+
+$m=1$: Geraden
+
+$m=2$: Ebenen
+
+$m=n-1$: Hyperebenen in $\mathbb{P}^{n}(k)$.
+\begin{itemize}
+\item Zu zwei Punkten $p\neq q\in\mathbb{P}^{n}(k)$ existiert genau eine
+gerade $\overline{pq}$ in $\mathbb{P}^{n}(k)$, die $p$ und $q$
+enthält, da zu zwei verschiedenen Ursprungsgeraden im $k^{n+1}$ genau
+eine Ebene (in $k^{n+1})$ existiert, die beide Geraden enthält.
+\end{itemize}
+\end{example*}
+\begin{itemize}
+\item Je zwei verschiedene Geraden in $\mathbb{P}^{2}(k)$ schneiden sich
+in genau einem Punkt, da Geraden in $\mathbb{P}^{2}$ Ebenen in $k^{3}$
+entsprechen, und zwei Ebenen sich dort genau in einer Geraden, d.h.
+einem Punkt des $\mathbb{P}^{2}$, schneiden. Dimensionsformel (lineare
+Algebra):
+\[
+\dim E_{1}\cap E_{2}=-\underbrace{\dim E_{1}+E_{2}}_{3}+\underbrace{\dim E_{1}}_{2}-\underbrace{\dim E_{2}}_{2}=1
+\]
+\emph{Später}: Verallgemeinerung: Satz von Bézout für allgemeine Unterprävarietäten
+$V_{+}(f)$.\selectlanguage{ngerman}%
+\end{itemize}
+

@@ -1,0 +1,49 @@
+\selectlanguage{english}%
+
+\section{Koordinatenwechsen in $\mathbb{P}^{n}$}
+
+$A=(a_{ij})\in GL_{n+1}(k)$ eine invertierbare $k^{n+1}\rightarrow k^{n+1}$
+lineare Abbildung, die Ursprungsgeraden in solche überführt, bzw.
+die Äquivalenzrelation respektiert. Wir erhalten Abbildungen:
+\begin{align*}
+\mathbb{P}^{n}(k) & \overset{\phi_{A}}{\longrightarrow}\mathbb{P}^{n}(k)\\
+(x_{0}:\ldots:x_{n}) & \longmapsto\left(\sum_{i=0}^{n}a_{0_{i}}x_{i}:\cdots:\sum_{i=0}^{n}a_{n_{i}}x_{i}\right),
+\end{align*}
+
+die nach Satz 56 ein Morphismus von Prävarietäten ist. Offensichtlich
+gilt für $A,B\in GL_{n+1}(k)$:
+\[
+\varphi_{A\cdot B}=\varphi_{A}\circ\varphi_{B}
+\]
+
+d.h. $\varphi_{A}$ ist insbesondere wieder ein Isomorphismus, \textbf{der
+durch $A$ bestimmte Koordinatenwechsel des $\mathbb{P}^{n}(k)$}.
+\emph{Bezeichne} Aut$(\mathbb{P}^{n}(k))$ die Gruppe der Automorphismen
+von $\mathbb{P}^{n}(k)$. Es folgt:
+\[
+\varphi_{-}:GL_{n+1}(k)\rightarrow\text{Aut}(\mathbb{P}^{n}(k))
+\]
+
+ist ein Gruppenhomomorphismus mit 
+\[
+Z:=\ker\varphi=\{\lambda E_{n+1},\ \lambda\in k^{\times}\}
+\]
+
+die Untergruppe der Skalarmatrizen. \emph{Später}:
+\[
+PGL_{n+1}(k):=GL_{n+1}(k)/Z\twoheadrightarrow\text{Aut}(\mathbb{P}^{n}(k)),\quad Z\cong k^{\times}
+\]
+
+die \textbf{projektive lineare Gruppe}.
+\begin{example*}
+Sei $n=1$. Es ist
+\begin{align*}
+PGL_{2}(\mathbb{C}) & =\left\{ \begin{array}{rl}
+\mathbb{P}^{1}(\mathbb{C}) & \rightarrow\mathbb{P}^{1}(\mathbb{C})\\
+(z:w) & \mapsto(az+bw,cz+dw)
+\end{array}\right\} \\
+ & \leftrightarrow\text{Möbiustransformationen }z\mapsto\frac{az+b}{cz+d}
+\end{align*}
+\selectlanguage{ngerman}%
+\end{example*}
+

@@ -1,0 +1,246 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{mathtools}
+\usepackage{faktor}
+\DeclareMathOperator{\rad}{rad}
+\renewcommand{\labelenumi}{(\roman{enumi})}
+\renewcommand{\labelenumii}{\arabic{enumii}.}
+\end_preamble
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams
+theorems-ams-extended
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Koordinatenwechsel in 
+\begin_inset Formula $\mathbb{P}^{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A=(a_{ij})\in GL_{n+1}(k)$
+\end_inset
+
+ eine invertierbare 
+\begin_inset Formula $k^{n+1}\rightarrow k^{n+1}$
+\end_inset
+
+ lineare Abbildung, die Ursprungsgeraden in solche überführt, bzw.
+ die Äquivalenzrelation respektiert.
+ Wir erhalten Abbildungen:
+\begin_inset Formula 
+\begin{align*}
+\mathbb{P}^{n}(k) & \overset{\phi_{A}}{\longrightarrow}\mathbb{P}^{n}(k)\\
+(x_{0}:\ldots:x_{n}) & \longmapsto\left(\sum_{i=0}^{n}a_{0_{i}}x_{i}:\cdots:\sum_{i=0}^{n}a_{n_{i}}x_{i}\right),
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+die nach Satz 56 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+insert label
+\end_layout
+
+\end_inset
+
+ein Morphismus von Prävarietäten ist.
+ Offensichtlich gilt für 
+\begin_inset Formula $A,B\in GL_{n+1}(k)$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\varphi_{A\cdot B}=\varphi_{A}\circ\varphi_{B}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+d.h.
+ 
+\begin_inset Formula $\varphi_{A}$
+\end_inset
+
+ ist insbesondere wieder ein Isomorphismus, 
+\series bold
+der durch 
+\begin_inset Formula $A$
+\end_inset
+
+ bestimmte Koordinatenwechsel des 
+\begin_inset Formula $\mathbb{P}^{n}(k)$
+\end_inset
+
+
+\series default
+.
+ 
+\emph on
+Bezeichne
+\emph default
+ Aut
+\begin_inset Formula $(\mathbb{P}^{n}(k))$
+\end_inset
+
+ die Gruppe der Automorphismen von 
+\begin_inset Formula $\mathbb{P}^{n}(k)$
+\end_inset
+
+.
+ Es folgt:
+\begin_inset Formula 
+\[
+\varphi_{-}:GL_{n+1}(k)\rightarrow\text{Aut}(\mathbb{P}^{n}(k))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ist ein Gruppenhomomorphismus mit 
+\begin_inset Formula 
+\[
+Z:=\ker\varphi=\{\lambda E_{n+1},\ \lambda\in k^{\times}\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+die Untergruppe der Skalarmatrizen.
+ 
+\emph on
+Später
+\emph default
+:
+\begin_inset Formula 
+\[
+PGL_{n+1}(k):=GL_{n+1}(k)/Z\twoheadrightarrow\text{Aut}(\mathbb{P}^{n}(k)),\quad Z\cong k^{\times}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+die 
+\series bold
+projektive lineare Gruppe
+\series default
+.
+\end_layout
+
+\begin_layout Example*
+Sei 
+\begin_inset Formula $n=1$
+\end_inset
+
+.
+ Es ist
+\begin_inset Formula 
+\begin{align*}
+PGL_{2}(\mathbb{C}) & =\left\{ \begin{array}{rl}
+\mathbb{P}^{1}(\mathbb{C}) & \rightarrow\mathbb{P}^{1}(\mathbb{C})\\
+(z:w) & \mapsto(az+bw,cz+dw)
+\end{array}\right\} \\
+ & \leftrightarrow\text{Möbiustransformationen }z\mapsto\frac{az+b}{cz+d}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
