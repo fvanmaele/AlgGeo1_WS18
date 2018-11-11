@@ -22,10 +22,10 @@ Bei den folgenden Punkten könnte der Übersetzer Hilfe gebrauchen:
 * Nachlesen des Stoffs! Der Großanteil wird *während der Vorlesung*
   gesetzt, also passiert es leicht, dass sich Fehler einschleichen.
 * Versehen von Lemmata, Definitionen, usw. mit schlagtreffenden
-  Labels.  (`\label`) Diese verwendet
-  [Gerby](https://gerby-project.github.io/) insbesondere.
+  Labels.  (`\label`) Diese werden in 
+  [Gerby](https://gerby-project.github.io/) verwendet insbesondere.
 * Ergänzen von fehlenden Grafiken und kommutativen Diagrammen.
-  Diagramme können mit `\xymatrix` (Paket `xypic`) oder `\tikz`
+  Diagramme können mit `\tikz` (Paket `tikz-cd`) oder `\xymatrix` (Paket `xypic`) 
   gesetzt werden.
   
 ## Richtlinien

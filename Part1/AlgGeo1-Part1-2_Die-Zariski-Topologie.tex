@@ -1,6 +1,9 @@
 
-\section{Die Zariski-Topologie}\label{sec:zariski-topologie}
-\begin{defn}\label{def:verschwindungsmenge}
+\section{Die Zariski-Topologie}
+\label{sec:zariski-topologie}
+
+\begin{defn}
+\label{def:verschwindungsmenge}
 Sei $M\subseteq k[T_{1},\ldots,T_{n}]=:k[\underline{T}]$ eine Teilmenge.
 Mit
 \[
@@ -16,26 +19,28 @@ der Elemente aus $M$. (Manchmal auch $V(f_{i},i\in I)$ statt $V(\{f_{i},i\in I\}
 \paragraph{Notation}
 Wir schreiben auch $V(f_i, i \in I)$ statt $V(\{f_i \mid i \in I\})$
 
-\subsection{Eigenschaften}\label{subsec:zariski-topologie-eigenschaften}
+\subsection{Eigenschaften}
+\label{subsec:zariski-topologie-eigenschaften}
 \begin{itemize}
-\item $V(M)=V(\mathfrak{A})$, wenn $\mathfrak{A}=\langle M\rangle_{k[\underline{T}]}$ das
+\item $V(M)=V(\mathfrak{a})$, wenn $\mathfrak{a}=\langle M\rangle_{k[\underline{T}]}$ das
 \emph{von} $M$ \emph{erzeugte Ideal} in $k[\underline{T}]$ bezeichnet.
 \item Da $k[\underline{T}]$ noethersch (Hilbertscher Basissatz) ist, reichen
 stets endlich viele $f_{1},\ldots,f_{n}\in M$:
 \[
-V(M)=V(f_{1},\ldots,f_{n})\qquad\text{falls }\mathfrak{A}=\langle f_{1},\ldots,f_{n}\rangle.
+V(M)=V(f_{1},\ldots,f_{n})\qquad\text{falls }\mathfrak{a}=\langle f_{1},\ldots,f_{n}\rangle_{k[\underline{T}]}.
 \]
 \item $V(-)$ ist \textbf{inklusionsumkehrend}, $M'\subseteq M\implies V(M)\subseteq V(M')$.
 \end{itemize}
-\begin{prop}\label{propdef:zariski-topologie}
-Die Mengen $V(\mathfrak{A})$, $\mathfrak{A} \unlhd k[\underline{T}]$
+\begin{prop}
+\label{propdef:zariski-topologie}
+Die Mengen $V(\mathfrak{a})$, $\mathfrak{a} \unlhd k[\underline{T}]$
 ein Ideal, sind die \textbf{abgeschlossenen} Mengen einer Topologie
 auf $k^{n}$, der sogenannten \textbf{Zariski-Topologie}\index{Zariski-Topologie}.
 \begin{enumerate}
 \item $\emptyset=V\left((1)\right)$, $k^{n}=V(0)$. 
-\item $\bigcap_{i\in I}V(\mathfrak{A}_{i})=V\left(\sum_{i\in I}\mathfrak{A}_{i}\right)$
-für beliebige Familien $(\mathfrak{A}_{i})_{i \in I}$ von Idealen.
-\item $V(\mathfrak{A})\cup V(\mathfrak{B})=V(\mathfrak{AB})$ für $\mathfrak{A},\mathfrak{B}\unlhd k[\underline{T}]$
+\item $\bigcap_{i\in I}V(\mathfrak{a}_{i})=V\left(\sum_{i\in I}\mathfrak{a}_{i}\right)$
+für beliebige Familien $(\mathfrak{a}_{i})_{i \in I}$ von Idealen.
+\item $V(\mathfrak{a})\cup V(\mathfrak{a})=V(\mathfrak{ab})$ für $\mathfrak{a},\mathfrak{b}\unlhd k[\underline{T}]$
 Ideale.
 \end{enumerate}
 \end{prop}

@@ -1,7 +1,9 @@
-\selectlanguage{english}%
+%\selectlanguage{english}%
 
 \section{Projektive Varietäten}
+\label{sec:projektive-varietaeten}
 \begin{defn}[orig. 54]
+\label{def:projektive-varietaeten}
 Abgeschlossene Unterprävarietäten eines projektiven Raumes $\mathbb{P}^{n}(k)$
 heißen \textbf{projektive Varietäten}.
 \end{defn}
@@ -9,18 +11,19 @@ Vorsicht: für $x=(x_{0}:\ldots:x_{n})\in\mathbb{P}^{n}$, $f\in k[X_{0},\ldots,X_
 ist $f(x_{1},\ldots,x_{n})$ \emph{nicht} wohldefiniert, da von Repräsentaten
 abhängig, d.h. $f$ kann \emph{nicht}\textbf{ }als Funktion auf $\mathbb{P}^{n}$
 aufgefasst werden. Für \emph{homogene}\textbf{ }Polynome $f_{1},\ldots,f_{n}\in k[X_{0},\ldots X_{n}]$
- (nicht notwendig vom selben Grad) können wir demnoch die Verschwindungsmengen
+ (nicht notwendig vom selben Grad) können wir demnoch Verschwindungsmengen
 definieren:
 \[
-V_{+}(f_{1},\ldots,f_{n})=\{(x_{0}:\cdots:x_{n})\in\mathbb{P}^{n}\mid f_{j}(x_{0},\ldots,x_{n})=0\ \forall j\}
+V_{+}(f_{1},\ldots,f_{n})=\{(x_{0}:\ldots:x_{n})\in\mathbb{P}^{n}\mid f_{j}(x_{0},\ldots,x_{n})=0\ \forall j\}
 \]
 
 Da $V_{+}(f_{1},\ldots,f_{n})\cap U_{i}=V(\Phi_{i}(f_{1}),\ldots,\Phi_{i}(f_{m}))$
 ist $V_{+}(f_{1},\ldots,f_{m})$ abgeschlossen in $\mathbb{P}^{n}$.
 Ist $V_{+}(f_{1},\ldots,f_{n})$ irreduzibel, so erhalten wir eine
 projektive Varietät. In der Tat entstehen alle projektiven Varietäten
-auf diese Weise.
+auf diese Weise, wie der folgende Satz zeigt:
 \begin{prop}[orig. 55]
+\label{prop:charakterisierung-projektive-varietaeten}
 Sei $Z\subseteq\mathbb{P}^{n}(k)$ eine projektive Varietät. Dann
 existieren homogene Polynome $f_{1},\ldots,f_{n}\in k[X_{0},\ldots,X_{n}]$,
 so dass
@@ -86,6 +89,7 @@ homogen vom gleichen Grad mit $h(v)\neq0,\ f(v)=\frac{g(v)}{h(v)},\ \forall v\in
 
 Insbesondere gilt:
 \begin{prop}[orig. 56]
+\label{prop:charakterisierung-morphismen-proj-varietaeten}
 Seien $V\subseteq\mathbb{P}^{m}(k)$, $W\subset\mathbb{P}^{n}(k)$
 projektive Varietäten und
 \[
