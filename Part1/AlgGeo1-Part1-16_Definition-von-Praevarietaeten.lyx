@@ -1,21 +1,16 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
+#LyX file created by tex2lyx 2.2
 \lyxformat 508
 \begin_document
 \begin_header
 \save_transient_properties true
-\origin unavailable
+\origin /home/nand/Documents/AlgGeo1_WS18/Part1/
 \textclass article
-\use_default_options true
-\begin_modules
-theorems-ams
-theorems-ams-extended
-enumitem
-\end_modules
+\use_default_options false
 \maintain_unincluded_children false
 \language english
-\language_package default
+\language_package none
 \inputencoding auto
-\fontencoding global
+\fontencoding default
 \font_roman "default" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
@@ -37,15 +32,15 @@ enumitem
 \papersize default
 \use_geometry false
 \use_package amsmath 1
-\use_package amssymb 1
-\use_package cancel 1
+\use_package amssymb 0
+\use_package cancel 0
 \use_package esint 1
-\use_package mathdots 1
-\use_package mathtools 1
-\use_package mhchem 1
-\use_package stackrel 1
-\use_package stmaryrd 1
-\use_package undertilde 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
 \cite_engine basic
 \cite_engine_type default
 \biblio_style plain
@@ -54,7 +49,7 @@ enumitem
 \paperorientation portrait
 \suppress_date false
 \justification true
-\use_refstyle 1
+\use_refstyle 0
 \index Index
 \shortcut idx
 \color #008000
@@ -76,6 +71,12 @@ enumitem
 
 \begin_body
 
+\begin_layout Standard
+
+\lang english
+
+\end_layout
+
 \begin_layout Part*
 Prävarietäten
 \end_layout
@@ -84,13 +85,12 @@ Prävarietäten
 
 \series bold
 Ziel.
-
 \series default
- Klasse der affinen abgeschlossenen Mengen, aufgefasst als Räume mit Funktionen
- durch Verkleben vergrößern.
+ Klasse der affin-algebraischen Mengen, aufgefasst als Räume mit Funktionen durch Verkleben vergrößern.
 \end_layout
 
 \begin_layout Standard
+
 \begin_inset Formula $(X,\mathcal{O}_{X})$
 \end_inset
 
@@ -109,24 +109,40 @@ zusammenhängend
 Definition von Prävarietäten
 \end_layout
 
-\begin_layout Definition
-\begin_inset Argument 1
-status open
+\begin_layout Standard
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:def-praevarietaet"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
 
 \begin_layout Plain Layout
-orig.
- 37
+
+\backslash
+begin{defn}
 \end_layout
 
 \end_inset
 
-Eine 
+[orig. 37]
+\begin_inset CommandInset label
+LatexCommand label
+name "def:affine-varietaet"
+
+\end_inset
+
+ Eine 
 \series bold
 affine Varietät
 \series default
 
 \begin_inset Index idx
-status open
+status collapsed
 
 \begin_layout Plain Layout
 affine Varietät
@@ -134,29 +150,38 @@ affine Varietät
 
 \end_inset
 
- ist ein Raum mit Funktionen, der isomorph ist zu den Raum mit Funktionen
- einer irreduziblen affinen algebraischen Menge.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Definition
-\begin_inset Argument 1
-status open
+ ist ein Raum mit Funktionen, der isomorph zu dem Raum mit Funktionen assoziiert zu einer irreduziblen affin-algebraischen Menge ist. 
+\begin_inset ERT
+status collapsed
 
 \begin_layout Plain Layout
-orig.
- 38
+
+\backslash
+end{defn}
 \end_layout
 
 \end_inset
 
-Eine 
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{defn}
+\end_layout
+
+\end_inset
+
+[orig. 38]
+\begin_inset CommandInset label
+LatexCommand label
+name "def:praevarietaet"
+
+\end_inset
+
+ Eine 
 \series bold
 Prävarietät
 \series default
@@ -172,8 +197,11 @@ endliche
 \begin_inset Formula $X=\bigcup_{i=1}^{n}U_{i}$
 \end_inset
 
- existiert, d.d.
- 
+ durch offene Teilmengen 
+\begin_inset Formula $U_i \subseteq X$
+\end_inset
+
+ existiert, d.d. 
 \begin_inset Formula $\forall i=1,\ldots,n$
 \end_inset
 
@@ -181,37 +209,29 @@ endliche
 \begin_inset Formula $(U_{i},\mathcal{O}_{X|_{U_{i}}})$
 \end_inset
 
- eine affine Varietät ist.
+ eine affine Varietät ist. Insbesondere sind affine Varietäten Prävarietäten!
 \end_layout
 
-\begin_layout Definition
+\begin_layout Standard
 Ein 
 \series bold
 Morphismus von Prävarietäten
 \series default
- ist ein Morphismus der entsprechenden 
-\begin_inset Note Note
-status open
+ ist ein Morphismus der entsprechenden Räume mit Funktionen.
+\lang ngerman
+
+\begin_inset ERT
+status collapsed
 
 \begin_layout Plain Layout
-??
+
+\backslash
+end{defn}
 \end_layout
 
 \end_inset
 
-Räume mit Funktionen.
- Insbesondere sind ...
- 
-\begin_inset Note Note
-status open
 
-\begin_layout Plain Layout
-obige?
-\end_layout
-
-\end_inset
-
-affine Varietäten Prävarietäten!
 \end_layout
 
 \end_body

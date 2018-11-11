@@ -1,26 +1,16 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
+#LyX file created by tex2lyx 2.2
 \lyxformat 508
 \begin_document
 \begin_header
 \save_transient_properties true
-\origin unavailable
+\origin /home/nand/Documents/AlgGeo1_WS18/Part1/
 \textclass article
-\begin_preamble
-\usepackage{mathtools}
-\usepackage{faktor}
-\DeclareMathOperator{\rad}{rad}
-\end_preamble
-\use_default_options true
-\begin_modules
-theorems-ams
-theorems-ams-extended
-enumitem
-\end_modules
+\use_default_options false
 \maintain_unincluded_children false
-\language ngerman
-\language_package default
+\language english
+\language_package none
 \inputencoding auto
-\fontencoding global
+\fontencoding default
 \font_roman "default" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
@@ -42,15 +32,15 @@ enumitem
 \papersize default
 \use_geometry false
 \use_package amsmath 1
-\use_package amssymb 1
-\use_package cancel 1
+\use_package amssymb 0
+\use_package cancel 0
 \use_package esint 1
-\use_package mathdots 1
-\use_package mathtools 1
-\use_package mhchem 1
-\use_package stackrel 1
-\use_package stmaryrd 1
-\use_package undertilde 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
 \cite_engine basic
 \cite_engine_type default
 \biblio_style plain
@@ -59,7 +49,7 @@ enumitem
 \paperorientation portrait
 \suppress_date false
 \justification true
-\use_refstyle 1
+\use_refstyle 0
 \index Index
 \shortcut idx
 \color #008000
@@ -68,7 +58,7 @@ enumitem
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language german
+\quotes_language english
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -86,25 +76,33 @@ Korrespondenz zwischen Radikalidealen und affinen algebraischen Mengen
 \end_layout
 
 \begin_layout Standard
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:radikalideale-und-algebraische-mengen"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Sei 
-\begin_inset Formula $V(\mathfrak{A})\subseteq\mathbb{A}^{n}(k)$
+\begin_inset Formula $V(\mathfrak{a})\subseteq\mathbb{A}^{n}(k)$
 \end_inset
 
  affin algebraische Menge, 
-\begin_inset Formula $\mathfrak{A}\subset k[\underline{T}]$
+\begin_inset Formula $\mathfrak{a}\unlhd k[\underline{T}]$
 \end_inset
 
-.
-
+ ein Ideal.
 \series bold
  Es gilt:
 \series default
  
-\begin_inset Formula 
-\[
-V(\mathfrak{A})=V(\rad\mathfrak{A})
+\begin_inset Formula \[
+V(\mathfrak{a})=V(\rad\mathfrak{a})
 \]
-
 \end_inset
 
 
@@ -112,77 +110,126 @@ V(\mathfrak{A})=V(\rad\mathfrak{A})
 
 \begin_layout Standard
 mit 
-\begin_inset Formula $\rad\mathfrak{A}=\{f\in k[\underline{T}]\mid f^{n}\in\mathfrak{A}\text{ für }n>0\}$
+\begin_inset Formula $\rad\mathfrak{a}=\{f\in k[\underline{T}]\mid f^{n}\in\mathfrak{a}\text{ für ein }n>0\}$
 \end_inset
 
-, da
-\begin_inset Formula 
-\[
+, da 
+\begin_inset Formula \[
 f^{n}(x)=0\Leftrightarrow f(x)=0,
 \]
-
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-d.h.
- verschiedene Ideale können dieselbe algebraische Menge beschreiben.
-\end_layout
-
-\begin_layout Definition
-Für eine Teilmenge 
-\begin_inset Formula $Z\subseteq\mathbb{A}^{n}(k)$
-\end_inset
-
- bezeichne
-\begin_inset Formula 
-\[
-I(Z)=\{f\in k[\underline{T}]\mid f(x)=0\ \forall x\in Z\}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Definition
-das Ideal aller auf 
-\begin_inset Formula $Z$
-\end_inset
-
- verschwindenden Polynomfunktionen.
-\end_layout
-
-\begin_layout Proposition
+d.h. verschiedene Ideale können dieselbe algebraische Menge beschreiben. 
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
+\backslash
+begin{defn}
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "def:verschwindungsideal"
+
+\end_inset
+
+ Für eine Teilmenge 
+\begin_inset Formula $Z\subseteq\mathbb{A}^{n}(k)$
+\end_inset
+
+ bezeichne 
+\begin_inset Formula \[
+I(Z):=\{f\in k[\underline{T}]\mid f(x)=0\ \forall x\in Z\}
+\]
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+das 
+\series bold
+Verschwindungsideal von Z
+\series default
+, das Ideal aller auf 
+\begin_inset Formula $Z$
+\end_inset
+
+ verschwindenden Polynomfunktionen. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
 
 \backslash
-mbox{}
+end{defn}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{prop}
 \end_layout
 
 \end_inset
 
 
+\begin_inset CommandInset label
+LatexCommand label
+name "prop:verschwindungsmenge-verschwindungsideal"
+
+\end_inset
+
+ 
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 1
+width ""
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+
+\end_inset
+
+ 
 \end_layout
 
-\begin_deeper
 \begin_layout Enumerate
 Sei 
-\begin_inset Formula $\mathfrak{A}\subset k[\underline{T}]$
+\begin_inset Formula $\mathfrak{a}\unlhd k[\underline{T}]$
 \end_inset
 
- Ideal.
- Dann ist 
-\begin_inset Formula $I(V(\mathfrak{A}))=\rad(\mathfrak{A})$
+ Ideal. Dann ist 
+\begin_inset Formula $I(V(\mathfrak{a}))=\rad(\mathfrak{a})$
 \end_inset
 
-.
+. 
 \end_layout
 
 \begin_layout Enumerate
@@ -190,8 +237,7 @@ Sei
 \begin_inset Formula $Z\subseteq\mathbb{A}^{n}(k)$
 \end_inset
 
- Teilmenge.
- Dann ist 
+ Teilmenge. Dann ist 
 \begin_inset Formula $V(I(Z))=\overline{Z}$
 \end_inset
 
@@ -199,23 +245,60 @@ Sei
 \begin_inset Formula $Z$
 \end_inset
 
-.
-\end_layout
+ in 
+\begin_inset Formula $\mathbb{A}^{n}(k)$
+\end_inset
 
-\end_deeper
-\begin_layout Proof
-Übungsblatt 2.
+. 
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace defskip
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{prop}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ Übungsblatt 2. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset VSpace medskip
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\mathfrak{A}$
+
+\begin_inset Formula $\mathfrak{a}$
 \end_inset
 
  heißt 
@@ -224,7 +307,7 @@ Radikalideal
 \series default
 
 \begin_inset Index idx
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Radikalideal
@@ -232,54 +315,80 @@ Radikalideal
 
 \end_inset
 
-, wenn 
-\begin_inset Formula $\mathfrak{A}=\rad(\mathfrak{A})$
+, falls 
+\begin_inset Formula $\mathfrak{a}=\rad(\mathfrak{a})$
 \end_inset
 
-, oder äquivalent wenn 
-\begin_inset Formula $k[\underline{T}]/\mathfrak{A}$
+, oder äquivalent falls 
+\begin_inset Formula $k[\underline{T}]/\mathfrak{a}$
 \end_inset
 
  
 \emph on
 reduziert
 \emph default
- ist, d.h.
- keine nilpotente Elemente hat.
+ ist, d.h. keine nilpotente Elemente ungleich 
+\begin_inset Formula $0$
+\end_inset
+
+ hat. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{cor}
 \end_layout
 
-\begin_layout Corollary
-Wir erhalten eine 1-1 Korrespondenz
-\begin_inset Formula 
-\begin{align*}
-\{\text{abg. Mengen }\subseteq\mathbb{A}^{n}\} & \leftrightarrow\{\text{Radikalideale }\mathfrak{A}\subset k[\underline{T}]\}\\
-Z & \mapsto I(Z)\\
-V(\mathfrak{A}) & \mapsfrom\mathfrak{A}
-\end{align*}
+\end_inset
 
+
+\begin_inset CommandInset label
+LatexCommand label
+name "korrespondenz-radikalideal-abgeschlossene-mengen"
+
+\end_inset
+
+ Wir erhalten eine 1-1 Korrespondenz 
+\begin_inset Formula \begin{align*}
+\{\text{abg. Mengen }\subseteq\mathbb{A}^{n}\} & \leftrightarrow\{\text{Radikalideale }\mathfrak{a}\unlhd k[\underline{T}]\}\\
+Z & \mapsto I(Z)\\
+V(\mathfrak{a}) & \mapsfrom\mathfrak{a}
+\end{align*}
 \end_inset
 
 
 \end_layout
 
-\begin_layout Corollary
-die sich zu einer 1-1 Korrespondenz
-\begin_inset Formula 
-\begin{align*}
+\begin_layout Standard
+die sich zu einer 1-1 Korrespondenz 
+\begin_inset Formula \begin{align*}
 \left\{ \text{Punkte in }\mathbb{A}^{n}\right\}  & \leftrightarrow\left\{ \text{max. Ideale in }k[\underline{T}]\right\} \\
 x=(x_{1},\ldots,x_{n}) & \mapsto\begin{array}{rl}
 \mathfrak{m}_{x} & =I(\{x\})\\
  & =\ker(k[\underline{T}]\rightarrow k,\ T_{i}\mapsto x_{i})
 \end{array}
 \end{align*}
-
 \end_inset
 
 
 \end_layout
 
-\begin_layout Corollary
-einschränkt.
+\begin_layout Standard
+einschränkt. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{cor}
+\end_layout
+
+\end_inset
+
+ 
 \end_layout
 
 \end_body

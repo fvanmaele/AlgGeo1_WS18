@@ -1,28 +1,16 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
+#LyX file created by tex2lyx 2.2
 \lyxformat 508
 \begin_document
 \begin_header
 \save_transient_properties true
-\origin unavailable
+\origin /home/nand/Documents/AlgGeo1_WS18/Part1/
 \textclass article
-\begin_preamble
-\usepackage{mathtools}
-\usepackage{faktor}
-\DeclareMathOperator{\rad}{rad}
-\renewcommand{\labelenumi}{(\roman{enumi})}
-\renewcommand{\labelenumii}{\arabic{enumii}.}
-\end_preamble
-\use_default_options true
-\begin_modules
-enumitem
-theorems-ams
-theorems-ams-extended
-\end_modules
+\use_default_options false
 \maintain_unincluded_children false
-\language ngerman
-\language_package default
+\language english
+\language_package none
 \inputencoding auto
-\fontencoding global
+\fontencoding default
 \font_roman "default" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
@@ -38,22 +26,21 @@ theorems-ams-extended
 \output_sync 0
 \bibtex_command default
 \index_command default
-\float_placement h
 \paperfontsize default
 \spacing single
 \use_hyperref false
 \papersize default
 \use_geometry false
 \use_package amsmath 1
-\use_package amssymb 1
-\use_package cancel 1
+\use_package amssymb 0
+\use_package cancel 0
 \use_package esint 1
-\use_package mathdots 1
-\use_package mathtools 1
-\use_package mhchem 1
-\use_package stackrel 1
-\use_package stmaryrd 1
-\use_package undertilde 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
 \cite_engine basic
 \cite_engine_type default
 \biblio_style plain
@@ -62,7 +49,7 @@ theorems-ams-extended
 \paperorientation portrait
 \suppress_date false
 \justification true
-\use_refstyle 1
+\use_refstyle 0
 \index Index
 \shortcut idx
 \color #008000
@@ -71,7 +58,7 @@ theorems-ams-extended
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language german
+\quotes_language english
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -92,18 +79,20 @@ Beispiele (Projektiver Raum und projektive Varietäten)
 Homogene Polynome
 \end_layout
 
-\begin_layout Definition
-\begin_inset Argument 1
-status open
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
 
 \begin_layout Plain Layout
-orig.
- 48
+
+\backslash
+begin{defn}
 \end_layout
 
 \end_inset
 
-Ein Polynom 
+[orig. 48] Ein Polynom 
 \begin_inset Formula $f\in k[X_{0},\ldots,X_{n}]$
 \end_inset
 
@@ -113,7 +102,7 @@ homogen vom Grad
 \series default
 
 \begin_inset Index idx
-status open
+status collapsed
 
 \begin_layout Plain Layout
 homogen
@@ -133,8 +122,7 @@ homogen
 \begin_inset Formula $d$
 \end_inset
 
- ist.
- (Insbesondere ist für jedes 
+ ist. (Insbesondere ist für jedes 
 \begin_inset Formula $d$
 \end_inset
 
@@ -145,7 +133,7 @@ homogen
 .)
 \end_layout
 
-\begin_layout Definition
+\begin_layout Standard
 
 \emph on
 Bezeichne
@@ -158,21 +146,31 @@ Bezeichne
 \begin_inset Formula $d$
 \end_inset
 
-.
-\end_layout
-
-\begin_layout Remark
-\begin_inset Argument 1
-status open
+. 
+\begin_inset ERT
+status collapsed
 
 \begin_layout Plain Layout
-orig.
- 49
+
+\backslash
+end{defn}
 \end_layout
 
 \end_inset
 
-Da #
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{rem}
+\end_layout
+
+\end_inset
+
+[orig. 49] Da #
 \begin_inset Formula $k$
 \end_inset
 
@@ -185,10 +183,10 @@ Da #
 \end_inset
 
 .
- 
 \end_layout
 
-\begin_layout Remark
+\begin_layout Standard
+
 \begin_inset Formula $\Leftrightarrow f(\lambda x_{0},\ldots,\lambda x_{n})=\lambda^{d}f(x_{0},\ldots,x_{n})$
 \end_inset
 
@@ -201,39 +199,38 @@ Da #
 \end_inset
 
 .
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Remark
+\begin_layout Standard
 Es gilt: 
 \begin_inset Formula $k[X_{0},\ldots X_{n}]=\bigoplus_{d\geq0}k[X_{0},\ldots,X_{n}]_{d}$
 \end_inset
 
-.
-\end_layout
-
-\begin_layout Lemma
-\begin_inset Argument 1
-status open
+. 
+\begin_inset ERT
+status collapsed
 
 \begin_layout Plain Layout
-orig.
- 50
+
+\backslash
+end{rem}
 \end_layout
 
 \end_inset
 
-Für 
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{lem}
+\end_layout
+
+\end_inset
+
+[orig. 50] Für 
 \begin_inset Formula $i\in\{0,\ldots,n\}$
 \end_inset
 
@@ -245,45 +242,51 @@ Für
 \begin_inset Formula $k$
 \end_inset
 
--lineare Abbildungen
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset Formula $f(t_{0},\ldots,t_{n})$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{align*}
+-lineare Abbildungen 
+\begin_inset Formula \begin{align*}
 k[X_{0},\ldots,X_{n}]_{d} & \longrightarrow\text{Polynome in }k[T_{0},\ldots,\hat{T}_{i},\ldots,T_{n}]\text{ v. Grad }\leq d\\
 f & \overset{\Phi_{i}^{d}}{\longmapsto}f(T_{0},\ldots,\underbrace{1}_{i},\ldots,T_{n})\\
 X_{i}^{d}g\left(\frac{X_{0}}{X_{i}},\ldots,\frac{\hat{X_{i}}}{X_{i}},\ldots,\frac{X_{n}}{X_{i}}\right) & \overset{\Psi_{i}^{d}}{\longmapsfrom}g
 \end{align*}
-
 \end_inset
 
 
 \end_layout
 
-\begin_layout Lemma
+\begin_layout Standard
 
 \series bold
 Dehomogenisierung 
 \series default
-bzw.
- 
+bzw. 
 \series bold
 Homogenisierung.
+\series default
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{lem}
 \end_layout
 
-\begin_layout Proof
-Es reicht, 
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ Es reicht, 
 \begin_inset Formula $\Psi_{i}^{d}\circ\Phi_{i}^{d}=\text{id}$
 \end_inset
 
@@ -295,60 +298,29 @@ Es reicht,
 \begin_inset Formula $k$
 \end_inset
 
--linear sind.
- 
-\begin_inset Note Note
-status open
+-linear sind. 
+\begin_inset ERT
+status collapsed
 
 \begin_layout Plain Layout
-Die Abbildung 
-\begin_inset Formula $\Psi_{i}^{d}$
-\end_inset
 
- sollte gegeben sein durch 
-\begin_inset Formula $\sum_{j=0}^{d}X_{i}^{d-j}g(X_{0},\ldots,\hat{X}_{i},\ldots,X_{n})$
-\end_inset
-
-, vgl.
+\backslash
+end{proof}
 \end_layout
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-Oft ist es nützlich, 
-\begin_inset Formula 
-\[
+ Oft ist es nützlich, 
+\begin_inset Formula \[
 k[T_{0},\ldots,\hat{T_{i}},\ldots,T_{n}]\text{ mit }
 \]
-
 \end_inset
 
- mit 
+mit 
 \begin_inset Formula $k\left[\frac{X_{0}}{X_{i}},\ldots,\frac{\hat{X_{i}}}{X_{i}},\ldots,\frac{X_{n}}{X_{i}}\right]\underset{\text{Unterring}}{\subset}k(X_{0},\ldots,X_{n})$
 \end_inset
 
 .
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset Formula $x$
-\end_inset
-
-/
-\begin_inset Formula $X$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_body

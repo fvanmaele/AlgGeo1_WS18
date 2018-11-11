@@ -1,28 +1,16 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
+#LyX file created by tex2lyx 2.2
 \lyxformat 508
 \begin_document
 \begin_header
 \save_transient_properties true
-\origin unavailable
+\origin /home/nand/Documents/AlgGeo1_WS18/Part1/
 \textclass article
-\begin_preamble
-\usepackage{mathtools}
-\usepackage{faktor}
-\DeclareMathOperator{\rad}{rad}
-\renewcommand{\labelenumi}{(\roman{enumi})}
-\renewcommand{\labelenumii}{\arabic{enumii}.}
-\end_preamble
-\use_default_options true
-\begin_modules
-enumitem
-theorems-ams
-theorems-ams-extended
-\end_modules
+\use_default_options false
 \maintain_unincluded_children false
-\language ngerman
-\language_package default
+\language english
+\language_package none
 \inputencoding auto
-\fontencoding global
+\fontencoding default
 \font_roman "default" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
@@ -38,22 +26,21 @@ theorems-ams-extended
 \output_sync 0
 \bibtex_command default
 \index_command default
-\float_placement h
 \paperfontsize default
 \spacing single
 \use_hyperref false
 \papersize default
 \use_geometry false
 \use_package amsmath 1
-\use_package amssymb 1
-\use_package cancel 1
+\use_package amssymb 0
+\use_package cancel 0
 \use_package esint 1
-\use_package mathdots 1
-\use_package mathtools 1
-\use_package mhchem 1
-\use_package stackrel 1
-\use_package stmaryrd 1
-\use_package undertilde 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
 \cite_engine basic
 \cite_engine_type default
 \biblio_style plain
@@ -62,7 +49,7 @@ theorems-ams-extended
 \paperorientation portrait
 \suppress_date false
 \justification true
-\use_refstyle 1
+\use_refstyle 0
 \index Index
 \shortcut idx
 \color #008000
@@ -71,7 +58,7 @@ theorems-ams-extended
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language german
+\quotes_language english
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -88,8 +75,34 @@ theorems-ams-extended
 Topologische Eigenschaften von Prävarietäten
 \end_layout
 
-\begin_layout Lemma
-Für einen topologischen Raum 
+\begin_layout Standard
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:topologische-eigenschaften-von-praevarietaeten"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{lem}
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:bijektion-irred-teilraeume"
+
+\end_inset
+
+ Für einen topologischen Raum 
 \begin_inset Formula $X$
 \end_inset
 
@@ -97,21 +110,46 @@ Für einen topologischen Raum
 \begin_inset Formula $U\subseteq X$
 \end_inset
 
- offen haben wir eine Bijektion
-\begin_inset Formula 
-\begin{align*}
+ offen haben wir eine Bijektion 
+\begin_inset Formula \begin{align*}
 \{Y\subseteq U\text{ irred. abg.}\} & \longleftrightarrow\{Z\subseteq X\text{ irred. abg. mit }Z\cap U\neq\emptyset\}\\
 Y & \longmapsto\overline{Y}\text{ (Abschluss in }X)\\
 Z\cap U & \longmapsfrom Z
 \end{align*}
-
 \end_inset
 
 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{lem}
 \end_layout
 
-\begin_layout Proof
-Lemma 14: 
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:irreduzibel-abschluss"
+
+\end_inset
+
+: 
 \begin_inset Formula $Y\subseteq X$
 \end_inset
 
@@ -122,22 +160,24 @@ Lemma 14:
  irreduzibel.
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
+
 \begin_inset Formula $Y\subseteq U$
 \end_inset
 
  abgeschlossen 
-\begin_inset Formula $\Leftrightarrow\exists A\subset X$
+\begin_inset Formula $\Leftrightarrow\exists A\subseteq X$
 \end_inset
 
- abgecshlossen: 
+ abgeschlossen: 
 \begin_inset Formula $Y=U\cap A$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
+
 \begin_inset Formula $\Rightarrow Y\subseteq\overline{Y}\subseteq A$
 \end_inset
 
@@ -148,7 +188,8 @@ Lemma 14:
 
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
+
 \begin_inset Formula $Y$
 \end_inset
 
@@ -167,176 +208,185 @@ Lemma 14:
 
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
+
 \begin_inset Formula $\Rightarrow$
 \end_inset
 
- (14) 
+ 
 \begin_inset Formula $\overline{Y}$
 \end_inset
 
- irreduzibel
+ irreduzibel nach 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:irreduzibel-abschluss"
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
+
 \begin_inset Formula $\Rightarrow Y\mapsto\overline{Y}\mapsto\overline{Y}\cap U=Y$
 \end_inset
 
-.
- 
+. 
 \begin_inset Formula $\checkmark$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Proof
-\begin_inset Formula $\emptyset\neq\underbrace{Z\cap U}_{\text{irred. (S. 13v.)}}\underset{\text{offen}}{\subset}Z$
+\begin_layout Standard
+
+\begin_inset Formula $\emptyset\neq Z\cap U \subseteq Z$
 \end_inset
 
  damit dicht da 
 \begin_inset Formula $Z$
 \end_inset
 
- irreduzibel (Satz 13.ii)
-\end_layout
+ irreduzibel (Satz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:charakterisierung-irreduzibel"
 
-\begin_layout Proof
-\begin_inset Formula $\Rightarrow$
 \end_inset
 
- Abbildung 
+ ii. und v.)
+\end_layout
+
+\begin_layout Standard
+Also ist die Abbildung 
 \begin_inset Formula $\leftarrow$
 \end_inset
 
- wohldefiniert 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Die Abbildung ist wohldefiniert
+ wohldefiniert.
 \end_layout
 
-\end_inset
+\begin_layout Standard
 
-
-\end_layout
-
-\begin_layout Proof
 \begin_inset Formula $\Rightarrow\overline{Z\cap U}=Z$
 \end_inset
 
  
-\begin_inset Note Note
-status open
+\begin_inset ERT
+status collapsed
 
 \begin_layout Plain Layout
-notiz über dem Gleichheitszeichen...
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{prop}
 \end_layout
 
 \end_inset
 
 
-\end_layout
+\begin_inset CommandInset label
+LatexCommand label
+name "prop:praevarietaeten-noethersch-irreduzibel"
 
-\begin_layout Proposition
-Sei 
+\end_inset
+
+ Sei 
 \begin_inset Formula $(X,\mathcal{O}_{X})$
 \end_inset
 
  eine Prävarietät.
 \end_layout
 
-\begin_layout Proposition
-\begin_inset Formula $\Rightarrow X$
+\begin_layout Standard
+Dann ist 
+\begin_inset Formula $X$
 \end_inset
 
- noethersch (insbesondere quasikompakt) 
-\begin_inset Note Note
-status open
+ noethersch (insbesondere quasikompakt) und irreduzibel. 
+\begin_inset ERT
+status collapsed
 
 \begin_layout Plain Layout
 
+\backslash
+end{prop}
 \end_layout
 
 \end_inset
 
-und irreduzibel.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{proof}
 \end_layout
 
-\begin_layout Proof
-Sei 
+\end_inset
+
+ Sei 
 \begin_inset Formula $X=\bigcup_{i=1}^{n}$
 \end_inset
 
- endliche eff.
- aff.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-???
-\end_layout
-
-\end_inset
-
-Überdeckung und 
+ endliche offene aff. Überdeckung und 
 \begin_inset Formula $X\supseteq Z_{1}\supseteq Z_{2}\supseteq\cdots$
 \end_inset
 
  eine absteigende Kette abgeschlossener Teilmengen.
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
+
 \begin_inset Formula $\Rightarrow U_{i}\cap Z_{1}\supseteq U_{i}\cap Z_{2}\supseteq\cdots$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Proof
-\begin_inset Formula $\Rightarrow$
-\end_inset
-
- abgeschlossene Teilmengen in 
+ , ist eine absteigende Kette abgeschlossener Teilmengen von 
 \begin_inset Formula $U_{i}$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
+
 \begin_inset Formula $\Rightarrow\forall i$
 \end_inset
 
  
-\begin_inset Formula $\exists n_{i}$
+\begin_inset Formula $\exists n_{i} \in \mathbb{N}$
 \end_inset
 
 : 
 \begin_inset Formula $U_{i}\cap Z_{n_{i}}=U_{i}\cap Z_{i+m}$
 \end_inset
 
-.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO
-\end_layout
-
+ für alle 
+\begin_inset Formula $m \in \mathbb{N}$
 \end_inset
 
- Setzen von 
+. Setzen wir 
 \begin_inset Formula $n:=\max n_{i}$
 \end_inset
 
- liefert:
+, so folgt:
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
+
 \begin_inset Formula $\forall i=1,\ldots,n$
 \end_inset
 
@@ -351,73 +401,52 @@ TODO
 
 \end_layout
 
-\begin_layout Proof
-\begin_inset Formula $\Rightarrow(Z_{i})$
+\begin_layout Standard
+
+\begin_inset Formula $\Rightarrow(Z_{i})_{i}$
 \end_inset
 
  wird stationär da 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-?
-\end_layout
-
-\end_inset
-
-
-\begin_inset Formula $Z_{m}=\bigcup U_{i}\cap Z_{m}$
+\begin_inset Formula $Z_{m}=\bigcup_{i} U_{i}\cap Z_{m}$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Proof
-\begin_inset Formula $\Rightarrow X$
-\end_inset
+\begin_layout Standard
 
- noethersch.
-\end_layout
-
-\begin_layout Proof
-Zeige, 
 \begin_inset Formula $X$
 \end_inset
 
- ist irreduzibel:
+ ist demnach noethersch.
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
+
+\begin_inset Formula $X$
+\end_inset
+
+ ist weiter irreduzibel:
+\end_layout
+
+\begin_layout Standard
 Sei 
 \begin_inset Formula $X=X_{1}\cup\cdots\cup X_{n}$
 \end_inset
 
- die Zerlegung in irreduzibele Komponenten.
+ die Zerlegung in irreduzible Komponenten.
 \end_layout
 
-\begin_layout Proof
-\begin_inset Formula $\mathbb{A}$
-\end_inset
-
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Induktionsanfang? vgl.
- erstere Vorlesungen
-\end_layout
-
-\end_inset
-
-
+\begin_layout Standard
+Angenommen es wäre 
 \begin_inset Formula $n\geq2$
 \end_inset
 
-
+.
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
+
 \begin_inset Formula $\Rightarrow\exists i_{0}\in\{2,\ldots,n\}$
 \end_inset
 
@@ -425,38 +454,35 @@ Induktionsanfang? vgl.
 \begin_inset Formula $X_{1}\cap X_{i_{0}}\neq\emptyset$
 \end_inset
 
-.
- (Andernfalls gilt: 
+. (Andernfalls gilt: 
 \begin_inset Formula $X=X_{1}\sqcup\underbrace{X\backslash X_{1}}_{=X_{2}\cup\cdots\cup X_{n}\text{ abg.}}$
 \end_inset
 
-.
- Widerspruch zu 
+, im Widerspruch dazu, dass 
 \begin_inset Formula $X$
 \end_inset
 
- zusammenhängend.)
+ zusammenhängend ist.)
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
 Sei ohne Einschränkung 
 \begin_inset Formula $i_{0}=2$
 \end_inset
 
-.
- Sei 
+. Sei 
 \begin_inset Formula $x\in X_{1}\cap X_{2}$
 \end_inset
 
 , 
-\begin_inset Formula $x\in U\subset X$
+\begin_inset Formula $x\in U\subseteq X$
 \end_inset
 
- offene affine Überdeckung (d.h.
- affine Varietät).
+ offen, affin (d.h. affine Varietät).
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
+
 \begin_inset Formula $U$
 \end_inset
 
@@ -479,17 +505,17 @@ Sei ohne Einschränkung
 
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
 
 \series bold
 Jedoch
 \series default
-: 
+: Da 
 \begin_inset Formula $x\in X_{i}\cap U\subseteq U$
 \end_inset
 
- irreduzibel ist 
-\begin_inset Formula $\underbrace{\overline{X_{i}\cap U}}_{\subset\overline{U}\subset X_{i}}=X_{i}$
+ irreduzibel ist, ist 
+\begin_inset Formula $\underbrace{\overline{X_{i}\cap U}}_{\subseteq\overline{U}\subseteq X_{i}}=X_{i}$
 \end_inset
 
 , 
@@ -499,12 +525,24 @@ Jedoch
 
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
+
 \begin_inset Formula $\Rightarrow X_{1},X_{2}\subseteq X_{j}$
 \end_inset
 
-.
- Widerspruch zu maximale Komponente.
+. Widerspruch zu maximale Komponente. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body

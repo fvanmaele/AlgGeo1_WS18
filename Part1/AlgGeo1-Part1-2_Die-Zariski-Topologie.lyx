@@ -1,21 +1,16 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
+#LyX file created by tex2lyx 2.2
 \lyxformat 508
 \begin_document
 \begin_header
 \save_transient_properties true
-\origin unavailable
+\origin /home/nand/Documents/AlgGeo1_WS18/Part1/
 \textclass article
-\use_default_options true
-\begin_modules
-theorems-ams
-theorems-ams-extended
-enumitem
-\end_modules
+\use_default_options false
 \maintain_unincluded_children false
-\language ngerman
-\language_package default
+\language english
+\language_package none
 \inputencoding auto
-\fontencoding global
+\fontencoding default
 \font_roman "default" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
@@ -37,15 +32,15 @@ enumitem
 \papersize default
 \use_geometry false
 \use_package amsmath 1
-\use_package amssymb 1
-\use_package cancel 1
+\use_package amssymb 0
+\use_package cancel 0
 \use_package esint 1
-\use_package mathdots 1
-\use_package mathtools 1
-\use_package mhchem 1
-\use_package stackrel 1
-\use_package stmaryrd 1
-\use_package undertilde 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
 \cite_engine basic
 \cite_engine_type default
 \biblio_style plain
@@ -54,7 +49,7 @@ enumitem
 \paperorientation portrait
 \suppress_date false
 \justification true
-\use_refstyle 1
+\use_refstyle 0
 \index Index
 \shortcut idx
 \color #008000
@@ -63,7 +58,7 @@ enumitem
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language german
+\quotes_language english
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -80,31 +75,54 @@ enumitem
 Die Zariski-Topologie
 \end_layout
 
-\begin_layout Definition
-Sei 
-\begin_inset Formula $M\subset k[T_{1},\ldots,T_{n}]=:k[\underline{T}]$
+\begin_layout Standard
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:zariski-topologie"
+
 \end_inset
 
- eine Teilmenge.
- Mit
-\begin_inset Formula 
-\[
-V(M)=\{(t_{1},\ldots,t_{n})\in k\mid f(t_{1},\ldots,t_{n})=0\ \boldsymbol{\forall f\in M}\}
-\]
+ 
+\begin_inset ERT
+status collapsed
 
+\begin_layout Plain Layout
+
+\backslash
+begin{defn}
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "def:verschwindungsmenge"
+
+\end_inset
+
+ Sei 
+\begin_inset Formula $M\subseteq k[T_{1},\ldots,T_{n}]=:k[\underline{T}]$
+\end_inset
+
+ eine Teilmenge. Mit 
+\begin_inset Formula \[
+V(M) :=\{(t_{1},\ldots,t_{n})\in k^n \mid f(t_{1},\ldots,t_{n})=0\ \boldsymbol{\forall f\in M}\}
+\]
 \end_inset
 
 
 \end_layout
 
-\begin_layout Definition
+\begin_layout Standard
 bezeichnen wir die gemeinsame 
 \series bold
 Nullstellen-(Verschwindungs-)Menge
 \series default
 
 \begin_inset Index idx
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Nullstellen-Menge
@@ -116,8 +134,7 @@ Nullstellen-Menge
 \begin_inset Formula $M$
 \end_inset
 
-.
- (Manchmal auch 
+. (Manchmal auch 
 \begin_inset Formula $V(f_{i},i\in I)$
 \end_inset
 
@@ -125,19 +142,91 @@ Nullstellen-Menge
 \begin_inset Formula $V(\{f_{i},i\in I\})$
 \end_inset
 
-.
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{defn}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%% TODO:
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%% das oben weg!!!
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Notation
+\end_layout
+
+\begin_layout Standard
+Wir schreiben auch 
+\begin_inset Formula $V(f_i, i \in I)$
+\end_inset
+
+ statt 
+\begin_inset Formula $V(\{f_i \mid i \in I\})$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
 Eigenschaften
 \end_layout
 
+\begin_layout Standard
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:zariski-topologie-eigenschaften"
+
+\end_inset
+
+ 
+\end_layout
+
 \begin_layout Itemize
+
 \begin_inset Formula $V(M)=V(\mathfrak{A})$
 \end_inset
 
 , wenn 
-\begin_inset Formula $\mathfrak{A}=\langle M\rangle$
+\begin_inset Formula $\mathfrak{A}=\langle M\rangle_{k[\underline{T}]}$
 \end_inset
 
  das 
@@ -153,10 +242,10 @@ von
 erzeugte Ideal
 \emph default
  in 
-\begin_inset Formula $k[I]$
+\begin_inset Formula $k[\underline{T}]$
 \end_inset
 
- bezeichnet.
+ bezeichnet. 
 \end_layout
 
 \begin_layout Itemize
@@ -168,18 +257,17 @@ Da
 \begin_inset Formula $f_{1},\ldots,f_{n}\in M$
 \end_inset
 
-:
-\begin_inset Formula 
-\[
+: 
+\begin_inset Formula \[
 V(M)=V(f_{1},\ldots,f_{n})\qquad\text{falls }\mathfrak{A}=\langle f_{1},\ldots,f_{n}\rangle.
 \]
-
 \end_inset
 
 
 \end_layout
 
 \begin_layout Itemize
+
 \begin_inset Formula $V(-)$
 \end_inset
 
@@ -188,19 +276,38 @@ V(M)=V(f_{1},\ldots,f_{n})\qquad\text{falls }\mathfrak{A}=\langle f_{1},\ldots,f
 inklusionsumkehrend
 \series default
 , 
-\begin_inset Formula $M'\subset M\Rightarrow V(M)\subseteq V(M')$
+\begin_inset Formula $M'\subseteq M\implies V(M)\subseteq V(M')$
 \end_inset
 
-.
+. 
 \end_layout
 
-\begin_layout Proposition
-Die Mengen 
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{prop}
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "propdef:zariski-topologie"
+
+\end_inset
+
+ Die Mengen 
 \begin_inset Formula $V(\mathfrak{A})$
 \end_inset
 
 , 
-\begin_inset Formula $\mathfrak{A}\subset k[\underline{T}]$
+\begin_inset Formula $\mathfrak{A} \unlhd k[\underline{T}]$
 \end_inset
 
  ein Ideal, sind die 
@@ -217,7 +324,7 @@ Zariski-Topologie
 \series default
 
 \begin_inset Index idx
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Zariski-Topologie
@@ -225,11 +332,11 @@ Zariski-Topologie
 
 \end_inset
 
-.
+. 
 \end_layout
 
-\begin_deeper
 \begin_layout Enumerate
+
 \begin_inset Formula $\emptyset=V\left((1)\right)$
 \end_inset
 
@@ -237,66 +344,75 @@ Zariski-Topologie
 \begin_inset Formula $k^{n}=V(0)$
 \end_inset
 
-.
- 
+. 
 \end_layout
 
 \begin_layout Enumerate
+
 \begin_inset Formula $\bigcap_{i\in I}V(\mathfrak{A}_{i})=V\left(\sum_{i\in I}\mathfrak{A}_{i}\right)$
 \end_inset
 
  für beliebige Familien 
-\begin_inset Formula $(\mathfrak{A}_{i})$
+\begin_inset Formula $(\mathfrak{A}_{i})_{i \in I}$
 \end_inset
 
- von Idealen.
+ von Idealen. 
 \end_layout
 
 \begin_layout Enumerate
+
 \begin_inset Formula $V(\mathfrak{A})\cup V(\mathfrak{B})=V(\mathfrak{AB})$
 \end_inset
 
  für 
-\begin_inset Formula $\mathfrak{A},\mathfrak{B}\subset k[\underline{T}]$
+\begin_inset Formula $\mathfrak{A},\mathfrak{B}\unlhd k[\underline{T}]$
 \end_inset
 
- Ideale.
+ Ideale. 
 \end_layout
 
-\end_deeper
-\begin_layout Proof
-Übung / Algebra II.
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{prop}
+\end_layout
+
+\end_inset
+
  
-\end_layout
-
-\begin_layout Proof
-\begin_inset Note Note
-status open
+\begin_inset ERT
+status collapsed
 
 \begin_layout Plain Layout
-TODO
+
+\backslash
+begin{proof}
 \end_layout
 
 \end_inset
 
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset Formula $(1)$
-\end_inset
-
- erzeugt den ganzen Ring, aber als Polynom hat 
-\begin_inset Formula $1$
-\end_inset
-
- keine Nullstellen
+ Übung / Algebra II.
 \end_layout
 
-\end_inset
-
+\begin_layout Standard
 \SpecialChar softhyphen
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
 
 \end_layout
 

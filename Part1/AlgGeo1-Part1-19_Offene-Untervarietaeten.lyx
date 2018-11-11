@@ -1,28 +1,16 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
+#LyX file created by tex2lyx 2.2
 \lyxformat 508
 \begin_document
 \begin_header
 \save_transient_properties true
-\origin unavailable
+\origin /home/nand/Documents/AlgGeo1_WS18/Part1/
 \textclass article
-\begin_preamble
-\usepackage{mathtools}
-\usepackage{faktor}
-\DeclareMathOperator{\rad}{rad}
-\renewcommand{\labelenumi}{(\roman{enumi})}
-\renewcommand{\labelenumii}{\arabic{enumii}.}
-\end_preamble
-\use_default_options true
-\begin_modules
-enumitem
-theorems-ams
-theorems-ams-extended
-\end_modules
+\use_default_options false
 \maintain_unincluded_children false
-\language ngerman
-\language_package default
+\language english
+\language_package none
 \inputencoding auto
-\fontencoding global
+\fontencoding default
 \font_roman "default" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
@@ -38,22 +26,21 @@ theorems-ams-extended
 \output_sync 0
 \bibtex_command default
 \index_command default
-\float_placement h
 \paperfontsize default
 \spacing single
 \use_hyperref false
 \papersize default
 \use_geometry false
 \use_package amsmath 1
-\use_package amssymb 1
-\use_package cancel 1
+\use_package amssymb 0
+\use_package cancel 0
 \use_package esint 1
-\use_package mathdots 1
-\use_package mathtools 1
-\use_package mhchem 1
-\use_package stackrel 1
-\use_package stmaryrd 1
-\use_package undertilde 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
 \cite_engine basic
 \cite_engine_type default
 \biblio_style plain
@@ -62,7 +49,7 @@ theorems-ams-extended
 \paperorientation portrait
 \suppress_date false
 \justification true
-\use_refstyle 1
+\use_refstyle 0
 \index Index
 \shortcut idx
 \color #008000
@@ -71,7 +58,7 @@ theorems-ams-extended
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language german
+\quotes_language english
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -89,196 +76,191 @@ Offene Untervarietäten
 \end_layout
 
 \begin_layout Standard
-\begin_inset Quotes gld
-\end_inset
 
-Offene Teilmengen von affinen Varietäten (abgeschlossene beliebige 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-?
-\end_layout
-
-\end_inset
-
- Prävarietäten) sind wieder Prävarietäten
-\begin_inset Quotes grd
-\end_inset
-
- (aber i.A.
- nicht affin!)
-\end_layout
-
-\begin_layout Lemma
 \begin_inset CommandInset label
 LatexCommand label
-name "lem:koordinatenring-lokalisierung"
+name "sec:offene-untervarietaeten"
 
 \end_inset
 
 
-\begin_inset Argument 1
-status open
+\end_layout
+
+\begin_layout Standard
+Offene Teilmengen von affinen Varietäten (und allgemeiner beliebigen Prävarietäten) sind wieder Prävarietäten. (aber i.A. nicht affin!) 
+\begin_inset ERT
+status collapsed
 
 \begin_layout Plain Layout
-orig.
- 41
+
+\backslash
+begin{lem}
 \end_layout
 
 \end_inset
 
-Sei 
+[orig. 41]
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:basisoffene-teilmengen-sind-affin"
+
+\end_inset
+
+ Sei 
 \begin_inset Formula $X$
 \end_inset
 
- affine Varietät, 
+ eine affine Varietät, 
 \begin_inset Formula $f\in\mathcal{O}_{X}(X)$
 \end_inset
 
 , 
-\begin_inset Formula $\mathcal{D}(f)\subseteq X$
+\begin_inset Formula $D(f)\subseteq X$
 \end_inset
 
-.
- Die Lokalisierung von 
+. Die Lokalisierung von 
 \begin_inset Formula $\Gamma(X)=\mathcal{O}_{X}(X)$
 \end_inset
 
- in 
+ an 
 \begin_inset Formula $f$
 \end_inset
 
-,
-\begin_inset Formula 
-\[
+, 
+\begin_inset Formula \[
 \Gamma(X)_{f}=\Gamma(X)[T]/(Tf-1)
 \]
-
 \end_inset
 
 
 \end_layout
 
-\begin_layout Lemma
-ist eine integere endlich erzeugte 
+\begin_layout Standard
+ist eine integre, endlich erzeugte 
 \begin_inset Formula $k$
 \end_inset
 
--Algebra.
- Dabei 
+-Algebra. 
 \begin_inset Formula $(Y,\mathcal{O}_{Y})$
 \end_inset
 
- bezeichnet die zugehörige Varietät.
- Es folgt:
-\begin_inset Formula 
-\[
-(D(f),\mathcal{O}_{X|_{D(f)}})\cong(Y,\mathcal{O}_{Y})
+ bezeichne die zugehörige affine Varietät. Dann gilt: 
+\begin_inset Formula \[
+(D(f),\mathcal{O}_{X}|_{D(f)})\cong(Y,\mathcal{O}_{Y})
 \]
-
 \end_inset
 
 
 \end_layout
 
-\begin_layout Lemma
-als Räume mit Funktionen, d.h.
- 
+\begin_layout Standard
+als Räume mit Funktionen, d.h. 
 \begin_inset Formula $(D(f),\mathcal{O}_{X|_{D(f)}})$
 \end_inset
 
- ist affine Varietät.
+ ist selbst affine Varietät. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{lem}
 \end_layout
 
-\begin_layout Proof
-\begin_inset Formula $\mathcal{O}_{X}(\mathcal{D}(f))=\mathcal{O}_{X}(X)_{f}$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\mathcal{O}_{X}(D(f))=\mathcal{O}_{X}(X)_{f}$
 \end_inset
 
  muss affiner Koordinatenring von 
 \begin_inset Formula $(\mathcal{D}(f),\mathcal{O}_{X|_{\mathcal{D}(f)}})$
 \end_inset
 
- sein, wenn letzterer Raum von Funktionen affin ist.
- 
+ sein, wenn letzterer Raum von Funktionen affin ist. 
 \begin_inset Formula $X\subseteq\mathbb{A}^{n}(k)$
 \end_inset
 
- korrespondiert zu dem Radikalideal:
-\begin_inset Formula 
-\begin{align*}
-\mathfrak{A} & =I(X)\subseteq k[T_{1},\ldots,T_{n}]\ \subset\ \mathfrak{A}'=(\mathfrak{A},fT_{n+1}-1)\subseteq k[T_{1},\ldots,T_{n+1}]
+ korrespondiert zu dem Radikalideal: 
+\begin_inset Formula \begin{align*}
+\mathfrak{a} & :=I(X)\unlhd k[T_1, \ldots, T_n]\ \subseteq\ \mathfrak{a}':=(\mathfrak{a},fT_{n+1}-1)\subseteq k[T_{1},\ldots,T_{n+1}]
 \end{align*}
-
 \end_inset
 
 
 \end_layout
 
-\begin_layout Proof
-mit Koordinatenringen:
-\begin_inset Formula 
-\begin{align*}
-\Gamma(X) & =k[T_{1},\ldots,T_{n}]/\mathfrak{A}\\
-\Gamma(Y) & =\Gamma(X)_{f}=(k[T_{1},\ldots,T_{n}]/\mathfrak{A})[T_{n+1}]/(T_{n+1}f-1)\\
- & =k[T_{1},\ldots,T_{n+1}]/\mathfrak{A}'
+\begin_layout Standard
+mit Koordinatenringen: 
+\begin_inset Formula \begin{align*}
+\Gamma(X) & =k[T_{1},\ldots,T_{n}]/\mathfrak{a}\\
+\Gamma(Y) & =\Gamma(X)_{f}=(k[T_{1},\ldots,T_{n}]/\mathfrak{a})[T_{n+1}]/(T_{n+1}f-1)\\
+ & \cong k[T_{1},\ldots,T_{n+1}]/\mathfrak{a}'
 \end{align*}
-
 \end_inset
 
 
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
 Für 
-\begin_inset Formula $Y=V(\mathfrak{A}')\subseteq\mathbb{A}^{n+1}(k)$
+\begin_inset Formula $Y=V(\mathfrak{a}')\subseteq\mathbb{A}^{n+1}(k)$
 \end_inset
 
- induziert die Abbildung
-\begin_inset Formula 
-\[
+ induziert die Abbildung 
+\begin_inset Formula \[
 \xymatrix{Y\subseteq\mathbb{A}^{n+1}(k)\ar@{-->}[d] & (x_{1},\ldots,x_{n+1})\ar@{|->}[d] & T_{i}\\
 X\subseteq\mathbb{A}^{n}(k) & (x_{1},\ldots,x_{n}) & T_{i}\ar@{|->}[u]
 }
 \]
-
 \end_inset
 
 
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
 eine Bijektion 
-\begin_inset Formula $Y\xrightarrow{j}\mathcal{D}_{X}(f)$
-\end_inset
-
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Notation?
-\end_layout
-
+\begin_inset Formula $Y\xrightarrow{j} D_{X}(f)$
 \end_inset
 
  mit Umkehrabbildung 
-\begin_inset Formula $(x_{0},\ldots,x_{n},\frac{1}{f(x_{0},\ldots,x_{n}})\mapsfrom(x_{0},\ldots,x_{n})$
+\begin_inset Formula $(x_{0},\ldots,x_{n},\frac{1}{f(x_{0},\ldots,x_{n})})\mapsfrom(x_{0},\ldots,x_{n})$
 \end_inset
 
+ 
+\begin_inset ERT
+status collapsed
 
+\begin_layout Plain Layout
+
+\backslash
+begin{claim*}
 \end_layout
 
-\begin_deeper
-\begin_layout Claim*
+\end_inset
+
+ 
 \begin_inset Formula $j$
 \end_inset
 
- ist Isomorphismus von Räumen mit Funktionen:
+ ist Isomorphismus von Räumen mit Funktionen: 
 \end_layout
 
-\begin_deeper
 \begin_layout Enumerate
+
 \begin_inset Formula $j$
 \end_inset
 
@@ -286,14 +268,15 @@ Notation?
 \emph on
 stetig
 \emph default
- (als Einschränkung stetiger Funktionen) 
+ (als Einschränkung einer stetigen Abbildung) 
 \begin_inset Formula $\checkmark$
 \end_inset
 
-
+ 
 \end_layout
 
 \begin_layout Enumerate
+
 \begin_inset Formula $j$
 \end_inset
 
@@ -301,25 +284,19 @@ stetig
 \emph on
 offen
 \emph default
-: 
+: Für 
+\begin_inset Formula $\frac{g}{f^{n}}\in\Gamma(X)_{f} = \Gamma(Y)$
+\end_inset
+
+ mit 
 \begin_inset Formula $g\in\Gamma(X)$
 \end_inset
 
-, 
-\begin_inset Formula $\Gamma(Y)=\Gamma(X)_{f}$
-\end_inset
-
-, 
-\begin_inset Formula $\frac{g}{f^{n}}\in\Gamma(X)_{f}$
-\end_inset
-
-,
-\begin_inset Formula 
-\begin{align*}
-j\left(D_{Y}\left(\frac{g}{f^{n}}\right)\right) & =j\left(\mathcal{D}_{Y}(gf)\right) & f\text{ Einheit}\\
- & =\mathcal{D}_{X}(gf)\text{ offen}
+ gilt 
+\begin_inset Formula \begin{align*}
+j\left(D_{Y}\left(\frac{g}{f^{n}}\right)\right) & =j\left(D_{Y}(gf)\right) & f\text{ Einheit}\\
+ & =D_{X}(gf)\text{ offen}
 \end{align*}
-
 \end_inset
 
 
@@ -327,14 +304,16 @@ j\left(D_{Y}\left(\frac{g}{f^{n}}\right)\right) & =j\left(\mathcal{D}_{Y}(gf)\ri
 
 \begin_deeper
 \begin_layout Standard
+
 \begin_inset Formula $\Rightarrow j$
 \end_inset
 
- Homömorphismus.
+ Homömorphismus. 
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate
+
 \begin_inset Formula $j$
 \end_inset
 
@@ -342,41 +321,69 @@ j\left(D_{Y}\left(\frac{g}{f^{n}}\right)\right) & =j\left(\mathcal{D}_{Y}(gf)\ri
 \begin_inset Formula $\forall g\in\Gamma(X)$
 \end_inset
 
- Isomorphismen:
-\begin_inset Formula 
-\begin{align*}
-\mathcal{O}_{X}(\mathcal{D}(fg)) & \longrightarrow\Gamma(Y)_{g}\\
+ Isomorphismen: 
+\begin_inset Formula \begin{align*}
+\mathcal{O}_{X}(D(fg)) & \longrightarrow\Gamma(Y)_{g}\\
 s & \longmapsto s\circ j
 \end{align*}
-
 \end_inset
 
 mit 
-\begin_inset Formula $\mathcal{O}_{X}(\mathcal{D}(fg))=\Gamma(X)_{fg}=(\Gamma(X)_{f})_{g}=\Gamma(Y)_{g}$
+\begin_inset Formula $\mathcal{O}_{X}(D(fg))=\Gamma(X)_{fg}=\Gamma(X)_{f})_{g}=\Gamma(Y)_{g}$
 \end_inset
 
-.
- Mit dem Verklebungsaxiom folgt: 
+. Mit dem Verklebungsaxiom folgt: 
 \begin_inset Formula $j$
 \end_inset
 
- ist Morphismus von Raum mit Funktionen.
+ ist Morphismus von Räumen mit Funktionen. 
 \end_layout
 
-\end_deeper
-\end_deeper
-\begin_layout Proposition
-\begin_inset Argument 1
-status open
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
 
 \begin_layout Plain Layout
-orig.
- 42
+
+\backslash
+end{claim*}
 \end_layout
 
 \end_inset
 
-Sei 
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{prop}
+\end_layout
+
+\end_inset
+
+[orig. 42]
+\begin_inset CommandInset label
+LatexCommand label
+name "prop:offener-teilraum-praevarietaet"
+
+\end_inset
+
+ Sei 
 \begin_inset Formula $(X,\mathcal{O}_{X})$
 \end_inset
 
@@ -384,139 +391,157 @@ Sei
 \begin_inset Formula $\emptyset\neq U\subseteq X$
 \end_inset
 
- offen.
- Dann ist 
-\begin_inset Formula $(U,\mathcal{O}_{X|_{U}})$
+ offen. Dann ist 
+\begin_inset Formula $(U,\mathcal{O}_{X}|_{U})$
 \end_inset
 
  eine Prävarietät und 
 \begin_inset Formula $U\hookrightarrow X$
 \end_inset
 
- ist Morphismus von Prävarietäten.
+ ist Morphismus von Prävarietäten. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{prop}
 \end_layout
 
-\begin_layout Proof
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ 
 \begin_inset Formula $X$
 \end_inset
 
- ist irreduzibel, also folgt mit Satz 13, dass 
+ ist irreduzibel, also folgt mit Satz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:charakterisierung-irreduzibel"
+
+\end_inset
+
+, dass 
 \begin_inset Formula $U$
 \end_inset
 
- zusammenhängend ist.
- Nach Voraussetzung ist 
-\begin_inset Formula $X=\bigcup X_{i}$
+ zusammenhängend ist. Nach Voraussetzung besitzt 
+\begin_inset Formula $X=\bigcup_{i} X_{i}$
 \end_inset
 
- eine affine offene Überdeckung.
- Es folgt:
-\begin_inset Formula 
-\[
-U=\bigcup_{i}(\underbrace{X_{i}\cap U}_{\text{offen in }X_{i}})=\bigcup_{i,j}\mathcal{D}_{X_{i}}(f_{i_{j}})
+ eine affine, offene Überdeckung. Es folgt: 
+\begin_inset Formula \[
+U=\bigcup_{i}(\underbrace{X_{i}\cap U}_{\text{offen in }X_{i}})=\bigcup_{i,j} D_{X_{i}}(f_{i,j})
 \]
-
 \end_inset
 
 
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
 und 
-\begin_inset Formula $\mathcal{D}_{X_{i}}(f_{i_{j}})$
+\begin_inset Formula $D_{X_{i}}(f_{i,j})$
 \end_inset
 
  ist eine affine Varietät nach Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "lem:koordinatenring-lokalisierung"
+reference "lem:basisoffene-teilmengen-sind-affin"
 
 \end_inset
 
-.
- Da 
+. Da 
 \begin_inset Formula $X$
 \end_inset
 
- noethersch ist, folgt mit Lemma 20, dass 
+ noethersch ist, folgt mit Lemma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:eigenschaften-noethersch"
+
+\end_inset
+
+, dass 
 \begin_inset Formula $U$
 \end_inset
 
  quasikompakt ist.
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
+
 \begin_inset Formula $\Rightarrow$
 \end_inset
 
- Es reicht eine endliche Überdeckung.
-\end_layout
-
-\begin_layout Proof
-\begin_inset Formula $\Rightarrow U$
+ Es existiert eine endliche Teilüberdeckung, also ist 
+\begin_inset Formula $U$
 \end_inset
 
- Prävarietät.
- 
+ Prävarietät. 
 \begin_inset Formula $\checkmark$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Proof
-Die Abbildung 
-\begin_inset Formula $\begin{array}{ccc}
-U & \overset{i}{\hookrightarrow} & X\\
-U\cap V & \subseteq & V
-\end{array}$
+\begin_layout Standard
+Die kanonische Inklusion 
+\begin_inset Formula $U \xhookrightarrow{i} X$
 \end_inset
 
- ist stetig.
- (Klar.) Für 
-\begin_inset Formula $f\in\mathcal{O}_{X}(V)$
+ ist sicher stetig. Für 
+\begin_inset Formula $f\in\mathcal{O}_{X}(V), V \subseteq X$
 \end_inset
 
- gilt mit dem Einschränkungsaxiom 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO; original notes unclear
-\end_layout
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\mathcal{O}_{X|_{U}}(U\cap V)=\mathcal{O}_{X}(U\cap V)\ni f\circ i=f|_{U\cap V}
+ offen gilt mit dem Einschränkungsaxiom 
+\begin_inset Formula \[
+\mathcal{O}_{X}|_{U}(U\cap V)=\mathcal{O}_{X}(U\cap V)\ni f\circ i=f|_{U\cap V}
 \]
-
 \end_inset
 
 
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
 Also ist 
 \begin_inset Formula $i$
 \end_inset
 
- Morphismus von Prävarietäten.
+ Morphismus von Prävarietäten. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{proof}
 \end_layout
 
-\begin_layout Standard
-Die offenen affinen Teilmengen einer Prävarietät 
+\end_inset
+
+ Die offenen affinen Teilmengen einer Prävarietät 
 \begin_inset Formula $X$
 \end_inset
 
  (
-\begin_inset Formula $\hat{=}U\subset X$
+\begin_inset Formula $\hat{=} U\subseteq X$
 \end_inset
 
- offen und 
-\begin_inset Formula $(U,\mathcal{O}_{X|_{U}})$
+ offen mit 
+\begin_inset Formula $(U,\mathcal{O}_{X}|_{U})$
 \end_inset
 
  affine Varietät) bilden eine Basis der Topologie von 
@@ -527,15 +552,14 @@ Die offenen affinen Teilmengen einer Prävarietät
 \begin_inset Formula $X$
 \end_inset
 
- durch offene affine Untervarietäten überdeckt wird und letzere diese Eigenschaf
-t haben nach Lemma 
+ durch offene affine Untervarietäten überdeckt wird und letzere diese Eigenschaft nach Lemma 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "lem:koordinatenring-lokalisierung"
+reference "lem:basisoffene-teilmengen-sind-affin"
 
 \end_inset
 
-.
+ haben. 
 \end_layout
 
 \end_body

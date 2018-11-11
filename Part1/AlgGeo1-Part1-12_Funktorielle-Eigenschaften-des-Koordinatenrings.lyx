@@ -1,28 +1,16 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
+#LyX file created by tex2lyx 2.2
 \lyxformat 508
 \begin_document
 \begin_header
 \save_transient_properties true
-\origin unavailable
+\origin /home/nand/Documents/AlgGeo1_WS18/Part1/
 \textclass article
-\begin_preamble
-\usepackage{mathtools}
-\usepackage{faktor}
-\DeclareMathOperator{\rad}{rad}
-\renewcommand{\labelenumi}{(\roman{enumi})}
-\renewcommand{\labelenumii}{\arabic{enumii}.}
-\end_preamble
-\use_default_options true
-\begin_modules
-theorems-ams
-theorems-ams-extended
-enumitem
-\end_modules
+\use_default_options false
 \maintain_unincluded_children false
-\language ngerman
-\language_package default
+\language english
+\language_package none
 \inputencoding auto
-\fontencoding global
+\fontencoding default
 \font_roman "default" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
@@ -44,15 +32,15 @@ enumitem
 \papersize default
 \use_geometry false
 \use_package amsmath 1
-\use_package amssymb 1
-\use_package cancel 1
+\use_package amssymb 0
+\use_package cancel 0
 \use_package esint 1
-\use_package mathdots 1
-\use_package mathtools 1
-\use_package mhchem 1
-\use_package stackrel 1
-\use_package stmaryrd 1
-\use_package undertilde 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
 \cite_engine basic
 \cite_engine_type default
 \biblio_style plain
@@ -61,7 +49,7 @@ enumitem
 \paperorientation portrait
 \suppress_date false
 \justification true
-\use_refstyle 1
+\use_refstyle 0
 \index Index
 \shortcut idx
 \color #008000
@@ -70,7 +58,7 @@ enumitem
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language german
+\quotes_language english
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -91,107 +79,103 @@ Funktorielle Eigenschaften von
 
 \end_layout
 
-\begin_layout Proposition
-Für einen Morphismus 
+\begin_layout Standard
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:koordinatenring-funktiorialitaet"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{prop}
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "prop:koordinatenringfunktor"
+
+\end_inset
+
+ Für einen Morphismus 
 \begin_inset Formula $X\xrightarrow{f}Y$
 \end_inset
 
  affiner algebraischer Mengen definiert 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset Formula $\mathbb{A}^{n}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{align*}
-\Gamma(f):\hom(Y=\Gamma(Y),\mathbb{A}^{1}(k)) & \rightarrow\hom(X=\Gamma(X),\mathbb{A}^{1}(k))\\
+\begin_inset Formula \begin{align*}
+\Gamma(f):\quad\Gamma(Y) & \rightarrow\Gamma(X)\\
 g & \mapsto g\circ f
 \end{align*}
-
 \end_inset
 
-
-\end_layout
-
-\begin_layout Proposition
 ein Homomorphismus von 
 \begin_inset Formula $k$
 \end_inset
 
--Algebren.
- Der so definierte 
+-Algebren. Der so definierte 
 \emph on
 kontravariante
 \emph default
- Funktor
-\begin_inset Formula 
-\[
-\Gamma:\{\text{affine algebraische Mengen\}}\rightarrow\{\text{red. endl. erz. }k\text{-Alg.}\}
+ Funktor 
+\begin_inset Formula \[
+\Gamma:\{\text{affine algebraische Mengen}\}\rightarrow\{\text{reduzierte endl. erz. }k\text{-Algebren}\}
 \]
+\end_inset
+
+liefert eine Kategorienäquivalenz, welche durch Einschränkung eine Äquivalenz 
+\begin_inset Formula \[
+\Gamma:\{\text{irred. aff. alg. Mengem\}}\rightarrow\{\text{integre endl. erz. }k\text{-Algebren\}}
+\]
+\end_inset
+
+induziert. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{prop}
+\end_layout
 
 \end_inset
 
+ 
+\begin_inset ERT
+status collapsed
 
+\begin_layout Plain Layout
+
+\backslash
+begin{proof}
 \end_layout
-
-\begin_layout Proposition
-liefert eine Kategorienäquivalenz, der durch Einschränkung eine Äquivalenz
-\begin_inset Formula 
-\[
-\Gamma:\{\text{irred. aff. alg. Meng.\}}\rightarrow\{\text{integere endl. erz. }k\text{-Alg.\}}
-\]
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Proposition
-induziert.
-\end_layout
-
-\begin_layout Proof
+ Sei 
 \begin_inset Formula $Y\xrightarrow{g}\mathbb{A}^{1}(k)\in\Gamma(Y)$
 \end_inset
 
- ist Morphismus.
- Es folgt:
-\begin_inset Formula 
-\[
+ ein Morphismus. Es folgt: 
+\begin_inset Formula \[
 g\circ f:X\xrightarrow{f}Y\xrightarrow{g}\mathbb{A}^{1}(k)
 \]
-
 \end_inset
 
- 
-\end_layout
-
-\begin_layout Proof
-ist ..., 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-???
-\end_layout
-
+ist Morphismus, d.h. 
+\begin_inset Formula $g \circ f\in\Gamma(X)$
 \end_inset
 
- d.h.
- 
-\begin_inset Formula $\in\Gamma(X)$
-\end_inset
-
-.
- 
+. 
 \begin_inset Formula $\Gamma(f):\Gamma(Y)\rightarrow\Gamma(X)$
 \end_inset
 
@@ -199,46 +183,39 @@ status open
 \begin_inset Formula $k$
 \end_inset
 
--Alg.-Hom.
- und Kompositions....
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-???
-\end_layout
-
-\end_inset
-
- (nach Bemerkung 24) mit 
+-Algebren-Homomorphismus mit 
 \begin_inset Formula $\Gamma(\text{id}_{X})=\text{id}_{\Gamma(X)}$
 \end_inset
 
-.
- Da ferner 
+. Da ferner gilt, dass 
 \begin_inset Formula $\Gamma(f_{1}\circ f_{2})=\Gamma(f_{2})\circ\Gamma(f_{1})$
 \end_inset
 
- aus der Definition folgt, ist 
+ ist 
 \begin_inset Formula $\Gamma$
 \end_inset
 
- ein kontravarianter Funktor.
+ ein kontravarianter Funktor. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{claim*}
 \end_layout
 
-\begin_deeper
-\begin_layout Claim*
+\end_inset
+
+ 
 \begin_inset Formula $\Gamma$
 \end_inset
 
- ist volltreu, d.h.
-\begin_inset Formula 
-\begin{align*}
-\Gamma:\hom(X,Y) & \rightarrow\hom(\Gamma(Y),\Gamma(X))\\
+ ist volltreu, d.h. 
+\begin_inset Formula \begin{align*}
+\Gamma:\hom(X,Y) & \rightarrow\hom_{k\text{-Alg}}(\Gamma(Y),\Gamma(X))\\
 f & \mapsto\Gamma(f)
 \end{align*}
-
 \end_inset
 
 ist 
@@ -249,83 +226,102 @@ bijektiv
 \begin_inset Formula $X,Y$
 \end_inset
 
-.
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{claim*}
 \end_layout
 
-\begin_layout Proof
-Wir konstruieren eine Umkehrabbildung wie folgt: Zu 
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ Wir konstruieren eine Umkehrabbildung wie folgt: Zu 
 \begin_inset Formula $\varphi:\Gamma(Y)\rightarrow\Gamma(X)$
 \end_inset
 
  für 
-\begin_inset Formula $X\subseteq\mathbb{A}^{n}$
+\begin_inset Formula $X\subseteq\mathbb{A}^{m}(k)$
 \end_inset
 
 , 
-\begin_inset Formula $Y\subseteq\mathbb{A}^{n}$
+\begin_inset Formula $Y\subseteq\mathbb{A}^{n}(k)$
 \end_inset
 
- existiert:
-\begin_inset Formula 
-\[
-\xymatrix{k[T_{1}',\ldots,T_{k}']\ar[r]^{\tilde{\varphi}}\ar@{->>}[d] & k[T_{1},\ldots,T_{m}]\ar@{->>}[d]\\
-\Gamma(Y)\ar[r] & \Gamma(X)
+ existiert ein Lift 
+\begin_inset Formula $\tilde\varphi$
+\end_inset
+
+, s.d. 
+\begin_inset Formula \[
+\xymatrix{k[T_{1}',\ldots,T_{n}']\ar[r]^{\tilde{\varphi}}\ar@{->>}[d] & k[T_{1},\ldots,T_{m}]\ar@{->>}[d]\\
+\Gamma(Y)\ar[r]^{\varphi} & \Gamma(X)
 }
 \]
-
 \end_inset
 
-kommutiert (
-\begin_inset Formula $\tilde{\varphi}(T_{1}'):=$
+kommutiert; 
+\begin_inset Formula $\tilde{\varphi}(T_{i}'):= f_i$
 \end_inset
 
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-???
-\end_layout
-
+ mit 
+\begin_inset Formula $f_i \in \pi^{-1}(\varphi(T_{i}')) \subseteq k[T_1,...,T_n]$
 \end_inset
 
- liften 
-\begin_inset Formula $\varphi(\pi(T_{i}'))$
+, wobei 
+\begin_inset Formula $\pi : k[\underline{T}] \to \Gamma(X)$
 \end_inset
 
- in 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Formula $k[\underline{T}]$
-\end_inset
-
-).
- Definiere:
-\begin_inset Formula 
-\begin{align*}
+ die kanonische Projektion bezeichne. Definiere: 
+\begin_inset Formula \begin{align*}
 f:X & \rightarrow Y\\
 x=(x_{1},\ldots,x_{n}) & \mapsto(\tilde{\varphi}(T_{1}')(x_{1},\ldots,x_{n}),\ldots,\tilde{\varphi}(T_{n}')(x_{1},\ldots,x_{n}))
 \end{align*}
-
 \end_inset
 
 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{proof}
 \end_layout
 
-\begin_layout Claim*
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{claim*}
+\end_layout
+
+\end_inset
+
+ 
 \begin_inset Formula $\Gamma$
 \end_inset
 
- ist essentiell surjektiv, d.h.
- zu jeder reduzierten endlich erzeugten 
+ ist essentiell surjektiv, d.h. zu jeder reduzierten endlich erzeugten 
 \begin_inset Formula $k$
 \end_inset
 
@@ -341,94 +337,148 @@ x=(x_{1},\ldots,x_{n}) & \mapsto(\tilde{\varphi}(T_{1}')(x_{1},\ldots,x_{n}),\ld
 \begin_inset Formula $A\cong\Gamma(X)$
 \end_inset
 
-.
-\end_layout
-
-\begin_layout Proof
-Da nach Voraussetzung
-\begin_inset Note Note
-status open
+. 
+\begin_inset ERT
+status collapsed
 
 \begin_layout Plain Layout
-TODO
+
+\backslash
+end{claim*}
 \end_layout
 
 \end_inset
 
  
-\begin_inset Formula $A\cong k[T]/\mathfrak{A}$
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{proof}
+\end_layout
+
 \end_inset
 
- für Radikalideal 
-\begin_inset Formula $\mathfrak{A}$
+ Da nach Voraussetzung 
+\begin_inset Formula $A\cong k[T]/\mathfrak{a}$
+\end_inset
+
+ für ein Radikalideal 
+\begin_inset Formula $\mathfrak{a}$
 \end_inset
 
 , können wir etwa 
-\begin_inset Formula $X:=V(\mathfrak{A})\subseteq\mathbb{A}^{n}(k)$
+\begin_inset Formula $X:=V(\mathfrak{a})\subseteq\mathbb{A}^{n}(k)$
 \end_inset
 
- setzen.
- Der Rest folgt aus Satz 28.
+ setzen. Der Rest folgt aus Satz 28. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{proof}
 \end_layout
 
-\end_deeper
-\begin_layout Proposition
-Sei 
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{prop}
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "prop:funktiorialität-specm"
+
+\end_inset
+
+ Sei 
 \begin_inset Formula $f:X\rightarrow Y$
 \end_inset
 
- ein Morphismus und 
+ ein Morphismus affiner algebraischer Mengen und 
 \begin_inset Formula $\Gamma(f):\Gamma(Y)\rightarrow\Gamma(X)$
 \end_inset
 
- der zugehörige Homomorphismus der Koordinatenringe.
- Dann gilt 
+ der zugehörige Homomorphismus der Koordinatenringe. Dann gilt 
 \begin_inset Formula $\forall x\in X$
 \end_inset
 
 : 
-\begin_inset Formula $\Gamma(f)^{-1}(\mathfrak{m}_{x})=\mathfrak{m}_{f}(x)$
+\begin_inset Formula $\Gamma(f)^{-1}(\mathfrak{m}_{x})=\mathfrak{m}_{f(x)}$
 \end_inset
 
-.
-\end_layout
+. 
+\begin_inset ERT
+status collapsed
 
-\begin_layout Proof
-Setting:
-\begin_inset Formula 
-\begin{align*}
-\mathfrak{m}_{f(x)} & =\{g\mid g(f(x))=0\}\subset\hom(Y,\mathbb{A}^{1})\\
- & =\Gamma(Y)\xrightarrow{\Gamma(f)}\Gamma(X)\\
- & =\hom(X,\mathbb{A}^{1})\supset\{k\mid k(x))=0\}\\
-g & \mapsto g\circ f
-\end{align*}
+\begin_layout Plain Layout
+
+\backslash
+end{prop}
+\end_layout
 
 \end_inset
 
+ 
+\begin_inset ERT
+status collapsed
 
+\begin_layout Plain Layout
+
+\backslash
+begin{proof}
 \end_layout
 
-\begin_layout Proof
-Es ist:
-\end_layout
+\end_inset
 
-\begin_layout Proof
-\begin_inset Formula 
-\[
-\Gamma(f)^{-1}(\mathfrak{m}_{x})=\{g\in\Gamma(Y)\mid g\circ f(x)\neq0\}=\mathfrak{m}_{f(x)},
+ 
+\begin_inset Formula \[
+\Gamma(f)^{-1}(\mathfrak{m}_{x})=\{g\in\Gamma(Y)\mid g\circ f \in \mathfrak{m}_{x}\}=\{g\in\Gamma(Y)\mid g(f(x)) = 0 \} = \mathfrak{m}_{f(x)},
 \]
-
 \end_inset
 
+da 
+\begin_inset Formula $\Gamma(f)(g) =g \circ f$
+\end_inset
 
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{proof}
 \end_layout
 
-\begin_layout Proof
-da 
-\begin_inset Formula $\Gamma(f)(g)(x)=g(f(x))$
 \end_inset
 
-.
+ 
 \end_layout
 
 \end_body

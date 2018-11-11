@@ -1,28 +1,16 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
+#LyX file created by tex2lyx 2.2
 \lyxformat 508
 \begin_document
 \begin_header
 \save_transient_properties true
-\origin unavailable
+\origin /home/nand/Documents/AlgGeo1_WS18/Part1/
 \textclass article
-\begin_preamble
-\usepackage{mathtools}
-\usepackage{faktor}
-\DeclareMathOperator{\rad}{rad}
-\renewcommand{\labelenumi}{(\roman{enumi})}
-\renewcommand{\labelenumii}{\arabic{enumii}.}
-\end_preamble
-\use_default_options true
-\begin_modules
-theorems-ams
-theorems-ams-extended
-enumitem
-\end_modules
+\use_default_options false
 \maintain_unincluded_children false
-\language ngerman
-\language_package default
+\language english
+\language_package none
 \inputencoding auto
-\fontencoding global
+\fontencoding default
 \font_roman "default" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
@@ -44,15 +32,15 @@ enumitem
 \papersize default
 \use_geometry false
 \use_package amsmath 1
-\use_package amssymb 1
-\use_package cancel 1
+\use_package amssymb 0
+\use_package cancel 0
 \use_package esint 1
-\use_package mathdots 1
-\use_package mathtools 1
-\use_package mhchem 1
-\use_package stackrel 1
-\use_package stmaryrd 1
-\use_package undertilde 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
 \cite_engine basic
 \cite_engine_type default
 \biblio_style plain
@@ -61,7 +49,7 @@ enumitem
 \paperorientation portrait
 \suppress_date false
 \justification true
-\use_refstyle 1
+\use_refstyle 0
 \index Index
 \shortcut idx
 \color #008000
@@ -70,7 +58,7 @@ enumitem
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language german
+\quotes_language english
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -87,8 +75,34 @@ enumitem
 Quasikompakte und noethersche topologische Räume
 \end_layout
 
-\begin_layout Definition
-Ein topologischer Raum 
+\begin_layout Standard
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:quasikompakt-noethersch"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{defn}
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "def:quasikompakt/noethersch"
+
+\end_inset
+
+ Ein topologischer Raum 
 \begin_inset Formula $X$
 \end_inset
 
@@ -98,7 +112,7 @@ quasikompakt
 \series default
 
 \begin_inset Index idx
-status open
+status collapsed
 
 \begin_layout Plain Layout
 quasikompakt
@@ -106,7 +120,7 @@ quasikompakt
 
 \end_inset
 
-, wenn jede offene Überdeckung von 
+, falls jede offene Überdeckung von 
 \begin_inset Formula $X$
 \end_inset
 
@@ -114,27 +128,21 @@ quasikompakt
 \emph on
 endliche
 \emph default
- Teilüberdeckung enthält.
- (
-\begin_inset Quotes gld
-\end_inset
-
-quasi
-\begin_inset Quotes grd
+ Teilüberdeckung enthält. (,,quasi
+\begin_inset Quotes eld
 \end_inset
 
  deutet an, dass 
 \begin_inset Formula $X$
 \end_inset
 
- in der Regel nicht Hausdorff'sch ist!).
- Er heißt 
+ in der Regel nicht Hausdorff'sch ist!). Er heißt 
 \series bold
 noethersch
 \series default
 
 \begin_inset Index idx
-status open
+status collapsed
 
 \begin_layout Plain Layout
 noethersch
@@ -142,18 +150,16 @@ noethersch
 
 \end_inset
 
-, wenn jede absteigende Kette
-\begin_inset Formula 
-\[
+, wenn jede absteigende Kette 
+\begin_inset Formula \[
 X\supseteq Z_{1}\supseteq Z_{2}\supseteq\cdots
 \]
-
 \end_inset
 
 
 \end_layout
 
-\begin_layout Definition
+\begin_layout Standard
 abgeschlossener Teilmengen von 
 \begin_inset Formula $X$
 \end_inset
@@ -162,73 +168,118 @@ abgeschlossener Teilmengen von
 \begin_inset Formula $\Leftrightarrow$
 \end_inset
 
- jede aufsteigende Kette offener Teilmengen wird stationär).
+ jede aufsteigende Kette offener Teilmengen wird stationär). 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{defn}
 \end_layout
 
-\begin_layout Lemma
-Sei 
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{lem}
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:eigenschaften-noethersch"
+
+\end_inset
+
+ Sei 
 \begin_inset Formula $X$
 \end_inset
 
- ein noetherscher topologischer Raum.
- Dann gilt:
+ ein noetherscher topologischer Raum. Dann gilt: 
 \end_layout
 
-\begin_deeper
 \begin_layout Enumerate
 Jede abgeschlossene Teilmenge 
-\begin_inset Formula $Z$
+\begin_inset Formula $Z \subseteq X$
 \end_inset
 
- von 
-\begin_inset Formula $X$
-\end_inset
-
- ist noethersch.
+ ist noethersch. 
 \end_layout
 
 \begin_layout Enumerate
 Jede offene Teilmenge 
-\begin_inset Formula $U$
+\begin_inset Formula $U \subseteq X$
 \end_inset
 
- von 
-\begin_inset Formula $X$
-\end_inset
-
- ist quasikompakt.
+ ist quasikompakt. 
 \end_layout
 
 \begin_layout Enumerate
 Jeder abgeschlossene Teilraum 
-\begin_inset Formula $Z$
+\begin_inset Formula $Z \subseteq X$
 \end_inset
 
- von 
-\begin_inset Formula $X$
-\end_inset
-
- besitzt nur endlich viele irreduzibele Komponenten.
+ besitzt nur endlich viele irreduzible Komponenten. 
 \end_layout
 
-\end_deeper
-\begin_layout Proof
+\begin_layout Standard
+
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
-
 \backslash
-mbox{}
+end{lem}
 \end_layout
 
 \end_inset
 
+ 
+\begin_inset ERT
+status collapsed
 
+\begin_layout Plain Layout
+
+\backslash
+begin{proof}
 \end_layout
 
-\begin_deeper
+\end_inset
+
+ 
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 1
+width ""
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+
+\end_inset
+
+ 
+\end_layout
+
 \begin_layout Enumerate
 Nach Definition, da abgeschlossene Mengen von 
 \begin_inset Formula $Z$
@@ -238,37 +289,33 @@ Nach Definition, da abgeschlossene Mengen von
 \begin_inset Formula $X$
 \end_inset
 
- sind.
+ sind. 
 \end_layout
 
 \begin_layout Enumerate
+
 \begin_inset Formula $U=\bigcup_{i\in I}U_{i}$
 \end_inset
 
- offen; 
-\begin_inset Formula $\mathbb{A}$
+ offen; Angenommen 
+\begin_inset Formula $U$
 \end_inset
 
- nicht quasikompakt.
- Dann ist 
-\begin_inset Formula $I_{1}\subset I_{2}\subset\cdots\subset I$
+ wäre nicht quasikompakt. Dann gibt es eine Folge 
+\begin_inset Formula $I_{1}\subseteq I_{2}\subseteq\cdots\subseteq I$
 \end_inset
 
- endliche Teilmenge mit
-\begin_inset Formula 
-\[
-V_{1}\subsetneq V_{2}\subsetneq\cdots\neq U\quad\text{für }V_{j}=\bigcup_{i\in I}U_{i}.
+ von Teilmengen mit 
+\begin_inset Formula \[
+V_{1}\subsetneq V_{2}\subsetneq\cdots\neq U\quad\text{für }V_{j}=\bigcup_{i\in I_{j}}U_{i}.
 \]
-
 \end_inset
 
-Widerspruch zu noethersch.
+Widerspruch zu noethersch. 
 \end_layout
 
 \begin_layout Enumerate
-Es reicht zu zeigen: Jeder noethersche Raum ist Vereinigung endlich vieler
- irreduzibeler Teilmengen.
- Da 
+Es reicht zu zeigen: Jeder noethersche Raum ist Vereinigung endlich vieler irreduzibler Teilmengen. Da 
 \begin_inset Formula $X$
 \end_inset
 
@@ -276,27 +323,14 @@ Es reicht zu zeigen: Jeder noethersche Raum ist Vereinigung endlich vieler
 \emph on
 Lemma von Zorn
 \emph default
- dass jede nicht-leere Menge von algebraischen Teilmengein in 
+ dass jede nichtleere Menge von algebraischen Teilmengen in 
 \begin_inset Formula $X$
 \end_inset
 
- ein minimales Element besitzt.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO
-\end_layout
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\mathbb{A}:\quad\emptyset\neq\mathcal{M}:=\left\{ Z\subset X\text{ abg.}\mid Z\text{ ist \textbf{nicht} endl. Ver. irred. Mengen}\right\} 
+ ein minimales Element besitzt. 
+\begin_inset Formula \[
+\text{Angenommen:} \mathcal{M}:=\left\{ Z\subseteq X\text{ abg.}\mid Z\text{ ist \textbf{nicht} endl. Vereinigung irred. Mengen}\right\} \text{ wäre nichtleer.}
 \]
-
 \end_inset
 
 
@@ -316,6 +350,7 @@ TODO
 
 \begin_deeper
 \begin_layout Standard
+
 \begin_inset Formula $\Rightarrow Z$
 \end_inset
 
@@ -323,6 +358,7 @@ TODO
 \end_layout
 
 \begin_layout Standard
+
 \begin_inset Formula $\Rightarrow Z=Z_{1}\cup Z_{2}$
 \end_inset
 
@@ -334,6 +370,7 @@ TODO
 \end_layout
 
 \begin_layout Standard
+
 \begin_inset Formula $\Rightarrow$
 \end_inset
 
@@ -349,86 +386,159 @@ TODO
 \end_layout
 
 \begin_layout Standard
+
 \begin_inset Formula $\Rightarrow Z\notin\mathcal{M}$
 \end_inset
 
-.
- Widerspruch.
+. Widerspruch.
 \end_layout
 
 \end_deeper
-\end_deeper
-\begin_layout Proposition
-Jeder abgeschlossene Teilraum 
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{prop}
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "prop:algebraische-mengen-noethersch"
+
+\end_inset
+
+ Jeder abgeschlossene Teilraum 
 \begin_inset Formula $X\subseteq\mathbb{A}^{n}(k)$
 \end_inset
 
- ist noethersch.
+ ist noethersch. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{prop}
 \end_layout
 
-\begin_layout Proof
-Nach dem obigen Lemma ist nur zu zeigen, dass 
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ Nach dem obigen Lemma ist nur zu zeigen, dass 
 \begin_inset Formula $\mathbb{A}^{n}(k)$
 \end_inset
 
  noethersch ist.
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
 Absteigende Ketten abgeschlossener Teilmengen sind nach 
 \emph on
 Korollar 11
 \emph default
+ in 1-1 Korrespondenz mit aufsteigenden Ketten von (Radikal-)Idealen in 
+\begin_inset Formula $k[\underline{T}]$
+\end_inset
+
+. Da 
+\begin_inset Formula $k[\underline{T}]$
+\end_inset
+
+ nach dem Hilbertschen Basissatz noethersch ist, werden letzere Ketten stationär. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
  
-\begin_inset Note Note
-status open
+\begin_inset ERT
+status collapsed
 
 \begin_layout Plain Layout
-\begin_inset Formula $I()$
-\end_inset
 
-
+\backslash
+begin{cor}
 \end_layout
 
 \end_inset
 
-in 1-1 Korrespondenz mit aufsteigenden Ketten von (Radikal-)Ideale in 
-\begin_inset Formula $k[\underline{T}]$
+[Primärzerlegung]
+\begin_inset CommandInset label
+LatexCommand label
+name "cor:primaerzerlegung"
+
 \end_inset
 
-.
- Da 
-\begin_inset Formula $k[\underline{T}]$
+ Sei 
+\begin_inset Formula $\mathfrak{a}=\rad(\mathfrak{a})\unlhd k[\underline{T}]$
 \end_inset
 
- nach dem Hilbertschen Basissatz noethersch ist, werden letzere Ketten stationär.
-\end_layout
+ ein Radikalideal. Dann gilt: 
+\begin_inset Formula $\mathfrak{a}$
+\end_inset
 
-\begin_layout Corollary
-\begin_inset Argument 1
-status open
+ ist Durchschnitt von endlich vielen Primidealen, die sich jeweils paarweise nicht enthalten; diese Darstellung ist eindeutig bis auf Reihenfolge. 
+\begin_inset ERT
+status collapsed
 
 \begin_layout Plain Layout
-Primärzerlegung
+
+\backslash
+end{cor}
 \end_layout
 
 \end_inset
 
-Sei 
-\begin_inset Formula $\mathfrak{A}=\rad(\mathfrak{A})\subseteq k[\underline{T}]$
-\end_inset
+ 
+\begin_inset ERT
+status collapsed
 
- ein Radikalideal.
- Dann gilt: 
-\begin_inset Formula $\mathfrak{A}$
-\end_inset
+\begin_layout Plain Layout
 
- ist Durchschnitt von endlich vielen Primidealen, die sich jeweils nicht
- enthalten; diese Darstellung ist eindeutig bis auf Reihenfolge.
+\backslash
+begin{proof}
 \end_layout
 
-\begin_layout Proof
-\begin_inset Formula $V(\mathfrak{A})=\bigcup_{i=1}^{n}V(\mathfrak{b}_{i})$
+\end_inset
+
+ 
+\begin_inset Formula $V(\mathfrak{a})=\bigcup_{i=1}^{n}V(\mathfrak{b}_{i})$
 \end_inset
 
 , 
@@ -437,15 +547,14 @@ Sei
 
  Primideal.
 \begin_inset Note Comment
-status collapsed
+status open
 
-\begin_layout Plain Layout
-Stationäre Kette folgt aus noethersch (Satz 21); mit Bemerkung 16 bzw.
- Lemma 17 folgt, dass die 
+\begin_layout Standard
+Stationäre Kette folgt aus noethersch (Satz 21); mit Bemerkung 16 bzw. Lemma 17 folgt, dass die 
 \begin_inset Formula $\mathfrak{b}_{i}$
 \end_inset
 
- Primideale sind.
+ Primideale sind. 
 \end_layout
 
 \end_inset
@@ -454,15 +563,25 @@ Stationäre Kette folgt aus noethersch (Satz 21); mit Bemerkung 16 bzw.
 \color blue
 Mit Satz 10 folgt:
 \color inherit
-
-\begin_inset Formula 
-\[
-\mathfrak{A}=\rad(\mathfrak{A})=I(V(\mathfrak{A}))=\bigcap_{i=1}^{n}\underbrace{I(V(\mathfrak{b}_{i}))}_{\mathfrak{b}_{i}'\text{ max. Primideale (L. 17)}}
+ 
+\begin_inset Formula \[
+\mathfrak{a}=\rad(\mathfrak{a})=I(V(\mathfrak{a}))=\bigcap_{i=1}^{n}\underbrace{I(V(\mathfrak{b}_{i}))}_{\mathfrak{b}_{i}\text{ minimale Primideale (\ref{lem:charakterisierung-irreduzibel-alg})}}
 \]
-
 \end_inset
 
 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+ 
 \end_layout
 
 \end_body

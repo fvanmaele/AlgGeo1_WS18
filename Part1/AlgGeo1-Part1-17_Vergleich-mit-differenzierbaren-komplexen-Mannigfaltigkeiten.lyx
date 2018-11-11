@@ -1,28 +1,16 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
+#LyX file created by tex2lyx 2.2
 \lyxformat 508
 \begin_document
 \begin_header
 \save_transient_properties true
-\origin unavailable
+\origin /home/nand/Documents/AlgGeo1_WS18/Part1/
 \textclass article
-\begin_preamble
-\usepackage{mathtools}
-\usepackage{faktor}
-\DeclareMathOperator{\rad}{rad}
-\renewcommand{\labelenumi}{(\roman{enumi})}
-\renewcommand{\labelenumii}{\arabic{enumii}.}
-\end_preamble
-\use_default_options true
-\begin_modules
-enumitem
-theorems-ams
-theorems-ams-extended
-\end_modules
+\use_default_options false
 \maintain_unincluded_children false
-\language ngerman
-\language_package default
+\language english
+\language_package none
 \inputencoding auto
-\fontencoding global
+\fontencoding default
 \font_roman "default" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
@@ -38,22 +26,21 @@ theorems-ams-extended
 \output_sync 0
 \bibtex_command default
 \index_command default
-\float_placement h
 \paperfontsize default
 \spacing single
 \use_hyperref false
 \papersize default
 \use_geometry false
 \use_package amsmath 1
-\use_package amssymb 1
-\use_package cancel 1
+\use_package amssymb 0
+\use_package cancel 0
 \use_package esint 1
-\use_package mathdots 1
-\use_package mathtools 1
-\use_package mhchem 1
-\use_package stackrel 1
-\use_package stmaryrd 1
-\use_package undertilde 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
 \cite_engine basic
 \cite_engine_type default
 \biblio_style plain
@@ -62,7 +49,7 @@ theorems-ams-extended
 \paperorientation portrait
 \suppress_date false
 \justification true
-\use_refstyle 1
+\use_refstyle 0
 \index Index
 \shortcut idx
 \color #008000
@@ -71,7 +58,7 @@ theorems-ams-extended
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language german
+\quotes_language english
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -85,49 +72,38 @@ theorems-ams-extended
 \begin_body
 
 \begin_layout Standard
-Ein Morphismus von Prävarietäten ist ein Morphismus der entsprechenden Räume
- mit Funktionen.
- Insbesondere sind also affine Varietäten Prävarietäten! Später sehen wir:
- Varietät = 
-\begin_inset Quotes gld
+Später sehen wir: Varietät = ,,separierte Prävarietät
+\begin_inset Quotes eld
 \end_inset
 
-separierte Prävarietät
-\begin_inset Quotes grd
+. Affine Varietäten sind stets ,,separiert
+\begin_inset Quotes eld
 \end_inset
 
-.
- Affine Varietäten sind stets 
-\begin_inset Quotes gld
+, daher braucht man nicht von ,,affinen Prävarietäten
+\begin_inset Quotes eld
 \end_inset
 
-separiert
-\begin_inset Quotes grd
-\end_inset
-
-, dafür braucht man wieder von 
-\begin_inset Quotes gld
-\end_inset
-
-affinen Prävarietäten
-\begin_inset Quotes grd
-\end_inset
-
- zu reden.
- Ist 
+ zu reden. Ist 
 \begin_inset Formula $X$
 \end_inset
 
- eine affine Varietät, schreiben wir oft 
+ eine affine Varietät, so schreiben wir oft 
 \begin_inset Formula $\Gamma(X)$
 \end_inset
 
  für 
-\begin_inset Formula $\mathcal{O}_{x}(X)$
+\begin_inset Formula $\mathcal{O}_{X}(X)$
 \end_inset
 
- (vgl.
- Satz 33).
+ (vgl. Satz 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:fkt-auf-basis"
+
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Standard
@@ -139,7 +115,7 @@ offenen affinen Überdeckung
 \begin_inset Formula $X$
 \end_inset
 
- verstehen wir eine Famile von affinen Unterräumen mit Funktionen 
+ verstehen wir eine Famile von offenen affinen Unterräumen mit Funktionen 
 \begin_inset Formula $U_{i}\subseteq X$
 \end_inset
 
@@ -147,8 +123,8 @@ offenen affinen Überdeckung
 \begin_inset Formula $i\in I$
 \end_inset
 
- die affine Varietäten sind, und so das 
-\begin_inset Formula $X=\bigcup U_{i}$
+ die affine Varietäten sind, d.d. 
+\begin_inset Formula $X=\bigcup_i U_{i}$
 \end_inset
 
 .
@@ -158,31 +134,35 @@ offenen affinen Überdeckung
 Vergleich mit differenzierbaren/komplexen Mannigfaltigkeiten
 \end_layout
 
-\begin_layout Paragraph
-Differential/Komplexe Geometrie
-\end_layout
-
 \begin_layout Standard
-Mannigfaltigkeiten werden via Kartenabbildungen mit differenzierbaren/holomorphe
-n Übergangsabbildungen definiert (hier problematisch, da offene Teile affiner
- algebraischer Mengen i.A.
- keine solche Struktur wider besitzen.) Jedoch:
-\begin_inset Formula 
-\begin{align*}
-\text{\{diff. Mfgkt.\}} & \longrightarrow\text{\{Räume mit Fkt.}/\mathbb{R}\}\\
-X & \longmapsto(X,\mathcal{O}_{X})\\
- & \phantom{\longmapsto}\mathcal{O}_{X}(U):=C^{\infty}(U,\mathbb{R}),\ U\subseteq X\text{ offen}
-\end{align*}
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:vergleich-mit-mannigfaltigkeiten"
 
 \end_inset
 
 
 \end_layout
 
+\begin_layout Paragraph
+Differential/Komplexe Geometrie
+\end_layout
+
 \begin_layout Standard
-ist ein volltreuer Funktor.
- Daher kann man differenzierbare Mannigfaltigkeiten auch als diejenigen
- Räume mit Funktionen über 
+Mannigfaltigkeiten werden via Kartenabbildungen mit differenzierbaren/holomorphen Übergangsabbildungen definiert (hier problematisch, da offene Teile affiner algebraischer Mengen i.A. keine solche Struktur besitzen.) Jedoch: 
+\begin_inset Formula \begin{align*}
+\text{\{differenzierbare Mfgkt.\}} & \longrightarrow\text{\{Räume mit Fkt.}/\mathbb{R}\}\\
+X & \longmapsto(X,\mathcal{O}_{X})\\
+ & \phantom{\longmapsto}\mathcal{O}_{X}(U):=C^{\infty}(U,\mathbb{R}),\ U\subseteq X\text{ offen}
+\end{align*}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ist ein volltreuer Funktor. Daher kann man differenzierbare Mannigfaltigkeiten auch als diejenigen Räume mit Funktionen über 
 \begin_inset Formula $\mathbb{R}$
 \end_inset
 
@@ -190,8 +170,7 @@ ist ein volltreuer Funktor.
 \begin_inset Formula $X$
 \end_inset
 
- Hausdorff ist, und so dass eine offene Überdeckung durch solche Räume mit
- Funktionen über 
+ Hausdorff ist, und so dass eine offene Überdeckung durch solche Räume mit Funktionen über 
 \begin_inset Formula $\mathbb{R}$
 \end_inset
 
@@ -199,8 +178,7 @@ ist ein volltreuer Funktor.
 \begin_inset Formula $\mathbb{R}^{n}$
 \end_inset
 
- zugeordnet sind.
- (Analog bei komplexen Mannigfaltigkeiten.)
+ zugeordnet sind. (Analog bei komplexen Mannigfaltigkeiten.) 
 \end_layout
 
 \end_body

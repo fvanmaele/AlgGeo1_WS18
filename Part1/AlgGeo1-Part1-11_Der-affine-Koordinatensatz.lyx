@@ -1,28 +1,16 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
+#LyX file created by tex2lyx 2.2
 \lyxformat 508
 \begin_document
 \begin_header
 \save_transient_properties true
-\origin unavailable
+\origin /home/nand/Documents/AlgGeo1_WS18/Part1/
 \textclass article
-\begin_preamble
-\usepackage{mathtools}
-\usepackage{faktor}
-\DeclareMathOperator{\rad}{rad}
-\renewcommand{\labelenumi}{(\roman{enumi})}
-\renewcommand{\labelenumii}{\arabic{enumii}.}
-\end_preamble
-\use_default_options true
-\begin_modules
-theorems-ams
-theorems-ams-extended
-enumitem
-\end_modules
+\use_default_options false
 \maintain_unincluded_children false
-\language ngerman
-\language_package default
+\language english
+\language_package none
 \inputencoding auto
-\fontencoding global
+\fontencoding default
 \font_roman "default" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
@@ -44,15 +32,15 @@ enumitem
 \papersize default
 \use_geometry false
 \use_package amsmath 1
-\use_package amssymb 1
-\use_package cancel 1
+\use_package amssymb 0
+\use_package cancel 0
 \use_package esint 1
-\use_package mathdots 1
-\use_package mathtools 1
-\use_package mhchem 1
-\use_package stackrel 1
-\use_package stmaryrd 1
-\use_package undertilde 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
 \cite_engine basic
 \cite_engine_type default
 \biblio_style plain
@@ -61,7 +49,7 @@ enumitem
 \paperorientation portrait
 \suppress_date false
 \justification true
-\use_refstyle 1
+\use_refstyle 0
 \index Index
 \shortcut idx
 \color #008000
@@ -70,7 +58,7 @@ enumitem
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language german
+\quotes_language english
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -88,7 +76,18 @@ Affine algebraische Mengen als Räume von Funktionen
 \end_layout
 
 \begin_layout Section
-Der affine Koordinatensatz
+Der affine Koordinatenring
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:koordinatenring"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -96,19 +95,15 @@ Sei
 \begin_inset Formula $X\subseteq\mathbb{A}^{n}(k)$
 \end_inset
 
- abgeschlossen.
- Für den surjektiven (Def.
- von Morphismen) 
+ abgeschlossen. Für den surjektiven (Def. von Morphismen) 
 \begin_inset Formula $k$
 \end_inset
 
--Algebren-Homomorphismus
-\begin_inset Formula 
-\begin{align*}
-k[I] & \xrightarrow{\varphi}\hom(X,\mathbb{A}^{1}(k))\\
+-Algebren-Homomorphismus 
+\begin_inset Formula \begin{align*}
+k[\underline{T}] & \xrightarrow{\varphi}\hom(X,\mathbb{A}^{1}(k))\\
 f & \mapsto(x\mapsto f(x)),
 \end{align*}
-
 \end_inset
 
 
@@ -119,14 +114,12 @@ wobei die Morphismen in folgende Weise eine
 \begin_inset Formula $k$
 \end_inset
 
--Algebra bilden:
-\begin_inset Formula 
-\begin{align*}
+-Algebra bilden: 
+\begin_inset Formula \begin{align*}
 (f+g)(x) & :=f(x)+g(x)\\
 (fg)(x) & :=f(x)g(x)\\
 (\alpha f)(x) & :=\alpha f(x)
 \end{align*}
-
 \end_inset
 
 
@@ -141,20 +134,33 @@ mit
 \begin_inset Formula $\alpha\in k$
 \end_inset
 
-.
- Es gilt:
-\begin_inset Formula 
-\[
-\ker\varphi=I(X)
+, gilt: 
+\begin_inset Formula \[
+\ker\varphi=I(X).
 \]
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{defn}
+\end_layout
 
 \end_inset
 
 
-\end_layout
+\begin_inset CommandInset label
+LatexCommand label
+name "def:koordinatenring"
 
-\begin_layout Definition
-\begin_inset Formula $\Gamma(X):=k[I]/I(X)\cong\hom(X,\mathbb{A}^{1}(k))$
+\end_inset
+
+ 
+\begin_inset Formula $\Gamma(X):=k[\underline{T}]/I(X)\cong_{k-\mathrm{Alg}}\hom(X,\mathbb{A}^{1}(k))$
 \end_inset
 
  heißt der 
@@ -168,32 +174,29 @@ von
 .
 \end_layout
 
-\begin_layout Definition
+\begin_layout Standard
 Für 
 \begin_inset Formula $x=(x_{1},\ldots,x_{n})\in X$
 \end_inset
 
- gilt:
-\begin_inset Formula 
-\begin{align*}
+ gilt: 
+\begin_inset Formula \begin{align*}
 \mathfrak{m}_{x}:=\  & \ker(\Gamma(X)\twoheadrightarrow k,\,f\mapsto f(x))\\
 =\  & \{f\in\Gamma(X)\mid f(x)=0\}\\
-=\  & \text{Bild von }(T_{1}-x_{1},\ldots,T_{n}-x_{n})\\
+=\  & \pi((T_{1}-x_{1},\ldots,T_{n}-x_{n}))\\
 =\  & \ker(\Gamma(\mathbb{A}^{n}(k))\twoheadrightarrow k)
 \end{align*}
-
 \end_inset
 
 
 \end_layout
 
-\begin_layout Definition
+\begin_layout Standard
 unter der Projektion 
 \begin_inset Formula $\pi:k[\underline{T}]=\Gamma(\mathbb{A}^{n}(k))\twoheadrightarrow\Gamma(X)$
 \end_inset
 
-.
- Es ist 
+. Es ist 
 \begin_inset Formula $\mathfrak{m}_{x}$
 \end_inset
 
@@ -202,31 +205,28 @@ unter der Projektion
 \end_inset
 
  mit 
-\begin_inset Formula $\Gamma(X)/\mathfrak{m}_{x}=k$
+\begin_inset Formula $\Gamma(X)/\mathfrak{m}_{x}\cong k$
 \end_inset
 
-.
- Für ein Ideal 
-\begin_inset Formula $\mathfrak{A}\subset\Gamma(X)$
+. Für ein Ideal 
+\begin_inset Formula $\mathfrak{a}\unlhd\Gamma(X)$
 \end_inset
 
- setze
-\begin_inset Formula 
-\[
-V(\mathfrak{A})=\{x\in X\mid f(x)=0\ \forall f\in\mathfrak{A}\}=V(\pi^{-1}(\mathfrak{A}))\cap X.
+ sei 
+\begin_inset Formula \[
+V(\mathfrak{a}):=\{x\in X\mid f(x)=0\ \forall f\in\mathfrak{a}\}=V(\pi^{-1}(\mathfrak{a}))\cap X.
 \]
-
 \end_inset
 
 
 \end_layout
 
-\begin_layout Definition
+\begin_layout Standard
 Dies sind genau die abgeschlossenen Mengen von 
 \begin_inset Formula $X$
 \end_inset
 
- als Teilraum in 
+ als Teilraum von 
 \begin_inset Formula $\mathbb{A}^{n}(k)$
 \end_inset
 
@@ -234,24 +234,48 @@ Dies sind genau die abgeschlossenen Mengen von
 \series bold
 Zariski-Topologie
 \series default
- genannt.
- Für 
+ genannt. Für 
 \begin_inset Formula $f\in\Gamma(X)$
 \end_inset
 
- setze:
-\begin_inset Formula 
-\[
-D(f):=\{x\in X\mid f(x)\neq0\}=X\backslash V(f).
+ setze: 
+\begin_inset Formula \[
+D_X(f) := D(f):=\{x\in X\mid f(x)\neq0\}=X\setminus V(f).
 \]
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{defn}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{lem}
+\end_layout
 
 \end_inset
 
 
-\end_layout
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:basis-zariski-topologie"
 
-\begin_layout Lemma
-Die offenen Mengen 
+\end_inset
+
+ Die offenen Mengen 
 \begin_inset Formula $D(f)$
 \end_inset
 
@@ -259,78 +283,98 @@ Die offenen Mengen
 \begin_inset Formula $f\in\Gamma(X)$
 \end_inset
 
-, bilden eine Basis der Topologie, d.h.
-\begin_inset Formula 
-\[
-\forall U\subset X\text{ offen }\exists f_{i}\in\Gamma(X),\,i\in I,\quad\text{mit }U=\bigcup_{i\in I}D(f_{i})
-\]
+, bilden eine Basis der Topologie von 
+\begin_inset Formula $X$
+\end_inset
 
+, d.h. 
+\begin_inset Formula \[
+\forall U\subseteq X\text{ offen }\exists f_{i}\in\Gamma(X),\,i\in I\quad\text{mit }U=\bigcup_{i\in I}D(f_{i})
+\]
 \end_inset
 
 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{lem}
 \end_layout
 
-\begin_layout Proof
-\begin_inset Formula $U=X\backslash V(\mathfrak{A})$
-\end_inset
-
- für ein 
-\begin_inset Formula $\mathfrak{A}\subset\Gamma(X)$
-\end_inset
-
-, 
-\begin_inset Formula $\mathfrak{A}=\langle f_{1},\ldots,f_{n}\rangle$
 \end_inset
 
  
-\begin_inset Note Note
-status open
+\begin_inset ERT
+status collapsed
 
 \begin_layout Plain Layout
-\begin_inset Quotes eld
-\end_inset
 
-Ideal geeignet
-\begin_inset Quotes erd
-\end_inset
-
-?
+\backslash
+begin{proof}
 \end_layout
 
 \end_inset
 
-.
- Wegen
-\begin_inset Formula 
-\[
-V(\mathfrak{A})=\bigcap_{i=1}^{n}V(f_{i})\quad\Rightarrow\quad U=\bigcup_{i=1}^{n}D(f_{i})
+ 
+\begin_inset Formula $U=X\backslash V(\mathfrak{a})$
+\end_inset
+
+ für ein 
+\begin_inset Formula $\mathfrak{a}\unlhd\Gamma(X)$
+\end_inset
+
+, 
+\begin_inset Formula $\mathfrak{a}=\langle f_{1},\ldots,f_{n}\rangle_{\Gamma(X)}$
+\end_inset
+
+ . Wegen 
+\begin_inset Formula \[
+V(\mathfrak{a})=\bigcap_{i=1}^{n}V(f_{i})\quad\Rightarrow\quad U=\bigcup_{i=1}^{n}D(f_{i})
 \]
-
 \end_inset
 
 
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
 Es reichen also sogar endlich viele 
-\begin_inset Formula $f_{i}$
+\begin_inset Formula $f_{i} \in \Gamma(X)$
 \end_inset
 
 ! 
-\begin_inset Note Note
-status open
+\begin_inset ERT
+status collapsed
 
 \begin_layout Plain Layout
-Todo
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{prop}
 \end_layout
 
 \end_inset
 
 
-\end_layout
+\begin_inset CommandInset label
+LatexCommand label
+name "prop:eigenschaften-koordinatenring"
 
-\begin_layout Proposition
-Der Koordinatenring 
+\end_inset
+
+ Der Koordinatenring 
 \begin_inset Formula $\Gamma(X)$
 \end_inset
 
@@ -342,13 +386,11 @@ Der Koordinatenring
 \begin_inset Formula $k$
 \end_inset
 
--Algebra, die reduziert ist (d.h.
- keine nilpotenten Elemente 
+-Algebra, die reduziert ist (d.h. keine nilpotenten Elemente 
 \begin_inset Formula $\neq0$
 \end_inset
 
- enthält).
- Ferner ist 
+ enthält). Ferner ist 
 \begin_inset Formula $X$
 \end_inset
 
@@ -356,51 +398,63 @@ Der Koordinatenring
 \begin_inset Formula $\Gamma(X)$
 \end_inset
 
- integer ist.
+ integer ist. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{prop}
 \end_layout
 
-\begin_layout Proof
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ 
 \begin_inset Formula $k[\underline{T}]\twoheadrightarrow\Gamma(X)$
 \end_inset
 
- impliziert 
-\begin_inset Quotes eld
+ impliziert, dass 
+\begin_inset Formula $\Gamma(X)$
 \end_inset
 
-endlich erzeugte 
+ als 
 \begin_inset Formula $k$
 \end_inset
 
--Algebra
-\begin_inset Quotes erd
-\end_inset
-
-.
- Es ist:
-\begin_inset Formula 
-\[
+-Algebra endlich erzeugte ist. Es gilt: 
+\begin_inset Formula \[
 \Gamma(X)\text{ irreduzibel }\Leftrightarrow I(X)=\rad I(X).
 \]
-
 \end_inset
 
 
 \end_layout
 
-\begin_layout Proof
-Denn mit Satz 10.ii) und Korollar 11 folgt:
-\begin_inset Formula 
-\begin{align*}
-X & =V(\mathfrak{A}):\,I(X)=\rad\mathfrak{A}\\
-\Rightarrow\rad I(X) & =\rad\rad\mathfrak{A}=\rad\mathfrak{A}=I(X).
+\begin_layout Standard
+Denn mit Satz 10.ii) und Korollar 11 folgt: 
+\begin_inset Formula \begin{align*}
+X & =V(\mathfrak{a}):\,I(X)=\rad\mathfrak{a}\\
+\Rightarrow\rad I(X) & =\rad\rad\mathfrak{a}=\rad\mathfrak{a}=I(X).
 \end{align*}
-
 \end_inset
 
 
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
 Mit Lemma 17 folgt: 
 \begin_inset Formula $X$
 \end_inset
@@ -408,18 +462,32 @@ Mit Lemma 17 folgt:
  irreduzibel
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
+
 \begin_inset Formula $\phantom{\quad}\Leftrightarrow I(X)$
 \end_inset
 
- Primideal.
+ prim
 \end_layout
 
-\begin_layout Proof
-\begin_inset Formula $\phantom{\quad}\Leftrightarrow\Gamma(X)=k[T]/T(X)$
+\begin_layout Standard
+
+\begin_inset Formula $\phantom{\quad}\Leftrightarrow\Gamma(X)=k[\underline{T}]/I(X)$
 \end_inset
 
-.
+ integer. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body

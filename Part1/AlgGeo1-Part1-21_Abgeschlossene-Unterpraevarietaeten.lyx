@@ -1,28 +1,16 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
+#LyX file created by tex2lyx 2.2
 \lyxformat 508
 \begin_document
 \begin_header
 \save_transient_properties true
-\origin unavailable
+\origin /home/nand/Documents/AlgGeo1_WS18/Part1/
 \textclass article
-\begin_preamble
-\usepackage{mathtools}
-\usepackage{faktor}
-\DeclareMathOperator{\rad}{rad}
-\renewcommand{\labelenumi}{(\roman{enumi})}
-\renewcommand{\labelenumii}{\arabic{enumii}.}
-\end_preamble
-\use_default_options true
-\begin_modules
-enumitem
-theorems-ams
-theorems-ams-extended
-\end_modules
+\use_default_options false
 \maintain_unincluded_children false
-\language ngerman
-\language_package default
+\language english
+\language_package none
 \inputencoding auto
-\fontencoding global
+\fontencoding default
 \font_roman "default" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
@@ -38,22 +26,21 @@ theorems-ams-extended
 \output_sync 0
 \bibtex_command default
 \index_command default
-\float_placement h
 \paperfontsize default
 \spacing single
 \use_hyperref false
 \papersize default
 \use_geometry false
 \use_package amsmath 1
-\use_package amssymb 1
-\use_package cancel 1
+\use_package amssymb 0
+\use_package cancel 0
 \use_package esint 1
-\use_package mathdots 1
-\use_package mathtools 1
-\use_package mhchem 1
-\use_package stackrel 1
-\use_package stmaryrd 1
-\use_package undertilde 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
 \cite_engine basic
 \cite_engine_type default
 \biblio_style plain
@@ -62,7 +49,7 @@ theorems-ams-extended
 \paperorientation portrait
 \suppress_date false
 \justification true
-\use_refstyle 1
+\use_refstyle 0
 \index Index
 \shortcut idx
 \color #008000
@@ -71,7 +58,7 @@ theorems-ams-extended
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language german
+\quotes_language english
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -104,22 +91,19 @@ Sei
 
 \series bold
 Ziel.
-
 \series default
  
 \begin_inset Formula $(Z,\mathcal{O}_{Z}')$
 \end_inset
 
- Raum von Funktionen erklären.
- Definiere dazu:
+ Raum von Funktionen erklären. Definiere dazu:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
-\[
+
+\begin_inset Formula \[
 \mathcal{O}_{Z}':=\{f\in\text{Abb}(U,k)\mid\forall x\in U\ \exists x\in V\subseteq X\text{ offen},\ g\in\mathcal{O}_{X}(V)\}
 \]
-
 \end_inset
 
 
@@ -134,40 +118,27 @@ mit
 \begin_inset Formula $U\subset Z$
 \end_inset
 
- offen.
- Damit ist 
+ offen. Damit ist 
 \begin_inset Formula $(Z,\mathcal{O}'_{Z})$
 \end_inset
 
- Raum von Funktionen (klar!
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-) mit 
+ Raum von Funktionen (klar!) mit 
 \begin_inset Formula $\mathcal{O}'_{X}=\mathcal{O}_{X}$
 \end_inset
 
-.
-\end_layout
-
-\begin_layout Lemma
-\begin_inset Argument 1
-status open
+. 
+\begin_inset ERT
+status collapsed
 
 \begin_layout Plain Layout
-orig.
- 46
+
+\backslash
+begin{lem}
 \end_layout
 
 \end_inset
 
-
+[orig. 46] 
 \begin_inset Formula $X\subseteq\mathbb{A}^{n}(k)$
 \end_inset
 
@@ -175,15 +146,14 @@ orig.
 \begin_inset Formula $Z\subset X$
 \end_inset
 
- sei ein irreduzibler abgeschlossener Teil.
- Dann ist 
+ sei ein irreduzibler abgeschlossener Teil. Dann ist 
 \begin_inset Formula $(Z,\mathcal{O}_{Z})=(Z,\mathcal{O}'_{Z})$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Lemma
+\begin_layout Standard
 Bezeichne ab jetzt stets 
 \begin_inset Formula $\mathcal{O}_{Z}$
 \end_inset
@@ -192,15 +162,35 @@ Bezeichne ab jetzt stets
 \begin_inset Formula $\mathcal{O}_{Z'}$
 \end_inset
 
-.
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{lem}
 \end_layout
 
-\begin_layout Proof
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ 
 \begin_inset Formula $Z\subseteq X$
 \end_inset
 
- ist in beiden Fällen mit der Teilraumtopologie ausgestattet! Ferner wissen
- wir, dass der Morphismus 
+ ist in beiden Fällen mit der Teilraumtopologie ausgestattet! Ferner wissen wir, dass der Morphismus 
 \begin_inset Formula $Z\hookrightarrow X$
 \end_inset
 
@@ -208,69 +198,31 @@ Bezeichne ab jetzt stets
 \begin_inset Formula $(Z,\mathcal{O}_{Z})\rightarrow(X,\mathcal{O}_{X})$
 \end_inset
 
- von Prävarietäten induziert.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Behauptung
-\end_layout
-
-\end_inset
-
-Nach Definition von 
+ von Prävarietäten induziert. Nach Definition von 
 \begin_inset Formula $\mathcal{O}'$
 \end_inset
 
- folgt dann:
-\begin_inset Formula 
-\[
+ folgt dann: 
+\begin_inset Formula \[
 \mathcal{O}'_{Z}\subseteq\mathcal{O}_{Z}(U)\quad\text{für }U\subseteq Z\ \text{offen}.
 \]
-
 \end_inset
 
 
 \end_layout
 
-\begin_layout Proof
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Beweis
-\end_layout
-
-\end_inset
-
+\begin_layout Standard
 Dies gilt da: 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Was ist 
-\begin_inset Formula $V_{x}$
-\end_inset
-
-?
-\end_layout
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{align*}
+\begin_inset Formula \begin{align*}
 x\in V_{x} & \subseteq X\cup V\\
 f_{|_{U\cap V_{x}}} & =g_{x|_{U\cap V_{x}}}\in\mathcal{O}_{Z}(U\cap V_{x})
 \end{align*}
-
 \end_inset
 
 
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
 mit 
 \begin_inset Formula $g\in\mathcal{O}_{X}(V_{x})$
 \end_inset
@@ -283,45 +235,18 @@ mit
 \begin_inset Formula $g_{|_{Zcap}V_{x}}\in\mathcal{O}_{Z}(Z\cap V_{x})$
 \end_inset
 
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset Formula $\Rightarrow g_{x|_{U\cap V_{x}}}\in\mathcal{O}_{Z}(U\cap V_{x})$
-\end_inset
-
 
 \end_layout
 
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Proof
+\begin_layout Standard
 Verklebungsaxiom 
 \begin_inset Formula $\Rightarrow f\in\mathcal{O}_{Z}(U)$
 \end_inset
 
 .
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset Formula $\checkmark$
-\end_inset
-
-
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Proof
+\begin_layout Standard
 Sei 
 \begin_inset Formula $f\in\mathcal{O}_{Z}(U)$
 \end_inset
@@ -330,8 +255,7 @@ Sei
 \begin_inset Formula $x\in U$
 \end_inset
 
- beliebig.
- Es folgt: 
+ beliebig. Es folgt: 
 \begin_inset Formula $\exists h\in\Gamma(Z)$
 \end_inset
 
@@ -339,18 +263,16 @@ Sei
 \begin_inset Formula $x\in\mathcal{D}(h)\subseteq U$
 \end_inset
 
- und
-\begin_inset Formula 
-\[
+ und 
+\begin_inset Formula \[
 f_{|_{\mathcal{D}(h)}}=\frac{g}{h^{n}}\in\Gamma(Z)_{h}=\mathcal{O}_{Z}(\mathcal{D}(h))
 \]
-
 \end_inset
 
 
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
 für 
 \begin_inset Formula $h\geq0$
 \end_inset
@@ -359,8 +281,7 @@ für
 \begin_inset Formula $g\in\Gamma(Z)$
 \end_inset
 
- geieignet.
- Lifte 
+ geieignet. Lifte 
 \begin_inset Formula $g,h\in\Gamma(Z)\twoheadleftarrow\Gamma(X)$
 \end_inset
 
@@ -375,7 +296,8 @@ für
 .
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
+
 \begin_inset Formula $\Rightarrow x\in V$
 \end_inset
 
@@ -390,25 +312,36 @@ für
 .
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
+
 \begin_inset Formula $\Rightarrow f\in\mathcal{O}'_{Z}(U)$
 \end_inset
 
-.
-\end_layout
-
-\begin_layout Corollary
-\begin_inset Argument 1
-status open
+. 
+\begin_inset ERT
+status collapsed
 
 \begin_layout Plain Layout
-orig.
- 47
+
+\backslash
+end{proof}
 \end_layout
 
 \end_inset
 
-Wenn 
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{cor}
+\end_layout
+
+\end_inset
+
+[orig. 47] Wenn 
 \begin_inset Formula $X$
 \end_inset
 
@@ -416,37 +349,65 @@ Wenn
 \begin_inset Formula $Z\subseteq X$
 \end_inset
 
- irreduzibel abgeschlossen.
- Dann ist 
+ irreduzibel abgeschlossen. Dann ist 
 \begin_inset Formula $(Z,\mathcal{O}_{Z})$
 \end_inset
 
- ebenfalls eine Prävarietät.
+ ebenfalls eine Prävarietät. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{cor}
 \end_layout
-
-\begin_layout Proof
-Es ist 
-\begin_inset Formula $X=\bigcup_{\text{endl.}}X_{i}$
-\end_inset
-
- endliche affine offene Überdeckung.
- Damit ist 
-\begin_inset Formula 
-\[
-Z=\bigcup\left(Z\cap X_{i}\right):=\bigcup Z_{i}
-\]
 
 \end_inset
 
  
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{proof}
 \end_layout
 
-\begin_layout Proof
+\end_inset
+
+ Es ist 
+\begin_inset Formula $X=\bigcup_{\text{endl.}}X_{i}$
+\end_inset
+
+ endliche affine offene Überdeckung. Damit ist 
+\begin_inset Formula \[
+Z=\bigcup\left(Z\cap X_{i}\right):=\bigcup Z_{i}
+\]
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 mit 
 \begin_inset Formula $(Z_{i},\mathcal{O}_{Z_{i}})$
 \end_inset
 
- affine Varietät nach Lemma 46.
+ affine Varietät nach Lemma 46. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body

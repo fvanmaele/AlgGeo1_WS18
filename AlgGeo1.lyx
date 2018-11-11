@@ -144,7 +144,7 @@ Kapitel 1
 \end_layout
 
 \begin_layout Itemize
-Shajarevich.
+Shafarevich.
  
 \emph on
 Basic Algebraic Geometry 1 u.
@@ -249,7 +249,7 @@ filename "Part1/AlgGeo1-Part1-5_Korrespondenz-zwischen-Radikalidealen.lyx"
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "Part1/AlgGeo1-Part1-6_Irreduzibele-topologische-Raeume.lyx"
+filename "Part1/AlgGeo1-Part1-6_Irreduzible-topologische-Raeume.lyx"
 
 \end_inset
 
@@ -259,7 +259,7 @@ filename "Part1/AlgGeo1-Part1-6_Irreduzibele-topologische-Raeume.lyx"
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "Part1/AlgGeo1-Part1-7_Irreduzibele-algebraische-Mengen.lyx"
+filename "Part1/AlgGeo1-Part1-7_Irreduzible-algebraische-Mengen.lyx"
 
 \end_inset
 

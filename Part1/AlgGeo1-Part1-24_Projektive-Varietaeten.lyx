@@ -1,28 +1,16 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
+#LyX file created by tex2lyx 2.2
 \lyxformat 508
 \begin_document
 \begin_header
 \save_transient_properties true
-\origin unavailable
+\origin /home/nand/Documents/AlgGeo1_WS18/Part1/
 \textclass article
-\begin_preamble
-\usepackage{mathtools}
-\usepackage{faktor}
-\DeclareMathOperator{\rad}{rad}
-\renewcommand{\labelenumi}{(\roman{enumi})}
-\renewcommand{\labelenumii}{\arabic{enumii}.}
-\end_preamble
-\use_default_options true
-\begin_modules
-enumitem
-theorems-ams
-theorems-ams-extended
-\end_modules
+\use_default_options false
 \maintain_unincluded_children false
 \language english
-\language_package default
+\language_package none
 \inputencoding auto
-\fontencoding global
+\fontencoding default
 \font_roman "default" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
@@ -38,22 +26,21 @@ theorems-ams-extended
 \output_sync 0
 \bibtex_command default
 \index_command default
-\float_placement h
 \paperfontsize default
 \spacing single
 \use_hyperref false
 \papersize default
 \use_geometry false
 \use_package amsmath 1
-\use_package amssymb 1
-\use_package cancel 1
+\use_package amssymb 0
+\use_package cancel 0
 \use_package esint 1
-\use_package mathdots 1
-\use_package mathtools 1
-\use_package mhchem 1
-\use_package stackrel 1
-\use_package stmaryrd 1
-\use_package undertilde 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
 \cite_engine basic
 \cite_engine_type default
 \biblio_style plain
@@ -62,7 +49,7 @@ theorems-ams-extended
 \paperorientation portrait
 \suppress_date false
 \justification true
-\use_refstyle 1
+\use_refstyle 0
 \index Index
 \shortcut idx
 \color #008000
@@ -84,22 +71,30 @@ theorems-ams-extended
 
 \begin_body
 
+\begin_layout Standard
+
+\lang english
+
+\end_layout
+
 \begin_layout Section
 Projektive Varietäten
 \end_layout
 
-\begin_layout Definition
-\begin_inset Argument 1
-status open
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
 
 \begin_layout Plain Layout
-orig.
- 54
+
+\backslash
+begin{defn}
 \end_layout
 
 \end_inset
 
-Abgeschlossene Unterprävarietäten eines projektiven Raumes 
+[orig. 54] Abgeschlossene Unterprävarietäten eines projektiven Raumes 
 \begin_inset Formula $\mathbb{P}^{n}(k)$
 \end_inset
 
@@ -107,11 +102,19 @@ Abgeschlossene Unterprävarietäten eines projektiven Raumes
 \series bold
 projektive Varietäten
 \series default
-.
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{defn}
 \end_layout
 
-\begin_layout Standard
-Vorsicht: für 
+\end_inset
+
+ Vorsicht: für 
 \begin_inset Formula $x=(x_{0}:\ldots:x_{n})\in\mathbb{P}^{n}$
 \end_inset
 
@@ -127,51 +130,38 @@ Vorsicht: für
 \emph on
 nicht
 \emph default
- wohldefiniert, da von Repräsentaten abhängig, d.h.
- 
+ wohldefiniert, da von Repräsentaten abhängig, d.h. 
 \begin_inset Formula $f$
 \end_inset
 
  kann 
 \emph on
 nicht
-\series bold
 \emph default
+
+\series bold
  
 \series default
 als Funktion auf 
 \begin_inset Formula $\mathbb{P}^{n}$
 \end_inset
 
- aufgefasst werden.
- Für 
+ aufgefasst werden. Für 
 \emph on
 homogene
-\series bold
 \emph default
+
+\series bold
  
 \series default
 Polynome 
 \begin_inset Formula $f_{1},\ldots,f_{n}\in k[X_{0},\ldots X_{n}]$
 \end_inset
 
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-m/n
-\end_layout
-
-\end_inset
-
- (nicht notwendig vom selben Grad) können wir demnoch die Verschwindungsmengen
- definieren:
-\begin_inset Formula 
-\[
+ (nicht notwendig vom selben Grad) können wir demnoch die Verschwindungsmengen definieren: 
+\begin_inset Formula \[
 V_{+}(f_{1},\ldots,f_{n})=\{(x_{0}:\cdots:x_{n})\in\mathbb{P}^{n}\mid f_{j}(x_{0},\ldots,x_{n})=0\ \forall j\}
 \]
-
 \end_inset
 
 
@@ -190,125 +180,103 @@ Da
 \begin_inset Formula $\mathbb{P}^{n}$
 \end_inset
 
-.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-m/n
-\end_layout
-
-\end_inset
-
-Ist 
+. Ist 
 \begin_inset Formula $V_{+}(f_{1},\ldots,f_{n})$
 \end_inset
 
- irreduzibel, so erhalten wir eine projektive Varietät.
- In der Tat entstehen alle projektiven Varietäten auf diese Weise.
-\end_layout
-
-\begin_layout Proposition
-\begin_inset Argument 1
-status open
+ irreduzibel, so erhalten wir eine projektive Varietät. In der Tat entstehen alle projektiven Varietäten auf diese Weise. 
+\begin_inset ERT
+status collapsed
 
 \begin_layout Plain Layout
-orig.
- 55
+
+\backslash
+begin{prop}
 \end_layout
 
 \end_inset
 
-Sei 
+[orig. 55] Sei 
 \begin_inset Formula $Z\subseteq\mathbb{P}^{n}(k)$
 \end_inset
 
- eine projektive Varietät.
- Dann existieren homogene Polynome 
+ eine projektive Varietät. Dann existieren homogene Polynome 
 \begin_inset Formula $f_{1},\ldots,f_{n}\in k[X_{0},\ldots,X_{n}]$
 \end_inset
 
-, 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-m/n
-\end_layout
-
-\end_inset
-
-so dass
-\begin_inset Formula 
-\[
+, so dass 
+\begin_inset Formula \[
 Z=V_{+}(f_{1},\ldots,f_{n})
 \]
-
 \end_inset
 
 
 \end_layout
 
-\begin_layout Proposition
-gilt.
-\end_layout
-
-\begin_layout Proof
-Betrachte: 
-\begin_inset Note Note
-status open
+\begin_layout Standard
+gilt. 
+\begin_inset ERT
+status collapsed
 
 \begin_layout Plain Layout
-TODO: Diagramm
+
+\backslash
+end{prop}
 \end_layout
 
 \end_inset
 
+ 
+\begin_inset ERT
+status collapsed
 
-\begin_inset Formula 
-\[
+\begin_layout Plain Layout
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ Betrachte: 
+\begin_inset Formula \[
 \begin{array}{cc}
 \\
 \\
 \end{array}
 \]
-
 \end_inset
 
 
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
+
 \begin_inset Formula $f|_{f^{-1}(U_{i})}:f^{-1}(U_{i})\longrightarrow U_{i}$
 \end_inset
 
- ist Morphismus von Prävarietäten.
- Dann ist 
+ ist Morphismus von Prävarietäten. Dann ist 
 \begin_inset Formula $f$
 \end_inset
 
- selber ein Morphismus von Prävarietäten.
-\begin_inset Formula 
-\begin{align*}
+ selber ein Morphismus von Prävarietäten. 
+\begin_inset Formula \begin{align*}
 \overline{Y}:= & Y\cup\{0\}\text{ Abschluss von }Y\text{ in }\mathbb{A}^{n+1}(k)\\
 \mathfrak{A}:= & I(\overline{Y})\subseteq k[X_{0},\ldots,X_{n}]
 \end{align*}
-
 \end_inset
 
 
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
 Behauptung: 
 \begin_inset Formula $\mathfrak{A}$
 \end_inset
 
  wird von homogenen Polynomen erzeugt
 \emph on
-.
- Denn:
+. Denn:
 \emph default
  für 
 \begin_inset Formula $g\in\mathfrak{A}$
@@ -322,8 +290,7 @@ Behauptung:
 \begin_inset Formula $d$
 \end_inset
 
-.
- 
+. 
 \begin_inset Formula $\overline{Y}$
 \end_inset
 
@@ -331,25 +298,21 @@ Behauptung:
 \begin_inset Formula $k^{n+1}$
 \end_inset
 
-, d.h.
- 
+, d.h. 
 \begin_inset Formula $\forall\lambda\in k^{\times}$
 \end_inset
 
- gilt:
-\begin_inset Formula 
-\[
+ gilt: 
+\begin_inset Formula \[
 g(x_{0},\ldots,x_{n})=0\ \Leftrightarrow\ g(\lambda x_{0},\ldots,\lambda x_{n})=0
 \]
-
 \end_inset
 
 
 \end_layout
 
-\begin_layout Proof
-Beweis durch Widerspruch.
- Nicht alle 
+\begin_layout Standard
+Beweis durch Widerspruch. Nicht alle 
 \begin_inset Formula $g_{d}$
 \end_inset
 
@@ -360,7 +323,8 @@ Beweis durch Widerspruch.
 .
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
+
 \begin_inset Formula $\Rightarrow\exists(x_{0},\ldots,x_{n})\in\mathbb{A}^{n+1}(k)$
 \end_inset
 
@@ -375,14 +339,16 @@ Beweis durch Widerspruch.
 .
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
+
 \begin_inset Formula $\Rightarrow0\,\cancel{\equiv}\,\sum_{d}g_{d}(x_{0},\ldots,x_{n})T^{d}\in k[T]$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
+
 \begin_inset Formula $\Rightarrow(\exists\lambda\in k^{\times})$
 \end_inset
 
@@ -390,11 +356,11 @@ Beweis durch Widerspruch.
 \begin_inset Formula $0\neq\sum_{d}g_{d}(x_{0},\ldots,x_{n})\lambda^{d}=\sum_{d}g_{d}(\lambda x_{0},\ldots,\lambda x_{n})=g(\lambda x_{0},\ldots,\lambda x_{n})=0$
 \end_inset
 
-.
- Widerspruch.
+. Widerspruch.
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
+
 \begin_inset Formula $\Rightarrow\mathfrak{A}=(f_{1},\ldots,f_{m})$
 \end_inset
 
@@ -405,37 +371,27 @@ Beweis durch Widerspruch.
  homogen.
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
+
 \begin_inset Formula $\Rightarrow Z=V_{+}(f_{1},\ldots,f_{m})$
 \end_inset
 
 .
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-m/n
 \end_layout
 
-\end_inset
+\begin_layout Standard
 
-
-\end_layout
-
-\begin_layout Proof
-\begin_inset Formula 
-\begin{align*}
+\begin_inset Formula \begin{align*}
 Z\ni(x_{0}:\cdots:x_{n}) & \Leftrightarrow(\lambda x_{0},\ldots,\lambda x_{n})\in\overline{Y}\ \forall\lambda\in k^{\times}\text{ und }\neq0\\
  & \Leftrightarrow f_{i}(x_{0},\ldots,x_{n})=0\ \forall1\leq i\leq n,\ (x_{0},\ldots,x_{n})\in\mathbb{P}^{n}
 \end{align*}
-
 \end_inset
 
 
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
+
 \begin_inset CommandInset line
 LatexCommand rule
 offset "0.5ex"
@@ -444,31 +400,19 @@ height "1pt"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-Zu Bemerkung 
-\begin_inset Note Note
-status open
+ 
+\begin_inset ERT
+status collapsed
 
 \begin_layout Plain Layout
-orig., add label
+
+\backslash
+end{proof}
 \end_layout
 
 \end_inset
 
-49 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO: Add diagramm
-\end_layout
-
-\end_inset
-
-
+ Zu Bemerkung 49
 \end_layout
 
 \begin_layout Standard
@@ -484,71 +428,35 @@ Nach Satz 51 und Definition von
 \begin_inset Formula $U\subset X$
 \end_inset
 
- offen, so können wir 
+ offen, so können wir
 \end_layout
 
 \begin_layout Standard
+
 \begin_inset Formula $\mathcal{O}_{X}(U)=\{f:U\rightarrow k\mid\forall x\in U\ \exists x\in V\underset{\text{offen}}{\subset}U,\ g,h\in k[X_{0},\ldots,X_{n}]$
 \end_inset
 
  homogen vom gleichen Grad mit 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-
 \begin_inset Formula $h(v)\neq0,\ f(v)=\frac{g(v)}{h(v)},\ \forall v\in V\}$
 \end_inset
 
-.
-
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
- (*) 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-displayed, add label
-\end_layout
-
-\end_inset
-
-
+. (*)
 \end_layout
 
 \begin_layout Standard
-Insbesondere gilt:
-\end_layout
-
-\begin_layout Proposition
-\begin_inset Argument 1
-status open
+Insbesondere gilt: 
+\begin_inset ERT
+status collapsed
 
 \begin_layout Plain Layout
-orig.
- 56
+
+\backslash
+begin{prop}
 \end_layout
 
 \end_inset
 
-Seien 
+[orig. 56] Seien 
 \begin_inset Formula $V\subseteq\mathbb{P}^{m}(k)$
 \end_inset
 
@@ -556,20 +464,17 @@ Seien
 \begin_inset Formula $W\subset\mathbb{P}^{n}(k)$
 \end_inset
 
- projektive Varietäten und
-\begin_inset Formula 
-\[
+ projektive Varietäten und 
+\begin_inset Formula \[
 V\subseteq\mathbb{P}^{m}(k)\xrightarrow{\phi}W\subseteq\mathbb{P}^{n}(k)
 \]
-
 \end_inset
 
 
 \end_layout
 
-\begin_layout Proposition
-eine Abbildung.
- Dann ist 
+\begin_layout Standard
+eine Abbildung. Dann ist 
 \begin_inset Formula $\phi$
 \end_inset
 
@@ -585,35 +490,63 @@ eine Abbildung.
 \begin_inset Formula $f_{0},\ldots,f_{n}\subseteq k[X_{0},\ldots,X_{m}]$
 \end_inset
 
- vom selben Grad existiert mit
-\begin_inset Formula 
-\[
+ vom selben Grad existiert mit 
+\begin_inset Formula \[
 \phi(y)=(f_{0}(y),\ldots,f_{n}(y))\quad\forall y\in U_{x}
 \]
-
 \end_inset
 
 
-\end_layout
-
-\begin_layout Proof
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
-
 \backslash
-mbox{}
+end{prop}
 \end_layout
 
 \end_inset
 
+ 
+\begin_inset ERT
+status collapsed
 
+\begin_layout Plain Layout
+
+\backslash
+begin{proof}
 \end_layout
 
-\begin_deeper
+\end_inset
+
+ 
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 1
+width ""
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+
+\end_inset
+
+ 
+\end_layout
+
 \begin_layout Itemize
+
 \begin_inset Quotes eld
 \end_inset
 
@@ -625,10 +558,11 @@ mbox{}
 \begin_inset Quotes erd
 \end_inset
 
-, Übung.
+, Übung. 
 \end_layout
 
 \begin_layout Itemize
+
 \begin_inset Quotes eld
 \end_inset
 
@@ -640,11 +574,12 @@ mbox{}
 \begin_inset Quotes erd
 \end_inset
 
-.
+. 
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
+
 \begin_inset Formula $\phi$
 \end_inset
 
@@ -652,8 +587,7 @@ mbox{}
 \begin_inset Formula $Z\subseteq W$
 \end_inset
 
- abgeschlossen.
- Ohne Einschränkung 
+ abgeschlossen. Ohne Einschränkung 
 \begin_inset Formula $Z=V_{+}(g)\cap W$
 \end_inset
 
@@ -661,13 +595,10 @@ mbox{}
 \begin_inset Formula $g$
 \end_inset
 
-.
- Dann berechnet sich das Urbild
-\begin_inset Formula 
-\[
+. Dann berechnet sich das Urbild 
+\begin_inset Formula \[
 \phi^{-1}(Z)=V_{+}(g\circ\phi)\cap V.
 \]
-
 \end_inset
 
 Auf 
@@ -687,11 +618,11 @@ Auf
 \end_inset
 
  gegeben.
- 
 \end_layout
 
 \begin_deeper
 \begin_layout Standard
+
 \begin_inset Formula $\Rightarrow V(g\circ\phi)\cap U_{x}=\phi^{-1}(Z)\cap U_{x}$
 \end_inset
 
@@ -707,10 +638,11 @@ Auf
 \end_layout
 
 \begin_layout Standard
+
 \begin_inset Formula $\Rightarrow\phi^{-1}(Z)\subseteq V$
 \end_inset
 
- abgeschlossen.
+ abgeschlossen. 
 \end_layout
 
 \end_deeper
@@ -732,11 +664,11 @@ Zu zeigen:
 
 \begin_deeper
 \begin_layout Standard
+
 \begin_inset Formula $\Rightarrow$
 \end_inset
 
- (*) Es ex.
- eine offene Umgebung 
+ (*) Es ex. eine offene Umgebung 
 \begin_inset Formula $W_{y}$
 \end_inset
 
@@ -764,6 +696,7 @@ Zu zeigen:
 \end_layout
 
 \begin_layout Standard
+
 \begin_inset Formula $\Rightarrow\phi_{|U_{x}\cap\phi^{-1}(W_{y}):=\tilde{U}_{x}}$
 \end_inset
 
@@ -771,6 +704,7 @@ Zu zeigen:
 \end_layout
 
 \begin_layout Standard
+
 \begin_inset Formula $\Rightarrow$
 \end_inset
 
@@ -778,11 +712,14 @@ Zu zeigen:
 \begin_inset Formula $\frac{h(f_{0},\ldots,f_{n})}{q(f_{0},\ldots,f_{n})}=g\circ\phi_{|\tilde{U}_{x}}\in\mathcal{O}_{V}(\tilde{U}_{x})$
 \end_inset
 
-.
+. 
 \end_layout
 
 \end_deeper
+\end_deeper
+\begin_deeper
 \begin_layout Standard
+
 \begin_inset Formula $\Rightarrow$
 \end_inset
 
@@ -791,9 +728,26 @@ Zu zeigen:
 \end_inset
 
 .
+\lang ngerman
+
 \end_layout
 
 \end_deeper
-\end_deeper
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
 \end_body
 \end_document

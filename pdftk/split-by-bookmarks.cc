@@ -1,6 +1,7 @@
 #include <stack>
 #include <string>
 #include <iostream>
+#define BMARK_LEVEL 2
 
 struct Bookmark {
   std::string title{};
@@ -56,8 +57,8 @@ int main() {
       B.page_number = extract_int_value(line, "BookmarkPageNumber: ");
       counter = 0; // block completed
 
-      // only extract level N bookmarks (XXX: hardcoded to 2)
-      if (B.level == 2) {
+      // only extract level N bookmarks
+      if (B.level == BMARK_LEVEL) {
 	// first bookmark
 	if (document_begin) {
 	  if (B.page_number > 1) {

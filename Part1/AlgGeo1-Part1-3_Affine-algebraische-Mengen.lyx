@@ -1,21 +1,16 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
+#LyX file created by tex2lyx 2.2
 \lyxformat 508
 \begin_document
 \begin_header
 \save_transient_properties true
-\origin unavailable
+\origin /home/nand/Documents/AlgGeo1_WS18/Part1/
 \textclass article
-\use_default_options true
-\begin_modules
-theorems-ams
-theorems-ams-extended
-enumitem
-\end_modules
+\use_default_options false
 \maintain_unincluded_children false
-\language ngerman
-\language_package default
+\language english
+\language_package none
 \inputencoding auto
-\fontencoding global
+\fontencoding default
 \font_roman "default" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
@@ -37,15 +32,15 @@ enumitem
 \papersize default
 \use_geometry false
 \use_package amsmath 1
-\use_package amssymb 1
-\use_package cancel 1
+\use_package amssymb 0
+\use_package cancel 0
 \use_package esint 1
-\use_package mathdots 1
-\use_package mathtools 1
-\use_package mhchem 1
-\use_package stackrel 1
-\use_package stmaryrd 1
-\use_package undertilde 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
 \cite_engine basic
 \cite_engine_type default
 \biblio_style plain
@@ -54,7 +49,7 @@ enumitem
 \paperorientation portrait
 \suppress_date false
 \justification true
-\use_refstyle 1
+\use_refstyle 0
 \index Index
 \shortcut idx
 \color #008000
@@ -63,7 +58,7 @@ enumitem
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language german
+\quotes_language english
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -80,29 +75,65 @@ enumitem
 Affine algebraische Mengen
 \end_layout
 
-\begin_layout Definition
+\begin_layout Standard
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:algebraische-mengen"
+
+\end_inset
+
+ 
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
-
 \backslash
-mbox{}
+begin{defn}
 \end_layout
 
 \end_inset
 
 
+\begin_inset CommandInset label
+LatexCommand label
+name "def:algebraische-mengen"
+
+\end_inset
+
+ 
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 1
+width ""
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+
+\end_inset
+
+ 
 \end_layout
 
-\begin_deeper
 \begin_layout Itemize
+
 \begin_inset Formula $\mathbb{A}^{n}(k)$
 \end_inset
 
-, der affine Raum der Dimension 
-\begin_inset Formula $n$
+, der 
+\begin_inset Formula $\textbf{affine Raum der Dimension n}$
 \end_inset
 
  (über 
@@ -113,7 +144,7 @@ mbox{}
 \begin_inset Formula $k^{n}$
 \end_inset
 
- mit der Zariski-Topologie.
+ mit der Zariski-Topologie. 
 \end_layout
 
 \begin_layout Itemize
@@ -121,12 +152,42 @@ Abgeschlossene Teilmengen von
 \begin_inset Formula $\mathbb{A}^{n}(k)$
 \end_inset
 
- heißen affine abgeschlossene Mengen.
+ heißen affine abgeschlossene Mengen. 
 \end_layout
 
-\end_deeper
-\begin_layout Example
-Da 
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{defn}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{example}
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "bsp:algebraische-mengen-dim1"
+
+\end_inset
+
+ Da 
 \begin_inset Formula $k[T]$
 \end_inset
 
@@ -154,7 +215,7 @@ Da
 \begin_inset Note Comment
 status open
 
-\begin_layout Plain Layout
+\begin_layout Standard
 Für 
 \begin_inset Formula $f\in k$
 \end_inset
@@ -171,33 +232,51 @@ Für
 \begin_inset Formula $k^{\times}$
 \end_inset
 
-, und Ideale erzeugt von einer Einheit bilden den ganzen Ring.
- (siehe Algebra 1)
+, und Ideale erzeugt von einer Einheit bilden den ganzen Ring. (siehe Algebra 1) 
 \end_layout
 
 \end_inset
 
- Insbesondere sieht man, dass die Zariski-Topologie im Allgemeinen nicht
- Hausdorff ist.
+ Insbesondere sieht man, dass die Zariski-Topologie im Allgemeinen nicht Hausdorff ist. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{example}
+\end_layout
+
+\end_inset
+
  
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{example}
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
 \end_inset
 
 
-\end_layout
+\begin_inset CommandInset label
+LatexCommand label
+name "bsp:algebraische-mengen-dim2"
 
-\begin_layout Example
+\end_inset
+
+ 
 \begin_inset Formula $\mathbb{A}^{2}(k)$
 \end_inset
 
- hat zumindestens als abgeschlossene Mengen:
+ hat zumindestens als abgeschlossene Mengen: 
 \end_layout
 
-\begin_deeper
 \begin_layout Itemize
+
 \begin_inset Formula $\emptyset$
 \end_inset
 
@@ -205,18 +284,19 @@ Für
 \begin_inset Formula $\mathbb{A}^{2}$
 \end_inset
 
-;
+; 
 \end_layout
 
 \begin_layout Itemize
 Einpunktige Mengen: 
-\begin_inset Formula $\{(x_{1},x_{2})=V(T_{1}-x_{1},T_{2}-x_{2})$
+\begin_inset Formula $\{(x_{1},x_{2})\}=V(T_{1}-x_{1},T_{2}-x_{2})$
 \end_inset
 
-;
+; 
 \end_layout
 
 \begin_layout Itemize
+
 \begin_inset Formula $V(f)$
 \end_inset
 
@@ -224,28 +304,15 @@ Einpunktige Mengen:
 \begin_inset Formula $f\in k[T_{1},T_{2}]$
 \end_inset
 
- irreduzibel.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Definition von irreduzibel -> abh.
- führt zu Prim- oder Maximalideal?
-\end_layout
-
-\end_inset
-
-
+ irreduzibel. 
 \end_layout
 
 \begin_layout Standard
-Ferner alle endliche Vereneigungen dieser Liste.
- (Dies sind in der Tat alle, denn später sehen wir: 
+Ferner alle endlichen Vereinigungen dieser Liste. (Dies sind in der Tat alle, denn später sehen wir: 
 \begin_inset Quotes eld
 \end_inset
 
-irreduzibele
+irreduzible
 \begin_inset Quotes erd
 \end_inset
 
@@ -269,9 +336,20 @@ Krull-Dimension
 \begin_inset Quotes erd
 \end_inset
 
-.)
+.) 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{example}
 \end_layout
 
-\end_deeper
+\end_inset
+
+ 
+\end_layout
+
 \end_body
 \end_document

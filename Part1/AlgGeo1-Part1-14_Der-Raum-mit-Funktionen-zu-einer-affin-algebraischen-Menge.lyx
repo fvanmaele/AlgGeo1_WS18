@@ -1,21 +1,16 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
+#LyX file created by tex2lyx 2.2
 \lyxformat 508
 \begin_document
 \begin_header
 \save_transient_properties true
-\origin unavailable
+\origin /home/nand/Documents/AlgGeo1_WS18/Part1/
 \textclass article
-\use_default_options true
-\begin_modules
-theorems-ams
-theorems-ams-extended
-enumitem
-\end_modules
+\use_default_options false
 \maintain_unincluded_children false
-\language ngerman
-\language_package default
+\language english
+\language_package none
 \inputencoding auto
-\fontencoding global
+\fontencoding default
 \font_roman "default" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
@@ -37,15 +32,15 @@ enumitem
 \papersize default
 \use_geometry false
 \use_package amsmath 1
-\use_package amssymb 1
-\use_package cancel 1
+\use_package amssymb 0
+\use_package cancel 0
 \use_package esint 1
-\use_package mathdots 1
-\use_package mathtools 1
-\use_package mhchem 1
-\use_package stackrel 1
-\use_package stmaryrd 1
-\use_package undertilde 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
 \cite_engine basic
 \cite_engine_type default
 \biblio_style plain
@@ -54,7 +49,7 @@ enumitem
 \paperorientation portrait
 \suppress_date false
 \justification true
-\use_refstyle 1
+\use_refstyle 0
 \index Index
 \shortcut idx
 \color #008000
@@ -63,7 +58,7 @@ enumitem
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language german
+\quotes_language english
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -77,36 +72,42 @@ enumitem
 \begin_body
 
 \begin_layout Section
-Der Raum mit Funktionen zu einer affin algebraischen Menge
+Der Raum mit Funktionen zu einer affin-algebraischen Menge
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:alg-mengen-raeume-mit-fkt"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 
 \series bold
 Ziel.
-
 \series default
- 
-\begin_inset Formula $X\subseteq\mathbb{A}^{n}(k)\mapsto(X,\mathcal{O}_{X})$
+ Wir wollen jeder irreduziblen affin algebraischen Menge 
+\begin_inset Formula $X\subseteq\mathbb{A}^{n}(k)$
 \end_inset
 
- als irreduzibele affine algebraische Menge bzw.
- Zariski-Topologie.
- D.h.
- wir müssen Mengen von Funktionen 
-\begin_inset Formula $\mathcal{O}_{X}(U)$
+ einen Raum mit Funktionen 
+\begin_inset Formula $(X,\mathcal{O}_{X})$
 \end_inset
 
- auf 
-\begin_inset Formula $U$
+ zuordnen. D.h. wir müssen Mengen von Funktionen 
+\begin_inset Formula $\mathcal{O}_{X}(U) \leq \text{Abb}(U,k)$
 \end_inset
 
 , 
-\begin_inset Formula $U\subset X$
+\begin_inset Formula $U\subseteq X$
 \end_inset
 
- offen, definieren.
- Diese werden als Teilmengen des Funktionenkörpers 
+ offen, definieren. Diese werden als Teilmengen des Funktionenkörpers 
 \begin_inset Formula $K(X)$
 \end_inset
 
@@ -114,21 +115,34 @@ Ziel.
 \begin_inset Formula $X$
 \end_inset
 
- irreduzibel, später bei Schemata fällt diese Bedingung weg!)
-\end_layout
+ irreduzibel, später bei Schemata fällt diese Bedingung weg!) 
+\begin_inset ERT
+status collapsed
 
-\begin_layout Definition
-\begin_inset CommandInset label
-LatexCommand label
-name "def:Funktionenkoerper"
+\begin_layout Plain Layout
+
+\backslash
+begin{defn}
+\end_layout
 
 \end_inset
 
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "def:funktionenkoerper"
 
-\begin_inset Formula $K(X):=\text{Quot}(\Gamma(X))$
+\end_inset
+
+ Für eine irreduzible, affin-algebraische Menge 
+\begin_inset Formula $X$
 \end_inset
 
  heißt 
+\begin_inset Formula $K(X):=\text{Quot}(\Gamma(X))$
+\end_inset
+
+ 
 \series bold
 Funktionenkörper
 \series default
@@ -137,18 +151,9 @@ Funktionenkörper
 \end_inset
 
 .
- (
-\begin_inset Formula $\Gamma(X)$
-\end_inset
-
- ist für 
-\begin_inset Formula $X$
-\end_inset
-
- irreduzibel nullteilerfrei.)
 \end_layout
 
-\begin_layout Definition
+\begin_layout Standard
 Elemente 
 \begin_inset Formula $\frac{f}{g}\in K(X)$
 \end_inset
@@ -162,19 +167,45 @@ Elemente
 \end_inset
 
  lassen sich zumindest als Funktion auf der offenen Menge 
-\begin_inset Formula $\mathcal{D}(g)\subset X$
+\begin_inset Formula $D(g)\subseteq X$
 \end_inset
 
- auffassen, wenn auch nicht i.A.
- auf ganz 
+ auffassen, wenn auch i.A. nicht auf ganz 
 \begin_inset Formula $X$
 \end_inset
 
-.
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{defn}
 \end_layout
 
-\begin_layout Lemma
-Gilt für 
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{lem}
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:gleichheit-im-funktionenkoerper"
+
+\end_inset
+
+ Gilt für 
 \begin_inset Formula $\frac{f_{1}}{g_{1}},\frac{f_{2}}{g_{2}}\in K(X)$
 \end_inset
 
@@ -183,21 +214,19 @@ Gilt für
 \end_inset
 
 , und einer offenen Teilmenge 
-\begin_inset Formula $\emptyset\neq U\subset\mathcal{D}(g_{1}g_{2})$
+\begin_inset Formula $\emptyset\neq U\subseteq D(g_{1}g_{2})$
 \end_inset
 
-
-\begin_inset Formula 
-\[
+ 
+\begin_inset Formula \[
 \frac{f_{1}(x)}{g_{1}(x)}=\frac{f_{2}(x)}{g_{2}(x)}\qquad\forall x\in U,
 \]
-
 \end_inset
 
 
 \end_layout
 
-\begin_layout Lemma
+\begin_layout Standard
 dann folgt 
 \begin_inset Formula $\frac{f_{1}}{g_{1}}=\frac{f_{2}}{g_{2}}$
 \end_inset
@@ -206,29 +235,39 @@ dann folgt
 \begin_inset Formula $K(X)$
 \end_inset
 
-.
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{lem}
 \end_layout
 
-\begin_layout Proof
-Sei ohne Einschränkung der Allgemeinheit 
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ Sei ohne Einschränkung der Allgemeinheit 
 \begin_inset Formula $g_{1}=g_{2}=g$
 \end_inset
 
-.
- (Sonst Erweitern!) 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Todo
+. (Sonst Erweitern!)
 \end_layout
 
-\end_inset
+\begin_layout Standard
 
-
-\end_layout
-
-\begin_layout Proof
 \begin_inset Formula $\Rightarrow(f_{1}-f_{2})(x)=0$
 \end_inset
 
@@ -239,94 +278,105 @@ Todo
 .
 \end_layout
 
-\begin_layout Proof
-\begin_inset Formula $\Rightarrow\emptyset\neq U\subset V(f_{1}-f_{2})\subset X$
+\begin_layout Standard
+
+\begin_inset Formula $\Rightarrow\emptyset\neq U\subseteq V(f_{1}-f_{2})\subseteq X$
 \end_inset
 
- dicht, d.h.
- 
+ dicht, d.h. 
 \begin_inset Formula $V(f_{1}-f_{2})=X$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
+
 \begin_inset Formula $\phantom{\Rightarrow\ }$
 \end_inset
 
 
-\begin_inset Formula $f_{1}-f_{2}\in IV(f_{1}-f_{2})=I(X)\equiv(0)$
+\begin_inset Formula $f_{1}-f_{2}\in I()V(f_{1}-f_{2}))=I(X)\equiv(0)$
 \end_inset
 
  in 
 \begin_inset Formula $\Gamma(X)$
 \end_inset
 
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-todo
-\end_layout
-
-\end_inset
-
 
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
+
 \begin_inset Formula $\Rightarrow f_{1}-f_{2}=0$
 \end_inset
 
-.
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{proof}
 \end_layout
 
-\begin_layout Definition
-Sei 
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{defn}
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "def:alg-menge-als-raum-mit-fkt"
+
+\end_inset
+
+ Sei 
 \begin_inset Formula $X$
 \end_inset
 
- eine irreduzibele affine algebraische Menge, 
-\begin_inset Formula $U\subset X$
+ eine irreduzible affin-algebraische Menge, 
+\begin_inset Formula $U\subseteq X$
 \end_inset
 
- offen.
- Sei 
+ offen. Für 
+\begin_inset Formula $x \in X$
+\end_inset
+
+ bezeichne 
 \begin_inset Formula $\Gamma(X)_{\mathfrak{m}_{x}}$
 \end_inset
 
- Lokalisierung von 
+ die Lokalisierung von 
 \begin_inset Formula $\Gamma(X)$
 \end_inset
 
- bzgl.
- das maximale Ideal 
-\begin_inset Formula $\mathfrak{m}_{x}$
+ an der multiplikativ abgeschlossenen Menge 
+\begin_inset Formula $S := \Gamma(X) \setminus \mathfrak{m}_{x}$
 \end_inset
 
- in 
-\begin_inset Formula $x\in X$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Definition
-\begin_inset Formula 
-\[
-\mathcal{O}_{X}(U):=\bigcap_{x\in U}\Gamma(X)_{\mathfrak{m}_{x}}\subset K(X)
+. 
+\begin_inset Formula \[
+\mathcal{O}_{X}(U):=\bigcap_{x\in U}\Gamma(X)_{\mathfrak{m}_{x}}\subseteq K(X)
 \]
-
 \end_inset
 
 
 \end_layout
 
-\begin_layout Definition
-d.h.
- für jedes 
+\begin_layout Standard
+d.h. für jedes 
 \begin_inset Formula $x\in U$
 \end_inset
 
@@ -335,18 +385,26 @@ d.h.
 \end_inset
 
  schreiben als 
-\begin_inset Formula $\frac{h}{g}$
+\begin_inset Formula $\frac{h}{g} \in K(X)$
 \end_inset
 
  mit 
 \begin_inset Formula $g(x)\neq0$
 \end_inset
 
-.
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{defn}
 \end_layout
 
-\begin_layout Standard
-Wenn 
+\end_inset
+
+ Für 
 \begin_inset Formula $f\in\Gamma(X)$
 \end_inset
 
@@ -358,50 +416,45 @@ Wenn
 \begin_inset Formula $\Gamma(X)$
 \end_inset
 
- bzgl.
- der multiplikativ abgeschlossenen Teilmenge 
+ an der multiplikativ abgeschlossenen Menge 
 \begin_inset Formula $\{1,f,f^{2},\ldots,f^{n}\ldots\}$
 \end_inset
 
-.
- Dann lässt sich
-\begin_inset Formula 
-\[
-\Gamma(X)_{\mathfrak{m}_{x}}=\bigcup_{f\in\Gamma(X)\backslash\mathfrak{m}_{x}}\Gamma(X)_{f}\subset K(X)
+. Dann lässt sich 
+\begin_inset Formula \[
+\Gamma(X)_{\mathfrak{m}_{x}}=\bigcup_{f\in\Gamma(X)\backslash\mathfrak{m}_{x}}\Gamma(X)_{f}\subseteq K(X)
 \]
-
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-schreiben.
- 
+schreiben. 
 \begin_inset Quotes eld
 \end_inset
 
 
-\begin_inset Formula $\supset$
+\begin_inset Formula $\supseteq$
 \end_inset
 
 
 \begin_inset Quotes erd
 \end_inset
 
- klar, 
+: klar, 
 \begin_inset Quotes eld
 \end_inset
 
 
-\begin_inset Formula $\subset$
+\begin_inset Formula $\subseteq$
 \end_inset
 
 
 \begin_inset Quotes erd
 \end_inset
 
- 
+: 
 \begin_inset Formula $\frac{g}{f}$
 \end_inset
 
@@ -409,8 +462,7 @@ schreiben.
 \begin_inset Formula $f(x)\neq0$
 \end_inset
 
- d.h.
- 
+ d.h. 
 \begin_inset Formula $f\notin\mathfrak{m}_{x}$
 \end_inset
 
@@ -419,17 +471,6 @@ schreiben.
 \end_inset
 
 .
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Todo
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Paragraph
@@ -438,27 +479,26 @@ Es gilt:
 
 \begin_layout Enumerate
 Für 
-\begin_inset Formula $V\subset U\subset X$
+\begin_inset Formula $V\subseteq U\subseteq X$
 \end_inset
 
- offen kommutiert das folgende Diagramm:
-\begin_inset Formula 
-\[
+ offen kommutiert das folgende Diagramm: 
+\begin_inset Formula \[
 \xymatrix{\mathcal{O}_{X}(V)\ar@{^{(}->}[r] & \text{Abb}(V,k)\\
 \mathcal{O}_{X}(U)\ar@{^{(}->}[r]\ar@{^{(}->}[u] & \text{Abb}(U,k)\ar[u]_{\text{Einschränkungsabb.}}
 }
 \]
-
 \end_inset
 
 mit 
-\begin_inset Formula $\mathcal{O}_{X}(U)\subset\mathcal{O}_{X}(V)$
+\begin_inset Formula $\mathcal{O}_{X}(U) \hookrightarrow \mathcal{O}_{X}(V), f \mapsto f|_V$
 \end_inset
 
- nach Definition.
+ nach Definition. 
 \end_layout
 
 \begin_layout Enumerate
+
 \begin_inset Formula $\mathcal{O}_{X}(U)\rightarrow\text{Abb}(U,k)$
 \end_inset
 
@@ -466,7 +506,7 @@ mit
 \begin_inset Formula $f\mapsto(x\mapsto f(x):=\frac{g(x)}{f(x)}\in k)$
 \end_inset
 
- ist injektiv (Lemma 34) und wohldefiniert (kürzen/Erweitern), wobei 
+ ist injektiv (Lemma 34) und wohldefiniert (kürzen/erweitern), wobei 
 \begin_inset Formula $g,h\in\Gamma(X)$
 \end_inset
 
@@ -482,77 +522,57 @@ mit
 \begin_inset Formula $\mathcal{O}_{X}(U)$
 \end_inset
 
- existiert.
+ existiert. 
 \end_layout
 
 \begin_layout Enumerate
 
 \series bold
 Verklebungseigenschaft.
-
 \series default
  Sei 
 \begin_inset Formula $U=\bigcup_{i\in I}U_{i}$
 \end_inset
 
-.
- Nach Definition ist 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset Formula $f_{i}:U_{i}\rightarrow h$
-\end_inset
-
-?
-\end_layout
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{align*}
-\mathcal{O}_{X}(U) & =\bigcap_{i}\mathcal{O}_{X}(U_{i})\subset K(X)\\
+. Nach Definition ist 
+\begin_inset Formula \begin{align*}
+\mathcal{O}_{X}(U) & =\bigcap_{i}\mathcal{O}_{X}(U_{i})\subseteq K(X)\\
 \ni f:U\rightarrow k & \quad\ni f_{i}:U_{i}\rightarrow k
 \end{align*}
-
 \end_inset
 
-[Diagramm fehlt]
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Diag 3
-\end_layout
-
-\end_inset
-
-.
- 
-\begin_inset Formula $\Rightarrow(X,\mathcal{O}_{X})$
+[Diagramm fehlt]. 
+\begin_inset Formula $(X,\mathcal{O}_{X})$
 \end_inset
 
  ist Raum mit Funktionen, 
 \series bold
-der zur irreduziblen affin algebraische Menge gehörige Raum von Funktionen.
-
+der zur irreduziblen affin algebraische Menge assoziierte Raum von Funktionen
 \series default
- 
+. 
 \end_layout
 
-\begin_layout Proposition
-\begin_inset Argument 1
-status open
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
 
 \begin_layout Plain Layout
-orig.
- 33
+
+\backslash
+begin{prop}
 \end_layout
 
 \end_inset
 
-Für 
+[orig. 33]
+\begin_inset CommandInset label
+LatexCommand label
+name "prop:fkt-auf-basis"
+
+\end_inset
+
+ Für 
 \begin_inset Formula $(X,\mathcal{O}_{X})$
 \end_inset
 
@@ -564,27 +584,46 @@ Für
 \begin_inset Formula $f\in\Gamma(X)$
 \end_inset
 
- gilt:
-\begin_inset Formula 
-\[
+ gilt: 
+\begin_inset Formula \[
 \mathcal{O}_{X}(D(f))=\Gamma(X)_{f},
 \]
-
 \end_inset
 
 
 \end_layout
 
-\begin_layout Proposition
+\begin_layout Standard
 insbesondere 
 \begin_inset Formula $\mathcal{O}_{X}(X)=\Gamma(X)$
 \end_inset
 
-.
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{prop}
 \end_layout
 
-\begin_layout Proof
-\begin_inset Formula $\Gamma(X)\subset\mathcal{D}(f)$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\Gamma(X)_f\subseteq \mathcal{O}_{X}(D(f))$
 \end_inset
 
  klar, da 
@@ -592,25 +631,23 @@ insbesondere
 \end_inset
 
  
-\begin_inset Formula $\forall x\in\mathcal{D}(f)$
+\begin_inset Formula $\forall x\in D(f)$
 \end_inset
 
- bzw.
- 
-\begin_inset Formula $f\in P(X)\backslash\mathfrak{m}_{x}$
+ bzw. 
+\begin_inset Formula $f\in \Gamma(X)\setminus\mathfrak{m}_{x}$
 \end_inset
 
 .
- 
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
 Sei nun 
 \begin_inset Formula $g$
 \end_inset
 
  in 
-\begin_inset Formula $\mathcal{O}_{X}(\mathcal{D}(f))$
+\begin_inset Formula $\mathcal{O}_{X}(D(f))$
 \end_inset
 
  gegeben, 
@@ -618,22 +655,23 @@ Sei nun
 \end_inset
 
  und 
-\begin_inset Formula $\mathfrak{A}:=\{h\in\Gamma(X)\mid hg\in\Gamma(X)\}\subset\Gamma(X)$
+\begin_inset Formula $\mathfrak{a}:=\{h\in\Gamma(X)\mid hg\in\Gamma(X)\}\unlhd\Gamma(X)$
 \end_inset
 
- Ideal.
+.
 \end_layout
 
-\begin_layout Proof
-Dazu: 
-\begin_inset Formula $g\in\Gamma(X)_{g}$
+\begin_layout Standard
+Dann gilt: 
+\begin_inset Formula $g\in\Gamma(X)_{f}$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Proof
-\begin_inset Formula $\Leftrightarrow g=\frac{k}{g^{n}}$
+\begin_layout Standard
+
+\begin_inset Formula $\Leftrightarrow g=\frac{k}{f^{n}}$
 \end_inset
 
  für ein 
@@ -647,8 +685,9 @@ Dazu:
 
 \end_layout
 
-\begin_layout Proof
-\begin_inset Formula $\Leftrightarrow f^{n}\in\mathfrak{A}$
+\begin_layout Standard
+
+\begin_inset Formula $\Leftrightarrow f^{n}\in\mathfrak{a}$
 \end_inset
 
  für ein 
@@ -658,27 +697,27 @@ Dazu:
 .
 \end_layout
 
-\begin_layout Proof
-d.h.
- zu zeigen: 
-\begin_inset Formula $f\in\text{rad}(\mathfrak{A})=IV(\mathfrak{A})$
+\begin_layout Standard
+d.h. zu zeigen: 
+\begin_inset Formula $f\in\text{rad}(\mathfrak{a})=I(V(\mathfrak{a}))$
 \end_inset
 
- (Hilbertsche Nullstellensatz)
+ (Hilbertscher Nullstellensatz)
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
+
 \begin_inset Formula $\Leftrightarrow f(x)=0$
 \end_inset
 
  
-\begin_inset Formula $\forall x\in V(\mathfrak{A})$
+\begin_inset Formula $\forall x\in V(\mathfrak{a})$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
 Ist dazu 
 \begin_inset Formula $x\in X$
 \end_inset
@@ -687,15 +726,19 @@ Ist dazu
 \begin_inset Formula $f(x)\neq0$
 \end_inset
 
-, wo 
-\begin_inset Formula $x\in\mathcal{D}(f)$
+, also 
+\begin_inset Formula $x\in D(f)$
 \end_inset
 
-, so existiert nach Voraussetzung 
-\begin_inset Formula $(*)$
+, so existieren wegen 
+\begin_inset Formula $g \in \mathcal{O}_{X}(D(f))$
 \end_inset
 
  
+\begin_inset Newline newline
+\end_inset
+
+ Funktionen 
 \begin_inset Formula $f_{1},f_{2}\in\Gamma(X)$
 \end_inset
 
@@ -707,64 +750,86 @@ Ist dazu
 \begin_inset Formula $g=\frac{f_{1}}{f_{2}}$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Proof
-\begin_inset Formula $\Rightarrow f_{2}\in\mathfrak{A}$
+, also gilt 
+\begin_inset Formula $f_{2}\in\mathfrak{a}$
 \end_inset
 
 .
- Da 
+\end_layout
+
+\begin_layout Standard
+Da 
 \begin_inset Formula $f_{2}(x)\neq0$
 \end_inset
 
-:
-\end_layout
-
-\begin_layout Proof
-\begin_inset Formula $\Rightarrow x\notin V(\mathfrak{A})$
+ folgt weiter 
+\begin_inset Formula $x\notin V(\mathfrak{a})$
 \end_inset
 
-.
-\end_layout
-
-\begin_layout Remark
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-orig.
- 34
-\end_layout
-
-\end_inset
-
-
+. 
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
-
 
 \backslash
-mbox{}
+end{proof}
 \end_layout
 
 \end_inset
 
+ 
+\begin_inset ERT
+status collapsed
 
+\begin_layout Plain Layout
+
+\backslash
+begin{rem}
 \end_layout
 
-\begin_deeper
+\end_inset
+
+[orig. 34]
+\begin_inset CommandInset label
+LatexCommand label
+name "rem:globale-darstellung-von-fkt"
+
+\end_inset
+
+ 
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 1
+width ""
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+
+\end_inset
+
+ 
+\end_layout
+
 \begin_layout Enumerate
-Im allgemeinen existieren für 
+Im Allgemeinen existieren für 
 \begin_inset Formula $f\in\mathcal{O}_{x}(U)$
 \end_inset
 
  
 \series bold
-nicht
+nicht notwendigerweise
 \series default
  
 \begin_inset Formula $g,h\in\Gamma(X)$
@@ -782,7 +847,7 @@ nicht
 \begin_inset Formula $\forall x\in U$
 \end_inset
 
-.
+. 
 \end_layout
 
 \begin_layout Enumerate
@@ -794,20 +859,17 @@ Alternative Definition von
 
 , I.
 \series default
-
-\begin_inset Formula 
-\[
-\mathcal{O}_{X}(\mathcal{D}(f)):=\Gamma(X)_{f},\quad\forall f\in\Gamma(X).
+ 
+\begin_inset Formula \[
+\mathcal{O}_{X}(D(f)):=\Gamma(X)_{f},\quad\forall f\in\Gamma(X).
 \]
-
 \end_inset
 
 Da 
-\begin_inset Formula $\mathcal{D}(f)$
+\begin_inset Formula $(D(f))_{f \in \Gamma(X)}$
 \end_inset
 
- Basis der Topologie ist, kann es höchstens einen Raum mit Funktionen geben
- mit dieser Eigenschaft, es bleibt die Existenz zu zeigen.
+ Basis der Topologie bildet, kann es höchstens einen Raum mit Funktionen mit dieser Eigenschaft geben, es bleibt die Existenz zu zeigen. 
 \end_layout
 
 \begin_layout Enumerate
@@ -818,6 +880,8 @@ Alternative Definition von
 \end_inset
 
 , II.
+\series default
+
 \end_layout
 
 \begin_deeper
@@ -842,42 +906,53 @@ Koordinaten
 \begin_inset Quotes erd
 \end_inset
 
- zu wählen.
-\begin_inset Formula 
-\begin{align*}
-X & :=\{\mathfrak{m}\subseteq A\mid\text{max. Ideale}\}
+ zu wählen. 
+\begin_inset Formula \begin{align*}
+X & :=\{\mathfrak{m}\unlhd A\mid\ \mathfrak{m} \text{ ist max. Ideal}\}
 \end{align*}
-
 \end_inset
 
 Die 
 \series bold
-abgeschlossen Mengen
+abgeschlossenen Mengen
 \series default
- sind gegeben durch:
-\begin_inset Formula 
-\[
-V(\mathfrak{A}):=\{\mathfrak{m}\subseteq A\text{ max.}\mid\mathfrak{m}\supseteq\mathfrak{A}\},\quad\mathfrak{A}\subset A\text{ Ideal}.
+ sind gegeben durch: 
+\begin_inset Formula \[
+V(\mathfrak{a}):=\{\mathfrak{m} \in X \mid\mathfrak{m}\supseteq\mathfrak{a}\},\quad\mathfrak{a}\unlhd A\text{ Ideal}.
 \]
-
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\mathcal{O}_{X}(U):=\bigcap_{\mathfrak{m}\in U}A_{\mathfrak{m}}\subset\text{Quot}(A)$
+
+\begin_inset Formula $\mathcal{O}_{X}(U):=\bigcap_{\mathfrak{m}\in U}A_{\mathfrak{m}}\subseteq\text{Quot}(A)$
 \end_inset
 
  für 
-\begin_inset Formula $U\subset X$
+\begin_inset Formula $U\subseteq X$
 \end_inset
 
- offen (vgl.
- später Schemata).
+ offen (vgl. später Schemata). 
 \end_layout
 
 \end_deeper
-\end_deeper
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{rem}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
 \end_body
 \end_document

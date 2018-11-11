@@ -1,21 +1,16 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
+#LyX file created by tex2lyx 2.2
 \lyxformat 508
 \begin_document
 \begin_header
 \save_transient_properties true
-\origin unavailable
+\origin /home/nand/Documents/AlgGeo1_WS18/Part1/
 \textclass article
-\use_default_options true
-\begin_modules
-enumitem
-theorems-ams
-theorems-ams-extended
-\end_modules
+\use_default_options false
 \maintain_unincluded_children false
-\language ngerman
-\language_package default
+\language english
+\language_package none
 \inputencoding auto
-\fontencoding global
+\fontencoding default
 \font_roman "default" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
@@ -37,15 +32,15 @@ theorems-ams-extended
 \papersize default
 \use_geometry false
 \use_package amsmath 1
-\use_package amssymb 1
-\use_package cancel 1
+\use_package amssymb 0
+\use_package cancel 0
 \use_package esint 1
-\use_package mathdots 1
-\use_package mathtools 1
-\use_package mhchem 1
-\use_package stackrel 1
-\use_package stmaryrd 1
-\use_package undertilde 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
 \cite_engine basic
 \cite_engine_type default
 \biblio_style plain
@@ -54,7 +49,7 @@ theorems-ams-extended
 \paperorientation portrait
 \suppress_date false
 \justification true
-\use_refstyle 1
+\use_refstyle 0
 \index Index
 \shortcut idx
 \color #008000
@@ -63,7 +58,7 @@ theorems-ams-extended
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language german
+\quotes_language english
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -82,12 +77,23 @@ Einführung
 
 \begin_layout Standard
 
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:einfuehrung"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
 \series bold
 Algebraische Geometrie
 \series default
 
 \begin_inset Index idx
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Algebraische Geometrie
@@ -95,9 +101,7 @@ Algebraische Geometrie
 
 \end_inset
 
- kann man verstehen, als das Studium von Systemen polynomialer Gleichungen
- (in mehreren Variabelen).
- Damit ist die algebraische Geometrie eine Verallgemeinerung der 
+ kann man verstehen, als das Studium von Systemen polynomialer Gleichungen (in mehreren Variabelen). Damit ist die algebraische Geometrie eine Verallgemeinerung der 
 \series bold
 linearen Algebra
 \series default
@@ -117,11 +121,19 @@ Algebra
 \emph on
 mehreren 
 \emph default
-Variabelen.
+ Variablen. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{question*}
 \end_layout
 
-\begin_layout Question*
-Sei 
+\end_inset
+
+ Seien 
 \begin_inset Formula $k$
 \end_inset
 
@@ -129,8 +141,7 @@ Sei
 \begin_inset Formula $f_{1},\ldots,f_{m}\in k[T_{1},\ldots,T_{n}]$
 \end_inset
 
- gegeben.
- Was sind die 
+ gegeben. Was sind die 
 \begin_inset Quotes eld
 \end_inset
 
@@ -139,33 +150,47 @@ geometrischen Eigenschaften
 \end_inset
 
  der Nullstellenmenge 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-n-dim affine Raum
-\end_layout
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
+\begin_inset Formula \[
 V(f_{1},\ldots,f_{n}):=\{(t_{1},\ldots,t_{n})\in k^{n}\mid f_{i}(t_{1},\ldots,t_{n})=0\ \forall i\}
 \]
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{question*}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{example}
+\end_layout
 
 \end_inset
 
 
-\end_layout
+\begin_inset CommandInset label
+LatexCommand label
+name "bsp:einfuehrung"
 
-\begin_layout Example
-Sei 
+\end_inset
+
+ Sei 
 \begin_inset Formula $f=T_{2}^{2}-T_{1}^{2}(T_{1}-1)\in k[T_{1},T_{2}]$
 \end_inset
 
-.
- Die Nullstellenmenge für 
+. Die Nullstellenmenge für 
 \begin_inset Formula $k=\mathbb{R}$
 \end_inset
 
@@ -177,19 +202,31 @@ trügerisch, da
 \begin_inset Formula $\mathbb{R}$
 \end_inset
 
- nicht algebraisch abgeschlossen!) ist gegeben durch:
+ nicht algebraisch abgeschlossen!) ist gegeben durch: 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{example}
 \end_layout
 
-\begin_layout Standard
+\end_inset
+
+ 
 \begin_inset Float figure
 wide false
 sideways false
 status open
 
-\begin_layout Plain Layout
+
+\begin_layout Standard
+
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+
 \begin_inset Formula $T_{2}^{2}=T_{1}^{2}(T_{1}-1)=T_{1}^{3}-T_{1}^{2}$
 \end_inset
 
@@ -206,32 +243,40 @@ status open
 
 \end_layout
 
-\begin_layout Paragraph
-
-\series bold
-Dimension 1.
-
-\series default
- 
+\begin_layout Itemize
+Dimension 1 
 \end_layout
 
-\begin_layout Standard
-Glatte und singulären Punkten: 
+\begin_layout Itemize
+
 \begin_inset Formula $(0,0)$
 \end_inset
 
- singulär.
- Alle anderen Punkte verletzen eine eindeutig bestimmte Tangente.
+ ist singulärer Punkt 
+\end_layout
+
+\begin_layout Itemize
+Alle anderen Punkte besitzen eine eindeutig bestimmte Tangente 
 \end_layout
 
 \begin_layout Standard
+
 \begin_inset Float figure
 placement h
 wide false
 sideways false
 status open
 
-\begin_layout Plain Layout
+
+\begin_layout Standard
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:einfuehrung-glattheit"
+
+\end_inset
+
+ 
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -242,6 +287,8 @@ Spitze
  und 
 \series bold
 Doppelpunkt
+\series default
+
 \end_layout
 
 \end_inset
@@ -255,15 +302,15 @@ Doppelpunkt
 \end_layout
 
 \begin_layout Standard
-Vergleiche den 
+Vergleiche mit dem 
 \series bold
 Satz über implizite Funktionen
 \series default
-.
- (Analysis, Differentialgeometrie) 
+: (Analysis, Differentialgeometrie)
 \end_layout
 
 \begin_layout Standard
+
 \begin_inset Formula $V(f)$
 \end_inset
 
@@ -276,24 +323,20 @@ Satz über implizite Funktionen
 \end_inset
 
  genau dann, wenn die Jacobi-Matrix 
-\begin_inset Formula 
-\[
+\begin_inset Formula \[
 \left(\frac{\partial f}{\partial T_{1}},\frac{\partial f}{\partial T_{2}}\right)=\left(T_{1}(3T_{1}-2),\ 2T_{2}\right)
 \]
-
 \end_inset
 
- hat Rang 1 in 
+Rang 1 in 
 \begin_inset Formula $(x_{1},x_{2})$
 \end_inset
 
-.
- Das ist äquivalent dazu, dass 
+ hat. Das ist äquivalent dazu, dass 
 \begin_inset Formula $(x_{1},x_{2})\neq(0,0)$
 \end_inset
 
-.
- Dies lässt sich rein formal über beliebigen Grundkörpern 
+. Dies lässt sich rein formal über beliebigen Grundkörpern 
 \series bold
 algebraisch
 \series default
@@ -306,23 +349,24 @@ Methoden.
 
 \begin_layout Standard
 GAGA - Géometrie algébrique, géometrique analytique (Serre)
-\begin_inset VSpace defskip
+\begin_inset VSpace medskip
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Tabular
+
+\begin_inset Tabular 
 <lyxtabular version="3" rows="2" columns="2">
-<features tabularvalignment="middle">
+<features rotate="0" tabularvalignment="middle" tabularwidth="0pt">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
 Komplexe Geometrie (
 \begin_inset Formula $\mathbb{C}$
 \end_inset
@@ -331,15 +375,15 @@ Komplexe Geometrie (
 \begin_inset Formula $(\mathbb{R})$
 \end_inset
 
-
+ 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
 Algebraische Geometrie
 \end_layout
 
@@ -347,19 +391,19 @@ Algebraische Geometrie
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-Analytische Hilfsmittel
+\begin_layout Standard
+Analytische Hilfsmittel 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
 Kommutative Algebra
 \end_layout
 

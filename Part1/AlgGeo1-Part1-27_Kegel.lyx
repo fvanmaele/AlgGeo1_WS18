@@ -1,28 +1,16 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
+#LyX file created by tex2lyx 2.2
 \lyxformat 508
 \begin_document
 \begin_header
 \save_transient_properties true
-\origin unavailable
+\origin /home/nand/Documents/AlgGeo1_WS18/Part1/
 \textclass article
-\begin_preamble
-\usepackage{mathtools}
-\usepackage{faktor}
-\DeclareMathOperator{\rad}{rad}
-\renewcommand{\labelenumi}{(\roman{enumi})}
-\renewcommand{\labelenumii}{\arabic{enumii}.}
-\end_preamble
-\use_default_options true
-\begin_modules
-enumitem
-theorems-ams
-theorems-ams-extended
-\end_modules
+\use_default_options false
 \maintain_unincluded_children false
 \language english
-\language_package default
+\language_package none
 \inputencoding auto
-\fontencoding global
+\fontencoding default
 \font_roman "default" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
@@ -38,22 +26,21 @@ theorems-ams-extended
 \output_sync 0
 \bibtex_command default
 \index_command default
-\float_placement h
 \paperfontsize default
 \spacing single
 \use_hyperref false
 \papersize default
 \use_geometry false
 \use_package amsmath 1
-\use_package amssymb 1
-\use_package cancel 1
+\use_package amssymb 0
+\use_package cancel 0
 \use_package esint 1
-\use_package mathdots 1
-\use_package mathtools 1
-\use_package mhchem 1
-\use_package stackrel 1
-\use_package stmaryrd 1
-\use_package undertilde 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
 \cite_engine basic
 \cite_engine_type default
 \biblio_style plain
@@ -62,7 +49,7 @@ theorems-ams-extended
 \paperorientation portrait
 \suppress_date false
 \justification true
-\use_refstyle 1
+\use_refstyle 0
 \index Index
 \shortcut idx
 \color #008000
@@ -84,6 +71,12 @@ theorems-ams-extended
 
 \begin_body
 
+\begin_layout Standard
+
+\lang english
+
+\end_layout
+
 \begin_layout Section
 Kegel
 \end_layout
@@ -101,12 +94,10 @@ Sei
 \begin_inset Formula $X\subseteq H$
 \end_inset
 
- abgeschlossene Unterprävarietät.
-\begin_inset Formula 
-\[
+ abgeschlossene Unterprävarietät. 
+\begin_inset Formula \[
 \overline{X,p}:=\bigcup_{q\in X}\overline{qp}
 \]
-
 \end_inset
 
 
@@ -129,8 +120,7 @@ Kegel von
 \begin_inset Formula $\mathbb{P}^{n}(k)$
 \end_inset
 
-.
- Ohne Einschränkung:
+. Ohne Einschränkung:
 \begin_inset Formula $H=V_{+}(X_{n})$
 \end_inset
 
@@ -143,30 +133,17 @@ Kegel von
 \end_inset
 
 .) Für 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-format
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Formula 
-\begin{align*}
+\begin_inset Formula \begin{align*}
 X=V_{+}(f_{1},\ldots,f_{m})\subseteq\mathbb{P}^{n-1}(k)=H, & \quad f_{i}\in k[X_{0},\ldots,X_{n-1}]\\
 \Rightarrow X,p=V_{+}(\tilde{f}_{1},\ldots,\tilde{f}_{m})\subseteq\mathbb{P}^{n}(k), & \quad\tilde{f}_{i}\in k[X_{0},\ldots,X_{n}]
 \end{align*}
-
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-Verallgemeinerung.
- Sei 
+Verallgemeinerung. Sei 
 \begin_inset Formula $\mathbb{P}^{n}(k)\cong\Lambda\subseteq\mathbb{P}^{n}(k)$
 \end_inset
 
@@ -174,8 +151,7 @@ Verallgemeinerung.
 \begin_inset Formula $\psi\subseteq\mathbb{P}^{n}(k)$
 \end_inset
 
- komplementärer linearer Unterraum, d.h.
- 
+ komplementärer linearer Unterraum, d.h. 
 \begin_inset Formula $\Lambda\cap\psi=\emptyset$
 \end_inset
 
@@ -195,8 +171,7 @@ Verallgemeinerung.
 \begin_inset Formula $\psi$
 \end_inset
 
- enthält.
- 
+ enthält. 
 \begin_inset Formula $X\subseteq\psi$
 \end_inset
 
@@ -252,21 +227,19 @@ Sei char
 \begin_inset Formula $(k)\neq2$
 \end_inset
 
- in diesem Abschnitt.
-\end_layout
-
-\begin_layout Definition
-\begin_inset Argument 1
-status open
+ in diesem Abschnitt. 
+\begin_inset ERT
+status collapsed
 
 \begin_layout Plain Layout
-orig.
- 57
+
+\backslash
+begin{defn}
 \end_layout
 
 \end_inset
 
-Eine abgeschlossene Unterprävarietät 
+[orig. 57] Eine abgeschlossene Unterprävarietät 
 \begin_inset Formula $Q\subseteq\mathbb{P}^{n}(k)$
 \end_inset
 
@@ -282,18 +255,16 @@ Eine abgeschlossene Unterprävarietät
 \series bold
 Quadrik
 \series default
-.
-\begin_inset Formula 
-\[
+. 
+\begin_inset Formula \[
 Q=V_{+}(q)
 \]
-
 \end_inset
 
 
 \end_layout
 
-\begin_layout Definition
+\begin_layout Standard
 Zur quadratischen Form 
 \begin_inset Formula $q$
 \end_inset
@@ -307,17 +278,15 @@ Zur quadratischen Form
 \end_inset
 
 , 
-\begin_inset Formula 
-\[
+\begin_inset Formula \[
 \beta(v,w):=\frac{1}{2}(q(v+w)-q(v)-q(w)),\quad v,w\in k^{n+1}
 \]
-
 \end_inset
 
 
 \end_layout
 
-\begin_layout Definition
+\begin_layout Standard
 Es gibt eine Basis von 
 \begin_inset Formula $k^{n+1}$
 \end_inset
@@ -330,9 +299,8 @@ Es gibt eine Basis von
 \begin_inset Formula $\beta$
 \end_inset
 
- die Gestalt
-\begin_inset Formula 
-\[
+ die Gestalt 
+\begin_inset Formula \[
 B=\begin{pmatrix}\begin{array}{ccc}
 1\\
  & \ddots\\
@@ -345,71 +313,67 @@ B=\begin{pmatrix}\begin{array}{ccc}
 \end{array}
 \end{pmatrix}
 \]
-
 \end_inset
 
 
 \end_layout
 
-\begin_layout Definition
-hat, d.h.
- Koordinatenwechsel zur Basiswechselmatrix liefert 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Diagonalisierbarkeit symmetrischer Matrizen
-\end_layout
-
-\end_inset
-
-einen Isomorphismus
-\begin_inset Formula 
-\[
+\begin_layout Standard
+hat, d.h. Koordinatenwechsel zur Basiswechselmatrix liefert einen Isomorphismus 
+\begin_inset Formula \[
 Q\xrightarrow{\cong}V_{+}(X_{0}^{2}+\cdots+X_{r-1}^{2}),\quad r=\text{rg }B
 \]
-
 \end_inset
 
 
-\end_layout
-
-\begin_layout Lemma
-\begin_inset Argument 1
-status open
+\begin_inset ERT
+status collapsed
 
 \begin_layout Plain Layout
-orig.
- 58
+
+\backslash
+end{defn}
 \end_layout
 
 \end_inset
 
-
-\begin_inset Note Note
-status open
+ 
+\begin_inset ERT
+status collapsed
 
 \begin_layout Plain Layout
-TODO
+
+\backslash
+begin{lem}
 \end_layout
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Proposition
-\begin_inset Argument 1
-status open
+[orig. 58] 
+\begin_inset ERT
+status collapsed
 
 \begin_layout Plain Layout
-orig.
- 59
+
+\backslash
+end{lem}
 \end_layout
 
 \end_inset
 
-Ist 
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{prop}
+\end_layout
+
+\end_inset
+
+[orig. 59] Ist 
 \begin_inset Formula $r\neq s$
 \end_inset
 
@@ -421,11 +385,31 @@ Ist
 \begin_inset Formula $V_{+}(T_{0}^{2}+\cdots+T_{s-1}^{2})$
 \end_inset
 
- nicht isomorph.
+ nicht isomorph. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{prop}
 \end_layout
 
-\begin_layout Proof
-(später: Es gibt keinen Koordinatenwechsel von 
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ (später: Es gibt keinen Koordinatenwechsel von 
 \begin_inset Formula $\mathbb{P}^{n}(k)$
 \end_inset
 
@@ -433,12 +417,19 @@ Ist
 \begin_inset Formula $\mathbb{P}^{n}(k)$
 \end_inset
 
-.)
+.) 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{defn}
 \end_layout
 
-\begin_deeper
-\begin_layout Definition
-Eine Quadrik 
+\end_inset
+
+ Eine Quadrik 
 \begin_inset Formula $Q\subseteq\mathbb{P}^{n}(k)$
 \end_inset
 
@@ -458,10 +449,34 @@ Eine Quadrik
 \begin_inset Formula $r$
 \end_inset
 
-.
- (nach Satz eindeutig!)
+. (nach Satz eindeutig!)
+\lang ngerman
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{defn}
 \end_layout
 
-\end_deeper
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
