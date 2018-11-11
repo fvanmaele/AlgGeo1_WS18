@@ -1,6 +1,8 @@
 
-\section{Funktionenkörper einer Prävarietät}\label{sec:funktionenkorper-praevarietaet}
-\begin{defn}[orig. 43]\label{def:funktionenkoerper-praevarietaet}
+\section{Funktionenkörper einer Prävarietät}
+\label{sec:funktionenkorper-praevarietaet}
+\begin{defn}[orig. 43]
+\label{def:funktionenkoerper-praevarietaet}
 Für eine Prävarietät $X$ sind die rationalen Funktionenkörper aller
 nicht-leeren affin-offenen Teilmengen in natürlicher Weise zu einander
 isomorph. Diesen Körper $K(X)$ nennen wir den \textbf{rationalen Funktionenkörper}von $X$.
@@ -20,7 +22,8 @@ Nach Definition von $\mathcal{O}_{X}$ ist
 Das impliziert $\text{Quot}(\mathcal{O}_{X}(U\cap V))=K(U)$. Aus
 Symmetriegründen ist aber damit auch bereits $K(V)=\text{Quot}(\mathcal{O}_{X}(U\cap V))$.
 \end{proof}
-\begin{rem}[orig. 44]\label{rem:funktionenkoerper-nicht-funktoriell}
+\begin{rem}[orig. 44]
+\label{rem:funktionenkoerper-nicht-funktoriell}
 Bildung des des Funktionenkörpers $K(\cdot)$ ist \textbf{nicht} funktoriell!
 Für $X\rightarrow Y$ Morphismus affiner Varietäten ist die Abbildung
 auf den Koordinatenringen $\Gamma(Y)\rightarrow\Gamma(X)$ i.A. \textbf{nicht}
@@ -67,10 +70,30 @@ $\Rightarrow f^{-1}(0)=U$
 $\Rightarrow f\equiv0$.
 \item[(i)] $U\supseteq W$ affin-offene Untervarietät.
 \[
-\xymatrix{\mathcal{O}_{X}(W)\ar@{^{(}->}[r] & K(W)\ k\text{-Algebren}\\
-\mathcal{O}_{X}(U)\ar@{^{(}->}[u]
-}
+\begin{tikzcd}
+ \mathcal{O}_{X}(W) \arrow[r, hook] & K(W) \text{ } k\text{-Algebren} \\
+ \mathcal{O}_{X}(U) \arrow[u, hook] \arrow[ru, dashed, hook]
+\end{tikzcd}
 \]
-\item[(iii)] TODO.
+\item[(iii)] Wir haben folgendes kommutatives Diagramm:
+
+\[
+\begin{tikzcd}
+ {} & \mathcal{O}_{X}(U) \arrow[rd, hook] \\
+ \mathcal{O}_{X}(U \cup V) \arrow[ur, hook] \arrow[rd, hook'] & {} & \mathcal{O}_{X}(U \cap V) \\
+ {} & \mathcal{O}_{X}(V) \arrow[ru, hook']
+\end{tikzcd}
+\]
+Nach dem Verklebungsaxiom ist die Sequenz
+\[
+\begin{tikzcd}
+  0 \arrow[r] & \mathcal{O}_{X}(U\cup V) \arrow[r] & \mathcal{O}_{X}(U) \times \mathcal{O}_{X}(V) \arrow[r] & \mathcal{O}_{X}(U \cap V) \\
+  {} & f \arrow[r, mapsto] & (f|_{U}, f|_{V}) & {} \\
+  {} & {} & (g,h) \arrow[r, mapsto] & g|_{U \cap V} - h|_{U \cap V}
+\end{tikzcd}
+\]
+exakt.
+
+
 \end{proof}
 
