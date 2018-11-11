@@ -2,7 +2,7 @@
 //
 // Format:
 // * <Part>[1..9]<Theorem>[001..999],<Label> for a theorem label;
-// * <Part>[1..9]000,<Label> for a section label.
+// * <Part>[1..9]S<Section>[01..99],<Label> for a section label.
 //
 // Assumptions (.tex file):
 // * definitions, theorems, etc. are labeled contiguously, not by section;
