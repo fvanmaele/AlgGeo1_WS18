@@ -1,33 +1,33 @@
 
-\section{Korrespondenz zwischen Radikalidealen und affinen algebraischen Mengen}
+\section{Korrespondenz zwischen Radikalidealen und affinen algebraischen Mengen}\label{sec:radikalideale-und-algebraische-mengen}
 
-Sei $V(\mathfrak{A})\subseteq\mathbb{A}^{n}(k)$ affin algebraische
-Menge, $\mathfrak{A}\subset k[\underline{T}]$.\textbf{ Es gilt:}
+Sei $V(\mathfrak{a})\subseteq\mathbb{A}^{n}(k)$ affin algebraische
+Menge, $\mathfrak{a}\unlhd k[\underline{T}]$ ein Ideal.\textbf{ Es gilt:}
 \[
-V(\mathfrak{A})=V(\rad\mathfrak{A})
+V(\mathfrak{a})=V(\rad\mathfrak{a})
 \]
 
-mit $\rad\mathfrak{A}=\{f\in k[\underline{T}]\mid f^{n}\in\mathfrak{A}\text{ für }n>0\}$,
+mit $\rad\mathfrak{a}=\{f\in k[\underline{T}]\mid f^{n}\in\mathfrak{a}\text{ für ein }n>0\}$,
 da
 \[
 f^{n}(x)=0\Leftrightarrow f(x)=0,
 \]
 
 d.h. verschiedene Ideale können dieselbe algebraische Menge beschreiben.
-\begin{defn}
+\begin{defn}\label{def:verschwindungsideal}
 Für eine Teilmenge $Z\subseteq\mathbb{A}^{n}(k)$ bezeichne
 \[
-I(Z)=\{f\in k[\underline{T}]\mid f(x)=0\ \forall x\in Z\}
+I(Z):=\{f\in k[\underline{T}]\mid f(x)=0\ \forall x\in Z\}
 \]
 
-das Ideal aller auf $Z$ verschwindenden Polynomfunktionen.
+das \textbf{Verschwindungsideal von Z}, das Ideal aller auf $Z$ verschwindenden Polynomfunktionen.
 \end{defn}
-\begin{prop}
+\begin{prop}\label{prop:verschwindungsmenge-verschwindungsideal}
 \mbox{}
 \begin{enumerate}
-\item Sei $\mathfrak{A}\subset k[\underline{T}]$ Ideal. Dann ist $I(V(\mathfrak{A}))=\rad(\mathfrak{A})$.
+\item Sei $\mathfrak{a}\unlhd k[\underline{T}]$ Ideal. Dann ist $I(V(\mathfrak{a}))=\rad(\mathfrak{a})$.
 \item Sei $Z\subseteq\mathbb{A}^{n}(k)$ Teilmenge. Dann ist $V(I(Z))=\overline{Z}$,
-der Abschluss von $Z$.
+der Abschluss von $Z$ in $\mathbb{A}^{n}(k)$.
 \end{enumerate}
 \end{prop}
 \begin{proof}
@@ -35,15 +35,15 @@ der Abschluss von $Z$.
 \end{proof}
 \medskip{}
 
-$\mathfrak{A}$ heißt \textbf{Radikalideal}\index{Radikalideal},
-wenn $\mathfrak{A}=\rad(\mathfrak{A})$, oder äquivalent wenn $k[\underline{T}]/\mathfrak{A}$
-\emph{reduziert} ist, d.h. keine nilpotente Elemente hat.
-\begin{cor}
+$\mathfrak{a}$ heißt \textbf{Radikalideal}\index{Radikalideal},
+falls $\mathfrak{a}=\rad(\mathfrak{a})$, oder äquivalent falls $k[\underline{T}]/\mathfrak{a}$
+\emph{reduziert} ist, d.h. keine nilpotente Elemente ungleich $0$ hat.
+\begin{cor}\label{korrespondenz-radikalideal-abgeschlossene-mengen}
 Wir erhalten eine 1-1 Korrespondenz
 \begin{align*}
-\{\text{abg. Mengen }\subseteq\mathbb{A}^{n}\} & \leftrightarrow\{\text{Radikalideale }\mathfrak{A}\subset k[\underline{T}]\}\\
+\{\text{abg. Mengen }\subseteq\mathbb{A}^{n}\} & \leftrightarrow\{\text{Radikalideale }\mathfrak{a}\unlhd k[\underline{T}]\}\\
 Z & \mapsto I(Z)\\
-V(\mathfrak{A}) & \mapsfrom\mathfrak{A}
+V(\mathfrak{a}) & \mapsfrom\mathfrak{a}
 \end{align*}
 
 die sich zu einer 1-1 Korrespondenz
