@@ -34,6 +34,3 @@ Das Skript wird aus Zeitgründen halbautomatisch mit
 [LyX](https://www.lyx.org/) gesetzt. Die verschiedenen Kapitel (in
 `.tex` Format) können aber mit einem üblichen LaTeX-Editor verändert
 werden.
-
-*Für Fortgeschrittene:* Angaben in `man 1 tex2lyx` beachten, sodass
-die `.tex` Datei korrekt nach `.lyx` umgewandelt wird.
