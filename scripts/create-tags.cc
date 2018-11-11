@@ -113,7 +113,10 @@ int main (int argc, char* argv[]) {
 	  if (wait_for_section_label)
 	    {
 	      wait_for_section_label = false;
-	      std::cout << part_counter << "000," << label << std::endl; 
+	      std::cout << part_counter << "S"
+			<< std::setfill('0') << std::setw(2)
+			<< section_counter << ","
+			<< label << std::endl; 
 	    }	      
 	  if (in_block)
 	    {
