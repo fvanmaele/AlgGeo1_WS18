@@ -1,13 +1,14 @@
 
 \section{Definition des projektiven Raumes}
+\label{sec:def-projektiver-raum}
 
-Sei $X_{1}=X_{2}=\mathbb{A}^{1}$, $\tilde{U}_{1}\subseteq X_{1}=\tilde{U}_{2}\subseteq X_{2}=\mathbb{A}\backslash\{0\}$.
+Seien $X_{1}=X_{2}=\mathbb{A}^{1}$, $\tilde{U}_{1}\subseteq X_{1}, \tilde{U}_{2}\subseteq X_{2}$ mit $\tilde{U}_{1} = \tilde{U}_{2} = \mathbb{A}^{1}\setminus\{0\}$.
 \begin{align*}
 \tilde{U}_{1} & \overset{\sim}{\longrightarrow}\tilde{U}_{2}\\
 x & \longmapsto\frac{1}{x}
 \end{align*}
 
-Verkleben von $X_{1}$ und $X_{2}$ entlang $\tilde{U}_{1}$ und $\tilde{U}_{2}$
+Verkleben von $X_{1}$ und $X_{2}$ entlang $\tilde{U}_{1} \overset{\sim}\longrightarrow \tilde{U}_{2}$ liefert die \textbf{projektive Gerade}
 
 \[
 \mathbb{P}^{1}=\mathbb{A}^{1}\cup\{\infty\}=U_{1}\cup U_{2}.
@@ -19,46 +20,46 @@ Allgemein:
 \]
 
 \textbf{Idee}: $\mathbb{P}^{2}\supseteq\mathbb{A}^{2}$: Zwei verschiedene
-Geraden in $\mathbb{P}^{2}$ schneiden sich genau in einem Punkt.\textbf{
-Als Menge}:
+Geraden in $\mathbb{P}^{2}$ schneiden sich genau in einem Punkt.
+
+\textbf{Als Menge}:
 \begin{align*}
-\mathbb{P}^{n}(k): & =\{\text{Ursprungsgeraden in }k^{n+1}\}=\{1\text{-dim. }k\text{-UVR}\}\\
+\mathbb{P}^{n}(k): & =\{\text{Ursprungsgeraden in }k^{n+1}\}=\{1\text{-dim. }k\text{-Unterräume}\}\\
  & =(k^{n+1}\backslash\{0\})/k^{\times}
 \end{align*}
 
-Repräsentanten dieser Klasse entsprechen: 
-\[
-\langle(x_{0},\ldots x_{n})\rangle_{k\text{-linear}}\longmapsfrom(x_{0}:\ldots:x_{n})
-\]
+Man schreibt meist kurz $(x_{0}:\ldots:x_{n})$ für den Repräsentanten der Klasse von $\langle(x_{0},\ldots x_{n})\rangle_{k}$ und nennt $(x_{0}:\ldots:x_{n})$ \textbf{homogene Koordinaten} auf $\mathbb{P}^{n}$.
+
 
 \emph{Äquivalenzrelation}: 
 \[
 (x_{0},\ldots,x_{n})\sim(x_{0}',\ldots,x_{n}')\Leftrightarrow\exists\lambda\in k^{\times}\ \text{mit}\ x_{i}=\lambda x_{i}'\ \forall i.
 \]
- 
-
-\textbf{Bezeichne} Klassen $(x_{0}:\ldots:x_{n})$, $x_{i}$ \textbf{homogene}
-Koordinaten auf $\mathbb{P}^{n}$
+Die Mengen
 \[
-U_{i}:=\{(x_{0}:\cdots:x_{n})\in\mathbb{P}^{n}\mid x_{i}\neq0\}\subseteq\mathbb{P}^{n}(k),\ 0\leq i\leq n
+U_{i}:=\{(x_{0}:\ldots:x_{n})\in\mathbb{P}^{n}\mid x_{i}\neq0\}\subseteq\mathbb{P}^{n}(k),\ 0\leq i\leq n
 \]
 
-ist wohldefiniert $\Leftrightarrow x_{i}=1$.
+sind wohldefiniert und überdecken $\mathbb{P}^{n}(k)$:
 \[
 \mathbb{P}^{n}(k)=\bigcup_{i=0}^{n}U_{i}
 \]
 
-Einen Isomorphismus 
+Weiter hat man eine Bijektion
 \begin{align*}
-U_{i} & \stackrel[\chi_{i}]{\cong}{\longrightarrow}\mathbb{A}^{n}(k)\\
+U_{i} & \stackrel[1:1]{\kappa_{i}}{\longrightarrow}\mathbb{A}^{n}(k)\\
 (x_{0}:\ldots:x_{n}) & \longmapsto\left(\frac{x_{0}}{x_{i}},\ldots,\frac{\hat{x}_{i}}{x_{i}},\ldots,\frac{x_{n}}{x_{i}}\right)\\
 (t_{0}:\cdots t_{i-1}:1:t_{i+1}:\cdots t_{n}) & \longmapsfrom(t_{0},\ldots,\hat{t}_{i},\ldots,t_{n})
 \end{align*}
 
-$U\subseteq\mathbb{P}^{n}$ ist genau dann offen, wenn $\kappa_{i}(U\cap U_{i})\subseteq\mathbb{A}^{n}$
-offen ist. Beachte: der Durchschnitt 
+Über die $\kappa_{i}$ definiert man nun eine Topologie auf $\mathbb{P}^{n}(k)$ durch:
+
+$U\subseteq\mathbb{P}^{n}(k)$ ist genau dann offen, wenn $\kappa_{i}(U\cap U_{i})\subseteq\mathbb{A}^{n}(k)$
+offen ist für alle $i$. 
+
+Es gilt: 
 \[
-U_{i}\cap U_{j}=\mathcal{D}(T_{j})\subseteq U_{i}\text{ offen},\ i\neq j
+U_{i}\cap U_{j}= D(T_{j})\subseteq U_{i}\text{ offen},\ i\neq j
 \]
 
 wenn auf $U_{i}\cong\mathbb{A}^{n}$ die Koordinaten $T_{0},\ldots,\hat{T}_{i},\ldots,T_{n}$
@@ -66,27 +67,28 @@ verwendet werden. Damit wird $\mathbb{P}^{n}(k)$ zu einem topologischen
 Raum, der durch die $U_{i}$, $0\leq i\leq n$, offen überdeckt wird.
 
 \subsection{Reguläre Funktionen}
+\label{subsec:regulaere-fkt-auf-projektivem-raum}
 
 Sei $U\subseteq\mathbb{P}^{n}(k)$ eine beliebige offene Teilmenge.
-Die regularären Funktionen auf $U$ sind
+Die regularären Funktionen auf $U$ sind definiert als
 \[
-\mathcal{O}_{\mathbb{P}^{n}}(U)=\{f\in\text{Abb}(U,k)\mid f|_{U\cap U_{i}}\in\mathcal{O}_{U_{i}}(U\cap U_{i})\}\qquad\forall i\in\{0,\ldots,n\}
+\mathcal{O}_{\mathbb{P}^{n}}(U) :=\{f\in\text{Abb}(U,k)\mid f|_{U\cap U_{i}}\in\mathcal{O}_{U_{i}}(U\cap U_{i})\}\qquad\forall i\in\{0,\ldots,n\}
 \]
 
-Dabei ist implizit verstanden, dass wir via $\kappa_{i}$ die $U_{i}$
-als Raum mit Funktionen auffassen. Dabei erhalten wir insgesamt:
+wobei wir die $U_{i}$ via $\kappa_{i}$ implizit als Raum mit Funktionen auffassen. Insgesamt erhalten wir:
 \[
 \mathbb{P}^{n}(k)=(\mathbb{P}^{n}(k),\mathcal{O}_{\mathbb{P}^{n}})
 \]
 
 als Raum mit Funktionen.
 \begin{prop}[orig 51]
+\label{prop:charakterisierung-reg-fkt-projektiver-raum}
 Für $U\subseteq\mathbb{P}^{n}$ offen gilt: $\mathcal{O}_{\mathbb{P}^{n}}(U)=\{f:U\rightarrow k\mid\forall x\in U$:
-existiert $x\in V\subseteq U$ offen und $g,h\in k[X_{0},\ldots,X_{n}]$
-homogen vom selben Grad, d.d. $\forall v\in V$: $h(v)\neq0$ und
-$f(v)=\frac{g(v)}{h(v)}$.\} 
+ $\exists x\in V\subseteq U$ offen, $d\geq 0$ und $g,h\in k[X_{0},\ldots,X_{n}]_{d}$
+homogen vom selben Grad $d$, d.d. $\forall v\in V$: $h(v)\neq0$ und
+$f(v)=\frac{g(v)}{h(v)}\}$ 
 \end{prop}
-Wohldefiniertheit: Sei $V=(x_{0}:\ldots:x_{n})$.
+Wohldefiniertheit: Sei $v=(x_{0}:\ldots:x_{n})$.
 \[
 f(\lambda x_{0},\ldots,\lambda x_{n})=\frac{g(\lambda x_{0},\ldots,\lambda x_{n})}{h(\lambda x_{0},\ldots,\lambda x_{n})}=\frac{\lambda^{d}g(x_{0},\ldots,x_{n})}{\lambda^{d}h(x_{0},\ldots,x_{n})}=f(x_{0},\ldots,x_{n})
 \]
@@ -94,7 +96,7 @@ f(\lambda x_{0},\ldots,\lambda x_{n})=\frac{g(\lambda x_{0},\ldots,\lambda x_{n}
 \begin{proof}
 \mbox{}
 \begin{itemize}
-\item[,,$\subseteq$``] Sei $f\in\mathcal{O}_{\mathbb{P}^{n}}(U)$. Dann ist $f|_{U\cap U_{i}}\in\mathcal{O}_{U_{i}}(U\cap U_{i})$.
+\item[,,$\subseteq$``:] Sei $f\in\mathcal{O}_{\mathbb{P}^{n}}(U)$. Dann ist $f|_{U\cap U_{i}}\in\mathcal{O}_{U_{i}}(U\cap U_{i})$.
 Es folgt:
 \[
 f=\frac{\tilde{g}}{\tilde{h}},\ \tilde{g},\tilde{h}\in k[T_{0},\ldots,\hat{T}_{i},\ldots,T_{n}]
@@ -105,28 +107,28 @@ g:=\psi_{i}^{d}(\tilde{g}),\ h:=\psi_{i}^{d}(\tilde{h})
 \]
 $\Rightarrow f=\frac{g}{h}$ lokal. 
 \begin{align*}
-f(x) & =\frac{\tilde{g}}{\tilde{h}}(\chi_{i}(x))\\
+f(x) & =\frac{\tilde{g}}{\tilde{h}}(\kappa_{i}(x))\\
 f((x_{0}:\cdots:x_{n})) & =\frac{\tilde{g}\left(\frac{x_{0}}{x_{i}},\ldots,\frac{\hat{x_{i}}}{x_{i}},\ldots,\frac{x_{n}}{x_{i}}\right)}{\tilde{h}\left(\frac{x_{0}}{x_{i}},\ldots,\frac{\hat{x_{i}}}{x_{i}},\ldots,\frac{x_{n}}{x_{i}}\right)}\\
- & =\frac{x_{i}^{d}\tilde{g}()}{x_{i}^{d}\tilde{h}()}\\
- & =\frac{\psi_{i}^{d}(\tilde{g})()}{\psi_{i}^{d}(\tilde{h})()}=\frac{g}{h}((x_{0}:\cdots:x_{n}))
+ & =\frac{x_{i}^{d}\tilde{g}(\ldots)}{x_{i}^{d}\tilde{h}(\ldots)}\\
+ & =\frac{\psi_{i}^{d}(\tilde{g})(\ldots)}{\psi_{i}^{d}(\tilde{h})(\ldots)}=\frac{g}{h}(x_{0}:\ldots:x_{n})
 \end{align*}
-\item[,,$\supseteq$``] Sei $f$ in der rechten Menge: fixiere $i\in\{0,\ldots,n\}$ lokal
-auf $U\cap U_{i}$ mit $f$ nach Voraussetzung in der Form $\frac{g}{h}$,
-$g,h\in k[X_{0},\ldots,X_{n}]_{d}$, $d$ geignet. Definiere:
+\item[,,$\supseteq$``:] Sei $f$ in der rechten Menge, fixiere $i\in\{0,\ldots,n\}$. Nach Voraussetzung ist $f$ lokal
+auf $U\cap U_{i}$ von der Form $f = \frac{g}{h}$, $g,h\in k[X_{0},\ldots,X_{n}]_{d}$, $d\geq 0$ geeignet. Definiere:
 \[
-\tilde{g}_{i}:=\frac{g}{X_{i}^{d}},\ \tilde{h}:=\frac{h}{X_{i}^{d}}\in k\left[\frac{X_{0}}{X_{i}},\ldots\frac{\hat{X_{i}}}{X_{i}},\ldots,\frac{X_{n}}{X_{i}}\right]
+\tilde{g}_{i}:=\frac{g}{X_{i}^{d}},\ \tilde{h}:=\frac{h}{X_{i}^{d}}\in k\left[\frac{X_{0}}{X_{i}},\ldots\hat{\frac{X_{i}}{X_{i}}},\ldots,\frac{X_{n}}{X_{i}}\right]
 \]
-$\Rightarrow f$ ist lokal der Form: $\frac{\tilde{g}}{\tilde{h}}$,
+$\Rightarrow f$ ist lokal von der Form: $\frac{\tilde{g}}{\tilde{h}}$,
 $\tilde{g},$$\tilde{h}\in k[T_{0},\ldots,\hat{T_{i}},\ldots T_{n}]$.
 
-$\Rightarrow f|_{U\cap U_{i}}\in\mathcal{O}_{U_{i}}(U\cap U_{i})$.
+$\Rightarrow f|_{U\cap U_{i}}\in\mathcal{O}_{U_{i}}(U\cap U_{i})$, also $f \in \mathcal{O}_{\mathbb{P}^{n}}(U)$.
 
 \end{itemize}
 \end{proof}
 \begin{cor}[orig. 52]
+\label{cor:affine-ueberdeckung-des-projektiven-raumes}
 Für $i\in\{0,\ldots,n\}$ induziert
 \[
-U:\xrightarrow[\cong]{\chi_{i}}\mathbb{A}^{n}(k)
+U\xrightarrow[\cong]{\kappa_{i}}\mathbb{A}^{n}(k)
 \]
 
 einen Isomorphismus
@@ -138,30 +140,30 @@ von Räumen mit Funktionen. Insbesondere ist $\mathbb{P}^{n}(k)$ eine
 Prävarietät.
 \end{cor}
 \begin{proof}
-Zu zeigen: $\forall U\subset U_{i}$ offen gilt:
+Zu zeigen: $\forall U\subseteq U_{i}$ offen gilt
 \[
 \mathcal{O}_{\mathbb{P}^{n}(k)}(U)=\mathcal{O}_{U_{i}}(U)=\{f:U\rightarrow k\mid f\in\mathcal{O}_{U_{i}}(U)\}
 \]
 
 d.h. auf der rechten Seite muss die Bedingung nur für das fixierte
-$i$ überprüft werden. Dies folgt aus den Beweis des Satzes.
+$i$ überprüft werden. Dies folgt aus dem Beweis von Satz \ref{prop:charakterisierung-reg-fkt-projektiver-raum}.
 \end{proof}
-Damit identifizieren die Funktionenkörper 
+Damit identifizieren sich die Funktionenkörper 
 \[
 K(\mathbb{P}^{n}(k))=K(U_{i})=k\left(\frac{X_{0}}{X_{i}},\ldots,\frac{X_{n}}{X_{i}}\right)
 \]
 
 \begin{prop}[orig. 53]
+\label{prop:globale-schnitte-des-proj-raums}
 $\mathcal{O}_{\mathbb{P}^{n}(k)}(\mathbb{P}^{n}(k))=k$. Insbesondere
 ist $\mathbb{P}^{n}$ für $n\geq1$ \textbf{keine} affine Varietät.
-(Da der $k$-Algebra $k$ ja $\mathbb{A}^{0}(k)=\{\text{pt}\}$ als
+(Da der $k$-Algebra $A = k$ ja $\mathbb{A}^{0}(k)=\{\text{pt}\}$ als
 affine Varietät entspricht.)
 \end{prop}
 \begin{proof}
-$k\subseteq\mathcal{O}_{\mathbb{P}^{n}(k)}(\mathbb{P}^{n}(k))$ konstante
-Funktionen klar. Nach Satz 45 (iii) gilt:
+$k\subseteq\mathcal{O}_{\mathbb{P}^{n}(k)}(\mathbb{P}^{n}(k))$ klar, da konstante Funktionen. Nach Satz \ref{prop:charakterisierung-schnitte-praevarietaet} $(iii)$ gilt:
 \begin{align*}
-\mathcal{O}_{\mathbb{P}^{n}}(\mathbb{P}^{n}) & =\bigcap_{i=0}^{n}\mathcal{O}_{\mathbb{P}^{n}}(U_{i})\subset K(\mathbb{P}^{n}(k))\\
+\mathcal{O}_{\mathbb{P}^{n}}(\mathbb{P}^{n}) & =\bigcap_{i=0}^{n}\mathcal{O}_{\mathbb{P}^{n}}(U_{i})\subseteq K(\mathbb{P}^{n}(k))\\
  & =\bigcap_{i=0}^{n}k[t_{0},\ldots,\hat{t_{i}},\ldots,t_{n}]=k
 \end{align*}
 \end{proof}
