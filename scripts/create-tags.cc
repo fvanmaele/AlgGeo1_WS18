@@ -14,9 +14,27 @@
 #include <fstream>
 #include <iostream>
 #include <iomanip>
+#include <cmath>
 
 bool grep_str(const std::string &line, const std::string &pat) {
   return line.find(pat) != std::string::npos;
+}
+
+void print_tag(std::string prefix, std::string label,
+               int counter, char f = '0') {
+  // available characters for counter
+  int len = 4 - prefix.length();
+
+  if (len < 1) {
+    throw std::out_of_range("tag can only contain 4 characters");
+  }
+  if (counter > std::pow(10, len)-1) {
+    throw std::out_of_range("counter too large for tag");
+  }
+
+  std::cout << prefix  << std::setfill(f) << std::setw(len)
+            << counter << ","
+            << label   << std::endl;
 }
 
 int main (int argc, char* argv[]) {
@@ -40,8 +58,12 @@ int main (int argc, char* argv[]) {
   std::string line{};
   bool in_block{};
   bool in_section{};
+  bool in_subsection{};
+  bool in_subsubsection{};
   bool wait_for_label{};
   bool wait_for_section_label{};
+  bool wait_for_subsection_label{};
+  bool wait_for_subsubsection_label{};
 
   int part_counter{};
   int section_counter{};
@@ -52,28 +74,26 @@ int main (int argc, char* argv[]) {
   while (std::getline(fs, line)) {
     // check for begin or end of latex block
     if (grep_str(line, "\\begin{thm}")
-	|| grep_str(line, "\\begin{example}")
-	|| grep_str(line, "\\begin{defn}")
-	|| grep_str(line, "\\begin{prop}")
-	|| grep_str(line, "\\begin{cor}")
-	|| grep_str(line, "\\begin{lem}")
-	|| grep_str(line, "\\begin{rem}"))
+        || grep_str(line, "\\begin{example}")
+        || grep_str(line, "\\begin{defn}")
+        || grep_str(line, "\\begin{prop}")
+        || grep_str(line, "\\begin{cor}")
+        || grep_str(line, "\\begin{lem}")
+        || grep_str(line, "\\begin{rem}"))
       {
-	if (wait_for_section_label) {
-	  // if a section has been defined, require a label first
-	  throw std::logic_error("\\section: label not defined");
-	}
-
-	in_block = true;
-	wait_for_label = true;
-	block_counter++;
+        if (wait_for_section_label) {
+          // if a section has been defined, require a label first
+          throw std::logic_error("\\begin: label undefined (\\section)");
+        }
+        in_block = true;
+        wait_for_label = true;
+        block_counter++;
       }
     else if (grep_str(line, "\\end")) {
       if (wait_for_label) {
-	// block label was not defined
-	throw std::logic_error("\\end: label not defined");
+        // block label was not defined
+        throw std::logic_error("\\end: label undefined (\\begin)");
       }
-
       in_block = false;
     }
     else if (grep_str(line, "\\part{")) {
@@ -91,9 +111,24 @@ int main (int argc, char* argv[]) {
       subsubsection_counter = 0;
     }
     else if (grep_str(line, "\\subsection{")) {
+      if (wait_for_section_label) {
+        throw std::logic_error("\\subsection: label undefined (\\section)");
+      }
+      in_subsection = true;
+      wait_for_subsection_label = true;
+
       subsection_counter++;
     }
     else if (grep_str(line, "\\subsubsection{")) {
+      if (wait_for_section_label) {
+        throw std::logic_error("\\subsubsection: label undefined (\\section)");
+      }
+      if (wait_for_subsection_label) {
+        throw std::logic_error("\\subsubsection: label undefined (\\subsection)");
+      }
+      in_subsubsection = true;
+      wait_for_subsubsection_label = true;
+
       subsubsection_counter++;
     }
     else if (grep_str(line, "\\label{")) {
@@ -101,19 +136,28 @@ int main (int argc, char* argv[]) {
       std::string label = line.substr(7, line.size()-8);
 
       if (wait_for_section_label) {
-	wait_for_section_label = false;
-	std::cout << part_counter << "S"
-		  << std::setfill('0') << std::setw(2)
-		  << section_counter << ","
-		  << label << std::endl;
-      }
+        wait_for_section_label = false;
 
+        std::string prefix = std::to_string(part_counter) + "S";
+        print_tag(prefix, label, section_counter);
+      }
+      if (wait_for_subsection_label) {
+        wait_for_subsection_label = false;
+
+        std::string prefix = std::to_string(part_counter) + "T";
+        print_tag(prefix, label, subsection_counter);
+      }
+      if (wait_for_subsubsection_label) {
+        wait_for_subsubsection_label = false;
+
+        std::string prefix = std::to_string(part_counter) + "U";
+        print_tag(prefix, label, subsubsection_counter);
+      }
       if (in_block) {
-	wait_for_label = false;
-	std::cout << part_counter
-		  << std::setfill('0') << std::setw(3)
-		  << block_counter << ","
-		  << label << std::endl;
+        wait_for_label = false;
+
+        std::string prefix = std::to_string(part_counter);
+        print_tag(prefix, label, block_counter);
       }
     }
   }

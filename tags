@@ -2,6 +2,7 @@
 1001,bsp:einfuehrung
 1S02,sec:zariski-topologie
 1002,def:verschwindungsmenge
+1T01,subsec:zariski-topologie-eigenschaften
 1003,propdef:zariski-topologie
 1S03,sec:algebraische-mengen
 1004,def:algebraische-mengen
@@ -49,7 +50,7 @@
 1035,def:alg-menge-als-raum-mit-fkt
 1036,prop:fkt-auf-basis
 1037,rem:globale-darstellung-von-fkt
-1S15,sec:funktorialität-affine-varietaet
+1S15,sec:funktorialitaet-affine-varietaet
 1038,prop:charakterisierung-morphismen-alg-mengen
 1039,thm:aequivalenz-alg-mengen-aff-varietaeten
 1S16,sec:def-praevarietaet
@@ -74,6 +75,7 @@
 1052,rem:charakterisierung-homogen
 1053,lem:homogenisierung-dehomogenisierung
 1S23,sec:def-projektiver-raum
+1T01,subsec:regulaere-fkt-auf-projektivem-raum
 1054,prop:charakterisierung-reg-fkt-projektiver-raum
 1055,cor:affine-ueberdeckung-des-projektiven-raumes
 1056,prop:globale-schnitte-des-proj-raums
