@@ -50,7 +50,7 @@ int main (int argc, char* argv[]) {
     std::cerr << ("file open: read/write error") << std::endl;
     std::exit(1);
   }
-  else if (fs.fail()) {
+  if (fs.fail()) {
     std::cerr << ("file open: logic error") << std::endl;
     std::exit(1);
   }
@@ -71,7 +71,8 @@ int main (int argc, char* argv[]) {
   int subsubsection_counter{};
   int block_counter{};
 
-  while (std::getline(fs, line)) {
+  // read file with whitespace skipping
+  while (fs >> std::ws && std::getline(fs, line)) {
     // check for begin or end of latex block
     if (grep_str(line, "\\begin{thm}")
         || grep_str(line, "\\begin{example}")
@@ -105,7 +106,6 @@ int main (int argc, char* argv[]) {
     else if (grep_str(line, "\\section{")) {
       in_section = true;
       wait_for_section_label = true;
-
       section_counter++;
       subsection_counter = 0;
       subsubsection_counter = 0;
@@ -116,7 +116,6 @@ int main (int argc, char* argv[]) {
       }
       in_subsection = true;
       wait_for_subsection_label = true;
-
       subsection_counter++;
     }
     else if (grep_str(line, "\\subsubsection{")) {
@@ -128,7 +127,6 @@ int main (int argc, char* argv[]) {
       }
       in_subsubsection = true;
       wait_for_subsubsection_label = true;
-
       subsubsection_counter++;
     }
     else if (grep_str(line, "\\label{")) {
@@ -137,25 +135,21 @@ int main (int argc, char* argv[]) {
 
       if (wait_for_section_label) {
         wait_for_section_label = false;
-
         std::string prefix = std::to_string(part_counter) + "S";
         print_tag(prefix, label, section_counter);
       }
       if (wait_for_subsection_label) {
         wait_for_subsection_label = false;
-
         std::string prefix = std::to_string(part_counter) + "T";
         print_tag(prefix, label, subsection_counter);
       }
       if (wait_for_subsubsection_label) {
         wait_for_subsubsection_label = false;
-
         std::string prefix = std::to_string(part_counter) + "U";
         print_tag(prefix, label, subsubsection_counter);
       }
       if (in_block) {
         wait_for_label = false;
-
         std::string prefix = std::to_string(part_counter);
         print_tag(prefix, label, block_counter);
       }

@@ -5,36 +5,36 @@
 Sei $V(\mathfrak{a})\subseteq\mathbb{A}^{n}(k)$ affin algebraische
 Menge, $\mathfrak{a}\unlhd k[\underline{T}]$ ein Ideal.\textbf{ Es gilt:}
 \[
-V(\mathfrak{a})=V(\rad\mathfrak{a})
+  V(\mathfrak{a})=V(\rad\mathfrak{a})
 \]
 
 mit $\rad\mathfrak{a}=\{f\in k[\underline{T}]\mid f^{n}\in\mathfrak{a}\text{ für ein }n>0\}$,
 da
 \[
-f^{n}(x)=0\Leftrightarrow f(x)=0,
+  f^{n}(x)=0\Leftrightarrow f(x)=0,
 \]
 
 d.h. verschiedene Ideale können dieselbe algebraische Menge beschreiben.
 \begin{defn}
-\label{def:verschwindungsideal}
-Für eine Teilmenge $Z\subseteq\mathbb{A}^{n}(k)$ bezeichne
-\[
-I(Z):=\{f\in k[\underline{T}]\mid f(x)=0\ \forall x\in Z\}
-\]
+  \label{def:verschwindungsideal}
+  Für eine Teilmenge $Z\subseteq\mathbb{A}^{n}(k)$ bezeichne
+  \[
+    I(Z):=\{f\in k[\underline{T}]\mid f(x)=0\ \forall x\in Z\}
+  \]
 
-das \textbf{Verschwindungsideal von Z}, das Ideal aller auf $Z$ verschwindenden Polynomfunktionen.
+  das \textbf{Verschwindungsideal von Z}, das Ideal aller auf $Z$ verschwindenden Polynomfunktionen.
 \end{defn}
 \begin{prop}
-\label{prop:verschwindungsmenge-verschwindungsideal}
-\mbox{}
-\begin{enumerate}
-\item Sei $\mathfrak{a}\unlhd k[\underline{T}]$ Ideal. Dann ist $I(V(\mathfrak{a}))=\rad(\mathfrak{a})$.
-\item Sei $Z\subseteq\mathbb{A}^{n}(k)$ Teilmenge. Dann ist $V(I(Z))=\overline{Z}$,
-der Abschluss von $Z$ in $\mathbb{A}^{n}(k)$.
-\end{enumerate}
+  \label{prop:verschwindungsmenge-verschwindungsideal}
+  \mbox{}
+  \begin{enumerate}
+  \item Sei $\mathfrak{a}\unlhd k[\underline{T}]$ Ideal. Dann ist $I(V(\mathfrak{a}))=\rad(\mathfrak{a})$.
+  \item Sei $Z\subseteq\mathbb{A}^{n}(k)$ Teilmenge. Dann ist $V(I(Z))=\overline{Z}$,
+    der Abschluss von $Z$ in $\mathbb{A}^{n}(k)$.
+  \end{enumerate}
 \end{prop}
 \begin{proof}
-Übungsblatt 2.
+  Übungsblatt 2.
 \end{proof}
 \medskip{}
 
@@ -42,23 +42,28 @@ $\mathfrak{a}$ heißt \textbf{Radikalideal}\index{Radikalideal},
 falls $\mathfrak{a}=\rad(\mathfrak{a})$, oder äquivalent falls $k[\underline{T}]/\mathfrak{a}$
 \emph{reduziert} ist, d.h. keine nilpotente Elemente ungleich $0$ hat.
 \begin{cor}
-\label{korrespondenz-radikalideal-abgeschlossene-mengen}
-Wir erhalten eine 1-1 Korrespondenz
-\begin{align*}
-\{\text{abg. Mengen }\subseteq\mathbb{A}^{n}\} & \leftrightarrow\{\text{Radikalideale }\mathfrak{a}\unlhd k[\underline{T}]\}\\
-Z & \mapsto I(Z)\\
-V(\mathfrak{a}) & \mapsfrom\mathfrak{a}
-\end{align*}
+  \label{korrespondenz-radikalideal-abgeschlossene-mengen}
+  Wir erhalten eine 1-1 Korrespondenz
+  \begin{align*}
+    \{\text{abg. Mengen }\subseteq\mathbb{A}^{n}\} & \leftrightarrow\{\text{Radikalideale }\mathfrak{a}\unlhd k[\underline{T}]\}\\
+    Z & \mapsto I(Z)\\
+    V(\mathfrak{a}) & \mapsfrom\mathfrak{a}
+  \end{align*}
 
-die sich zu einer 1-1 Korrespondenz
-\begin{align*}
-\left\{ \text{Punkte in }\mathbb{A}^{n}\right\}  & \leftrightarrow\left\{ \text{max. Ideale in }k[\underline{T}]\right\} \\
-x=(x_{1},\ldots,x_{n}) & \mapsto\begin{array}{rl}
-\mathfrak{m}_{x} & =I(\{x\})\\
- & =\ker(k[\underline{T}]\rightarrow k,\ T_{i}\mapsto x_{i})
-\end{array}
-\end{align*}
+  die sich zu einer 1-1 Korrespondenz
+  \begin{align*}
+    \left\{ \text{Punkte in }\mathbb{A}^{n}\right\}  & \leftrightarrow\left\{ \text{max. Ideale in }k[\underline{T}]\right\} \\
+    x=(x_{1},\ldots,x_{n}) & \mapsto\begin{array}{rl}
+                                      \mathfrak{m}_{x} & =I(\{x\})\\
+                                                       & =\ker(k[\underline{T}]\rightarrow k,\ T_{i}\mapsto x_{i})
+                                    \end{array}
+  \end{align*}
 
-einschränkt.
+  einschränkt.
 \end{cor}
 
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../AlgGeo1"
+%%% End:

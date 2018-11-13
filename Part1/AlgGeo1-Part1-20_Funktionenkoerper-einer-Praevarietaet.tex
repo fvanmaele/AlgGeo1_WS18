@@ -2,98 +2,96 @@
 \section{Funktionenkörper einer Prävarietät}
 \label{sec:funktionenkorper-praevarietaet}
 \begin{defn}[orig. 43]
-\label{def:funktionenkoerper-praevarietaet}
-Für eine Prävarietät $X$ sind die rationalen Funktionenkörper aller
-nicht-leeren affin-offenen Teilmengen in natürlicher Weise zu einander
-isomorph. Diesen Körper $K(X)$ nennen wir den \textbf{rationalen Funktionenkörper}von $X$.
+  \label{def:funktionenkoerper-praevarietaet}
+  Für eine Prävarietät $X$ sind die rationalen Funktionenkörper aller
+  nicht-leeren affin-offenen Teilmengen in natürlicher Weise zu einander
+  isomorph. Diesen Körper $K(X)$ nennen wir den \textbf{rationalen Funktionenkörper}von $X$.
 \end{defn}
 \begin{proof}
-$\emptyset\neq U$, $V\subseteq X$ affine, offene Untervarietäten. Da
-$X$ irreduzibel ist, gilt nach \emph{Satz \ref{prop:charakterisierung-irreduzibel}}:
-\[
-\emptyset\neq U\cap V\subseteq U\text{ offen}.
-\]
+  $\emptyset\neq U$, $V\subseteq X$ affine, offene Untervarietäten. Da
+  $X$ irreduzibel ist, gilt nach \emph{Satz \ref{prop:charakterisierung-irreduzibel}}:
+  \[
+    \emptyset\neq U\cap V\subseteq U\text{ offen}.
+  \]
 
-Nach Definition von $\mathcal{O}_{X}$ ist 
-\[
-\mathcal{O}_{X}(U)\subseteq\mathcal{O}_{X}(U\cap V)\subseteq K(U)=\text{Quot}(\mathcal{O}_{X}(U)).
-\]
+  Nach Definition von $\mathcal{O}_{X}$ ist 
+  \[
+    \mathcal{O}_{X}(U)\subseteq\mathcal{O}_{X}(U\cap V)\subseteq K(U)=\text{Quot}(\mathcal{O}_{X}(U)).
+  \]
 
-Das impliziert $\text{Quot}(\mathcal{O}_{X}(U\cap V))=K(U)$. Aus
-Symmetriegründen ist aber damit auch bereits $K(V)=\text{Quot}(\mathcal{O}_{X}(U\cap V))$.
+  Das impliziert $\text{Quot}(\mathcal{O}_{X}(U\cap V))=K(U)$. Aus
+  Symmetriegründen ist aber damit auch bereits $K(V)=\text{Quot}(\mathcal{O}_{X}(U\cap V))$.
 \end{proof}
 \begin{rem}[orig. 44]
-\label{rem:funktionenkoerper-nicht-funktoriell}
-Bildung des des Funktionenkörpers $K(\cdot)$ ist \textbf{nicht} funktoriell!
-Für $X\rightarrow Y$ Morphismus affiner Varietäten ist die Abbildung
-auf den Koordinatenringen $\Gamma(Y)\rightarrow\Gamma(X)$ i.A. \textbf{nicht}
-injektiv, induziert also keine Abbildung $K(Y)\hookrightarrow K(X)$.
+  \label{rem:funktionenkoerper-nicht-funktoriell}
+  Bildung des des Funktionenkörpers $K(\cdot)$ ist \textbf{nicht} funktoriell!
+  Für $X\rightarrow Y$ Morphismus affiner Varietäten ist die Abbildung
+  auf den Koordinatenringen $\Gamma(Y)\rightarrow\Gamma(X)$ i.A. \textbf{nicht}
+  injektiv, induziert also keine Abbildung $K(Y)\hookrightarrow K(X)$.
 
-\emph{Jedoch}: Eine Isomorphie $X\xrightarrow{\sim}Y$ induziert $K(Y)\xrightarrow{\sim}K(X)$.
-Allgemeiner sei $X\xrightarrow{\varphi} Y$ Morphismus mit $\text{im}(\varphi) \subseteq Y$
-offen ($\Rightarrow$ dicht. Später: $X\xrightarrow{\varphi} Y$ \textbf{dominant},
-gdw. $\text{im}(\varphi)\subseteq Y$ dicht) induziert in funktioreller Weise eine
-Abbildung $K(Y)\hookrightarrow K(X)$.
+  \emph{Jedoch}: Eine Isomorphie $X\xrightarrow{\sim}Y$ induziert $K(Y)\xrightarrow{\sim}K(X)$.
+  Allgemeiner sei $X\xrightarrow{\varphi} Y$ Morphismus mit $\text{im}(\varphi) \subseteq Y$
+  offen ($\Rightarrow$ dicht. Später: $X\xrightarrow{\varphi} Y$ \textbf{dominant},
+  gdw. $\text{im}(\varphi)\subseteq Y$ dicht) induziert in funktioreller Weise eine
+  Abbildung $K(Y)\hookrightarrow K(X)$.
 \end{rem}
 \begin{prop}[orig. 45]
-\label{prop:charakterisierung-schnitte-praevarietaet}
-Sei $X$ eine Prävarietät, $V\subseteq U\subseteq X$ offen. Dann gilt:
+  \label{prop:charakterisierung-schnitte-praevarietaet}
+  Sei $X$ eine Prävarietät, $V\subseteq U\subseteq X$ offen. Dann gilt:
 
-\begin{enumerate}
-\item $\mathcal{O}_{X}(U)\subseteq K(X)$ ist $k$-Unteralgebra.
+  \begin{enumerate}
+  \item $\mathcal{O}_{X}(U)\subseteq K(X)$ ist $k$-Unteralgebra.
 
-\item $\mathcal{O}_{X}(U)\rightarrow\mathcal{O}_{X}(V)$ ist Inklusion von Teilmengen des Funktionenkörpers $K(X)$.
+  \item $\mathcal{O}_{X}(U)\rightarrow\mathcal{O}_{X}(V)$ ist Inklusion von Teilmengen des Funktionenkörpers $K(X)$.
 
-\item Insbesondere gilt für $U,V\subseteq X$ offen:
-\[
-\mathcal{O}_{X}(U\cup V)=\mathcal{O}_{X}(U)\cap\mathcal{O}_{X}(V).
-\]
-\end{enumerate}
+  \item Insbesondere gilt für $U,V\subseteq X$ offen:
+    \[
+      \mathcal{O}_{X}(U\cup V)=\mathcal{O}_{X}(U)\cap\mathcal{O}_{X}(V).
+    \]
+  \end{enumerate}
 \end{prop}
 \begin{proof}
-\mbox{}
+  \mbox{}
 \item[(ii)] Sei $\mathcal{O}_{X}(X)\ni f:X\rightarrow k$. Dann ist $f^{-1}(0)\subseteq X$
-abgeschlossen, da für $W\subseteq X$ affin-offen beliebig gilt, dass
-\[
-f^{-1}(0)\cap W=V(f|_{W}).
-\]
-Dazu macht man sich klar: ,,abgeschlossen`` ist eine lokale Eigenschaft,
-affin-offene $W$ bilden eine Basis der Topologie. 
+  abgeschlossen, da für $W\subseteq X$ affin-offen beliebig gilt, dass
+  \[
+    f^{-1}(0)\cap W=V(f|_{W}).
+  \]
+  Dazu macht man sich klar: ,,abgeschlossen`` ist eine lokale Eigenschaft,
+  affin-offene $W$ bilden eine Basis der Topologie. 
 
-$\Rightarrow\mathcal{O}_{X}(U)\hookrightarrow\mathcal{O}_{X}(V)$, $f\mapsto f|_{V}$
-ist injektiv für $\emptyset\neq V\subseteq U\subseteq X$ offen.
+  $\Rightarrow\mathcal{O}_{X}(U)\hookrightarrow\mathcal{O}_{X}(V)$, $f\mapsto f|_{V}$
+  ist injektiv für $\emptyset\neq V\subseteq U\subseteq X$ offen.
 
-$\Rightarrow V\subseteq f^{-1}(0)$ 
+  $\Rightarrow V\subseteq f^{-1}(0)$ 
 
-$\Rightarrow f^{-1}(0)=U$ 
+  $\Rightarrow f^{-1}(0)=U$ 
 
-$\Rightarrow f\equiv0$.
+  $\Rightarrow f\equiv0$.
 \item[(i)] $U\supseteq W$ affin-offene Untervarietät.
-\[
-\begin{tikzcd}
- \mathcal{O}_{X}(W) \arrow[r, hook] & K(W) \text{ } k\text{-Algebren} \\
- \mathcal{O}_{X}(U) \arrow[u, hook] \arrow[ru, dashed, hook]
-\end{tikzcd}
-\]
-\item[(iii)] Wir haben folgendes kommutatives Diagramm:
-
-\[
-\begin{tikzcd}
- {} & \mathcal{O}_{X}(U) \arrow[rd, hook] \\
- \mathcal{O}_{X}(U \cup V) \arrow[ur, hook] \arrow[rd, hook'] & {} & \mathcal{O}_{X}(U \cap V) \\
- {} & \mathcal{O}_{X}(V) \arrow[ru, hook']
-\end{tikzcd}
-\]
-Nach dem Verklebungsaxiom ist die Sequenz
-\[
-\begin{tikzcd}
-  0 \arrow[r] & \mathcal{O}_{X}(U\cup V) \arrow[r] & \mathcal{O}_{X}(U) \times \mathcal{O}_{X}(V) \arrow[r] & \mathcal{O}_{X}(U \cap V) \\
-  {} & f \arrow[r, mapsto] & (f|_{U}, f|_{V}) & {} \\
-  {} & {} & (g,h) \arrow[r, mapsto] & g|_{U \cap V} - h|_{U \cap V}
-\end{tikzcd}
-\]
-exakt.
+  \[
+    \xymatrix{
+      \mathcal{O}_{X}(W) \ar@{^(->}[r] & K(W) \text{ } k\text{-Algebren} \\
+      \mathcal{O}_{X}(U) \ar@{^(->}[u] \ar@{^(-->}[ru] &
+    }
+    \]
+  \item[(iii)] Wir haben folgendes kommutatives Diagramm:
+    \[
+      \xymatrix{
+        {} & \mathcal{O}_{X}(U) \ar@{^(->}[rd] & \\
+        \mathcal{O}_X(U\cup V) \ar@{^{(}->}[rd] \ar@{^{(}->}[ru] & {} & \mathcal{O}_X(U\cap V) \\
+        {} & \mathcal{O}_X(V) \ar@{^{(}->}[ru] &
+      }
+      \]
+      Nach dem Verklebungsaxiom ist die Sequenz
+  \[
+    \xymatrix{
+      0 \ar[r] & \mathcal{O}_{X}(U\cup V) \ar[r] & \mathcal{O}_{X}(U) \times \mathcal{O}_{X}(V) \ar[r] & \mathcal{O}_{X}(U \cap V) \\
+      {} & f \ar@{|->}[r] & (f|_{U}, f|_{V}) & {} \\
+      {} & {} & (g,h) \ar@{|->}[r] & g|_{U \cap V} - h|_{U \cap V}
+    }
+  \]
+  exakt.
 
 
 \end{proof}
-
