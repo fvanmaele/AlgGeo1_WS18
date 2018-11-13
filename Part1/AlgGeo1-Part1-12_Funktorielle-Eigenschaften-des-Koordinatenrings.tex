@@ -2,75 +2,75 @@
 \section{Funktorielle Eigenschaften von $\Gamma(X)$}
 \label{sec:koordinatenring-funktiorialitaet}
 \begin{prop}
-\label{prop:koordinatenringfunktor}
-Für einen Morphismus $X\xrightarrow{f}Y$ affiner algebraischer Mengen
-definiert 
-\begin{align*}
-\Gamma(f):\quad\Gamma(Y) & \rightarrow\Gamma(X)\\
-g & \mapsto g\circ f
-\end{align*}
-ein Homomorphismus von $k$-Algebren. Der so definierte \emph{kontravariante}
-Funktor
-\[
-\Gamma:\{\text{affine algebraische Mengen}\}\rightarrow\{\text{reduzierte endl. erz. }k\text{-Algebren}\}
-\]
-liefert eine Kategorienäquivalenz, welche durch Einschränkung eine Äquivalenz
-\[
-\Gamma:\{\text{irred. aff. alg. Mengem\}}\rightarrow\{\text{integre endl. erz. }k\text{-Algebren\}}
-\]
-induziert.
+  \label{prop:koordinatenringfunktor}
+  Für einen Morphismus $X\xrightarrow{f}Y$ affiner algebraischer Mengen
+  definiert 
+  \begin{align*}
+    \Gamma(f):\quad\Gamma(Y) & \rightarrow\Gamma(X)\\
+    g & \mapsto g\circ f
+  \end{align*}
+  ein Homomorphismus von $k$-Algebren. Der so definierte \emph{kontravariante}
+  Funktor
+  \[
+    \Gamma:\{\text{affine algebraische Mengen}\}\rightarrow\{\text{reduzierte endl. erz. }k\text{-Algebren}\}
+  \]
+  liefert eine Kategorienäquivalenz, welche durch Einschränkung eine Äquivalenz
+  \[
+    \Gamma:\{\text{irred. aff. alg. Mengem\}}\rightarrow\{\text{integre endl. erz. }k\text{-Algebren\}}
+  \]
+  induziert.
 \end{prop}
 \begin{proof}
-Sei $Y\xrightarrow{g}\mathbb{A}^{1}(k)\in\Gamma(Y)$ ein Morphismus. Es
-folgt:
-\[
-g\circ f:X\xrightarrow{f}Y\xrightarrow{g}\mathbb{A}^{1}(k)
-\] 
-ist Morphismus,  d.h. $g \circ f\in\Gamma(X)$. $\Gamma(f):\Gamma(Y)\rightarrow\Gamma(X)$
-ist ein $k$-Algebren-Homomorphismus mit $\Gamma(\text{id}_{X})=\text{id}_{\Gamma(X)}$. Da ferner gilt, dass $\Gamma(f_{1}\circ f_{2})=\Gamma(f_{2})\circ\Gamma(f_{1})$ ist $\Gamma$ ein kontravarianter Funktor.
-\begin{claim*}
-$\Gamma$ ist volltreu, d.h.
-\begin{align*}
-\Gamma:\hom(X,Y) & \rightarrow\hom_{k\text{-Alg}}(\Gamma(Y),\Gamma(X))\\
-f & \mapsto\Gamma(f)
-\end{align*}
-ist \emph{bijektiv} für alle affinen algebraischen Mengen $X,Y$.
-\end{claim*}
-\begin{proof}
-Wir konstruieren eine Umkehrabbildung wie folgt: Zu $\varphi:\Gamma(Y)\rightarrow\Gamma(X)$
-für $X\subseteq\mathbb{A}^{m}(k)$, $Y\subseteq\mathbb{A}^{n}(k)$ existiert ein Lift $\tilde\varphi$, s.d.
-\[
-\xymatrix{k[T_{1}',\ldots,T_{n}']\ar[r]^{\tilde{\varphi}}\ar@{->>}[d] & k[T_{1},\ldots,T_{m}]\ar@{->>}[d]\\
-\Gamma(Y)\ar[r]^{\varphi} & \Gamma(X)
-}
-\]
-kommutiert; $\tilde{\varphi}(T_{i}'):= f_i$ mit $f_i \in \pi^{-1}(\varphi(T_{i}')) \subseteq k[T_1,...,T_n]$, wobei $\pi : k[\underline{T}] \to \Gamma(X)$ die kanonische Projektion bezeichne. 
-Definiere:
-\begin{align*}
-f:X & \rightarrow Y\\
-x=(x_{1},\ldots,x_{n}) & \mapsto(\tilde{\varphi}(T_{1}')(x_{1},\ldots,x_{n}),\ldots,\tilde{\varphi}(T_{n}')(x_{1},\ldots,x_{n}))
-\end{align*}
-\end{proof}
-\begin{claim*}
-$\Gamma$ ist essentiell surjektiv, d.h. zu jeder reduzierten endlich
-erzeugten $k$-Algebra $A$ existiert eine affine algebraische Menge
-$X$ mit $A\cong\Gamma(X)$.
-\end{claim*}
-\begin{proof}
-Da nach Voraussetzung $A\cong k[T]/\mathfrak{a}$ für ein Radikalideal
-$\mathfrak{a}$, können wir etwa $X:=V(\mathfrak{a})\subseteq\mathbb{A}^{n}(k)$
-setzen. Der Rest folgt aus Satz 28.
-\end{proof}
+  Sei $Y\xrightarrow{g}\mathbb{A}^{1}(k)\in\Gamma(Y)$ ein Morphismus. Es
+  folgt:
+  \[
+    g\circ f:X\xrightarrow{f}Y\xrightarrow{g}\mathbb{A}^{1}(k)
+  \] 
+  ist Morphismus,  d.h. $g \circ f\in\Gamma(X)$. $\Gamma(f):\Gamma(Y)\rightarrow\Gamma(X)$
+  ist ein $k$-Algebren-Homomorphismus mit $\Gamma(\text{id}_{X})=\text{id}_{\Gamma(X)}$. Da ferner gilt, dass $\Gamma(f_{1}\circ f_{2})=\Gamma(f_{2})\circ\Gamma(f_{1})$ ist $\Gamma$ ein kontravarianter Funktor.
+  \begin{claim*}
+    $\Gamma$ ist volltreu, d.h.
+    \begin{align*}
+      \Gamma:\hom(X,Y) & \rightarrow\hom_{k\text{-Alg}}(\Gamma(Y),\Gamma(X))\\
+      f & \mapsto\Gamma(f)
+    \end{align*}
+    ist \emph{bijektiv} für alle affinen algebraischen Mengen $X,Y$.
+  \end{claim*}
+  \begin{proof}
+    Wir konstruieren eine Umkehrabbildung wie folgt: Zu $\varphi:\Gamma(Y)\rightarrow\Gamma(X)$
+    für $X\subseteq\mathbb{A}^{m}(k)$, $Y\subseteq\mathbb{A}^{n}(k)$ existiert ein Lift $\tilde\varphi$, s.d.
+    \[
+      \xymatrix{k[T_{1}',\ldots,T_{n}']\ar[r]^{\tilde{\varphi}}\ar@{->>}[d] & k[T_{1},\ldots,T_{m}]\ar@{->>}[d]\\
+        \Gamma(Y)\ar[r]^{\varphi} & \Gamma(X)
+      }
+    \]
+    kommutiert; $\tilde{\varphi}(T_{i}'):= f_i$ mit $f_i \in \pi^{-1}(\varphi(T_{i}')) \subseteq k[T_1,...,T_n]$, wobei $\pi : k[\underline{T}] \to \Gamma(X)$ die kanonische Projektion bezeichne. 
+    Definiere:
+    \begin{align*}
+      f:X & \rightarrow Y\\
+      x=(x_{1},\ldots,x_{n}) & \mapsto(\tilde{\varphi}(T_{1}')(x_{1},\ldots,x_{n}),\ldots,\tilde{\varphi}(T_{n}')(x_{1},\ldots,x_{n}))
+    \end{align*}
+  \end{proof}
+  \begin{claim*}
+    $\Gamma$ ist essentiell surjektiv, d.h. zu jeder reduzierten endlich
+    erzeugten $k$-Algebra $A$ existiert eine affine algebraische Menge
+    $X$ mit $A\cong\Gamma(X)$.
+  \end{claim*}
+  \begin{proof}
+    Da nach Voraussetzung $A\cong k[T]/\mathfrak{a}$ für ein Radikalideal
+    $\mathfrak{a}$, können wir etwa $X:=V(\mathfrak{a})\subseteq\mathbb{A}^{n}(k)$
+    setzen. Der Rest folgt aus Satz 28.
+  \end{proof}
 \end{proof}
 \begin{prop}
-\label{prop:funktiorialitaet-specm}
-Sei $f:X\rightarrow Y$ ein Morphismus affiner algebraischer Mengen und $\Gamma(f):\Gamma(Y)\rightarrow\Gamma(X)$
-der zugehörige Homomorphismus der Koordinatenringe. Dann gilt $\forall x\in X$:
-$\Gamma(f)^{-1}(\mathfrak{m}_{x})=\mathfrak{m}_{f(x)}$.
+  \label{prop:funktiorialitaet-specm}
+  Sei $f:X\rightarrow Y$ ein Morphismus affiner algebraischer Mengen und $\Gamma(f):\Gamma(Y)\rightarrow\Gamma(X)$
+  der zugehörige Homomorphismus der Koordinatenringe. Dann gilt $\forall x\in X$:
+  $\Gamma(f)^{-1}(\mathfrak{m}_{x})=\mathfrak{m}_{f(x)}$.
 \end{prop}
 \begin{proof}
-\[
-\Gamma(f)^{-1}(\mathfrak{m}_{x})=\{g\in\Gamma(Y)\mid g\circ f \in \mathfrak{m}_{x}\}=\{g\in\Gamma(Y)\mid g(f(x)) = 0 \} = \mathfrak{m}_{f(x)},
-\]
-da $\Gamma(f)(g) =g \circ f$.
+  \[
+    \Gamma(f)^{-1}(\mathfrak{m}_{x})=\{g\in\Gamma(Y)\mid g\circ f \in \mathfrak{m}_{x}\}=\{g\in\Gamma(Y)\mid g(f(x)) = 0 \} = \mathfrak{m}_{f(x)},
+  \]
+  da $\Gamma(f)(g) =g \circ f$.
 \end{proof}

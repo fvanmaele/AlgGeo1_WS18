@@ -2,65 +2,65 @@
 \section{Morphismen von affinen algebraischen Mengen}
 \label{sec:morphismen-alg-mengen}
 \begin{defn}
-\label{def:morphismus-alg-mengen}
-Seien $X\subseteq\mathbb{A}^{m}(k)$, $Y\subseteq\mathbb{A}^{n}(k)$
-affine algebraische Mengen. Ein \textbf{Morphismus} $X\rightarrow Y$
-affiner algebraischer Mengen ist eine Abbildung $f:X\rightarrow Y$
-der zugrundeliegenden Mengen, sodass $f_{1},\ldots,f_{n}\in k[T_{1},\ldots,T_{m}]$
-existieren, derart dass $\forall x\in X$ gilt:
-\[
-f(x)=(f_{1}(x),\ldots,f_{n}(x)) \in Y.
-\]
-Es bezeichne $\hom(X,Y)$ die Menge der Morphismen $X \to Y$. 
+  \label{def:morphismus-alg-mengen}
+  Seien $X\subseteq\mathbb{A}^{m}(k)$, $Y\subseteq\mathbb{A}^{n}(k)$
+  affine algebraische Mengen. Ein \textbf{Morphismus} $X\rightarrow Y$
+  affiner algebraischer Mengen ist eine Abbildung $f:X\rightarrow Y$
+  der zugrundeliegenden Mengen, sodass $f_{1},\ldots,f_{n}\in k[T_{1},\ldots,T_{m}]$
+  existieren, derart dass $\forall x\in X$ gilt:
+  \[
+    f(x)=(f_{1}(x),\ldots,f_{n}(x)) \in Y.
+  \]
+  Es bezeichne $\hom(X,Y)$ die Menge der Morphismen $X \to Y$. 
 \end{defn}
 \begin{rem}
-\label{rem:morphismen-fortsetzbarkeit}
-$f:X\rightarrow Y$ lässt sich immer fortsetzen zu einem Morphismus
-\[
-f:\mathbb{A}^{m}(k)\rightarrow\mathbb{A}^{n}(k),
-\]
+  \label{rem:morphismen-fortsetzbarkeit}
+  $f:X\rightarrow Y$ lässt sich immer fortsetzen zu einem Morphismus
+  \[
+    f:\mathbb{A}^{m}(k)\rightarrow\mathbb{A}^{n}(k),
+  \]
 
-aber nicht eindeutig, es sei denn $X=\mathbb{A}^{m}(k)$.
+  aber nicht eindeutig, es sei denn $X=\mathbb{A}^{m}(k)$.
 \end{rem}
 
 \paragraph{Komposition}
 
 \[
-\xymatrix@C=9pc{X\ar[r]^{f}_{f_{1},\ldots,f_{n}\in k[T_{1},\ldots,T_{m}]} & Y\ar[r]^{g}_{g_{1},\ldots,g_{r}\in k[T_{1}',\ldots,T_{m}']} & Z}
+  \xymatrix@C=9pc{X\ar[r]^{f}_{f_{1},\ldots,f_{n}\in k[T_{1},\ldots,T_{m}]} & Y\ar[r]^{g}_{g_{1},\ldots,g_{r}\in k[T_{1}',\ldots,T_{m}']} & Z}
 \]
 
 mit $X\subseteq\mathbb{A}^{m}(k)$, $Y\subseteq\mathbb{A}^{n}(k)$,
 $Z\subseteq\mathbb{A}^{r}(k)$. Es folgt:
 \begin{align*}
-g(f(x))=\, & (g_{1}(f_{1}(x),\ldots,f_{n}(x)),\ldots,g_{r}(f_{1}(x),\ldots,f_{n}(x))\\
-=:\, & (h_{1}(x),\ldots,h_{r}(x))
+  g(f(x))=\, & (g_{1}(f_{1}(x),\ldots,f_{n}(x)),\ldots,g_{r}(f_{1}(x),\ldots,f_{n}(x))\\
+  =:\, & (h_{1}(x),\ldots,h_{r}(x))
 \end{align*}
 
 d.h. $g\circ f$ ist durch Polynome $h_{i}\in k[T_{1},\ldots,T_{m}]$
 gegeben, also ist $g\circ f$ wieder ein Morphismus affiner algebraischer
 Mengen. Wir erhalten die \textbf{Kategorie affiner algebraischer Mengen}.
 \begin{example}
-\label{bsp:morphismen-alg-mengen}
-\mbox{}
-\begin{enumerate}
-\item Sei die Abbildung
-\begin{align*}
-\mathbb{A}^{1}(k) & \rightarrow V(T_{2}-T_{1}^{2})\subseteq\mathbb{A}^{2}(k)\\
-x & \mapsto(x,x^{2}).
-\end{align*}
-Diese Abbildung ist sogar ein \emph{Isomorphismus }affiner algebraischer
-Mengen, da die Umkehrabbildung
-\[
-(x,y)\mapsto x
-\]
-ebenfalls ein Morphismus ist.
-\item Sei char$(k)\neq2$. Die Abbildung
-\begin{align*}
-\mathbb{A}^{1}(k) & \rightarrow V(T_{2}^{2}-T_{1}^{2}(T_{1}+1))\\
-x & \mapsto(x^{2}-1,x(x^{2}-1))
-\end{align*}
-ist ein Morphismus, aber \emph{nicht }bijektiv, da $1,-1$ beide auf
-$(0,0)$ abgebildet werden.
-\end{enumerate}
+  \label{bsp:morphismen-alg-mengen}
+  \mbox{}
+  \begin{enumerate}
+  \item Sei die Abbildung
+    \begin{align*}
+      \mathbb{A}^{1}(k) & \rightarrow V(T_{2}-T_{1}^{2})\subseteq\mathbb{A}^{2}(k)\\
+      x & \mapsto(x,x^{2}).
+    \end{align*}
+    Diese Abbildung ist sogar ein \emph{Isomorphismus }affiner algebraischer
+    Mengen, da die Umkehrabbildung
+    \[
+      (x,y)\mapsto x
+    \]
+    ebenfalls ein Morphismus ist.
+  \item Sei char$(k)\neq2$. Die Abbildung
+    \begin{align*}
+      \mathbb{A}^{1}(k) & \rightarrow V(T_{2}^{2}-T_{1}^{2}(T_{1}+1))\\
+      x & \mapsto(x^{2}-1,x(x^{2}-1))
+    \end{align*}
+    ist ein Morphismus, aber \emph{nicht }bijektiv, da $1,-1$ beide auf
+    $(0,0)$ abgebildet werden.
+  \end{enumerate}
 \end{example}
 

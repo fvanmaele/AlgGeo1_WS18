@@ -2,27 +2,27 @@
 \section{Irreduzible affine algebraische Mengen}
 \label{sec:irreduzibilitaet-alg}
 \begin{lem}
-\label{lem:charakterisierung-irreduzibel-alg}
-Eine abgeschlossene Teilmenge $Z\subseteq\mathbb{A}^{n}(k)$ ist genau
-dann irreduzibel, wenn $I(Z) \unlhd k[\underline{T}]$ ein Primideal ist. Insbesondere ist
-$\mathbb{A}^{n}(k)$ irreduzibel.  
+  \label{lem:charakterisierung-irreduzibel-alg}
+  Eine abgeschlossene Teilmenge $Z\subseteq\mathbb{A}^{n}(k)$ ist genau
+  dann irreduzibel, wenn $I(Z) \unlhd k[\underline{T}]$ ein Primideal ist. Insbesondere ist
+  $\mathbb{A}^{n}(k)$ irreduzibel.  
 \end{lem}
 \begin{proof}
-$Z$ irreduzibel ist äquivalent zu 
-\begin{align*}
- & (Z=\underbrace{V(\mathfrak{a})}_{\bigcap_{i} V(f_{i})}\cup\underbrace{V(\mathfrak{b})}_{\bigcap_{j} V(g_{j})}\quad\Rightarrow\quad V(\mathfrak{a})=Z\text{ oder }V(\mathfrak{b})=Z).\\
-\Leftrightarrow\  & \forall f,g\in k[\underline{T}]:\ V(fg)=V(f)\cup V(g)\supseteq Z:\ V(f)\supseteq Z\text{ oder }V(g)\supseteq Z.\\
-(*)\Leftrightarrow\  & \forall f,g\in k[\underline{T}]:\ fg\in I(V(fg))\subseteq I(Z):\ f\in I(Z)\text{ oder }g\in I(Z).\\
-\Leftrightarrow\  & I(Z)\text{ ist Primideal.}
-\end{align*}
+  $Z$ irreduzibel ist äquivalent zu 
+  \begin{align*}
+    & (Z=\underbrace{V(\mathfrak{a})}_{\bigcap_{i} V(f_{i})}\cup\underbrace{V(\mathfrak{b})}_{\bigcap_{j} V(g_{j})}\quad\Rightarrow\quad V(\mathfrak{a})=Z\text{ oder }V(\mathfrak{b})=Z).\\
+    \Leftrightarrow\  & \forall f,g\in k[\underline{T}]:\ V(fg)=V(f)\cup V(g)\supseteq Z:\ V(f)\supseteq Z\text{ oder }V(g)\supseteq Z.\\
+    (*)\Leftrightarrow\  & \forall f,g\in k[\underline{T}]:\ fg\in I(V(fg))\subseteq I(Z):\ f\in I(Z)\text{ oder }g\in I(Z).\\
+    \Leftrightarrow\  & I(Z)\text{ ist Primideal.}
+  \end{align*}
 
-({*}): $V(I(Z))=Z$, $I(V(\mathfrak{a}))=\rad(\mathfrak{a})$. 
+  ({*}): $V(I(Z))=Z$, $I(V(\mathfrak{a}))=\rad(\mathfrak{a})$. 
 \end{proof}
 \begin{rem}
-\label{rem:korrespondenz-irreduzibel-prim}
-Die Korrespondenz aus Korollar 11 schränkt sich ein zu
-\[
-\{\text{irred. abg. Teilmengen }\subseteq\mathbb{A}^{n}\}\overset{1:1}{\leftrightarrow}\{\text{Primideale in }k[\underline{T}]\}
-\]
+  \label{rem:korrespondenz-irreduzibel-prim}
+  Die Korrespondenz aus Korollar 11 schränkt sich ein zu
+  \[
+    \{\text{irred. abg. Teilmengen }\subseteq\mathbb{A}^{n}\}\overset{1:1}{\leftrightarrow}\{\text{Primideale in }k[\underline{T}]\}
+  \]
 \end{rem}
 

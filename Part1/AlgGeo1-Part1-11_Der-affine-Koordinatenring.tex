@@ -7,90 +7,90 @@
 Sei $X\subseteq\mathbb{A}^{n}(k)$ abgeschlossen. Für den surjektiven
 (Def. von Morphismen) $k$-Algebren-Homomorphismus
 \begin{align*}
-k[\underline{T}] & \xrightarrow{\varphi}\hom(X,\mathbb{A}^{1}(k))\\
-f & \mapsto(x\mapsto f(x)),
+  k[\underline{T}] & \xrightarrow{\varphi}\hom(X,\mathbb{A}^{1}(k))\\
+  f & \mapsto(x\mapsto f(x)),
 \end{align*}
 
 wobei die Morphismen in folgende Weise eine $k$-Algebra bilden:
 \begin{align*}
-(f+g)(x) & :=f(x)+g(x)\\
-(fg)(x) & :=f(x)g(x)\\
-(\alpha f)(x) & :=\alpha f(x)
+  (f+g)(x) & :=f(x)+g(x)\\
+  (fg)(x) & :=f(x)g(x)\\
+  (\alpha f)(x) & :=\alpha f(x)
 \end{align*}
 
 mit $f,g\in\hom(X,\mathbb{A}^{1}(k))$, $\alpha\in k$, gilt:
 \[
-\ker\varphi=I(X).
+  \ker\varphi=I(X).
 \]
 \begin{defn}
-\label{def:koordinatenring}
-$\Gamma(X):=k[\underline{T}]/I(X)\cong_{k-\mathrm{Alg}}\hom(X,\mathbb{A}^{1}(k))$ heißt der \textbf{affine
-Koordinatenring }von $X$.
+  \label{def:koordinatenring}
+  $\Gamma(X):=k[\underline{T}]/I(X)\cong_{k-\mathrm{Alg}}\hom(X,\mathbb{A}^{1}(k))$ heißt der \textbf{affine
+    Koordinatenring }von $X$.
 
-Für $x=(x_{1},\ldots,x_{n})\in X$ gilt:
-\begin{align*}
-\mathfrak{m}_{x}:=\  & \ker(\Gamma(X)\twoheadrightarrow k,\,f\mapsto f(x))\\
-=\  & \{f\in\Gamma(X)\mid f(x)=0\}\\
-=\  & \pi((T_{1}-x_{1},\ldots,T_{n}-x_{n}))\\
-=\  & \ker(\Gamma(\mathbb{A}^{n}(k))\twoheadrightarrow k)
-\end{align*}
+  Für $x=(x_{1},\ldots,x_{n})\in X$ gilt:
+  \begin{align*}
+    \mathfrak{m}_{x}:=\  & \ker(\Gamma(X)\twoheadrightarrow k,\,f\mapsto f(x))\\
+    =\  & \{f\in\Gamma(X)\mid f(x)=0\}\\
+    =\  & \pi((T_{1}-x_{1},\ldots,T_{n}-x_{n}))\\
+    =\  & \ker(\Gamma(\mathbb{A}^{n}(k))\twoheadrightarrow k)
+  \end{align*}
 
-unter der Projektion $\pi:k[\underline{T}]=\Gamma(\mathbb{A}^{n}(k))\twoheadrightarrow\Gamma(X)$.
-Es ist $\mathfrak{m}_{x}$ ein maximales Ideal von $\Gamma(X)$ mit
-$\Gamma(X)/\mathfrak{m}_{x}\cong k$. Für ein Ideal $\mathfrak{a}\unlhd\Gamma(X)$
-sei
-\[
-V(\mathfrak{a}):=\{x\in X\mid f(x)=0\ \forall f\in\mathfrak{a}\}=V(\pi^{-1}(\mathfrak{a}))\cap X.
-\]
+  unter der Projektion $\pi:k[\underline{T}]=\Gamma(\mathbb{A}^{n}(k))\twoheadrightarrow\Gamma(X)$.
+  Es ist $\mathfrak{m}_{x}$ ein maximales Ideal von $\Gamma(X)$ mit
+  $\Gamma(X)/\mathfrak{m}_{x}\cong k$. Für ein Ideal $\mathfrak{a}\unlhd\Gamma(X)$
+  sei
+  \[
+    V(\mathfrak{a}):=\{x\in X\mid f(x)=0\ \forall f\in\mathfrak{a}\}=V(\pi^{-1}(\mathfrak{a}))\cap X.
+  \]
 
-Dies sind genau die abgeschlossenen Mengen von $X$ als Teilraum von
-$\mathbb{A}^{n}(k)$ mit der induzierten Topologie, diese wird auch
-\textbf{Zariski-Topologie} genannt. Für $f\in\Gamma(X)$ setze:
-\[
-D_X(f) := D(f):=\{x\in X\mid f(x)\neq0\}=X\setminus V(f).
-\]
+  Dies sind genau die abgeschlossenen Mengen von $X$ als Teilraum von
+  $\mathbb{A}^{n}(k)$ mit der induzierten Topologie, diese wird auch
+  \textbf{Zariski-Topologie} genannt. Für $f\in\Gamma(X)$ setze:
+  \[
+    D_X(f) := D(f):=\{x\in X\mid f(x)\neq0\}=X\setminus V(f).
+  \]
 \end{defn}
 \begin{lem}
-\label{lem:basis-zariski-topologie}
-Die offenen Mengen $D(f)$, $f\in\Gamma(X)$, bilden eine Basis der
-Topologie von $X$, d.h.
-\[
-\forall U\subseteq X\text{ offen }\exists f_{i}\in\Gamma(X),\,i\in I\quad\text{mit }U=\bigcup_{i\in I}D(f_{i})
-\]
+  \label{lem:basis-zariski-topologie}
+  Die offenen Mengen $D(f)$, $f\in\Gamma(X)$, bilden eine Basis der
+  Topologie von $X$, d.h.
+  \[
+    \forall U\subseteq X\text{ offen }\exists f_{i}\in\Gamma(X),\,i\in I\quad\text{mit }U=\bigcup_{i\in I}D(f_{i})
+  \]
 \end{lem}
 \begin{proof}
-$U=X\backslash V(\mathfrak{a})$ für ein $\mathfrak{a}\unlhd\Gamma(X)$,
-$\mathfrak{a}=\langle f_{1},\ldots,f_{n}\rangle_{\Gamma(X)}$ . Wegen
-\[
-V(\mathfrak{a})=\bigcap_{i=1}^{n}V(f_{i})\quad\Rightarrow\quad U=\bigcup_{i=1}^{n}D(f_{i})
-\]
+  $U=X\backslash V(\mathfrak{a})$ für ein $\mathfrak{a}\unlhd\Gamma(X)$,
+  $\mathfrak{a}=\langle f_{1},\ldots,f_{n}\rangle_{\Gamma(X)}$ . Wegen
+  \[
+    V(\mathfrak{a})=\bigcap_{i=1}^{n}V(f_{i})\quad\Rightarrow\quad U=\bigcup_{i=1}^{n}D(f_{i})
+  \]
 
-Es reichen also sogar endlich viele $f_{i} \in \Gamma(X)$! 
+  Es reichen also sogar endlich viele $f_{i} \in \Gamma(X)$! 
 \end{proof}
 \begin{prop}
-\label{prop:eigenschaften-koordinatenring}
-Der Koordinatenring $\Gamma(X)$ einer affinen algebraischen Menge
-$X$ ist eine endlich erzeugte $k$-Algebra, die reduziert ist (d.h.
-keine nilpotenten Elemente $\neq0$ enthält). Ferner ist $X$ irreduzibel
-genau dann, wenn $\Gamma(X)$ integer ist.
+  \label{prop:eigenschaften-koordinatenring}
+  Der Koordinatenring $\Gamma(X)$ einer affinen algebraischen Menge
+  $X$ ist eine endlich erzeugte $k$-Algebra, die reduziert ist (d.h.
+  keine nilpotenten Elemente $\neq0$ enthält). Ferner ist $X$ irreduzibel
+  genau dann, wenn $\Gamma(X)$ integer ist.
 \end{prop}
 \begin{proof}
-$k[\underline{T}]\twoheadrightarrow\Gamma(X)$ impliziert, dass $\Gamma(X)$ als $k$-Algebra endlich
-erzeugte ist. Es gilt:
-\[
-\Gamma(X)\text{ irreduzibel }\Leftrightarrow I(X)=\rad I(X).
-\]
+  $k[\underline{T}]\twoheadrightarrow\Gamma(X)$ impliziert, dass $\Gamma(X)$ als $k$-Algebra endlich
+  erzeugte ist. Es gilt:
+  \[
+    \Gamma(X)\text{ irreduzibel }\Leftrightarrow I(X)=\rad I(X).
+  \]
 
-Denn mit Satz 10.ii) und Korollar 11 folgt:
-\begin{align*}
-X & =V(\mathfrak{a}):\,I(X)=\rad\mathfrak{a}\\
-\Rightarrow\rad I(X) & =\rad\rad\mathfrak{a}=\rad\mathfrak{a}=I(X).
-\end{align*}
+  Denn mit Satz 10.ii) und Korollar 11 folgt:
+  \begin{align*}
+    X & =V(\mathfrak{a}):\,I(X)=\rad\mathfrak{a}\\
+    \Rightarrow\rad I(X) & =\rad\rad\mathfrak{a}=\rad\mathfrak{a}=I(X).
+  \end{align*}
 
-Mit Lemma 17 folgt: $X$ irreduzibel
+  Mit Lemma 17 folgt: $X$ irreduzibel
 
-$\phantom{\quad}\Leftrightarrow I(X)$ prim
+  $\phantom{\quad}\Leftrightarrow I(X)$ prim
 
-$\phantom{\quad}\Leftrightarrow\Gamma(X)=k[\underline{T}]/I(X)$ integer.
+  $\phantom{\quad}\Leftrightarrow\Gamma(X)=k[\underline{T}]/I(X)$ integer.
 \end{proof}
 
