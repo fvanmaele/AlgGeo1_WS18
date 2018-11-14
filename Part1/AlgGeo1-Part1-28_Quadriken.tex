@@ -1,0 +1,63 @@
+\section{Quadriken}
+\label{sec:quadriken}
+
+Sei char$(k)\neq2$ in diesem Abschnitt.
+\begin{defn}[orig. 57]
+  \label{def:quadrik}
+  Eine abgeschlossene Unterprävarietät $Q\subseteq\mathbb{P}^{n}(k)$
+  von der Form $V_{+}(q)$, $q\in k[X_{0},\ldots,X_{n}]_{2}\backslash\{0\}$
+  heißt \textbf{Quadrik}.
+  \[
+    Q=V_{+}(q)
+  \]
+
+  Zur quadratischen Form $q$ gehört eine Bilinearform $\beta$ auf
+  $k^{n+1}$, 
+  \[
+    \beta(v,w):=\frac{1}{2}(q(v+w)-q(v)-q(w)),\quad v,w\in k^{n+1}
+  \]
+
+Es gibt eine Basis von $k^{n+1}$, sodass die Strukturmatrix $B$
+von $\beta$ die Gestalt
+\[
+  B=\begin{pmatrix}
+    \begin{array}{ccc}
+      1\\
+      & \ddots\\
+      &  & 1
+    \end{array} & 0\\
+    0 &
+    \begin{array}{ccc}
+      0\\
+      & \ddots\\
+      &  & 0
+    \end{array}
+  \end{pmatrix}
+\]
+
+hat, d.h. Koordinatenwechsel zur Basiswechselmatrix liefert einen
+Isomorphismus
+\[
+  Q\xrightarrow{\cong}V_{+}(X_{0}^{2}+\cdots+X_{r-1}^{2}),\quad r=\text{rg }B
+\]
+\end{defn}
+\begin{lem}[orig. 58]
+  \label{lem:platzhalter}
+\end{lem}
+\begin{prop}[orig. 59]
+  \label{prop:quadrik-in-normalform}
+  Ist $r\neq s$, so sind $V_{+}(T_{0}^{2}+\cdots+T_{r-1}^{2})$ und
+  $V_{+}(T_{0}^{2}+\cdots+T_{s-1}^{2})$ nicht isomorph.
+\end{prop}
+\begin{proof}
+  (später: Es gibt keinen Koordinatenwechsel von $\mathbb{P}^{n}(k)$,
+  der beide Mengen identifiziert, damit auch kein Automorphismus in
+  $\mathbb{P}^{n}(k)$.)
+\end{proof}
+
+\begin{defn}
+  \label{def:dim-und-rang-einer-quadrik}
+  Eine Quadrik $Q\subseteq\mathbb{P}^{n}(k)$ mit $Q\cong V_{+}(T_{0}^{2}+\cdots+T_{r-1}^{2})$,
+  $r\geq1$, habe die \textbf{Dimension $n-1$} und den \textbf{Rang $r$}. (nach Satz eindeutig!)
+\end{defn}
+
