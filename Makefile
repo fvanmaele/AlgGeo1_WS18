@@ -9,8 +9,7 @@ tags: AlgGeo1.flt
 	scripts/create-tags AlgGeo1.flt >tags
 
 plastex: tags
-	plastex --renderer=Gerby --tags=tags --input-encoding=latin1 \
-		--output-encoding=latin1 AlgGeo1.tex
+	plastex --renderer=Gerby --tags=tags AlgGeo1.tex
 
 .PHONY: clean
 clean:

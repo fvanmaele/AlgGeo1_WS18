@@ -1,14 +1,14 @@
 
-\section{Funktionenkörper einer Prävarietät}
+\section{FunktionenkÃ¶rper einer PrÃ¤varietÃ¤t}
 \label{sec:funktionenkorper-praevarietaet}
 \begin{defn}[orig. 43]
   \label{def:funktionenkoerper-praevarietaet}
-  Für eine Prävarietät $X$ sind die rationalen Funktionenkörper aller
-  nicht-leeren affin-offenen Teilmengen in natürlicher Weise zu einander
-  isomorph. Diesen Körper $K(X)$ nennen wir den \textbf{rationalen Funktionenkörper}von $X$.
+  FÃ¼r eine PrÃ¤varietÃ¤t $X$ sind die rationalen FunktionenkÃ¶rper aller
+  nicht-leeren affin-offenen Teilmengen in natÃ¼rlicher Weise zu einander
+  isomorph. Diesen KÃ¶rper $K(X)$ nennen wir den \textbf{rationalen FunktionenkÃ¶rper}von $X$.
 \end{defn}
 \begin{proof}
-  $\emptyset\neq U$, $V\subseteq X$ affine, offene Untervarietäten. Da
+  $\emptyset\neq U$, $V\subseteq X$ affine, offene UntervarietÃ¤ten. Da
   $X$ irreduzibel ist, gilt nach \emph{Satz \ref{prop:charakterisierung-irreduzibel}}:
   \[
     \emptyset\neq U\cap V\subseteq U\text{ offen}.
@@ -20,31 +20,31 @@
   \]
 
   Das impliziert $\text{Quot}(\mathcal{O}_{X}(U\cap V))=K(U)$. Aus
-  Symmetriegründen ist aber damit auch bereits $K(V)=\text{Quot}(\mathcal{O}_{X}(U\cap V))$.
+  SymmetriegrÃ¼nden ist aber damit auch bereits $K(V)=\text{Quot}(\mathcal{O}_{X}(U\cap V))$.
 \end{proof}
 \begin{rem}[orig. 44]
   \label{rem:funktionenkoerper-nicht-funktoriell}
-  Bildung des des Funktionenkörpers $K(\cdot)$ ist \textbf{nicht} funktoriell!
-  Für $X\rightarrow Y$ Morphismus affiner Varietäten ist die Abbildung
+  Bildung des des FunktionenkÃ¶rpers $K(\cdot)$ ist \textbf{nicht} funktoriell!
+  FÃ¼r $X\rightarrow Y$ Morphismus affiner VarietÃ¤ten ist die Abbildung
   auf den Koordinatenringen $\Gamma(Y)\rightarrow\Gamma(X)$ i.A. \textbf{nicht}
   injektiv, induziert also keine Abbildung $K(Y)\hookrightarrow K(X)$.
 
   \emph{Jedoch}: Eine Isomorphie $X\xrightarrow{\sim}Y$ induziert $K(Y)\xrightarrow{\sim}K(X)$.
   Allgemeiner sei $X\xrightarrow{\varphi} Y$ Morphismus mit $\text{im}(\varphi) \subseteq Y$
-  offen ($\Rightarrow$ dicht. Später: $X\xrightarrow{\varphi} Y$ \textbf{dominant},
+  offen ($\Rightarrow$ dicht. SpÃ¤ter: $X\xrightarrow{\varphi} Y$ \textbf{dominant},
   gdw. $\text{im}(\varphi)\subseteq Y$ dicht) induziert in funktioreller Weise eine
   Abbildung $K(Y)\hookrightarrow K(X)$.
 \end{rem}
 \begin{prop}[orig. 45]
   \label{prop:charakterisierung-schnitte-praevarietaet}
-  Sei $X$ eine Prävarietät, $V\subseteq U\subseteq X$ offen. Dann gilt:
+  Sei $X$ eine PrÃ¤varietÃ¤t, $V\subseteq U\subseteq X$ offen. Dann gilt:
 
   \begin{enumerate}
   \item $\mathcal{O}_{X}(U)\subseteq K(X)$ ist $k$-Unteralgebra.
 
-  \item $\mathcal{O}_{X}(U)\rightarrow\mathcal{O}_{X}(V)$ ist Inklusion von Teilmengen des Funktionenkörpers $K(X)$.
+  \item $\mathcal{O}_{X}(U)\rightarrow\mathcal{O}_{X}(V)$ ist Inklusion von Teilmengen des FunktionenkÃ¶rpers $K(X)$.
 
-  \item Insbesondere gilt für $U,V\subseteq X$ offen:
+  \item Insbesondere gilt fÃ¼r $U,V\subseteq X$ offen:
     \[
       \mathcal{O}_{X}(U\cup V)=\mathcal{O}_{X}(U)\cap\mathcal{O}_{X}(V).
     \]
@@ -53,7 +53,7 @@
 \begin{proof}
   \mbox{}
 \item[(ii)] Sei $\mathcal{O}_{X}(X)\ni f:X\rightarrow k$. Dann ist $f^{-1}(0)\subseteq X$
-  abgeschlossen, da für $W\subseteq X$ affin-offen beliebig gilt, dass
+  abgeschlossen, da fÃ¼r $W\subseteq X$ affin-offen beliebig gilt, dass
   \[
     f^{-1}(0)\cap W=V(f|_{W}).
   \]
@@ -61,14 +61,14 @@
   affin-offene $W$ bilden eine Basis der Topologie. 
 
   $\Rightarrow\mathcal{O}_{X}(U)\hookrightarrow\mathcal{O}_{X}(V)$, $f\mapsto f|_{V}$
-  ist injektiv für $\emptyset\neq V\subseteq U\subseteq X$ offen.
+  ist injektiv fÃ¼r $\emptyset\neq V\subseteq U\subseteq X$ offen.
 
   $\Rightarrow V\subseteq f^{-1}(0)$ 
 
   $\Rightarrow f^{-1}(0)=U$ 
 
   $\Rightarrow f\equiv0$.
-\item[(i)] $U\supseteq W$ affin-offene Untervarietät.
+\item[(i)] $U\supseteq W$ affin-offene UntervarietÃ¤t.
   \[
     \xymatrix{
       \mathcal{O}_{X}(W) \ar@{^(->}[r] & K(W) \text{ } k\text{-Algebren} \\

@@ -1,11 +1,11 @@
 
-\section{Abgeschlossene Unterpr‰variet‰ten}
+\section{Abgeschlossene Unterpr√§variet√§ten}
 \label{sec:abg-untervarietaeten}
 
-Sei $X$ eine Pr‰variet‰t, $Z\subseteq X$ abgeschlossen und irreduzibel.
+Sei $X$ eine Pr√§variet√§t, $Z\subseteq X$ abgeschlossen und irreduzibel.
 
-\textbf{Ziel.} $(Z,\mathcal{O}_{Z}')$ Raum von Funktionen erkl‰ren.
-Definiere dazu f¸r $U \subseteq Z$ offen:
+\textbf{Ziel.} $(Z,\mathcal{O}_{Z}')$ Raum von Funktionen erkl√§ren.
+Definiere dazu f√ºr $U \subseteq Z$ offen:
 
 \[
   \mathcal{O}_{Z}'(U):=\{f\in\text{Abb}(U,k)\mid\forall x\in U\ \exists x\in V\subseteq X\text{ offen},\ g\in\mathcal{O}_{X}(V) \text{ mit } f|_{U\cap V}=g|_{U\cap V}\}
@@ -18,15 +18,15 @@ Damit ist $(Z,\mathcal{O}'_{Z})$ Raum von Funktionen (klar!) mit $\mathcal{O}'_{
   und $Z\subseteq X$ ein irreduzibler abgeschlossener Teilraum. Dann
   ist $(Z,\mathcal{O}_{Z})=(Z,\mathcal{O}'_{Z})$.
 
-  Bezeichne ab jetzt stets $\mathcal{O}_{Z}$ f¸r $\mathcal{O}_{Z'}$.
+  Bezeichne ab jetzt stets $\mathcal{O}_{Z}$ f√ºr $\mathcal{O}_{Z'}$.
 \end{lem}
 \begin{proof}
-  $Z\subseteq X$ ist in beiden F‰llen mit der Teilraumtopologie ausgestattet!
+  $Z\subseteq X$ ist in beiden F√§llen mit der Teilraumtopologie ausgestattet!
   Ferner wissen wir, dass der Morphismus $Z\hookrightarrow X$ affin-algebraischer Mengen einen Morphismus $(Z,\mathcal{O}_{Z})\rightarrow(X,\mathcal{O}_{X})$
-  von Pr‰variet‰ten induziert. Nach Definition von $\mathcal{O}'$
+  von Pr√§variet√§ten induziert. Nach Definition von $\mathcal{O}'$
   folgt dann:
   \[
-    \mathcal{O}'_{Z}(U)\subseteq\mathcal{O}_{Z}(U)\quad\text{f¸r }U\subseteq Z\ \text{offen, denn:}
+    \mathcal{O}'_{Z}(U)\subseteq\mathcal{O}_{Z}(U)\quad\text{f√ºr }U\subseteq Z\ \text{offen, denn:}
   \] 
   Ist $f \in \mathcal{O}_{Z}'(U)$ und $x \in U$ so existieren nach Definition eine offene Umgebung $x \in V_{x} \subseteq X$ und ein $g \in \mathcal{O}_{X}(V_{x})$ d.d. $f|_{U \cap V_{x}} = g|_{U \cap V_{x}}$. Damit gilt $g|_{Z \cap V_x} \in \mathcal{O}_{Z}(Z \cap V_{x})$. Mit dem Verklebungsaxiom erhalten wir also $f \in \mathcal{O}_{Z}(U)$.
 
@@ -37,7 +37,7 @@ Damit ist $(Z,\mathcal{O}'_{Z})$ Raum von Funktionen (klar!) mit $\mathcal{O}'_{
     f|_{D(h)}=\frac{g}{h^{n}}\in\Gamma(Z)_{h}=\mathcal{O}_{Z}(D(h))
   \]
 
-  f¸r $n\geq0$ und $g\in\Gamma(Z)$ geeignet. Lifte $g,h\in\Gamma(Z)\twoheadleftarrow\Gamma(X)$
+  f√ºr $n\geq0$ und $g\in\Gamma(Z)$ geeignet. Lifte $g,h\in\Gamma(Z)\twoheadleftarrow\Gamma(X)$
   zu $\overline{g},\overline{h}\in\Gamma(X)$ und setze $V:=D(\overline{h})\subseteq X$.
 
   $\Rightarrow x\in V$, $\frac{\overline{g}}{\overline{h}^{n}}\in\mathcal{O}_{X}(D(\overline{h}))$
@@ -47,16 +47,16 @@ Damit ist $(Z,\mathcal{O}'_{Z})$ Raum von Funktionen (klar!) mit $\mathcal{O}'_{
 \end{proof}
 \begin{cor}[orig. 47]
   \label{cor:abg-untervarietaeten-sind-praevarietaeten}
-  Wenn $X$ eine Pr‰variet‰t ist, und $Z\subseteq X$ irreduzibel und abgeschlossen, dann ist $(Z,\mathcal{O}_{Z})$ ebenfalls eine Pr‰variet‰t.
+  Wenn $X$ eine Pr√§variet√§t ist, und $Z\subseteq X$ irreduzibel und abgeschlossen, dann ist $(Z,\mathcal{O}_{Z})$ ebenfalls eine Pr√§variet√§t.
 \end{cor}
 \begin{proof}
-  Es ist $X=\bigcup_{i}X_{i}$ f¸r eine endliche affin-offene ‹berdeckung $(X_{i})_{i}$.
+  Es ist $X=\bigcup_{i}X_{i}$ f√ºr eine endliche affin-offene √úberdeckung $(X_{i})_{i}$.
   Damit ist 
   \[
     Z=\bigcup_{i}\left(Z\cap X_{i}\right) :=\bigcup_{i} Z_{i}
   \]
   
 
-  mit $(Z_{i}, \mathcal{O}_{Z_{i}})$ affine Variet‰t nach Lemma $\ref{lem:abg-untervarietaeten-affine-varietaeten}$.
+  mit $(Z_{i}, \mathcal{O}_{Z_{i}})$ affine Variet√§t nach Lemma $\ref{lem:abg-untervarietaeten-affine-varietaeten}$.
 \end{proof}
 
