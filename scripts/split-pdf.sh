@@ -1,12 +1,11 @@
 #!/bin/bash
-src=split-by-bookmarks.cc
-tmp=$(mktemp -d)
+conv=$PWD/split-by-bookmarks
+if ! [ -x "$conv" ]; then
+    echo >&2 "converter not found"
+fi
+
 i=0
-
-echo "building $src to $tmp..."
-g++ -DBMARK_LEVEL=2 "$src" -o "$tmp"/converter
-
-pdftk "$1" dump_data_utf8 | "$tmp"/converter | while read -r a b title; do
+pdftk "$1" dump_data_utf8 | "$conv" | while read -r a b title; do
     title=${title// /-}
     title=${title//\//-}
     title=${title//ä/ae}
@@ -18,5 +17,3 @@ pdftk "$1" dump_data_utf8 | "$tmp"/converter | while read -r a b title; do
     pdftk "$1" cat $a-$b output "$2-${i}_$title".pdf
     let i++;
 done
-
-rm -rf "$tmp"

@@ -1,51 +1,52 @@
 
-\section{Funktorialität der Konstruktion}
-\label{sec:funktorialität-affine-varietaet}
-\begin{prop}[orig. 35]\label{prop:charakterisierung-morphismen-alg-mengen}
-Sei $f:X\rightarrow Y$ eine stetige Abbildung zwischen irreduziblen
-affin-algebraischen Mengen. Es sind äquivalent:
-\begin{enumerate}
-\item $f$ ist ein Morphismus affin-algebraischer Mengen.
-\item $\forall g\in\Gamma(Y)$ gilt $g\circ f\in\Gamma(X)$.
-\item $f$ ist ein Morphismus von Räumen von Funktionen, d.h. für alle $U\subseteq Y$
-offen und alle $g\in\mathcal{O}_{Y}(U)$ gilt $g\circ f\in\mathcal{O}_{X}(f^{-1}(U))$.
-\end{enumerate}
+\section{FunktorialitÃ¤t der Konstruktion}
+\label{sec:funktorialitaet-affine-varietaet}
+\begin{prop}[orig. 35]
+  \label{prop:charakterisierung-morphismen-alg-mengen}
+  Sei $f:X\rightarrow Y$ eine stetige Abbildung zwischen irreduziblen
+  affin-algebraischen Mengen. Es sind Ã¤quivalent:
+  \begin{enumerate}
+  \item $f$ ist ein Morphismus affin-algebraischer Mengen.
+  \item $\forall g\in\Gamma(Y)$ gilt $g\circ f\in\Gamma(X)$.
+  \item $f$ ist ein Morphismus von RÃ¤umen von Funktionen, d.h. fÃ¼r alle $U\subseteq Y$
+    offen und alle $g\in\mathcal{O}_{Y}(U)$ gilt $g\circ f\in\mathcal{O}_{X}(f^{-1}(U))$.
+  \end{enumerate}
 \end{prop}
 \begin{proof}
-\mbox{}
-\begin{itemize}
-\item $(i)\Leftrightarrow(ii)$ 
+  \mbox{}
+  \begin{itemize}
+  \item $(i)\Leftrightarrow(ii)$ 
 
-Folgt aus Satz $\ref{prop:koordinatenringfunktor}$.
-\item $(iii)\Rightarrow(ii)$ 
+    Folgt aus Satz $\ref{prop:koordinatenringfunktor}$.
+  \item $(iii)\Rightarrow(ii)$ 
 
-$U:=Y$ und Satz $\ref{prop:fkt-auf-basis}$.
-\item $(ii)\Rightarrow(iii)$
+    $U:=Y$ und Satz $\ref{prop:fkt-auf-basis}$.
+  \item $(ii)\Rightarrow(iii)$
 
-Betrachte $\Gamma(f):\Gamma(Y)\rightarrow\Gamma(X)$, $h\mapsto h\circ f$.
-Aufgrund des Verklebungsaxioms reicht es, die Bedingung für $U$ von
-der Form $D(g)$ zu zeigen; hier gilt:
-\[
-f^{-1}(D(g))=\{x\in X\mid\underbrace{g(f(x))}_{=\Gamma(f)(g)(x)}\neq0\}=D(g \circ f)
-\]
-Deswegen induziert $\Gamma(f)$:
-\begin{align*}
-h & \longmapsto h\circ f\\
-\mathcal{O}_{Y}(D(g)) & \longrightarrow\mathcal{O}_{X}(D(g\circ f))\\
- & \shortparallel\\
-\Gamma(Y)_{g} & \longrightarrow\Gamma(X)_{g \circ f}\\
-\frac{h}{g^{n}} & \longmapsto\frac{h\circ f}{(g\circ f)^{n}}
-\end{align*}
-mit $h\circ f, g\circ f\in\Gamma(X)$ nach Voraussetzung.
+    Betrachte $\Gamma(f):\Gamma(Y)\rightarrow\Gamma(X)$, $h\mapsto h\circ f$.
+    Aufgrund des Verklebungsaxioms reicht es, die Bedingung fÃ¼r $U$ von
+    der Form $D(g)$ zu zeigen; hier gilt:
+    \[
+      f^{-1}(D(g))=\{x\in X\mid\underbrace{g(f(x))}_{=\Gamma(f)(g)(x)}\neq0\}=D(g \circ f)
+    \]
+    Deswegen induziert $\Gamma(f)$:
+    \begin{align*}
+      h & \longmapsto h\circ f\\
+      \mathcal{O}_{Y}(D(g)) & \longrightarrow\mathcal{O}_{X}(D(g\circ f))\\
+        & \shortparallel\\
+      \Gamma(Y)_{g} & \longrightarrow\Gamma(X)_{g \circ f}\\
+      \frac{h}{g^{n}} & \longmapsto\frac{h\circ f}{(g\circ f)^{n}}
+    \end{align*}
+    mit $h\circ f, g\circ f\in\Gamma(X)$ nach Voraussetzung.
 
-\end{itemize}
+  \end{itemize}
 \end{proof}
 Insgesamt erhalten wir:
 \begin{thm}[orig. 36]
-\label{thm:aequivalenz-alg-mengen-aff-varietaeten}
-Die obige Konstruktion definiert einen volltreuen Funktor
-\[
-\text{\{irreduzible aff. alg. Mengen über }k\}\rightarrow\{\text{Räume mit Funktionen über }k\}.
-\]
+  \label{thm:aequivalenz-alg-mengen-aff-varietaeten}
+  Die obige Konstruktion definiert einen volltreuen Funktor
+  \[
+    \text{\{irreduzible aff. alg. Mengen Ã¼ber }k\}\rightarrow\{\text{RÃ¤ume mit Funktionen Ã¼ber }k\}.
+  \]
 \end{thm}
 

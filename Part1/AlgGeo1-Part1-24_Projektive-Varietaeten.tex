@@ -1,87 +1,86 @@
-%\selectlanguage{english}%
 
-\section{Projektive Variet‰ten}
+\section{Projektive Variet√§ten}
 \label{sec:projektive-varietaeten}
 \begin{defn}[orig. 54]
-\label{def:projektive-varietaeten}
-Abgeschlossene Unterpr‰variet‰ten eines projektiven Raumes $\mathbb{P}^{n}(k)$
-heiﬂen \textbf{projektive Variet‰ten}.
+  \label{def:projektive-varietaeten}
+  Abgeschlossene Unterpr√§variet√§ten eines projektiven Raumes $\mathbb{P}^{n}(k)$
+  hei√üen \textbf{projektive Variet√§ten}.
 \end{defn}
-Vorsicht: f¸r $x=(x_{0}:\ldots:x_{n})\in\mathbb{P}^{n}$, $f\in k[X_{0},\ldots,X_{n}]$
-ist $f(x_{1},\ldots,x_{n})$ \emph{nicht} wohldefiniert, da von Repr‰sentaten
-abh‰ngig, d.h. $f$ kann \emph{nicht}\textbf{ }als Funktion auf $\mathbb{P}^{n}$
-aufgefasst werden. F¸r \emph{homogene}\textbf{ }Polynome $f_{1},\ldots,f_{n}\in k[X_{0},\ldots X_{n}]$
- (nicht notwendig vom selben Grad) kˆnnen wir demnoch Verschwindungsmengen
+Vorsicht: f√ºr $x=(x_{0}:\ldots:x_{n})\in\mathbb{P}^{n}$, $f\in k[X_{0},\ldots,X_{n}]$
+ist $f(x_{1},\ldots,x_{n})$ \emph{nicht} wohldefiniert, da von Repr√§sentaten
+abh√§ngig, d.h. $f$ kann \emph{nicht}\textbf{ }als Funktion auf $\mathbb{P}^{n}$
+aufgefasst werden. F√ºr \emph{homogene}\textbf{ }Polynome $f_{1},\ldots,f_{n}\in k[X_{0},\ldots X_{n}]$
+(nicht notwendig vom selben Grad) k√∂nnen wir demnoch Verschwindungsmengen
 definieren:
 \[
-V_{+}(f_{1},\ldots,f_{n})=\{(x_{0}:\ldots:x_{n})\in\mathbb{P}^{n}\mid f_{j}(x_{0},\ldots,x_{n})=0\ \forall j\}
+  V_{+}(f_{1},\ldots,f_{n})=\{(x_{0}:\ldots:x_{n})\in\mathbb{P}^{n}\mid f_{j}(x_{0},\ldots,x_{n})=0\ \forall j\}
 \]
 
 Da $V_{+}(f_{1},\ldots,f_{n})\cap U_{i}=V(\Phi_{i}(f_{1}),\ldots,\Phi_{i}(f_{m}))$
 ist $V_{+}(f_{1},\ldots,f_{m})$ abgeschlossen in $\mathbb{P}^{n}$.
 Ist $V_{+}(f_{1},\ldots,f_{n})$ irreduzibel, so erhalten wir eine
-projektive Variet‰t. In der Tat entstehen alle projektiven Variet‰ten
+projektive Variet√§t. In der Tat entstehen alle projektiven Variet√§ten
 auf diese Weise, wie der folgende Satz zeigt:
 \begin{prop}[orig. 55]
-\label{prop:charakterisierung-projektive-varietaeten}
-Sei $Z\subseteq\mathbb{P}^{n}(k)$ eine projektive Variet‰t. Dann
-existieren homogene Polynome $f_{1},\ldots,f_{n}\in k[X_{0},\ldots,X_{n}]$,
-so dass
-\[
-Z=V_{+}(f_{1},\ldots,f_{n})
-\]
+  \label{prop:charakterisierung-projektive-varietaeten}
+  Sei $Z\subseteq\mathbb{P}^{n}(k)$ eine projektive Variet√§t. Dann
+  existieren homogene Polynome $f_{1},\ldots,f_{n}\in k[X_{0},\ldots,X_{n}]$,
+  so dass
+  \[
+    Z=V_{+}(f_{1},\ldots,f_{n})
+  \]
 
-gilt.
+  gilt.
 \end{prop}
 \begin{proof}
-Betrachte: 
-\[
-\begin{array}{cc}
-\\
-\\
-\end{array}
-\]
+  Betrachte: 
+  \[
+    \begin{array}{cc}
+      \\
+      \\
+    \end{array}
+  \]
 
-$f|_{f^{-1}(U_{i})}:f^{-1}(U_{i})\longrightarrow U_{i}$ ist Morphismus
-von Pr‰variet‰ten. Dann ist $f$ selber ein Morphismus von Pr‰variet‰ten.
-\begin{align*}
-\overline{Y}:= & Y\cup\{0\}\text{ Abschluss von }Y\text{ in }\mathbb{A}^{n+1}(k)\\
-\mathfrak{A}:= & I(\overline{Y})\subseteq k[X_{0},\ldots,X_{n}]
-\end{align*}
+  $f|_{f^{-1}(U_{i})}:f^{-1}(U_{i})\longrightarrow U_{i}$ ist Morphismus
+  von Pr√§variet√§ten. Dann ist $f$ selber ein Morphismus von Pr√§variet√§ten.
+  \begin{align*}
+    \overline{Y}:= & Y\cup\{0\}\text{ Abschluss von }Y\text{ in }\mathbb{A}^{n+1}(k)\\
+    \mathfrak{A}:= & I(\overline{Y})\subseteq k[X_{0},\ldots,X_{n}]
+  \end{align*}
 
-Behauptung: $\mathfrak{A}$ wird von homogenen Polynomen erzeugt\emph{.
-Denn:} f¸r $g\in\mathfrak{A}$, $g=\sum_{d}g_{d}$ Zerlegung in homogene
-Bestandteile vom Grad $d$. $\overline{Y}$ ist Vereinigung von Ursprungsgeraden
-im $k^{n+1}$, d.h. $\forall\lambda\in k^{\times}$ gilt:
-\[
-g(x_{0},\ldots,x_{n})=0\ \Leftrightarrow\ g(\lambda x_{0},\ldots,\lambda x_{n})=0
-\]
+  Behauptung: $\mathfrak{A}$ wird von homogenen Polynomen erzeugt\emph{.
+    Denn:} f√ºr $g\in\mathfrak{A}$, $g=\sum_{d}g_{d}$ Zerlegung in homogene
+  Bestandteile vom Grad $d$. $\overline{Y}$ ist Vereinigung von Ursprungsgeraden
+  im $k^{n+1}$, d.h. $\forall\lambda\in k^{\times}$ gilt:
+  \[
+    g(x_{0},\ldots,x_{n})=0\ \Leftrightarrow\ g(\lambda x_{0},\ldots,\lambda x_{n})=0
+  \]
 
-Beweis durch Widerspruch. Nicht alle $g_{d}$ liegen in $\mathfrak{A}$.
+  Beweis durch Widerspruch. Nicht alle $g_{d}$ liegen in $\mathfrak{A}$.
 
-$\Rightarrow\exists(x_{0},\ldots,x_{n})\in\mathbb{A}^{n+1}(k)$, so
-dass $g(x_{0},\ldots,x_{n})=0$, aber $g_{d_{0}}(x_{0},\ldots,x_{n})\neq0$.
+  $\Rightarrow\exists(x_{0},\ldots,x_{n})\in\mathbb{A}^{n+1}(k)$, so
+  dass $g(x_{0},\ldots,x_{n})=0$, aber $g_{d_{0}}(x_{0},\ldots,x_{n})\neq0$.
 
-$\Rightarrow0\,\cancel{\equiv}\,\sum_{d}g_{d}(x_{0},\ldots,x_{n})T^{d}\in k[T]$
+  $\Rightarrow0\,\not\equiv,\sum_{d}g_{d}(x_{0},\ldots,x_{n})T^{d}\in k[T]$
 
-$\Rightarrow(\exists\lambda\in k^{\times})$ $0\neq\sum_{d}g_{d}(x_{0},\ldots,x_{n})\lambda^{d}=\sum_{d}g_{d}(\lambda x_{0},\ldots,\lambda x_{n})=g(\lambda x_{0},\ldots,\lambda x_{n})=0$.
-Widerspruch.
+  $\Rightarrow(\exists\lambda\in k^{\times})$ $0\neq\sum_{d}g_{d}(x_{0},\ldots,x_{n})\lambda^{d}=\sum_{d}g_{d}(\lambda x_{0},\ldots,\lambda x_{n})=g(\lambda x_{0},\ldots,\lambda x_{n})=0$.
+  Widerspruch.
 
-$\Rightarrow\mathfrak{A}=(f_{1},\ldots,f_{m})$, $f_{j}$ homogen.
+  $\Rightarrow\mathfrak{A}=(f_{1},\ldots,f_{m})$, $f_{j}$ homogen.
 
-$\Rightarrow Z=V_{+}(f_{1},\ldots,f_{m})$. 
+  $\Rightarrow Z=V_{+}(f_{1},\ldots,f_{m})$. 
 
-\begin{align*}
-Z\ni(x_{0}:\cdots:x_{n}) & \Leftrightarrow(\lambda x_{0},\ldots,\lambda x_{n})\in\overline{Y}\ \forall\lambda\in k^{\times}\text{ und }\neq0\\
- & \Leftrightarrow f_{i}(x_{0},\ldots,x_{n})=0\ \forall1\leq i\leq n,\ (x_{0},\ldots,x_{n})\in\mathbb{P}^{n}
-\end{align*}
+  \begin{align*}
+    Z\ni(x_{0}:\cdots:x_{n}) & \Leftrightarrow(\lambda x_{0},\ldots,\lambda x_{n})\in\overline{Y}\ \forall\lambda\in k^{\times}\text{ und }\neq0\\
+                             & \Leftrightarrow f_{i}(x_{0},\ldots,x_{n})=0\ \forall1\leq i\leq n,\ (x_{0},\ldots,x_{n})\in\mathbb{P}^{n}
+  \end{align*}
 
-\rule[0.5ex]{1\columnwidth}{1pt}
+  \rule[0.5ex]{1\columnwidth}{1pt}
 \end{proof}
 Zu Bemerkung 49 
 
 Nach Satz 51 und Definition von $\mathcal{O}_{Z}'$ folgt: Ist $X$
-eine projektive Variet‰t und $U\subset X$ offen, so kˆnnen wir 
+eine projektive Variet√§t und $U\subset X$ offen, so k√∂nnen wir 
 
 $\mathcal{O}_{X}(U)=\{f:U\rightarrow k\mid\forall x\in U\ \exists x\in V\underset{\text{offen}}{\subset}U,\ g,h\in k[X_{0},\ldots,X_{n}]$
 homogen vom gleichen Grad mit $h(v)\neq0,\ f(v)=\frac{g(v)}{h(v)},\ \forall v\in V\}$.
@@ -89,52 +88,52 @@ homogen vom gleichen Grad mit $h(v)\neq0,\ f(v)=\frac{g(v)}{h(v)},\ \forall v\in
 
 Insbesondere gilt:
 \begin{prop}[orig. 56]
-\label{prop:charakterisierung-morphismen-proj-varietaeten}
-Seien $V\subseteq\mathbb{P}^{m}(k)$, $W\subset\mathbb{P}^{n}(k)$
-projektive Variet‰ten und
-\[
-V\subseteq\mathbb{P}^{m}(k)\xrightarrow{\phi}W\subseteq\mathbb{P}^{n}(k)
-\]
+  \label{prop:charakterisierung-morphismen-proj-varietaeten}
+  Seien $V\subseteq\mathbb{P}^{m}(k)$, $W\subset\mathbb{P}^{n}(k)$
+  projektive Variet√§ten und
+  \[
+    V\subseteq\mathbb{P}^{m}(k)\xrightarrow{\phi}W\subseteq\mathbb{P}^{n}(k)
+  \]
 
-eine Abbildung. Dann ist $\phi$ eine Morphismus genau dann, wenn
-es zu jedem $x\in V$ eine offene Menge $x\in U_{x}\subset V$ und
-homogene Polynome $f_{0},\ldots,f_{n}\subseteq k[X_{0},\ldots,X_{m}]$
-vom selben Grad existiert mit
-\[
-\phi(y)=(f_{0}(y),\ldots,f_{n}(y))\quad\forall y\in U_{x}
-\]
+  eine Abbildung. Dann ist $\phi$ eine Morphismus genau dann, wenn
+  es zu jedem $x\in V$ eine offene Menge $x\in U_{x}\subset V$ und
+  homogene Polynome $f_{0},\ldots,f_{n}\subseteq k[X_{0},\ldots,X_{m}]$
+  vom selben Grad existiert mit
+  \[
+    \phi(y)=(f_{0}(y),\ldots,f_{n}(y))\quad\forall y\in U_{x}
+  \]
 \end{prop}
 \begin{proof}
-\mbox{}
-\begin{itemize}
-\item ``$\Rightarrow$'', ‹bung.
-\item ``$\Leftarrow$''.
-\begin{enumerate}
-\item $\phi$ stetig: Sei $Z\subseteq W$ abgeschlossen. Ohne Einschr‰nkung
-$Z=V_{+}(g)\cap W$ f¸r ein homogenes Polynom $g$. Dann berechnet
-sich das Urbild
-\[
-\phi^{-1}(Z)=V_{+}(g\circ\phi)\cap V.
-\]
-Auf $U_{x}$, $x\in V$, ist $g\circ\phi$ als homogenes Polynom in
-$X_{0},\ldots,X_{n}$ gegeben. 
+  \mbox{}
+  \begin{itemize}
+  \item ``$\Rightarrow$'', √úbung.
+  \item ``$\Leftarrow$''.
+    \begin{enumerate}
+    \item $\phi$ stetig: Sei $Z\subseteq W$ abgeschlossen. Ohne Einschr√§nkung
+      $Z=V_{+}(g)\cap W$ f√ºr ein homogenes Polynom $g$. Dann berechnet
+      sich das Urbild
+      \[
+        \phi^{-1}(Z)=V_{+}(g\circ\phi)\cap V.
+      \]
+      Auf $U_{x}$, $x\in V$, ist $g\circ\phi$ als homogenes Polynom in
+      $X_{0},\ldots,X_{n}$ gegeben. 
 
-$\Rightarrow V(g\circ\phi)\cap U_{x}=\phi^{-1}(Z)\cap U_{x}$ abgeschlossen
-in $U_{x}$ f¸r alle $x$.
+      $\Rightarrow V(g\circ\phi)\cap U_{x}=\phi^{-1}(Z)\cap U_{x}$ abgeschlossen
+      in $U_{x}$ f√ºr alle $x$.
 
-$\Rightarrow\phi^{-1}(Z)\subseteq V$ abgeschlossen.
-\item Zu zeigen: $\forall W'\subseteq W$ offen, $g\in\mathcal{O}_{W}(W')$
-ist $g\circ\phi\in\mathcal{O}_{V}(\phi^{-1}(W'))$.
+      $\Rightarrow\phi^{-1}(Z)\subseteq V$ abgeschlossen.
+    \item Zu zeigen: $\forall W'\subseteq W$ offen, $g\in\mathcal{O}_{W}(W')$
+      ist $g\circ\phi\in\mathcal{O}_{V}(\phi^{-1}(W'))$.
 
-$\Rightarrow$ ({*}) Es ex. eine offene Umgebung $W_{y}$ in $W'$
-mit $g=\frac{h}{q}$ auf $W_{y}$, $h,q$ homogen vom Grad $d$.
+      $\Rightarrow$ ({*}) Es ex. eine offene Umgebung $W_{y}$ in $W'$
+      mit $g=\frac{h}{q}$ auf $W_{y}$, $h,q$ homogen vom Grad $d$.
 
-$\Rightarrow\phi_{|U_{x}\cap\phi^{-1}(W_{y}):=\tilde{U}_{x}}$ ist
-auch von dieser Gestalt.
+      $\Rightarrow\phi_{|U_{x}\cap\phi^{-1}(W_{y}):=\tilde{U}_{x}}$ ist
+      auch von dieser Gestalt.
 
-$\Rightarrow$ ({*}) $\frac{h(f_{0},\ldots,f_{n})}{q(f_{0},\ldots,f_{n})}=g\circ\phi_{|\tilde{U}_{x}}\in\mathcal{O}_{V}(\tilde{U}_{x})$.
-\end{enumerate}
-$\Rightarrow$ (Verkleben) $g\circ\phi\in\mathcal{O}_{V}(\phi^{-1}(V))$.\selectlanguage{ngerman}%
-\end{itemize}
+      $\Rightarrow$ ({*}) $\frac{h(f_{0},\ldots,f_{n})}{q(f_{0},\ldots,f_{n})}=g\circ\phi_{|\tilde{U}_{x}}\in\mathcal{O}_{V}(\tilde{U}_{x})$.
+    \end{enumerate}
+    $\Rightarrow$ (Verkleben) $g\circ\phi\in\mathcal{O}_{V}(\phi^{-1}(V))$.
+  \end{itemize}
 \end{proof}
 

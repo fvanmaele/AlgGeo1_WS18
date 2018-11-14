@@ -3,58 +3,59 @@
 \label{sec:alg-mengen-raeume-mit-fkt}
 
 \textbf{Ziel.} Wir wollen jeder irreduziblen affin algebraischen Menge $X\subseteq\mathbb{A}^{n}(k)$ einen Raum mit Funktionen $(X,\mathcal{O}_{X})$ zuordnen.
-D.h. wir müssen Mengen von Funktionen $\mathcal{O}_{X}(U) \leq \text{Abb}(U,k)$,
-$U\subseteq X$ offen, definieren. Diese werden als Teilmengen des Funktionenkörpers
-$K(X)$ definiert (dazu $X$ irreduzibel, später bei Schemata fällt
+D.h. wir mÃ¼ssen Mengen von Funktionen $\mathcal{O}_{X}(U) \leq \text{Abb}(U,k)$,
+$U\subseteq X$ offen, definieren. Diese werden als Teilmengen des FunktionenkÃ¶rpers
+$K(X)$ definiert (dazu $X$ irreduzibel, spÃ¤ter bei Schemata fÃ¤llt
 diese Bedingung weg!)
 \begin{defn}
-\label{def:funktionenkoerper}
-Für eine irreduzible, affin-algebraische Menge $X$ heißt $K(X):=\text{Quot}(\Gamma(X))$ \textbf{Funktionenkörper} von $X$.
+  \label{def:funktionenkoerper}
+  FÃ¼r eine irreduzible, affin-algebraische Menge $X$ heiÃŸt $K(X):=\text{Quot}(\Gamma(X))$ \textbf{FunktionenkÃ¶rper} von $X$.
 
-Elemente $\frac{f}{g}\in K(X)$, $f,g\in\Gamma(X)=\hom(X,\mathbb{A}^{1}(k))$,
-$g\neq0$ lassen sich zumindest als Funktion auf der offenen Menge
-$D(g)\subseteq X$ auffassen, wenn auch i.A. nicht auf ganz
-$X$.
+  Elemente $\frac{f}{g}\in K(X)$, $f,g\in\Gamma(X)=\hom(X,\mathbb{A}^{1}(k))$,
+  $g\neq0$ lassen sich zumindest als Funktion auf der offenen Menge
+  $D(g)\subseteq X$ auffassen, wenn auch i.A. nicht auf ganz
+  $X$.
 \end{defn}
-\begin{lem}\label{lem:gleichheit-im-funktionenkoerper}
-Gilt für $\frac{f_{1}}{g_{1}},\frac{f_{2}}{g_{2}}\in K(X)$, $f_{i},g_{i}\in\Gamma(X)$,
-und einer offenen Teilmenge $\emptyset\neq U\subseteq D(g_{1}g_{2})$
-\[
-\frac{f_{1}(x)}{g_{1}(x)}=\frac{f_{2}(x)}{g_{2}(x)}\qquad\forall x\in U,
-\]
+\begin{lem}
+  \label{lem:gleichheit-im-funktionenkoerper}
+  Gilt fÃ¼r $\frac{f_{1}}{g_{1}},\frac{f_{2}}{g_{2}}\in K(X)$, $f_{i},g_{i}\in\Gamma(X)$,
+  und einer offenen Teilmenge $\emptyset\neq U\subseteq D(g_{1}g_{2})$
+  \[
+    \frac{f_{1}(x)}{g_{1}(x)}=\frac{f_{2}(x)}{g_{2}(x)}\qquad\forall x\in U,
+  \]
 
-dann folgt $\frac{f_{1}}{g_{1}}=\frac{f_{2}}{g_{2}}$ in $K(X)$.
+  dann folgt $\frac{f_{1}}{g_{1}}=\frac{f_{2}}{g_{2}}$ in $K(X)$.
 \end{lem}
 \begin{proof}
-Sei ohne Einschränkung der Allgemeinheit $g_{1}=g_{2}=g$. (Sonst
-Erweitern!) 
+  Sei ohne EinschrÃ¤nkung der Allgemeinheit $g_{1}=g_{2}=g$. (Sonst
+  Erweitern!) 
 
-$\Rightarrow(f_{1}-f_{2})(x)=0$ $\forall x\in U$.
+  $\Rightarrow(f_{1}-f_{2})(x)=0$ $\forall x\in U$.
 
-$\Rightarrow\emptyset\neq U\subseteq V(f_{1}-f_{2})\subseteq X$ dicht,
-d.h. $V(f_{1}-f_{2})=X$.
+  $\Rightarrow\emptyset\neq U\subseteq V(f_{1}-f_{2})\subseteq X$ dicht,
+  d.h. $V(f_{1}-f_{2})=X$.
 
-$\phantom{\Rightarrow\ }$$f_{1}-f_{2}\in I()V(f_{1}-f_{2}))=I(X)\equiv(0)$
-in $\Gamma(X)$ 
+  $\phantom{\Rightarrow\ }$$f_{1}-f_{2}\in I()V(f_{1}-f_{2}))=I(X)\equiv(0)$
+  in $\Gamma(X)$ 
 
-$\Rightarrow f_{1}-f_{2}=0$.
+  $\Rightarrow f_{1}-f_{2}=0$.
 \end{proof}
 \begin{defn}
-\label{def:alg-menge-als-raum-mit-fkt}
-Sei $X$ eine irreduzible affin-algebraische Menge, $U\subseteq X$
-offen. Für $x \in X$ bezeichne $\Gamma(X)_{\mathfrak{m}_{x}}$ die Lokalisierung von $\Gamma(X)$ an der multiplikativ abgeschlossenen Menge $S := \Gamma(X) \setminus \mathfrak{m}_{x}$.
-\[
-\mathcal{O}_{X}(U):=\bigcap_{x\in U}\Gamma(X)_{\mathfrak{m}_{x}}\subseteq K(X)
-\]
+  \label{def:alg-menge-als-raum-mit-fkt}
+  Sei $X$ eine irreduzible affin-algebraische Menge, $U\subseteq X$
+  offen. FÃ¼r $x \in X$ bezeichne $\Gamma(X)_{\mathfrak{m}_{x}}$ die Lokalisierung von $\Gamma(X)$ an der multiplikativ abgeschlossenen Menge $S := \Gamma(X) \setminus \mathfrak{m}_{x}$.
+  \[
+    \mathcal{O}_{X}(U):=\bigcap_{x\in U}\Gamma(X)_{\mathfrak{m}_{x}}\subseteq K(X)
+  \]
 
-d.h. für jedes $x\in U$ lässt sich $f\in\mathcal{O}_{X}(U)$ schreiben
-als $\frac{h}{g} \in K(X)$ mit $g(x)\neq0$.
+  d.h. fÃ¼r jedes $x\in U$ lÃ¤sst sich $f\in\mathcal{O}_{X}(U)$ schreiben
+  als $\frac{h}{g} \in K(X)$ mit $g(x)\neq0$.
 \end{defn}
-Für $f\in\Gamma(X)$ bezeichne $\Gamma(X)_{f}$ die Lokalisierung
+FÃ¼r $f\in\Gamma(X)$ bezeichne $\Gamma(X)_{f}$ die Lokalisierung
 von $\Gamma(X)$ an der multiplikativ abgeschlossenen Menge
-$\{1,f,f^{2},\ldots,f^{n}\ldots\}$. Dann lässt sich
+$\{1,f,f^{2},\ldots,f^{n}\ldots\}$. Dann lÃ¤sst sich
 \[
-\Gamma(X)_{\mathfrak{m}_{x}}=\bigcup_{f\in\Gamma(X)\backslash\mathfrak{m}_{x}}\Gamma(X)_{f}\subseteq K(X)
+  \Gamma(X)_{\mathfrak{m}_{x}}=\bigcup_{f\in\Gamma(X)\backslash\mathfrak{m}_{x}}\Gamma(X)_{f}\subseteq K(X)
 \]
 
 schreiben. ``$\supseteq$'': klar, ``$\subseteq$'': $\frac{g}{f}$
@@ -63,89 +64,89 @@ mit $f(x)\neq0$ d.h. $f\notin\mathfrak{m}_{x}$ $\Rightarrow\frac{g}{f}\in\Gamma(
 
 \paragraph{Es gilt:}
 \begin{enumerate}
-\item Für $V\subseteq U\subseteq X$ offen kommutiert das folgende Diagramm:
-\[
-\xymatrix{\mathcal{O}_{X}(V)\ar@{^{(}->}[r] & \text{Abb}(V,k)\\
-\mathcal{O}_{X}(U)\ar@{^{(}->}[r]\ar@{^{(}->}[u] & \text{Abb}(U,k)\ar[u]_{\text{Einschränkungsabb.}}
-}
-\]
-mit $\mathcal{O}_{X}(U) \hookrightarrow \mathcal{O}_{X}(V), f \mapsto f|_V$ nach Definition.
+\item FÃ¼r $V\subseteq U\subseteq X$ offen kommutiert das folgende Diagramm:
+  \[
+    \xymatrix{\mathcal{O}_{X}(V)\ar@{^{(}->}[r] & \text{Abb}(V,k)\\
+      \mathcal{O}_{X}(U)\ar@{^{(}->}[r]\ar@{^{(}->}[u] & \text{Abb}(U,k)\ar[u]_{\text{EinschrÃ¤nkungsabb.}}
+    }
+  \]
+  mit $\mathcal{O}_{X}(U) \hookrightarrow \mathcal{O}_{X}(V), f \mapsto f|_V$ nach Definition.
 \item $\mathcal{O}_{X}(U)\rightarrow\text{Abb}(U,k)$, $f\mapsto(x\mapsto f(x):=\frac{g(x)}{f(x)}\in k)$
-ist injektiv (Lemma 34) und wohldefiniert (kürzen/erweitern), wobei
-$g,h\in\Gamma(X)$ mit $h\notin\mathfrak{m}_{x}$ mit $f=\frac{g}{h}$
-nach Definition von $\mathcal{O}_{X}(U)$ existiert.
+  ist injektiv (Lemma 34) und wohldefiniert (kÃ¼rzen/erweitern), wobei
+  $g,h\in\Gamma(X)$ mit $h\notin\mathfrak{m}_{x}$ mit $f=\frac{g}{h}$
+  nach Definition von $\mathcal{O}_{X}(U)$ existiert.
 \item \textbf{Verklebungseigenschaft.} Sei $U=\bigcup_{i\in I}U_{i}$. Nach
-Definition ist 
-\begin{align*}
-\mathcal{O}_{X}(U) & =\bigcap_{i}\mathcal{O}_{X}(U_{i})\subseteq K(X)\\
-\ni f:U\rightarrow k & \quad\ni f_{i}:U_{i}\rightarrow k
-\end{align*}
-{[}Diagramm fehlt{]}. $(X,\mathcal{O}_{X})$ ist Raum
-mit Funktionen, \textbf{der zur irreduziblen affin algebraische Menge
-assoziierte Raum von Funktionen}. 
+  Definition ist 
+  \begin{align*}
+    \mathcal{O}_{X}(U) & =\bigcap_{i}\mathcal{O}_{X}(U_{i})\subseteq K(X)\\
+    \ni f:U\rightarrow k & \quad\ni f_{i}:U_{i}\rightarrow k
+  \end{align*}
+  {[}Diagramm fehlt{]}. $(X,\mathcal{O}_{X})$ ist Raum
+  mit Funktionen, \textbf{der zur irreduziblen affin algebraische Menge
+    assoziierte Raum von Funktionen}. 
 \end{enumerate}
 \begin{prop}[orig. 33]
-\label{prop:fkt-auf-basis}
-Für $(X,\mathcal{O}_{X})$ zu $X$ wie oben und $f\in\Gamma(X)$
-gilt:
-\[
-\mathcal{O}_{X}(D(f))=\Gamma(X)_{f},
-\]
+  \label{prop:fkt-auf-basis}
+  FÃ¼r $(X,\mathcal{O}_{X})$ zu $X$ wie oben und $f\in\Gamma(X)$
+  gilt:
+  \[
+    \mathcal{O}_{X}(D(f))=\Gamma(X)_{f},
+  \]
 
-insbesondere $\mathcal{O}_{X}(X)=\Gamma(X)$.
+  insbesondere $\mathcal{O}_{X}(X)=\Gamma(X)$.
 \end{prop}
 \begin{proof}
-$\Gamma(X)_f\subseteq \mathcal{O}_{X}(D(f))$ klar, da $f(x)\neq0$ $\forall x\in D(f)$
-bzw. $f\in \Gamma(X)\setminus\mathfrak{m}_{x}$. 
+  $\Gamma(X)_f\subseteq \mathcal{O}_{X}(D(f))$ klar, da $f(x)\neq0$ $\forall x\in D(f)$
+  bzw. $f\in \Gamma(X)\setminus\mathfrak{m}_{x}$. 
 
-Sei nun $g$ in $\mathcal{O}_{X}(D(f))$ gegeben, $(*)$
-und $\mathfrak{a}:=\{h\in\Gamma(X)\mid hg\in\Gamma(X)\}\unlhd\Gamma(X)$.
+  Sei nun $g$ in $\mathcal{O}_{X}(D(f))$ gegeben, $(*)$
+  und $\mathfrak{a}:=\{h\in\Gamma(X)\mid hg\in\Gamma(X)\}\unlhd\Gamma(X)$.
 
-Dann gilt: $g\in\Gamma(X)_{f}$
+  Dann gilt: $g\in\Gamma(X)_{f}$
 
-$\Leftrightarrow g=\frac{k}{f^{n}}$ für ein $n$ und $k\in\Gamma(X)$
+  $\Leftrightarrow g=\frac{k}{f^{n}}$ fÃ¼r ein $n$ und $k\in\Gamma(X)$
 
-$\Leftrightarrow f^{n}\in\mathfrak{a}$ für ein $n$.
+  $\Leftrightarrow f^{n}\in\mathfrak{a}$ fÃ¼r ein $n$.
 
-d.h. zu zeigen: $f\in\text{rad}(\mathfrak{a})=I(V(\mathfrak{a}))$ (Hilbertscher
-Nullstellensatz)
+  d.h. zu zeigen: $f\in\text{rad}(\mathfrak{a})=I(V(\mathfrak{a}))$ (Hilbertscher
+  Nullstellensatz)
 
-$\Leftrightarrow f(x)=0$ $\forall x\in V(\mathfrak{a})$
+  $\Leftrightarrow f(x)=0$ $\forall x\in V(\mathfrak{a})$
 
-Ist dazu $x\in X$ mit $f(x)\neq0$, also $x\in D(f)$, so
-existieren wegen $g \in \mathcal{O}_{X}(D(f))$ \\ Funktionen $f_{1},f_{2}\in\Gamma(X)$, $f_{2}\notin\mathfrak{m}_{x}$
-mit $g=\frac{f_{1}}{f_{2}}$, also gilt $f_{2}\in\mathfrak{a}$. 
+  Ist dazu $x\in X$ mit $f(x)\neq0$, also $x\in D(f)$, so
+  existieren wegen $g \in \mathcal{O}_{X}(D(f))$ \\ Funktionen $f_{1},f_{2}\in\Gamma(X)$, $f_{2}\notin\mathfrak{m}_{x}$
+  mit $g=\frac{f_{1}}{f_{2}}$, also gilt $f_{2}\in\mathfrak{a}$. 
 
-Da $f_{2}(x)\neq0$ folgt weiter $x\notin V(\mathfrak{a})$.
+  Da $f_{2}(x)\neq0$ folgt weiter $x\notin V(\mathfrak{a})$.
 \end{proof}
 \begin{rem}[orig. 34]
-\label{rem:globale-darstellung-von-fkt}
-\mbox{}
-\begin{enumerate}
-\item Im Allgemeinen existieren für $f\in\mathcal{O}_{x}(U)$ \textbf{nicht notwendigerweise}
-$g,h\in\Gamma(X)$ mit $f=\frac{g}{h}$ und $h(x)\neq0$ $\forall x\in U$.
-\item \textbf{Alternative Definition von $\mathcal{O}_{X}$, I.}
-\[
-\mathcal{O}_{X}(D(f)):=\Gamma(X)_{f},\quad\forall f\in\Gamma(X).
-\]
-Da $(D(f))_{f \in \Gamma(X)}$ Basis der Topologie bildet, kann es höchstens einen
-Raum mit Funktionen mit dieser Eigenschaft geben, es bleibt die Existenz
-zu zeigen.
-\item \textbf{Alternative Definition von $\mathcal{O}_{X}$, II.}
+  \label{rem:globale-darstellung-von-fkt}
+  \mbox{}
+  \begin{enumerate}
+  \item Im Allgemeinen existieren fÃ¼r $f\in\mathcal{O}_{x}(U)$ \textbf{nicht notwendigerweise}
+    $g,h\in\Gamma(X)$ mit $f=\frac{g}{h}$ und $h(x)\neq0$ $\forall x\in U$.
+  \item \textbf{Alternative Definition von $\mathcal{O}_{X}$, I.}
+    \[
+      \mathcal{O}_{X}(D(f)):=\Gamma(X)_{f},\quad\forall f\in\Gamma(X).
+    \]
+    Da $(D(f))_{f \in \Gamma(X)}$ Basis der Topologie bildet, kann es hÃ¶chstens einen
+    Raum mit Funktionen mit dieser Eigenschaft geben, es bleibt die Existenz
+    zu zeigen.
+  \item \textbf{Alternative Definition von $\mathcal{O}_{X}$, II.}
 
-Direkt von einer integeren endlich erzeugten $k$-Algebra $A$ ausgehend
-(die $X$ bis auf Isomorphie festlegt), aber ohne ``Koordinaten''
-zu wählen.
-\begin{align*}
-X & :=\{\mathfrak{m}\unlhd A\mid\ \mathfrak{m} \text{ ist max. Ideal}\}
-\end{align*}
-Die \textbf{abgeschlossenen Mengen} sind gegeben durch:
-\[
-V(\mathfrak{a}):=\{\mathfrak{m} \in X \mid\mathfrak{m}\supseteq\mathfrak{a}\},\quad\mathfrak{a}\unlhd A\text{ Ideal}.
-\]
+    Direkt von einer integeren endlich erzeugten $k$-Algebra $A$ ausgehend
+    (die $X$ bis auf Isomorphie festlegt), aber ohne ``Koordinaten''
+    zu wÃ¤hlen.
+    \begin{align*}
+      X & :=\{\mathfrak{m}\unlhd A\mid\ \mathfrak{m} \text{ ist max. Ideal}\}
+    \end{align*}
+    Die \textbf{abgeschlossenen Mengen} sind gegeben durch:
+    \[
+      V(\mathfrak{a}):=\{\mathfrak{m} \in X \mid\mathfrak{m}\supseteq\mathfrak{a}\},\quad\mathfrak{a}\unlhd A\text{ Ideal}.
+    \]
 
-$\mathcal{O}_{X}(U):=\bigcap_{\mathfrak{m}\in U}A_{\mathfrak{m}}\subseteq\text{Quot}(A)$
-für $U\subseteq X$ offen (vgl. später Schemata).
-\end{enumerate}
+    $\mathcal{O}_{X}(U):=\bigcap_{\mathfrak{m}\in U}A_{\mathfrak{m}}\subseteq\text{Quot}(A)$
+    fÃ¼r $U\subseteq X$ offen (vgl. spÃ¤ter Schemata).
+  \end{enumerate}
 \end{rem}
 

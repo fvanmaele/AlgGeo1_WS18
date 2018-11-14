@@ -1,91 +1,27 @@
-%\selectlanguage{english}%
-
 \section{Kegel}
 \label{sec:Kegel}
 
 Sei $H\subseteq\mathbb{P}^{n}(k)$ Hyperebene, $p\in\mathbb{P}^{n}(k)\backslash H$,
-$X\subseteq H$ abgeschlossene Unterpr‰variet‰t.
+$X\subseteq H$ abgeschlossene Unterpr√§variet√§t.
 \[
-\overline{X,p}:=\bigcup_{q\in X}\overline{qp}
+  \overline{X,p}:=\bigcup_{q\in X}\overline{qp}
 \]
 
-heiﬂt \textbf{Kegel von $X$ ¸ber $p$}, es handelt sich um einen
-abgeschlossenen Untervariet‰t von $\mathbb{P}^{n}(k)$. Ohne Einschr‰nkung:$H=V_{+}(X_{n})$,
+hei√üt \textbf{Kegel von $X$ √ºber $p$}, es handelt sich um einen
+abgeschlossenen Untervariet√§t von $\mathbb{P}^{n}(k)$. Ohne Einschr√§nkung:$H=V_{+}(X_{n})$,
 $p=(0:\cdots:1)$ (nach Koordinatenwechsel: $H\cong k^{n}\oplus p\cong k\}=k^{n+1}$.)
-F¸r  
+F√ºr  
 \begin{align*}
-X=V_{+}(f_{1},\ldots,f_{m})\subseteq\mathbb{P}^{n-1}(k)=H, & \quad f_{i}\in k[X_{0},\ldots,X_{n-1}]\\
-\Rightarrow X,p=V_{+}(\tilde{f}_{1},\ldots,\tilde{f}_{m})\subseteq\mathbb{P}^{n}(k), & \quad\tilde{f}_{i}\in k[X_{0},\ldots,X_{n}]
+  X=V_{+}(f_{1},\ldots,f_{m})\subseteq\mathbb{P}^{n-1}(k)=H, & \quad f_{i}\in k[X_{0},\ldots,X_{n-1}]\\
+  \Rightarrow X,p=V_{+}(\tilde{f}_{1},\ldots,\tilde{f}_{m})\subseteq\mathbb{P}^{n}(k), & \quad\tilde{f}_{i}\in k[X_{0},\ldots,X_{n}]
 \end{align*}
 
 Verallgemeinerung. Sei $\mathbb{P}^{n}(k)\cong\Lambda\subseteq\mathbb{P}^{n}(k)$
-linearer Unterraum, $\psi\subseteq\mathbb{P}^{n}(k)$ komplement‰rer
+linearer Unterraum, $\psi\subseteq\mathbb{P}^{n}(k)$ komplement√§rer
 linearer Unterraum, d.h. $\Lambda\cap\psi=\emptyset$ und $\mathbb{P}^{n}(k)$
 ist der bekannte lineare Unterraum von $\mathbb{P}^{n}(k)$, der $\Lambda$
-und $\psi$ enth‰lt. $X\subseteq\psi$ abgeschlossene Unterpr‰variet‰t.
+und $\psi$ enth√§lt. $X\subseteq\psi$ abgeschlossene Unterpr√§variet√§t.
 
-\textbf{Kegel von $X$ ¸ber $\Lambda$}: $\overline{X,\Lambda}=\bigcup_{q\in X}\overline{q,\Lambda}$,
+\textbf{Kegel von $X$ √ºber $\Lambda$}: $\overline{X,\Lambda}=\bigcup_{q\in X}\overline{q,\Lambda}$,
 wobei der von $q$ und $\Lambda$ aufgespannte lineare Unterraum $\overline{q,\Lambda}$
-der kleinste Unterraum sei, der $q$ und $\Lambda$ enth‰lt.
-
-\section{Quadriken}
-\label{sec:quadriken}
-
-Sei char$(k)\neq2$ in diesem Abschnitt.
-\begin{defn}[orig. 57]
-\label{def:quadrik}
-Eine abgeschlossene Unterpr‰variet‰t $Q\subseteq\mathbb{P}^{n}(k)$
-von der Form $V_{+}(q)$, $q\in k[X_{0},\ldots,X_{n}]_{2}\backslash\{0\}$
-heiﬂt \textbf{Quadrik}.
-\[
-Q=V_{+}(q)
-\]
-
-Zur quadratischen Form $q$ gehˆrt eine Bilinearform $\beta$ auf
-$k^{n+1}$, 
-\[
-\beta(v,w):=\frac{1}{2}(q(v+w)-q(v)-q(w)),\quad v,w\in k^{n+1}
-\]
-
-Es gibt eine Basis von $k^{n+1}$, sodass die Strukturmatrix $B$
-von $\beta$ die Gestalt
-\[
-B=\begin{pmatrix}\begin{array}{ccc}
-1\\
- & \ddots\\
- &  & 1
-\end{array} & 0\\
-0 & \begin{array}{ccc}
-0\\
- & \ddots\\
- &  & 0
-\end{array}
-\end{pmatrix}
-\]
-
-hat, d.h. Koordinatenwechsel zur Basiswechselmatrix liefert einen
-Isomorphismus
-\[
-Q\xrightarrow{\cong}V_{+}(X_{0}^{2}+\cdots+X_{r-1}^{2}),\quad r=\text{rg }B
-\]
-\end{defn}
-\begin{lem}[orig. 58]
-\label{lem:platzhalter}
-\end{lem}
-\begin{prop}[orig. 59]
-\label{prop:quadrik-in-normalform}
-Ist $r\neq s$, so sind $V_{+}(T_{0}^{2}+\cdots+T_{r-1}^{2})$ und
-$V_{+}(T_{0}^{2}+\cdots+T_{s-1}^{2})$ nicht isomorph.
-\end{prop}
-\begin{proof}
-(sp‰ter: Es gibt keinen Koordinatenwechsel von $\mathbb{P}^{n}(k)$,
-der beide Mengen identifiziert, damit auch kein Automorphismus in
-$\mathbb{P}^{n}(k)$.)
-\end{proof}
-
-\begin{defn}
-\label{def:dim-und-rang-einer-quadrik}
-Eine Quadrik $Q\subseteq\mathbb{P}^{n}(k)$ mit $Q\cong V_{+}(T_{0}^{2}+\cdots+T_{r-1}^{2})$,
-$r\geq1$, habe die \textbf{Dimension $n-1$} und den \textbf{Rang $r$}. (nach Satz eindeutig!)\selectlanguage{ngerman}%
-\end{defn}
-
+der kleinste Unterraum sei, der $q$ und $\Lambda$ enth√§lt.

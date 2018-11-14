@@ -1,78 +1,78 @@
 
-\section{Topologische Eigenschaften von Pr‰variet‰ten}
+\section{Topologische Eigenschaften von Pr√§variet√§ten}
 \label{sec:topologische-eigenschaften-von-praevarietaeten}
 \begin{lem}
-\label{lem:bijektion-irred-teilraeume}
-F¸r einen topologischen Raum $X$ und $U\subseteq X$ offen haben
-wir eine Bijektion
-\begin{align*}
-\{Y\subseteq U\text{ irred. abg.}\} & \longleftrightarrow\{Z\subseteq X\text{ irred. abg. mit }Z\cap U\neq\emptyset\}\\
-Y & \longmapsto\overline{Y}\text{ (Abschluss in }X)\\
-Z\cap U & \longmapsfrom Z
-\end{align*}
+  \label{lem:bijektion-irred-teilraeume}
+  F√ºr einen topologischen Raum $X$ und $U\subseteq X$ offen haben
+  wir eine Bijektion
+  \begin{align*}
+    \{Y\subseteq U\text{ irred. abg.}\} & \longleftrightarrow\{Z\subseteq X\text{ irred. abg. mit }Z\cap U\neq\emptyset\}\\
+    Y & \longmapsto\overline{Y}\text{ (Abschluss in }X)\\
+    Z\cap U & \longmapsfrom Z
+  \end{align*}
 \end{lem}
 \begin{proof}
-Lemma \ref{lem:irreduzibel-abschluss}: $Y\subseteq X$ irreduzibel $\Leftrightarrow\overline{Y}\subseteq X$
-irreduzibel.
+  Lemma \ref{lem:irreduzibel-abschluss}: $Y\subseteq X$ irreduzibel $\Leftrightarrow\overline{Y}\subseteq X$
+  irreduzibel.
 
-$Y\subseteq U$ abgeschlossen $\Leftrightarrow\exists A\subseteq X$
-abgeschlossen: $Y=U\cap A$.
+  $Y\subseteq U$ abgeschlossen $\Leftrightarrow\exists A\subseteq X$
+  abgeschlossen: $Y=U\cap A$.
 
-$\Rightarrow Y\subseteq\overline{Y}\subseteq A$ $\Rightarrow Y=U\cap\overline{Y}$
+  $\Rightarrow Y\subseteq\overline{Y}\subseteq A$ $\Rightarrow Y=U\cap\overline{Y}$
 
-$Y$ irreduzibel in $U$ $\Rightarrow Y$ irreduzibel in $X$
+  $Y$ irreduzibel in $U$ $\Rightarrow Y$ irreduzibel in $X$
 
-$\Rightarrow$ $\overline{Y}$ irreduzibel nach \ref{lem:irreduzibel-abschluss}
+  $\Rightarrow$ $\overline{Y}$ irreduzibel nach \ref{lem:irreduzibel-abschluss}
 
-$\Rightarrow Y\mapsto\overline{Y}\mapsto\overline{Y}\cap U=Y$. $\checkmark$
+  $\Rightarrow Y\mapsto\overline{Y}\mapsto\overline{Y}\cap U=Y$. $\checkmark$
 
-$\emptyset\neq Z\cap U \subseteq Z$
-damit dicht da $Z$ irreduzibel (Satz \ref{prop:charakterisierung-irreduzibel} ii. und v.)
+  $\emptyset\neq Z\cap U \subseteq Z$
+  damit dicht da $Z$ irreduzibel (Satz \ref{prop:charakterisierung-irreduzibel} ii. und v.)
 
-Also ist die Abbildung $\leftarrow$ wohldefiniert.
+  Also ist die Abbildung $\leftarrow$ wohldefiniert.
 
-$\Rightarrow\overline{Z\cap U}=Z$ 
+  $\Rightarrow\overline{Z\cap U}=Z$ 
 \end{proof}
 \begin{prop}
-\label{prop:praevarietaeten-noethersch-irreduzibel}
-Sei $(X,\mathcal{O}_{X})$ eine Pr‰variet‰t.
+  \label{prop:praevarietaeten-noethersch-irreduzibel}
+  Sei $(X,\mathcal{O}_{X})$ eine Pr√§variet√§t.
 
-Dann ist $X$ noethersch (insbesondere quasikompakt) und irreduzibel.
+  Dann ist $X$ noethersch (insbesondere quasikompakt) und irreduzibel.
 \end{prop}
 \begin{proof}
-Sei $X=\bigcup_{i=1}^{n}$ endliche offene aff. ‹berdeckung und $X\supseteq Z_{1}\supseteq Z_{2}\supseteq\cdots$
-eine absteigende Kette abgeschlossener Teilmengen.
+  Sei $X=\bigcup_{i=1}^{n}$ endliche offene aff. √úberdeckung und $X\supseteq Z_{1}\supseteq Z_{2}\supseteq\cdots$
+  eine absteigende Kette abgeschlossener Teilmengen.
 
-$\Rightarrow U_{i}\cap Z_{1}\supseteq U_{i}\cap Z_{2}\supseteq\cdots$
-, ist eine absteigende Kette abgeschlossener Teilmengen von $U_{i}$
+  $\Rightarrow U_{i}\cap Z_{1}\supseteq U_{i}\cap Z_{2}\supseteq\cdots$
+  , ist eine absteigende Kette abgeschlossener Teilmengen von $U_{i}$
 
-$\Rightarrow\forall i$ $\exists n_{i} \in \mathbb{N}$: $U_{i}\cap Z_{n_{i}}=U_{i}\cap Z_{i+m}$ f¸r alle $m \in \mathbb{N}$.
- Setzen wir $n:=\max n_{i}$, so folgt:
+  $\Rightarrow\forall i$ $\exists n_{i} \in \mathbb{N}$: $U_{i}\cap Z_{n_{i}}=U_{i}\cap Z_{i+m}$ f√ºr alle $m \in \mathbb{N}$.
+  Setzen wir $n:=\max n_{i}$, so folgt:
 
-$\forall i=1,\ldots,n$ $\forall m\geq n$: $U_{i}\cap Z_{m}=U_{i}\cap Z_{m+1}$
+  $\forall i=1,\ldots,n$ $\forall m\geq n$: $U_{i}\cap Z_{m}=U_{i}\cap Z_{m+1}$
 
-$\Rightarrow(Z_{i})_{i}$ wird station‰r da $Z_{m}=\bigcup_{i} U_{i}\cap Z_{m}$.
+  $\Rightarrow(Z_{i})_{i}$ wird station√§r da $Z_{m}=\bigcup_{i} U_{i}\cap Z_{m}$.
 
-$X$ ist demnach noethersch.
+  $X$ ist demnach noethersch.
 
-$X$ ist weiter irreduzibel:
+  $X$ ist weiter irreduzibel:
 
-Sei $X=X_{1}\cup\cdots\cup X_{n}$ die Zerlegung in irreduzible Komponenten.
+  Sei $X=X_{1}\cup\cdots\cup X_{n}$ die Zerlegung in irreduzible Komponenten.
 
-Angenommen es w‰re $n\geq2$.
+  Angenommen es w√§re $n\geq2$.
 
-$\Rightarrow\exists i_{0}\in\{2,\ldots,n\}$: $X_{1}\cap X_{i_{0}}\neq\emptyset$.
-(Andernfalls gilt: $X=X_{1}\sqcup\underbrace{X\backslash X_{1}}_{=X_{2}\cup\cdots\cup X_{n}\text{ abg.}}$, im Widerspruch dazu, dass $X$ zusammenh‰ngend ist.)
+  $\Rightarrow\exists i_{0}\in\{2,\ldots,n\}$: $X_{1}\cap X_{i_{0}}\neq\emptyset$.
+  (Andernfalls gilt: $X=X_{1}\sqcup\underbrace{X\backslash X_{1}}_{=X_{2}\cup\cdots\cup X_{n}\text{ abg.}}$, im Widerspruch dazu, dass $X$ zusammenh√§ngend ist.)
 
-Sei ohne Einschr‰nkung $i_{0}=2$. Sei $x\in X_{1}\cap X_{2}$, $x\in U\subseteq X$ offen, affin (d.h. affine Variet‰t).
+  Sei ohne Einschr√§nkung $i_{0}=2$. Sei $x\in X_{1}\cap X_{2}$, $x\in U\subseteq X$ offen, affin (d.h. affine Variet√§t).
 
-$U$ irreduzibel $\Rightarrow\overline{U}$ (Abschluss in $X$) $\subseteq X_{j}$
-f¸r ein $j\in\{1,\ldots,n\}$
+  $U$ irreduzibel $\Rightarrow\overline{U}$ (Abschluss in $X$) $\subseteq X_{j}$
+  f√ºr ein $j\in\{1,\ldots,n\}$
 
-\textbf{Jedoch}: Da $x\in X_{i}\cap U\subseteq U$ irreduzibel ist, ist $\underbrace{\overline{X_{i}\cap U}}_{\subseteq\overline{U}\subseteq X_{i}}=X_{i}$,
-$i=1,2$
+  \textbf{Jedoch}: Da $x\in X_{i}\cap U\subseteq U$ irreduzibel ist, ist $\underbrace{\overline{X_{i}\cap U}}_{\subseteq\overline{U}\subseteq X_{i}}=X_{i}$,
+  $i=1,2$
 
-$\Rightarrow X_{1},X_{2}\subseteq X_{j}$. Widerspruch zu maximale
-Komponente.
+  $\Rightarrow X_{1},X_{2}\subseteq X_{j}$. Widerspruch zu maximale
+  Komponente.
 \end{proof}
 

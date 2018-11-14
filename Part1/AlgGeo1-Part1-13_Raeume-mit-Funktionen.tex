@@ -1,62 +1,63 @@
-%\selectlanguage{english}%
 
-\section{Räume mit Funktionen}
+\section{RÃ¤ume mit Funktionen}
 \label{sec:raeume-mit-funktionen}
 
 (Prototyp eines geometrischen Objektes, Spezialfall eines ``geringten
-Raumes'' vgl. später.) Sei $K$ ein nicht notwendigerweise algebraisch abgeschlossener
-Körper.
+Raumes'' vgl. spÃ¤ter.) Sei $K$ ein nicht notwendigerweise algebraisch abgeschlossener
+KÃ¶rper.
 \begin{defn}
-\label{def:raum-mit-funktionen}\mbox{}
-\begin{enumerate}
-\item Ein \textbf{Raum mit Funktionen}\index{Raum mit Funktionen} besteht
-aus den folgenden Daten:
-\begin{itemize}
-\item ein topologischer Raum $X$;
-\item eine Familie von Unter-$K$-Algebren
-\[
-\mathcal{O}_X(U)\leq\text{Abb}(U,K),\quad\forall U\subseteq X\text{ offen }d.d
-\]
+  \label{def:raum-mit-funktionen}
+  \mbox{}
+  \begin{enumerate}
+  \item Ein \textbf{Raum mit Funktionen}\index{Raum mit Funktionen} besteht
+    aus den folgenden Daten:
+    \begin{itemize}
+    \item ein topologischer Raum $X$;
+    \item eine Familie von Unter-$K$-Algebren
+      \[
+        \mathcal{O}_X(U)\leq\text{Abb}(U,K),\quad\forall U\subseteq X\text{ offen }d.d
+      \]
 
-\begin{enumerate}
-\item Sind $U'\subseteq U\subseteq X$ offen und $f\in\mathcal{O}_X(U)$ so ist
-$f|_{U'}\in \mathcal{O}_X(U')$.
-\item (\textbf{Verklebungsaxiom}\index{Verklebungsaxiom}) Sind $U_{i}\subseteq X$
-offen, $i\in I$, und $U=\bigcup_{i}U_{i}$, $f_{i}\in\mathcal{O}_X(U_{i})$,
-$i\in I$ gegeben mit
-\[
-f_{i}|_{U_{i}\cap U_{j}}=f_{j}|_{U_{i}\cap U_{j}}\quad\forall i,j\in I
-\]
-dann ist die eindeutige Abbildung
-\[
-f:U\rightarrow K\text{ mit }f|_{U_{i}}=f_{i}
-\]
-in $\mathcal{O}_X(U)$, bzw. $\exists!f\in\mathcal{O}(U)$ mit $f|_{U_{i}}=f_{i}$ für alle $i \in I$.
-\end{enumerate}
-\end{itemize}
-Bezeichne $\mathcal{O}_X$ oder auch $\mathcal{O}$ die oben genannte
-Familie $\{\mathcal{O}_X(U) \mid U \subseteq X \text{offen}\}$. Das Tupel $(X,\mathcal{O}_{X})$ heißt $\textbf{Raum mit Funktionen}$.
-\item Ein \textbf{Morphismus}\index{Raum mit Funktionen!Morphismus} $(X,\mathcal{O}_{X})\rightarrow(Y,\mathcal{O}_{Y})$
-von Räumen von Funktionen ist eine stetige Abbildung $\varphi:X\rightarrow Y$,
-so dass für alle $V\subseteq Y$ offen und $f\in\mathcal{O}_{Y}$
-gilt:
-\[
-f\circ \varphi|_{\varphi^{-1}(V)}:\varphi^{-1}(V)\rightarrow K
-\]
-liegt in $\mathcal{O}_{X}(\varphi^{-1}(V))$.
-\[
-\xymatrix{X\ar[r]^{\varphi} & Y\\
-\varphi^{-1}(V)\ar[r]^{\varphi|}\ar[d]_{f\circ \varphi|_{\varphi^{-1}(V)}}\ar@{^{(}->}[u] & V\ar[d]^{f}\ar@{^{(}->}[u]_{\text{offen}}\\
-K\ar@{=}[r] & K
-}
-\]
-\end{enumerate}
+      \begin{enumerate}
+      \item Sind $U'\subseteq U\subseteq X$ offen und $f\in\mathcal{O}_X(U)$ so ist
+        $f|_{U'}\in \mathcal{O}_X(U')$.
+      \item (\textbf{Verklebungsaxiom}\index{Verklebungsaxiom}) Sind $U_{i}\subseteq X$
+        offen, $i\in I$, und $U=\bigcup_{i}U_{i}$, $f_{i}\in\mathcal{O}_X(U_{i})$,
+        $i\in I$ gegeben mit
+        \[
+          f_{i}|_{U_{i}\cap U_{j}}=f_{j}|_{U_{i}\cap U_{j}}\quad\forall i,j\in I
+        \]
+        dann ist die eindeutige Abbildung
+        \[
+          f:U\rightarrow K\text{ mit }f|_{U_{i}}=f_{i}
+        \]
+        in $\mathcal{O}_X(U)$, bzw. $\exists!f\in\mathcal{O}(U)$ mit $f|_{U_{i}}=f_{i}$ fÃ¼r alle $i \in I$.
+      \end{enumerate}
+    \end{itemize}
+    Bezeichne $\mathcal{O}_X$ oder auch $\mathcal{O}$ die oben genannte
+    Familie $\{\mathcal{O}_X(U) \mid U \subseteq X \text{offen}\}$. Das Tupel $(X,\mathcal{O}_{X})$ heiÃŸt $\textbf{Raum mit Funktionen}$.
+  \item Ein \textbf{Morphismus}\index{Raum mit Funktionen!Morphismus} $(X,\mathcal{O}_{X})\rightarrow(Y,\mathcal{O}_{Y})$
+    von RÃ¤umen von Funktionen ist eine stetige Abbildung $\varphi:X\rightarrow Y$,
+    so dass fÃ¼r alle $V\subseteq Y$ offen und $f\in\mathcal{O}_{Y}$
+    gilt:
+    \[
+      f\circ \varphi|_{\varphi^{-1}(V)}:\varphi^{-1}(V)\rightarrow K
+    \]
+    liegt in $\mathcal{O}_{X}(\varphi^{-1}(V))$.
+    \[
+      \xymatrix{X\ar[r]^{\varphi} & Y\\
+        \varphi^{-1}(V)\ar[r]^{\varphi|}\ar[d]_{f\circ \varphi|_{\varphi^{-1}(V)}}\ar@{^{(}->}[u] & V\ar[d]^{f}\ar@{^{(}->}[u]_{\text{offen}}\\
+        K\ar@{=}[r] & K
+      }
+    \]
+  \end{enumerate}
 \end{defn}
-Wir erhalten die Kategorie der $\emph{Räume mit Funktionen über K}$.
-\begin{defn}[offene Unterräume von Räumen mit Funktionen]\label{def:raeume-mit-fkt-offener-unterraum}
-Für $(X,\mathcal{O}_{X})$ einen Raum mit Funktionen und $U\subseteq X$ offen bezeichne $(U,\mathcal{O}_{X}|_{U})$ den
-Raum mit Funktionen gegeben durch den topologischen Raum $U$ mit
-Funktionen $\mathcal{O}_{X}|_{U}(V):=\mathcal{O}_{X}(V)$ für $V\underset{\text{offen}}{\subseteq}U\subseteq X$.
+Wir erhalten die Kategorie der $\emph{RÃ¤ume mit Funktionen Ã¼ber K}$.
+\begin{defn}[offene UnterrÃ¤ume von RÃ¤umen mit Funktionen]
+  \label{def:raeume-mit-fkt-offener-unterraum}
+  FÃ¼r $(X,\mathcal{O}_{X})$ einen Raum mit Funktionen und $U\subseteq X$ offen bezeichne $(U,\mathcal{O}_{X}|_{U})$ den
+  Raum mit Funktionen gegeben durch den topologischen Raum $U$ mit
+  Funktionen $\mathcal{O}_{X}|_{U}(V):=\mathcal{O}_{X}(V)$ fÃ¼r $V\underset{\text{offen}}{\subseteq}U\subseteq X$.
 \end{defn}
-\textbf{Ab jetzt} betrachten wir Räume von Funktionen über einem festen, algebraisch abgeschlossenen Grundkörper $k$.\selectlanguage{ngerman}%
+\textbf{Ab jetzt} betrachten wir RÃ¤ume von Funktionen Ã¼ber einem festen, algebraisch abgeschlossenen GrundkÃ¶rper $k$.
 
