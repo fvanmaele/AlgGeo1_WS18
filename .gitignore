@@ -4,6 +4,7 @@
 *.log
 *.out
 *.lyx
+*.pdf
 *.synctex.gz
 *.idx
 *.toc
