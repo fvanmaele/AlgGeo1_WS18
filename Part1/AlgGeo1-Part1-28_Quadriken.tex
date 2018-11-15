@@ -57,7 +57,90 @@ Isomorphismus
 
 \begin{defn}
   \label{def:dim-und-rang-einer-quadrik}
-  Eine Quadrik $Q\subseteq\mathbb{P}^{n}(k)$ mit $Q\cong V_{+}(T_{0}^{2}+\cdots+T_{r-1}^{2})$,
-  $r\geq1$, habe die \textbf{Dimension $n-1$} und den \textbf{Rang $r$}. (nach Satz eindeutig!)
+  Eine Quadrik $Q\subseteq\mathbb{P}^{n}(k)$ mit
+  $Q\cong V_{+}(T_{0}^{2}+\cdots+T_{r-1}^{2})$, $r\geq1$, habe die
+  \textbf{Dimension $n-1$} und den \textbf{Rang $r$}. (nach Satz
+  eindeutig!)
 \end{defn}
 
+\begin{cor}[orig. 61]
+  Zwei Quadriken $Q_{1}$ und $Q_{2}$ sind genau dann isomorph als
+  Prävarietäten, wenn sie dieselbe Dimension und denselben Rang haben.
+\end{cor}
+\begin{proof}
+  \mbox{}
+  \begin{itemize}
+  \item[,,$\Leftarrow$``]
+    $Q_{1}\cong V_{+}(T_{0}^{2}+\cdots+T_{n-1}^{2})\cong Q_{2}$ in
+    denselben $\mathbb{P}^{n}$.
+  \item[,,$\Rightarrow$``] Für $Q\subseteq\mathbb{P}^{n}(k)$ berechne
+    $K(Q)$. Ohne Einschränkung
+    $Q=V_{+}(X_{0}^{2}+\cdots+X_{n-1}^{2})$.
+    \begin{enumerate}
+    \item $r=1$: $V_{+}(X_{0}^{2})=V_{+}(X_{0})=\mathbb{P}^{n-1}(k)$:
+      $K(Q)=k(T_{1},\ldots,T_{n-1})$.
+    \item $r=2$: reduzibel: Zerlegung in zwei Hyperebenen
+      $Z\cong\mathbb{P}^{n-1}$
+
+      $\Rightarrow K(Z)\cong k(T_{1},\ldots,T_{n-1})$.
+    \item $r>2$:
+      $U=V(1+T_{1}^{2}+\cdots+T_{n-1}^{2})\subseteq\mathbb{A}^{n}(k)$
+      ist nichtleere offene affine Teilmenge von $Q$.
+
+      $\Rightarrow K(Q)=K(U)=\text{Quot}(\Gamma(U))=\text{Quot}(k[T_{1},\ldots,T_{n}]/(1+T_{1}^{2}+\cdots+T_{n-1}^{2})$
+
+      $\Rightarrow\text{trgrad}_{k}\ K(Q)=n-1$. 
+    \end{enumerate}
+  \end{itemize}
+\end{proof}
+\begin{example}
+  $Q$ Quadrik in $\mathbb{P}^{n}$ (vgl. Joe Harris, Seite 34).
+  \begin{enumerate}
+  \item In $\mathbb{P}^{1}(k)$. 
+    \begin{itemize}
+    \item \emph{Rang 2:} 2 Punkte, irreduzibel. 
+    \item \emph{Rang 1:} 1 Punkt (Doppelpunkt). 
+    \end{itemize}
+  \item In $\mathbb{P}^{2}(k)$.
+    \begin{itemize}
+    \item \emph{Rang 3:} Glatter Kegel
+      $\cong\mathbb{P}^{1}(k)$. $X_{0}^{2}+X_{1}^{2}-X_{2}^{2}=0$
+    \item \emph{Rang 2:} 2 verschiedene Geraden, irreduzibel. 
+    \item \emph{Rang 1:} (Doppel)gerade.
+    \end{itemize}
+  \item In $\mathbb{P}^{3}(k)$.
+    \begin{itemize}
+    \item Rang 1: Doppelebene (2-dimensionaler linearer Unterraum)
+    \item Rang 2: 
+    \item Rang 3:
+    \item Rang 4:
+    \end{itemize}
+  \end{enumerate}
+\end{example}
+Die Quadrik $Q\subseteq\mathbb{P}^{n}(k)$ heißt \textbf{glatt}, falls
+$r=n+1$, d.h. falls die Matrix $B$ zu $q$ maximalen Rang hat. Für
+$\text{rg}(Q)>3$, $\dim(Q)=d$, so ist
+$Q\cong\overline{\widetilde{Q},\Lambda}$ Kegel über einer
+\textbf{glatten }Quadrik $\widetilde{Q}$, da Dimension $r-2$
+bzgl. einer $(d-r+2)$-dimensionalen Unterraums 1.
+\begin{itemize}
+\item $r=1,2$ ausgeartet.
+\item $r=1$. $Q=V_{+}(X_{0}^{2})=V_{+}(X_{0})$ Hyperebenen in
+  $\mathbb{P}^{n}(k)$.  Der Unterschied zwischen $V_{+}(X_{0}^{2})$
+  und $V_{+}(X_{0})$ ist für eine projektive Varietät $Q$ nicht
+  sichtbar, jedoch in der Theorie der Schemata unterscheidbar!
+\item $r=2$.$Q=V_{+}(X_{0}^{2}+X_{1}^{2})$ reduzibel, d.h. keine
+  Prävarietät in unserem Sinne! Auch dieser Unterschied wird mittels
+  des Begriffs des Schemas
+\end{itemize}
+\medskip{}
+
+$Q=V_{+}(X_{0}^{2}+X_{1}^{2}+\cdots+X_{n-1}^{2})\subseteq\mathbb{P}^{d+1}$,
+$r\leq d+2$
+
+$\tilde{Q}=V_{+}(X_{0}^{2}+\cdots+X_{n-1}^{2})\subseteq\mathbb{P}^{r-1}$
+glatt.
+
+$A=\mathbb{P}^{d+1-v}=V_{+}(X_{0},\ldots,X_{n-1})\subseteq\mathbb{P}^{d+1}$
+
+$Q=\overline{\widetilde{Q},\Lambda}$

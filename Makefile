@@ -11,7 +11,6 @@ tags: AlgGeo1.flt
 plastex: tags
 	plastex --renderer=Gerby --tags=tags AlgGeo1.tex
 
-.PHONY: clean
-clean:
-	$(MAKE) -C scripts clean
-	@rm -v AlgGeo1.flt
+AlgGeo1.pdf: AlgGeo1.tex Part1/*.tex Part2/*.tex
+	pdflatex AlgGeo1.tex
+	pdflatex AlgGeo1.tex
