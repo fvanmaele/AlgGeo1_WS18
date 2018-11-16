@@ -1,7 +1,9 @@
 #include <stack>
 #include <string>
 #include <iostream>
+#ifndef BMARK_LEVEL
 #define BMARK_LEVEL 2
+#endif
 
 struct Bookmark {
   std::string title{};

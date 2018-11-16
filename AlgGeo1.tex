@@ -1,4 +1,4 @@
-\documentclass[12pt,a4paper]{article}
+\documentclass[12pt,a4paper]{book}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{geometry}
@@ -15,12 +15,10 @@
 \usepackage{setspace}
 \usepackage[all]{xy}
 \onehalfspacing
-\usepackage[unicode=true, bookmarks=true,bookmarksnumbered=false,
-bookmarksopen=false,breaklinks=false,pdfborder={0 0 1},backref=false,
-colorlinks=false]{hyperref}
+\usepackage[bookmarks=true]{hyperref}
 
-%% Theorems (consecutive numbering)
-\newtheorem{thm}{Theorem}
+%% Theorems (numbered by Part)
+\newtheorem{thm}{Theorem}[chapter]
 \theoremstyle{definition}
 \newtheorem{example}[thm]{Beispiel}
 \theoremstyle{definition}
@@ -45,6 +43,8 @@ colorlinks=false]{hyperref}
 
 %% User-specified commands
 \DeclareMathOperator{\rad}{rad}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Quot}{Quot}
 \renewcommand{\labelenumi}{(\roman{enumi})}
 \renewcommand{\labelenumii}{\arabic{enumii}.}
 
@@ -53,8 +53,10 @@ colorlinks=false]{hyperref}
 %% Title page
 \title{Algebraische Geometrie I}
 \author{Prof. Dr. Venjakob}
-\date{Vorlesung 17, 19 Oktober 2018}
 \maketitle
+
+\tableofcontents{}
+\newpage{}
 
 \section*{Literatur}
 \begin{itemize}
@@ -70,75 +72,72 @@ colorlinks=false]{hyperref}
 \item Kunz. \emph{Einführung in die kommutative Algebra und algebraische Geometrie}
 \end{itemize}
 
-\tableofcontents{}
-\newpage{}
+\chapter{Prä-Varietäten}
+\label{chap:prae-varietaeten}
 
-\part{Prä-Varietäten}
+\include{Chapter1/AlgGeo1-Chapter1-1_Einfuehrung}
 
-\include{Part1/AlgGeo1-Part1-1_Einfuehrung}
+\include{Chapter1/AlgGeo1-Chapter1-2_Die-Zariski-Topologie}
 
-\include{Part1/AlgGeo1-Part1-2_Die-Zariski-Topologie}
+\include{Chapter1/AlgGeo1-Chapter1-3_Affine-algebraische-Mengen}
 
-\include{Part1/AlgGeo1-Part1-3_Affine-algebraische-Mengen}
+\include{Chapter1/AlgGeo1-Chapter1-4_Der-Hilbertsche-Nullstellensatz}
 
-\include{Part1/AlgGeo1-Part1-4_Der-Hilbertsche-Nullstellensatz}
+\include{Chapter1/AlgGeo1-Chapter1-5_Korrespondenz-zwischen-Radikalidealen}
 
-\include{Part1/AlgGeo1-Part1-5_Korrespondenz-zwischen-Radikalidealen}
+\include{Chapter1/AlgGeo1-Chapter1-6_Irreduzible-topologische-Raeume}
 
-\include{Part1/AlgGeo1-Part1-6_Irreduzible-topologische-Raeume}
+\include{Chapter1/AlgGeo1-Chapter1-7_Irreduzible-algebraische-Mengen}
 
-\include{Part1/AlgGeo1-Part1-7_Irreduzible-algebraische-Mengen}
+\include{Chapter1/AlgGeo1-Chapter1-8_Quasikompakte-und-noethersche-topologische-Raeume}
 
-\include{Part1/AlgGeo1-Part1-8_Quasikompakte-und-noethersche-topologische-Raeume}
+\include{Chapter1/AlgGeo1-Chapter1-9_Morphismen-von-affinen-algebraischen-Mengen}
 
-\include{Part1/AlgGeo1-Part1-9_Morphismen-von-affinen-algebraischen-Mengen}
+\include{Chapter1/AlgGeo1-Chapter1-10_Unzulaenglichkeiten}
 
-\include{Part1/AlgGeo1-Part1-10_Unzulaenglichkeiten}
+\include{Chapter1/AlgGeo1-Chapter1-11_Der-affine-Koordinatenring}
 
-\include{Part1/AlgGeo1-Part1-11_Der-affine-Koordinatenring}
+\include{Chapter1/AlgGeo1-Chapter1-12_Funktorielle-Eigenschaften-des-Koordinatenrings}
 
-\include{Part1/AlgGeo1-Part1-12_Funktorielle-Eigenschaften-des-Koordinatenrings}
+\include{Chapter1/AlgGeo1-Chapter1-13_Raeume-mit-Funktionen}
 
-\include{Part1/AlgGeo1-Part1-13_Raeume-mit-Funktionen}
+\include{Chapter1/AlgGeo1-Chapter1-14_Der-Raum-mit-Funktionen-zu-einer-affin-algebraischen-Menge}
 
-\include{Part1/AlgGeo1-Part1-14_Der-Raum-mit-Funktionen-zu-einer-affin-algebraischen-Menge}
+% Cause of UTF8 errors (plastex)
+\include{Chapter1/AlgGeo1-Chapter1-15_Funktorialitaet-der-Konstruktion}
 
-\include{Part1/AlgGeo1-Part1-15_Funktorialitaet-der-Konstruktion}
+\include{Chapter1/AlgGeo1-Chapter1-16_Definition-von-Praevarietaeten}
 
-\include{Part1/AlgGeo1-Part1-16_Definition-von-Praevarietaeten}
+\include{Chapter1/AlgGeo1-Chapter1-17_Vergleich-mit-differenzierbaren-komplexen-Mannigfaltigkeiten}
 
-\include{Part1/AlgGeo1-Part1-17_Vergleich-mit-differenzierbaren-komplexen-Mannigfaltigkeiten}
+\include{Chapter1/AlgGeo1-Chapter1-18_Topologische-Eigenschaften-von-Praevarietaeten}
 
-\include{Part1/AlgGeo1-Part1-18_Topologische-Eigenschaften-von-Praevarietaeten}
+\include{Chapter1/AlgGeo1-Chapter1-19_Offene-Untervarietaeten}
 
-\include{Part1/AlgGeo1-Part1-19_Offene-Untervarietaeten}
+\include{Chapter1/AlgGeo1-Chapter1-20_Funktionenkoerper-einer-Praevarietaet}
 
-\include{Part1/AlgGeo1-Part1-20_Funktionenkoerper-einer-Praevarietaet}
+\include{Chapter1/AlgGeo1-Chapter1-21_Abgeschlossene-Unterpraevarietaeten}
 
-\include{Part1/AlgGeo1-Part1-21_Abgeschlossene-Unterpraevarietaeten}
+\include{Chapter1/AlgGeo1-Chapter1-22_Homogene-Polynome}
 
-\include{Part1/AlgGeo1-Part1-22_Homogene-Polynome}
+\include{Chapter1/AlgGeo1-Chapter1-23_Definition-des-projektiven-Raumes}
 
-\include{Part1/AlgGeo1-Part1-23_Definition-des-projektiven-Raumes}
+\include{Chapter1/AlgGeo1-Chapter1-24_Projektive-Varietaeten}
 
-\include{Part1/AlgGeo1-Part1-24_Projektive-Varietaeten}
+\include{Chapter1/AlgGeo1-Chapter1-25_Koordinatenwechsel-im-projektiven-Raum}
 
-%% untagged sections
+\include{Chapter1/AlgGeo1-Chapter1-26_Lineare-Unterraeume-des-projektiven-Raums}
 
-\include{Part1/AlgGeo1-Part1-25_Koordinatenwechsel-im-projektiven-Raum}
+\include{Chapter1/AlgGeo1-Chapter1-27_Kegel}
 
-\include{Part1/AlgGeo1-Part1-26_Lineare-Unterraeume-des-projektiven-Raums}
+\include{Chapter1/AlgGeo1-Chapter1-28_Quadriken}
 
-\include{Part1/AlgGeo1-Part1-27_Kegel}
+\chapter{Das Ringspektrum}
+\label{chap:das-ringspektrum}
 
-\include{Part1/AlgGeo1-Part1-28_Quadriken}
+\include{Chapter2/AlgGeo1-Chapter2-1_Definition-von-Spec-A}
 
-\part{Das Ringspektrum}
-\setcounter{section}{0}
-
-\include{Part2/AlgGeo1-Part2-1_Definition-von-Spec-A}
-
-\include{Part2/AlgGeo1-Part2-2_Topologische-Eigenschaften-in-Spec-A}
+\include{Chapter2/AlgGeo1-Chapter2-2_Topologische-Eigenschaften-in-Spec-A}
 
 \newpage{}
 \printindex{}

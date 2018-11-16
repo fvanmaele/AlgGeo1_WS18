@@ -1,14 +1,16 @@
 // Create a Gerby tags file from LaTeX labels.
 //
 // Format:
-// * <Part>[1..9]<Theorem>[001..999],<Label> for a theorem label;
-// * <Part>[1..9]S<Section>[01..99],<Label> for a section label.
+// * <Chapter>[1..9]<Theorem>[001..999],<Label> for a theorem label;
+// * <Chapter>[1..9]S<Section>[01..99],<Label> for a section label;
+// * <Chapter>[1..9]T<Subsection[01..99],<Label> for a subsection label;
+// * <Chapter>[1..9]U<Subsubsection[01..99],<Label> for a subsubsection label.
 //
 // Assumptions (.tex file):
-// * definitions, theorems, etc. are labeled contiguously, not by section;
-// * the document consists mainly of sections;
+// * definitions, theorems, etc. are labeled by chapter;
+// * the document consists of a single part;
 // * labels are put on separate lines;
-// * \include or \input are not supported.
+// * the document contains no \include or \input lines.
 //
 #include <string>
 #include <fstream>
@@ -56,16 +58,15 @@ int main (int argc, char* argv[]) {
   }
 
   std::string line{};
-  bool in_block{};
-  bool in_section{};
-  bool in_subsection{};
-  bool in_subsubsection{};
   bool wait_for_label{};
+  bool wait_for_part_label{};
+  bool wait_for_chapter_label{};
   bool wait_for_section_label{};
   bool wait_for_subsection_label{};
   bool wait_for_subsubsection_label{};
 
   int part_counter{};
+  int chapter_counter{};
   int section_counter{};
   int subsection_counter{};
   int subsubsection_counter{};
@@ -86,7 +87,6 @@ int main (int argc, char* argv[]) {
           // if a section has been defined, require a label first
           throw std::logic_error("\\begin: label undefined (\\section)");
         }
-        in_block = true;
         wait_for_label = true;
         block_counter++;
       }
@@ -95,16 +95,32 @@ int main (int argc, char* argv[]) {
         // block label was not defined
         throw std::logic_error("\\end: label undefined (\\begin)");
       }
-      in_block = false;
     }
     else if (grep_str(line, "\\part{")) {
       part_counter++;
+      if (part_counter > 1) {
+	throw std::logic_error("function not yet implemented");
+      }
+      wait_for_part_label = true;
+      chapter_counter = 0;
+      section_counter = 0;
+      subsection_counter = 0;
+      subsubsection_counter = 0;
+    }
+    else if (grep_str(line, "\\chapter{")) {
+      if (wait_for_part_label) {
+	throw std::logic_error("\\chapter: label undefined (\\part)");
+      }
+      wait_for_chapter_label = true;
+      chapter_counter++;
       section_counter = 0;
       subsection_counter = 0;
       subsubsection_counter = 0;
     }
     else if (grep_str(line, "\\section{")) {
-      in_section = true;
+      if (wait_for_chapter_label) {
+	throw std::logic_error("\\section: label undefined (\\chapter)");
+      }
       wait_for_section_label = true;
       section_counter++;
       subsection_counter = 0;
@@ -114,9 +130,9 @@ int main (int argc, char* argv[]) {
       if (wait_for_section_label) {
         throw std::logic_error("\\subsection: label undefined (\\section)");
       }
-      in_subsection = true;
       wait_for_subsection_label = true;
       subsection_counter++;
+      subsubsection_counter = 0;
     }
     else if (grep_str(line, "\\subsubsection{")) {
       if (wait_for_section_label) {
@@ -125,33 +141,33 @@ int main (int argc, char* argv[]) {
       if (wait_for_subsection_label) {
         throw std::logic_error("\\subsubsection: label undefined (\\subsection)");
       }
-      in_subsubsection = true;
       wait_for_subsubsection_label = true;
       subsubsection_counter++;
     }
     else if (grep_str(line, "\\label{")) {
       // start after "{", continue until "}"
       std::string label = line.substr(7, line.size()-8);
+      std::string chapter_prefix = std::to_string(chapter_counter);
 
+      if (wait_for_label) {
+        wait_for_label = false;
+        print_tag(chapter_prefix, label, block_counter);
+      }
+      if (wait_for_chapter_label) {
+	wait_for_chapter_label = false;
+	print_tag(chapter_prefix, label, 0);
+      }
       if (wait_for_section_label) {
         wait_for_section_label = false;
-        std::string prefix = std::to_string(part_counter) + "S";
-        print_tag(prefix, label, section_counter);
+        print_tag(chapter_prefix + "S", label, section_counter);
       }
       if (wait_for_subsection_label) {
         wait_for_subsection_label = false;
-        std::string prefix = std::to_string(part_counter) + "T";
-        print_tag(prefix, label, subsection_counter);
+        print_tag(chapter_prefix + "T", label, subsection_counter);
       }
       if (wait_for_subsubsection_label) {
         wait_for_subsubsection_label = false;
-        std::string prefix = std::to_string(part_counter) + "U";
-        print_tag(prefix, label, subsubsection_counter);
-      }
-      if (in_block) {
-        wait_for_label = false;
-        std::string prefix = std::to_string(part_counter);
-        print_tag(prefix, label, block_counter);
+        print_tag(chapter_prefix + "U", label, subsubsection_counter);
       }
     }
   }

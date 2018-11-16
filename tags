@@ -1,3 +1,4 @@
+1000,chap:prae-varietaeten
 1S01,sec:einfuehrung
 1001,bsp:einfuehrung
 1S02,sec:zariski-topologie
@@ -83,3 +84,11 @@
 1057,def:projektive-varietaeten
 1058,prop:charakterisierung-projektive-varietaeten
 1059,prop:charakterisierung-morphismen-proj-varietaeten
+1S25,sec:koordinatenwechsel-projektiver-raum
+1S26,sec:lineare-unterraeume-von-pn
+1S27,sec:Kegel
+1S28,sec:quadriken
+1060,def:quadrik
+1061,lem:platzhalter
+1062,prop:quadrik-in-normalform
+1063,def:dim-und-rang-einer-quadrik

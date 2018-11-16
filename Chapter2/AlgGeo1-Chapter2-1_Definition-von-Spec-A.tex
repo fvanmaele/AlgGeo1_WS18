@@ -10,7 +10,7 @@ Primideale.
 
 \textbf{Ziel}: Wir wollen einen Funktor:
 \begin{align*}
-  A & \longmapsto(\text{Spec}(A),\mathcal{O}_{\text{Spec}(A)})\\
+  A & \longmapsto(\Spec(A),\mathcal{O}_{\Spec(A)})\\
   \text{Ring} & \longrightarrow\text{top. Raum}
 \end{align*}
 
@@ -31,20 +31,20 @@ maximale Ideale.)
 Sei $A$ stets ein kommutativer Ring. Spec(A) =
 $\{\mathfrak{p}\subseteq A$ Primideal\}. Sei $M\subset A$.
 \begin{align*}
-  V(M) & =\{\mathfrak{p}\in\text{Spec}(A)\mid\mathfrak{p}\supset
+  V(M) & =\{\mathfrak{p}\in\Spec(A)\mid\mathfrak{p}\supset
          M\}=V\{\langle M\rangle\}\\
   V(f) & =V(\{f\})\text{\,für }f\in A
 \end{align*}
 
 \begin{lem}[1] Es ist
   \begin{align*}
-    \{\text{Ideale in }A\} & \longrightarrow\text{\{Teilmengen in Spec}(A)\}\\
+    \{\text{Ideale in }A\} & \longrightarrow\text{\{Teilmengen in }\Spec(A)\}\\
     \mathfrak{A} & \longmapsto V(\mathfrak{A})
   \end{align*}
 
   ist eine inklusionsumkehrende Abbildung. Es gilt:
   \begin{enumerate}
-  \item $V(0)=\text{Spec}(A)$, $V(1)=\emptyset$.
+  \item $V(0)=\Spec(A)$, $V(1)=\emptyset$.
   \item $V\left(\bigcup_{i\in
         I}\mathfrak{a}_{i}\right)=V\left(\sum_{i\in
         I}\mathfrak{a}_{i}\right)=\bigcap_{i\in I}V(\mathfrak{a}_{i})$
@@ -73,30 +73,30 @@ $\{\mathfrak{p}\subseteq A$ Primideal\}. Sei $M\subset A$.
   $\mathfrak{a}\subset A$ ein Ideal sind, heißt (Prim)Spektrum von $A$
   (mit der Zariski-Topologie).
   \begin{align*}
-    x\in\text{Spec}(A) & \leftrightarrow\mathfrak{p}_{x}\subset A\text{ Primideal}\\
-    Y\subset\text{Spec}(A), & \phantom{\leftrightarrow\
+    x\in\Spec(A) & \leftrightarrow\mathfrak{p}_{x}\subset A\text{ Primideal}\\
+    Y\subset\Spec(A), & \phantom{\leftrightarrow\
                               }I(Y):=\bigcap_{\mathfrak{p}\in Y}\mathfrak{p}
   \end{align*}
 
   $I(-)$ ist inklusionserhaltend, $I(\emptyset)=A$.
 \end{defn}
 \begin{prop} $\mathfrak{a}\subset A$ Ideal,
-  $Y\subset\text{Spec}(A)$. Dann gilt:
+  $Y\subset\Spec(A)$. Dann gilt:
   \begin{enumerate}
   \item $\text{rad }I(Y)=I(Y)$, $V(\mathfrak{a})=V(\text{rad
     }\mathfrak{a})$
   \item $I(V(\mathfrak{a}))=\text{rad}(\mathfrak{a})$,
-    $V(I(Y))=\overline{Y}$ (Abschluss in $\text{Spec}\,A$).
+    $V(I(Y))=\overline{Y}$ (Abschluss in $\Spec(A)$).
   \item Wir haben eine 1:1-Korrespondenz:
-    \begin{align*} \{\mathfrak{a}\subset A\mid\mathfrak{a}=\text{rad
-      }\mathfrak{a}\} & \longrightarrow\{\text{abg. Teilmengen }Y\text{ in
-                        Spec }A\}
+    \begin{align*}
+      \{\mathfrak{a}\subset A\mid\mathfrak{a}=\rad\mathfrak{a}\}
+      & \longrightarrow\{\text{abg. Teilmengen }Y\text{ in }\Spec(A)\}
     \end{align*}
   \end{enumerate}
 \end{prop}
 \begin{proof} \mbox{}
   \begin{enumerate}
-  \item $V(\mathfrak{a})=V(\text{rad }\mathfrak{a})$.
+  \item $V(\mathfrak{a})=V(\rad\mathfrak{a})$.
     \begin{itemize}
     \item ,,$\supseteq$``. Klar, da rad
       $\mathfrak{a}\supseteq\mathfrak{a}$.
