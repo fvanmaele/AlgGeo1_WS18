@@ -58,3 +58,77 @@ Die prinzipal offenen Mengen $D(f)$, $f\in A$, bilden
 
   $\Rightarrow D(g)$ quasikompakt.
 \end{proof}
+
+\begin{prop}
+  $X\subseteq\text{Spec}(A)$ ist irreduzibel, genau dann, wenn
+  $\varphi:=I(Y)\subset A$ prim ist. In diesem Fall ist
+  $\{\mathfrak{p}\}\subset\overline{Y}$ dicht!
+\end{prop}
+
+\begin{proof} \mbox{}
+  \begin{itemize}
+  \item Sei $Y$ irreduzibel und $f,g\in A$ mit $fg\in\mathfrak{p}$.
+
+    $\Rightarrow Y\subset\overline{Y}=VI(Y)\subseteq V(fg)=V(f)\cup V(g)$
+
+    $\Rightarrow$ ($X$ irreduzibel) Ohne Einschränkung: $Y\subset V(f)$.
+
+    $\Rightarrow
+    f\in\bigcap_{f\in\mathfrak{q}}\mathfrak{q}=IV(f)\subset
+    I(Y)=\mathfrak{p}$
+
+    $\Rightarrow\mathfrak{p}$ Primideal.
+  \item Sei umgekehrt $\mathfrak{p}=I(Y)$ ein Primideal.
+
+    $\Rightarrow$ (Satz 3)
+    $\overline{Y}=V(\mathfrak{p})=VI(\{\mathfrak{p}\})=\overline{\{\mathfrak{p}\}}$,
+    d.h. $\overline{Y}$ ist der Abschluss der irred. Menge
+    $\{\mathfrak{p}\}$ und daher selbst irreduzibel.
+
+    $\Rightarrow$ (Lemma I.14): $Y$ ist auch irreduzibel, da dicht in
+    $\overline{Y}$.
+  \end{itemize}
+\end{proof}
+Warnung: im Allgemeinen ist $\mathfrak{p}$ nicht in $Y$!
+
+\begin{cor}
+  Die Abbildung
+  \begin{align*}
+    \text{Spec}(A) & \longrightarrow\text{\{abg. irred. Teilmengen von Spec }A\}\\
+    \mathfrak{p} & \longmapsto V(\mathfrak{p})=\overline{\{\mathfrak{p}\}}
+  \end{align*}
+  ist eine Bijektion, unter der die maximalen Primideale von $A$ den
+  irreduziblen Komponenten entsprechen.
+\end{cor}
+
+\begin{proof} Proposition 3 und 6.
+\end{proof}
+
+\begin{defn}
+  Für ein topologischer Raum $X$ heißt $\eta\in X$ ein
+  \textbf{generischer Punkt}, falls
+  $\overline{\{\eta\}}=X$. Allgemeiner sagen wir für $x,x'\in X$, dass
+  $x$ eine Verallgeimeinerung (eng. ,,generalization``) von $x'$ ist,
+  bzw. $x'$ eine Spezialisierung von $x$, falls
+  $x'\in\overline{\{x\}}$.
+\end{defn}
+
+\begin{rem}\mbox{}
+  \begin{enumerate}
+  \item $\eta\in X$ generisch $\Leftrightarrow\eta$ ist
+    Verallgemeinerung von jedem Punkt von $X$.
+  \item Existiert ein generischer Punkt in $X$, so ist $X$ als
+    Abschluss einer irreduziblen Menge selbst irreduzibel.
+  \item Für $X=\text{Spec}(A)$ gilt: $x'$ ist eine Spezialisierung von
+    $x\Leftrightarrow\mathfrak{p}_{x}\subset\mathfrak{p}_{x'}$
+    \begin{align*}
+      \Leftrightarrow V(\mathfrak{p}_{x'}) & \subset V(\mathfrak{p}_{x})\\
+      \shortparallel & \phantom{\subset\,}\shortparallel\\
+      x'\in\overline{\{x')} & \in\overline{\{x\}}
+    \end{align*}
+    Ferner hat jede abgeschlossene irreduzible Teilmenge
+    $Y\subset\text{Spec}(A)$ einen eindeutigen generischen Punkt (dies
+    gilt nicht für beliebig irreduzible Teilmengen
+    $Y\subset\text{Spec}(A)$).
+  \end{enumerate}
+\end{rem}

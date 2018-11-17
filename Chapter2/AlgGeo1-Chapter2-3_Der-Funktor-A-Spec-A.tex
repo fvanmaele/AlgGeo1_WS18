@@ -1,0 +1,105 @@
+\section{Der Funktor $A\protect\mapsto\text{Spec}(A)$}
+
+\textbf{Ziel:} Wir wollen einen kontravarianten Funktor
+\begin{align*}
+  \text{Ringe} & \longrightarrow\text{Top. Räume}\\
+  A & \longmapsto\Spec A
+\end{align*}
+definieren. Sei $\varphi:A\longrightarrow B$ Ringhomomorphismus, $\mathfrak{q}$ Primideal. Es folgt:
+$\varphi^{-1}(\mathfrak{q})\subset A$ Primideal ($A/\varphi^{-1}(\mathfrak{q})\hookrightarrow B/\mathfrak{q}$ integer)
+d.h. wir erhalten eine Abbildung
+\begin{align*}
+  ^{a}\varphi=\Spec\varphi:\ \Spec B & \longrightarrow\Spec A\\
+  \mathfrak{q} & \longmapsto\varphi^{-1}(\mathfrak{q})
+\end{align*}
+
+\begin{prop} \mbox{}
+  \begin{enumerate}
+  \item $(^{a}\varphi)^{-1}(V(M))=V(\varphi(M))$ für
+    $M\subset\text{Spec }A$ Teilmenge, insbesondere
+    $(^{a}\varphi)^{-1}(D(f))=D(\varphi(f))$, $f\in A$.
+  \item
+    $V(\varphi^{-1}(\mathfrak{b}))=\overline{^{a}\varphi(V(\mathfrak{b}))}$
+    für $\mathfrak{b}\subset B$ Ideal.
+  \end{enumerate}
+\end{prop}
+
+\begin{proof} \mbox{}
+  \begin{enumerate}
+  \item Für $\mathfrak{q}\in\text{Spec }B$ gilt:
+    \begin{align}
+      \mathfrak{q}\supset\varphi(M)
+      & \Leftrightarrow\varphi^{-1}(\mathfrak{q})\supset M\\
+      \mathfrak{q}\in V(\varphi(M)) & \\
+      & \mathfrak{q}\in(^a\varphi)^{-1}(V(M))
+    \end{align}
+    Weiter:
+    \begin{align}
+      D(\varphi(f)) & =\Spec(B)\backslash V(\varphi(f)) \\
+                    & =\Spec(B)\backslash (^a\varphi)^-1 (V(f)) \\
+                    & = (^a\varphi)^-1 (D(f))
+    \end{align}
+     
+  \item
+    $\overline{^{a}\varphi(V(\mathfrak{b}))}=VI(^{a}\varphi(V\mathfrak{b}))$
+    nach Satz 3. Nach Definition gilt:
+    \begin{align*} I(^{a}\varphi(V(\mathfrak{b}))
+      & =\bigcap_{\mathfrak{p}\in^{a}\varphi(V(\mathfrak{b}))}
+        \mathfrak{p}=\bigcap_{\mathfrak{q}\in V(\mathfrak{b})}
+        \varphi^{-1}(\mathfrak{q})\\ \text{komm. Alg. }
+      & =\varphi^{-1}(\rad\mathfrak{b})\\
+      & \overset{!}{=}\rad\varphi^{-1}(\mathfrak{b})
+    \end{align*}
+    Denn: Ohne Einschränkung $\mathfrak{b}=0$,
+    $\varphi^{-1}(\mathfrak{b})=\ker\varphi$
+    ($A/\varphi^{-1}(\mathfrak{b})\hookrightarrow B/\mathfrak{b})$. Es
+    ist:
+    \begin{align*}
+      a\in\varphi^{-1}(\sqrt{0})
+      & \Leftrightarrow\varphi(a)^{n}=\varphi(a^{n})=0
+        \text{ für }n\text{geeignet}
+    \end{align*} $V(\ )$
+    liefert die Behauptung: $V(\rad\varphi^{-1}
+    (\mathfrak{b}))=V(\varphi^{-1}(\mathfrak{b}))$ nach Satz 3.1.
+  \end{enumerate}
+\end{proof}
+Insbesondere ist $^{a}\varphi:\Spec B\rightarrow\Spec A$
+\emph{stetig}.  Wegen
+\[
+  ^{a}(\psi\circ\varphi)=^{a}\varphi\circ^{a}\psi
+\]
+für einen weiteren Ringhomomorphismus $\psi:B\rightarrow C$ ist
+$A\mapsto\text{Spec }B$ der gesuchte kontravariante Funktor.
+
+\begin{cor}
+  $^{a}\varphi$ ist \textbf{dominant},
+  d.h. $\text{Bild}(^{a}\varphi)\subset\text{Spec }A$ dicht
+  $\Leftrightarrow$ Jedes Element in $\ker\varphi$ ist nilpotent:
+  $\ker\varphi\subset\text{rad}(0)$.
+\end{cor}
+
+\begin{prop} \mbox{}
+  \begin{enumerate}
+  \item Ist $\varphi:A\rightarrow B$ ein surjektiver
+    Ringhomomorphismus mit $\ker\varphi=:\mathfrak{a}$, dann ist
+    $^{a}\varphi$ ein Homöomorphismus von $\Spec B$ auf
+    $V(\mathfrak{a})\underset{\text{abg.}}{\subseteq}\Spec A$.
+  \item Ist $S$ eine multiplikativ abgeschlossene Teilmenge von $A$,
+    und $\varphi:A\longrightarrow S^{-1}A=:B$ die kanonische
+    Lokalisierungsabbildung.  Dann ist $^{a}\varphi$ wieder ein
+    Homöomorphismus, von $\Spec S^{-1}A$ auf $\{\mathfrak{p}\in\Spec A\mid
+    S\cap\mathfrak{p}=\emptyset\}$.
+  \end{enumerate}
+\end{prop}
+
+\begin{proof}
+  $^{a}\varphi$ injektiv + Bild ist klar aus kommutative Algebra.
+  \emph{Ferner}: Für $\mathfrak{q}\in\text{Spec }B$,
+  $\mathfrak{b}\subseteq B$ Ideal gilt
+  $\mathfrak{q}\supset\mathfrak{b}\Leftrightarrow
+  \varphi^{-1}(\mathfrak{q})\supset\varphi^{-1}(\mathfrak{b})$, also
+  \begin{align*}
+    ^{a}\varphi(V(\mathfrak{b})) & =V(\varphi^{-1}(\mathfrak{b})),
+  \end{align*}
+  d.h. $^{a}\varphi$ ist abgeschlossen.
+\end{proof}

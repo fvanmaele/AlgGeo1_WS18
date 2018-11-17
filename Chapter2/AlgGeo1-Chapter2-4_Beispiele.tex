@@ -1,0 +1,98 @@
+\section{Beispiele}
+\begin{itemize}
+\item Spec $A=\emptyset\Leftrightarrow A=\{0\}$.
+\item $A$ Körper oder Ring mit einzigem Primideal: $\Spec
+  A=\{\mathfrak{p}\}$.
+\item $A$ Artinsch: $\Spec A$ endlich und diskret (da maximale
+  Primidealen mit den minimalen Primidealen übereinstimmen)
+
+  ($\Spec A=\Spec(A/\sqrt{0})$, $A/\sqrt{0}$ Produkt von Körpern.
+  $\Spec(\prod A_{i})=\coprod\Spec(A_{i})$
+\end{itemize}
+
+\begin{example}
+  Sei $A$ Hauptidealring (z.B. $\mathbb{Z}$ oder $K[X]$). Falls
+  $\mathfrak{p}$ ein maximales Ideal ist, dann ist
+  $\mathfrak{p}=(\pi)$, $\pi$ Primelement in $A$.
+
+  Alle Primideale sind maximal oder 0.
+
+  Abg. Punkte von $\Spec A\leftrightarrow$ Primelemente modulo $A^{\times}$
+
+  $\overline{\{\eta\}}=\Spec A$ für $\eta\in\Spec A$ mit $\mathfrak{p}_{\eta}=(0)$.
+
+  Abg. Mengen. $\Spec A\neq
+  V(\mathfrak{a})\overset{0\neq\mathfrak{a}=(f)}{=}V(f)=\{(p_{1}),\ldots,(p_{n})\}$
+  falls $f=p_{1}^{e_{1}}\cdots p_{n}^{e_{n}}$, $p_{i}$ paarweise
+  verschieden, $e_{1}\geq1$, \emph{endliche Mengen abgeschlossener Punkte.}
+
+  $g\neq0\neq f$:
+  \begin{align*}
+    V(f)\cap V(g) & =V(f,g)=V(d), & d=\text{ggT}(f,g)\\
+    V(f)\cup V(g) & =V((f)\cap(g))=V(e), & e=\text{kgV}(f,g)
+  \end{align*}
+
+  Falls $A$ \emph{lokaler} Hauptidealring ist (also diskreter
+  Bewertungsring, der kein Körper ist), dann:
+  \[
+    \Spec A=\{x,\eta\},\ \mathfrak{p}_{x}\text{ max. Ideal},\
+    \mathfrak{p}_{\eta}=(0)
+  \]
+
+  $\{\eta\}$ einzige nicht-???  offene Menge.
+\end{example}
+ 
+\begin{example}
+  Sei $k$ algebraisch abgeschlossener Körper. Affine Varietäten
+  $V\leftrightarrow$ endlich erzeugte $k$-Algebren $A$.
+
+  $V=$\{max. Ideale in $A$\} $\subseteq\Spec(A)$
+
+  Topologie auf $V$ ist von $\Spec(A)$ induziert.
+\end{example}
+ 
+\begin{example}
+  Sei $R$ Hauptidealring, $A=R[T]$, $X=\Spec(A)$. $R$ faktoriell: Gauß
+  $\Rightarrow R[T]$ faktoriell mit Primidealen:
+  \begin{enumerate}
+  \item $p\in R$ prim
+    \begin{proof}
+      $p\in R$ prim $\Rightarrow R/pR$ Körper. Nach 12.1 gilt:
+      \[
+        \overline{\pR[T]}=V(pR[T])\cong\Spec\left(R/pR[T]\right)
+      \]
+      Hauptidealring mit unendlich vielen Elementen. Damit ist $pR[T]$
+      \emph{nicht} maximal, sondern
+      \[ V(pR[T])={pR[T], (f,p), f\in R[T]
+          \text{ mit } \overline{f}\in R/p[T]
+        \text{irreduzibel}}
+      \]
+    \end{proof}
+  \item $f\in R[T]$ primitives Polynom, irreduzibel in $\Quot(R)[T]$
+    \begin{proof}
+      Sei $f$ prim, irreduzibles Polynom.
+      \begin{casenv}
+      \item $l(f)\in R^{\times} \Rightarrow$ (Division mit Rest)
+        $R\subset R[T]/pR[T]$ ist eine ganze Ringerweiterung
+        endlich erzeugter freier $R$-Moduln vom Rang $\deg(f)$.
+        Angenommen, $fR[T]$ ist maximal. Dann ist $R[T]/fR[T]$ ein Körper,
+        also $R$ ein Körper. Widerspruch.
+      \item Andernfalls kann $fR[T]$ ein maximales Ideal sein. $R$ habe nur
+        endlich viele Primelemente.
+        \[
+          0\neq a_{j} = \prod p\in R,\ f:=aT-1
+        \]
+        Es folgt:
+        \[
+          R[T]/fR[T]\cong R[a^{-1}]=\Quot(R)
+        \]
+        also $fR[T]$ maximal.
+      \end{casenv}
+    \end{proof}
+  \end{enumerate}
+\end{example}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../AlgGeo1"
+%%% End:
