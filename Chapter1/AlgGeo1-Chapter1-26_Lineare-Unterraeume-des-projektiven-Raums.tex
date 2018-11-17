@@ -2,25 +2,24 @@
 \section{Lineare Unterräume von $\mathbb{P}^{n}$}
 \label{sec:lineare-unterraeume-von-pn}
 
-Sei $\varphi:k^{n+1}\rightarrow k^{n+1}$ ein \emph{injektiver} Homomorphismus
-von $k$-Vektorräumen. $\varphi$ induziert eine injektive Abbildung:
+Sei $\varphi:k^{m+1}\rightarrow k^{n+1}$ ein \emph{injektiver} Homomorphismus
+von $k$-Vektorräumen. $\varphi$ induziert eine injektive Abbildung
 \[
-  \imath:\mathbb{P}^{n}(k)\rightarrow\mathbb{P}^{n}(k)
+  \imath:\mathbb{P}^{m}(k)\rightarrow\mathbb{P}^{n}(k)
 \]
 
-der ein Morphismus von Prävarietäten ist nach Satz 56. Das Bild von
+die nach Satz \ref{prop:charakterisierung-morphismen-proj-varietaeten} ein Morphismus von Prävarietäten ist. Das Bild von
 $\imath$ ist eine abgeschlossene Untervarietät. Ist $A=(a_{ij})\in M_{l\times(n+1)}$
-mit $\text{im}(\varphi)=\ker(k^{n+1}\xrightarrow{A}k)$ und
+mit $\text{im}(\varphi)=\ker(k^{n+1}\xrightarrow{A}k^{l})$ und
 \[
-  f_{i}:=\sum_{j=0}^{n}a_{ij}X_{j}\in k[X_{0},\ldots,X_{n}],
+  f_{i}:=\sum_{j=0}^{n}a_{ij}X_{j}\in k[X_{0},\ldots,X_{n}], \text{ für } i = 1, \ldots, l
 \]
 
-so identifiziert $\imath$ $\mathbb{P}^{n}(k)$ mit $V_{+}(f_{1},\ldots,f_{l})$.
-(Die Abbildung $\imath:\mathbb{P}^{n}(k)\rightarrow V_{+}(f_{1},\ldots,f_{l})$
-ist ein Isomorphismus von Prävarietäten, mit Umkehrabbildung $\varphi^{-1}:\varphi(k^{n+1})\rightarrow k^{n+1}$
-induziert.)
+so identifiziert $\imath$ den projektiven Raum $\mathbb{P}^{m}(k)$ mit $V_{+}(f_{1},\ldots,f_{l}) \subseteq \mathbb{P}^{n}(k)$.
+(Die Abbildung $\imath:\mathbb{P}^{m}(k)\rightarrow V_{+}(f_{1},\ldots,f_{l})$
+ist ein Isomorphismus von Prävarietäten, mit Umkehrabbildung induziert von $\varphi^{-1}:\varphi(k^{m+1})\rightarrow k^{m+1}$)
 \begin{example*}
-  $\mathbb{P}^{m}=V_{+}(X_{m+1},\ldots,X_{n})\subset\mathbb{P}^{n}$.
+  $\mathbb{P}^{m}=V_{+}(X_{m+1},\ldots,X_{n})\subseteq\mathbb{P}^{n}$.
   Solche Unterräume heißen \textbf{lineare Unterräume} (der Dimension
   $m$).
 
@@ -45,9 +44,9 @@ induziert.)
   einem Punkt des $\mathbb{P}^{2}$, schneiden. Dimensionsformel (lineare
   Algebra):
   \[
-    \dim E_{1}\cap E_{2}=-\underbrace{\dim E_{1}+E_{2}}_{3}+\underbrace{\dim E_{1}}_{2}-\underbrace{\dim E_{2}}_{2}=1
+    \dim _{k}E_{1}\cap E_{2}=-\underbrace{\dim_{k} (E_{1}+E_{2})}_{3}+\underbrace{\dim_{k} E_{1}}_{2}+\underbrace{\dim_{k} E_{2}}_{2}=1
   \]
-  \emph{Später}: Verallgemeinerung: Satz von Bézout für allgemeine Unterprävarietäten
+  \emph{Später}: Verallgemeinerung durch den \emph{Satz von Bézout} für allgemeine Unterprävarietäten
   $V_{+}(f)$.
 \end{itemize}
 
