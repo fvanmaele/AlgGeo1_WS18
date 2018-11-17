@@ -5,7 +5,7 @@ scripts:
 	$(MAKE) -C scripts all
 
 AlgGeo1.flt: $(latex)
-	latexpand --fatal AlgGeo1.tex --output AlgGeo1.flt
+	latexpand --makeatletter --fatal AlgGeo1.tex --output AlgGeo1.flt
 
 AlgGeo1.pdf: $(latex)
 	pdflatex AlgGeo1.tex

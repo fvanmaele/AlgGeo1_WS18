@@ -3,8 +3,6 @@
 // Format:
 // * <Chapter>[1..9]<Theorem>[001..999],<Label> for a theorem label;
 // * <Chapter>[1..9]S<Section>[01..99],<Label> for a section label;
-// * <Chapter>[1..9]T<Subsection[01..99],<Label> for a subsection label;
-// * <Chapter>[1..9]U<Subsubsection[01..99],<Label> for a subsubsection label.
 //
 // Assumptions (.tex file):
 // * definitions, theorems, etc. are labeled by chapter;
@@ -12,18 +10,21 @@
 // * labels are put on separate lines;
 // * the document contains no \include or \input lines.
 //
-#include <string>
-#include <fstream>
-#include <iostream>
-#include <iomanip>
+// Caveats:
+// * subsections and subsubsections are numbered continously
 #include <cmath>
+#include <fstream>
+#include <iomanip>
+#include <iostream>
+#include <sstream>
+#include <string>
+#include <unordered_set>
 
 bool find_str(const std::string &line, const std::string &pat) {
   return line.find(pat) != std::string::npos;
 }
 
-void print_tag(std::string prefix, std::string label,
-	       int counter, char f = '0') {
+std::string write_tag(const std::string &prefix, int counter, char f = '0') {
   // available characters for counter
   int len = 4 - prefix.length();
 
@@ -34,9 +35,23 @@ void print_tag(std::string prefix, std::string label,
     throw std::out_of_range("counter too large for tag");
   }
 
-  std::cout << prefix  << std::setfill(f) << std::setw(len)
-	    << counter << ","
-	    << label   << std::endl;
+  std::stringstream tag{};
+  tag << prefix << std::setfill(f) << std::setw(len)
+      << counter;
+
+  return tag.str();
+}
+
+void print_tag(std::unordered_set<std::string> &tag_set,
+	       const std::string &tag,
+	       const std::string &label) {
+  if (tag_set.find(tag) == tag_set.end()) {
+    tag_set.insert(tag);
+    std::cout << tag << "," << label << std::endl;
+  } else {
+    std::string err = "duplicate tag: " + tag + ", label: " + label;
+    throw std::invalid_argument(err);
+  }
 }
 
 void is_label_undefined(const std::string &pos, const std::string &prev,
@@ -49,7 +64,7 @@ void is_label_undefined(const std::string &pos, const std::string &prev,
     } else {
       err += ")";
     }
-    throw std::logic_error(err);
+    throw std::invalid_argument(err);
   }
 }
 
@@ -79,6 +94,7 @@ int main (int argc, char* argv[]) {
 
   std::string line{};
   std::string last_label{};
+  std::unordered_set<std::string> tag_set;
 
   bool wait_for_label{};
   bool wait_for_part_label{};
@@ -154,8 +170,8 @@ int main (int argc, char* argv[]) {
 
       wait_for_section_label = true;
       section_counter++;
-      subsection_counter = 0;
-      subsubsection_counter = 0;
+      //subsection_counter = 0;
+      //subsubsection_counter = 0;
     }
     else if (find_str(line, "\\subsection{")) {
       is_label_undefined("\\subsection", "\\part",
@@ -167,7 +183,7 @@ int main (int argc, char* argv[]) {
 
       wait_for_subsection_label = true;
       subsection_counter++;
-      subsubsection_counter = 0;
+      //subsubsection_counter = 0;
     }
     else if (find_str(line, "\\subsubsection{")) {
       is_label_undefined("\\subsubsection", "\\part",
@@ -186,25 +202,31 @@ int main (int argc, char* argv[]) {
       // start after "{", continue until "}"}
       last_label = line.substr(7, trim_right(line).size() - 8);
       std::string chapter_prefix = std::to_string(chapter_counter);
+      std::string new_tag{};
 
       if (wait_for_label) {
-	print_tag(chapter_prefix, last_label, block_counter);
+	new_tag = write_tag(chapter_prefix, block_counter);
+	print_tag(tag_set, new_tag, last_label);
 	wait_for_label = false;
       }
       if (wait_for_chapter_label) {
-	print_tag(chapter_prefix, last_label, 0);
+	new_tag = write_tag(chapter_prefix, 0);
+	print_tag(tag_set, new_tag, last_label);
 	wait_for_chapter_label = false;
       }
       if (wait_for_section_label) {
-	print_tag(chapter_prefix + "S", last_label, section_counter);
+	new_tag = write_tag(chapter_prefix + "S", section_counter);
+	print_tag(tag_set, new_tag, last_label);
 	wait_for_section_label = false;
       }
       if (wait_for_subsection_label) {
-	print_tag(chapter_prefix + "T", last_label, subsection_counter);
+	new_tag = write_tag(chapter_prefix + "T", subsection_counter);
+	print_tag(tag_set, new_tag, last_label);
 	wait_for_subsection_label = false;
       }
       if (wait_for_subsubsection_label) {
-	print_tag(chapter_prefix + "U", last_label, subsubsection_counter);
+	new_tag = write_tag(chapter_prefix + "U", subsubsection_counter);
+	print_tag(tag_set, new_tag, last_label);
 	wait_for_subsubsection_label = false;
       }
     }
