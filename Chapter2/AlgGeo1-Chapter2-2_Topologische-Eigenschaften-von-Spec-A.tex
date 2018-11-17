@@ -1,0 +1,59 @@
+\section{Topologische Eigenschaften von Spec(A)}
+
+Definiere $D(f):=D_{A}(f):=\Spec(A)\setminus V(f)=\{x \in\Spec A \mid f\notin\mathfrak{p}_{x}\}$,
+\begin{align*}
+  \text{ev}_{x}:A & \longrightarrow A/\mathfrak{p}_{x}\subseteq \kappa_{x}(A) := \Quot(A/\mathfrak{p}_{x})\\
+  f & \longmapsto f(x) := f(\mathfrak{p}_{x}) := f \mod \mathfrak{p}
+\end{align*}
+
+Für $x \in D(f)$ gilt dann $f(x) = \text{ev}_{x}(f) \neq 0$.
+
+\textbf{Standard prinzipal offene Mengen}.
+\begin{align*}
+  D(0) & =\emptyset,\ D(1)=\Spec(A)=D(u),\ u\in A^{\times}\\    
+  & D(f)\cap D(g) = D(fg)
+\end{align*}
+
+\begin{lem}
+\label{lem:charakterisierung-ueberdeckungen-prinzipal}	
+Für $f_{i} \in A, i\in I$, $g\in A$ gilt:
+  \begin{align*}
+    D(g)\subseteq\bigcup_{i\in I}D(f_{i})
+    & \Leftrightarrow g^{n}\in\mathfrak{a}=(f_{i},i\in I)\text{ für }n \in \mathbb{N} \text{ geeignet}\\
+    & \Leftrightarrow g\in\rad(\mathfrak{a})
+  \end{align*}
+\end{lem}
+\begin{proof} Es gilt:
+  \begin{align*}
+    D(g)\subseteq\bigcup_{i}D(f)
+    & \Leftrightarrow V(g)\supseteq\bigcap_{i} V(f_{i})=V(\mathfrak{a})\\
+    & \Leftrightarrow g\in\rad((g))\subseteq\rad(\mathfrak{a}) \text{ nach } \ref{prop:nullstellensatz-primspektrum}
+  \end{align*}
+
+  Für $g=1$, folgt:
+  \[ \Spec(A)=\bigcup_{i\in I}D(f_{i})\Leftrightarrow\sum_{i\in
+      I}Af_{i}=A
+  \]
+\end{proof}
+\begin{prop}
+\label{prop:prinzipal-offene-bilden-basis}
+Die prinzipal offenen Mengen $D(f)$, $f\in A$, bilden
+  eine Basis der Topologie von $\Spec(A)$, und sind
+  quasikompakt. Insbesondere ist $\Spec(A)$ quasikompakt.
+\end{prop}
+\begin{proof} Nach Lemma \ref{lem:zariski-top-auf-spektrum}$.(ii)$ gilt:
+  \[
+    V(\mathfrak{a})=\bigcap_{f \in\mathfrak{a}}V(f)\Longrightarrow\Spec A\setminus
+    V(\mathfrak{a})=\bigcup_{f\in\mathfrak{a}}D(f)\Rightarrow\text{Basis
+      der Topologie}
+  \]
+
+  Sei $D(g)\subseteq\bigcup_{i}D(f_{i})$.
+
+  \ref{lem:charakterisierung-ueberdeckungen-prinzipal} $\Rightarrow$ $g^{n}=\sum_{i\in I}a_{i}f_{i}$, $a_{i}\in A$
+  fast alle 0.
+
+  $\Rightarrow D(g)\subseteq\bigcup_{i\in J}D(f_{i})$ $\forall i\in J\subseteq I$ endlich
+
+  $\Rightarrow D(g)$ quasikompakt.
+\end{proof}

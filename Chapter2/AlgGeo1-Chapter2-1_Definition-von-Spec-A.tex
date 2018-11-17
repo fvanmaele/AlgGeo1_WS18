@@ -1,48 +1,62 @@
-Prävarietäten sind Verklebungen. $k$ algebraisch abgeschlossen:
+\emph{Bisher}:
 
-Affine Varietäten $\leftrightarrow$ integere endlich erzeugte
-$k$-Algebren.  Punkte $\hat{=}$ maximale Ideale.
+ Prävarietäten$_{/k}$ sind Verklebungen von $\emph{affinen Varietäten}_{/k}$ mit $k$ algebraisch abgeschlossen.
 
-\textbf{Ziel}: Schemata sind Verklebungen.
+Dabei sind affine Varietäten$_{/k}$ äquivalent zu \emph{endlich erzeugten, integren
+$k$-Algebren}, 
 
-Affine Schemta $\leftrightarrow$ (kommutative) Ringe. Punkte $\hat{=}$
-Primideale.
+wobei die Punkte der Varietäten den maximalen Idealen der $k$-Algebren entsprechen.
 
-\textbf{Ziel}: Wir wollen einen Funktor:
+\rule[0.5ex]{1\columnwidth}{1pt}
+
+\textbf{Ziel}: 
+Schemata sind Verklebungen von \emph{affinen Schemata}.
+
+Dabei sollen affine Schemta äquivalent zu \emph{beliebigen} (kommutativen) Ringen sein. 
+
+Die Punkte affiner Schemata werden den \emph{Primidealen} der zugehörigen Ringe entsprechen.
+
+\rule[0.5ex]{1\columnwidth}{1pt}
+
+\textbf{Methodik}: Wir wollen einen Funktor:
 \begin{align*}
-  A & \longmapsto(\Spec(A),\mathcal{O}_{\Spec(A)})\\
-  \text{Ring} & \longrightarrow\text{top. Raum}
+  A & \longmapsto (\underbrace{\Spec(A)}_{\text{top. Raum}}, \underbrace{\mathcal{O}_{\Spec(A)}}_{Garbe})
 \end{align*}
 
-,,Garbe von Funktionen`` verallgemeinert ,,Systeme von Funktionen``
-für Raume von Funktionen.
+$\mathcal{O}_{\Spec(A)}$ ist dabei ,,Garbe von Funktionen`` und verallgemeinert ,,Systeme von Funktionen``
+für Raume mit Funktionen.
 
-(Insbesondere $k$-Algebren über beliebige Körper $k$!)
+Wir erhalten insbesondere affine Schemata für $k$-Algebren über beliebigen Körpern $k$!
 
-(Sei $\varphi:A\rightarrow B$ Ringhomomorphismus,
-$\mathfrak{m}\subseteq B$ maximales Ideal. Dann folgt i.A. nicht, dass
-$\varphi^{-1}(\mathfrak{m})$ maximal ist. Wir haben also zu wenige
-maximale Ideale.)
+Grund für den Übergang zu Primidealen:
+
+Für einen Ringhomomorphismus $\varphi:A\rightarrow B$, und ein maximales Ideal
+$\mathfrak{m}\subseteq B$ ist $\mathfrak{m}^{c} := \varphi^{-1}(\mathfrak{m})$ im Allgemeinen \textbf{kein} maximales Ideal von $A$.
+Wir erhalten in dieser Allgemeinheit also keinen Funktor auf den Maximalsprektren, wie bisher.
 
 \section*{Das Ringspektrum als topologischer Raum}
 
 \section{Definition von Spec(A)}
+\label{sec:def-von-spec}
 
-Sei $A$ stets ein kommutativer Ring. Spec(A) =
-$\{\mathfrak{p}\subseteq A$ Primideal\}. Sei $M\subset A$.
+Sei $A$ stets ein kommutativer Ring. $\Spec(A)$ :=
+$\{\mathfrak{p}\unlhd A \mid \mathfrak{p} \text{ prim}\}$.
+
+Für $M\subseteq A$ definiert man
 \begin{align*}
-  V(M) & =\{\mathfrak{p}\in\Spec(A)\mid\mathfrak{p}\supset
-         M\}=V\{\langle M\rangle\}\\
-  V(f) & =V(\{f\})\text{\,für }f\in A
+  V(M) := V_{A}(M) & :=\{\mathfrak{p}\in\Spec(A)\mid M \subseteq \mathfrak{p} \}=V(\langle M\rangle_{A})\\
+  V(f) & :=V(\{f\})\text{\, für }f\in A
 \end{align*}
 
-\begin{lem}[1] Es ist
+\begin{lem}
+\label{lem:zariski-top-auf-spektrum}
+Es ist
   \begin{align*}
     \{\text{Ideale in }A\} & \longrightarrow\text{\{Teilmengen in }\Spec(A)\}\\
-    \mathfrak{A} & \longmapsto V(\mathfrak{A})
+    \mathfrak{a} & \longmapsto V(\mathfrak{a})
   \end{align*}
 
-  ist eine inklusionsumkehrende Abbildung. Es gilt:
+  eine inklusionsumkehrende Abbildung. Weiter gilt:
   \begin{enumerate}
   \item $V(0)=\Spec(A)$, $V(1)=\emptyset$.
   \item $V\left(\bigcup_{i\in
@@ -57,39 +71,40 @@ $\{\mathfrak{p}\subseteq A$ Primideal\}. Sei $M\subset A$.
   \begin{itemize}
   \item (1), (2) klar.
   \item
-    (3). $\mathfrak{p}\supset\mathfrak{a}\cap\mathfrak{a}'\supset\mathfrak{a}\mathfrak{a}'$.
+    (3). $\mathfrak{p}\supseteq\mathfrak{a}\cap\mathfrak{a}'\supseteq\mathfrak{a}\mathfrak{a}'$ $\Rightarrow\mathfrak{p}\supseteq\mathfrak{a}\mathfrak{a}'$.
 
-    $\Rightarrow\mathfrak{p}\supset\mathfrak{a}\mathfrak{a}'$.
+    $\mathfrak{p}$ prim $\Rightarrow$ $\mathfrak{p}\supseteq\mathfrak{a}$ oder
+    $\mathfrak{p}\supseteq\mathfrak{a}'$.
 
-    $\Rightarrow$ (Primideal) $\mathfrak{p}\supset\mathfrak{a}$ oder
-    $\mathfrak{p}\supset\mathfrak{a}'$.
-
-    $\Rightarrow\mathfrak{p}\supset\mathfrak{a}\cap\mathfrak{a}'$
+    $\Rightarrow\mathfrak{p}\supseteq\mathfrak{a}\cap\mathfrak{a}'$
 
   \end{itemize}
 \end{proof}
-\begin{defn} Spec(A) mit der Topologie, dessen abgeschlossene Mengen
+\begin{defn}
+\label{def:spec-als-top-raum}	
+$\Spec(A)$ mit der Topologie, dessen abgeschlossene Mengen
   gerade die Mengen der Form $V(\mathfrak{a})$,
-  $\mathfrak{a}\subset A$ ein Ideal sind, heißt (Prim)Spektrum von $A$
+  $\mathfrak{a}\unlhd A$ ein Ideal sind, heißt das \textbf{(Prim)Spektrum von $A$}
   (mit der Zariski-Topologie).
   \begin{align*}
-    x\in\Spec(A) & \leftrightarrow\mathfrak{p}_{x}\subset A\text{ Primideal}\\
-    Y\subset\Spec(A), & \phantom{\leftrightarrow\
-                              }I(Y):=\bigcap_{\mathfrak{p}\in Y}\mathfrak{p}
+    x\in\Spec(A) & \leftrightarrow\mathfrak{p}_{x}\unlhd A\text{ prim}\\
+    Y\subseteq\Spec(A), & \phantom{\leftrightarrow\
+                              }I(Y):=\bigcap_{y \in Y}\mathfrak{p}_{y}
   \end{align*}
 
-  $I(-)$ ist inklusionserhaltend, $I(\emptyset)=A$.
+  $I(-)$ ist inklusionumkehrend, $I(\emptyset)=A$.
 \end{defn}
-\begin{prop} $\mathfrak{a}\subset A$ Ideal,
-  $Y\subset\Spec(A)$. Dann gilt:
+\begin{prop}
+\label{prop:nullstellensatz-primspektrum}
+Seien $\mathfrak{a}\unlhd A$ ein Ideal und
+  $Y\subseteq\Spec(A)$ eine Teilmenge. Dann gilt:
   \begin{enumerate}
-  \item $\text{rad }I(Y)=I(Y)$, $V(\mathfrak{a})=V(\text{rad
-    }\mathfrak{a})$
-  \item $I(V(\mathfrak{a}))=\text{rad}(\mathfrak{a})$,
+  \item $\rad I(Y)=I(Y)$, $V(\mathfrak{a})=V(\rad\mathfrak{a})$
+  \item $I(V(\mathfrak{a}))= \rad(\mathfrak{a})$,
     $V(I(Y))=\overline{Y}$ (Abschluss in $\Spec(A)$).
   \item Wir haben eine 1:1-Korrespondenz:
     \begin{align*}
-      \{\mathfrak{a}\subset A\mid\mathfrak{a}=\rad\mathfrak{a}\}
+      \{\mathfrak{a} \unlhd A\mid\mathfrak{a}=\rad\mathfrak{a}\}
       & \longrightarrow\{\text{abg. Teilmengen }Y\text{ in }\Spec(A)\}
     \end{align*}
   \end{enumerate}
@@ -100,19 +115,18 @@ $\{\mathfrak{p}\subseteq A$ Primideal\}. Sei $M\subset A$.
     \begin{itemize}
     \item ,,$\supseteq$``. Klar, da rad
       $\mathfrak{a}\supseteq\mathfrak{a}$.
-    \item ,,$\subseteq$``. Aus $f^{r}\in\mathfrak{a}\subseteq\mathfrak{a}$
-      folgt $f\in\mathfrak{p}$, da $\mathfrak{p}$ Primideal. Damit:
-      $\text{rad }\mathfrak{a}\subset\mathfrak{p}.$
+    \item ,,$\subseteq$``. Aus $f^{r}\in\mathfrak{a}\subseteq\mathfrak{p}$
+      folgt $f\in\mathfrak{p}$, da $\mathfrak{p}$ prim, also $\rad\mathfrak{a}\subseteq\mathfrak{p}.$
     \end{itemize}
-  \item $\text{rad }\mathfrak{a}=\bigcap_{\mathfrak{p}\in
-      V(\mathfrak{a})}\mathfrak{p}=IV(\mathfrak{a})$.  Es ist:
+  \item $\rad\mathfrak{a}=\bigcap_{x\in
+      V(\mathfrak{a})}\mathfrak{p}_{x}=IV(\mathfrak{a})$.  Es ist:
     \begin{align*}
-      V(\mathfrak{b})\supseteq Y & \Leftrightarrow(\forall\mathfrak{p}\in Y:\
-                                   \mathfrak{p}\supset\mathfrak{b})\\
+      V(\mathfrak{b})\supseteq Y & \Leftrightarrow \forall\mathfrak{p}\in Y:\
+                                   \mathfrak{p}\supseteq\mathfrak{b}\\
                                  & \Leftrightarrow
                                    I(Y)\supseteq\mathfrak{b}.
     \end{align*} Damit ist $V(I(Y))$ die kleinste abgeschlossene
     Teilmenge, die $Y$ umfasst, d.h. $V(I(Y))=\overline{Y}$.
-  \item
+  \item Klar.
   \end{enumerate}
 \end{proof}

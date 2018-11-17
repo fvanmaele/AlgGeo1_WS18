@@ -1,27 +1,27 @@
 \section{Kegel}
 \label{sec:Kegel}
 
-Sei $H\subseteq\mathbb{P}^{n}(k)$ Hyperebene, $p\in\mathbb{P}^{n}(k)\backslash H$,
+Sei $H\subseteq\mathbb{P}^{n}(k)$ Hyperebene, $p\in\mathbb{P}^{n}(k)\setminus H$,
 $X\subseteq H$ abgeschlossene Unterprävarietät.
 \[
   \overline{X,p}:=\bigcup_{q\in X}\overline{qp}
 \]
 
-heißt \textbf{Kegel von $X$ über $p$}, es handelt sich um einen
-abgeschlossenen Untervarietät von $\mathbb{P}^{n}(k)$. Ohne Einschränkung:$H=V_{+}(X_{n})$,
-$p=(0:\cdots:1)$ (nach Koordinatenwechsel: $H\cong k^{n}\oplus p\cong k\}=k^{n+1}$.)
+heißt \textbf{Kegel von $X$ über $p$}, es handelt sich um eine
+abgeschlossenen Untervarietät von $\mathbb{P}^{n}(k)$. Ohne Einschränkung: $H=V_{+}(X_{n})$,
+$p=(0:\ldots:0:1)$ (geeigneter Koordinatenwechsel)
 Für  
 \begin{align*}
   X=V_{+}(f_{1},\ldots,f_{m})\subseteq\mathbb{P}^{n-1}(k)=H, & \quad f_{i}\in k[X_{0},\ldots,X_{n-1}]\\
-  \Rightarrow X,p=V_{+}(\tilde{f}_{1},\ldots,\tilde{f}_{m})\subseteq\mathbb{P}^{n}(k), & \quad\tilde{f}_{i}\in k[X_{0},\ldots,X_{n}]
+  \Rightarrow \overline{X,p}=V_{+}(\tilde{f}_{1},\ldots,\tilde{f}_{m})\subseteq\mathbb{P}^{n}(k), & \quad\tilde{f}_{i}\in k[X_{0},\ldots,X_{n}]
 \end{align*}
 
-Verallgemeinerung. Sei $\mathbb{P}^{n}(k)\cong\Lambda\subseteq\mathbb{P}^{n}(k)$
-linearer Unterraum, $\psi\subseteq\mathbb{P}^{n}(k)$ komplementärer
-linearer Unterraum, d.h. $\Lambda\cap\psi=\emptyset$ und $\mathbb{P}^{n}(k)$
-ist der bekannte lineare Unterraum von $\mathbb{P}^{n}(k)$, der $\Lambda$
-und $\psi$ enthält. $X\subseteq\psi$ abgeschlossene Unterprävarietät.
+Verallgemeinerung. Sei $\mathbb{P}^{m}(k)\cong\Lambda\subseteq\mathbb{P}^{n}(k)$
+linearer Unterraum, $V\subseteq\mathbb{P}^{n}(k)$ komplementärer
+linearer Unterraum, d.h. $\Lambda\cap V=\emptyset$ und $\mathbb{P}^{n}(k)$
+ist der \emph{kleinste} lineare Unterraum von $\mathbb{P}^{n}(k)$, der $\Lambda$
+und $V$ enthält. Für $X\subseteq V$ eine abgeschlossene Unterprävarietät definiert man den
 
-\textbf{Kegel von $X$ über $\Lambda$}: $\overline{X,\Lambda}=\bigcup_{q\in X}\overline{q,\Lambda}$,
+\textbf{Kegel von $X$ über $\Lambda$} durch $\overline{X,\Lambda} :=\bigcup_{q\in X}\overline{q,\Lambda}$,
 wobei der von $q$ und $\Lambda$ aufgespannte lineare Unterraum $\overline{q,\Lambda}$
 der kleinste Unterraum sei, der $q$ und $\Lambda$ enthält.

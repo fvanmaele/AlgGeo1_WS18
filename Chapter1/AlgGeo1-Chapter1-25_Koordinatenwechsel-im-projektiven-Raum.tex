@@ -2,15 +2,13 @@
 \section{Koordinatenwechsel in $\mathbb{P}^{n}$}
 \label{sec:koordinatenwechsel-projektiver-raum}
 
-$A=(a_{ij})\in GL_{n+1}(k)$ eine invertierbare $k^{n+1}\rightarrow k^{n+1}$
-lineare Abbildung, die Ursprungsgeraden in solche überführt, bzw.
-die Äquivalenzrelation respektiert. Wir erhalten Abbildungen:
+Sei $A=(a_{ij})\in GL_{n+1}(k)$ eine invertierbare, lineare Abbildung $k^{n+1}\rightarrow k^{n+1}$. Dann überführt $A$ Ursprungsgeraden in Ursprungsgeraden, respektiert also die Äquivalenzrelation des projektiven Raumes. Wir erhalten Abbildungen:
 \begin{align*}
   \mathbb{P}^{n}(k) & \overset{\phi_{A}}{\longrightarrow}\mathbb{P}^{n}(k)\\
-  (x_{0}:\ldots:x_{n}) & \longmapsto\left(\sum_{i=0}^{n}a_{0_{i}}x_{i}:\cdots:\sum_{i=0}^{n}a_{n_{i}}x_{i}\right),
+  (x_{0}:\ldots:x_{n}) & \longmapsto\left(\sum_{i=0}^{n}a_{0i}x_{i}:\ldots:\sum_{i=0}^{n}a_{ni}x_{i}\right),
 \end{align*}
 
-die nach Satz 56 ein Morphismus von Prävarietäten ist. Offensichtlich
+die nach Satz \ref{prop:charakterisierung-morphismen-proj-varietaeten} ein Morphismus von Prävarietäten ist. Offensichtlich
 gilt für $A,B\in GL_{n+1}(k)$:
 \[
   \varphi_{A\cdot B}=\varphi_{A}\circ\varphi_{B}
@@ -18,20 +16,20 @@ gilt für $A,B\in GL_{n+1}(k)$:
 
 d.h. $\varphi_{A}$ ist insbesondere wieder ein Isomorphismus, \textbf{der
   durch $A$ bestimmte Koordinatenwechsel des $\mathbb{P}^{n}(k)$}.
-\emph{Bezeichne} Aut$(\mathbb{P}^{n}(k))$ die Gruppe der Automorphismen
+Es \emph{bezeichne} Aut$(\mathbb{P}^{n}(k))$ die Gruppe der Automorphismen
 von $\mathbb{P}^{n}(k)$. Es folgt:
 \[
-  \varphi_{-}:GL_{n+1}(k)\rightarrow\text{Aut}(\mathbb{P}^{n}(k))
+  \varphi_{-}:GL_{n+1}(k)\rightarrow\text{Aut}(\mathbb{P}^{n}(k)), A \mapsto \varphi_{A}
 \]
 
 ist ein Gruppenhomomorphismus mit 
 \[
-  Z:=\ker\varphi=\{\lambda E_{n+1},\ \lambda\in k^{\times}\}
+  Z:=\ker\varphi_{-}=\{\lambda E_{n+1},\ \mid \lambda\in k^{\times}\}
 \]
 
-die Untergruppe der Skalarmatrizen. \emph{Später}:
+der Untergruppe der Skalarmatrizen. \emph{Später}:
 \[
-  PGL_{n+1}(k):=GL_{n+1}(k)/Z\twoheadrightarrow\text{Aut}(\mathbb{P}^{n}(k)),\quad Z\cong k^{\times}
+  PGL_{n+1}(k):=GL_{n+1}(k)/Z\overset{\sim}\longrightarrow\text{Aut}(\mathbb{P}^{n}(k)),\quad Z\cong k^{\times}
 \]
 
 die \textbf{projektive lineare Gruppe}.

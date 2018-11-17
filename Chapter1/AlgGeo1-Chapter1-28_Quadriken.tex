@@ -1,18 +1,18 @@
 \section{Quadriken}
 \label{sec:quadriken}
 
-Sei char$(k)\neq2$ in diesem Abschnitt.
+Sei in diesem Abschnitt char$(k)\neq2$.
 \begin{defn}[orig. 57]
   \label{def:quadrik}
   Eine abgeschlossene Unterprävarietät $Q\subseteq\mathbb{P}^{n}(k)$
-  von der Form $V_{+}(q)$, $q\in k[X_{0},\ldots,X_{n}]_{2}\backslash\{0\}$
+  von der Form $V_{+}(q)$, $0 \neq q\in k[X_{0},\ldots,X_{n}]_{2}$
   heißt \textbf{Quadrik}.
   \[
     Q=V_{+}(q)
   \]
 
-  Zur quadratischen Form $q$ gehört eine Bilinearform $\beta$ auf
-  $k^{n+1}$, 
+  Zur quadratischen Form $q$ gehört eine assoziierte Bilinearform $\beta$ auf
+  $k^{n+1}$ (vgl. lineare Algebra), 
   \[
     \beta(v,w):=\frac{1}{2}(q(v+w)-q(v)-q(w)),\quad v,w\in k^{n+1}
   \]
@@ -38,32 +38,46 @@ von $\beta$ die Gestalt
 hat, d.h. Koordinatenwechsel zur Basiswechselmatrix liefert einen
 Isomorphismus
 \[
-  Q\xrightarrow{\cong}V_{+}(X_{0}^{2}+\cdots+X_{r-1}^{2}),\quad r=\text{rg }B
+  Q\xrightarrow{\sim}V_{+}(X_{0}^{2}+\cdots+X_{r-1}^{2}),\quad r=\text{rk }B
 \]
 \end{defn}
 \begin{lem}[orig. 58]
-  \label{lem:platzhalter}
+\label{lem:irreduzibilitaet-quadriken}
+	\begin{enumerate}
+	
+		\item $X_{0}^{2} + \ldots + X_{r-1}^{2}$ ist irreduzibel $\iff$ $r > 2$
+		\item $V_{+}(X_{0}^{2} + \ldots + X_{r-1}^{2})$ ist irreduzibel $\iff$ $r \neq 2$
+	\end{enumerate}
 \end{lem}
+\begin{proof}
+	\begin{itemize}
+		\item $r=0,1: X_{0}^2 = X_{0} \cdot X_{0} \Rightarrow V_{+}(X_{0}^2) = V_{+}(X_{0})$ irreduzibel
+		\item $r=2: X_{0}^{2} + X_{1}^{2} = (X_{0} + i\cdot X_{1})\cdot(X_{0} - i \cdot X_{1})$ für $i = \sqrt{-1}$ 
+		\item $r>2: $ Angenommen $\sum_{i}{a_{i} X_{i}} \cdot \sum_{j}{b_{j}X_{j}} = X_{0}^{2} + \ldots X_{r-1}^{2}$.\\
+		Ausmultiplizieren $+$ Koeffizientenvergleich $\Rightarrow$ Widerspruch.
+	\end{itemize}
+\end{proof}
+
 \begin{prop}[orig. 59]
   \label{prop:quadrik-in-normalform}
   Ist $r\neq s$, so sind $V_{+}(T_{0}^{2}+\cdots+T_{r-1}^{2})$ und
   $V_{+}(T_{0}^{2}+\cdots+T_{s-1}^{2})$ nicht isomorph.
 \end{prop}
 \begin{proof}
-  (später: Es gibt keinen Koordinatenwechsel von $\mathbb{P}^{n}(k)$,
-  der beide Mengen identifiziert, damit auch kein Automorphismus in
-  $\mathbb{P}^{n}(k)$.)
+  Später: Es gibt keinen Koordinatenwechsel von $\mathbb{P}^{n}(k)$,
+  der die beiden Mengen miteinander identifiziert, damit auch kein Automorphismus von
+  $\mathbb{P}^{n}(k)$.
 \end{proof}
 
 \begin{defn}
   \label{def:dim-und-rang-einer-quadrik}
   Eine Quadrik $Q\subseteq\mathbb{P}^{n}(k)$ mit
-  $Q\cong V_{+}(T_{0}^{2}+\cdots+T_{r-1}^{2})$, $r\geq1$, habe die
-  \textbf{Dimension $n-1$} und den \textbf{Rang $r$}. (nach Satz
+  $Q\cong V_{+}(T_{0}^{2}+\cdots+T_{r-1}^{2})$, $r\geq1$, hat \textbf{Dimension $n-1$} und den \textbf{Rang $r$}. (nach Satz
   eindeutig!)
 \end{defn}
 
 \begin{cor}[orig. 61]
+\label{cor:klassifikation-von-quadriken}	
   Zwei Quadriken $Q_{1}$ und $Q_{2}$ sind genau dann isomorph als
   Prävarietäten, wenn sie dieselbe Dimension und denselben Rang haben.
 \end{cor}
@@ -72,7 +86,7 @@ Isomorphismus
   \begin{itemize}
   \item[,,$\Leftarrow$``]
     $Q_{1}\cong V_{+}(T_{0}^{2}+\cdots+T_{n-1}^{2})\cong Q_{2}$ in
-    denselben $\mathbb{P}^{n}$.
+    dem selben $\mathbb{P}^{n}$.
   \item[,,$\Rightarrow$``] Für $Q\subseteq\mathbb{P}^{n}(k)$ berechne
     $K(Q)$. Ohne Einschränkung
     $Q=V_{+}(X_{0}^{2}+\cdots+X_{n-1}^{2})$.
@@ -98,30 +112,30 @@ Isomorphismus
   \begin{enumerate}
   \item In $\mathbb{P}^{1}(k)$. 
     \begin{itemize}
-    \item \emph{Rang 2:} 2 Punkte, irreduzibel. 
+    \item \emph{Rang 2:} 2 Punkte, reduzibel. 
     \item \emph{Rang 1:} 1 Punkt (Doppelpunkt). 
     \end{itemize}
   \item In $\mathbb{P}^{2}(k)$.
     \begin{itemize}
     \item \emph{Rang 3:} Glatter Kegel
       $\cong\mathbb{P}^{1}(k)$. $X_{0}^{2}+X_{1}^{2}-X_{2}^{2}=0$
-    \item \emph{Rang 2:} 2 verschiedene Geraden, irreduzibel. 
+    \item \emph{Rang 2:} 2 verschiedene Geraden, reduzibel. 
     \item \emph{Rang 1:} (Doppel)gerade.
     \end{itemize}
   \item In $\mathbb{P}^{3}(k)$.
     \begin{itemize}
     \item Rang 1: Doppelebene (2-dimensionaler linearer Unterraum)
-    \item Rang 2: 
-    \item Rang 3:
-    \item Rang 4:
+    \item Rang 2: (insert image)
+    \item Rang 3: (insert image)
+    \item Rang 4: (insert image)
     \end{itemize}
   \end{enumerate}
 \end{example}
 Die Quadrik $Q\subseteq\mathbb{P}^{n}(k)$ heißt \textbf{glatt}, falls
 $r=n+1$, d.h. falls die Matrix $B$ zu $q$ maximalen Rang hat. Für
-$\text{rg}(Q)>3$, $\dim(Q)=d$, so ist
+$\text{rk}(Q)>3$, $\dim(Q)=d$, ist
 $Q\cong\overline{\widetilde{Q},\Lambda}$ Kegel über einer
-\textbf{glatten }Quadrik $\widetilde{Q}$, da Dimension $r-2$
+\textbf{glatten} Quadrik $\widetilde{Q}$, da Dimension $r-2$
 bzgl. einer $(d-r+2)$-dimensionalen Unterraums 1.
 \begin{itemize}
 \item $r=1,2$ ausgeartet.
@@ -129,9 +143,8 @@ bzgl. einer $(d-r+2)$-dimensionalen Unterraums 1.
   $\mathbb{P}^{n}(k)$.  Der Unterschied zwischen $V_{+}(X_{0}^{2})$
   und $V_{+}(X_{0})$ ist für eine projektive Varietät $Q$ nicht
   sichtbar, jedoch in der Theorie der Schemata unterscheidbar!
-\item $r=2$.$Q=V_{+}(X_{0}^{2}+X_{1}^{2})$ reduzibel, d.h. keine
-  Prävarietät in unserem Sinne! Auch dieser Unterschied wird mittels
-  des Begriffs des Schemas
+\item $r=2$. $Q=V_{+}(X_{0}^{2}+X_{1}^{2})$ reduzibel, d.h. keine
+  Prävarietät in unserem Sinne! Auch hier werden uns Schemata später helfen.
 \end{itemize}
 \medskip{}
 
