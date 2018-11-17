@@ -1,9 +1,9 @@
 #include <stack>
 #include <string>
 #include <iostream>
-#ifndef BMARK_LEVEL
-#define BMARK_LEVEL 2
-#endif
+#include <vector>
+
+#include <pstreams/pstream.h>
 
 struct Bookmark {
   std::string title{};
@@ -18,8 +18,7 @@ std::string extract_value(const std::string &line, const std::string &key) {
 
   if (pos != std::string::npos) {
     return line.substr(pos + key.size());
-  }
-  else {
+  } else {
     return "";
   }
 }
@@ -28,23 +27,30 @@ int extract_int_value(const std::string &line, const std::string &key) {
   return std::stoi(extract_value(line, key));
 }
 
-int main() {
+int main(int argc, char* argv[]) {
+  if (argc < 2) {
+    std::cerr << "file name required" << std::endl;
+    std::exit(1);
+  }
   std::string line{};
   std::stack <Bookmark> s{};
 
   Bookmark B;
   bool document_begin = true;
   int counter{};
+  int parent_counter{};
   int all_pages{};
 
-  while (std::getline(std::cin, line)) {
+  // create input stream
+  redi::ipstream in({"/usr/bin/pdftk", (std::string)argv[1], "dump_data_utf8"});
+
+  while (std::getline(in, line)) {
     switch (counter) {
     case 0 :
       if (line.find("NumberOfPages: ") != std::string::npos) {
-	all_pages = extract_int_value(line, "NumberOfPages: ");
-      }
-      else if (line.find("BookmarkBegin") != std::string::npos) {
-	counter = 1; // begin of bookmark block
+        all_pages = extract_int_value(line, "NumberOfPages: ");
+      } else if (line.find("BookmarkBegin") != std::string::npos) {
+        counter = 1; // begin of bookmark block
       }
       break;
     case 1 :
@@ -59,18 +65,20 @@ int main() {
       B.page_number = extract_int_value(line, "BookmarkPageNumber: ");
       counter = 0; // block completed
 
-      // only extract level N bookmarks
-      if (B.level == BMARK_LEVEL) {
-	// first bookmark
+      if (B.level == 1) {
+	// first level bookmarks -> chapters
+	parent_counter++;
+      } else if (B.level == 2) {
+	// second level bookmarks -> sections
 	if (document_begin) {
+	  // first bookmark
 	  if (B.page_number > 1) {
 	    // preamble (document before first bookmark)
 	    std::cout << 1 << " " << B.page_number-1 << std::endl;
 	  }
 	  document_begin = false;
-	}
-	// previous bookmark found
-	else if (!s.empty()) {
+	} else if (!s.empty()) {
+	  // previous bookmark found
 	  Bookmark B_prev = s.top();
 	  s.pop();
 
