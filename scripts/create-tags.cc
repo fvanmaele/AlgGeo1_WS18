@@ -142,12 +142,8 @@ int main (int argc, char* argv[]) {
     }
     else if (find_str(line, "\\part{")) {
       part_counter++;
-      if (part_counter > 1) {
-	throw std::logic_error("function not yet implemented");
-      }
-
       wait_for_part_label = true;
-      chapter_counter = 0;
+      //chapter_counter = 0;
       section_counter = 0;
       subsection_counter = 0;
       subsubsection_counter = 0;
