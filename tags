@@ -89,6 +89,16 @@
 1S27,sec:Kegel
 1S28,sec:quadriken
 1060,def:quadrik
-1061,lem:platzhalter
+1061,lem:irreduzibilitaet-quadriken
 1062,prop:quadrik-in-normalform
 1063,def:dim-und-rang-einer-quadrik
+1064,cor:klassifikation-von-quadriken
+1065,bsp:quadrik-joe-harris
+2000,chap:das-ringspektrum
+2S01,sec:def-von-spec
+2066,lem:zariski-top-auf-spektrum
+2067,def:spec-als-top-raum
+2068,prop:nullstellensatz-primspektrum
+2S02,sec:topologische-eigenschaften-von-spec-A
+2069,lem:charakterisierung-ueberdeckungen-prinzipal
+2070,prop:prinzipal-offene-bilden-basis

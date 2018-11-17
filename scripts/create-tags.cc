@@ -18,12 +18,12 @@
 #include <iomanip>
 #include <cmath>
 
-bool grep_str(const std::string &line, const std::string &pat) {
+bool find_str(const std::string &line, const std::string &pat) {
   return line.find(pat) != std::string::npos;
 }
 
 void print_tag(std::string prefix, std::string label,
-               int counter, char f = '0') {
+	       int counter, char f = '0') {
   // available characters for counter
   int len = 4 - prefix.length();
 
@@ -35,8 +35,28 @@ void print_tag(std::string prefix, std::string label,
   }
 
   std::cout << prefix  << std::setfill(f) << std::setw(len)
-            << counter << ","
-            << label   << std::endl;
+	    << counter << ","
+	    << label   << std::endl;
+}
+
+void is_label_undefined(const std::string &pos, const std::string &prev,
+			bool marker, const std::string &label) {
+  if (marker) {
+    std::string err = pos + ": label undefined (" + prev;
+
+    if (label.size()) {
+      err += ", last label " + label + ")";
+    } else {
+      err += ")";
+    }
+    throw std::logic_error(err);
+  }
+}
+
+// https://stackoverflow.com/questions/1798112
+std::string trim_right(std::string& s, const char* t = " \t\n\r\f\v") {
+    s.erase(s.find_last_not_of(t) + 1);
+    return s;
 }
 
 int main (int argc, char* argv[]) {
@@ -58,6 +78,8 @@ int main (int argc, char* argv[]) {
   }
 
   std::string line{};
+  std::string last_label{};
+
   bool wait_for_label{};
   bool wait_for_part_label{};
   bool wait_for_chapter_label{};
@@ -75,99 +97,115 @@ int main (int argc, char* argv[]) {
   // read file with whitespace skipping
   while (fs >> std::ws && std::getline(fs, line)) {
     // check for begin or end of latex block
-    if (grep_str(line, "\\begin{thm}")
-        || grep_str(line, "\\begin{example}")
-        || grep_str(line, "\\begin{defn}")
-        || grep_str(line, "\\begin{prop}")
-        || grep_str(line, "\\begin{cor}")
-        || grep_str(line, "\\begin{lem}")
-        || grep_str(line, "\\begin{rem}"))
+    if (find_str(line, "\\begin{thm}")
+	|| find_str(line, "\\begin{example}")
+	|| find_str(line, "\\begin{defn}")
+	|| find_str(line, "\\begin{prop}")
+	|| find_str(line, "\\begin{cor}")
+	|| find_str(line, "\\begin{lem}")
+	|| find_str(line, "\\begin{rem}"))
       {
-        if (wait_for_section_label) {
-          // if a section has been defined, require a label first
-          throw std::logic_error("\\begin: label undefined (\\section)");
-        }
-        wait_for_label = true;
-        block_counter++;
+	// if a section has been defined, require a label first
+	is_label_undefined("\\begin", "\\chapter",
+			   wait_for_chapter_label, last_label);
+	is_label_undefined("\\begin", "\\part",
+			   wait_for_part_label, last_label);
+	is_label_undefined("\\begin", "\\section",
+			   wait_for_section_label, last_label);
+	is_label_undefined("\\begin", "\\subsection",
+			   wait_for_subsection_label, last_label);
+	is_label_undefined("\\begin", "\\subsubsection",
+			   wait_for_subsubsection_label, last_label);
+
+	wait_for_label = true;
+	block_counter++;
       }
-    else if (grep_str(line, "\\end")) {
-      if (wait_for_label) {
-        // block label was not defined
-        throw std::logic_error("\\end: label undefined (\\begin)");
-      }
+    else if (find_str(line, "\\end")) {
+      // block label was not defined
+      is_label_undefined("\\end", "\\begin", wait_for_label, last_label);
     }
-    else if (grep_str(line, "\\part{")) {
+    else if (find_str(line, "\\part{")) {
       part_counter++;
       if (part_counter > 1) {
 	throw std::logic_error("function not yet implemented");
       }
+
       wait_for_part_label = true;
       chapter_counter = 0;
       section_counter = 0;
       subsection_counter = 0;
       subsubsection_counter = 0;
     }
-    else if (grep_str(line, "\\chapter{")) {
-      if (wait_for_part_label) {
-	throw std::logic_error("\\chapter: label undefined (\\part)");
-      }
+    else if (find_str(line, "\\chapter{")) {
+      is_label_undefined("\\chapter", "\\part",
+			 wait_for_part_label, last_label);
+
       wait_for_chapter_label = true;
       chapter_counter++;
       section_counter = 0;
       subsection_counter = 0;
       subsubsection_counter = 0;
     }
-    else if (grep_str(line, "\\section{")) {
-      if (wait_for_chapter_label) {
-	throw std::logic_error("\\section: label undefined (\\chapter)");
-      }
+    else if (find_str(line, "\\section{")) {
+      is_label_undefined("\\section", "\\part",
+			 wait_for_part_label, last_label);
+      is_label_undefined("\\section", "\\chapter",
+			 wait_for_chapter_label, last_label);
+
       wait_for_section_label = true;
       section_counter++;
       subsection_counter = 0;
       subsubsection_counter = 0;
     }
-    else if (grep_str(line, "\\subsection{")) {
-      if (wait_for_section_label) {
-        throw std::logic_error("\\subsection: label undefined (\\section)");
-      }
+    else if (find_str(line, "\\subsection{")) {
+      is_label_undefined("\\subsection", "\\part",
+			 wait_for_part_label, last_label);
+      is_label_undefined("\\subsection", "\\chapter",
+			 wait_for_chapter_label, last_label);
+      is_label_undefined("\\subsection", "\\section",
+			 wait_for_section_label, last_label);
+
       wait_for_subsection_label = true;
       subsection_counter++;
       subsubsection_counter = 0;
     }
-    else if (grep_str(line, "\\subsubsection{")) {
-      if (wait_for_section_label) {
-        throw std::logic_error("\\subsubsection: label undefined (\\section)");
-      }
-      if (wait_for_subsection_label) {
-        throw std::logic_error("\\subsubsection: label undefined (\\subsection)");
-      }
+    else if (find_str(line, "\\subsubsection{")) {
+      is_label_undefined("\\subsubsection", "\\part",
+			 wait_for_part_label, last_label);
+      is_label_undefined("\\subsubsection", "\\chapter",
+			 wait_for_chapter_label, last_label);
+      is_label_undefined("\\subsubsection", "\\section",
+			 wait_for_section_label, last_label);
+      is_label_undefined("\\subsubsection", "\\subsection",
+			 wait_for_subsection_label, last_label);
+
       wait_for_subsubsection_label = true;
       subsubsection_counter++;
     }
-    else if (grep_str(line, "\\label{")) {
-      // start after "{", continue until "}"
-      std::string label = line.substr(7, line.size()-8);
+    else if (find_str(line, "\\label{")) {
+      // start after "{", continue until "}"}
+      last_label = line.substr(7, trim_right(line).size() - 8);
       std::string chapter_prefix = std::to_string(chapter_counter);
 
       if (wait_for_label) {
-        wait_for_label = false;
-        print_tag(chapter_prefix, label, block_counter);
+	print_tag(chapter_prefix, last_label, block_counter);
+	wait_for_label = false;
       }
       if (wait_for_chapter_label) {
+	print_tag(chapter_prefix, last_label, 0);
 	wait_for_chapter_label = false;
-	print_tag(chapter_prefix, label, 0);
       }
       if (wait_for_section_label) {
-        wait_for_section_label = false;
-        print_tag(chapter_prefix + "S", label, section_counter);
+	print_tag(chapter_prefix + "S", last_label, section_counter);
+	wait_for_section_label = false;
       }
       if (wait_for_subsection_label) {
-        wait_for_subsection_label = false;
-        print_tag(chapter_prefix + "T", label, subsection_counter);
+	print_tag(chapter_prefix + "T", last_label, subsection_counter);
+	wait_for_subsection_label = false;
       }
       if (wait_for_subsubsection_label) {
-        wait_for_subsubsection_label = false;
-        print_tag(chapter_prefix + "U", label, subsubsection_counter);
+	print_tag(chapter_prefix + "U", last_label, subsubsection_counter);
+	wait_for_subsubsection_label = false;
       }
     }
   }
