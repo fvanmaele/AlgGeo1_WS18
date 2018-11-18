@@ -15,4 +15,4 @@ tags: AlgGeo1.flt
 	scripts/create-tags AlgGeo1.flt >tags
 
 plastex: tags
-	plastex --renderer=Gerby --tags=tags AlgGeo1.flt
+	plastex --renderer=Gerby --tags=tags AlgGeo1.tex
