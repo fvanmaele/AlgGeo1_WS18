@@ -4,12 +4,12 @@
 Definiere $D(f):=D_{A}(f):=\Spec(A)\setminus V(f)=\{x \in\Spec A \mid f\notin\mathfrak{p}_{x}\}$,
 \begin{align*}
   \text{ev}_{x}:A & \longrightarrow A/\mathfrak{p}_{x}\subseteq \kappa_{x}(A) := \Quot(A/\mathfrak{p}_{x})\\
-  f & \longmapsto f(x) := f(\mathfrak{p}_{x}) := f \mod \mathfrak{p}
+  f & \longmapsto f(x) := f(\mathfrak{p}_{x}) := f \mod \mathfrak{p}_{x}
 \end{align*}
 
 Für $x \in D(f)$ gilt dann $f(x) = \text{ev}_{x}(f) \neq 0$.
 
-\textbf{Standard prinzipal offene Mengen}.
+Mengen der Form $D(f), f\in A$ heißen \textbf{(standard) prinzipal offene Mengen}. Man hat:
 \begin{align*}
   D(0) & =\emptyset,\ D(1)=\Spec(A)=D(u),\ u\in A^{\times}\\    
   & D(f)\cap D(g) = D(fg)
@@ -60,75 +60,78 @@ Die prinzipal offenen Mengen $D(f)$, $f\in A$, bilden
 \end{proof}
 
 \begin{prop}
-  $X\subseteq\text{Spec}(A)$ ist irreduzibel, genau dann, wenn
-  $\varphi:=I(Y)\subset A$ prim ist. In diesem Fall ist
-  $\{\mathfrak{p}\}\subset\overline{Y}$ dicht!
+\label{prop:charakterisierung-irreduzibel-spec}
+  $Y\subseteq \Spec(A)$ ist irreduzibel, genau dann wenn
+  $\mathfrak{p}:= I(Y)\unlhd A$ prim ist. In diesem Fall ist
+  $\{\mathfrak{p}\}\subseteq\overline{Y}$ dicht!
 \end{prop}
 
 \begin{proof} \mbox{}
   \begin{itemize}
-  \item Sei $Y$ irreduzibel und $f,g\in A$ mit $fg\in\mathfrak{p}$.
+  \item [,,$\Rightarrow$``:]
+    Seien $Y$ irreduzibel und $f,g\in A$ mit $fg\in\mathfrak{p}$.
 
-    $\Rightarrow Y\subset\overline{Y}=VI(Y)\subseteq V(fg)=V(f)\cup V(g)$
+    $\Rightarrow Y\subseteq\overline{Y}=VI(Y)\subseteq V(fg)=V(f)\cup V(g)$
 
-    $\Rightarrow$ ($X$ irreduzibel) Ohne Einschränkung: $Y\subset V(f)$.
+    Y irreduzibel $\Rightarrow$ Ohne Einschränkung: $Y\subseteq V(f)$.
 
     $\Rightarrow
-    f\in\bigcap_{f\in\mathfrak{q}}\mathfrak{q}=IV(f)\subset
-    I(Y)=\mathfrak{p}$
+    f\in\bigcap_{y \in V(f)}\mathfrak{p}_{y}=IV(f)\subseteq
+    I(Y)=\mathfrak{p}$, d.h. $\mathfrak{p}$ ist prim.
+  \item[,,$\Leftarrow$``:] Sei umgekehrt $\mathfrak{p}=I(Y)$ ein Primideal.
 
-    $\Rightarrow\mathfrak{p}$ Primideal.
-  \item Sei umgekehrt $\mathfrak{p}=I(Y)$ ein Primideal.
-
-    $\Rightarrow$ (Satz 3)
+    Satz $\ref{prop:nullstellensatz-primspektrum} \Rightarrow$
     $\overline{Y}=V(\mathfrak{p})=VI(\{\mathfrak{p}\})=\overline{\{\mathfrak{p}\}}$,
-    d.h. $\overline{Y}$ ist der Abschluss der irred. Menge
+    d.h. $\overline{Y}$ ist der Abschluss der irreduziblen Menge
     $\{\mathfrak{p}\}$ und daher selbst irreduzibel.
 
-    $\Rightarrow$ (Lemma I.14): $Y$ ist auch irreduzibel, da dicht in
+    Lemma $\ref{lem:irreduzibel-abschluss} \Rightarrow$ $Y$ ist auch irreduzibel, da dicht in
     $\overline{Y}$.
   \end{itemize}
 \end{proof}
-Warnung: im Allgemeinen ist $\mathfrak{p}$ nicht in $Y$!
+Warnung: im Allgemeinen ist $\mathfrak{p}$ kein Punkt in $Y$!
 
 \begin{cor}
+\label{cor:bijektion-spec-irreduzible-abg-teilmengen}
   Die Abbildung
   \begin{align*}
-    \text{Spec}(A) & \longrightarrow\text{\{abg. irred. Teilmengen von Spec }A\}\\
+    \Spec(A) & \longrightarrow\text{\{abg. irred. Teilmengen von Spec }A\}\\
     \mathfrak{p} & \longmapsto V(\mathfrak{p})=\overline{\{\mathfrak{p}\}}
   \end{align*}
-  ist eine Bijektion, unter der die maximalen Primideale von $A$ den
+  ist eine Bijektion, unter der die \emph{minimalen} Primideale von $A$ den
   irreduziblen Komponenten entsprechen.
 \end{cor}
 
-\begin{proof} Proposition 3 und 6.
+\begin{proof} Proposition \ref{prop:nullstellensatz-primspektrum} und \ref{prop:charakterisierung-irreduzibel-spec}.
 \end{proof}
 
 \begin{defn}
-  Für ein topologischer Raum $X$ heißt $\eta\in X$ ein
+\label{def:gernerische-punkte}	
+  Für einen topologischen Raum $X$ heißt $\eta\in X$
   \textbf{generischer Punkt}, falls
   $\overline{\{\eta\}}=X$. Allgemeiner sagen wir für $x,x'\in X$, dass
-  $x$ eine Verallgeimeinerung (eng. ,,generalization``) von $x'$ ist,
-  bzw. $x'$ eine Spezialisierung von $x$, falls
+  $x$ eine \textbf{Verallgeimeinerung} (engl. \textbf{,,generalization``}) von $x'$ ist,
+  bzw. $x'$ eine \textbf{Spezialisierung} von $x$, falls
   $x'\in\overline{\{x\}}$.
 \end{defn}
 
 \begin{rem}\mbox{}
+\label{rem:eigenschaften-generische-punkte}	
   \begin{enumerate}
   \item $\eta\in X$ generisch $\Leftrightarrow\eta$ ist
     Verallgemeinerung von jedem Punkt von $X$.
   \item Existiert ein generischer Punkt in $X$, so ist $X$ als
     Abschluss einer irreduziblen Menge selbst irreduzibel.
   \item Für $X=\text{Spec}(A)$ gilt: $x'$ ist eine Spezialisierung von
-    $x\Leftrightarrow\mathfrak{p}_{x}\subset\mathfrak{p}_{x'}$
+    $x\Leftrightarrow\mathfrak{p}_{x}\subseteq\mathfrak{p}_{x'}$
     \begin{align*}
-      \Leftrightarrow V(\mathfrak{p}_{x'}) & \subset V(\mathfrak{p}_{x})\\
-      \shortparallel & \phantom{\subset\,}\shortparallel\\
-      x'\in\overline{\{x')} & \in\overline{\{x\}}
+      \Leftrightarrow V(\mathfrak{p}_{x'}) & \subseteq V(\mathfrak{p}_{x})\\
+      \shortparallel & \phantom{\subseteq\,}\shortparallel\\
+      x'\in\overline{\{x'\}} & \subseteq\overline{\{x\}}
     \end{align*}
     Ferner hat jede abgeschlossene irreduzible Teilmenge
-    $Y\subset\text{Spec}(A)$ einen eindeutigen generischen Punkt (dies
-    gilt nicht für beliebig irreduzible Teilmengen
-    $Y\subset\text{Spec}(A)$).
+    $Y\subseteq \Spec(A)$ einen \emph{eindeutigen} generischen Punkt (dies
+    gilt nicht für beliebige irreduzible Teilmengen
+    $Y\subseteq\Spec(A)$).
   \end{enumerate}
 \end{rem}
