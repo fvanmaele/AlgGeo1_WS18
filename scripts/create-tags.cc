@@ -20,8 +20,8 @@
 #include <string>
 #include <unordered_set>
 
-bool find_str(const std::string &line, const std::string &pat) {
-  return line.find(pat) != std::string::npos;
+bool find_str(const std::string &line, const std::string &str) {
+  return line.find(str) != std::string::npos;
 }
 
 std::string write_tag(const std::string &prefix, int counter, char f = '0') {
