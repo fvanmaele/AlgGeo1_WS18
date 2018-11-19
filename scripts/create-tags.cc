@@ -144,6 +144,7 @@ int main (int argc, char* argv[]) {
       part_counter++;
       wait_for_part_label = true;
       //chapter_counter = 0;
+      block_counter = 0;
       section_counter = 0;
       subsection_counter = 0;
       subsubsection_counter = 0;
@@ -154,6 +155,7 @@ int main (int argc, char* argv[]) {
 
       wait_for_chapter_label = true;
       chapter_counter++;
+      block_counter = 0;
       section_counter = 0;
       subsection_counter = 0;
       subsubsection_counter = 0;
