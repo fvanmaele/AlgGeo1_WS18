@@ -1,0 +1,38 @@
+\section{Die zu einer Prägarbe assoziierte Garbe}
+\label{sec:vergarbung}
+
+\begin{defn}
+\label{def:vergarbung}
+Sei $\sheaf{F}$ eine Prägarbe auf einem top. Raum $X$. Eine \textbf{Vergarbung} (auch Garbifizierung/ assoziierte Garbe) von $\sheaf{F}$ ist eine Garbe $\sheaf{F}^{sh}$ auf $X$ zusammen mit einem Morphismus $\iota : \sheaf{F} \to V(\sheaf{F}^{sh})$ von Prägarben, so dass gilt:\\
+\[\xymatrix{  
+\Mor_{\psh_{X}}(\sheaf{F}, V(\sheaf{G})) \ar^-\cong@{->}[r] & \Mor_{\sh_{X}}(\sheaf{F}^{sh}, \sheaf{G})  \\
+\varphi \circ \iota & \ar@{|->}[l] \varphi
+}\] Hierbei bezeichne $V : \sh_{X} \to \psh_{X}$ den Vergissfunktor.\\
+Durch diese Eigenschaft ist $(\sheaf{F}^{sh}, \iota)$ eindeutig bis auf eindeutigen Isomorphismus bestimmt.\\
+Ferner gilt:
+\begin{enumerate}
+	\item[(0)] Es existiert eine Vergarbung $\iota : \sheaf{F} \to \sheaf{F}^{sh}$
+	\item[(1)] $\iota$ wie oben induziert einen Isomorphismus $\iota_x : \sheaf{F}_x \to \sheaf{F}^{sh}_x$ auf Halmen für alle $x\in X$.
+	\item[(2)] Für jede Prägarbe $\sheaf{G}$ auf $X$ und jeden Morphismus $\varphi: \sheaf{F} \to \sheaf{G}$ existiert genau ein Morphismus $\varphi^{sh}: \sheaf{F}^{sh} \to \sheaf{G}^{sh}$ s.d. folgendes Diagramm kommutiert:
+	\[
+	\xymatrix
+	{
+	\sheaf{F} \ar^{\iota_{\sheaf{F}}}@{->}[r] \ar^{\varphi}@{->}[d] & \sheaf{F}^{sh} \ar^{\varphi^{sh}}@{->}[d] \\
+	\sheaf{G} \ar^{\iota_{\sheaf{G}}}@{->}[r] & \sheaf{G}^{sh}
+    }
+	\] d.h. $\psh_{X} \to \sh_{X}, \sheaf{F} \mapsto \sheaf{F}^{sh}$ ist ein Funktor, linksadjungiert zum Vergissfunktor $V$.
+\end{enumerate}
+\end{defn}
+\begin{proof}
+\underline{Existenz}:\\
+$\sheaf{F}^{sh}(U) := \{ (s_x)_{x} \in \prod_{x \in U} \sheaf{F}_{x} \mid \forall x \in U: \ \exists x \in U^x \subseteq U \text{ offen und } t \in \sheaf{F}(U^x): \ \forall y \in U^x: t_x = s_x \}$\\
+``Keime, die lokal Schnitte von $\sheaf{F}$ sind`` - $(Sh2)$ erzwingt dies.\\
+Für $U \subseteq V$ ist $res^V_U$ induziert von:\\
+\[
+\xymatrix
+{
+\sheaf{F}^{sh}(V) \ar^-{res^V_U}@{-->}[r] \ar@{^{(}->}[d] & \sheaf{F}^{sh}(U) \ar@{^{(}->}[d] \\
+\prod_{x\in V} \sheaf{F}_x \ar^-{proj.}@{->}[r] & \prod_{x\in U}\sheaf{F}_x
+}
+\]
+\end{proof}
