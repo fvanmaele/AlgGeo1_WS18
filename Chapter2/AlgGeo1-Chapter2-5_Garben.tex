@@ -1,0 +1,98 @@
+\section*{Exkursion über Garben}
+
+Bisher: 
+\begin{align}
+X \text{affin alg. Menge} \longmapsto \Gamma(X) = \Hom(X, \mathbb{A}^{1})
+\end{align}
+Jetzt:
+\begin{align}
+\Spec A \longmapsfrom A
+\end{align} 
+d.h. $A$ soll den Funktionen auf $\Spec A$ entsprechen.
+Für $x \in \Spec A$ definiert man $ev_{x} : A \to \kappa_A(x) := A_{\mathfrak{p}_x} / \mathfrak{p}_{x}A_{\mathfrak{p}_{x}} \cong \Quot(A/\mathfrak{p}_{x})$ durch $f \mapsto f(x) := ev_{x}(f) := f \mod \mathfrak{p}_{x}$.
+Mit dieser Definition folgt insbesondere $D(f) = \{ x \in \Spec A \mid f(x) \neq 0\}$. Da $x \mapsto f(x)$ keine Funktion im engeren Sinne ist, können wir diese Konstruktion nicht als System von Funktionen auffassen.\\
+Wichtige Aussagen: Restriktion $+$ Verklebung $\rightsquigarrow$ Garben.
+
+\section{Prägarben und Garben}
+\label{sec:garben}
+
+\begin{defn}
+\label{def:praegarbe}
+Sei $X$ ein topologischer Raum. \\
+$(i)$ Eine $\textbf{Prägarbe}\  \sheaf{F}$ auf X besteht aus den folgenden Daten:
+\begin{itemize}
+	\item eine Menge $\sheaf{F}(U)$ für jede offene Teilmenge $U \subseteq X$
+	\item Eine $\textbf{Restriktionsabbildung} $ $res^{V}_{U} : \sheaf{F}(V) \to \sheaf{F}(U)$ für jedes Paar $U \subseteq V$ offen in $X$, so dass:
+	\begin{itemize}
+		\item $res^{U}_{U} = \id_{\sheaf{F}(U)}$
+		\item $res^{W}_{U} = res^{V}_{U} \circ res^{W}_{V}$ für $U \subseteq V \subseteq W$ offen in $X$
+	\end{itemize}
+\end{itemize}
+$(ii)$ Ein $\textbf{Morphismus von Prägarben}$ $\phi : \sheaf{F} \to \sheaf{G}$ ist eine Familie von Abbildungen $\{\phi_{U} : \sheaf{F}(U) \to \sheaf{G}(U) \mid U \subseteq X \text{ offen }\}$, so dass für alle Paare $U \subseteq V$ offen in $X$, das folgende Diagramm kommutiert:
+\[
+\xymatrix{\sheaf{F}(V)\ar^{\phi_V}@{->}[r]\ar^{res^{V}_{U}}@{->}[d]  & \sheaf{G}(V) \ar[d]^{res^{V}_{U}}\\
+	\sheaf{F}(U)\ar^{\phi_{U}}@{->}[r] & \sheaf{G}(U) }
+\]
+\underline{Notation:} $U \subseteq V$, $s \in \mathcal{F}(V)$, dann: $s|_{U} := res^{V}_{U}(s)$.\\ Die Elemente in $\sheaf{F}(U)$ heißen $\textbf{Schnitte von } \sheaf{F} \textbf{ über }U$, $\Gamma(U, \sheaf{F}) := \sheaf{F}(U)$.
+\end{defn}
+
+Alternative Beschreibung:\\
+$\ouv_{X}$: Kategorie offener Mengen von $X$ mit $\Hom(U, V) := \begin{cases} \emptyset, \text{ falls } U \not\subseteq V \\ \{ U \to V\}, \text{ falls } U \subseteq V \end{cases}$.
+Eine $\textbf{Prägarbe auf }X$ ist ein kontravarianter Funktor $\mathcal{F} : \ouv_{X} \to \set$. Ersetzt man $\set$ durch eine Kategorie $\cat{C}$, so bekommt man Prägarben $\textbf{mit Werten in } \cat{C}$.
+Ein Morphismus von Prägarben $\sheaf{F} \to \sheaf{G}$ ist eine natürliche Transformation $\sheaf{F} \implies \sheaf{G}$.\\
+\\
+Für eine Prägarbe $\sheaf{F}$ auf $X$, $U \subseteq X$ offen und $U = \bigcup_{i} U_{i}$ eine \underline{offene} Überdeckung von $U$, definiere:
+\begin{align}
+\rho : \sheaf{F}(U) \to \prod_{i}\sheaf{F}(U_{i}), s \mapsto (s|_{U_{i}})_{i}\\
+b : \prod_{i} \sheaf{F}(U_{i}) \to \prod_{(i, j)} \sheaf{F}(U_{i} \cap U_{j}), (s_{i})_{i} \mapsto (s_{i}|_{U_{i} \cap U_{j}})_{(i,j)}\\
+b' : \prod_{i} \sheaf{F}(U_{i}) \to \prod_{(i, j)} \sheaf{F}(U_{i} \cap U_{j}), (s_{i})_{i} \mapsto (s_{j}|_{U_{i} \cap U_{j}})_{(i,j)}
+\end{align}
+
+\begin{defn}
+\label{def:garbe}
+$(i)$ Eine Prägarbe $\sheaf{F}$ auf $X$ heißt $\textbf{Garbe}$, falls für alle offenen Teilmengen $U \subset X$ und alle offenen Überdeckungen $U = \bigcup_{i} U_{i}$ wie oben gilt:\\
+\[
+(Sh)\ \xymatrix{\sheaf{F}(U)\ar^{\rho}@{->}[r] & \prod_{i}\sheaf{F}(U_{i}) \ar^{b}@<+.5ex>[r] \ar_{b'}@<-.5ex>[r] & \prod_{(i, j)}\sheaf{F}(U_{i} \cap U_{j})}
+\]d.h. $\rho$ ist injektiv und $\im\rho = \{ s \in \prod_{i} \sheaf{F}(U_{i}) \mid b(s) = b'(s)\}$, mit anderen Worten: $(\sheaf{F}(U), \rho)$ ist \textbf{Equalizer} von $b$ und $b'$.\\
+Dabei ist $(Sh)$ äquivalent zu:
+\begin{enumerate}
+	\item[(Sh0)]   $\sheaf{F}(\emptyset)$ ist finales Objekt.
+	\item[(Sh1)] Gilt für $s,s' \in \sheaf{F}(U)$  $s|_{U_{i}} = s'|_{U_{i}}$ für alle $i$, so folgt $s = s'$.
+	\item[(Sh2)] Zu jeder Familie $(s_{i})_{i} \in \prod_{i}\sheaf{F}(U_{i})$ mit $s_{i}|_{U_{i} \cap U_{j}} = s_{j}|_{U_{i} \cap U_{j}}$ existiert ein $s \in \sheaf{F}(U)$ mit $s|_{U_{i}} = s_{i}$.
+\end{enumerate}
+$(ii)$ Ein \textbf{Morphismus von Garben} ist ein Morphismus der unterliegenden Prägarben.\\
+\\
+Wir erhalten die Kategorie $\psh_{X}(\set)$ der Mengenwertigen Prägarben auf $X$ und die \underline{volle} Unterkategorie $\sh_{X}(\set)$ der Mengenwertigen Garben auf $X$.
+Analog erhalten wir Garben von abelschen Gruppen, Ringen, $R$-Moduln und $R$-Algebren.
+\end{defn}
+
+\begin{rem}
+\label{rem:pathologien-garben}
+\begin{enumerate}
+	\item $\sheaf{F} \in \sh \implies \Gamma(\emptyset, \sheaf{F})$ ist einpunktig (wegen $(Sh)$ für die leere Überdeckung)
+	\item $X = \{ pt \} \implies \sheaf{F}$ auf $X$ ist eindeutig durch $\sheaf{F}(X)$ bestimmt
+\end{enumerate}
+\end{rem}
+
+%% TODO: Insert Abschnitt zu Limiten hier
+
+\begin{example}
+\label{bsp:beispiele-von-garben}	
+\begin{enumerate}
+	\item $\sheaf{F} \in \psh_{X}, U \subseteq X$ offen $\implies$ $\sheaf{F}|_{U} \in \psh_{U}$ mit $\Gamma(V, \sheaf{F}|_{U}) := \Gamma(V, \sheaf{F})$. Ist $\sheaf{F} \in \sh_{X}$, so ist $\sheaf{F}|_{U} \in \sh_{U}$. 
+	\item Für $X,Y$ top. Räume definiert $\sheaf{F}$ gegeben durch $\Gamma(U, \sheaf{F}) := \mathcal{C}(U, Y) = \{ f : U \to Y \mid \ f \text{ stetig}\}$ und $res^{U}_{V} : f \mapsto f|_{V}$ eine Garbe.
+	\item $k$ ein Körper, $(X,\sheaf{O}_X)$ ein Raum mit Funktionen$/_k$ $\implies$ $\sheaf{O}_{X}$ ist Garbe von $k$-Algebren auf $X$.
+	\item Für einen top. Raum $X$ definiert $\sheaf{F}(U) := \{ f: U \to \mathbb R \mid f \text{ stetig und beschränkt}\}$ eine Prägarbe auf $X$, im Allgemeinen aber keine Garbe.
+\end{enumerate}
+\end{example}
+
+Sei $\mathcal{B}$ eine Basis der Topologie von $X$ und $\sheaf{F} \in \sh_{X}$. Sei für $V \subseteq X$ offen $\mathcal{B}_{V} := \{ U \in \mathcal{B} \mid U \subseteq V\}$. Dann folgt wegen $(Sh)$:\\
+\[
+\sheaf{F}(V) \cong_{(\dagger)} \{ (s_{U})_{U} \in \prod_{U \in \mathcal{B}_{V}} \sheaf{F}(U) \mid \forall U' \subseteq U \in \mathcal{B}_{V}: s_{U}|_{U'} = s_{U'}\} \cong \varprojlim_{U \in \mathcal{B}_{V}} \sheaf{F}(U)
+\]d.h. $\sheaf{F}$ ist bereits eindeutig durch die Schnitte auf einer Basis von $X$ bestimmt.\\
+$(\dagger):$ einfache Folgerung aus $(Sh1)$.\\
+\\
+Eine \textbf{Prägarbe auf } $\mathcal{B}$ ist ein kontravarianter Funktor $\sheaf{F} : \mathcal{B} \to \set$. Jedes solche $\sheaf{F}$ induziert eine Prägarbe $\overline{\sheaf{F}}^{X}$ auf $X$ durch $\overline{\sheaf{F}}^{X}(V) := \varprojlim_{U \in \mathcal{B}_{V}} \sheaf{F}(U)$.
+Für $U \in \mathcal{B}$ gilt dann $\overline{\sheaf{F}}^{X}(U) = \varprojlim_{U' \in \mathcal{B}_{U}}\sheaf{F}(U') = \sheaf{F}(U)$, da $U$ initial in $\mathcal{B}_{U}$.\\ Ein \textbf{Morphismus von Prägarben auf } $\mathcal{B}$ ist wieder ein Morphismus von Funktoren.
+
+
