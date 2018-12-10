@@ -52,7 +52,7 @@ b' : \prod_{i} \sheaf{F}(U_{i}) \to \prod_{(i, j)} \sheaf{F}(U_{i} \cap U_{j}), 
 \label{def:garbe}
 $(i)$ Eine Prägarbe $\sheaf{F}$ auf $X$ heißt $\textbf{Garbe}$, falls für alle offenen Teilmengen $U \subset X$ und alle offenen Überdeckungen $U = \bigcup_{i} U_{i}$ wie oben gilt:\\
 \[
-(Sh)\ \xymatrix{\sheaf{F}(U)\ar^{\rho}@{->}[r] & \prod_{i}\sheaf{F}(U_{i}) \ar^{b}@<+.5ex>[r] \ar_{b'}@<-.5ex>[r] & \prod_{(i, j)}\sheaf{F}(U_{i} \cap U_{j})}
+(Sh)\ \xymatrixcolsep{3pc}\xymatrix{\sheaf{F}(U)\ar^-\rho@{->}[r] & \prod_{i}\sheaf{F}(U_{i}) \ar^-b@<+.5ex>[r] \ar_-{b'}@<-.5ex>[r] & \prod_{(i, j)}\sheaf{F}(U_{i} \cap U_{j})}
 \]d.h. $\rho$ ist injektiv und $\im\rho = \{ s \in \prod_{i} \sheaf{F}(U_{i}) \mid b(s) = b'(s)\}$, mit anderen Worten: $(\sheaf{F}(U), \rho)$ ist \textbf{Equalizer} von $b$ und $b'$.\\
 Dabei ist $(Sh)$ äquivalent zu:
 \begin{enumerate}
@@ -95,4 +95,43 @@ $(\dagger):$ einfache Folgerung aus $(Sh1)$.\\
 Eine \textbf{Prägarbe auf } $\mathcal{B}$ ist ein kontravarianter Funktor $\sheaf{F} : \mathcal{B} \to \set$. Jedes solche $\sheaf{F}$ induziert eine Prägarbe $\overline{\sheaf{F}}^{X}$ auf $X$ durch $\overline{\sheaf{F}}^{X}(V) := \varprojlim_{U \in \mathcal{B}_{V}} \sheaf{F}(U)$.
 Für $U \in \mathcal{B}$ gilt dann $\overline{\sheaf{F}}^{X}(U) = \varprojlim_{U' \in \mathcal{B}_{U}}\sheaf{F}(U') = \sheaf{F}(U)$, da $U$ initial in $\mathcal{B}_{U}$.\\ Ein \textbf{Morphismus von Prägarben auf } $\mathcal{B}$ ist wieder ein Morphismus von Funktoren.
 
+\begin{prop}
+\label{prop:garbe-auf-basis}
+$\overline{\sheaf{F}}^{X}$ ist eine Garbe $\iff \sheaf{F}$ erfüllt $(Sh)$  für alle $U \in \mathcal{B}$ und Überdeckungen $U = \bigcup_{i} U_{i}$ mit $U_{i} \in \mathcal{B}$.\\
+In diesem Fall heißt $\sheaf{F}$ \textbf{Garbe auf} $\mathcal{B}$. 
+\end{prop}
+\begin{proof}
+	Im Folgenden schreiben wir $\overline{\sheaf{F}} := \overline{\sheaf{F}}^{X}$.
+\begin{itemize}
+	\item [,,$\Rightarrow$``:] $\overline{\sheaf{F}}^{X}(U) = \sheaf{F}(U)$ für alle $U \in \mathcal{B}$.
+	\item [,,$\Leftarrow$``:] Sei $U \subseteq X$ offen und $U = \bigcup_{i} U_{i}$ eine offene Überdeckung von $U$ in $X$.\\
+	\underline{$(Sh1)$}:
+	\[
+	\xymatrix {
+		\varprojlim_{B \in \mathcal{B}_{U}} \sheaf{F}(B) = \overline{\sheaf{F}}(U)\ar@{^{(}->}[r] & \prod_{i} \overline{\sheaf{F}}(U_{i}) \ar@{^{(}->}[r]  & \prod_{i} \prod_{B \in \mathcal{B}_{U_{i}}} \sheaf{F}(B)\\
+		s = (s_{B})_{B}, s' = (s'_{B})_{B} \ar@{|->}[r] & s|_{U_i} = s'|_{U_i} \ar@{|->}[r] & ( (s_{B})_{B \in \mathcal{B}_{U_{i}}} )_{i} = ( (s'_{B})_{B \in \mathcal{B}_{U_{i}}} )_{i} \ \ \ \ \ (\dagger)
+	}
+	\]
+	Behauptung: $\forall B \in \mathcal{B}_{U}: \ s_{B} = s'_{B}$, d.h. $s = s'$. \underline{denn:} \\
+	\[
+	\xymatrix {
+	  \sheaf{F}(B) \ar@{^{(}->}[r] & \prod_{i} \prod_{B' \in \mathcal{B}_{U_i \cap B}} \sheaf{F}(B') 
+    } \]  ist injektiv nach $(Sh1)$ für $\sheaf{F}$ auf $\mathcal{B}$.\\
+    $s_{B}$ und $s'_{B}$ haben gleiches Bild wegen $(\dagger)$.\\
+    \underline{$(Sh2)$}:
+    \[ \xymatrix{
+    \overline{\sheaf{F}}(U) \ar^{\rho}@{->}[r] & \prod_{i} \overline{\sheaf{F}}(U_{i}) \ar@{->}[r] & \prod_{(i, j)} \overline{\sheaf{F}}(U_{i} \cap U_{j})
+    }\]
+    \begin{itemize}
+    	\item[,,$\overline{\sheaf{F}}(U) \subseteq \ker$``]: $\rho(s) = ((s_{B})_{B \in \mathcal{B}_{U_{i}}})_{i}$. Sei $T \in \mathcal{B}_{U_{i} \cap U_{j}} \subseteq \mathcal{B}_{U_{i}}$, $V \in \mathcal{B}_{U_{i}}$ und $W \in \mathcal{B}_{U_{j}}$. Dann folgt: \\
+    	$s_{V}|_{T} = s_{T} = s_{W}|_{T} \implies$ Behauptung.
+    	\item[,,$\overline{\sheaf{F}}(U)\supseteq \ker$``]: Sei $(s_{i})_{i} \in \prod_{i} \overline{\sheaf{F}}(U_{i})$ mit $b((s_{i})_{i}) = b'((s_{i})_{i})$.\\
+    	\underline{Gesucht:} $s = (s_B)_{B} \in \overline{\sheaf{F}}(U)$ mit $s|_{U_{i}} = s_{i}$.\\
+    	Es gilt:\\
+    \[\xymatrixcolsep{3pc}\xymatrix{
+     \sheaf{F}(B) \ar^-\rho@{->}[r] & \prod_{i} \prod_{B' \in \mathcal{B}_{U_{i} \cap B}} \sheaf{F}(B') \ar^-b@<+.5ex>[r] \ar_-{b'}@<-.5ex>[r] & \prod_{(i, j)} \prod_{\mathcal{B}_{U_{i} \cap B} \times \mathcal{B}_{U_{j} \cap B}} \sheaf{F}(V \cap W)
+    }\] ist exakt, d.h. ein Equalizer-Diagramm. Konstruiere damit $s_{B} \in \sheaf{F}(B)$, welche kompatibles System bilden. $s = (s_B)_{B}$ ist dann das gesuchte Element in $\overline{\sheaf{F}}(U)$. 	
+    \end{itemize}
+\end{itemize}
+\end{proof}
 
