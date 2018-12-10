@@ -40,12 +40,37 @@
 \theoremstyle{definition}
 \newtheorem*{example*}{Beispiel}
 \theoremstyle{plain}
+\newtheorem*{rem*}{Bemerkung}
+\theoremstyle{remark}
 
 %% User-specified commands
 \DeclareMathOperator{\rad}{rad}
 \DeclareMathOperator{\Spec}{Spec}
 \DeclareMathOperator{\Quot}{Quot}
 \DeclareMathOperator{\im}{\mathrm{im}}
+\DeclareMathOperator{\Hom}{\mathrm{Hom}}
+\DeclareMathOperator{\Mor}{\mathrm{Mor}}
+\DeclareMathOperator{\id}{\mathrm{id}}
+
+%%sets
+\DeclareMathOperator{\CC}{\mathbb{C}}
+\DeclareMathOperator{\RR}{\mathbb{R}}
+\DeclareMathOperator{\QQ}{\mathbb{Q}}
+\DeclareMathOperator{\ZZ}{\mathbb{Z}}
+\DeclareMathOperator{\NN}{\mathbb{N}}
+
+%% categories
+\DeclareMathOperator{\ouv}{\mathcal{O}uv}
+\DeclareMathOperator{\set}{\underline{Set}}
+\DeclareMathOperator{\ab}{\underline{Ab}}
+\DeclareMathOperator{\cattop}{\underline{Top}}
+\DeclareMathOperator{\cring}{\underline{CRing}}
+\DeclareMathOperator{\psh}{\underline{\mathcal{PS}h}}
+\DeclareMathOperator{\sh}{\underline{\mathcal{S}h}}
+
+%% commands
+\newcommand{\cat}[1]{\mathcal{#1}}
+\newcommand{\sheaf}[1]{\mathcal{#1}}
 \renewcommand{\labelenumi}{(\roman{enumi})}
 \renewcommand{\labelenumii}{\arabic{enumii}.}
 
@@ -142,6 +167,15 @@
 \include{Chapter2/AlgGeo1-Chapter2-3_Der-Funktor-A-Spec-A}
 
 \include{Chapter2/AlgGeo1-Chapter2-4_Beispiele}
+
+\include{Chapter2/AlgGeo1-Chapter2-5_Garben}
+
+\include{Chapter2/AlgGeo1-Chapter2-6_Halme-von-Garben}
+
+\include{Chapter2/AlgGeo1-Chapter2-7_Die-zu-einer-Praegarbe-assoziierte-Garbe}
+
+%% TODO:
+%% - Limiten einfügen in Garben
 
 \newpage{}
 \printindex{}

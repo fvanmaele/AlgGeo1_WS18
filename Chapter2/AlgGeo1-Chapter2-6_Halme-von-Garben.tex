@@ -1,0 +1,78 @@
+\section{Halme von Garben}
+\label{sec:halme}
+
+Für $x \in X$ und $\sheaf{F} \in \psh_{X}$ ist $(\sheaf{F}(V), res^{V}_{U})_{x \in U \subseteq X \text{offen}}$ ein \underline{filtriertes} induktives System.\\
+\underline{filtriert}:\\
+$\forall U,V \subseteq X$ offen $\exists W \subseteq U,V$ offen. (z.B. $W = U \cap V$).\\
+
+\begin{defn}
+\label{def:halm}
+Der induktive Limes (oder auch Colimes) $\sheaf{F}_{x} := \varinjlim_{x \in U} \sheaf{F}(U)$ heißt \textbf{Halm} von $\sheaf{F}$ in $x$. Für $x \in U \subseteq X$ offen hat man einen kanonischen Morphismus $\pi_{U} : \sheaf{F}(U) \to \sheaf{F}_{x}$. Das Bild eines Schnittes $s \in \sheaf{F}(U)$ unter $\pi_{U}$ heißt \textbf{Keim} von $s$ in $x$ und wird mit $s_{x}$ bezeichnet.\\
+\\
+Ein Morphismus von Prägarben $\varphi: \sheaf{F} \to \sheaf{G}$ induziert eine Abbildung $\varphi_{x} = \varinjlim_{x \in U} \varphi_{U} : \sheaf{F}_{x} \to \sheaf{G}_{x}$ von Halmen in $x$.
+\end{defn}
+
+\begin{example}
+\label{bsp:einige-halme}
+$z_0 \in X := \CC$, $\sheaf{O}_{\CC}$: Garbe der holomorphen Funktionen auf $\CC$. Dann gilt: $(U, f) \sim (V,g) \iff$ $f$ und $g$ haben dieselbe Taylor-Entwicklung um $z_0$. \\$\implies$ $\sheaf{O}_{\CC, z_0} = \CC\{\{z_0 \}\}$ ist der Ring der Potenzreihen um $z_0$ mit positivem Konvergenzradius.
+\end{example}
+
+\begin{prop}
+\label{prop:charakterisierung-morphismen-halme}
+Seien $X$ ein top. Raum, $\sheaf{F}, \sheaf{G} \in \psh_{X}$ und $\xymatrix{\sheaf{F} \ar^{\varphi}@<+.5ex>[r] \ar_{\psi}@<-.5ex>[r] & \sheaf{G}}$ zwei Morphismen.
+\begin{enumerate}
+	\item[(1)] Ist $\sheaf{F}$ eine Garbe, so gilt $\varphi_{x} : \sheaf{F}_{x} \to \sheaf{G}_{x}$ ist injektiv für alle $x \in X \iff \varphi_{U} : \sheaf{F}(U) \to \sheaf{G}(U)$ ist injektiv für alle $U \subseteq X$ offen.
+	\item[(2)] Sind $\sheaf{F}$ und $\sheaf{G}$ Garben, so gilt:
+	\begin{enumerate}
+		\item[(a)] $\varphi_{x}$ ist bijektiv für alle $x \in X \iff \varphi_{U}$ ist bijektiv für alle $U \subseteq X$ offen.
+		\item[(b)] $\varphi = \psi \iff \varphi_{x} = \psi_{x}$ für alle $x \in X$.
+	\end{enumerate}
+\end{enumerate}
+\end{prop}
+\begin{proof}
+Für $U \subseteq X$ offen ist
+\[
+\xymatrix{
+  \sheaf{F}(U) \ar@{^{(}->}[r] & \prod_{x \in U} \sheaf{F}_{x}\\
+  s \ar@{|->}[r] & (s_{x})_{x \in U}
+}
+\] injektiv, \underline{denn}:\\
+Seien $s,t \in \sheaf{F}(U)$ mit $s_x = t_x$ für alle $x \in U$. Dann gibt es für jedes $x \in U$ eine offene Umgebung $x \in V_x \subseteq U$ s.d. $s|_{V_x} = t|_{V_x}$.\\
+$(Sh1) \implies s = t$.\\
+Wir erhalten ein kommutatives Diagramm \\
+\[
+\xymatrix
+{
+\sheaf{F}(U) \ar@{^{(}->}[r] \ar^{\varphi_U}@{->}[d] & \prod_{x \in U} \sheaf{F}_{x} \ar^{\prod_{x}\varphi_x}@{->}[d] \\
+\sheaf{G}(U) \ar@{->}[r] & \prod_{x \in U} \sheaf{G}_{x}
+}
+\] welches $``(1) \Rightarrow``$ und $(2)(b)$ impliziert.\\
+\\
+\\
+Allgemein gilt: 
+\begin{enumerate}
+	\item[$(i)$] Filtrierte Colimiten injektiver Abbildungen sind injektiv, d.h. $``(1) \Leftarrow ``$ gilt.
+    \item[$(ii)$] Colimiten surjektiver Abbildungen sind surjektiv, d.h. $``(2)(a)\Leftarrow ``$ gilt
+\end{enumerate}
+Zu $``(2)(a)\Rightarrow ``$: reicht z.z.: Bijektivität von $\varphi_x$ impliziert Surjektivität von $\varphi_U$.\\
+Sei dazu $t \in \sheaf{G}(U)$. Wähle für alle $x \in U$ eine offene Umgebung $x \in U^{x} \subseteq U$ und $s^{x} \in \sheaf{F}(U^x)$ so dass $(\varphi_{U^x}(s^x))_x = t_x$.\\
+$\implies \exists x \in V^x \subseteq U^x$ offen mit $\varphi_{V^x}(s^x|_{V^x}) = t|_{V^x}$. \\
+Da $U = \bigcup_x{V^x}$ offene Überdeckung, gilt für alle $x,y \in U$:\\
+\[
+\varphi_{V^y \cap V^x}(s^x|_{V^y \cap V^y}) = t|_{V^y \cap V^x} = \varphi_{V^y \cap V^x}(s^y|_{V^y \cap V^x})
+\]
+$\varphi_{U}$ injektiv nach $(1)$ $\implies$ $s^x|_{V^y \cap V^y} = s^y|_{V^y \cap V^y}$.\\
+$(Sh2) \implies \exists s \in \sheaf{F}(U)$ mit $s|_{V^x} = s^x$ für alle $x \in U$. \\
+$\implies$ $\varphi_U(s)_x = [(V^x, \varphi_{V^x}(s|_{V^x}))] = [(V^x, t|_{V^x})] = t_x \implies \varphi_{U}(s) = t$.
+\end{proof}
+
+\begin{defn}
+\label{def:injektive-und-surjektive-garbenmorphismen}
+Ein Morphismus $\sheaf{F} \to \sheaf{G}$ von Garben heißt \textbf{injektiv/ surjektiv/ bijektiv} $:\iff$ $\forall x \in X: \sheaf{F}_x \to \sheaf{G}_x$ ist injektiv/ surjektiv/ bijektiv.
+\end{defn}
+
+\begin{rem}
+\label{rem:charakterisierung-surjektiv}
+$\varphi : \sheaf{F} \to \sheaf{G}$ ist surjektiv gdw. für alle $t \in \sheaf{F}(U)$ eine offene Überdeckung $U = \bigcup_i U_i$ existiert und $s_i \in \sheaf{F}(U_i)$ s.d. $\varphi_{U_i}(s_i) = t|_{U_i}$, d.h. \underline{lokal} findet man stets ein Urbild.\\
+\textbf{Warnung:} Aus $\varphi$ surjektiv folgt nicht $\varphi_U$ surjektiv für alle $U \subseteq X$ offen.	
+\end{rem}
