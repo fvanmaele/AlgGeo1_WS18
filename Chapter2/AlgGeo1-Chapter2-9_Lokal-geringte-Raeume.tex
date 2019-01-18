@@ -1,0 +1,129 @@
+\section{Lokal geringte Räume}
+\begin{defn}
+Ein geringter Raum ist ein Paar $(X,\mathcal{O}_{X})$ bestehend aus
+einem topologischen Raum $X$ und einer Garbe $\mathcal{O}_{X}$ (kommutativer)
+Ringe. Ein Morphismus $(X,\mathcal{O}_{X})\rightarrow(Y,\mathcal{O}_{Y})$
+geringter Räume ist wiederum ein Paar $(f,f^{\flat})$ bestehend aus
+einer stetigen Abbildung $f:X\rightarrow Y$ und einem Homomorphismus
+$f^{\flat}:\mathcal{O}_{Y}\rightarrow f_{\ast}\mathcal{O}_{X}$ von
+Ringgarben auf $Y$. Dieses Datum ist gleichbedeutend (Proposition
+29) mit $(f,f^{\sharp})$, wobei nun $f^{\sharp}:f^{-1}\mathcal{O}_{Y}\rightarrow\mathcal{O}_{X}$
+ein Garbenhomomorphismus auf $X$ ist.
+
+Bezeichne: $f$ oder $(f,f^{\flat})$ oder $(f,f^{\sharp})$. Damit
+haben wir eine \textbf{Kategorie der geringten Räume}. $\mathcal{O}_{X}$
+heiÃt Strukturgarbe\index{Strukturgarbe} von $X$, oft schreiben
+wir $X$ fÃŒr $\mathcal{O}_{X}$.
+
+Idee: $\mathcal{O}_{X}$ beschreibt die zulässigen Funktionen auf
+$U\subset X$, d.h. etwa stetige, differenzierbare, holomorphe, rigid
+analytische usw. Funktionen. Solche Funktionen auf $V\subset Y$ sollen
+beim ``Zurückziehen'' unter $f$ in dieselbe Klasse überführt werden.
+Dies wird formal durch das Datum $f^{\flat}$ sichergestellt.
+\end{defn}
+
+\begin{notation*}
+Wenn $A$ ein lokaler Ring ist, $\mathfrak{m}_{A}$ das maximale Ideal,
+und $\kappa(A)=A/\mathfrak{m}_{A}$ RestklassenkÃ¶rper. Ein Homomorphismus
+$\varphi:A\rightarrow B$ lokaler Ringe heißt \textbf{lokal}, falls
+$\varphi(\mathfrak{m}_{A})\subset\mathfrak{m}_{B}$. $(f,f^{\flat})=(f,f^{\sharp})=X\rightarrow Y$
+Morphismus geringter Räume induziert:
+\begin{align*}
+ & \mathcal{O}_{Y,f(x)}=(f^{-1}\mathcal{O}_{Y})_{x}\xrightarrow{f_{x}^{\sharp}}\mathcal{O}_{X,x}\\
+\text{oder } & \xymatrix{\mathcal{O}_{Y}(U)\ar[r]^{f_{U}^{\flat}}\ar[d] & \mathcal{O}_{X}(f^{-1}(U))\ar[d] & f(x)\in U\subset Y\text{ offen}\\
+\mathcal{O}_{Y,f(x)}=\lim\mathcal{O}_{Y}(U)\ar@{-->}[r] & \mathcal{O}_{X,x}
+}
+\end{align*}
+\end{notation*}
+\begin{defn}[orig. 31]
+Ein lokal geringter Raum ist ein geringter Raum $(X,\mathcal{O}_{X})$,
+für der $\mathcal{O}_{X,x}$ für alle $x\in X$ ein \emph{lokaler
+Ring} ist. Ein Morphismus $(X,\mathcal{O}_{X})\rightarrow(Y,\mathcal{O}_{Y})$
+lokal geringter Räume ist ein Morphismus geringter Räume $(f,f^{\flat})$,
+so dass die induzierte Abbildung 
+\[
+f_{x}^{\sharp}:\mathcal{O}_{Y,f(x)}\rightarrow\mathcal{O}_{X,x}
+\]
+
+ein lokaler Ringhomomorphismus ist für alle $x\in X$. Dies führt
+zu einer Unterkategorie der Kategorie geringter Räume, die im Allgemeinen
+\emph{nicht }voll ist, d.h. es gibt Morphismen $f$ geringter Räume
+zwischen lokal geringten Räume, die nicht lokal sind!
+\end{defn}
+
+Bezeichne: 
+\begin{itemize}
+\item $\mathcal{O}_{X,x}$ der ``lokale Ring von $X$ in $x$'';
+\item $\mathfrak{m}_{x}$ maximales Ideal;
+\item $\kappa(x):=\mathcal{O}_{X,x}/\mathfrak{m}_{x}$ RestklassenkÃ¶rper
+(bei $x$). \texttt{
+\[
+\xymatrix@R=0pt{\mathcal{O}_{X}(U)\ar[r] & \mathcal{O}_{X,x}\ar[r] & \kappa(x)\\
+f\ar[rr] &  & f(x)
+}
+\]
+}
+\end{itemize}
+Warum \textbf{lokal} geringte Räume? Heuristik:
+\begin{align*}
+\mathcal{O}_{X}(U) & \leftrightarrow\text{Funktionen auf }U\\
+\mathcal{O}_{X,x} & \leftrightarrow\text{Funktionen auf Umgebung }U\text{ von }x
+\end{align*}
+
+\emph{Wunsch}: $f(x)\neq0\overset{!}{\Rightarrow}f$ ist invertierbar
+auf einer kleinen Umgebung $V$ von $x$, d.h. 
+\[
+\mathcal{O}_{X,x}\backslash\underbrace{\{f\mid f(x)=0\}}_{=\mathfrak{m}_{x}}\subset\mathcal{O}_{X,x}^{\times},
+\]
+
+also $\mathcal{O}_{X,x}$ lokal. \emph{Ferner}: $g\mathcal{O}_{Y,f(x)}$
+mit $g(f(x))=0$ sollte implizieren: $(g\circ f)(x)=0$. Übersetzt:
+\[
+f_{x}^{\sharp}(\mathfrak{m}_{f(x)})\subset\mathfrak{m}_{x},\quad f_{x}^{\sharp}(g)="g\circ f"
+\]
+
+\begin{example}[orig. 32]
+$\varphi_{X}$ Garbe der $\mathbb{R}$-wertiger stetiger Funktionen
+auf einem topologischen Raum $X$. $\varphi_{X,x}$ Ring der Keime
+$[s]$ stetiger Funktionen in einer Umgebung von $X$:
+\[
+\mathfrak{m}_{x}=\{[s]\in\varphi_{X,x}\mid0=s(x)\}
+\]
+
+ist einziges maximale Ideal, d.h. $(X,\varphi_{X})$ ist lokal geringter
+Raum. 
+
+\emph{Denn}: Sei $[s]\in\varphi_{X,x}\backslash\mathfrak{m}_{x}$
+gegeben.
+
+$\Rightarrow s(x)\neq0$ für alle $s\in[s]$. 
+
+$\Rightarrow(s$ stetig) $\exists x\in U\subset X$ offen mit $s(u)\neq0$
+für alle $u\in U$.
+
+$\Rightarrow\frac{1}{s|_{U}}\in\varphi_{X}(U)$ existiert.
+
+$\Rightarrow\varphi_{X,x}\backslash\mathfrak{m}_{x}=\varphi_{X,x}^{\times}$
+Einheitengruppe. Es ist: 
+\[
+\varphi_{X,x}\rightarrow\mathbb{R},\ [s]\mapsto s(x)
+\]
+
+ein surjektiver Ringhomomorphismus mit $\ker=\mathfrak{m}_{x}$.
+
+$\Rightarrow\kappa(x)\cong\mathbb{R}$. Sei $f:X\rightarrow Y$ stetig,
+$V\subset Y$ offen.
+\begin{align*}
+f_{x}^{\flat}:\varphi_{Y}(V) & \longrightarrow\varphi_{X}(f^{-1}(V))=f_{\ast}\varphi_{X}(V)\\
+t & \longmapsto t\circ f
+\end{align*}
+
+Es folgt:
+\begin{align*}
+\varphi_{Y,f(x)} & \longrightarrow\varphi_{X,x}\\{}
+[t] & \longmapsto[t\circ f]
+\end{align*}
+
+ist ein Morphismus lokal geringter Räume. Ebenso lassen sich Prävarietäten
+über lokal geringte Räume interpretieren!
+\end{example}
