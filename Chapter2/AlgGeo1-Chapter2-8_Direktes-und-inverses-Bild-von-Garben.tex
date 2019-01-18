@@ -1,0 +1,119 @@
+\section{Direktes und inverses Bild von Garben}
+\label{sec:garben-direktes-inverses-bild}
+
+Sei $f:X\rightarrow Y$ stetige Abbildung topologischer Räume, $\mathcal{F}$
+eine Prägarbe auf $X$. Ziel: $f_{\ast}\mathcal{F}$ Prägarbe auf
+$Y$, das direkte Bild von $\mathcal{F}$ unter $f$. Definiere $(f_{\ast}\mathcal{F})(V):=\mathcal{F}(f^{-1}(V))$
+mit Restriktionsabbildung von $\mathcal{F}$ ($V_{1}\subseteq V_{2}:$
+$s\in f_{\ast}\mathcal{F}(V_{2})\rightarrow s|_{V_{1}}=\mathcal{F}res_{f^{-1}(V_{1})}^{f^{-1}(V_{2})}$).
+\begin{align*}
+  f_{\ast}:PSh(X) & \longrightarrow PSh(Y)\\
+  \mathcal{F} & \longmapsto f_{\ast}\mathcal{F}\\
+  \mathcal{F}\overset{\varphi}{\rightarrow}\mathcal{G} & \longmapsto f_{\ast}(U):f_{\ast}\mathcal{F}\rightarrow f_{\ast}\mathcal{G}
+\end{align*}
+
+ist Funktor via $(f_{\ast}\varphi)_{V}=\varphi_{f^{-1}(V)}$.
+\begin{rem}[28]
+  \mbox{}
+  \begin{enumerate}
+  \item $\mathcal{F}$ Garbe auf $X$ $\Longrightarrow f_{\ast}\mathcal{F}$
+    Garbe auf $X$, d.h. $f_{\ast}:Sh(X)\rightarrow Sh(Y)$.
+  \item Ist $g:Y\rightarrow Z$ eine weitere stetige Abbildung topologischer
+    Räume, so existiert ein offensichtlicher Isomorphismus $g_{\ast}\circ(f_{\ast}\mathcal{F})=(g\circ f)_{\ast}\mathcal{F}$,
+    funktoriell in $\mathcal{F}$.
+  \end{enumerate}
+  \medskip{}
+\end{rem}
+
+Nun sei $\mathcal{G}$ eine Prägarbe auf $Y$.
+
+\textbf{Ziel:} Definiere $f^{+}\mathcal{G}$ Prägarbe auf $X$. $f^{-1}\mathcal{G}=\widetilde{f^{+}\mathcal{G}}$
+Garbe auf $X$, \textbf{Inverses Bild zu $\mathcal{G}$ unter $f$}
+via 
+\[
+(f^{+}\mathcal{G})(U):=\underset{\underset{Y\supseteq V\supseteq f(U)}{\longrightarrow}}{\lim}\mathcal{G}(V)
+\]
+
+mit induzierte Restriktionsabbildung.\medskip{}
+
+\textbf{Warnung:} $\mathcal{G}$ Garbe auf $Y$ $\leadsto f^{+}\mathcal{G}$
+im Allgemeinen keine Garbe auf $X$. Falls $f:X\hookrightarrow Y$
+Inklusion, $\mathcal{G}|_{X}:=f^{-1}\mathcal{G}$. Ist $X\subseteq Y$
+offen stimmt $\mathcal{G}|_{X}$ mit der Einschränkung aus Beispiel
+19 überein (cofinales Objekt). $\leadsto f^{-1}:PSh(Y)\rightarrow Sh(X)$
+Funktor.
+
+$g:Y\xrightarrow{\text{stetig}}Z$, $\mathcal{H}$ Prägarbe auf $Z$,
+$U\subseteq X$ offen. 
+\[
+Z\underset{\text{offen}}{\supseteq}W\supseteq g(f(U))\Longleftrightarrow W\supseteq g(V)
+\]
+
+für ein $f(U)\subseteq V\subseteq Y$ offen. 
+\begin{align*}
+  \underset{\longrightarrow}{\lim}\underset{\longrightarrow}{\lim}=\underset{\longrightarrow}{\lim}\Longrightarrow f^{+}(g^{+}\mathcal{H}) & =(g\circ f)^{+}\mathcal{H}\quad(*)\\
+  \Longrightarrow f^{-1}(g^{-1}\mathcal{H}) & =(g\circ f)^{-1}\mathcal{H}
+\end{align*}
+
+\begin{example}
+  $\imath:\{x\}\rightarrow X$ Inklusion, $\mathcal{F}$ Prägarbe auf
+  $X$. $\Longrightarrow\imath^{-1}(\mathcal{F})=\mathcal{F}_{x}$ per
+  Definition. $(\ast)\Longrightarrow$
+  \[
+  \begin{array}{ccc}
+    (f^{-1}\mathcal{G})_{x} & = & \mathcal{G}_{f(x)}\\
+    \shortparallel &  & \shortparallel\\
+    \imath^{-1}\circ(f^{-1}\mathcal{G}) & = & (f\circ\imath)^{-1}\mathcal{G}
+  \end{array}
+  \]
+\end{example}
+
+\begin{prop}[29]
+  Für $f:X\rightarrow Y$ stetig sind die Funktionen $f_{\ast}$ und
+  $f^{-1}$ zueinander adjungiert, d.h. für $\mathcal{F}$ Garbe auf
+  $X$, $\mathcal{G}$ Prägarbe auf $Y$ existiert eine bijektion
+  \begin{align*}
+    \hom_{Sh(x)}(f^{-1}\mathcal{G},\mathcal{F}) & \longleftrightarrow\hom_{Psh(Y)}(\mathcal{G},f_{\ast}\mathcal{F})\\
+    \varphi & \longmapsto\varphi^{\flat}\\
+    \psi^{\sharp} & \longmapsfrom\psi
+  \end{align*}
+
+  funktoriell in $\mathcal{F}$ und $\mathcal{G}$.
+\end{prop}
+
+\begin{proof}
+  $\varphi:f^{-1}\mathcal{G}\rightarrow\mathcal{F}$ Morphismus von
+  Garben auf $X$. $t\in\mathcal{G}(V)$, $V\subseteq Y$ offen
+  \begin{align*}
+    \mathcal{G}(V) & \rightarrow f^{+}\mathcal{G}(f^{-1}(V))\xrightarrow{\imath_{f^{+}\mathcal{G}}}f^{-1}\mathcal{G}(f^{-1}(V))\xrightarrow{\varphi_{f^{-1}(V)}}\mathcal{F}(f^{-1}(V))=f_{\ast}\mathcal{F}(V)\\
+    & \phantom{\rightarrow\ }\shortparallel\underset{\underset{Y\supseteq W\supseteq ff^{-1}(V)\subseteq V}{\longrightarrow}}{\lim}\\
+    t & \mapsto\varphi_{V}^{\flat}(t)
+  \end{align*}
+
+  Definition von $\psi^{\#}$. $\mathcal{G}\xrightarrow{\psi}f_{\ast}\mathcal{F}$
+  Morphismus von Prägarben auf . Wir definieren $\psi^{\#}:f^{+}\mathcal{G}\rightarrow\mathcal{F}$,
+  welches dann $\psi^{\#}:f^{-1}\mathcal{G}\rightarrow\mathcal{F}$
+  induziert. $U\subseteq X$ offen, $S\subseteq f^{+}\mathcal{G}(U)$,
+  $s=[(V,s_{V})]$, $V\supseteq f(U)$, $s_{V}\in\mathcal{G}(V)$. $\Longrightarrow f^{-1}(V)\supseteq U$.
+  \[
+  \xymatrix{\psi_{V}(s_{V})\in f_{\ast}\mathcal{F}(V)\ar@{=}[r]\ar@{|->}[rd] & \mathcal{F}(f^{-1}(V))\ar[d]\\
+    & \psi_{U}^{\#}(s)\in\mathcal{F}(U)
+  }
+  \]
+
+  Überprüfe $\varphi^{\flat^{\#}}=\varphi$, $\psi^{\#^{\flat}}=\mathcal{H}$
+  und Funktoriell.
+\end{proof}
+Definition + Proposition 29 verallgemeinern sich zu (Prä)Garben von
+Ringen, $R$-Moduln, $R$-Algebren.
+
+\textbf{Beschreibung} von:
+\[
+\mathcal{G}_{f(x)}=(f^{-1}\mathcal{G})_{x}\overset{\varphi_{x}}{\longmapsto}\mathcal{F}_{x},\ x\in X
+\]
+
+\[
+\xymatrix{f(x)\in U\underset{\text{offen}}{\subseteq}Y & \mathcal{G}(U)\ar[r]^{\varphi_{U}^{\flat}}\ar@{-->}[d] & \mathcal{F}(f^{-1}(U))\ar[r] & \mathcal{F}_{x}\\
+  \underset{\underset{U}{\longrightarrow}}{\lim} & \mathcal{G}_{f(x)}\ar@{-->}[rru]
+}
+\]
