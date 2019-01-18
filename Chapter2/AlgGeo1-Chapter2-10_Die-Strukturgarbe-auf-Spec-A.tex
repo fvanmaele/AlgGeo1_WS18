@@ -1,13 +1,13 @@
 \chapter*{Das Ringsprektrum als lokal geringter Raum}
-
+\label{chap:ringspektrum-lokal-geringter-raum}
 Ziel: volltreuer Funktor
 \begin{align*}
   \text{Ringe} & \longrightarrow\text{Kategorie lokal geringter Räume}\\
   A & \longmapsto(\Spec A,\mathcal{O}_{\Spec A})
 \end{align*}
 
-
 \section{Die Strukturgarbe auf Spec A}
+\label{sec:strukturgarbe-auf-spec-A}
 
 Sei $X:=\Spec(A)$, $\mathcal{B}=\{D(f)\mid f\in A\}$ Basis der Topologie.
 
@@ -25,6 +25,7 @@ einen Homöomorphismus $D(f)\xrightarrow{\sim}\Spec(A_{f})$ induziert.
 (``Funktionen mit möglichen Polen in $V(f)$).
 
 \subsection{Wohldefiniertheit}
+\label{subsec:strukturgarbe-wohldefiniertheit}
 
 $D(f)=D(g)\Rightarrow A_{f}=A_{g}$ kanonisch. Dazu: 
 \begin{align*}
@@ -33,6 +34,7 @@ $D(f)=D(g)\Rightarrow A_{f}=A_{g}$ kanonisch. Dazu:
 
 
 \subsection{Induzierte Abbildung}
+\label{subsec:strukturgarbe-induzierte-abbildung}
 
 \[
 \mathcal{O}_{X}(D(g))\rightarrow\mathcal{O}_{X}(D(f)),\ \rho_{f,g}=:\text{res}_{D(f)}^{D(g)}
@@ -73,8 +75,6 @@ Dies definiert eine Prägarbe auf $\mathcal{B}$.
     \]
     Es folgt: $b_{i}=b_{i}(n)\in A$ d.d. $\sum_{i\in I}b_{i}f_{i}^{n}=1$
     \textbf{Zerlegung der 1}. (z)
-  \end{itemize}
-  \begin{casenv}
   \item[Zu 1.] Sei $s=a\in A$ d.d. $0=\frac{a}{1}\in A_{f}$, $\forall i\in I$.
     $I$ endlich, also $\exists n\geq1$ d.d. $f_{i}^{n}a=0$ $\forall i\in I$.
     Mit $(z)$ folgt
@@ -102,5 +102,7 @@ Dies definiert eine Prägarbe auf $\mathcal{B}$.
     f_{i}^{n}s=f_{i}^{n}\sum b_{i}a_{j}=\sum b_{j}(f_{i}^{n}a_{j})\overset{(*)}{=}\left(\sum b_{i}f_{i}^{n}\right)a_{i}\overset{(z)}{=}a_{i}
     \]
     also $\frac{s}{1}=\frac{a_{i}}{f^{n}}=s_{i}$.
-  \end{casenv}
+  \end{itemize}
 \end{proof}
+
+\end{document}
