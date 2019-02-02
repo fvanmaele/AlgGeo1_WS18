@@ -1,0 +1,1149 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+
+%% User-specified commands
+\DeclareMathOperator{\rad}{rad}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\maxspec}{MaxSpec}
+\DeclareMathOperator{\Quot}{Quot}
+\DeclareMathOperator{\im}{\mathrm{im}}
+\DeclareMathOperator{\Hom}{\mathrm{Hom}}
+\DeclareMathOperator{\Mor}{\mathrm{Mor}}
+\DeclareMathOperator{\id}{\mathrm{id}}
+\DeclareMathOperator{\res}{res}
+\DeclareMathOperator{\Abb}{Abb}
+\DeclareMathOperator{\nil}{nil}
+\DeclareMathOperator{\supp}{supp}
+
+%%sets
+\DeclareMathOperator{\CC}{\mathbb{C}}
+\DeclareMathOperator{\RR}{\mathbb{R}}
+\DeclareMathOperator{\QQ}{\mathbb{Q}}
+\DeclareMathOperator{\ZZ}{\mathbb{Z}}
+\DeclareMathOperator{\NN}{\mathbb{N}}
+
+%% categories
+\DeclareMathOperator{\ouv}{\mathcal{O}uv}
+\DeclareMathOperator{\set}{\underline{Set}}
+\DeclareMathOperator{\ab}{\underline{Ab}}
+\DeclareMathOperator{\cattop}{\underline{Top}}
+\DeclareMathOperator{\cring}{\underline{CRing}}
+\DeclareMathOperator{\ring}{\underline{Ring}}
+\DeclareMathOperator{\psh}{\underline{\mathcal{PS}h}}
+\DeclareMathOperator{\sh}{\underline{\mathcal{S}h}}
+\DeclareMathOperator{\aff}{\underline{Aff}}
+\DeclareMathOperator{\schs}{\underline{Sch/S}}
+\DeclareMathOperator{\pres}{\underline{Prevar/S}}
+\DeclareMathOperator{\prek}{\underline{Prevar/k}}
+\DeclareMathOperator{\affk}{\underline{AffVar/k}}
+\DeclareMathOperator{\topcp}{\underline{TopCP}}
+\DeclareMathOperator{\Top}{\underline{Top}}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+theorems-ams-extended
+theorems-chap
+\end_modules
+\maintain_unincluded_children false
+\language ngerman
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style german
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Prävarietäten als Schemata
+\end_layout
+
+\begin_layout Standard
+Wir wollen einen Funktor von der Kategorie der Prävarietäten in die Kategorie
+ der Schemata sodass, wenn wir eine geweissen Unterkategorie von 
+\begin_inset Formula $\sh$
+\end_inset
+
+ betrachten, eine Äquivalenz von Kategorien entsteht.
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Erinnerung: 
+\series default
+
+\begin_inset Formula $k=\overline{k}$
+\end_inset
+
+: 
+\begin_inset Formula $\mathbb{A}_{k}^{2}=\Spec(k[X,Y])$
+\end_inset
+
+ besteht aus
+\end_layout
+
+\begin_layout Itemize
+Punte des 
+\begin_inset Formula $\mathbb{A}^{2}(k)$
+\end_inset
+
+ 
+\begin_inset Formula $\leadsto$
+\end_inset
+
+ maximale Ideale, 0-dimensionale Teilmengen.
+\end_layout
+
+\begin_layout Itemize
+Irreduzible Kurve 
+\begin_inset Formula $f(x,y)=0$
+\end_inset
+
+ 
+\begin_inset Formula $\leadsto$
+\end_inset
+
+ Primideale, 1-dimensionale Teilmengen.
+\end_layout
+
+\begin_layout Itemize
+Generischer Punkt 0 
+\begin_inset Formula $\leadsto$
+\end_inset
+
+ 2-dimensionale Teilmengen.
+\end_layout
+
+\begin_layout Standard
+Wie können wir die zusätzlichen Punkte für den Funktor
+\begin_inset Formula 
+\[
+\pres\longrightarrow\schs
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+präzisieren? Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ ein topologischer Raum, in dem alle Punkte abgeschlossen sind.
+ Betrachte 
+\begin_inset Formula 
+\[
+t(X)=\{Z\subset X\mid Z\text{ irreduzibel abgeschlossen}\},
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+versehen mit der Topologie: I
+\begin_inset Formula $t(X)\supset t(Z)$
+\end_inset
+
+, 
+\begin_inset Formula $Z\subseteq_{\text{abg.}}X$
+\end_inset
+
+ bilden die abgeschlossenen Mengen.
+ Überprüfe: 
+\begin_inset Formula $Z_{1},Z_{2},Z_{i}\subset X$
+\end_inset
+
+ abgeschlossen 
+\begin_inset Formula $\Longrightarrow t(\cap_{i}Z_{i})=\cap_{i}t(Z_{i})$
+\end_inset
+
+, 
+\begin_inset Formula $t(Z_{1}\cup Z_{2})=t(Z_{i})\cup t(Z_{2})$
+\end_inset
+
+.
+ Ist 
+\begin_inset Formula $f:X\rightarrow Y$
+\end_inset
+
+ stetig, so auch
+\begin_inset Formula 
+\begin{align*}
+t(f):t(X) & \longrightarrow t(Y)\\
+Z & \longmapsto\overline{f(Z)}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+denn:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\overline{f(Z)}$
+\end_inset
+
+ irreduzibel: Sei 
+\begin_inset Formula $\overline{f(Z)}=A_{1}\cup A_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $A_{i}\neq\emptyset$
+\end_inset
+
+.
+ Dann existiert 
+\begin_inset Formula $z_{1},z_{2}\in Z$
+\end_inset
+
+ mit 
+\begin_inset Formula $f(z_{i})\in A_{i}$
+\end_inset
+
+, denn sonst gilt 
+\begin_inset Formula $f(z)\subseteq A_{1}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $Z\subseteq f^{-1}(f(Z))$
+\end_inset
+
+ abgeschlossen.
+ 
+\begin_inset Formula $\Longrightarrow Z=(f^{-1}(A_{1})\cap Z)\cup(f^{-1}(A_{2}\cap Z))$
+\end_inset
+
+, Widerspruch.
+\end_layout
+
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $t(Y')\subseteq t(Y)$
+\end_inset
+
+ abgeschlossen.
+ 
+\begin_inset Formula $t(f)^{-1}(t(Y))=\{Z\in t(X)$
+\end_inset
+
+, 
+\begin_inset Formula $\overline{f(Z)}\in t(Y')\}$
+\end_inset
+
+ denn:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Quotes gld
+\end_inset
+
+
+\begin_inset Formula $\subseteq$
+\end_inset
+
+
+\begin_inset Quotes grd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\overline{f(Z)}\subset Y'$
+\end_inset
+
+ 
+\begin_inset Formula $\Longrightarrow Z\in f^{-1}(\overline{f(Z))}\subset f^{-1}(Y)=t(f^{-1}(Y))$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Quotes gld
+\end_inset
+
+
+\begin_inset Formula $\supseteq$
+\end_inset
+
+
+\begin_inset Quotes grd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $z\in f^{-1}(Y)$
+\end_inset
+
+ abgeschlossen 
+\begin_inset Formula $\Longrightarrow f(Z)\in\overline{f(Z)}\subset\overline{Y'}\subset Y'$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Wir erhalten einen Funktor
+\begin_inset Formula 
+\[
+t:\topcp\longrightarrow\Top
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die irreduziblen Mengen von 
+\begin_inset Formula $f(X)$
+\end_inset
+
+ sind gerade die 
+\begin_inset Formula $t(X)$
+\end_inset
+
+, 
+\begin_inset Formula $Z\subseteq X$
+\end_inset
+
+ irreduzibel.
+ 
+\begin_inset Formula $Z\in t(Z)$
+\end_inset
+
+ ist der eindeutige generische Punkt.
+ Sei
+\begin_inset Formula 
+\begin{align*}
+\alpha_{X}:X & \longrightarrow t(X)\\
+x & \longmapsto\{x\}\text{ irred. abg.}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So ist die Abbildung
+\begin_inset Formula 
+\begin{align*}
+\text{\{abg. Tm. von }f(X)\} & \longrightarrow\text{\{abg. Tm. von }X\}\\
+A=t(Z) & \longmapsto\alpha_{X}^{-1}(A)=\{x\in X:\{x\}\in t(Z)\}=Z
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+eine Bijektion.
+ 
+\begin_inset Formula $\Longrightarrow\alpha_{X}$
+\end_inset
+
+ ist Homömorphismus von 
+\begin_inset Formula $X$
+\end_inset
+
+ auf die abgeschlossenen Punkte 
+\begin_inset Formula $|t(X)|$
+\end_inset
+
+ von 
+\begin_inset Formula $t(X)$
+\end_inset
+
+ [irred.
+ abg.
+ Teilmengen 
+\begin_inset Formula $Z$
+\end_inset
+
+ von 
+\begin_inset Formula $X$
+\end_inset
+
+, die in 
+\begin_inset Formula $t(X)$
+\end_inset
+
+ abgeschlossen sind.]
+\end_layout
+
+\begin_layout Standard
+Es ist 
+\begin_inset Formula $\{Z\}=t(Z')$
+\end_inset
+
+ für ein 
+\begin_inset Formula $Z'\subset X$
+\end_inset
+
+ abgeschlossen.
+ 
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+ Nur ein Punkt 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ in 
+\begin_inset Formula $Z$
+\end_inset
+
+, sonst 
+\begin_inset Formula $\{x\}\subsetneq Z\subset Z'$
+\end_inset
+
+ beide in 
+\begin_inset Formula $t(Z')$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Es ist 
+\begin_inset Formula $|t(X)|\subset t(Y)$
+\end_inset
+
+ eine sehr dichte Menge (Bijektion oben).
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+31
+\end_layout
+
+\end_inset
+
+Der Funktor 
+\begin_inset Formula $X\mapsto(t(X),(\alpha_{X})_{\ast}\mathcal{O}_{X})$
+\end_inset
+
+ induziert eine Äquivalenz von Kategorien:
+\begin_inset Formula 
+\begin{align*}
+t:\{\prek\} & \overset{1:1}{\longleftrightarrow}\text{\{integere }k\text{-Schemata v. endl. Typ\}}\\
+\{\affk\} & \overset{1:1}{\longleftrightarrow}\text{\{affine }k\text{-Schemata v. endl. Typ}\}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Ist 
+\begin_inset Formula $X$
+\end_inset
+
+ eine affine Varietät über 
+\begin_inset Formula $k$
+\end_inset
+
+ mit 
+\begin_inset Formula $\Gamma(X)=A$
+\end_inset
+
+, so ist 
+\begin_inset Formula $X=\maxspec(A)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\Longrightarrow t(X)=\Spec A$
+\end_inset
+
+ (vgl Kapitel I), 
+\begin_inset Formula $\mathcal{O}_{X}(D(f))=A_{f}$
+\end_inset
+
+, 
+\begin_inset Formula $f\in A$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+ Behauptung im affinen Fall.
+\end_layout
+
+\begin_layout Proof
+Ist 
+\begin_inset Formula $f:X\rightarrow Y$
+\end_inset
+
+ Morphismus von Prävarietäten, so erhalten wir 
+\begin_inset Formula 
+\begin{align*}
+t(f):t(X) & \longrightarrow t(Y),\\
+(\alpha_{Y})_{\ast}\mathcal{O}_{Y} & \longrightarrow t(f)_{\ast}((\alpha_{X})_{\ast}\mathcal{O}_{X})
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Morphismus lokal geringter Räume, da ein Morphismus von Garben auf 
+\begin_inset Formula $X$
+\end_inset
+
+ und 
+\begin_inset Formula $Y$
+\end_inset
+
+ durch Komposition von Abbildungen gegeben ist!
+\end_layout
+
+\begin_layout Proof
+Quasi-inverser Funktor 
+\begin_inset Formula $(X,\mathcal{O}_{X})\mapsto(X(k),\mathcal{O}_{X(k)}=\alpha^{-1}\mathcal{O}_{X})$
+\end_inset
+
+ geringter 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+unlesbar
+\end_layout
+
+\end_inset
+
+Raum.
+ 
+\series bold
+(1)
+\series default
+ 
+\begin_inset Formula $\alpha^{-1}(U)=U\cap(X)\overset{1:1}{\longleftrightarrow}U$
+\end_inset
+
+ offene Teilmenge.
+ 
+\series bold
+Behauptung
+\series default
+: Bild 
+\begin_inset Formula $(X(k),\mathcal{O}_{X(k)})$
+\end_inset
+
+ ist Raum mit Funktionen: Sei 
+\begin_inset Formula $V\subseteq U\subseteq X$
+\end_inset
+
+ offen.
+ 
+\series bold
+(2)
+\series default
+ Das Diagramm
+\begin_inset Formula 
+\[
+\xymatrix{\mathcal{O}_{X(k)}(U\cap X(k))\ar[d]_{\res}\ar[r] & \Abb(U\cap X(\xi),\xi)\ar[d]^{\res}\\
+\mathcal{O}_{X(k)}(V\cap X(k))\ar@{^{(}->}[r] & \Abb(V\cap X(k),k)
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+kommutiert.
+ Dazu 
+\begin_inset Formula $f\in\mathcal{O}_{X(k)}(U\cap X(k))\overset{(1)}{=}\mathcal{O}_{X}(U)$
+\end_inset
+
+, wir assoziieren es der Abbildung 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Quotes gld
+\end_inset
+
+gibt Anlass induziert der Abb
+\begin_inset Quotes grd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+U\cap X(k)\longrightarrow k,\quad x\mapsto f(x):=\pi_{x}(f),
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+mit
+\begin_inset Formula 
+\[
+\xymatrix{\pi_{x}:\mathcal{O}_{X}(U)\ar[r]\ar[d]^{\res} & \mathcal{O}_{X,x}\ar[r] & \kappa(x)=k\\
+\mathcal{O}_{X}(V)\ar[ur]
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Longrightarrow(2)$
+\end_inset
+
+.
+ 
+\series bold
+(3)
+\series default
+ 
+\begin_inset Formula $f,g$
+\end_inset
+
+ mit derselben Funktion 
+\begin_inset Formula 
+\[
+f\equiv g:U'\rightarrow k\overset{!}{\Longrightarrow}f=g
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Garbenaxiom 
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+ kann lokal überprüft werden: 
+\begin_inset Formula $U=\Spec A$
+\end_inset
+
+ und 
+\begin_inset Formula $\pi_{x}(f)=\pi_{x}(g)$
+\end_inset
+
+ für alle 
+\begin_inset Formula $x\in\maxspec$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\Longrightarrow f-g\in\bigcap_{\mathfrak{m}\in\maxspec(A)}\mathfrak{m}=\nil(A)=0,
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+da 
+\begin_inset Formula $A$
+\end_inset
+
+ lokal reduzierte 
+\begin_inset Formula $k$
+\end_inset
+
+-Algebra.
+ Da sich 
+\begin_inset Formula $X$
+\end_inset
+
+ durch endlich viele affine Schemata der Form 
+\begin_inset Formula $\Spec A$
+\end_inset
+
+, 
+\begin_inset Formula $A$
+\end_inset
+
+ integer endlich erzeugte 
+\begin_inset Formula $k$
+\end_inset
+
+-Algebra, überdecken lässt, ist der Raum mit Funktion 
+\begin_inset Formula $X(k)$
+\end_inset
+
+ eine Prävarietät.
+ Die Konstruktion ist funktoriell, da jede Menge von Schemata von endlichem
+ Typ über 
+\begin_inset Formula $K$
+\end_inset
+
+ abgeschlossene Punkte auf abgeschlossene Punkt schickt nach Proposition
+ 28.
+\end_layout
+
+\begin_layout Proof
+Um zu zeigen, dass beide Funktoren Quasi-Inverse zueinander sind, benutze
+ den affinen (Varietät/Schemata) Fall, so wie die Garbenaxiome.
+\end_layout
+
+\begin_layout Remark*
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+32
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{}
+\end_layout
+
+\end_inset
+
+Es gilt:
+\end_layout
+
+\begin_layout Remark*
+\begin_inset Formula 
+\begin{align*}
+\kappa(x) & =\kappa(X(k))\\
+\mathbb{A}_{k}^{n} & \longleftrightarrow\mathbb{A}(k)\\
+\mathbb{P}_{k}^{n} & \longleftrightarrow\mathbb{P}^{n}(k)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Unterschemata und Immersion (Einbettungen)
+\end_layout
+
+\begin_layout Section
+Offene und abgeschlossene Einbettung
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+33
+\end_layout
+
+\end_inset
+
+Ein Morphismus 
+\begin_inset Formula $j:Y\rightarrow X$
+\end_inset
+
+ von Schemata heißt 
+\series bold
+offene Einbettung
+\series default
+, falls die unterliegende stetige Abbildung ein Homöomorphismus von 
+\begin_inset Formula $Y$
+\end_inset
+
+ auf eine 
+\emph on
+offene
+\emph default
+ Menge 
+\begin_inset Formula $U\subset X$
+\end_inset
+
+ ist, sowie der Garbenhomomorphismus 
+\begin_inset Formula $\mathcal{O}_{X}\rightarrow j_{\ast}\mathcal{O}_{Y}$
+\end_inset
+
+ einen Isomorphismus 
+\begin_inset Formula $\mathcal{O}_{X|U}\cong j_{\ast}\mathcal{O}_{Y}$
+\end_inset
+
+ von Garben über 
+\begin_inset Formula $U$
+\end_inset
+
+ induziert.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Quotes gld
+\end_inset
+
+
+\begin_inset Formula $j$
+\end_inset
+
+ induziert Isomorphismus zu 
+\begin_inset Formula $Y$
+\end_inset
+
+ und offenen Unterschemata 
+\begin_inset Formula $U$
+\end_inset
+
+
+\begin_inset Quotes grd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+34
+\end_layout
+
+\end_inset
+
+Sei 
+\begin_inset Formula $(X,\mathcal{O}_{X})$
+\end_inset
+
+ ein geringter Raum.
+ Eine Untergarbe 
+\begin_inset Formula $\mathcal{I}\subset\mathcal{O}_{X}$
+\end_inset
+
+ heißt 
+\series bold
+Idealgarbe
+\series default
+, falls 
+\begin_inset Formula $\Gamma(U,\mathcal{I})\unlhd\Gamma(U,\mathcal{O}_{X})$
+\end_inset
+
+ Ideal ist für alle 
+\begin_inset Formula $U\subseteq X$
+\end_inset
+
+ offen.
+ Es bezeichne 
+\begin_inset Formula $\mathcal{O}_{X}/\mathcal{I}$
+\end_inset
+
+ die Quotientengarbe assoziiert von der Prägarbe 
+\begin_inset Formula $U\mapsto\mathcal{O}_{X}(U)/\mathcal{I}(U)$
+\end_inset
+
+.
+ Dies ist eine Prägarbe mit 
+\begin_inset Formula $\mathcal{O}_{X}\rightarrow\mathcal{O}_{X}/\mathcal{I}$
+\end_inset
+
+ surjektiv, denn auf Halme:
+\begin_inset Formula 
+\[
+\underset{\underset{x\in U}{\longrightarrow}}{\lim}(\mathcal{O}_{X}(U)\twoheadrightarrow\mathcal{O}_{X}(U)/\mathcal{I}(U))=\mathcal{O}_{X,x}\twoheadrightarrow(\mathcal{O}_{X}/\mathcal{I})_{x}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+35
+\end_layout
+
+\end_inset
+
+Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ ein Schemata.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Ein 
+\series bold
+abgeschlossenes Unterschemata von 
+\begin_inset Formula $X$
+\end_inset
+
+ 
+\series default
+ist gegeben durch eine abgeschlossene Menge 
+\begin_inset Formula $Z\subseteq X$
+\end_inset
+
+ (
+\begin_inset Formula $i:Z\rightarrow X$
+\end_inset
+
+ Inklusion), sowie eine Garbe 
+\begin_inset Formula $\mathcal{O}_{Z}$
+\end_inset
+
+ auf 
+\begin_inset Formula $Z$
+\end_inset
+
+, sodass 
+\begin_inset Formula $(Z,\mathcal{O}_{Z})$
+\end_inset
+
+ ein Schemata und 
+\begin_inset Formula $i_{\ast}\mathcal{O}_{Z}\cong\mathcal{O}_{X}/I$
+\end_inset
+
+ für eine Idealgarbe 
+\begin_inset Formula $I\subset\mathcal{O}_{X}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Ein Morphismus 
+\begin_inset Formula $i:Z\rightarrow X$
+\end_inset
+
+ von Schemata heißt 
+\series bold
+abgeschlossene Einbettung
+\series default
+, falls die unterliegende stetige Abbildung einen Homöomorphismus zwischen
+ 
+\begin_inset Formula $Z$
+\end_inset
+
+ und eine abgeschlossene Teilmenge von 
+\begin_inset Formula $X$
+\end_inset
+
+ ist, und der Garbenhomomorphismus 
+\begin_inset Formula $i^{\flat}:\mathcal{O}_{X}\rightarrow i_{\ast}\mathcal{O}_{X}$
+\end_inset
+
+ surjektiv ist.
+\end_layout
+
+\end_deeper
+\begin_layout Definition
+Ist 
+\begin_inset Formula $Z\subseteq X$
+\end_inset
+
+ ein abgeschlossenes Unterschemata wie in (1), so ist 
+\begin_inset Formula $(i,i^{\flat})$
+\end_inset
+
+ eine abgeschlossene Einbettung.
+ Umgekehrt bestimmt jede abgeschlossene Einbettung einen Isomorphismus von
+ seiner Quelle auf ein eindeutiges abgeschlossenes Unterschemata seines
+ Ziels.
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+Warnung:
+\series default
+ Nicht für jede Idealgarbe 
+\begin_inset Formula $\mathcal{I}$
+\end_inset
+
+ ist
+\begin_inset Formula 
+\[
+(Z=\supp\mathcal{O}_{X}/\mathcal{I},\mathcal{O}_{X}/\mathcal{I})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+ein Schema.
+ Später: gilt gdw.
+ 
+\begin_inset Formula $\mathcal{I}$
+\end_inset
+
+ quasi-kompakt ist.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+36
+\end_layout
+
+\end_inset
+
+Sei 
+\begin_inset Formula $X=\Spec A$
+\end_inset
+
+.
+ Dann ist die Abbildung
+\begin_inset Formula 
+\begin{align*}
+\text{\{Ideale }A\} & \overset{1:1}{\longleftrightarrow}\{\text{abg. Unterschemata von }X\}\\
+\mathfrak{a} & \longmapsto V(\mathfrak{a})\cong\Spec(A/\mathfrak{a})
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+eine Bijektion.
+ Insbesondere ist jedes abgeschlossene Unterschemata eines affinen Schematas
+ affin.
+\end_layout
+
+\end_body
+\end_document
