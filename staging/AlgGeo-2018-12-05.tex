@@ -1,0 +1,256 @@
+%% LyX 2.3.2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[oneside,ngerman]{book}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{stackrel}
+\usepackage[all]{xy}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\theoremstyle{plain}
+\ifx\thechapter\undefined
+	\newtheorem{thm}{\protect\theoremname}
+\else
+	\newtheorem{thm}{\protect\theoremname}[chapter]
+\fi
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{\protect\definitionname}
+\theoremstyle{definition}
+\newtheorem{example}[thm]{\protect\examplename}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{mathtools}
+
+%% User-specified commands
+\DeclareMathOperator{\rad}{rad}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Quot}{Quot}
+\DeclareMathOperator{\im}{\mathrm{im}}
+\DeclareMathOperator{\Hom}{\mathrm{Hom}}
+\DeclareMathOperator{\Mor}{\mathrm{Mor}}
+\DeclareMathOperator{\id}{\mathrm{id}}
+\DeclareMathOperator{\res}{res}
+
+%%sets
+\DeclareMathOperator{\CC}{\mathbb{C}}
+\DeclareMathOperator{\RR}{\mathbb{R}}
+\DeclareMathOperator{\QQ}{\mathbb{Q}}
+\DeclareMathOperator{\ZZ}{\mathbb{Z}}
+\DeclareMathOperator{\NN}{\mathbb{N}}
+
+%% categories
+\DeclareMathOperator{\ouv}{\mathcal{O}uv}
+\DeclareMathOperator{\set}{\underline{Set}}
+\DeclareMathOperator{\ab}{\underline{Ab}}
+\DeclareMathOperator{\cattop}{\underline{Top}}
+\DeclareMathOperator{\cring}{\underline{CRing}}
+\DeclareMathOperator{\psh}{\underline{\mathcal{PS}h}}
+\DeclareMathOperator{\sh}{\underline{\mathcal{S}h}}
+\DeclareMathOperator{\aff}{\underline{Aff}}
+
+\makeatother
+
+\usepackage{babel}
+\providecommand{\definitionname}{Definition}
+\providecommand{\examplename}{Beispiel}
+\providecommand{\theoremname}{Theorem}
+
+\begin{document}
+
+\section{Der Funktor $A\protect\mapsto(\Spec A,\mathcal{O}_{\Spec A})$}
+\begin{defn}[34]
+Ein lokal geringter Raum $(X,\mathcal{O}_{X})$ heißt \textbf{affines
+Schema}, falls ein Ring $A$ existiert d.d
+\[
+(X,\mathcal{O}_{X})\cong(\Spec A,\mathcal{O}_{\Spec A})
+\]
+
+Ein \textbf{Morphismus affiner Schemata} ist ein Morphismus lokal
+geringter Räume. Bezeichne $\aff$ die Kategorie der affinen Schemata.
+\begin{align*}
+\varphi:A & \longrightarrow B & \text{Ringhom.}\\
+f:X:=\Spec A & \longrightarrow Y:=\Spec A & \text{stetige Abb.}
+\end{align*}
+\end{defn}
+
+\textbf{Ziel: }Definiere $(f,f^{\flat}):X\rightarrow Y$ mit $f:=^{a}\varphi$
+Morphismus von lokal geringter Räume und
+\[
+f_{\Spec A}^{\flat}=\varphi:A=\mathcal{O}_{\Spec A}(\Spec A)\rightarrow f_{\ast}\mathcal{O}_{\Spec B}(\Spec B)=B
+\]
+
+Dazu: Für $s\in A$ gilt $f^{-1}(D(s))=D(\varphi(s))$ nach Proposition
+2.10. Definiere 
+\[
+f_{D(s)}^{\flat}:\mathcal{O}_{Y}(D(s))=A_{s}\rightarrow B_{\varphi(s)}=f_{\ast}\mathcal{O}_{X}(D(s))
+\]
+
+als die von $\varphi$ induzierte Abbildung. $f^{\flat}$ ist kompatibel
+mit $\res_{D(t)}^{D(s)}$ für prinzipal offene Mengen $D(t)\subseteq D(s)$.
+$B$ Basis $\Longrightarrow f^{\flat}:\mathcal{O}_{Y}\rightarrow f_{\ast}\mathcal{O}_{X}$
+Homomorphismus von Ringgarben. Für $s=1$ erhalten wir $f_{\Spec A}^{\flat}=\varphi$!
+
+Für $x\in X$ gilt:
+\[
+\xymatrix{f^{\sharp}:\mathcal{O}_{Y,f(x)}=A_{\varphi^{-1}(\mathfrak{p}_{x})=\mathfrak{p}_{f(x)}}\ar[r] & B_{\mathfrak{p}_{x}}=\mathcal{O}_{X,x}\\
+A\ar[u]\ar[r]^{\varphi} & B\ar[u]
+}
+\qquad(*)
+\]
+
+ist der von $\varphi$ induzierte Homomophismus. $f_{x}^{\sharp}$
+is lokal:
+\[
+\varphi(\varphi^{-1}(\mathfrak{p}_{x}))\subseteq\mathfrak{p}_{x}
+\]
+
+\textbf{Bezeichne}: $^{a}\varphi$ für $\Spec(\varphi)=(f,f^{\flat})$,
+$^{a}(\psi\circ\varphi)=^{a}\varphi\circ^{a}\psi$. Wir erhalten einen
+kontravarianten Funktor
+\[
+\Spec:\underline{Ring}\longrightarrow\aff.
+\]
+
+Für $f:(X,\mathcal{O}_{X})\rightarrow(Y,\mathcal{O}_{Y})$ Morphismus
+von geringten Räumen erhalten wir einen Ringhomomorphismus
+\[
+\Gamma(f):=f_{Y}^{\flat}:\Gamma(Y,\mathcal{O}_{Y})=\mathcal{O}_{Y}(Y)\rightarrow\Gamma(X,\mathcal{O}_{X})=(f_{\ast}\mathcal{O}_{X})(Y)=\mathcal{O}_{X}(X).
+\]
+
+So erhalten wir einen kontravarianten Funktor
+\[
+\Gamma:\aff\longrightarrow\underline{Ring}.
+\]
+
+\begin{thm}[35]
+Die Funktoren $\Spec$ und $\Gamma$ definieren eine Anti-Äquivalenz
+zwischen der Kateogire der Ringe und der Kategorie der affinen Schemata.
+\end{thm}
+
+\begin{proof}
+$\Spec$ ist essentiell surjektiv per Definition. $\Gamma\circ\Spec$
+ist isomorph zu $\id_{\underline{Ring}}$ nach Konstruktion.Zu zeigen:
+\[
+\Hom_{\underline{Ring}}(A,B)\stackrel[\Gamma]{\Spec}{\rightleftharpoons}\Hom_{\aff}(\Spec B,\Spec A)
+\]
+
+sind zueinander invers. Es fehlt die Verkettung $\Spec\circ\Gamma=\id_{\aff}$.
+Sei $f\in\Hom_{\aff}(\Spec B,\Spec A)$, $\varphi:=\Gamma(f)$, $^{a}\varphi=f$.
+Für $\mathfrak{p}_{x}\in\Spec B=X$ ist $f_{x}^{\sharp}$ der eindeutig
+bestimmte Ringhomomorphismus, welcher das Diagramm
+\[
+\xymatrix{A\ar[r]^{f_{\Spec A}^{\flat}=\Gamma(f)=\varphi}\ar[d]_{\imath_{A}} & B\ar[d]^{\imath_{B}}\supset\imath_{B}^{-1}(\mathfrak{p}_{x}B_{\mathfrak{p}_{x}})=\mathfrak{p}_{x}\\
+A_{\mathfrak{p}_{f(x)}}\ar[r]_{f_{x}^{\#}\text{ lokal}} & B_{\mathfrak{p}_{x}}\underset{\max}{\supset}\mathfrak{p}_{x}B_{\mathfrak{p}_{x}}
+}
+\qquad(**)
+\]
+
+kommutieren lässt. Es gilt:
+\begin{align*}
+\mathfrak{p}_{f(x)}A_{\mathfrak{p}_{f(x)}} & \supseteq(f_{x}^{\sharp})^{-1}(\mathfrak{p}_{x}B\mathfrak{p}_{x})=\mathfrak{p}_{f(x)}A_{\mathfrak{p}_{f(x)}}\\
+\mathfrak{p}_{f(x)} & =\imath_{A}^{-1}(\mathfrak{p}_{f(x)}A\mathfrak{p}_{f(x)})\subset A
+\end{align*}
+
+$f_{x}^{\#}$ lokal $\Longrightarrow f_{x}^{\#}(\mathfrak{p}_{f(x)}A_{\mathfrak{p}_{f(x)}})\subset\mathfrak{p}_{x}B_{\mathfrak{p}_{x}}$
+$\Longrightarrow^{a}\varphi=f$ als stetige Abbildung. Wegen $(*)$
+lässt auch $(^{a}\varphi)_{x}^{\#}$ das Diagramm $(**)$ kommutieren.
+Proposition $\Longrightarrow(^{a}\varphi)^{\#}=f^{\#}$.
+\end{proof}
+
+\section{Beispiele}
+\begin{example}[36, Integritätsbereiche]
+Sei $A$ integer, $K=\Quot(A)$. Sei $X=\Spec A$, $\eta=(0)$. Dann
+ist$\overline{\{\eta\}}=\Spec X$, d.h. jede nicht-leere offene Menge
+$U\subset X$ enthält $\eta$. Es folgt: $\mathcal{O}_{X,y}=A_{(0)}=K$.
+Für alle $f\in A$ gilt nach Definition 
+\[
+\mathcal{O}_{X}(D(f))=A_{f}\subset U.
+\]
+
+Sei $U\subset X$ beliebig offen. Es folgt:
+\[
+\mathcal{O}_{X}(U)=\underset{\underset{D(f)\subset U}{\longleftarrow}}{\lim}\mathcal{O}_{X}(D(f)=\bigcap_{\underset{D(f)\subset U}{f\in A}}A_{f}\subseteq K.
+\]
+
+Wie im Beweis von Satz 1.37 ist $a_{F}=\bigcap_{\mathfrak{p}\in D(f)}A_{\mathfrak{p}},$
+also $\mathcal{O}_{X}(U)=\bigcap_{x\in U}\mathcal{O}_{X,x}$.
+\end{example}
+
+\begin{example}[37, Prinzipal offene Unterschemata affiner Schemata]
+Sei $X=\Spec A$, $f\in A$. Sei $j:\Spec A_{f}\rightarrow\Spec A$
+induziert von $A\rightarrow A_{f}$. $\Longrightarrow j:\Spec A_{j}\rightarrow D(f)$
+ist Homoömorphismus (Proposition 2.12). Für alle $x\in D(f)$ ist
+$j_{x}^{\#}$ der kanonische Isomorphismus $A_{\mathfrak{p}_{x}}\overset{\cong}{\rightarrow}(A_{f})_{\mathfrak{p}_{x}}$.
+$\Longrightarrow(j,j^{\#})$ induziert einen Isomorphismus $\Spec A_{f}\cong(D(f),\mathcal{O}_{X|D(f)})$.
+\end{example}
+
+\begin{example}[38, Abgeschlossene Unterschemata affiner Schemata]
+Sei $X=\Spec A$ und $\mathfrak{a}$ ein Ideal von $A$. Sei $\imath:\Spec A/\mathfrak{a}\rightarrow\Spec A$
+der von $A\rightarrow A/\mathfrak{a}$ induzierte Morphismus affiner
+Schemata. Nach Proposition 2.12 induziert $\imath$ einen Homöomorphismus
+$\Spec A/\mathfrak{a}\overset{\cong}{\rightarrow}V(\mathfrak{a})\subseteq\Spec A$.
+Sei $\overline{\mathfrak{p}_{x}}$ das Bild von $\mathfrak{p}_{x}$
+in $A/\mathfrak{a}$. Für alle $x\in V(\mathfrak{a})$ ist der Morphismus
+$i_{x}^{\flat}$ der kanonische Homomorphismus $A_{\mathfrak{p}_{x}}\rightarrow(A/\mathfrak{a})_{\overline{\mathfrak{p_{x}}}}$.
+($=0$, falls $x\in V(\mathfrak{a})$, also $\mathfrak{a}\notin f_{x}$.)
+Schreibe kurz $V(\mathfrak{a})$ für den lokal geringten Raum 
+\begin{align*}
+\left(V(\mathfrak{a}),\imath_{x}(\mathcal{O}_{\Spec A/\mathfrak{a}})|_{V(\mathfrak{a})}\right) & \stackrel[\imath]{\cong}{\longleftarrow}\Spec(A/\mathfrak{a})
+\end{align*}
+
+Da $x\in V(\mathfrak{a})$, ist $\imath_{x}(\mathcal{O}_{\Spec A/\mathfrak{a}})|_{V(\mathfrak{a})}\overset{\cong}{\longrightarrow}i_{x}\mathcal{O}_{\Spec A/\mathfrak{a}}$.
+\end{example}
+
+\begin{example}[39]
+Sei $B$ ein Ring und $\mathfrak{b}\subset B$ Ideal. $V(\mathfrak{b}^{n})=V(\mathfrak{b})\subset\Spec B$
+als abgeschlossene Teilmenge hängt \emph{nicht }von $n\geq1$ ab,
+aber $\Spec(B/\mathfrak{b}^{n})=V(\mathfrak{b}^{n})$ als offenes
+Schemata sehr wohl!
+
+Etwa: $B=k[T]$, $b=(T)$ mit $k$ ein algebraisch abgeschlossener
+Körper. Für die abgeschlossenen Punkte von $\mathbb{A}_{k}^{1}=\Spec k[T]$
+gilt:
+\begin{align*}
+\Spec(k[T]) & \longleftrightarrow k\\
+\mathfrak{b} & \longleftrightarrow0
+\end{align*}
+
+Sei $A=k[T]/(T^{n})$, $X=\Spec A=\{x\}$. Es gilt: 
+\begin{align*}
+\mathcal{O}_{X}(X) & =\mathcal{O}_{X,x}=A\\
+\kappa(x) & =k\\
+n>1:\ 0\neq\mathfrak{m}_{x} & =T\mod T^{n}
+\end{align*}
+
+Betrachte $X\subset\mathbb{A}_{k}^{1}$ als abgeschlossenes ,,Unterschemata``
+welches ,,konzentriert in einem Punkt`` ist. $B=k[T]$ ist $k$-Algebra
+von Funktionen auf $\mathbb{A}^{1}(k)$. (vgl. Beispiel 2.14.) Die
+Einschränkung einer solchen Funktion $f\in k[T]$ auf $X$ ist gegeben
+durch $k[T]\rightarrow k[T]/(T^{n})$. Wir unterscheiden:
+\begin{itemize}
+\item[$n=1$.] $k[T]/(T^{n})=k$, $f\mapsto f(0)$.
+\item[$n>1$.] $k[T]/(T^{n})\neq k$, $f\mapsto$ (,,Taylor-Entwicklung`` von
+$A$ um 0 der Länge $n-1$). $\{x\}\subset\mathbb{A}_{k}^{1}$ hat
+,,infinitesimale Ausdehnung der Länge $n-1$ in $\mathbb{A}_{k}^{1}$``
+\end{itemize}
+Sei nun $\mathbb{A}_{k}^{2}:=\Spec(k[T,U])$ betrachtet als $\{(u,t)\mid u,f\in k\}=k^{2}$.
+Sei $\mathfrak{a}_{1}=(U)$, $\mathfrak{a}_{2}=(U-T^{n})$. Diese
+definieren:
+\[
+X_{1}=\{u,t)\in\mathbb{A}^{2}(k)\mid u=0\},\quad X_{2}=\{(u,t)\in\mathbb{A}^{2}(k)\mid u=t^{n}\}.
+\]
+
+Es ist $X_{1}\cap X_{2}=\{(0,0)\}$ als Menge. Aber für $n>1$ treffen
+sich beide Mengen \emph{nicht} transversal! Als affine Schemata wird
+später der Schnitt als $\Spec k[T,U]/(\mathfrak{a}_{1}+\mathfrak{a}_{2})$
+definiert, also eine präzisere Beschreibung als Durchschnitt.
+\end{example}
+
+
+\end{document}

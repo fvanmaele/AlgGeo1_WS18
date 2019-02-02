@@ -1,0 +1,247 @@
+%% LyX 2.3.2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[oneside,ngerman]{book}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage[all]{xy}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\newlength{\lyxlabelwidth}      % auxiliary length 
+\theoremstyle{plain}
+\newtheorem{thm}{\protect\theoremname}
+\theoremstyle{definition}
+\newtheorem{example}[thm]{\protect\examplename}
+\theoremstyle{definition}
+\newtheorem*{xca*}{\protect\exercisename}
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{\protect\definitionname}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+%% User-specified commands
+\DeclareMathOperator{\rad}{rad}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Quot}{Quot}
+\DeclareMathOperator{\res}{res}
+\DeclareMathOperator{\im}{\mathrm{im}}
+\DeclareMathOperator{\Hom}{\mathrm{Hom}}
+\DeclareMathOperator{\Mor}{\mathrm{Mor}}
+\DeclareMathOperator{\id}{\mathrm{id}}
+
+%%sets
+\DeclareMathOperator{\CC}{\mathbb{C}}
+\DeclareMathOperator{\RR}{\mathbb{R}}
+\DeclareMathOperator{\QQ}{\mathbb{Q}}
+\DeclareMathOperator{\ZZ}{\mathbb{Z}}
+\DeclareMathOperator{\NN}{\mathbb{N}}
+
+%% categories
+\DeclareMathOperator{\ouv}{\mathcal{O}uv}
+\DeclareMathOperator{\set}{\underline{Set}}
+\DeclareMathOperator{\ab}{\underline{Ab}}
+\DeclareMathOperator{\cattop}{\underline{Top}}
+\DeclareMathOperator{\cring}{\underline{CRing}}
+\DeclareMathOperator{\ring}{\underline{Ring}}
+\DeclareMathOperator{\psh}{\underline{\mathcal{PS}h}}
+\DeclareMathOperator{\sh}{\underline{\mathcal{S}h}}
+\DeclareMathOperator{\sch}{\underline{Sch}}
+\DeclareMathOperator{\schs}{\underline{Sch/S}}
+
+\makeatother
+
+\usepackage{babel}
+\providecommand{\definitionname}{Definition}
+\providecommand{\examplename}{Beispiel}
+\providecommand{\exercisename}{Aufgabe}
+\providecommand{\theoremname}{Theorem}
+
+\begin{document}
+\begin{proof}
+Als topologischer Raum: $\coprod_{i\in I}U_{i}/\sim$ mit $x_{i}\in U_{i}\sim x_{j}\in U_{j}:\Leftrightarrow x_{i}\in U_{ij}$,
+$x_{j}\in U_{ji}$ und $x_{j}=\varphi_{ji}(x_{i})$. Nach Eigenschaft
+$(b)$ ist $\sim$ eine Äquivalenzrelation. Dann sind $\psi_{i}:U_{i}\rightarrow X$
+injektiv. Ferner haben wir $\forall i,j\in I$ die Eigenschaft $\psi_{i}(U_{i})=\psi_{i}(U_{i})\cap\psi_{j}(U_{j})$.
+
+$X$ hat also als topologischer Raum die Quotiententopologie, d.h.
+die feinste Topologie sodass alle Abbildungen $\psi_{i}$ stetig sind.
+$U\subset X$ offen genau dann, wenn $\psi_{i}^{-1}(U)\subset U_{i}$
+dort offen sind $\forall i\in I$. Insbesondere sind $\psi_{i}(U_{i})$
+und $\psi_{i}(U_{j})=\psi_{i}(U_{i})\cap\psi_{j}(U_{j})$ offen in
+$X$.
+
+Als lokal geringter Raum: ``Verkleben der Strukturgarben auf $U_{i}$''.
+$\mathcal{O}_{X}$ ist eindeutig auf einer Basis $B$ der Topologie
+definiert. Ohne Einschränkung reicht es hier, die Schnitte nur auf
+$U\subset X$ offen mit $U\subset\psi_{i}(U_{i})$ für ein $i\in I$.
+In dem Fall:
+\[
+\mathcal{O}_{X}(U)=\mathcal{O}_{U_{i}}(\psi_{i}^{-1}(U))
+\]
+
+Für $U\subset\psi_{i}(U_{i})\cap\psi_{j}(U_{j})$
+\[
+\xymatrix{U_{ij}\ar@{^{(}->}[r]\ar[d]_{\cong} & U_{i}\\
+U_{ji}\ar@{^{(}->}[r] & U_{i} & X\supset U
+}
+\]
+
+Dann gilt:
+
+\[
+\mathcal{O}_{U_{i}}(\psi_{i}^{-1}(U))=\mathcal{O}_{U_{ij}}(\psi_{i}^{-1}(U))\cong\mathcal{O}_{U_{ji}}(\psi_{j}^{-1}(U))=\mathcal{O}_{U_{j}}(\psi_{j}^{-1}(U))
+\]
+
+Es folgt: $\mathcal{O}_{X}(U)$ unabhängig von Wahlen von $i$! Wir
+halten damit $\mathcal{O}_{X}$ Ringgarbe auf $X$, sodass $(X,\mathcal{O}_{X})$
+lokal geringter Raum da $(U_{i},\mathcal{O}_{U_{i}})$ lokal geringter
+Raum $\forall i\in I$, $U_{i}\xrightarrow[\psi_{i}]{\cong}(\psi_{i}(U_{i}),\mathcal{O}_{X}|_{\psi_{i}(U_{i})})$
+als lokal geringter Raum. Damit ist $X$ ein Schema und $X=\cup U_{i}$.
+
+Spezialfall: $U_{ij}=\emptyset$ für alle $i\neq j\in I$, $\coprod U_{i}$
+``disjunkte Vereinigung''.
+\end{proof}
+\begin{example}[10]
+$X_{1},\ldots,X_{n}$ affine Schemata, $X_{i}=\Spec A_{i}$. Dann
+ist
+\[
+\coprod X_{i}\cong\Spec\left(\prod_{i=1}^{n}A_{i}\right)\text{ offen}.
+\]
+
+(nicht für unendlich viele affin!)
+\end{example}
+
+\begin{example}[11]
+$I=\{1,2\}$, $U_{12}\subset U_{1}\xrightarrow{\varphi}U_{21}\subset U_{2}$.
+\[
+X\underset{\text{offen}}{\subset}V=U_{1}\cup_{\varphi}U_{2},
+\]
+
+$\Gamma(V,\mathcal{O}_{X})=\{(s_{1},s_{2})\in\Gamma(V\cap U_{1},\mathcal{O}_{U_{1}})\times\Gamma(V\cap U_{2},\mathcal{O}_{U_{2}})\}$,
+$\varphi^{\flat}(S_{2}|_{U_{21}\cap V})=S_{1}|_{U_{12}\cap V}$.
+\end{example}
+
+\textbf{Affine Gerade mit Doppelpunkt}: $k$ Körper.
+\begin{align*}
+U_{1} & =U_{2}=\mathbb{A}_{k}^{1}=\Spec(k[T])\cong x\text{ abg.}\\
+U_{12} & :=U_{1}\backslash\{x\}\\
+U_{21} & :=U_{2}\backslash\{x\},\ \varphi=\id
+\end{align*}
+
+$X=U_{1}\cup_{\varphi}U_{2}$.  
+\begin{xca*}
+$X$ ist \textbf{nicht} affin!
+\end{xca*}
+
+\section{Der projektive Raum als Schema }
+
+Sei $R$ Ring. $\mathbb{P}_{R}^{n}$ Verklebung von $(n+1)$-Kopien
+des 
+\begin{align*}
+\mathbb{A}_{R}^{n} & =\Spec(R[T_{1},\ldots,T_{n}])\\
+\shortparallel\\
+\Spec\left(R\left[\frac{X_{0}}{X_{i}},\ldots,\frac{\hat{X}_{i}}{X_{i}},\ldots,\frac{X_{n}}{X_{i}}\right]\right)=U_{i}, & i=0,\ldots,n
+\end{align*}
+
+Verklebungs Datum:
+\begin{align*}
+B:= & R[X_{0},\ldots,X_{n},X_{0}^{-1},\ldots,X_{n}^{-1}]\\
+U_{ij} & :=D\left(\frac{X_{j}}{X_{i}}\right)\subset U_{i},\ \text{OE}\ i\neq j\leq n,\\
+U_{ii} & =U_{i},\ \varphi_{ii}=\id
+\end{align*}
+
+$\varphi_{ji}:U_{ij}\rightarrow U_{ji}$ definiert durch
+\[
+\xymatrix{R\left[\frac{X_{0}}{X_{i}},\ldots,\frac{\hat{X}_{i}}{X_{i}},\ldots,\frac{X_{n}}{X_{i}}\right]_{\frac{x_{j}}{x_{i}}}\ar@{=}[r]^{''\id''}\ar@{^{(}->}[dr] & R\left[\frac{x_{0}}{x_{j}},\ldots,\frac{\hat{x}_{j}}{x_{j}},\ldots,\frac{x_{n}}{x_{j}}\right]_{\frac{x_{i}}{x_{j}}}\ar@{^{(}->}[d]\\
+ & B
+}
+\]
+
+Mit ``$\id$'' folgt: Kozykelbedingung automatisch, $U_{i}\rightarrow\Spec(R)$
+verkleben von $\mathbb{P}_{R}^{n}\rightarrow\Spec(R)$ mit $\mathbb{P}_{R}^{n}:=\coprod U_{i}/\sim$
+Schema (über $R$). ``Der projektive Raum relativer Dimension $n$
+über $R$''.
+\begin{xca*}
+$R\xrightarrow{\sim}\Gamma(\mathbb{P}_{R}^{n},\mathcal{O}_{\mathbb{P}_{R}^{n}})$
+(Strukturgarbe) d.h. für $n>0$ ist $\mathbb{P}_{R}^{n}$ nicht affin
+(mit $\mathbb{P}_{R}^{n}=\Spec(R)$).
+\end{xca*}
+
+\section{Nullstellenmenge im projektiven Raum }
+
+Sei $I\subset R[X_{0},\ldots,X_{n}]$ homogenes Ideal, d.h. erzeugt
+von homogenen Elementen.
+
+\[
+\Leftrightarrow I=\bigoplus_{d}I\cap R[X_{1},\ldots,X_{n}]_{d})
+\]
+
+Ziel: $V_{+}(I)\rightarrow\mathbb{P}_{R}^{n}$ Morphismus von Schemata
+\begin{align*}
+R[X_{0},\ldots,X_{n}] & \longrightarrow R\left[\frac{X_{0}}{X_{i}},\ldots,\frac{\hat{X_{i}}}{X_{i}},\ldots,\frac{X_{n}}{X_{i}}\right]=\Gamma(U_{i},\mathcal{O}_{U_{i}})\\
+I & \longmapsto\Phi_{i}(I)\text{ das vom Bild von }I\text{ erzeugte Ideal}
+\end{align*}
+
+Verklebe $V_{i}:=\Spec(\Gamma(U_{i},\mathcal{O}_{U_{i}})/\Phi_{i})\subseteq U_{i}$
+ entlang
+\[
+V_{ij}=D_{V_{i}}\left(\frac{X_{j}}{X_{i}}\right)\xrightarrow{\cong}V_{ji}
+\]
+
+Beachte: $f\in I$, $\deg(f)=d$, $X_{i}^{d}\Phi_{i}(f)=X_{j}^{d}\Phi_{j}(f)$,
+d.h. $\Phi_{i}(f)$ und $\Phi_{j}(f)$ unterscheiden sich in einer
+Einheit auf $D\left(\frac{X_{i}}{X_{j}}\right)$.
+
+$\Longrightarrow\Phi_{i}(I)=\Phi_{j}(I)$ in $\Gamma(U_{ij},\mathcal{O}_{U_{i}})$.
+$\Longrightarrow V_{ij}=V_{ji}$ und Kozykelbedingungen überträgt
+sich von $U_{ij}\subset U_{i}$.
+
+$\Longrightarrow$ Verkleben liefert Schema $V_{+}(I)$ + 
+
+D.h. jedes solche $I$ definiert ein Schema $V_{+}(I)\rightarrow\mathbb{P}_{R}^{n}$.
+
+\chapter*{Grundlegende Eigenschaften von Schemata und Morphismen}
+
+\section{Topologische Eigenschaften }
+\begin{defn}[12]
+Ein Schema $X$ heißt \textbf{zusammenhängend}, \textbf{quasi-kompakt}
+bzw. \textbf{irreduzibel}, falls der unterliegende topologische Raum
+diese Eigenschaft besitzt.
+\end{defn}
+
+\begin{itemize}
+\item Nach Proposition II.5 ist jedes affine Schema quasi-kompakt.
+\item $\coprod_{i=0}\Spec(R)$ ist \emph{nicht }quasi-kompakt.
+\end{itemize}
+\begin{defn}[13]
+$f:X\rightarrow Y$ heißt \textbf{injektiv} (surjektiv, bijektiv),
+falls die zugrendlegende stetige Abbildung diese Eigenschaft hat.
+Ebenso für ``offen'', ``abgeschlossen'', ``Homömorphismus''.
+\end{defn}
+
+Warnung: Homömorphismen von Schemata sind im Allgemeinen \emph{keine
+}Isomorphismen!
+
+\section{Noethersche Schemata }
+\begin{defn}[14]
+Ein Schema heißt \textbf{lokal noethersch}, falls eine affine offene
+Überdeckung $X=\bigcup U_{i}$ existiert, d.d. alle $\Gamma(U_{i},\mathcal{O}_{X})$
+(affine Koordinatenringe) \textbf{noethersch} sind. $X$ heißt \textbf{noethersch},
+falls zusätlich quasi-kompakt.
+\end{defn}
+
+Faktum: Lokalisierung noetherscher Ringe bleiben noethersch.
+
+$\Rightarrow a)$ Jedes lokal noethersche Schema besitzt eine Basis
+der Topologie aus noetherschen affin offenen Unterschemata.
+
+b) $X$ lokal noethersch. Dann ist $\mathcal{O}_{X,x}$ noethersch
+$\forall x\in X$.
+
+Für offene Schemata gilt ferner: lokal noethersch $\Rightarrow$ noethersch.
+\end{document}

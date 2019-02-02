@@ -1,0 +1,275 @@
+%% LyX 2.3.2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[ngerman]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\newlength{\lyxlabelwidth}      % auxiliary length 
+\theoremstyle{plain}
+\newtheorem{thm}{\protect\theoremname}
+\theoremstyle{plain}
+\newtheorem{prop}[thm]{\protect\propositionname}
+\newlist{casenv}{enumerate}{4}
+\setlist[casenv]{leftmargin=*,align=left,widest={iiii}}
+\setlist[casenv,1]{label={{\itshape\ \casename} \arabic*.},ref=\arabic*}
+\setlist[casenv,2]{label={{\itshape\ \casename} \roman*.},ref=\roman*}
+\setlist[casenv,3]{label={{\itshape\ \casename\ \alph*.}},ref=\alph*}
+\setlist[casenv,4]{label={{\itshape\ \casename} \arabic*.},ref=\arabic*}
+\theoremstyle{plain}
+\newtheorem{lem}[thm]{\protect\lemmaname}
+\theoremstyle{remark}
+\newtheorem*{rem*}{\protect\remarkname}
+\theoremstyle{plain}
+\newtheorem{cor}[thm]{\protect\corollaryname}
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{\protect\definitionname}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{faktor}
+\usepackage{mathtools}
+\usepackage{bbold}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\rel}{rel}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\proj}{proj}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\rot}{rot}
+\DeclareMathOperator{\link}{link}
+\DeclareMathOperator{\CAT}{CAT}
+\DeclareMathOperator{\lab}{lab}
+\DeclareMathOperator{\Cay}{Cay}
+\DeclareMathOperator{\Pot}{Pot}
+\DeclareMathOperator{\catk}{CAT(\kappa)}
+\DeclareMathOperator{\cat}{CAT}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Isom}{Isom}
+\DeclareMathOperator{\Pc}{Pc}
+\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Quot}{Quot}
+
+\makeatother
+
+\usepackage{babel}
+\providecommand{\casename}{Fall}
+\providecommand{\corollaryname}{Korollar}
+\providecommand{\definitionname}{Definition}
+\providecommand{\lemmaname}{Lemma}
+\providecommand{\propositionname}{Satz}
+\providecommand{\remarkname}{Bemerkung}
+\providecommand{\theoremname}{Theorem}
+
+\begin{document}
+\begin{prop}[15]
+Für $X\subset\Spec A$ affin gilt:
+\[
+X\text{ noethersch }\Leftrightarrow A\text{ noethersch}
+\]
+\end{prop}
+
+\begin{proof}
+\mbox{}
+\begin{casenv}
+\item[``$\Leftarrow$''] $X$ überdeckt sich selbst mit $\Gamma(X,\mathcal{O}_{X})=A$ noethersch.
+\item[``$\Rightarrow$''] Sei $I\subset A$ beliebiges Ideal. Zu zeigen: $I$ ist endlich erzeugt.
+Nach Voraussetzung ist
+\[
+X=\bigcup_{i=1}^{n}\Spec A_{i},\quad A_{i}\text{ noethersch}.
+\]
+Ohne Einschränking: $A_{i}=A_{f_{i}}$ und noethersch. Daraus folgt:
+$J_{i}=IA_{f_{i}}=I_{f_{i}}$ sind endlich erzeugt, Behauptung folgt
+aus Lemma 16.
+\end{casenv}
+\end{proof}
+\begin{lem}[16]
+$\Spec(A)=\cup_{i\in I}D(f_{i})$, $\#I<\infty$, $M$ $A$-Modul.
+Dann:
+\[
+M\text{ e.e. über }A\Leftrightarrow M_{f_{i}}\text{ e.e. }A_{f_{i}}\text{-Modul }\forall i\in I.
+\]
+\end{lem}
+
+\begin{proof}
+\mbox{}
+\begin{casenv}
+\item[``$\Rightarrow$'' ] Endlich erzeugt heißt $A^{n}\twoheadrightarrow M$, Lokalisierung
+exakt also $A_{f_{i}}^{n}\twoheadrightarrow M_{f_{i}}$ exakt.
+\item[``$\Leftarrow$''] $M_{f_{i}}$ werden von $\frac{m_{ij}}{f_{i}^{n_{ij}}}$, $j=1,\ldots,r_{i}$,
+$m_{ij}\in M$, $n_{ij}\in\mathbb{N}_{0}$ als $A_{f_{i}}$-Modul
+erzeugt.
+
+$\Rightarrow N:=\langle m_{ij}\rangle_{A}\subset M$ ist endlich erzeugt
+und $N_{f_{i}}=M_{f_{i}}$.
+
+$\Rightarrow(M/N)_{\mathfrak{p}}=(M_{f_{i}}/N_{f_{i}})_{\mathfrak{p}}=0$
+für alle Primideale $\mathfrak{p}\in\Spec A$.
+
+$\Rightarrow$ (Lokal-Global-Prinzip aus der kommutativen Algebra)
+$N=M$.
+
+\end{casenv}
+\end{proof}
+\begin{rem*}
+$X$ noethersches Schema. Dann ist $X$ als topologischer Raum noethersch.
+\end{rem*}
+\begin{proof}
+Für $X$ affin klar, sonst $X=\cup_{i=1}^{r}X_{i}$, $X_{i}=\Spec(A_{i})$
+noethersch. Sei
+\[
+X\supseteq Z_{1}\supseteq\cdots\supseteq Z_{n}\supseteq\cdots
+\]
+
+absteigende Kette abgeschlossener Teilmengen. $(Z_{j}\cap X_{i})_{j}$
+absteigende Kette abgeschlossener Teilmengen in $X_{i}$.
+
+$\Longrightarrow$ (endliche Überdeckung) $\exists N$ d.d. $Z_{j}\cap X_{i}=Z_{N}\cap X_{i}$
+für alle $j\geq N$.
+
+$\Longrightarrow Z_{j}=Z_{N}$.
+\end{proof}
+\begin{cor}[17]
+Sei $X$ (lokal) noethersches Schema, $U\subset X$ offenes Unterschema.
+Dann ist $U$ ein (lokal) noethersches Schema.
+\end{cor}
+
+\begin{proof}
+Lokal noethersch $X=\bigcup U_{i}$, $U_{i}\cap U=\bigcup D(f_{i})$.
+Sei $X$ noethersch. Dann ist der topologische Raum $X$ noethersch.
+Nach Lemma $I.20$ ist dann jede offene Teilmenge quasi-kompakt.
+\end{proof}
+
+\section{Generische Punkte }
+\begin{prop}[18]
+Die Abbildung
+\begin{align*}
+X & \longrightarrow\{Z\subset X\mid\text{abg., irred.}\}\\
+x & \longmapsto\overline{\{x\}}
+\end{align*}
+
+ist eine Bijektion, d.h. jede irreduzible abgeschlossene Teilmenge
+enthält genau einen generischen Punkt.
+\end{prop}
+
+\begin{proof}
+Gilt für affine Schemata nach Korollar II.7. Sei $Z\subset X$ irreduzibel,
+abgeschlossen sowie $U\subset X$ affin offen mit $Z\cap U\neq\emptyset$.
+
+$\Longrightarrow\overline{Z\cap U}^{X}=Z$, da $Z$ irreduzibel.
+
+$\Longrightarrow Z\cap U$ irreduzibel mit generischen Punkt $x$,
+$\overline{\{x\}}^{Z\cap U}=Z\cap U$.
+
+$\Longrightarrow\overline{\{x\}}^{X}=Z$.
+
+Umgekehrt: Sei $z\in Z$ generischer Punkt.
+
+$\Longrightarrow[U\subset X$ offen mit $U\cap Z\neq\emptyset$ $\Rightarrow z\in U]$
+d.h. Eindeutigkeit im affinen Fall impliziert allgemeiner Fall.
+\end{proof}
+``Generische Punkte reduzieren gewisse Aussagen auf das Studium von
+\emph{einem} Punkt''.
+\begin{prop}[19]
+Sei $f:X\rightarrow Y$ offener Morphismus von Schemata. Sei $Y=\overline{\{\eta\}}^{Y}$
+irreduzibel. Dann:
+\[
+f^{-1}(\eta)\text{ irreduzibel}\Leftrightarrow X\text{ irreduzibel}
+\]
+\end{prop}
+
+\begin{proof}
+$f$ offen $\Rightarrow\overline{\{f^{-1}(x)\}}=f^{-1}(\overline{\{\eta\}})=f^{-1}(Y)=X$.
+Mit Lemma I.14: $Z$ irreduzibel $\Leftrightarrow\overline{Z}$ irreduzibel.
+\end{proof}
+Topologische Räume von Schemata sind fast nie Hausdorffsch, aber:
+\begin{prop}[20]
+Sei $X$ Schema. Dann ist der unterliegende topologische Raum ein
+$T_{0}$-Raum, d.h.
+\[
+\forall x\neq y\in X\ \exists U\subset X\text{ offen, mit \textbf{entweder }}x\in U\text{ oder }y\in U.
+\]
+\end{prop}
+
+\begin{proof}
+Ohne Einschränkung: $X$ affin, $x=\mathfrak{p}_{x}$, $y=\mathfrak{p}_{y}\in\Spec(\Gamma(X,\mathcal{O}_{X}))$.
+Falls $\mathfrak{p}_{x}\subsetneq\mathfrak{p}_{y}$ wähle
+\[
+\mathfrak{p}_{x}\in U=X\backslash\underbrace{V(\mathfrak{p}_{y})}_{\ni\mathfrak{p}_{y}}
+\]
+
+andernfalls $\exists f\in\mathfrak{p}_{x}\backslash\mathfrak{p}_{y}$,
+d.h. $U=D(f)$ enthält $y$ aber nicht $x$.
+\end{proof}
+Später: Separiertheit von Schemata als ``Hausdorffsch''-Ersatz.
+
+\section{Reduzierte und ganze Schemata }
+\begin{defn}[21]
+Ein Schema $X$ heißt 
+\begin{enumerate}
+\item \textbf{reduziert}, falls alle $\mathcal{O}_{X,x}$, $x\in X$, reduzierte
+Ringe sind.
+\item \textbf{ganz}, falls $X$ reduziert und irreduzibel ist.
+\end{enumerate}
+\end{defn}
+
+\begin{prop}[22]
+\mbox{}
+\begin{enumerate}
+\item $X$ schema ist reduziert (ganz) $\Leftrightarrow\Gamma(U,\mathcal{O}_{X})$
+reduziert (integer) für alle $U\subseteq X$ offen.
+\item Sei $X$ ganz. Dann ist der Halm $\mathcal{O}_{X,x}$ integer $\forall x\in X$.
+(Die Umkehrung ist im Allgemeinen falsch!)
+\end{enumerate}
+\end{prop}
+
+\begin{proof}
+\mbox{}
+\begin{enumerate}
+\item \textbf{reduzibel,} ``$\Rightarrow$''. $f\in\Gamma(U,\mathcal{O}_{X})$
+mit $f^{n}=0$. Angenommen, $f\neq0$. Dann gibt es ein $x\in U$
+mit $f_{x}\neq0$ in $\mathcal{O}_{X,x}$, $f_{x}^{n}=0$. Widerspruch
+
+\textbf{reduzibel,} ``$\Leftarrow$''. Sei $\overline{f}\in\mathcal{O}_{X,x}$
+nilpotent. Dann gibt es ein $x\in U\subset X$ offen und $f\in\Gamma(U,\mathcal{O}_{X})$
+mit $f_{x}=\overline{f}$. Ohne Einschränkng: $f$ nilpotent (mit
+$U$ verkleinern sodass $f^{n}|_{U}=0$). Nach Voraussetzung ist dann
+$f=0$, also $\overline{f}=0$.
+
+\textbf{ganz,} ``$\Rightarrow$''. Sei $X$ ganz. Dann ist $U\subset X$
+offen ganz nach den Definitionen. Daher reicht es zu zeigen, dass
+$\Gamma(X,\mathcal{O}_{X})$ integer ist. Seien $f,g\in\mathcal{O}_{X}(X)$
+mit $fg=0$. Dann ist $X=V(f)\cup V(g)$. $X$ ist irreduzibel, also
+etwa $X=V(f)$. \emph{Behauptung}: $f=0$.
+
+Da Verschwinden aufgrund des Garbenaxioms eine lokale Frage ist, setze
+ohne Einschränking $X=\Spec A$ affin. Es folgt: $f\in\bigcap_{\Spec A}\mathfrak{p}=\sqrt{(0)}=0$.
+
+\textbf{ganz, }``$\Leftarrow$''. $\Gamma(U,\mathcal{O}_{X})$ integer,
+also reduziert. Nach (1, reduziert) ist $X$ reduziert. Angenommen
+es gibt $\emptyset\neq U_{1},U_{2}\subset X$ offen mit $\emptyset=U_{1}\cap U_{2}$.
+Nach den Garbenaxiomen enthält dann $\Gamma(U_{1}\cup U_{2},\mathcal{O}_{X})=\Gamma(U_{1},\mathcal{O}_{X})\times\Gamma(U_{2},\mathcal{O}_{X}$)
+Nullteiler $(1,0)\cdot(0,1)=0$. Widerspruch.
+\item Folgt aus 1, da $A$ integer, $0\notin S$. Es folgt: $A_{S}$ integer
+($\subseteq\Quot(A)$).
+\end{enumerate}
+\end{proof}
+\begin{rem*}
+$X=\Spec A$ ganz $\Leftrightarrow A$ integer, $\eta\in X$ generischer
+Punkt $\Leftrightarrow(0)\subset A$. Es ist $\mathcal{O}_{X,\eta}=A_{(0)}=\Quot(A)$,
+d.h. für jedes ganze Schema $X$ gilt: $\mathcal{O}_{X,\eta}$ ist
+Körper (mit generischer Punkt $\eta$).
+\end{rem*}
+\begin{defn}[23]
+$X$ ganz, $\eta\in X$ generischer Punkt. Dann heißt $K(X):=\mathcal{O}_{X,\eta}$
+der \textbf{Funktionenkörper} von $X$.
+\end{defn}
+
+
+\end{document}

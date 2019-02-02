@@ -1,0 +1,337 @@
+%% LyX 2.3.2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[oneside,ngerman]{book}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{stackrel}
+\usepackage[all]{xy}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\theoremstyle{plain}
+\ifx\thechapter\undefined
+	\newtheorem{thm}{\protect\theoremname}
+\else
+	\newtheorem{thm}{\protect\theoremname}[chapter]
+\fi
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{\protect\definitionname}
+\theoremstyle{plain}
+\newtheorem{prop}[thm]{\protect\propositionname}
+\theoremstyle{plain}
+\newtheorem{lem}[thm]{\protect\lemmaname}
+\theoremstyle{remark}
+\newtheorem*{rem*}{\protect\remarkname}
+\theoremstyle{plain}
+\newtheorem{cor}[thm]{\protect\corollaryname}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+%% User-specified commands
+\DeclareMathOperator{\rad}{rad}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Quot}{Quot}
+\DeclareMathOperator{\res}{res}
+\DeclareMathOperator{\im}{\mathrm{im}}
+\DeclareMathOperator{\Hom}{\mathrm{Hom}}
+\DeclareMathOperator{\Mor}{\mathrm{Mor}}
+\DeclareMathOperator{\id}{\mathrm{id}}
+
+%%sets
+\DeclareMathOperator{\CC}{\mathbb{C}}
+\DeclareMathOperator{\RR}{\mathbb{R}}
+\DeclareMathOperator{\QQ}{\mathbb{Q}}
+\DeclareMathOperator{\ZZ}{\mathbb{Z}}
+\DeclareMathOperator{\NN}{\mathbb{N}}
+
+%% categories
+\DeclareMathOperator{\ouv}{\mathcal{O}uv}
+\DeclareMathOperator{\set}{\underline{Set}}
+\DeclareMathOperator{\ab}{\underline{Ab}}
+\DeclareMathOperator{\cattop}{\underline{Top}}
+\DeclareMathOperator{\cring}{\underline{CRing}}
+\DeclareMathOperator{\ring}{\underline{Ring}}
+\DeclareMathOperator{\psh}{\underline{\mathcal{PS}h}}
+\DeclareMathOperator{\sh}{\underline{\mathcal{S}h}}
+\DeclareMathOperator{\sch}{\underline{Sch}}
+\DeclareMathOperator{\schs}{\underline{Sch/S}}
+
+\makeatother
+
+\usepackage{babel}
+\providecommand{\corollaryname}{Korollar}
+\providecommand{\definitionname}{Definition}
+\providecommand{\lemmaname}{Lemma}
+\providecommand{\propositionname}{Satz}
+\providecommand{\remarkname}{Bemerkung}
+\providecommand{\theoremname}{Theorem}
+
+\begin{document}
+
+\chapter{Schemata}
+
+= Verkleben affiner Schemata
+
+\section{Schemata}
+\begin{defn}
+Ein Schemata ist ein lokal geringter Raum $(X,\mathcal{O}_{X})$,
+der eine offene Überdeckung $(U_{i})_{i\in I}$ besitzt, so dass alle
+lokal geringten Räume $(U_{i},\mathcal{O}_{X|U_{i}})$ affine Schemata
+sind. Für ein Schemata $S$ bezeichne $\schs$ die \textbf{Kategorie
+der Schemata über $S$} oder $S$-Schemata. Die Objekte dieser Kategorie
+sind Morphismen $X\rightarrow S$ von Schemata, und die Morphismen
+$\Hom(X\rightarrow S,Y\rightarrow S)$ sind Morphismen $X\rightarrow Y$
+von Schemata so dass
+\[
+\xymatrix{X\ar[rr]\ar[dr] &  & Y\ar[dl]\\
+ & S
+}
+\]
+
+kommutiert. $X\rightarrow S$ heißt \textbf{Strukturmorphismus} des
+$S$-Schematas $X$. Ist $S=\Spec R$ affin, spricht man auch von
+$R$-Schemata oder Schemata über $R$. Die Menge der Morphismen $X\rightarrow Y$
+in $\schs$ bezeichnen wir mitt $\Hom_{S}(X,Y)$ bzw. $\Hom_{R}(X,Y)$
+falls $S=\Spec R$ affin ist.
+\end{defn}
+
+
+\section{Offene Unterschemata}
+
+Erinnerung: $X=\Spec A$ affin $\Longrightarrow(D(f),\mathcal{O}_{X|D(f)})$
+auch affin, und $D(f)$ Basis der Topologie.
+\begin{prop}[2]
+Sei $X$ ein Schemata.
+\begin{enumerate}
+\item Ist $U\subset X$ eine offene Teilmenge, dann ist der lokal geringte
+Raum $(U,\mathcal{O}_{X\mid U})$ wieder ein Schemata. $U$ heißt
+ein \textbf{offenes Unterschemata}. Ist $U$ affin, dann heißt $U$
+\textbf{affines offenes Schemata}.
+\item Die zugrundlegenden topologische Räume der affinen offene Unterschemata
+bilden eine Basis der Topologie.
+\end{enumerate}
+\end{prop}
+
+\begin{proof}
+Es gibt eine Überdeckung $(U_{i})$ von $X$, d.d. $(U_{i},\mathcal{O}_{X|U_{i}})$
+affine Schemata, $\cong\Spec A$. Es gilt:
+\[
+U=\bigcup_{i}(U\cap U_{i})=\bigcup_{i,j\in I_{i}}D(f_{ij})
+\]
+
+wobei die letzte Gleichheit gilt wegen $\Spec(A_{i})\supset U\cap U_{i}=\bigcup_{j\in I_{i}}D(f_{ij})$,
+$f_{ij}\in A_{i}$.
+\end{proof}
+Zu $U\subset X$ offen gibt es einen kanonischen Morphismus von Schemata
+\[
+(j,j^{\flat}):(U,\mathcal{O}_{X|U)}\longrightarrow(X,\mathcal{O}_{X})
+\]
+
+via der Inklusion $j:U\hookrightarrow X$ und $j^{\flat}:\mathcal{O}_{X}\rightarrow j_{\ast}(\mathcal{O}_{X\mid U})$.
+Für $V\subseteq X$ offen ergibt $\res_{V\cap U}^{V}$ einen Ringhomomorphismus:
+\[
+\Gamma(V,\mathcal{O}_{X})\rightarrow\Gamma(V\cap U,\mathcal{O}_{X})=\Gamma(j^{-1}(V),\mathcal{O}_{X|U})=\Gamma(V,j_{\ast}\mathcal{O}_{X|U}).
+\]
+
+Eine affine offene Überdeckung eines Schematas $X$ ist eine Überdeckung
+$X=\bigcup U_{i}$, sodass alle $U_{i}$ affine offene Unterschemata
+sind.
+\begin{lem}[3]
+Sei $X$ ein Schemata, und seien $U,V\subset X$ affin offene Unterschemata.
+Dann existiert für jedes $x\in U\cap V$ eine Umgebung $x\in W\subset U\cap V$
+offenes Unterschema, welches gleichzeitig prinzipal offen in $U$
+\emph{und} $V$ ist.
+\end{lem}
+
+\begin{proof}
+Sei ohne Einschränkung $V\subset U$ (sonst ersetze $V$ durch eine
+prinzipiale offene Teilmenge von $V$ welche $x$ enthält). Wähle:
+\[
+\xymatrix{f\in\Gamma(U,\mathcal{O}_{X})\ar[d]^{\res} & \text{d.d. }x\in D(f)\subset V\\
+f|_{V}\in\Gamma(V,\mathcal{O}_{X}) & D_{U}(f)=D_{V}(f|_{V})
+}
+\]
+
+denn $\Gamma(U,\mathcal{O}_{X})_{f}=\mathcal{O}_{X}(D_{U}(f)$, $\Gamma(V,\mathcal{O}_{X})_{f|_{V}}=\mathcal{O}_{X}(D_{V}|f_{|_{V}})$.
+\end{proof}
+
+\section{Morphismen in affinen Schemata hinein}
+\begin{prop}[4]
+Sei $X$ ein Schemata, $Y=\Spec B$ ein affines Schemata. Dann ist
+die Abbildung
+\begin{align*}
+\Hom(X,Y) & \overset{\cong}{\longrightarrow}\Hom_{\ring}(B,\Gamma(X,\mathcal{O}_{X})),\\
+(f,f^{\flat}) & \longmapsto f_{Y}^{\flat}
+\end{align*}
+
+eine Bijektion.
+\end{prop}
+
+\begin{prop}[5, Verkleben von Morphismen]
+Seien $X,Y$ lokal geringte Räume. Für $U\subset X$ offen definiert
+\[
+\mathcal{F}:U\mapsto\Hom(U,Y)=\{(U,\mathcal{O}_{X|U})\rightarrow(Y,\mathcal{O}_{Y})\ \text{Morph. lokal ger. Räume\}}
+\]
+
+eine Garbe von Mengen auf $X$, d.h.
+\begin{enumerate}
+\item für eine offene Überdeckung $X=\bigcup_{i}U$, eine Familie $f_{i}:U_{i}\rightarrow Y_{i}$
+verkleben zu Morphismen
+\[
+f:X\rightarrow Y\Longleftrightarrow f_{i}|_{U_{i}\cap U_{j}}=f_{j}|_{U_{i}\cap U_{j}}
+\]
+\item $f$ ist eindeutig bestimmt.
+\end{enumerate}
+\end{prop}
+
+\begin{rem*}
+$\mathcal{G}:U\mapsto\Hom_{\ring}(B,\Gamma(U,\mathcal{O}_{X}))$ ist
+Garbe von Mengen.
+\end{rem*}
+\begin{proof}[Beweis von Proposition 5]
+Verkleben topologischer Räume + stetige Abbildung klar. $\checkmark$
+
+$\mathcal{O}_{Y}\rightarrow f_{\ast}\mathcal{O}_{X}$ lässt sich ebenfalls
+verkleben.
+\end{proof}
+%
+\begin{proof}[Beweis von Proposition 4]
+$X=\bigcup_{i}U_{i}$ sei eine affine offene Überdeckung. Nach Proposition
+2.35 ist $\Hom(U,Y)\rightarrow\Hom(B,\Gamma(U,\mathcal{O}_{X}))$
+eine Bijektion. Für $V\subset U_{i}\cap U_{j}$ kommutiert das Diagramm
+\[
+\xymatrix{\Hom(U,Y)\ar[r]^{\cong}\ar[d] & \Hom(B,\Gamma(U,\mathcal{O}_{X})\ar[d]\\
+\Hom(V,Y)\ar[r]^{\cong} & \Hom(B,\Gamma(V,\mathcal{O}_{X}))
+}
+\]
+
+da $\Gamma(-)$ funktoriell ist. Es folgt, dass $\mathcal{F}\rightarrow\mathcal{G}$
+ein Morphismus von Garben ist mit $\varphi_{U}:\mathcal{F}(U)\overset{\cong}{\rightarrow}\mathcal{G}(U)$
+für alle $U\in\mathcal{B}$, und $F\overset{\cong}{\rightarrow}\mathcal{G}$
+als Garbe. Somit $\mathcal{F}(X)\cong\mathcal{G}(X)$.
+\end{proof}
+$V\subset X$ offen beliebig, $\varphi_{V}=\underset{\underset{U\in B_{V}}{\longleftarrow}}{\lim}\varphi_{U}$.
+
+Da $\mathbb{Z}$ kofinales Objekt in der Kategorie der Ringe ist ($\mathbb{Z}\overset{\exists_{1}}{\rightarrow}R$
+für beliebige Ringe $R$), gilt:
+\begin{cor}[6]
+Sei $X$ ein Schemata. $X$ besitzt einen eindeutig bestimmten Morphismus
+$X\rightarrow\Spec(\mathbb{Z})$, d.h. $\Spec(\mathbb{Z})$ ist ein
+terminales Objekt in der Kategorie der Schemata: Jedes Schemata ist
+ein $\mathbb{Z}$-Schemata.
+\end{cor}
+
+Weiterhin:
+\begin{align*}
+\Hom(X,\underbrace{\Spec\mathbb{Z}[T]}_{\mathbb{A}_{\mathbb{Z}}^{1}}) & =\Hom_{\ring}(\mathbb{Z}[T],\mathcal{O}_{X}(X))=\Gamma(X,\mathcal{O}_{X})\\
+\Hom_{R}(X,\underbrace{\Spec R[T]}_{\mathbb{A}_{R}^{1}}) & =\Gamma(X,\mathcal{O}_{X})\text{ als }R\text{-Algebra für }R\text{-Schemata }X
+\end{align*}
+
+
+\section{Morphismen der Form $\Spec(K)\rightarrow X$}
+
+Sei $X$ ein Schemata und sei $x\in U\subset X$ offene affine Umgebung
+von $x$, z.B. $U=\Spec A$. Sei $\mathfrak{p}=\mathfrak{p}_{x}\subset A$.
+Es folgt: $\mathcal{O}_{X,x}=\mathcal{O}_{U,x}=A_{\mathfrak{p}}$,
+und der Homomorphismus $A\rightarrow A_{\mathfrak{p}}$ induziert
+\[
+j_{x}:\Spec\mathcal{O}_{X,x}=\Spec A_{\mathfrak{p}}\longrightarrow\Spec A=U\subset X
+\]
+
+Morphismus von Schemata, welcher nach Proposition 2 unabhängig von
+$U$ ist. Nach Proposition 2.22 ist
+\begin{align*}
+j_{x}:\Spec\mathcal{O}_{X,x}\overset{\cong}{\longrightarrow}Z & =\{x'\in X\mid x'\text{ Verallgemeinerung von }x\}\\
+(x\in\{x'\}\Leftrightarrow\mathfrak{p}_{x'}\subset\mathfrak{p}_{x})\  & =\bigcap_{x\in U\subseteq_{\text{off.}}X}U
+\end{align*}
+
+Sei $\kappa(x)=\mathcal{O}_{X,x}/\mathfrak{m}_{x}$. Die Abbildung
+$\mathcal{O}_{X,x}\rightarrow\kappa(x)$ induziert einen Morphismus
+von Schemata
+\begin{align*}
+i_{x}:\Spec\kappa(x) & \longrightarrow\Spec\mathcal{O}_{X,x}\longrightarrow X\\
+\{\text{pt}\} & \longmapsto x
+\end{align*}
+
+Nun sei $K$ ein beliebiger Körper, und $f:\Spec K\rightarrow X$
+ein beliebiger Morphismus mit $f(\text{\{pt\}})=x\in X$. Dieser induziert
+einen lokalen Homomorphismus
+\[
+\xymatrix{\mathcal{O}_{X,x}\ar[r]\ar[d] & K=\mathcal{O}_{\Spec(K),(0)}\\
+\kappa(x)\ar[ur]_{\imath}
+}
+\]
+
+d.h. $f$ faktorisiert als $f=i_{x}\circ(\Spec\imath):\Spec K\rightarrow\Spec\kappa(x)\rightarrow X$.
+Damit haben wir:
+\begin{prop}[7]
+Die Abbildung
+\[
+\Hom(\Spec K,X)\longrightarrow\{(x,\imath):x\in X,\ \imath:\kappa(x)\rightarrow K\}
+\]
+
+ist eine Bijektion.
+\end{prop}
+
+\begin{proof}
+Umgekehrt bilden wir:
+\[
+(x,\imath:\kappa(x)\rightarrow K)\longrightarrow(\Spec K\overset{\Spec\imath}{\rightarrow}\Spec\kappa(x)\overset{i_{x}}{\rightarrow}X).
+\]
+\end{proof}
+
+\section{Verkleben von Schemata und disjunkte Vereinigung}
+\begin{defn}
+Ein \textbf{Verklebe-Datum} von Schemata besteht aus:
+\begin{itemize}
+\item einer Indexierung $I$;
+\item ein Schemata $U_{i}$ für $i\in I$;
+\item ein affines Unterschemata $U_{ij}\subset U$ für alle $i,j\in I$;
+\item einen Isomorphismus $U_{ij}\stackrel[\cong]{\varphi_{ji}}{\longrightarrow}U_{ji}$
+für alle $(i,j)\in I\times I$, sodass:
+\begin{enumerate}
+\item $U_{ii}=U_{i}$ für alle $i\in I$;
+\item (Kozykel-Bedingung): $\varphi_{kj}\circ\varphi_{ji}=\varphi_{ki}$
+auf $U_{ij}\cap U_{ik}$, für alle $i,j,k\in I$.
+\end{enumerate}
+\end{itemize}
+\end{defn}
+
+Für die Kozykel-Bedingung soll implizit gelten:
+\begin{align*}
+\varphi_{ji}(U_{ij}\cap U_{ik}) & \subseteq U_{jk}\\
+i=j=k & \Rightarrow\varphi_{ii}=\id_{U_{i}},\\
+\varphi_{ij}^{-1} & =\varphi_{ji},\text{ und}\\
+\varphi_{ji}:U_{ij}\cap U_{ik} & \overset{\cong}{\rightarrow}U_{ji}\cap U_{jk}
+\end{align*}
+
+\begin{prop}[9]
+Zu einem Verklebe-Datum $((U_{i})_{i\in I},(U_{ij})_{i,j\in I},(\varphi_{ij})_{i,j\in I})$
+gibt es ein Schemata $X$ zusammen mit Morphismen $\psi_{i}:U_{i}\rightarrow X$,
+sodass
+\begin{itemize}
+\item für alle $i\in I$ induziert $\psi_{i}$ einen Isomorphismus von $U_{i}$
+auf offene Unterschemata von $X$;
+\item $\psi_{j}\circ\varphi_{ji}=\psi_{i}$ auf $U_{ij}$ für alle $i,j\in I$;
+\item $X=\bigcup_{i}\psi_{i}(U)$;
+\item $\psi_{i}(U_{i})\cap\psi_{j}=\psi_{i}(U_{ij})=\psi_{j}(U_{ji})$ für
+alle $i,j\in I$.
+\end{itemize}
+$(X,\psi_{i\in I})$ ist eindeutig bis auf eindeutige Isomorphie bestimmt.
+\end{prop}
+
+Zusammen mit Proposition 5 folgt die universelle Eigenschaft: Für
+$(T,\xi_{i}:U_{i}\rightarrow T)$ mit $\xi_{i}$ welche Isomorphismen
+\[
+U_{i}\overset{\cong}{\rightarrow}\text{\{offenes Unterschemata von }T\}
+\]
+
+induzieren, sodass $\xi_{j}\circ\varphi_{ji}=\xi_{i}$ auf $U_{ij}$
+für alle $i,j\in I$, dann gibt es einen eindeutigen Morphismus $\xi:X\rightarrow T$
+mit $\xi\circ\psi_{i}=\xi_{i}$ für alle $i\in I$. ($\Longrightarrow$
+Eindeutigkeit von Proposition 9)
+\end{document}
