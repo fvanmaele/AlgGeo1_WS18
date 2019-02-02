@@ -1,0 +1,1068 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{faktor}
+\usepackage{mathtools}
+\usepackage{bbold}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\rel}{rel}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\proj}{proj}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\rot}{rot}
+\DeclareMathOperator{\link}{link}
+\DeclareMathOperator{\CAT}{CAT}
+\DeclareMathOperator{\lab}{lab}
+\DeclareMathOperator{\Cay}{Cay}
+\DeclareMathOperator{\Pot}{Pot}
+\DeclareMathOperator{\catk}{CAT(\kappa)}
+\DeclareMathOperator{\cat}{CAT}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Isom}{Isom}
+\DeclareMathOperator{\Pc}{Pc}
+\DeclareMathOperator{\diam}{diam}
+\end_preamble
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams
+theorems-ams-extended
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Exercise
+Sei 
+\begin_inset Formula $k$
+\end_inset
+
+ algebraisch abgeschlossen.
+\end_layout
+
+\begin_layout Enumerate
+a) Sei 
+\begin_inset Formula $(X,\mathcal{O}_{X})$
+\end_inset
+
+ Prävarietät.
+ Dann ist klar: 
+\begin_inset Formula $(X,\mathcal{O}_{X})$
+\end_inset
+
+ ist ein geringter Raum.
+ Noch zu zeigen: Halme von 
+\begin_inset Formula $\mathcal{O}_{X}$
+\end_inset
+
+ sind lokal.
+ Dazu ohne Einschränkung: 
+\begin_inset Formula $X$
+\end_inset
+
+ affine Varietät, 
+\begin_inset Formula $X\subseteq\mathbb{A}^{n}(k)$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\Gamma(X)=k[T_{1},\ldots,T_{n}]/I(X)\cong\hom(X,\mathbb{A}^{n}(k))
+\]
+
+\end_inset
+
+Für 
+\begin_inset Formula $U\subset X$
+\end_inset
+
+ offen
+\begin_inset Formula 
+\[
+\mathcal{O}_{X}(U)=\bigcap_{y\in U}\Gamma(X)_{\mathfrak{m}_{y}}\subseteq K(X)
+\]
+
+\end_inset
+
+wobei 
+\begin_inset Formula $\mathfrak{m}_{y}=\ker(\Gamma(X)\rightarrow k$
+\end_inset
+
+, 
+\begin_inset Formula $f\mapsto f(x)$
+\end_inset
+
+).
+ Sei 
+\begin_inset Formula $x\in X$
+\end_inset
+
+.
+ Dann ist der Halm
+\begin_inset Formula 
+\[
+\mathcal{O}_{X,x}=\underset{\underset{U\ni x,\ U\subseteq X\text{ off.}}{\longrightarrow}}{\lim}\mathcal{O}_{X}(U)=\bigcup_{U\ni x}\bigcap_{y\in U}\Gamma(X)_{\mathfrak{m}_{y}}=\Gamma(X)_{\mathfrak{m}_{x}}\text{ lokaler Ring!}
+\]
+
+\end_inset
+
+Die letzte Gleichung gilt, da:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $\subseteq$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ klar.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $\supseteq$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $f\in\Gamma(X)_{\mathfrak{m}_{x}}$
+\end_inset
+
+, 
+\begin_inset Formula $f=\frac{g}{h}$
+\end_inset
+
+ mit 
+\begin_inset Formula $h\notin\mathfrak{m}_{x}$
+\end_inset
+
+.
+ Es folgt: 
+\begin_inset Formula $x\in D(h)$
+\end_inset
+
+, für alle 
+\begin_inset Formula $y\in D(h)$
+\end_inset
+
+: 
+\begin_inset Formula $h\notin\mathfrak{m}_{y}$
+\end_inset
+
+, also 
+\begin_inset Formula $f\in\Gamma(X)_{\mathfrak{m}_{y}}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Ist 
+\begin_inset Formula $f:X\rightarrow Y$
+\end_inset
+
+ Morphismus von Prävarietäten, dann liefert das:
+\begin_inset Formula 
+\[
+f^{\flat}:\mathcal{O}_{Y}\rightarrow f_{\ast}\mathcal{O}_{X}
+\]
+
+\end_inset
+
+durch
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\forall U\subseteq X$
+\end_inset
+
+ offen
+\begin_inset Formula 
+\begin{align*}
+\mathcal{O}_{Y}(U) & \longrightarrow\mathcal{O}_{X}(f^{-1}(U))\\
+g & \longmapsto g\circ f
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula $\leadsto$
+\end_inset
+
+ Morphismus von geringten Räumen.
+ Noch zu zeigen: Morphismus von lokal geringten Räumen, dazu 
+\begin_inset Formula $X,T$
+\end_inset
+
+ ohne Einschränkung affin.
+ 
+\begin_inset Formula $f$
+\end_inset
+
+ entspricht einen 
+\begin_inset Formula $k$
+\end_inset
+
+-Algebra-Homomorphismus
+\begin_inset Formula 
+\[
+\varphi:\Gamma(Y)\rightarrow\Gamma(X)
+\]
+
+\end_inset
+
+Sei 
+\begin_inset Formula $x\in X$
+\end_inset
+
+, 
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+ und 
+\begin_inset Formula $f\in\Gamma(Y)$
+\end_inset
+
+.
+ Wenn 
+\begin_inset Formula $g'\in\mathfrak{m}_{y}$
+\end_inset
+
+, dann 
+\begin_inset Formula $g(y)=0$
+\end_inset
+
+, 
+\begin_inset Formula $g(y)=g(f(x))=\varphi(g)(x)$
+\end_inset
+
+, also 
+\begin_inset Formula $\varphi(g)\in\mathfrak{m}_{x}$
+\end_inset
+
+.
+ Dies liefert einen Funktor 
+\begin_inset Formula $\mathcal{F}$
+\end_inset
+
+ von Prävarietäten nach lokal geringten Räumen.
+ Dieser ist offensichtlich treu:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Sind 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ Prävarietäten, 
+\begin_inset Formula $f,g:X\rightarrow Y$
+\end_inset
+
+, 
+\begin_inset Formula $\mathcal{F}(X)=(X,\mathcal{O}_{X})$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+\mathcal{F}(f):=(h,h^{\flat}):\ \mathcal{F}(X)=(X,\mathcal{O}_{X})\rightarrow\mathcal{F}(Y)=(Y,\mathcal{O}_{Y})
+\]
+
+\end_inset
+
+d.h.
+ 
+\begin_inset Formula $h:X\rightarrow Y$
+\end_inset
+
+ stetige Abbildung durch
+\begin_inset Formula 
+\[
+h^{\flat}:\mathcal{O}_{Y}\rightarrow h_{\ast}\mathcal{O}_{X}
+\]
+
+\end_inset
+
+durch 
+\begin_inset Formula $h:=f$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+h_{U}^{\flat}:\mathcal{O}_{Y}(U) & \rightarrow\mathcal{O}_{X}(f^{-1}(U))\\
+s & \mapsto s\circ f
+\end{align*}
+
+\end_inset
+
+für 
+\begin_inset Formula $U\subseteq Y$
+\end_inset
+
+ offen.
+ Sind 
+\begin_inset Formula $f,g:X\rightarrow Y$
+\end_inset
+
+ Morphismen zwischen Prävarietäten, sodass
+\begin_inset Formula 
+\[
+\mathcal{F}(f)=(h,h^{\flat})=\mathcal{F}(g)=(l,l^{\flat})
+\]
+
+\end_inset
+
+Es folgt: 
+\begin_inset Formula $f=h=l=g$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula 
+\begin{align*}
+f\in\Gamma(X)=k[T_{1},\ldots T_{n}]/I(X) & \overset{\cong}{\longrightarrow}\hom(X,\mathbb{A}^{1}(k))\\
+f & \longmapsto(x\mapsto f(x))
+\end{align*}
+
+\end_inset
+
+Sei 
+\begin_inset Formula $x\in X\subseteq\mathbb{A}^{n}(k)$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+\xymatrix{\\
+\\
+\\
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Zu 2: Betrachte lokal geringte Räume über 
+\begin_inset Formula $k$
+\end_inset
+
+, d.h.
+ lokal geringte Räume 
+\begin_inset Formula $(X,\mathcal{O}_{X})$
+\end_inset
+
+ sodass 
+\begin_inset Formula $\mathcal{O}_{X}$
+\end_inset
+
+ Garbe von 
+\begin_inset Formula $k$
+\end_inset
+
+-Algebren ist.
+\end_layout
+
+\begin_layout Claim*
+Funktor 
+\begin_inset Formula $\mathcal{F}$
+\end_inset
+
+ von vorher ist voll (als Funktior in lokal geringten Räumen über 
+\begin_inset Formula $k$
+\end_inset
+
+).
+ Sei 
+\begin_inset Formula $(f,f^{\flat}):(X,\mathcal{O}_{X})\rightarrow(Y,\mathcal{O}_{Y})$
+\end_inset
+
+ Morphismus lokal geringter Räume über 
+\begin_inset Formula $k$
+\end_inset
+
+, mit 
+\begin_inset Formula $(X,\mathcal{O}_{X})$
+\end_inset
+
+, 
+\begin_inset Formula $(Y,\mathcal{O}_{Y})$
+\end_inset
+
+ Prävarietäten (d.h.
+ isomorph zum Bild von Prävarietäten unter 
+\begin_inset Formula $\mathcal{F}$
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Claim*
+Zu zeigen: 
+\begin_inset Formula $\forall U\subseteq Y$
+\end_inset
+
+ offen ist
+\begin_inset Formula 
+\begin{align*}
+\mathcal{O}_{Y}(U) & \overset{f_{U}^{\flat}}{\longrightarrow}\mathcal{O}_{X}(f^{-1}(U))\\
+\text{gegeben durch }g & \longmapsto g\circ f.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $x\in X$
+\end_inset
+
+, 
+\begin_inset Formula $U\subseteq Y$
+\end_inset
+
+ offen, 
+\begin_inset Formula $g\in\mathcal{O}_{Y}(U)$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+\xymatrix{\\
+\\
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+(a) Ergänze (iv) 
+\begin_inset Formula $\ker\varphi$
+\end_inset
+
+ ist nilpotent.
+\end_layout
+
+\begin_layout Exercise
+Behauptung: 
+\begin_inset Formula $(i)\Leftrightarrow(i)\underset{\not\Leftarrow}{\Rightarrow}(iii)\Leftrightarrow(iv)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $(i)\Rightarrow(ii)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $\varphi:A\rightarrow B$
+\end_inset
+
+ injektiv.
+ Sei 
+\begin_inset Formula $g\in A$
+\end_inset
+
+ nicht nilpotent.
+ Da 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ injektiv, folgt dass 
+\begin_inset Formula $\varphi(g)$
+\end_inset
+
+ nilpotent ist.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+xymatrix
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\mathcal{O}_{Y}(D(g)) & \rightarrow f_{\ast}\mathcal{O}_{X}(D(g))=\mathcal{O}_{X}(f^{-1}(D(g))=\mathcal{O}_{X}(D(\varphi(g))\\
+=A\left[\frac{1}{g}\right] & \rightarrow B\left[\frac{1}{\varphi(g)}\right]
+\end{align*}
+
+\end_inset
+
+Ist 
+\begin_inset Formula $\frac{h}{g^{n}}$
+\end_inset
+
+ im Kern dieser Abbildung, dann 
+\begin_inset Formula $\frac{\varphi(h)}{\varphi(g^{n})}=0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow\varphi(h)=0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ (
+\begin_inset Formula $\varphi$
+\end_inset
+
+ injektiv) 
+\begin_inset Formula $h=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow f^{\flat}$
+\end_inset
+
+ ist injektiv.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $(i)\Rightarrow(iii)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Sei 
+\begin_inset Formula $g\in A$
+\end_inset
+
+ nicht nilpotent.
+ 
+\begin_inset Formula $\Rightarrow\varphi(g)$
+\end_inset
+
+ nicht nilpotent.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow D(\varphi(g))\neq\emptyset$
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $x\in D(\varphi(g))$
+\end_inset
+
+, d.h.
+ 
+\begin_inset Formula $\varphi(g)\notin x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ (
+\begin_inset Formula $\varphi$
+\end_inset
+
+ injektiv) 
+\begin_inset Formula $g\notin\varphi^{-1}(x)=f(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow f(x)\in D(g)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ Bild
+\begin_inset Formula $(f)\cap D(g)\neq\emptyset$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $(iii)\Rightarrow(iv)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Sei 
+\begin_inset Formula $h\in\ker\varphi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow\forall x\in X$
+\end_inset
+
+ ist 
+\begin_inset Formula $\varphi(h)\in x$
+\end_inset
+
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow\forall x\in X$
+\end_inset
+
+: 
+\begin_inset Formula $h\in\varphi^{-1}(x)=f(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Leftrightarrow\forall x\in X$
+\end_inset
+
+: 
+\begin_inset Formula $f(x)\in V(h)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Leftrightarrow$
+\end_inset
+
+ Bild
+\begin_inset Formula $(f)\subseteq V(h)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Leftrightarrow V(h)=Y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Leftrightarrow h$
+\end_inset
+
+ nilpotent
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $(iv)\Rightarrow(iii)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $(iii)\not\Rightarrow(i)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $k[X]/X^{2}\rightarrow k$
+\end_inset
+
+, 
+\begin_inset Formula $k$
+\end_inset
+
+ Körper.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+(b) 
+\begin_inset Formula $(i)\Leftrightarrow(ii)\underset{\not\Leftarrow}{\Rightarrow}(iii)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $(i)\Rightarrow(ii)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Sei 
+\begin_inset Formula $y\in Y$
+\end_inset
+
+.
+ Betrachte 
+\begin_inset Formula $\mathcal{O}_{Y,y}\rightarrow(f,\mathcal{O}_{X})_{y}$
+\end_inset
+
+.
+ Elemente in 
+\begin_inset Formula $\mathcal{O}_{Y,y}$
+\end_inset
+
+ sind von der Form
+\begin_inset Formula 
+\[
+\left[D(h),\frac{a}{h^{n}}\right],\ h\in A,a\in A,\ n\in\mathbb{N}_{0}
+\]
+
+\end_inset
+
+Morphismus schickt das auf
+\begin_inset Formula 
+\[
+\left[D(\varphi(h)),\frac{\varphi(a)}{\varphi(h)^{n}}\right].
+\]
+
+\end_inset
+
+Ist 
+\begin_inset Formula $\left[D(l),\frac{b}{l^{n}}\right]\in(f_{\ast}\mathcal{O}_{X})_{y}$
+\end_inset
+
+, 
+\begin_inset Formula $l\in B,$
+\end_inset
+
+ 
+\begin_inset Formula $b\in B$
+\end_inset
+
+, 
+\begin_inset Formula $m\in\mathbb{N}_{0}$
+\end_inset
+
+ wähle 
+\begin_inset Formula $a,h\in A$
+\end_inset
+
+ mit 
+\begin_inset Formula $\varphi(a)=b$
+\end_inset
+
+, 
+\begin_inset Formula $\varphi(h)=l$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\leadsto\left[D(h),\frac{a}{h^{n}}\right]$
+\end_inset
+
+ ist Urbild.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $(i)\Rightarrow(iii)$
+\end_inset
+
+ Vorlesung.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $(ii)\Rightarrow(i)$
+\end_inset
+
+.
+ Betrachte
+\begin_inset Formula 
+\begin{align*}
+\xymatrix{A\ar[r]^{\varphi} & B\\
+ & A/\ker\varphi
+}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ topologischer Raum, 
+\begin_inset Formula $Y=\{\ast\}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathcal{F}=\Sigma$
+\end_inset
+
+, 
+\begin_inset Formula $f:X\rightarrow Y$
+\end_inset
+
+ konstante Garbe auf 
+\begin_inset Formula $Y$
+\end_inset
+
+ mit Wert 
+\begin_inset Formula $S$
+\end_inset
+
+, 
+\begin_inset Formula $S$
+\end_inset
+
+ Menge, 
+\begin_inset Formula $\#S>1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Exercise
+\begin_inset Formula $\Rightarrow\forall U\subseteq X$
+\end_inset
+
+ offen, 
+\begin_inset Formula $U\neq\emptyset$
+\end_inset
+
+: 
+\begin_inset Formula $f^{+}\mathcal{F}(U)=S$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+\begin_inset Formula $\Rightarrow f^{+}\mathcal{F}$
+\end_inset
+
+ ist konstante Prägarbe, also nicht unbedingt Garbe (nämlich wenn 
+\begin_inset Formula $X$
+\end_inset
+
+ nicht irreduzibel, z.B.
+ 
+\begin_inset Formula $X=\{0,1\}$
+\end_inset
+
+ diskret.)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+Ist 
+\begin_inset Formula $A\rightarrow B\rightarrow C$
+\end_inset
+
+ eine exakte Sequenz von Garben von alg.
+ Gruppen auf 
+\begin_inset Formula $Y$
+\end_inset
+
+, dann 
+\begin_inset Formula $\forall y\in Y$
+\end_inset
+
+: 
+\begin_inset Formula $A_{y}\rightarrow B_{y}\rightarrow C_{y}$
+\end_inset
+
+ exakt.
+\end_layout
+
+\begin_layout Proof
+Nach Vorlesung: 
+\begin_inset Formula $\forall x\in X$
+\end_inset
+
+: 
+\begin_inset Formula $(f^{-1}A)_{x}=A_{f(x)}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Rightarrow\forall x$
+\end_inset
+
+ ist 
+\begin_inset Formula $(f^{-1}A)_{x}\rightarrow(f^{-1}B)_{x}\rightarrow(f^{-1}C)_{x}$
+\end_inset
+
+ exakt.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Rightarrow f^{-1}A\rightarrow f^{-1}B\rightarrow f^{-1}C$
+\end_inset
+
+ exakt.
+\end_layout
+
+\end_body
+\end_document

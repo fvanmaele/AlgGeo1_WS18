@@ -1,0 +1,1294 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{faktor}
+\usepackage{mathtools}
+\usepackage{bbold}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\rel}{rel}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\proj}{proj}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\rot}{rot}
+\DeclareMathOperator{\link}{link}
+\DeclareMathOperator{\CAT}{CAT}
+\DeclareMathOperator{\lab}{lab}
+\DeclareMathOperator{\Cay}{Cay}
+\DeclareMathOperator{\Pot}{Pot}
+\DeclareMathOperator{\catk}{CAT(\kappa)}
+\DeclareMathOperator{\cat}{CAT}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Isom}{Isom}
+\DeclareMathOperator{\Pc}{Pc}
+\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Quot}{Quot}
+\end_preamble
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams
+theorems-ams-extended
+\end_modules
+\maintain_unincluded_children false
+\language ngerman
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style german
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Proposition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+15
+\end_layout
+
+\end_inset
+
+Für 
+\begin_inset Formula $X\subset\Spec A$
+\end_inset
+
+ affin gilt:
+\begin_inset Formula 
+\[
+X\text{ noethersch }\Leftrightarrow A\text{ noethersch}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Case
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $\Leftarrow$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $X$
+\end_inset
+
+ überdeckt sich selbst mit 
+\begin_inset Formula $\Gamma(X,\mathcal{O}_{X})=A$
+\end_inset
+
+ noethersch.
+\end_layout
+
+\begin_layout Case
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Sei 
+\begin_inset Formula $I\subset A$
+\end_inset
+
+ beliebiges Ideal.
+ Zu zeigen: 
+\begin_inset Formula $I$
+\end_inset
+
+ ist endlich erzeugt.
+ Nach Voraussetzung ist
+\begin_inset Formula 
+\[
+X=\bigcup_{i=1}^{n}\Spec A_{i},\quad A_{i}\text{ noethersch}.
+\]
+
+\end_inset
+
+Ohne Einschränking: 
+\begin_inset Formula $A_{i}=A_{f_{i}}$
+\end_inset
+
+ und noethersch.
+ Daraus folgt: 
+\begin_inset Formula $J_{i}=IA_{f_{i}}=I_{f_{i}}$
+\end_inset
+
+ sind endlich erzeugt, Behauptung folgt aus Lemma 16.
+\end_layout
+
+\end_deeper
+\begin_layout Lemma
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+16
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\Spec(A)=\cup_{i\in I}D(f_{i})$
+\end_inset
+
+, 
+\begin_inset Formula $\#I<\infty$
+\end_inset
+
+, 
+\begin_inset Formula $M$
+\end_inset
+
+ 
+\begin_inset Formula $A$
+\end_inset
+
+-Modul.
+ Dann:
+\begin_inset Formula 
+\[
+M\text{ e.e. über }A\Leftrightarrow M_{f_{i}}\text{ e.e. }A_{f_{i}}\text{-Modul }\forall i\in I.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Case
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+Endlich erzeugt heißt 
+\begin_inset Formula $A^{n}\twoheadrightarrow M$
+\end_inset
+
+, Lokalisierung exakt also 
+\begin_inset Formula $A_{f_{i}}^{n}\twoheadrightarrow M_{f_{i}}$
+\end_inset
+
+ exakt.
+\end_layout
+
+\begin_layout Case
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $\Leftarrow$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $M_{f_{i}}$
+\end_inset
+
+ werden von 
+\begin_inset Formula $\frac{m_{ij}}{f_{i}^{n_{ij}}}$
+\end_inset
+
+, 
+\begin_inset Formula $j=1,\ldots,r_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $m_{ij}\in M$
+\end_inset
+
+, 
+\begin_inset Formula $n_{ij}\in\mathbb{N}_{0}$
+\end_inset
+
+ als 
+\begin_inset Formula $A_{f_{i}}$
+\end_inset
+
+-Modul erzeugt.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow N:=\langle m_{ij}\rangle_{A}\subset M$
+\end_inset
+
+ ist endlich erzeugt und 
+\begin_inset Formula $N_{f_{i}}=M_{f_{i}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow(M/N)_{\mathfrak{p}}=(M_{f_{i}}/N_{f_{i}})_{\mathfrak{p}}=0$
+\end_inset
+
+ für alle Primideale 
+\begin_inset Formula $\mathfrak{p}\in\Spec A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ (Lokal-Global-Prinzip aus der kommutativen Algebra) 
+\begin_inset Formula $N=M$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Remark*
+\begin_inset Formula $X$
+\end_inset
+
+ noethersches Schema.
+ Dann ist 
+\begin_inset Formula $X$
+\end_inset
+
+ als topologischer Raum noethersch.
+\end_layout
+
+\begin_layout Proof
+Für 
+\begin_inset Formula $X$
+\end_inset
+
+ affin klar, sonst 
+\begin_inset Formula $X=\cup_{i=1}^{r}X_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $X_{i}=\Spec(A_{i})$
+\end_inset
+
+ noethersch.
+ Sei
+\begin_inset Formula 
+\[
+X\supseteq Z_{1}\supseteq\cdots\supseteq Z_{n}\supseteq\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+absteigende Kette abgeschlossener Teilmengen.
+ 
+\begin_inset Formula $(Z_{j}\cap X_{i})_{j}$
+\end_inset
+
+ absteigende Kette abgeschlossener Teilmengen in 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+ (endliche Überdeckung) 
+\begin_inset Formula $\exists N$
+\end_inset
+
+ d.d.
+ 
+\begin_inset Formula $Z_{j}\cap X_{i}=Z_{N}\cap X_{i}$
+\end_inset
+
+ für alle 
+\begin_inset Formula $j\geq N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Longrightarrow Z_{j}=Z_{N}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Corollary
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+17
+\end_layout
+
+\end_inset
+
+Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ (lokal) noethersches Schema, 
+\begin_inset Formula $U\subset X$
+\end_inset
+
+ offenes Unterschema.
+ Dann ist 
+\begin_inset Formula $U$
+\end_inset
+
+ ein (lokal) noethersches Schema.
+\end_layout
+
+\begin_layout Proof
+Lokal noethersch 
+\begin_inset Formula $X=\bigcup U_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $U_{i}\cap U=\bigcup D(f_{i})$
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ noethersch.
+ Dann ist der topologische Raum 
+\begin_inset Formula $X$
+\end_inset
+
+ noethersch.
+ Nach Lemma 
+\begin_inset Formula $I.20$
+\end_inset
+
+ ist dann jede offene Teilmenge quasi-kompakt.
+\end_layout
+
+\begin_layout Section
+Generische Punkte 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+18
+\end_layout
+
+\end_inset
+
+Die Abbildung
+\begin_inset Formula 
+\begin{align*}
+X & \longrightarrow\{Z\subset X\mid\text{abg., irred.}\}\\
+x & \longmapsto\overline{\{x\}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition
+ist eine Bijektion, d.h.
+ jede irreduzible abgeschlossene Teilmenge enthält genau einen generischen
+ Punkt.
+\end_layout
+
+\begin_layout Proof
+Gilt für affine Schemata nach Korollar II.7.
+ Sei 
+\begin_inset Formula $Z\subset X$
+\end_inset
+
+ irreduzibel, abgeschlossen sowie 
+\begin_inset Formula $U\subset X$
+\end_inset
+
+ affin offen mit 
+\begin_inset Formula $Z\cap U\neq\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Longrightarrow\overline{Z\cap U}^{X}=Z$
+\end_inset
+
+, da 
+\begin_inset Formula $Z$
+\end_inset
+
+ irreduzibel.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Longrightarrow Z\cap U$
+\end_inset
+
+ irreduzibel mit generischen Punkt 
+\begin_inset Formula $x$
+\end_inset
+
+, 
+\begin_inset Formula $\overline{\{x\}}^{Z\cap U}=Z\cap U$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Longrightarrow\overline{\{x\}}^{X}=Z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Umgekehrt: Sei 
+\begin_inset Formula $z\in Z$
+\end_inset
+
+ generischer Punkt.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Longrightarrow[U\subset X$
+\end_inset
+
+ offen mit 
+\begin_inset Formula $U\cap Z\neq\emptyset$
+\end_inset
+
+ 
+\begin_inset Formula $\Rightarrow z\in U]$
+\end_inset
+
+ d.h.
+ Eindeutigkeit im affinen Fall impliziert allgemeiner Fall.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Quotes eld
+\end_inset
+
+Generische Punkte reduzieren gewisse Aussagen auf das Studium von 
+\emph on
+einem
+\emph default
+ Punkt
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proposition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+19
+\end_layout
+
+\end_inset
+
+Sei 
+\begin_inset Formula $f:X\rightarrow Y$
+\end_inset
+
+ offener Morphismus von Schemata.
+ Sei 
+\begin_inset Formula $Y=\overline{\{\eta\}}^{Y}$
+\end_inset
+
+ irreduzibel.
+ Dann:
+\begin_inset Formula 
+\[
+f^{-1}(\eta)\text{ irreduzibel}\Leftrightarrow X\text{ irreduzibel}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $f$
+\end_inset
+
+ offen 
+\begin_inset Formula $\Rightarrow\overline{\{f^{-1}(x)\}}=f^{-1}(\overline{\{\eta\}})=f^{-1}(Y)=X$
+\end_inset
+
+.
+ Mit Lemma I.14: 
+\begin_inset Formula $Z$
+\end_inset
+
+ irreduzibel 
+\begin_inset Formula $\Leftrightarrow\overline{Z}$
+\end_inset
+
+ irreduzibel.
+\end_layout
+
+\begin_layout Standard
+Topologische Räume von Schemata sind fast nie Hausdorffsch, aber:
+\end_layout
+
+\begin_layout Proposition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+20
+\end_layout
+
+\end_inset
+
+Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ Schema.
+ Dann ist der unterliegende topologische Raum ein 
+\begin_inset Formula $T_{0}$
+\end_inset
+
+-Raum, d.h.
+\begin_inset Formula 
+\[
+\forall x\neq y\in X\ \exists U\subset X\text{ offen, mit \textbf{entweder }}x\in U\text{ oder }y\in U.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Ohne Einschränkung: 
+\begin_inset Formula $X$
+\end_inset
+
+ affin, 
+\begin_inset Formula $x=\mathfrak{p}_{x}$
+\end_inset
+
+, 
+\begin_inset Formula $y=\mathfrak{p}_{y}\in\Spec(\Gamma(X,\mathcal{O}_{X}))$
+\end_inset
+
+.
+ Falls 
+\begin_inset Formula $\mathfrak{p}_{x}\subsetneq\mathfrak{p}_{y}$
+\end_inset
+
+ wähle
+\begin_inset Formula 
+\[
+\mathfrak{p}_{x}\in U=X\backslash\underbrace{V(\mathfrak{p}_{y})}_{\ni\mathfrak{p}_{y}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+andernfalls 
+\begin_inset Formula $\exists f\in\mathfrak{p}_{x}\backslash\mathfrak{p}_{y}$
+\end_inset
+
+, d.h.
+ 
+\begin_inset Formula $U=D(f)$
+\end_inset
+
+ enthält 
+\begin_inset Formula $y$
+\end_inset
+
+ aber nicht 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Später: Separiertheit von Schemata als 
+\begin_inset Quotes eld
+\end_inset
+
+Hausdorffsch
+\begin_inset Quotes erd
+\end_inset
+
+-Ersatz.
+\end_layout
+
+\begin_layout Section
+Reduzierte und ganze Schemata 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+11
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+21
+\end_layout
+
+\end_inset
+
+Ein Schema 
+\begin_inset Formula $X$
+\end_inset
+
+ heißt 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\series bold
+reduziert
+\series default
+, falls alle 
+\begin_inset Formula $\mathcal{O}_{X,x}$
+\end_inset
+
+, 
+\begin_inset Formula $x\in X$
+\end_inset
+
+, reduzierte Ringe sind.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+ganz
+\series default
+, falls 
+\begin_inset Formula $X$
+\end_inset
+
+ reduziert und irreduzibel ist.
+\end_layout
+
+\end_deeper
+\begin_layout Proposition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+22
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $X$
+\end_inset
+
+ schema ist reduziert (ganz) 
+\begin_inset Formula $\Leftrightarrow\Gamma(U,\mathcal{O}_{X})$
+\end_inset
+
+ reduziert (integer) für alle 
+\begin_inset Formula $U\subseteq X$
+\end_inset
+
+ offen.
+\end_layout
+
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ ganz.
+ Dann ist der Halm 
+\begin_inset Formula $\mathcal{O}_{X,x}$
+\end_inset
+
+ integer 
+\begin_inset Formula $\forall x\in X$
+\end_inset
+
+.
+ (Die Umkehrung ist im Allgemeinen falsch!)
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\series bold
+reduzibel,
+\series default
+ 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\begin_inset Formula $f\in\Gamma(U,\mathcal{O}_{X})$
+\end_inset
+
+ mit 
+\begin_inset Formula $f^{n}=0$
+\end_inset
+
+.
+ Angenommen, 
+\begin_inset Formula $f\neq0$
+\end_inset
+
+.
+ Dann gibt es ein 
+\begin_inset Formula $x\in U$
+\end_inset
+
+ mit 
+\begin_inset Formula $f_{x}\neq0$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathcal{O}_{X,x}$
+\end_inset
+
+, 
+\begin_inset Formula $f_{x}^{n}=0$
+\end_inset
+
+.
+ Widerspruch
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+reduzibel,
+\series default
+ 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $\Leftarrow$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $\overline{f}\in\mathcal{O}_{X,x}$
+\end_inset
+
+ nilpotent.
+ Dann gibt es ein 
+\begin_inset Formula $x\in U\subset X$
+\end_inset
+
+ offen und 
+\begin_inset Formula $f\in\Gamma(U,\mathcal{O}_{X})$
+\end_inset
+
+ mit 
+\begin_inset Formula $f_{x}=\overline{f}$
+\end_inset
+
+.
+ Ohne Einschränkng: 
+\begin_inset Formula $f$
+\end_inset
+
+ nilpotent (mit 
+\begin_inset Formula $U$
+\end_inset
+
+ verkleinern sodass 
+\begin_inset Formula $f^{n}|_{U}=0$
+\end_inset
+
+).
+ Nach Voraussetzung ist dann 
+\begin_inset Formula $f=0$
+\end_inset
+
+, also 
+\begin_inset Formula $\overline{f}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+ganz,
+\series default
+ 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ ganz.
+ Dann ist 
+\begin_inset Formula $U\subset X$
+\end_inset
+
+ offen ganz nach den Definitionen.
+ Daher reicht es zu zeigen, dass 
+\begin_inset Formula $\Gamma(X,\mathcal{O}_{X})$
+\end_inset
+
+ integer ist.
+ Seien 
+\begin_inset Formula $f,g\in\mathcal{O}_{X}(X)$
+\end_inset
+
+ mit 
+\begin_inset Formula $fg=0$
+\end_inset
+
+.
+ Dann ist 
+\begin_inset Formula $X=V(f)\cup V(g)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $X$
+\end_inset
+
+ ist irreduzibel, also etwa 
+\begin_inset Formula $X=V(f)$
+\end_inset
+
+.
+ 
+\emph on
+Behauptung
+\emph default
+: 
+\begin_inset Formula $f=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Da Verschwinden aufgrund des Garbenaxioms eine lokale Frage ist, setze ohne
+ Einschränking 
+\begin_inset Formula $X=\Spec A$
+\end_inset
+
+ affin.
+ Es folgt: 
+\begin_inset Formula $f\in\bigcap_{\Spec A}\mathfrak{p}=\sqrt{(0)}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+ganz, 
+\series default
+
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $\Leftarrow$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\begin_inset Formula $\Gamma(U,\mathcal{O}_{X})$
+\end_inset
+
+ integer, also reduziert.
+ Nach (1, reduziert) ist 
+\begin_inset Formula $X$
+\end_inset
+
+ reduziert.
+ Angenommen es gibt 
+\begin_inset Formula $\emptyset\neq U_{1},U_{2}\subset X$
+\end_inset
+
+ offen mit 
+\begin_inset Formula $\emptyset=U_{1}\cap U_{2}$
+\end_inset
+
+.
+ Nach den Garbenaxiomen enthält dann 
+\begin_inset Formula $\Gamma(U_{1}\cup U_{2},\mathcal{O}_{X})=\Gamma(U_{1},\mathcal{O}_{X})\times\Gamma(U_{2},\mathcal{O}_{X}$
+\end_inset
+
+) Nullteiler 
+\begin_inset Formula $(1,0)\cdot(0,1)=0$
+\end_inset
+
+.
+ Widerspruch.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Folgt aus 1, da 
+\begin_inset Formula $A$
+\end_inset
+
+ integer, 
+\begin_inset Formula $0\notin S$
+\end_inset
+
+.
+ Es folgt: 
+\begin_inset Formula $A_{S}$
+\end_inset
+
+ integer (
+\begin_inset Formula $\subseteq\Quot(A)$
+\end_inset
+
+).
+\end_layout
+
+\end_deeper
+\begin_layout Remark*
+\begin_inset Formula $X=\Spec A$
+\end_inset
+
+ ganz 
+\begin_inset Formula $\Leftrightarrow A$
+\end_inset
+
+ integer, 
+\begin_inset Formula $\eta\in X$
+\end_inset
+
+ generischer Punkt 
+\begin_inset Formula $\Leftrightarrow(0)\subset A$
+\end_inset
+
+.
+ Es ist 
+\begin_inset Formula $\mathcal{O}_{X,\eta}=A_{(0)}=\Quot(A)$
+\end_inset
+
+, d.h.
+ für jedes ganze Schema 
+\begin_inset Formula $X$
+\end_inset
+
+ gilt: 
+\begin_inset Formula $\mathcal{O}_{X,\eta}$
+\end_inset
+
+ ist Körper (mit generischer Punkt 
+\begin_inset Formula $\eta$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+23
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $X$
+\end_inset
+
+ ganz, 
+\begin_inset Formula $\eta\in X$
+\end_inset
+
+ generischer Punkt.
+ Dann heißt 
+\begin_inset Formula $K(X):=\mathcal{O}_{X,\eta}$
+\end_inset
+
+ der 
+\series bold
+Funktionenkörper
+\series default
+ von 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document

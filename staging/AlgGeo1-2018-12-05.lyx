@@ -1,0 +1,1065 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+\usepackage{mathtools}
+
+%% User-specified commands
+\DeclareMathOperator{\rad}{rad}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Quot}{Quot}
+\DeclareMathOperator{\im}{\mathrm{im}}
+\DeclareMathOperator{\Hom}{\mathrm{Hom}}
+\DeclareMathOperator{\Mor}{\mathrm{Mor}}
+\DeclareMathOperator{\id}{\mathrm{id}}
+\DeclareMathOperator{\res}{res}
+
+%%sets
+\DeclareMathOperator{\CC}{\mathbb{C}}
+\DeclareMathOperator{\RR}{\mathbb{R}}
+\DeclareMathOperator{\QQ}{\mathbb{Q}}
+\DeclareMathOperator{\ZZ}{\mathbb{Z}}
+\DeclareMathOperator{\NN}{\mathbb{N}}
+
+%% categories
+\DeclareMathOperator{\ouv}{\mathcal{O}uv}
+\DeclareMathOperator{\set}{\underline{Set}}
+\DeclareMathOperator{\ab}{\underline{Ab}}
+\DeclareMathOperator{\cattop}{\underline{Top}}
+\DeclareMathOperator{\cring}{\underline{CRing}}
+\DeclareMathOperator{\psh}{\underline{\mathcal{PS}h}}
+\DeclareMathOperator{\sh}{\underline{\mathcal{S}h}}
+\DeclareMathOperator{\aff}{\underline{Aff}}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+theorems-ams-extended
+theorems-chap
+\end_modules
+\maintain_unincluded_children false
+\language ngerman
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style german
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Der Funktor 
+\begin_inset Formula $A\mapsto(\Spec A,\mathcal{O}_{\Spec A})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+34
+\end_layout
+
+\end_inset
+
+Ein lokal geringter Raum 
+\begin_inset Formula $(X,\mathcal{O}_{X})$
+\end_inset
+
+ heißt 
+\series bold
+affines Schema
+\series default
+, falls ein Ring 
+\begin_inset Formula $A$
+\end_inset
+
+ existiert d.d
+\begin_inset Formula 
+\[
+(X,\mathcal{O}_{X})\cong(\Spec A,\mathcal{O}_{\Spec A})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+Ein 
+\series bold
+Morphismus affiner Schemata
+\series default
+ ist ein Morphismus lokal geringter Räume.
+ Bezeichne 
+\begin_inset Formula $\aff$
+\end_inset
+
+ die Kategorie der affinen Schemata.
+\begin_inset Formula 
+\begin{align*}
+\varphi:A & \longrightarrow B & \text{Ringhom.}\\
+f:X:=\Spec A & \longrightarrow Y:=\Spec A & \text{stetige Abb.}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Ziel: 
+\series default
+Definiere 
+\begin_inset Formula $(f,f^{\flat}):X\rightarrow Y$
+\end_inset
+
+ mit 
+\begin_inset Formula $f:=^{a}\varphi$
+\end_inset
+
+ Morphismus von lokal geringter Räume und
+\begin_inset Formula 
+\[
+f_{\Spec A}^{\flat}=\varphi:A=\mathcal{O}_{\Spec A}(\Spec A)\rightarrow f_{\ast}\mathcal{O}_{\Spec B}(\Spec B)=B
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dazu: Für 
+\begin_inset Formula $s\in A$
+\end_inset
+
+ gilt 
+\begin_inset Formula $f^{-1}(D(s))=D(\varphi(s))$
+\end_inset
+
+ nach Proposition 2.10.
+ Definiere 
+\begin_inset Formula 
+\[
+f_{D(s)}^{\flat}:\mathcal{O}_{Y}(D(s))=A_{s}\rightarrow B_{\varphi(s)}=f_{\ast}\mathcal{O}_{X}(D(s))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+als die von 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ induzierte Abbildung.
+ 
+\begin_inset Formula $f^{\flat}$
+\end_inset
+
+ ist kompatibel mit 
+\begin_inset Formula $\res_{D(t)}^{D(s)}$
+\end_inset
+
+ für prinzipal offene Mengen 
+\begin_inset Formula $D(t)\subseteq D(s)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $B$
+\end_inset
+
+ Basis 
+\begin_inset Formula $\Longrightarrow f^{\flat}:\mathcal{O}_{Y}\rightarrow f_{\ast}\mathcal{O}_{X}$
+\end_inset
+
+ Homomorphismus von Ringgarben.
+ Für 
+\begin_inset Formula $s=1$
+\end_inset
+
+ erhalten wir 
+\begin_inset Formula $f_{\Spec A}^{\flat}=\varphi$
+\end_inset
+
+!
+\end_layout
+
+\begin_layout Standard
+Für 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ gilt:
+\begin_inset Formula 
+\[
+\xymatrix{f^{\sharp}:\mathcal{O}_{Y,f(x)}=A_{\varphi^{-1}(\mathfrak{p}_{x})=\mathfrak{p}_{f(x)}}\ar[r] & B_{\mathfrak{p}_{x}}=\mathcal{O}_{X,x}\\
+A\ar[u]\ar[r]^{\varphi} & B\ar[u]
+}
+\qquad(*)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ist der von 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ induzierte Homomophismus.
+ 
+\begin_inset Formula $f_{x}^{\sharp}$
+\end_inset
+
+ is lokal:
+\begin_inset Formula 
+\[
+\varphi(\varphi^{-1}(\mathfrak{p}_{x}))\subseteq\mathfrak{p}_{x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Bezeichne
+\series default
+: 
+\begin_inset Formula $^{a}\varphi$
+\end_inset
+
+ für 
+\begin_inset Formula $\Spec(\varphi)=(f,f^{\flat})$
+\end_inset
+
+, 
+\begin_inset Formula $^{a}(\psi\circ\varphi)=^{a}\varphi\circ^{a}\psi$
+\end_inset
+
+.
+ Wir erhalten einen kontravarianten Funktor
+\begin_inset Formula 
+\[
+\Spec:\underline{Ring}\longrightarrow\aff.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Für 
+\begin_inset Formula $f:(X,\mathcal{O}_{X})\rightarrow(Y,\mathcal{O}_{Y})$
+\end_inset
+
+ Morphismus von geringten Räumen erhalten wir einen Ringhomomorphismus
+\begin_inset Formula 
+\[
+\Gamma(f):=f_{Y}^{\flat}:\Gamma(Y,\mathcal{O}_{Y})=\mathcal{O}_{Y}(Y)\rightarrow\Gamma(X,\mathcal{O}_{X})=(f_{\ast}\mathcal{O}_{X})(Y)=\mathcal{O}_{X}(X).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So erhalten wir einen kontravarianten Funktor
+\begin_inset Formula 
+\[
+\Gamma:\aff\longrightarrow\underline{Ring}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+35
+\end_layout
+
+\end_inset
+
+Die Funktoren 
+\begin_inset Formula $\Spec$
+\end_inset
+
+ und 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ definieren eine Anti-Äquivalenz zwischen der Kateogire der Ringe und der
+ Kategorie der affinen Schemata.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Spec$
+\end_inset
+
+ ist essentiell surjektiv per Definition.
+ 
+\begin_inset Formula $\Gamma\circ\Spec$
+\end_inset
+
+ ist isomorph zu 
+\begin_inset Formula $\id_{\underline{Ring}}$
+\end_inset
+
+ nach Konstruktion.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+natürliche Transformation
+\end_layout
+
+\end_inset
+
+Zu zeigen:
+\begin_inset Formula 
+\[
+\Hom_{\underline{Ring}}(A,B)\stackrel[\Gamma]{\Spec}{\rightleftharpoons}\Hom_{\aff}(\Spec B,\Spec A)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+sind zueinander invers.
+ Es fehlt die Verkettung 
+\begin_inset Formula $\Spec\circ\Gamma=\id_{\aff}$
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $f\in\Hom_{\aff}(\Spec B,\Spec A)$
+\end_inset
+
+, 
+\begin_inset Formula $\varphi:=\Gamma(f)$
+\end_inset
+
+, 
+\begin_inset Formula $^{a}\varphi=f$
+\end_inset
+
+.
+ Für 
+\begin_inset Formula $\mathfrak{p}_{x}\in\Spec B=X$
+\end_inset
+
+ ist 
+\begin_inset Formula $f_{x}^{\sharp}$
+\end_inset
+
+ der eindeutig bestimmte Ringhomomorphismus, welcher das Diagramm
+\begin_inset Formula 
+\[
+\xymatrix{A\ar[r]^{f_{\Spec A}^{\flat}=\Gamma(f)=\varphi}\ar[d]_{\imath_{A}} & B\ar[d]^{\imath_{B}}\supset\imath_{B}^{-1}(\mathfrak{p}_{x}B_{\mathfrak{p}_{x}})=\mathfrak{p}_{x}\\
+A_{\mathfrak{p}_{f(x)}}\ar[r]_{f_{x}^{\#}\text{ lokal}} & B_{\mathfrak{p}_{x}}\underset{\max}{\supset}\mathfrak{p}_{x}B_{\mathfrak{p}_{x}}
+}
+\qquad(**)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+kommutieren lässt.
+ Es gilt:
+\begin_inset Formula 
+\begin{align*}
+\mathfrak{p}_{f(x)}A_{\mathfrak{p}_{f(x)}} & \supseteq(f_{x}^{\sharp})^{-1}(\mathfrak{p}_{x}B\mathfrak{p}_{x})=\mathfrak{p}_{f(x)}A_{\mathfrak{p}_{f(x)}}\\
+\mathfrak{p}_{f(x)} & =\imath_{A}^{-1}(\mathfrak{p}_{f(x)}A\mathfrak{p}_{f(x)})\subset A
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $f_{x}^{\#}$
+\end_inset
+
+ lokal 
+\begin_inset Formula $\Longrightarrow f_{x}^{\#}(\mathfrak{p}_{f(x)}A_{\mathfrak{p}_{f(x)}})\subset\mathfrak{p}_{x}B_{\mathfrak{p}_{x}}$
+\end_inset
+
+ 
+\begin_inset Formula $\Longrightarrow^{a}\varphi=f$
+\end_inset
+
+ als stetige Abbildung.
+ Wegen 
+\begin_inset Formula $(*)$
+\end_inset
+
+ lässt auch 
+\begin_inset Formula $(^{a}\varphi)_{x}^{\#}$
+\end_inset
+
+ das Diagramm 
+\begin_inset Formula $(**)$
+\end_inset
+
+ kommutieren.
+ Proposition 
+\begin_inset Formula $\Longrightarrow(^{a}\varphi)^{\#}=f^{\#}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Beispiele
+\end_layout
+
+\begin_layout Example
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+36, Integritätsbereiche
+\end_layout
+
+\end_inset
+
+Sei 
+\begin_inset Formula $A$
+\end_inset
+
+ integer, 
+\begin_inset Formula $K=\Quot(A)$
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $X=\Spec A$
+\end_inset
+
+, 
+\begin_inset Formula $\eta=(0)$
+\end_inset
+
+.
+ Dann ist
+\begin_inset Formula $\overline{\{\eta\}}=\Spec X$
+\end_inset
+
+, d.h.
+ jede nicht-leere offene Menge 
+\begin_inset Formula $U\subset X$
+\end_inset
+
+ enthält 
+\begin_inset Formula $\eta$
+\end_inset
+
+.
+ Es folgt: 
+\begin_inset Formula $\mathcal{O}_{X,y}=A_{(0)}=K$
+\end_inset
+
+.
+ Für alle 
+\begin_inset Formula $f\in A$
+\end_inset
+
+ gilt nach Definition 
+\begin_inset Formula 
+\[
+\mathcal{O}_{X}(D(f))=A_{f}\subset U.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Sei 
+\begin_inset Formula $U\subset X$
+\end_inset
+
+ beliebig offen.
+ Es folgt:
+\begin_inset Formula 
+\[
+\mathcal{O}_{X}(U)=\underset{\underset{D(f)\subset U}{\longleftarrow}}{\lim}\mathcal{O}_{X}(D(f)=\bigcap_{\underset{D(f)\subset U}{f\in A}}A_{f}\subseteq K.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Wie im Beweis von Satz 1.37 ist 
+\begin_inset Formula $a_{F}=\bigcap_{\mathfrak{p}\in D(f)}A_{\mathfrak{p}},$
+\end_inset
+
+ also 
+\begin_inset Formula $\mathcal{O}_{X}(U)=\bigcap_{x\in U}\mathcal{O}_{X,x}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+37, Prinzipal offene Unterschemata affiner Schemata
+\end_layout
+
+\end_inset
+
+Sei 
+\begin_inset Formula $X=\Spec A$
+\end_inset
+
+, 
+\begin_inset Formula $f\in A$
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $j:\Spec A_{f}\rightarrow\Spec A$
+\end_inset
+
+ induziert von 
+\begin_inset Formula $A\rightarrow A_{f}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\Longrightarrow j:\Spec A_{j}\rightarrow D(f)$
+\end_inset
+
+ ist Homoömorphismus (Proposition 2.12).
+ Für alle 
+\begin_inset Formula $x\in D(f)$
+\end_inset
+
+ ist 
+\begin_inset Formula $j_{x}^{\#}$
+\end_inset
+
+ der kanonische Isomorphismus 
+\begin_inset Formula $A_{\mathfrak{p}_{x}}\overset{\cong}{\rightarrow}(A_{f})_{\mathfrak{p}_{x}}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\Longrightarrow(j,j^{\#})$
+\end_inset
+
+ induziert einen Isomorphismus 
+\begin_inset Formula $\Spec A_{f}\cong(D(f),\mathcal{O}_{X|D(f)})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+38, Abgeschlossene Unterschemata affiner Schemata
+\end_layout
+
+\end_inset
+
+Sei 
+\begin_inset Formula $X=\Spec A$
+\end_inset
+
+ und 
+\begin_inset Formula $\mathfrak{a}$
+\end_inset
+
+ ein Ideal von 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $\imath:\Spec A/\mathfrak{a}\rightarrow\Spec A$
+\end_inset
+
+ der von 
+\begin_inset Formula $A\rightarrow A/\mathfrak{a}$
+\end_inset
+
+ induzierte Morphismus affiner Schemata.
+ Nach Proposition 2.12 induziert 
+\begin_inset Formula $\imath$
+\end_inset
+
+ einen Homöomorphismus 
+\begin_inset Formula $\Spec A/\mathfrak{a}\overset{\cong}{\rightarrow}V(\mathfrak{a})\subseteq\Spec A$
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $\overline{\mathfrak{p}_{x}}$
+\end_inset
+
+ das Bild von 
+\begin_inset Formula $\mathfrak{p}_{x}$
+\end_inset
+
+ in 
+\begin_inset Formula $A/\mathfrak{a}$
+\end_inset
+
+.
+ Für alle 
+\begin_inset Formula $x\in V(\mathfrak{a})$
+\end_inset
+
+ ist der Morphismus 
+\begin_inset Formula $i_{x}^{\flat}$
+\end_inset
+
+ der kanonische Homomorphismus 
+\begin_inset Formula $A_{\mathfrak{p}_{x}}\rightarrow(A/\mathfrak{a})_{\overline{\mathfrak{p_{x}}}}$
+\end_inset
+
+.
+ (
+\begin_inset Formula $=0$
+\end_inset
+
+, falls 
+\begin_inset Formula $x\in V(\mathfrak{a})$
+\end_inset
+
+, also 
+\begin_inset Formula $\mathfrak{a}\notin f_{x}$
+\end_inset
+
+.) Schreibe kurz 
+\begin_inset Formula $V(\mathfrak{a})$
+\end_inset
+
+ für den lokal geringten Raum 
+\begin_inset Formula 
+\begin{align*}
+\left(V(\mathfrak{a}),\imath_{x}(\mathcal{O}_{\Spec A/\mathfrak{a}})|_{V(\mathfrak{a})}\right) & \stackrel[\imath]{\cong}{\longleftarrow}\Spec(A/\mathfrak{a})
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Da 
+\begin_inset Formula $x\in V(\mathfrak{a})$
+\end_inset
+
+, ist 
+\begin_inset Formula $\imath_{x}(\mathcal{O}_{\Spec A/\mathfrak{a}})|_{V(\mathfrak{a})}\overset{\cong}{\longrightarrow}i_{x}\mathcal{O}_{\Spec A/\mathfrak{a}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+39
+\end_layout
+
+\end_inset
+
+Sei 
+\begin_inset Formula $B$
+\end_inset
+
+ ein Ring und 
+\begin_inset Formula $\mathfrak{b}\subset B$
+\end_inset
+
+ Ideal.
+ 
+\begin_inset Formula $V(\mathfrak{b}^{n})=V(\mathfrak{b})\subset\Spec B$
+\end_inset
+
+ als abgeschlossene Teilmenge hängt 
+\emph on
+nicht 
+\emph default
+von 
+\begin_inset Formula $n\geq1$
+\end_inset
+
+ ab, aber 
+\begin_inset Formula $\Spec(B/\mathfrak{b}^{n})=V(\mathfrak{b}^{n})$
+\end_inset
+
+ als offenes Schemata sehr wohl!
+\end_layout
+
+\begin_layout Example
+Etwa: 
+\begin_inset Formula $B=k[T]$
+\end_inset
+
+, 
+\begin_inset Formula $b=(T)$
+\end_inset
+
+ mit 
+\begin_inset Formula $k$
+\end_inset
+
+ ein algebraisch abgeschlossener Körper.
+ Für die abgeschlossenen Punkte von 
+\begin_inset Formula $\mathbb{A}_{k}^{1}=\Spec k[T]$
+\end_inset
+
+ gilt:
+\begin_inset Formula 
+\begin{align*}
+\Spec(k[T]) & \longleftrightarrow k\\
+\mathfrak{b} & \longleftrightarrow0
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Sei 
+\begin_inset Formula $A=k[T]/(T^{n})$
+\end_inset
+
+, 
+\begin_inset Formula $X=\Spec A=\{x\}$
+\end_inset
+
+.
+ Es gilt: 
+\begin_inset Formula 
+\begin{align*}
+\mathcal{O}_{X}(X) & =\mathcal{O}_{X,x}=A\\
+\kappa(x) & =k\\
+n>1:\ 0\neq\mathfrak{m}_{x} & =T\mod T^{n}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Betrachte 
+\begin_inset Formula $X\subset\mathbb{A}_{k}^{1}$
+\end_inset
+
+ als abgeschlossenes 
+\begin_inset Quotes gld
+\end_inset
+
+Unterschemata
+\begin_inset Quotes grd
+\end_inset
+
+ welches 
+\begin_inset Quotes gld
+\end_inset
+
+konzentriert in einem Punkt
+\begin_inset Quotes grd
+\end_inset
+
+ ist.
+ 
+\begin_inset Formula $B=k[T]$
+\end_inset
+
+ ist 
+\begin_inset Formula $k$
+\end_inset
+
+-Algebra von Funktionen auf 
+\begin_inset Formula $\mathbb{A}^{1}(k)$
+\end_inset
+
+.
+ (vgl.
+ Beispiel 2.14.) Die Einschränkung einer solchen Funktion 
+\begin_inset Formula $f\in k[T]$
+\end_inset
+
+ auf 
+\begin_inset Formula $X$
+\end_inset
+
+ ist gegeben durch 
+\begin_inset Formula $k[T]\rightarrow k[T]/(T^{n})$
+\end_inset
+
+.
+ Wir unterscheiden:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $n=1$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $k[T]/(T^{n})=k$
+\end_inset
+
+, 
+\begin_inset Formula $f\mapsto f(0)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $n>1$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $k[T]/(T^{n})\neq k$
+\end_inset
+
+, 
+\begin_inset Formula $f\mapsto$
+\end_inset
+
+ (
+\begin_inset Quotes gld
+\end_inset
+
+Taylor-Entwicklung
+\begin_inset Quotes grd
+\end_inset
+
+ von 
+\begin_inset Formula $A$
+\end_inset
+
+ um 0 der Länge 
+\begin_inset Formula $n-1$
+\end_inset
+
+).
+ 
+\begin_inset Formula $\{x\}\subset\mathbb{A}_{k}^{1}$
+\end_inset
+
+ hat 
+\begin_inset Quotes gld
+\end_inset
+
+infinitesimale Ausdehnung der Länge 
+\begin_inset Formula $n-1$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbb{A}_{k}^{1}$
+\end_inset
+
+
+\begin_inset Quotes grd
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Example
+Sei nun 
+\begin_inset Formula $\mathbb{A}_{k}^{2}:=\Spec(k[T,U])$
+\end_inset
+
+ betrachtet als 
+\begin_inset Formula $\{(u,t)\mid u,f\in k\}=k^{2}$
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $\mathfrak{a}_{1}=(U)$
+\end_inset
+
+, 
+\begin_inset Formula $\mathfrak{a}_{2}=(U-T^{n})$
+\end_inset
+
+.
+ Diese definieren:
+\begin_inset Formula 
+\[
+X_{1}=\{u,t)\in\mathbb{A}^{2}(k)\mid u=0\},\quad X_{2}=\{(u,t)\in\mathbb{A}^{2}(k)\mid u=t^{n}\}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Es ist 
+\begin_inset Formula $X_{1}\cap X_{2}=\{(0,0)\}$
+\end_inset
+
+ als Menge.
+ Aber für 
+\begin_inset Formula $n>1$
+\end_inset
+
+ treffen sich beide Mengen 
+\emph on
+nicht
+\emph default
+ transversal! Als affine Schemata wird später der Schnitt als 
+\begin_inset Formula $\Spec k[T,U]/(\mathfrak{a}_{1}+\mathfrak{a}_{2})$
+\end_inset
+
+ definiert, also eine präzisere Beschreibung als Durchschnitt.
+\end_layout
+
+\end_body
+\end_document

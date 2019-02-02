@@ -3,7 +3,6 @@
 *.aux
 *.log
 *.out
-*.lyx
 *.synctex.gz
 *.idx
 *.toc

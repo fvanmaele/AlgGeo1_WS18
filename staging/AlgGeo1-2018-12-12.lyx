@@ -1,0 +1,1022 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+%% User-specified commands
+\DeclareMathOperator{\rad}{rad}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Quot}{Quot}
+\DeclareMathOperator{\res}{res}
+\DeclareMathOperator{\im}{\mathrm{im}}
+\DeclareMathOperator{\Hom}{\mathrm{Hom}}
+\DeclareMathOperator{\Mor}{\mathrm{Mor}}
+\DeclareMathOperator{\id}{\mathrm{id}}
+
+%%sets
+\DeclareMathOperator{\CC}{\mathbb{C}}
+\DeclareMathOperator{\RR}{\mathbb{R}}
+\DeclareMathOperator{\QQ}{\mathbb{Q}}
+\DeclareMathOperator{\ZZ}{\mathbb{Z}}
+\DeclareMathOperator{\NN}{\mathbb{N}}
+
+%% categories
+\DeclareMathOperator{\ouv}{\mathcal{O}uv}
+\DeclareMathOperator{\set}{\underline{Set}}
+\DeclareMathOperator{\ab}{\underline{Ab}}
+\DeclareMathOperator{\cattop}{\underline{Top}}
+\DeclareMathOperator{\cring}{\underline{CRing}}
+\DeclareMathOperator{\ring}{\underline{Ring}}
+\DeclareMathOperator{\psh}{\underline{\mathcal{PS}h}}
+\DeclareMathOperator{\sh}{\underline{\mathcal{S}h}}
+\DeclareMathOperator{\sch}{\underline{Sch}}
+\DeclareMathOperator{\schs}{\underline{Sch/S}}
+\end_preamble
+\use_default_options true
+\begin_modules
+enumitem
+theorems-ams
+theorems-ams-extended
+\end_modules
+\maintain_unincluded_children false
+\language ngerman
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style german
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Proof
+Als topologischer Raum: 
+\begin_inset Formula $\coprod_{i\in I}U_{i}/\sim$
+\end_inset
+
+ mit 
+\begin_inset Formula $x_{i}\in U_{i}\sim x_{j}\in U_{j}:\Leftrightarrow x_{i}\in U_{ij}$
+\end_inset
+
+, 
+\begin_inset Formula $x_{j}\in U_{ji}$
+\end_inset
+
+ und 
+\begin_inset Formula $x_{j}=\varphi_{ji}(x_{i})$
+\end_inset
+
+.
+ Nach Eigenschaft 
+\begin_inset Formula $(b)$
+\end_inset
+
+ ist 
+\begin_inset Formula $\sim$
+\end_inset
+
+ eine Äquivalenzrelation.
+ Dann sind 
+\begin_inset Formula $\psi_{i}:U_{i}\rightarrow X$
+\end_inset
+
+ injektiv.
+ Ferner haben wir 
+\begin_inset Formula $\forall i,j\in I$
+\end_inset
+
+ die Eigenschaft 
+\begin_inset Formula $\psi_{i}(U_{i})=\psi_{i}(U_{i})\cap\psi_{j}(U_{j})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $X$
+\end_inset
+
+ hat also als topologischer Raum die Quotiententopologie, d.h.
+ die feinste Topologie sodass alle Abbildungen 
+\begin_inset Formula $\psi_{i}$
+\end_inset
+
+ stetig sind.
+ 
+\begin_inset Formula $U\subset X$
+\end_inset
+
+ offen genau dann, wenn 
+\begin_inset Formula $\psi_{i}^{-1}(U)\subset U_{i}$
+\end_inset
+
+ dort offen sind 
+\begin_inset Formula $\forall i\in I$
+\end_inset
+
+.
+ Insbesondere sind 
+\begin_inset Formula $\psi_{i}(U_{i})$
+\end_inset
+
+ und 
+\begin_inset Formula $\psi_{i}(U_{j})=\psi_{i}(U_{i})\cap\psi_{j}(U_{j})$
+\end_inset
+
+ offen in 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Als lokal geringter Raum: 
+\begin_inset Quotes eld
+\end_inset
+
+Verkleben der Strukturgarben auf 
+\begin_inset Formula $U_{i}$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\begin_inset Formula $\mathcal{O}_{X}$
+\end_inset
+
+ ist eindeutig auf einer Basis 
+\begin_inset Formula $B$
+\end_inset
+
+ der Topologie definiert.
+ Ohne Einschränkung reicht es hier, die Schnitte nur auf 
+\begin_inset Formula $U\subset X$
+\end_inset
+
+ offen mit 
+\begin_inset Formula $U\subset\psi_{i}(U_{i})$
+\end_inset
+
+ für ein 
+\begin_inset Formula $i\in I$
+\end_inset
+
+.
+ In dem Fall:
+\begin_inset Formula 
+\[
+\mathcal{O}_{X}(U)=\mathcal{O}_{U_{i}}(\psi_{i}^{-1}(U))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Für 
+\begin_inset Formula $U\subset\psi_{i}(U_{i})\cap\psi_{j}(U_{j})$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\xymatrix{U_{ij}\ar@{^{(}->}[r]\ar[d]_{\cong} & U_{i}\\
+U_{ji}\ar@{^{(}->}[r] & U_{i} & X\supset U
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Dann gilt:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\mathcal{O}_{U_{i}}(\psi_{i}^{-1}(U))=\mathcal{O}_{U_{ij}}(\psi_{i}^{-1}(U))\cong\mathcal{O}_{U_{ji}}(\psi_{j}^{-1}(U))=\mathcal{O}_{U_{j}}(\psi_{j}^{-1}(U))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Es folgt: 
+\begin_inset Formula $\mathcal{O}_{X}(U)$
+\end_inset
+
+ unabhängig von Wahlen von 
+\begin_inset Formula $i$
+\end_inset
+
+! Wir halten damit 
+\begin_inset Formula $\mathcal{O}_{X}$
+\end_inset
+
+ Ringgarbe auf 
+\begin_inset Formula $X$
+\end_inset
+
+, sodass 
+\begin_inset Formula $(X,\mathcal{O}_{X})$
+\end_inset
+
+ lokal geringter Raum da 
+\begin_inset Formula $(U_{i},\mathcal{O}_{U_{i}})$
+\end_inset
+
+ lokal geringter Raum 
+\begin_inset Formula $\forall i\in I$
+\end_inset
+
+, 
+\begin_inset Formula $U_{i}\xrightarrow[\psi_{i}]{\cong}(\psi_{i}(U_{i}),\mathcal{O}_{X}|_{\psi_{i}(U_{i})})$
+\end_inset
+
+ als lokal geringter Raum.
+ Damit ist 
+\begin_inset Formula $X$
+\end_inset
+
+ ein Schema und 
+\begin_inset Formula $X=\cup U_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Spezialfall: 
+\begin_inset Formula $U_{ij}=\emptyset$
+\end_inset
+
+ für alle 
+\begin_inset Formula $i\neq j\in I$
+\end_inset
+
+, 
+\begin_inset Formula $\coprod U_{i}$
+\end_inset
+
+ 
+\begin_inset Quotes eld
+\end_inset
+
+disjunkte Vereinigung
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $X_{1},\ldots,X_{n}$
+\end_inset
+
+ affine Schemata, 
+\begin_inset Formula $X_{i}=\Spec A_{i}$
+\end_inset
+
+.
+ Dann ist
+\begin_inset Formula 
+\[
+\coprod X_{i}\cong\Spec\left(\prod_{i=1}^{n}A_{i}\right)\text{ offen}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(nicht für unendlich viele affin!)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+11
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $I=\{1,2\}$
+\end_inset
+
+, 
+\begin_inset Formula $U_{12}\subset U_{1}\xrightarrow{\varphi}U_{21}\subset U_{2}$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+X\underset{\text{offen}}{\subset}V=U_{1}\cup_{\varphi}U_{2},
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\Gamma(V,\mathcal{O}_{X})=\{(s_{1},s_{2})\in\Gamma(V\cap U_{1},\mathcal{O}_{U_{1}})\times\Gamma(V\cap U_{2},\mathcal{O}_{U_{2}})\}$
+\end_inset
+
+, 
+\begin_inset Formula $\varphi^{\flat}(S_{2}|_{U_{21}\cap V})=S_{1}|_{U_{12}\cap V}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Affine Gerade mit Doppelpunkt
+\series default
+: 
+\begin_inset Formula $k$
+\end_inset
+
+ Körper.
+\begin_inset Formula 
+\begin{align*}
+U_{1} & =U_{2}=\mathbb{A}_{k}^{1}=\Spec(k[T])\cong x\text{ abg.}\\
+U_{12} & :=U_{1}\backslash\{x\}\\
+U_{21} & :=U_{2}\backslash\{x\},\ \varphi=\id
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $X=U_{1}\cup_{\varphi}U_{2}$
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Bild
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\varphi=\id_{???}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise*
+\begin_inset Formula $X$
+\end_inset
+
+ ist 
+\series bold
+nicht
+\series default
+ affin!
+\end_layout
+
+\begin_layout Section
+Der projektive Raum als Schema 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $R$
+\end_inset
+
+ Ring.
+ 
+\begin_inset Formula $\mathbb{P}_{R}^{n}$
+\end_inset
+
+ Verklebung von 
+\begin_inset Formula $(n+1)$
+\end_inset
+
+-Kopien des 
+\begin_inset Formula 
+\begin{align*}
+\mathbb{A}_{R}^{n} & =\Spec(R[T_{1},\ldots,T_{n}])\\
+\shortparallel\\
+\Spec\left(R\left[\frac{X_{0}}{X_{i}},\ldots,\frac{\hat{X}_{i}}{X_{i}},\ldots,\frac{X_{n}}{X_{i}}\right]\right)=U_{i}, & i=0,\ldots,n
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Verklebungs Datum:
+\begin_inset Formula 
+\begin{align*}
+B:= & R[X_{0},\ldots,X_{n},X_{0}^{-1},\ldots,X_{n}^{-1}]\\
+U_{ij} & :=D\left(\frac{X_{j}}{X_{i}}\right)\subset U_{i},\ \text{OE}\ i\neq j\leq n,\\
+U_{ii} & =U_{i},\ \varphi_{ii}=\id
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\varphi_{ji}:U_{ij}\rightarrow U_{ji}$
+\end_inset
+
+ definiert durch
+\begin_inset Formula 
+\[
+\xymatrix{R\left[\frac{X_{0}}{X_{i}},\ldots,\frac{\hat{X}_{i}}{X_{i}},\ldots,\frac{X_{n}}{X_{i}}\right]_{\frac{x_{j}}{x_{i}}}\ar@{=}[r]^{''\id''}\ar@{^{(}->}[dr] & R\left[\frac{x_{0}}{x_{j}},\ldots,\frac{\hat{x}_{j}}{x_{j}},\ldots,\frac{x_{n}}{x_{j}}\right]_{\frac{x_{i}}{x_{j}}}\ar@{^{(}->}[d]\\
+ & B
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Mit 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $\id$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ folgt: Kozykelbedingung automatisch, 
+\begin_inset Formula $U_{i}\rightarrow\Spec(R)$
+\end_inset
+
+ verkleben von 
+\begin_inset Formula $\mathbb{P}_{R}^{n}\rightarrow\Spec(R)$
+\end_inset
+
+ mit 
+\begin_inset Formula $\mathbb{P}_{R}^{n}:=\coprod U_{i}/\sim$
+\end_inset
+
+ Schema (über 
+\begin_inset Formula $R$
+\end_inset
+
+).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Der projektive Raum relativer Dimension 
+\begin_inset Formula $n$
+\end_inset
+
+ über 
+\begin_inset Formula $R$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Exercise*
+\begin_inset Formula $R\xrightarrow{\sim}\Gamma(\mathbb{P}_{R}^{n},\mathcal{O}_{\mathbb{P}_{R}^{n}})$
+\end_inset
+
+ (Strukturgarbe) d.h.
+ für 
+\begin_inset Formula $n>0$
+\end_inset
+
+ ist 
+\begin_inset Formula $\mathbb{P}_{R}^{n}$
+\end_inset
+
+ nicht affin (mit 
+\begin_inset Formula $\mathbb{P}_{R}^{n}=\Spec(R)$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Section
+Nullstellenmenge im projektiven Raum 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $I\subset R[X_{0},\ldots,X_{n}]$
+\end_inset
+
+ homogenes Ideal, d.h.
+ erzeugt von homogenen Elementen.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Leftrightarrow I=\bigoplus_{d}I\cap R[X_{1},\ldots,X_{n}]_{d})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ziel: 
+\begin_inset Formula $V_{+}(I)\rightarrow\mathbb{P}_{R}^{n}$
+\end_inset
+
+ Morphismus von Schemata
+\begin_inset Formula 
+\begin{align*}
+R[X_{0},\ldots,X_{n}] & \longrightarrow R\left[\frac{X_{0}}{X_{i}},\ldots,\frac{\hat{X_{i}}}{X_{i}},\ldots,\frac{X_{n}}{X_{i}}\right]=\Gamma(U_{i},\mathcal{O}_{U_{i}})\\
+I & \longmapsto\Phi_{i}(I)\text{ das vom Bild von }I\text{ erzeugte Ideal}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Verklebe 
+\begin_inset Formula $V_{i}:=\Spec(\Gamma(U_{i},\mathcal{O}_{U_{i}})/\Phi_{i})\subseteq U_{i}$
+\end_inset
+
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+abgeschlossen
+\end_layout
+
+\end_inset
+
+ entlang
+\begin_inset Formula 
+\[
+V_{ij}=D_{V_{i}}\left(\frac{X_{j}}{X_{i}}\right)\xrightarrow{\cong}V_{ji}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\varphi$
+\end_inset
+
+ eingeschränkt auf 
+\begin_inset Formula $V_{i}$
+\end_inset
+
+ (vgl.
+ oben)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Beachte: 
+\begin_inset Formula $f\in I$
+\end_inset
+
+, 
+\begin_inset Formula $\deg(f)=d$
+\end_inset
+
+, 
+\begin_inset Formula $X_{i}^{d}\Phi_{i}(f)=X_{j}^{d}\Phi_{j}(f)$
+\end_inset
+
+, d.h.
+ 
+\begin_inset Formula $\Phi_{i}(f)$
+\end_inset
+
+ und 
+\begin_inset Formula $\Phi_{j}(f)$
+\end_inset
+
+ unterscheiden sich in einer Einheit auf 
+\begin_inset Formula $D\left(\frac{X_{i}}{X_{j}}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Longrightarrow\Phi_{i}(I)=\Phi_{j}(I)$
+\end_inset
+
+ in 
+\begin_inset Formula $\Gamma(U_{ij},\mathcal{O}_{U_{i}})$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\Longrightarrow V_{ij}=V_{ji}$
+\end_inset
+
+ und Kozykelbedingungen überträgt sich von 
+\begin_inset Formula $U_{ij}\subset U_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+ Verkleben liefert Schema 
+\begin_inset Formula $V_{+}(I)$
+\end_inset
+
+ + 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Morphismen?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+D.h.
+ jedes solche 
+\begin_inset Formula $I$
+\end_inset
+
+ definiert ein Schema 
+\begin_inset Formula $V_{+}(I)\rightarrow\mathbb{P}_{R}^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Chapter*
+Grundlegende Eigenschaften von Schemata und Morphismen
+\end_layout
+
+\begin_layout Section
+Topologische Eigenschaften 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+12
+\end_layout
+
+\end_inset
+
+Ein Schema 
+\begin_inset Formula $X$
+\end_inset
+
+ heißt 
+\series bold
+zusammenhängend
+\series default
+, 
+\series bold
+quasi-kompakt
+\series default
+ bzw.
+ 
+\series bold
+irreduzibel
+\series default
+, falls der unterliegende topologische Raum diese Eigenschaft besitzt.
+\end_layout
+
+\begin_layout Itemize
+Nach Proposition II.5 ist jedes affine Schema quasi-kompakt.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\coprod_{i=0}\Spec(R)$
+\end_inset
+
+ ist 
+\emph on
+nicht 
+\emph default
+quasi-kompakt.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+13
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $f:X\rightarrow Y$
+\end_inset
+
+ heißt 
+\series bold
+injektiv
+\series default
+ (surjektiv, bijektiv), falls die zugrendlegende stetige Abbildung diese
+ Eigenschaft hat.
+ Ebenso für 
+\begin_inset Quotes eld
+\end_inset
+
+offen
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+abgeschlossen
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+Homömorphismus
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Warnung: Homömorphismen von Schemata sind im Allgemeinen 
+\emph on
+keine 
+\emph default
+Isomorphismen!
+\end_layout
+
+\begin_layout Section
+Noethersche Schemata 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+9
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+14
+\end_layout
+
+\end_inset
+
+Ein Schema heißt 
+\series bold
+lokal noethersch
+\series default
+, falls eine affine offene Überdeckung 
+\begin_inset Formula $X=\bigcup U_{i}$
+\end_inset
+
+ existiert, d.d.
+ alle 
+\begin_inset Formula $\Gamma(U_{i},\mathcal{O}_{X})$
+\end_inset
+
+ (affine Koordinatenringe) 
+\series bold
+noethersch
+\series default
+ sind.
+ 
+\begin_inset Formula $X$
+\end_inset
+
+ heißt 
+\series bold
+noethersch
+\series default
+, falls zusätlich quasi-kompakt.
+\end_layout
+
+\begin_layout Standard
+Faktum: Lokalisierung noetherscher Ringe bleiben noethersch.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow a)$
+\end_inset
+
+ Jedes lokal noethersche Schema besitzt eine Basis der Topologie aus noethersche
+n affin offenen Unterschemata.
+\end_layout
+
+\begin_layout Standard
+b) 
+\begin_inset Formula $X$
+\end_inset
+
+ lokal noethersch.
+ Dann ist 
+\begin_inset Formula $\mathcal{O}_{X,x}$
+\end_inset
+
+ noethersch 
+\begin_inset Formula $\forall x\in X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Für offene Schemata gilt ferner: lokal noethersch 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ noethersch.
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,1252 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+%% User-specified commands
+\DeclareMathOperator{\rad}{rad}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Quot}{Quot}
+\DeclareMathOperator{\res}{res}
+\DeclareMathOperator{\im}{\mathrm{im}}
+\DeclareMathOperator{\Hom}{\mathrm{Hom}}
+\DeclareMathOperator{\Mor}{\mathrm{Mor}}
+\DeclareMathOperator{\id}{\mathrm{id}}
+
+%%sets
+\DeclareMathOperator{\CC}{\mathbb{C}}
+\DeclareMathOperator{\RR}{\mathbb{R}}
+\DeclareMathOperator{\QQ}{\mathbb{Q}}
+\DeclareMathOperator{\ZZ}{\mathbb{Z}}
+\DeclareMathOperator{\NN}{\mathbb{N}}
+
+%% categories
+\DeclareMathOperator{\ouv}{\mathcal{O}uv}
+\DeclareMathOperator{\set}{\underline{Set}}
+\DeclareMathOperator{\ab}{\underline{Ab}}
+\DeclareMathOperator{\cattop}{\underline{Top}}
+\DeclareMathOperator{\cring}{\underline{CRing}}
+\DeclareMathOperator{\ring}{\underline{Ring}}
+\DeclareMathOperator{\psh}{\underline{\mathcal{PS}h}}
+\DeclareMathOperator{\sh}{\underline{\mathcal{S}h}}
+\DeclareMathOperator{\sch}{\underline{Sch}}
+\DeclareMathOperator{\schs}{\underline{Sch/S}}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+theorems-ams-extended
+theorems-chap
+\end_modules
+\maintain_unincluded_children false
+\language ngerman
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style german
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Schemata
+\end_layout
+
+\begin_layout Standard
+= Verkleben affiner Schemata
+\end_layout
+
+\begin_layout Section
+Schemata
+\end_layout
+
+\begin_layout Definition
+Ein Schemata ist ein lokal geringter Raum 
+\begin_inset Formula $(X,\mathcal{O}_{X})$
+\end_inset
+
+, der eine offene Überdeckung 
+\begin_inset Formula $(U_{i})_{i\in I}$
+\end_inset
+
+ besitzt, so dass alle lokal geringten Räume 
+\begin_inset Formula $(U_{i},\mathcal{O}_{X|U_{i}})$
+\end_inset
+
+ affine Schemata sind.
+ Für ein Schemata 
+\begin_inset Formula $S$
+\end_inset
+
+ bezeichne 
+\begin_inset Formula $\schs$
+\end_inset
+
+ die 
+\series bold
+Kategorie der Schemata über 
+\begin_inset Formula $S$
+\end_inset
+
+
+\series default
+ oder 
+\begin_inset Formula $S$
+\end_inset
+
+-Schemata.
+ Die Objekte dieser Kategorie sind Morphismen 
+\begin_inset Formula $X\rightarrow S$
+\end_inset
+
+ von Schemata, und die Morphismen 
+\begin_inset Formula $\Hom(X\rightarrow S,Y\rightarrow S)$
+\end_inset
+
+ sind Morphismen 
+\begin_inset Formula $X\rightarrow Y$
+\end_inset
+
+ von Schemata so dass
+\begin_inset Formula 
+\[
+\xymatrix{X\ar[rr]\ar[dr] &  & Y\ar[dl]\\
+ & S
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+kommutiert.
+ 
+\begin_inset Formula $X\rightarrow S$
+\end_inset
+
+ heißt 
+\series bold
+Strukturmorphismus
+\series default
+ des 
+\begin_inset Formula $S$
+\end_inset
+
+-Schematas 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Ist 
+\begin_inset Formula $S=\Spec R$
+\end_inset
+
+ affin, spricht man auch von 
+\begin_inset Formula $R$
+\end_inset
+
+-Schemata oder Schemata über 
+\begin_inset Formula $R$
+\end_inset
+
+.
+ Die Menge der Morphismen 
+\begin_inset Formula $X\rightarrow Y$
+\end_inset
+
+ in 
+\begin_inset Formula $\schs$
+\end_inset
+
+ bezeichnen wir mitt 
+\begin_inset Formula $\Hom_{S}(X,Y)$
+\end_inset
+
+ bzw.
+ 
+\begin_inset Formula $\Hom_{R}(X,Y)$
+\end_inset
+
+ falls 
+\begin_inset Formula $S=\Spec R$
+\end_inset
+
+ affin ist.
+\end_layout
+
+\begin_layout Section
+Offene Unterschemata
+\end_layout
+
+\begin_layout Standard
+Erinnerung: 
+\begin_inset Formula $X=\Spec A$
+\end_inset
+
+ affin 
+\begin_inset Formula $\Longrightarrow(D(f),\mathcal{O}_{X|D(f)})$
+\end_inset
+
+ auch affin, und 
+\begin_inset Formula $D(f)$
+\end_inset
+
+ Basis der Topologie.
+\end_layout
+
+\begin_layout Proposition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ ein Schemata.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Ist 
+\begin_inset Formula $U\subset X$
+\end_inset
+
+ eine offene Teilmenge, dann ist der lokal geringte Raum 
+\begin_inset Formula $(U,\mathcal{O}_{X\mid U})$
+\end_inset
+
+ wieder ein Schemata.
+ 
+\begin_inset Formula $U$
+\end_inset
+
+ heißt ein 
+\series bold
+\shape italic
+offenes Unterschemata
+\series default
+.
+ Ist 
+\begin_inset Formula $U$
+\end_inset
+
+ affin, dann heißt 
+\begin_inset Formula $U$
+\end_inset
+
+ 
+\series bold
+affines offenes Schemata
+\series default
+.
+\end_layout
+
+\begin_layout Enumerate
+Die zugrundlegenden topologische Räume der affinen offene Unterschemata
+ bilden eine Basis der Topologie.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Es gibt eine Überdeckung 
+\begin_inset Formula $(U_{i})$
+\end_inset
+
+ von 
+\begin_inset Formula $X$
+\end_inset
+
+, d.d.
+ 
+\begin_inset Formula $(U_{i},\mathcal{O}_{X|U_{i}})$
+\end_inset
+
+ affine Schemata, 
+\begin_inset Formula $\cong\Spec A$
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Was isomorph zu 
+\begin_inset Formula $\Spec A$
+\end_inset
+
+?
+\end_layout
+
+\end_inset
+
+Es gilt:
+\begin_inset Formula 
+\[
+U=\bigcup_{i}(U\cap U_{i})=\bigcup_{i,j\in I_{i}}D(f_{ij})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+wobei die letzte Gleichheit gilt wegen 
+\begin_inset Formula $\Spec(A_{i})\supset U\cap U_{i}=\bigcup_{j\in I_{i}}D(f_{ij})$
+\end_inset
+
+, 
+\begin_inset Formula $f_{ij}\in A_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Zu 
+\begin_inset Formula $U\subset X$
+\end_inset
+
+ offen gibt es einen kanonischen Morphismus von Schemata
+\begin_inset Formula 
+\[
+(j,j^{\flat}):(U,\mathcal{O}_{X|U)}\longrightarrow(X,\mathcal{O}_{X})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+via der Inklusion 
+\begin_inset Formula $j:U\hookrightarrow X$
+\end_inset
+
+ und 
+\begin_inset Formula $j^{\flat}:\mathcal{O}_{X}\rightarrow j_{\ast}(\mathcal{O}_{X\mid U})$
+\end_inset
+
+.
+ Für 
+\begin_inset Formula $V\subseteq X$
+\end_inset
+
+ offen ergibt 
+\begin_inset Formula $\res_{V\cap U}^{V}$
+\end_inset
+
+ einen Ringhomomorphismus:
+\begin_inset Formula 
+\[
+\Gamma(V,\mathcal{O}_{X})\rightarrow\Gamma(V\cap U,\mathcal{O}_{X})=\Gamma(j^{-1}(V),\mathcal{O}_{X|U})=\Gamma(V,j_{\ast}\mathcal{O}_{X|U}).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Eine affine offene Überdeckung eines Schematas 
+\begin_inset Formula $X$
+\end_inset
+
+ ist eine Überdeckung 
+\begin_inset Formula $X=\bigcup U_{i}$
+\end_inset
+
+, sodass alle 
+\begin_inset Formula $U_{i}$
+\end_inset
+
+ affine offene Unterschemata sind.
+\end_layout
+
+\begin_layout Lemma
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+
+Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ ein Schemata, und seien 
+\begin_inset Formula $U,V\subset X$
+\end_inset
+
+ affin offene Unterschemata.
+ Dann existiert für jedes 
+\begin_inset Formula $x\in U\cap V$
+\end_inset
+
+ eine Umgebung 
+\begin_inset Formula $x\in W\subset U\cap V$
+\end_inset
+
+ offenes Unterschema, welches gleichzeitig prinzipal offen in 
+\begin_inset Formula $U$
+\end_inset
+
+ 
+\emph on
+und
+\emph default
+ 
+\begin_inset Formula $V$
+\end_inset
+
+ ist.
+\end_layout
+
+\begin_layout Proof
+Sei ohne Einschränkung 
+\begin_inset Formula $V\subset U$
+\end_inset
+
+ (sonst ersetze 
+\begin_inset Formula $V$
+\end_inset
+
+ durch eine prinzipiale offene Teilmenge von 
+\begin_inset Formula $V$
+\end_inset
+
+ welche 
+\begin_inset Formula $x$
+\end_inset
+
+ enthält).
+ Wähle:
+\begin_inset Formula 
+\[
+\xymatrix{f\in\Gamma(U,\mathcal{O}_{X})\ar[d]^{\res} & \text{d.d. }x\in D(f)\subset V\\
+f|_{V}\in\Gamma(V,\mathcal{O}_{X}) & D_{U}(f)=D_{V}(f|_{V})
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+denn 
+\begin_inset Formula $\Gamma(U,\mathcal{O}_{X})_{f}=\mathcal{O}_{X}(D_{U}(f)$
+\end_inset
+
+, 
+\begin_inset Formula $\Gamma(V,\mathcal{O}_{X})_{f|_{V}}=\mathcal{O}_{X}(D_{V}|f_{|_{V}})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Morphismen in affinen Schemata hinein
+\end_layout
+
+\begin_layout Proposition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+
+Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ ein Schemata, 
+\begin_inset Formula $Y=\Spec B$
+\end_inset
+
+ ein affines Schemata.
+ Dann ist die Abbildung
+\begin_inset Formula 
+\begin{align*}
+\Hom(X,Y) & \overset{\cong}{\longrightarrow}\Hom_{\ring}(B,\Gamma(X,\mathcal{O}_{X})),\\
+(f,f^{\flat}) & \longmapsto f_{Y}^{\flat}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition
+eine Bijektion.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+5, Verkleben von Morphismen
+\end_layout
+
+\end_inset
+
+Seien 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ lokal geringte Räume.
+ Für 
+\begin_inset Formula $U\subset X$
+\end_inset
+
+ offen definiert 
+\begin_inset Formula 
+\[
+\mathcal{F}:U\mapsto\Hom(U,Y)=\{(U,\mathcal{O}_{X|U})\rightarrow(Y,\mathcal{O}_{Y})\ \text{Morph. lokal ger. Räume\}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition
+eine Garbe von Mengen auf 
+\begin_inset Formula $X$
+\end_inset
+
+, d.h.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+für eine offene Überdeckung 
+\begin_inset Formula $X=\bigcup_{i}U$
+\end_inset
+
+, eine Familie 
+\begin_inset Formula $f_{i}:U_{i}\rightarrow Y_{i}$
+\end_inset
+
+ verkleben zu Morphismen
+\begin_inset Formula 
+\[
+f:X\rightarrow Y\Longleftrightarrow f_{i}|_{U_{i}\cap U_{j}}=f_{j}|_{U_{i}\cap U_{j}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $f$
+\end_inset
+
+ ist eindeutig bestimmt.
+\end_layout
+
+\end_deeper
+\begin_layout Remark*
+\begin_inset Formula $\mathcal{G}:U\mapsto\Hom_{\ring}(B,\Gamma(U,\mathcal{O}_{X}))$
+\end_inset
+
+ ist Garbe von Mengen.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Beweis von Proposition 5
+\end_layout
+
+\end_inset
+
+Verkleben topologischer Räume + stetige Abbildung klar.
+ 
+\begin_inset Formula $\checkmark$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\mathcal{O}_{Y}\rightarrow f_{\ast}\mathcal{O}_{X}$
+\end_inset
+
+ lässt sich ebenfalls verkleben.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Beweis von Proposition 4
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $X=\bigcup_{i}U_{i}$
+\end_inset
+
+ sei eine affine offene Überdeckung.
+ Nach Proposition 2.35 ist 
+\begin_inset Formula $\Hom(U,Y)\rightarrow\Hom(B,\Gamma(U,\mathcal{O}_{X}))$
+\end_inset
+
+ eine Bijektion.
+ Für 
+\begin_inset Formula $V\subset U_{i}\cap U_{j}$
+\end_inset
+
+ kommutiert das Diagramm
+\begin_inset Formula 
+\[
+\xymatrix{\Hom(U,Y)\ar[r]^{\cong}\ar[d] & \Hom(B,\Gamma(U,\mathcal{O}_{X})\ar[d]\\
+\Hom(V,Y)\ar[r]^{\cong} & \Hom(B,\Gamma(V,\mathcal{O}_{X}))
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+da 
+\begin_inset Formula $\Gamma(-)$
+\end_inset
+
+ funktoriell ist.
+ Es folgt, dass 
+\begin_inset Formula $\mathcal{F}\rightarrow\mathcal{G}$
+\end_inset
+
+ ein Morphismus von Garben ist mit 
+\begin_inset Formula $\varphi_{U}:\mathcal{F}(U)\overset{\cong}{\rightarrow}\mathcal{G}(U)$
+\end_inset
+
+ für alle 
+\begin_inset Formula $U\in\mathcal{B}$
+\end_inset
+
+, und 
+\begin_inset Formula $F\overset{\cong}{\rightarrow}\mathcal{G}$
+\end_inset
+
+ als Garbe.
+ Somit 
+\begin_inset Formula $\mathcal{F}(X)\cong\mathcal{G}(X)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $V\subset X$
+\end_inset
+
+ offen beliebig, 
+\begin_inset Formula $\varphi_{V}=\underset{\underset{U\in B_{V}}{\longleftarrow}}{\lim}\varphi_{U}$
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Da 
+\begin_inset Formula $\mathbb{Z}$
+\end_inset
+
+ kofinales Objekt in der Kategorie der Ringe ist (
+\begin_inset Formula $\mathbb{Z}\overset{\exists_{1}}{\rightarrow}R$
+\end_inset
+
+ für beliebige Ringe 
+\begin_inset Formula $R$
+\end_inset
+
+), gilt:
+\end_layout
+
+\begin_layout Corollary
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+
+Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ ein Schemata.
+ 
+\begin_inset Formula $X$
+\end_inset
+
+ besitzt einen eindeutig bestimmten Morphismus 
+\begin_inset Formula $X\rightarrow\Spec(\mathbb{Z})$
+\end_inset
+
+, d.h.
+ 
+\begin_inset Formula $\Spec(\mathbb{Z})$
+\end_inset
+
+ ist ein terminales Objekt in der Kategorie der Schemata: Jedes Schemata
+ ist ein 
+\begin_inset Formula $\mathbb{Z}$
+\end_inset
+
+-Schemata.
+\end_layout
+
+\begin_layout Standard
+Weiterhin:
+\begin_inset Formula 
+\begin{align*}
+\Hom(X,\underbrace{\Spec\mathbb{Z}[T]}_{\mathbb{A}_{\mathbb{Z}}^{1}}) & =\Hom_{\ring}(\mathbb{Z}[T],\mathcal{O}_{X}(X))=\Gamma(X,\mathcal{O}_{X})\\
+\Hom_{R}(X,\underbrace{\Spec R[T]}_{\mathbb{A}_{R}^{1}}) & =\Gamma(X,\mathcal{O}_{X})\text{ als }R\text{-Algebra für }R\text{-Schemata }X
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Morphismen der Form 
+\begin_inset Formula $\Spec(K)\rightarrow X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ ein Schemata und sei 
+\begin_inset Formula $x\in U\subset X$
+\end_inset
+
+ offene affine Umgebung von 
+\begin_inset Formula $x$
+\end_inset
+
+, z.B.
+ 
+\begin_inset Formula $U=\Spec A$
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $\mathfrak{p}=\mathfrak{p}_{x}\subset A$
+\end_inset
+
+.
+ Es folgt: 
+\begin_inset Formula $\mathcal{O}_{X,x}=\mathcal{O}_{U,x}=A_{\mathfrak{p}}$
+\end_inset
+
+, und der Homomorphismus 
+\begin_inset Formula $A\rightarrow A_{\mathfrak{p}}$
+\end_inset
+
+ induziert
+\begin_inset Formula 
+\[
+j_{x}:\Spec\mathcal{O}_{X,x}=\Spec A_{\mathfrak{p}}\longrightarrow\Spec A=U\subset X
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Morphismus von Schemata, welcher nach Proposition 2 unabhängig von 
+\begin_inset Formula $U$
+\end_inset
+
+ ist.
+ Nach Proposition 2.22 ist
+\begin_inset Formula 
+\begin{align*}
+j_{x}:\Spec\mathcal{O}_{X,x}\overset{\cong}{\longrightarrow}Z & =\{x'\in X\mid x'\text{ Verallgemeinerung von }x\}\\
+(x\in\{x'\}\Leftrightarrow\mathfrak{p}_{x'}\subset\mathfrak{p}_{x})\  & =\bigcap_{x\in U\subseteq_{\text{off.}}X}U
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $\kappa(x)=\mathcal{O}_{X,x}/\mathfrak{m}_{x}$
+\end_inset
+
+.
+ Die Abbildung 
+\begin_inset Formula $\mathcal{O}_{X,x}\rightarrow\kappa(x)$
+\end_inset
+
+ induziert einen Morphismus von Schemata
+\begin_inset Formula 
+\begin{align*}
+i_{x}:\Spec\kappa(x) & \longrightarrow\Spec\mathcal{O}_{X,x}\longrightarrow X\\
+\{\text{pt}\} & \longmapsto x
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nun sei 
+\begin_inset Formula $K$
+\end_inset
+
+ ein beliebiger Körper, und 
+\begin_inset Formula $f:\Spec K\rightarrow X$
+\end_inset
+
+ ein beliebiger Morphismus mit 
+\begin_inset Formula $f(\text{\{pt\}})=x\in X$
+\end_inset
+
+.
+ Dieser induziert einen lokalen Homomorphismus
+\begin_inset Formula 
+\[
+\xymatrix{\mathcal{O}_{X,x}\ar[r]\ar[d] & K=\mathcal{O}_{\Spec(K),(0)}\\
+\kappa(x)\ar[ur]_{\imath}
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+d.h.
+ 
+\begin_inset Formula $f$
+\end_inset
+
+ faktorisiert als 
+\begin_inset Formula $f=i_{x}\circ(\Spec\imath):\Spec K\rightarrow\Spec\kappa(x)\rightarrow X$
+\end_inset
+
+.
+ Damit haben wir:
+\end_layout
+
+\begin_layout Proposition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+
+Die Abbildung
+\begin_inset Formula 
+\[
+\Hom(\Spec K,X)\longrightarrow\{(x,\imath):x\in X,\ \imath:\kappa(x)\rightarrow K\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition
+ist eine Bijektion.
+\end_layout
+
+\begin_layout Proof
+Umgekehrt bilden wir:
+\begin_inset Formula 
+\[
+(x,\imath:\kappa(x)\rightarrow K)\longrightarrow(\Spec K\overset{\Spec\imath}{\rightarrow}\Spec\kappa(x)\overset{i_{x}}{\rightarrow}X).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Verkleben von Schemata und disjunkte Vereinigung
+\end_layout
+
+\begin_layout Definition
+Ein 
+\series bold
+Verklebe-Datum
+\series default
+ von Schemata besteht aus:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+einer Indexierung 
+\begin_inset Formula $I$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+ein Schemata 
+\begin_inset Formula $U_{i}$
+\end_inset
+
+ für 
+\begin_inset Formula $i\in I$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+ein affines Unterschemata 
+\begin_inset Formula $U_{ij}\subset U$
+\end_inset
+
+ für alle 
+\begin_inset Formula $i,j\in I$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+einen Isomorphismus 
+\begin_inset Formula $U_{ij}\stackrel[\cong]{\varphi_{ji}}{\longrightarrow}U_{ji}$
+\end_inset
+
+ für alle 
+\begin_inset Formula $(i,j)\in I\times I$
+\end_inset
+
+, sodass:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $U_{ii}=U_{i}$
+\end_inset
+
+ für alle 
+\begin_inset Formula $i\in I$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+(Kozykel-Bedingung): 
+\begin_inset Formula $\varphi_{kj}\circ\varphi_{ji}=\varphi_{ki}$
+\end_inset
+
+ auf 
+\begin_inset Formula $U_{ij}\cap U_{ik}$
+\end_inset
+
+, für alle 
+\begin_inset Formula $i,j,k\in I$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+Für die Kozykel-Bedingung soll implizit gelten:
+\begin_inset Formula 
+\begin{align*}
+\varphi_{ji}(U_{ij}\cap U_{ik}) & \subseteq U_{jk}\\
+i=j=k & \Rightarrow\varphi_{ii}=\id_{U_{i}},\\
+\varphi_{ij}^{-1} & =\varphi_{ji},\text{ und}\\
+\varphi_{ji}:U_{ij}\cap U_{ik} & \overset{\cong}{\rightarrow}U_{ji}\cap U_{jk}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+9
+\end_layout
+
+\end_inset
+
+Zu einem Verklebe-Datum 
+\begin_inset Formula $((U_{i})_{i\in I},(U_{ij})_{i,j\in I},(\varphi_{ij})_{i,j\in I})$
+\end_inset
+
+ gibt es ein Schemata 
+\begin_inset Formula $X$
+\end_inset
+
+ zusammen mit Morphismen 
+\begin_inset Formula $\psi_{i}:U_{i}\rightarrow X$
+\end_inset
+
+, sodass
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+für alle 
+\begin_inset Formula $i\in I$
+\end_inset
+
+ induziert 
+\begin_inset Formula $\psi_{i}$
+\end_inset
+
+ einen Isomorphismus von 
+\begin_inset Formula $U_{i}$
+\end_inset
+
+ auf offene Unterschemata von 
+\begin_inset Formula $X$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\psi_{j}\circ\varphi_{ji}=\psi_{i}$
+\end_inset
+
+ auf 
+\begin_inset Formula $U_{ij}$
+\end_inset
+
+ für alle 
+\begin_inset Formula $i,j\in I$
+\end_inset
+
+; 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+skript: folgt aus Proposition 5
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X=\bigcup_{i}\psi_{i}(U)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\psi_{i}(U_{i})\cap\psi_{j}=\psi_{i}(U_{ij})=\psi_{j}(U_{ji})$
+\end_inset
+
+ für alle 
+\begin_inset Formula $i,j\in I$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(X,\psi_{i\in I})$
+\end_inset
+
+ ist eindeutig bis auf eindeutige Isomorphie bestimmt.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Zusammen mit Proposition 5 folgt die universelle Eigenschaft: Für 
+\begin_inset Formula $(T,\xi_{i}:U_{i}\rightarrow T)$
+\end_inset
+
+ mit 
+\begin_inset Formula $\xi_{i}$
+\end_inset
+
+ welche Isomorphismen 
+\begin_inset Formula 
+\[
+U_{i}\overset{\cong}{\rightarrow}\text{\{offenes Unterschemata von }T\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+induzieren, sodass 
+\begin_inset Formula $\xi_{j}\circ\varphi_{ji}=\xi_{i}$
+\end_inset
+
+ auf 
+\begin_inset Formula $U_{ij}$
+\end_inset
+
+ für alle 
+\begin_inset Formula $i,j\in I$
+\end_inset
+
+, dann gibt es einen eindeutigen Morphismus 
+\begin_inset Formula $\xi:X\rightarrow T$
+\end_inset
+
+ mit 
+\begin_inset Formula $\xi\circ\psi_{i}=\xi_{i}$
+\end_inset
+
+ für alle 
+\begin_inset Formula $i\in I$
+\end_inset
+
+.
+ (
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+ Eindeutigkeit von Proposition 9)
+\end_layout
+
+\end_body
+\end_document
