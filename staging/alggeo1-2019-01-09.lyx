@@ -20,6 +20,7 @@
 \DeclareMathOperator{\Abb}{Abb}
 \DeclareMathOperator{\nil}{nil}
 \DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\red}{red}
 
 %%sets
 \DeclareMathOperator{\CC}{\mathbb{C}}
@@ -174,14 +175,912 @@ Ideal.
 Dazu:
 \begin_inset Formula 
 \[
-\xymatrix{\\
-\\
+\xymatrix{A\ar[r]^{\varphi}\ar@{->>}[dr] & \Gamma(Z,\mathcal{O}_{Z})\\
+ & A/\mathcal{I}_{Z}\ar@{^{(}->}[u]
 }
 \]
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Proof
+faktorisiert per Definition.
+ 
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+ Das Diagramm
+\begin_inset Formula 
+\[
+\xymatrix{Z\ar@{^{(}->}[r]^{i}\ar[rd] & X\\
+ & \Spec(A/\mathcal{I}_{Z})\ar@{^{(}->}[u]
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+kommutiert.
+ Es ist 
+\begin_inset Formula $\Mor(Z,\Spec A)=\Hom(A,\Gamma(Z,\mathcal{O}_{Z}))$
+\end_inset
+
+, ohne Einschränkung: 
+\begin_inset Formula $\mathcal{I}_{Z}=0$
+\end_inset
+
+ (sonst ersetze 
+\begin_inset Formula $A$
+\end_inset
+
+ durch 
+\begin_inset Formula $A/\mathcal{I}_{Z}$
+\end_inset
+
+).
+ Zu zeigen: 
+\begin_inset Formula $Z\hookrightarrow X=V(\mathfrak{a})$
+\end_inset
+
+ ist ein Isomorphismus.
+\end_layout
+
+\begin_layout Proof
+Wir wissen: die unterliegende stetige Abbildung topologischer Räume ist
+ injektiv und abgeschlossen.
+ (
+\begin_inset Formula $A\subset_{\text{abg.}}Z\subset X$
+\end_inset
+
+ 
+\begin_inset Formula $\Longrightarrow A\subset X$
+\end_inset
+
+ abg.) Bleibt zu zeigen: surjektiv.
+\end_layout
+
+\begin_layout Proof
+Sei 
+\begin_inset Formula $U\subseteq Z$
+\end_inset
+
+ offen mit 
+\begin_inset Formula $(U,\mathcal{O}_{X|U})$
+\end_inset
+
+ affin.
+ So gilt:
+\begin_inset Formula 
+\begin{align*}
+U\subset U\backslash D(\varphi(s)|_{U}) & =V_{U}(\varphi(s)|_{U})\\
+ & =\varphi(s)|_{U}\in\mathcal{O}_{Z}(U)\text{ nilpotent}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Endliche Überdeckung von 
+\begin_inset Formula $Z$
+\end_inset
+
+ durch affine Schemata 
+\begin_inset Formula $\Longrightarrow\varphi(s^{N})=0$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ injektiv 
+\begin_inset Formula $\Longrightarrow s^{N}=0$
+\end_inset
+
+ bzw.
+ 
+\begin_inset Formula $V(s)=X$
+\end_inset
+
+.
+ 
+\begin_inset Formula $Z$
+\end_inset
+
+ abgeschlossen in 
+\begin_inset Formula $X$
+\end_inset
+
+ 
+\begin_inset Formula $\Longrightarrow i(Z)=X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+Behauptung: 
+\series default
+Der Homomorphismus von Garben 
+\begin_inset Formula $\mathcal{O}_{X}\rightarrow\mathcal{O}_{Z}$
+\end_inset
+
+ ist bijektiv.
+ Reicht zu zeigen: injektiv (da surjektiv nach Voraussetzung).
+\end_layout
+
+\begin_layout Proof
+Sei 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ beliebig, 
+\begin_inset Formula $\mathcal{O}_{X,x}=A_{\mathfrak{p}_{x}}$
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $\frac{g}{1}\in\ker(\mathcal{O}_{X,x}\rightarrow\mathcal{O}_{Z,x}$
+\end_inset
+
+).
+ Überdecke
+\begin_inset Formula 
+\[
+Z=U\cup\bigcup_{i\in I}U_{i},\quad\#I<\infty
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+mit:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $(U,\mathcal{O}_{Z\mid U})$
+\end_inset
+
+, 
+\begin_inset Formula $(U_{i},\mathcal{O}_{Z\mid U_{i})}$
+\end_inset
+
+ affin für alle 
+\begin_inset Formula $i\in I$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $x\in U$
+\end_inset
+
+, 
+\begin_inset Formula $\varphi(g)|_{U}=0$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Wähle 
+\begin_inset Formula $s\in A$
+\end_inset
+
+ mit 
+\begin_inset Formula $x\in D(s)\subseteq U$
+\end_inset
+
+.
+ 
+\series bold
+Behauptung: 
+\series default
+
+\begin_inset Formula $\varphi(s^{N}g)=0$
+\end_inset
+
+ für 
+\begin_inset Formula $N>0$
+\end_inset
+
+.
+ Mit 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ injektiv folgt dann 
+\begin_inset Formula $s^{N}g=0$
+\end_inset
+
+, und 
+\begin_inset Formula $\frac{g}{1}=0$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathcal{O}_{X,x}$
+\end_inset
+
+ da 
+\begin_inset Formula $s$
+\end_inset
+
+ eine Einheit ist in 
+\begin_inset Formula $\mathcal{O}_{X,x}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Nach (2) ist 
+\begin_inset Formula $\varphi(g)=0$
+\end_inset
+
+, d.h.
+ 
+\begin_inset Formula $\varphi(s\cdot g)|_{U}=\varphi(s)|_{U}\cdot\underbrace{\varphi(g)|_{U}}_{=0}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $D_{U_{i}}(\varphi(s)|_{U_{i}})=D(s)\cap U_{i}\subseteq U\cap U_{i}$
+\end_inset
+
+, also 
+\begin_inset Formula $\varphi(g)|_{D_{U_{i}}(\varphi(s)|_{U_{i}})}=0$
+\end_inset
+
+, d.h.
+ 
+\begin_inset Formula $\frac{\varphi(g)}{1}=0$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathcal{O}_{Z}(U_{i})_{\varphi(s)|_{U_{i}}}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\Longleftrightarrow\varphi(s)|_{U_{i}}^{N_{i}}\varphi(g)=\varphi(s^{N_{i}}g)=0$
+\end_inset
+
+ (Die Indexmenge 
+\begin_inset Formula $I$
+\end_inset
+
+ ist endlich).
+ Setze 
+\begin_inset Formula $N:=\max_{i\in I}\{1,N_{i}\}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Unterschemata und Einbettung
+\end_layout
+
+\begin_layout Standard
+Offene und abgeschlossene Unterschemata sind Spezialfälle von 
+\emph on
+lokal abgeschlossene
+\emph default
+ Unterschemata.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+37
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ ein Schemata.
+ Ein 
+\series bold
+Unterschemata
+\series default
+ von 
+\begin_inset Formula $X$
+\end_inset
+
+ ist ein Schemata 
+\begin_inset Formula $(Y,\mathcal{O}_{Y})$
+\end_inset
+
+, so dass 
+\begin_inset Formula $Y\subset X$
+\end_inset
+
+ eine lokal abgeschlossene Teilmenge von 
+\begin_inset Formula $X$
+\end_inset
+
+ ist, und 
+\begin_inset Formula $Y$
+\end_inset
+
+ ein abgeschlossenes Unterschemata von dem offenen Unterschemata 
+\begin_inset Formula $U=X\backslash(\overline{Y}\backslash Y)\subseteq X$
+\end_inset
+
+ ist.
+ Wir haben dann einen natürlichen Morphismus 
+\begin_inset Formula $Y\rightarrow X$
+\end_inset
+
+ von Schemata.
+\end_layout
+
+\begin_layout Enumerate
+Eine 
+\series bold
+Einbettung
+\series default
+ 
+\begin_inset Formula $i:Y\rightarrow X$
+\end_inset
+
+ ist ein Morphismus von Schemata, dessen unterlegende stetige Abbildung
+ ein Homöomorphismus von 
+\begin_inset Formula $Y$
+\end_inset
+
+ auf eine lokale abgeschlossene Teilmenge von 
+\begin_inset Formula $X$
+\end_inset
+
+ ist, und sodass für alle 
+\begin_inset Formula $y\in Y$
+\end_inset
+
+ : 
+\begin_inset Formula 
+\[
+i_{y}^{\#}:\mathcal{O}_{X,i(y)}\rightarrow\mathcal{O}_{Y,y}
+\]
+
+\end_inset
+
+surjektiv ist.
+\end_layout
+
+\end_deeper
+\begin_layout Remark
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+38
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Ist 
+\begin_inset Formula $Y$
+\end_inset
+
+ ein Unterschemata von 
+\begin_inset Formula $X$
+\end_inset
+
+, dann ist 
+\begin_inset Formula $Y\hookrightarrow X$
+\end_inset
+
+ eine Einbettung.
+ Umgekehrt bestimmt jede Einbettung einen Isomorphismus seiner Quelle mit
+ einem eindeutigen Unterschemata seines Ziels.
+\end_layout
+
+\begin_layout Enumerate
+Ist 
+\begin_inset Formula $Y$
+\end_inset
+
+ ein Unterschemata von 
+\begin_inset Formula $X$
+\end_inset
+
+, wessen unterliegende Teilmenge abgeschlossen in 
+\begin_inset Formula $X$
+\end_inset
+
+ ist, dann ist 
+\begin_inset Formula $Y$
+\end_inset
+
+ ein abgeschlossenes Unterschemata von 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Das Analogon von 
+\begin_inset Formula $(ii)$
+\end_inset
+
+ für offene Unterschemata ist i.A.
+ falsch.
+\end_layout
+
+\begin_layout Enumerate
+Jede Einbettung 
+\begin_inset Formula $i:Y\hookrightarrow X$
+\end_inset
+
+ faktorisiert als:
+\begin_inset Formula 
+\[
+\xymatrix{Y\ar@{^{(}->}[r]^{i}\ar@{^{(}->}[rd] & X\\
+ & U=X\backslash(\overline{i(Y)}\backslash i(Y))\ar@{^{(}->}[u]
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+39
+\end_layout
+
+\end_inset
+
+Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ ein Schemata und 
+\begin_inset Formula $Z,Z'$
+\end_inset
+
+ Unterschemata.
+ Wir sagen 
+\begin_inset Formula $Z'$
+\end_inset
+
+ 
+\series bold
+majorisiert
+\series default
+ 
+\begin_inset Formula $Z$
+\end_inset
+
+, wenn die Inklusion 
+\begin_inset Formula $Z\hookrightarrow X$
+\end_inset
+
+ faktorisiert als:
+\begin_inset Formula 
+\[
+\xymatrix{Z\ar@{^{(}->}[r]\ar[rd] & X\\
+ & Z'\ar@{^{(}->}[u]
+}
+.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+40
+\end_layout
+
+\end_inset
+
+Sei 
+\series bold
+P
+\series default
+ die Eigenschaft eines Schemata-Morphismus, eine affine Einbettung, bzw.
+ abgeschlossene Einbettung, bzw.
+ Einbettung zu sein.
+ Dann:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Die Eigenschaft 
+\series bold
+P
+\series default
+ ist lokal auf der Basis, d.h.
+ für 
+\begin_inset Formula $f:Z\rightarrow X$
+\end_inset
+
+ Morphismus, 
+\begin_inset Formula $X=\bigcup_{i\in I}U_{i}$
+\end_inset
+
+ offene Überdeckung hat 
+\begin_inset Formula $f$
+\end_inset
+
+ die Eigenschaft 
+\series bold
+P
+\series default
+ 
+\begin_inset Formula $\Longleftrightarrow\forall i$
+\end_inset
+
+ hat 
+\begin_inset Formula $f^{-1}(U_{i})\rightarrow U_{i}$
+\end_inset
+
+ die Eigenschaft 
+\series bold
+P
+\series default
+.
+\end_layout
+
+\begin_layout Enumerate
+Die Komposition zweier Morphismen mit Eigenschaft 
+\series bold
+P
+\series default
+ hat Eigenschaft 
+\series bold
+P
+\series default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Example
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+41
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $I\subseteq R[T_{0},\ldots,T_{n}]$
+\end_inset
+
+ homogenes Ideal.
+ Dann ist 
+\begin_inset Formula $V_{+}(I)\subseteq\mathbb{P}_{R}^{n}$
+\end_inset
+
+ ein abgeschlossenes Unterschemata von 
+\begin_inset Formula $\mathbb{P}_{R}^{n}$
+\end_inset
+
+.
+ (Nach Bemerkung 40.1, denn 
+\begin_inset Formula $V_{+}(I)\cap U_{i}\subseteq U_{i}$
+\end_inset
+
+ abgeschlossen.)
+\end_layout
+
+\begin_layout Enumerate
+Alle Unterschemata eines 
+\begin_inset Formula $k$
+\end_inset
+
+-Schematas 
+\begin_inset Formula $X$
+\end_inset
+
+ von endlichem Typ sind selbst von endlichem Typ.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Görtz, Example 3.45
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Projektive und quasi-projektive Schemata über einen Körper
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+42
+\end_layout
+
+\end_inset
+
+Sei 
+\begin_inset Formula $k$
+\end_inset
+
+ ein Körper.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Ein 
+\begin_inset Formula $k$
+\end_inset
+
+-Schemata 
+\begin_inset Formula $X$
+\end_inset
+
+ heißt 
+\series bold
+projektiv
+\series default
+ wenn es ein 
+\begin_inset Formula $n\geq0$
+\end_inset
+
+ und eine abgeschlossene Einbettung 
+\begin_inset Formula $X\hookrightarrow\mathbb{P}_{k}^{n}$
+\end_inset
+
+ gibt.
+\end_layout
+
+\begin_layout Enumerate
+Ein 
+\begin_inset Formula $k$
+\end_inset
+
+-Schemata 
+\begin_inset Formula $X$
+\end_inset
+
+ heißt 
+\series bold
+quasi-projektiv 
+\series default
+wenn es ein 
+\begin_inset Formula $n\geq0$
+\end_inset
+
+ und eine Einbettung 
+\begin_inset Formula $X\hookrightarrow\mathbb{P}_{k}^{n}$
+\end_inset
+
+ gibt.
+\end_layout
+
+\end_deeper
+\begin_layout Example
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+43
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Für ein homogenes Ideal 
+\begin_inset Formula $I$
+\end_inset
+
+ sind 
+\begin_inset Formula $V_{+}(I)$
+\end_inset
+
+ projektive Schemata (Beispiel 41).
+\end_layout
+
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $X=\Spec A$
+\end_inset
+
+ affines 
+\begin_inset Formula $k$
+\end_inset
+
+-Schemata von endlichem Typ.
+ Dann ist 
+\begin_inset Formula $X$
+\end_inset
+
+ quasi-projektiv: 
+\begin_inset Formula $A\cong k[T_{1},\ldots,T_{n}]\backslash\mathfrak{a}$
+\end_inset
+
+, 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Görtz, p.87
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\xymatrix{X\ar@{^{(}->}[r]\ar[rd] & \mathbb{A}^{n}\ar[d]^{j}\\
+ & \mathbb{P}^{n}
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Reduzierte Unterschemata
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Spec K[X,Y]\supset\Spec(K[X,Y]/Y^{2})\supset\Spec(K[X,Y]/Y)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Question*
+Gibt es ein 
+\begin_inset Quotes gld
+\end_inset
+
+kleinstes
+\begin_inset Quotes grd
+\end_inset
+
+ Unterschemata?
+\end_layout
+
+\begin_layout Standard
+Setze 
+\begin_inset Formula $\mathcal{N}_{X}\subset\mathcal{O}_{X}$
+\end_inset
+
+, Garbifizierung der Prägarben:
+\begin_inset Formula 
+\[
+U\mapsto\nil(\Gamma(U,\mathcal{O}_{X})),\quad U\subseteq X\text{ offen}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Definiere 
+\begin_inset Formula $X_{\red}:=(X,\mathcal{O}_{X}/\mathcal{N}_{X})$
+\end_inset
+
+.
 \end_layout
 
 \end_body

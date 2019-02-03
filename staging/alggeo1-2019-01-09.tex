@@ -1,0 +1,280 @@
+%% LyX 2.3.2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[oneside,ngerman]{book}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage[all]{xy}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\theoremstyle{plain}
+\ifx\thechapter\undefined
+	\newtheorem{thm}{\protect\theoremname}
+\else
+	\newtheorem{thm}{\protect\theoremname}[chapter]
+\fi
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{\protect\definitionname}
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{\protect\remarkname}
+\theoremstyle{definition}
+\newtheorem{example}[thm]{\protect\examplename}
+\theoremstyle{plain}
+\newtheorem*{question*}{\protect\questionname}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+
+%% User-specified commands
+\DeclareMathOperator{\rad}{rad}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\maxspec}{MaxSpec}
+\DeclareMathOperator{\Quot}{Quot}
+\DeclareMathOperator{\im}{\mathrm{im}}
+\DeclareMathOperator{\Hom}{\mathrm{Hom}}
+\DeclareMathOperator{\Mor}{\mathrm{Mor}}
+\DeclareMathOperator{\id}{\mathrm{id}}
+\DeclareMathOperator{\res}{res}
+\DeclareMathOperator{\Abb}{Abb}
+\DeclareMathOperator{\nil}{nil}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\red}{red}
+
+%%sets
+\DeclareMathOperator{\CC}{\mathbb{C}}
+\DeclareMathOperator{\RR}{\mathbb{R}}
+\DeclareMathOperator{\QQ}{\mathbb{Q}}
+\DeclareMathOperator{\ZZ}{\mathbb{Z}}
+\DeclareMathOperator{\NN}{\mathbb{N}}
+
+%% categories
+\DeclareMathOperator{\ouv}{\mathcal{O}uv}
+\DeclareMathOperator{\set}{\underline{Set}}
+\DeclareMathOperator{\ab}{\underline{Ab}}
+\DeclareMathOperator{\cattop}{\underline{Top}}
+\DeclareMathOperator{\cring}{\underline{CRing}}
+\DeclareMathOperator{\ring}{\underline{Ring}}
+\DeclareMathOperator{\psh}{\underline{\mathcal{PS}h}}
+\DeclareMathOperator{\sh}{\underline{\mathcal{S}h}}
+\DeclareMathOperator{\aff}{\underline{Aff}}
+\DeclareMathOperator{\schs}{\underline{Sch/S}}
+\DeclareMathOperator{\pres}{\underline{Prevar/S}}
+\DeclareMathOperator{\prek}{\underline{Prevar/k}}
+\DeclareMathOperator{\affk}{\underline{AffVar/k}}
+\DeclareMathOperator{\topcp}{\underline{TopCP}}
+\DeclareMathOperator{\Top}{\underline{Top}}
+
+\makeatother
+
+\usepackage{babel}
+\providecommand{\definitionname}{Definition}
+\providecommand{\examplename}{Beispiel}
+\providecommand{\questionname}{Frage}
+\providecommand{\remarkname}{Bemerkung}
+\providecommand{\theoremname}{Theorem}
+
+\begin{document}
+\begin{proof}
+Sei $Z$ ein abgeschlossenes Unterschemata, $i:Z\hookrightarrow X$
+Inklusion. Definition $\Longrightarrow\mathcal{O}_{X}\twoheadrightarrow i_{\ast}\mathcal{O}_{Z}$
+surjektiv. Sei:
+\[
+\mathcal{I}_{Z}:=\ker(\mathcal{O}_{X}(X)\rightarrow\Gamma(X,i_{\ast}\mathcal{O}_{Z})=\Gamma(Z,\mathcal{O}_{Z}))\unlhd A
+\]
+
+Ideal. Falls $Z$ von der Form $V(\mathfrak{a})$ ist (was zu zeigen
+ist!) gilt $\mathcal{I}_{Z}=\mathfrak{a}$. Daher reicht z.z. $Z=V(\mathcal{I}_{Z})$.
+\textbf{Dazu:
+\[
+\xymatrix{A\ar[r]^{\varphi}\ar@{->>}[dr] & \Gamma(Z,\mathcal{O}_{Z})\\
+ & A/\mathcal{I}_{Z}\ar@{^{(}->}[u]
+}
+\]
+}
+
+faktorisiert per Definition. $\Longrightarrow$ Das Diagramm
+\[
+\xymatrix{Z\ar@{^{(}->}[r]^{i}\ar[rd] & X\\
+ & \Spec(A/\mathcal{I}_{Z})\ar@{^{(}->}[u]
+}
+\]
+
+kommutiert. Es ist $\Mor(Z,\Spec A)=\Hom(A,\Gamma(Z,\mathcal{O}_{Z}))$,
+ohne Einschränkung: $\mathcal{I}_{Z}=0$ (sonst ersetze $A$ durch
+$A/\mathcal{I}_{Z}$). Zu zeigen: $Z\hookrightarrow X=V(\mathfrak{a})$
+ist ein Isomorphismus.
+
+Wir wissen: die unterliegende stetige Abbildung topologischer Räume
+ist injektiv und abgeschlossen. ($A\subset_{\text{abg.}}Z\subset X$
+$\Longrightarrow A\subset X$ abg.) Bleibt zu zeigen: surjektiv.
+
+Sei $U\subseteq Z$ offen mit $(U,\mathcal{O}_{X|U})$ affin. So gilt:
+\begin{align*}
+U\subset U\backslash D(\varphi(s)|_{U}) & =V_{U}(\varphi(s)|_{U})\\
+ & =\varphi(s)|_{U}\in\mathcal{O}_{Z}(U)\text{ nilpotent}.
+\end{align*}
+
+Endliche Überdeckung von $Z$ durch affine Schemata $\Longrightarrow\varphi(s^{N})=0$.
+$\varphi$ injektiv $\Longrightarrow s^{N}=0$ bzw. $V(s)=X$. $Z$
+abgeschlossen in $X$ $\Longrightarrow i(Z)=X$.
+
+\textbf{Behauptung: }Der Homomorphismus von Garben $\mathcal{O}_{X}\rightarrow\mathcal{O}_{Z}$
+ist bijektiv. Reicht zu zeigen: injektiv (da surjektiv nach Voraussetzung).
+
+Sei $x\in X$ beliebig, $\mathcal{O}_{X,x}=A_{\mathfrak{p}_{x}}$.
+Sei $\frac{g}{1}\in\ker(\mathcal{O}_{X,x}\rightarrow\mathcal{O}_{Z,x}$).
+Überdecke
+\[
+Z=U\cup\bigcup_{i\in I}U_{i},\quad\#I<\infty
+\]
+
+mit:
+\begin{enumerate}
+\item $(U,\mathcal{O}_{Z\mid U})$, $(U_{i},\mathcal{O}_{Z\mid U_{i})}$
+affin für alle $i\in I$;
+\item $x\in U$, $\varphi(g)|_{U}=0$.
+\end{enumerate}
+Wähle $s\in A$ mit $x\in D(s)\subseteq U$. \textbf{Behauptung: }$\varphi(s^{N}g)=0$
+für $N>0$. Mit $\varphi$ injektiv folgt dann $s^{N}g=0$, und $\frac{g}{1}=0$
+in $\mathcal{O}_{X,x}$ da $s$ eine Einheit ist in $\mathcal{O}_{X,x}$.
+\begin{itemize}
+\item Nach (2) ist $\varphi(g)=0$, d.h. $\varphi(s\cdot g)|_{U}=\varphi(s)|_{U}\cdot\underbrace{\varphi(g)|_{U}}_{=0}=0$.
+\item $D_{U_{i}}(\varphi(s)|_{U_{i}})=D(s)\cap U_{i}\subseteq U\cap U_{i}$,
+also $\varphi(g)|_{D_{U_{i}}(\varphi(s)|_{U_{i}})}=0$, d.h. $\frac{\varphi(g)}{1}=0$
+in $\mathcal{O}_{Z}(U_{i})_{\varphi(s)|_{U_{i}}}$. $\Longleftrightarrow\varphi(s)|_{U_{i}}^{N_{i}}\varphi(g)=\varphi(s^{N_{i}}g)=0$
+(Die Indexmenge $I$ ist endlich). Setze $N:=\max_{i\in I}\{1,N_{i}\}$.
+\end{itemize}
+\end{proof}
+
+\section{Unterschemata und Einbettung}
+
+Offene und abgeschlossene Unterschemata sind Spezialfälle von \emph{lokal
+abgeschlossene} Unterschemata.
+\begin{defn}[37]
+\mbox{}
+\begin{enumerate}
+\item Sei $X$ ein Schemata. Ein \textbf{Unterschemata} von $X$ ist ein
+Schemata $(Y,\mathcal{O}_{Y})$, so dass $Y\subset X$ eine lokal
+abgeschlossene Teilmenge von $X$ ist, und $Y$ ein abgeschlossenes
+Unterschemata von dem offenen Unterschemata $U=X\backslash(\overline{Y}\backslash Y)\subseteq X$
+ist. Wir haben dann einen natürlichen Morphismus $Y\rightarrow X$
+von Schemata.
+\item Eine \textbf{Einbettung} $i:Y\rightarrow X$ ist ein Morphismus von
+Schemata, dessen unterlegende stetige Abbildung ein Homöomorphismus
+von $Y$ auf eine lokale abgeschlossene Teilmenge von $X$ ist, und
+sodass für alle $y\in Y$ : 
+\[
+i_{y}^{\#}:\mathcal{O}_{X,i(y)}\rightarrow\mathcal{O}_{Y,y}
+\]
+surjektiv ist.
+\end{enumerate}
+\end{defn}
+
+\begin{rem}[38]
+\mbox{}
+\begin{enumerate}
+\item Ist $Y$ ein Unterschemata von $X$, dann ist $Y\hookrightarrow X$
+eine Einbettung. Umgekehrt bestimmt jede Einbettung einen Isomorphismus
+seiner Quelle mit einem eindeutigen Unterschemata seines Ziels.
+\item Ist $Y$ ein Unterschemata von $X$, wessen unterliegende Teilmenge
+abgeschlossen in $X$ ist, dann ist $Y$ ein abgeschlossenes Unterschemata
+von $X$.
+\item Das Analogon von $(ii)$ für offene Unterschemata ist i.A. falsch.
+\item Jede Einbettung $i:Y\hookrightarrow X$ faktorisiert als:
+\[
+\xymatrix{Y\ar@{^{(}->}[r]^{i}\ar@{^{(}->}[rd] & X\\
+ & U=X\backslash(\overline{i(Y)}\backslash i(Y))\ar@{^{(}->}[u]
+}
+\]
+\end{enumerate}
+\end{rem}
+
+\begin{defn}[39]
+Sei $X$ ein Schemata und $Z,Z'$ Unterschemata. Wir sagen $Z'$
+\textbf{majorisiert} $Z$, wenn die Inklusion $Z\hookrightarrow X$
+faktorisiert als:
+\[
+\xymatrix{Z\ar@{^{(}->}[r]\ar[rd] & X\\
+ & Z'\ar@{^{(}->}[u]
+}
+.
+\]
+\end{defn}
+
+\begin{rem}[40]
+Sei \textbf{P} die Eigenschaft eines Schemata-Morphismus, eine affine
+Einbettung, bzw. abgeschlossene Einbettung, bzw. Einbettung zu sein.
+Dann:
+\begin{enumerate}
+\item Die Eigenschaft \textbf{P} ist lokal auf der Basis, d.h. für $f:Z\rightarrow X$
+Morphismus, $X=\bigcup_{i\in I}U_{i}$ offene Überdeckung hat $f$
+die Eigenschaft \textbf{P} $\Longleftrightarrow\forall i$ hat $f^{-1}(U_{i})\rightarrow U_{i}$
+die Eigenschaft \textbf{P}.
+\item Die Komposition zweier Morphismen mit Eigenschaft \textbf{P} hat Eigenschaft
+\textbf{P}.
+\end{enumerate}
+\end{rem}
+
+\begin{example}[41]
+\mbox{}
+\begin{enumerate}
+\item Sei $I\subseteq R[T_{0},\ldots,T_{n}]$ homogenes Ideal. Dann ist
+$V_{+}(I)\subseteq\mathbb{P}_{R}^{n}$ ein abgeschlossenes Unterschemata
+von $\mathbb{P}_{R}^{n}$. (Nach Bemerkung 40.1, denn $V_{+}(I)\cap U_{i}\subseteq U_{i}$
+abgeschlossen.)
+\item Alle Unterschemata eines $k$-Schematas $X$ von endlichem Typ sind
+selbst von endlichem Typ. 
+\end{enumerate}
+\end{example}
+
+
+\section{Projektive und quasi-projektive Schemata über einen Körper}
+\begin{defn}[42]
+Sei $k$ ein Körper.
+\begin{enumerate}
+\item Ein $k$-Schemata $X$ heißt \textbf{projektiv} wenn es ein $n\geq0$
+und eine abgeschlossene Einbettung $X\hookrightarrow\mathbb{P}_{k}^{n}$
+gibt.
+\item Ein $k$-Schemata $X$ heißt \textbf{quasi-projektiv }wenn es ein
+$n\geq0$ und eine Einbettung $X\hookrightarrow\mathbb{P}_{k}^{n}$
+gibt.
+\end{enumerate}
+\end{defn}
+
+\begin{example}[43]
+\mbox{}
+\begin{enumerate}
+\item Für ein homogenes Ideal $I$ sind $V_{+}(I)$ projektive Schemata
+(Beispiel 41).
+\item Sei $X=\Spec A$ affines $k$-Schemata von endlichem Typ. Dann ist
+$X$ quasi-projektiv: $A\cong k[T_{1},\ldots,T_{n}]\backslash\mathfrak{a}$,
+\[
+\xymatrix{X\ar@{^{(}->}[r]\ar[rd] & \mathbb{A}^{n}\ar[d]^{j}\\
+ & \mathbb{P}^{n}
+}
+\]
+\end{enumerate}
+\end{example}
+
+
+\section{Reduzierte Unterschemata}
+
+\[
+\Spec K[X,Y]\supset\Spec(K[X,Y]/Y^{2})\supset\Spec(K[X,Y]/Y)
+\]
+
+\begin{question*}
+Gibt es ein ,,kleinstes`` Unterschemata?
+\end{question*}
+Setze $\mathcal{N}_{X}\subset\mathcal{O}_{X}$, Garbifizierung der
+Prägarben:
+\[
+U\mapsto\nil(\Gamma(U,\mathcal{O}_{X})),\quad U\subseteq X\text{ offen}
+\]
+
+Definiere $X_{\red}:=(X,\mathcal{O}_{X}/\mathcal{N}_{X})$.
+\end{document}
