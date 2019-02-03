@@ -1,0 +1,1289 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+%% User-specified commands
+\DeclareMathOperator{\rad}{rad}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\maxspec}{MaxSpec}
+\DeclareMathOperator{\Quot}{Quot}
+\DeclareMathOperator{\im}{\mathrm{im}}
+\DeclareMathOperator{\Hom}{\mathrm{Hom}}
+\DeclareMathOperator{\Mor}{\mathrm{Mor}}
+\DeclareMathOperator{\id}{\mathrm{id}}
+\DeclareMathOperator{\res}{res}
+\DeclareMathOperator{\Abb}{Abb}
+\DeclareMathOperator{\nil}{nil}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\red}{red}
+\DeclareMathOperator{\op}{op}
+\DeclareMathOperator{\obj}{Obj}
+
+%%sets
+\DeclareMathOperator{\CC}{\mathbb{C}}
+\DeclareMathOperator{\RR}{\mathbb{R}}
+\DeclareMathOperator{\QQ}{\mathbb{Q}}
+\DeclareMathOperator{\ZZ}{\mathbb{Z}}
+\DeclareMathOperator{\NN}{\mathbb{N}}
+
+%% categories
+\DeclareMathOperator{\ouv}{\mathcal{O}uv}
+\DeclareMathOperator{\set}{\underline{Set}}
+\DeclareMathOperator{\ab}{\underline{Ab}}
+\DeclareMathOperator{\cattop}{\underline{Top}}
+\DeclareMathOperator{\cring}{\underline{CRing}}
+\DeclareMathOperator{\ring}{\underline{Ring}}
+\DeclareMathOperator{\psh}{\underline{\mathcal{PS}h}}
+\DeclareMathOperator{\sh}{\underline{\mathcal{S}h}}
+\DeclareMathOperator{\aff}{\underline{Aff}}
+\DeclareMathOperator{\sch}{\underline{Sch}}
+\DeclareMathOperator{\schs}{\underline{Sch/S}}
+\DeclareMathOperator{\schs0}{\underline{Sch/S_{0}}}
+\DeclareMathOperator{\pres}{\underline{Prevar/S}}
+\DeclareMathOperator{\prek}{\underline{Prevar/k}}
+\DeclareMathOperator{\affk}{\underline{AffVar/k}}
+\DeclareMathOperator{\topcp}{\underline{TopCP}}
+\DeclareMathOperator{\Top}{\underline{Top}}
+\DeclareMathOperator{\grp}{\underline{Grp}}
+\DeclareMathOperator{\func}{\underline{Func}}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+theorems-ams-extended
+theorems-chap
+\end_modules
+\maintain_unincluded_children false
+\language ngerman
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style german
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Proposition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+44
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Der geringte Raum 
+\begin_inset Formula $X_{\red}=(X,\mathcal{O}_{X}/\mathcal{N})$
+\end_inset
+
+ ist ein Schema, also ein abgeschlossenes Unterschema von 
+\begin_inset Formula $X$
+\end_inset
+
+ mit demselben topologischen Raum wie 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Falls 
+\begin_inset Formula $X'\subset X$
+\end_inset
+
+ ein weiteres solches Unterschema ist, dann gibt es eine abgeschlossene
+ Einbettung 
+\begin_inset Formula $f:X_{\red}\rightarrow X'$
+\end_inset
+
+, sodass das Diagramm
+\begin_inset Formula 
+\[
+\xymatrix{X_{\red}\ar@{^{(}->}[r]\ar[d] & X\\
+X'\ar@{^{(}->}[ur]
+}
+\]
+
+\end_inset
+
+kommutiert.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $X_{\red}$
+\end_inset
+
+ ist reduziert und heißt das 
+\series bold
+\shape italic
+unterliegend reduzierte Unterschema von 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Falls 
+\begin_inset Formula $X=\Spec A$
+\end_inset
+
+ affin, gilt 
+\begin_inset Formula $X_{\red}=\Spec(A/\nil(A))$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Ohne Einschränkung sei 
+\begin_inset Formula $X=\Spec A$
+\end_inset
+
+ 
+\begin_inset Formula $\Longrightarrow U\mapsto\nil(\Gamma(U,\mathcal{O}_{X}))$
+\end_inset
+
+ ist bereits eine Garbe, da 
+\begin_inset Formula 
+\[
+\nil(\mathcal{O}_{X}(D(f))=\nil(A_{f})=\nil(A)A_{f}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+für alle 
+\begin_inset Formula $f\in A$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\Longrightarrow X_{\red}=\Spec(A/\nil A)$
+\end_inset
+
+ offensichtlich reduziert.
+
+\series bold
+ Universelle Eigenschaft:
+\series default
+ zu zeigen 
+\begin_inset Formula $\mathcal{O}_{X}\rightarrow\mathcal{O}_{X}/\mathcal{N}$
+\end_inset
+
+ faktorisiert:
+\begin_inset Formula 
+\[
+\xymatrix{\mathcal{O}_{X}\ar[r]\ar[rd] & \mathcal{O}_{X}/\mathcal{N}\\
+ & \mathcal{O}_{X'}\ar[u]
+}
+,
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+d.h.
+ 
+\begin_inset Formula $\ker(\mathcal{O}_{X}\rightarrow\mathcal{O}_{X'})\subset\mathcal{N}$
+\end_inset
+
+.
+ Es reicht zu zeigen:
+\begin_inset Formula 
+\[
+\ker(\mathcal{O}_{X}(U)\rightarrow\mathcal{O}_{X'}(U))\subset\Gamma(U,\mathcal{N})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+für alle 
+\begin_inset Formula $U$
+\end_inset
+
+ offen affin.
+ Ohne Einschränkung 
+\begin_inset Formula $X=\Spec A$
+\end_inset
+
+, 
+\begin_inset Formula $X'$
+\end_inset
+
+ abgeschlossenes Unterschema 
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+ affin: 
+\begin_inset Formula $X'=\Spec B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Zu zeigen: 
+\begin_inset Formula $\ker(A\rightarrow B)\subset\nil A$
+\end_inset
+
+.
+ Da nach Voraussetzung 
+\begin_inset Formula $\Spec B\rightarrow\Spec A$
+\end_inset
+
+ bijektiv ist, folgt:
+\begin_inset Formula 
+\[
+\ker(A\rightarrow B)\subset\bigcap_{\mathfrak{g}\in\Spec A}\mathfrak{g}=\nil A
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+45
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $(X_{\red},i_{X}:X_{red}\rightarrow X)$
+\end_inset
+
+ ist durch die universelle Eigenschaft eindeutig bis auf eindeutige Isomorphie
+ bestimmt.
+\end_layout
+
+\begin_layout Lemma
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+46
+\end_layout
+
+\end_inset
+
+Jede Einbettung 
+\begin_inset Formula $i:Z\rightarrow X$
+\end_inset
+
+ ist ein Monomorphismus in 
+\begin_inset Formula $\sch$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Stetige Abbildung 
+\begin_inset Formula $Z\hookrightarrow X$
+\end_inset
+
+ klar.
+\end_layout
+
+\begin_layout Itemize
+Die Garbenabbildung 
+\begin_inset Formula $i_{Y}^{\#}$
+\end_inset
+
+ ist surjektiv.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Beweis von Korollar 45
+\end_layout
+
+\end_inset
+
+Sei 
+\begin_inset Formula $X'_{\red}$
+\end_inset
+
+ ein weiteres Schema mit universeller Eigenschaft
+\begin_inset Formula 
+\[
+\exists f:X_{\red}\rightarrow X'_{\red},\quad g:X'_{\red}\rightarrow X_{\red}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+so dass
+\begin_inset Formula 
+\[
+\xymatrix{X_{\red}\ar[r]^{f}\ar[rd]_{i_{X}} & X'_{\red}\ar[r]^{g}\ar[d]^{i_{X'}} & X_{\red}\ar[ld]^{i_{X}}\\
+ & X
+}
+,\quad i_{X}\circ(g\circ f)=i_{X}\circ\id_{X_{\red}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $i_{X}$
+\end_inset
+
+ Monomorphismus 
+\begin_inset Formula $\Longrightarrow g\circ f=\id_{X_{\red}}=f\circ g$
+\end_inset
+
+.
+ Auf 
+\begin_inset Formula $(X_{\red},i_{X})=\{\id\}$
+\end_inset
+
+ 
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+ Eindeutig.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(\cdot)_{\red}$
+\end_inset
+
+ ist ein Funktor, wie die folgende Proposition zeigt:
+\end_layout
+
+\begin_layout Proposition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+47
+\end_layout
+
+\end_inset
+
+Sei 
+\begin_inset Formula $f:X\rightarrow Y$
+\end_inset
+
+ ein Schemata-Morphismus.
+ Dann gibt es:
+\begin_inset Formula 
+\[
+\xymatrix{X_{\red}\ar[r]^{f_{\red}} & Y_{\red}\\
+X_{\red}\ar@{^{(}->}[r]^{i_{X}}\ar[d]_{f_{\red}} & X\ar[d]^{f}\\
+Y_{\red}\ar@{^{(}->}[r]_{i_{Y}} & Y
+}
+,\quad\text{d.d.}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition
+Für weitere Morphismen 
+\begin_inset Formula $g:Y\rightarrow Z$
+\end_inset
+
+ gilt
+\begin_inset Formula 
+\[
+(g\circ f)_{\red}=g_{\red}\circ f_{\red}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $i_{Y}$
+\end_inset
+
+ Monomorphismus 
+\begin_inset Formula $\Longrightarrow f_{\red}$
+\end_inset
+
+ eindeutig.
+ 
+\series bold
+Existenz: 
+\series default
+Nach Verklebungs-Lemma 
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+ ohne Einschränkung 
+\begin_inset Formula $X=\Spec A$
+\end_inset
+
+, 
+\begin_inset Formula $Y=\Spec B$
+\end_inset
+
+, 
+\begin_inset Formula $f\hat{=}\ \varphi:B\rightarrow A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Longrightarrow\varphi(\nil(B))\subset\nil(A)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Longrightarrow\varphi_{\red}:B/\nil(B)\rightarrow A/\nil(A)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Longrightarrow f_{\red}:\Spec(A/\nil(A))\rightarrow\Spec(B/\nil(B))$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proposition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+48
+\end_layout
+
+\end_inset
+
+Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ Schemata, 
+\begin_inset Formula $Z\subset X$
+\end_inset
+
+ lokal abgeschlossene Teilmenge.
+ Dann existiert ein eindeutig bestimmtes reduziertes Unterschema mit topologisch
+em Raum 
+\begin_inset Formula $Z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Eindeutigkeit: Korollar 45.
+ Existenz: Verklebungslemma 
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+ ohne Einschränkung 
+\begin_inset Formula $X=\Spec A$
+\end_inset
+
+ affin und 
+\begin_inset Formula $Z\subset X$
+\end_inset
+
+ abgeschlossen (sonst Überdeckung von 
+\begin_inset Formula $X$
+\end_inset
+
+ zu 
+\begin_inset Formula $Z\subset_{\text{abg.}}U\subset_{\text{abg.}}X$
+\end_inset
+
+) 
+\begin_inset Formula $\Longrightarrow\exists\mathfrak{a}\subset A$
+\end_inset
+
+ so dass 
+\begin_inset Formula $Z=V(\mathfrak{A})$
+\end_inset
+
+ 
+\begin_inset Formula $\Longrightarrow Z'=\Spec(A/\mathfrak{a})$
+\end_inset
+
+ ist abgeschlossenes Unterschema von 
+\begin_inset Formula $X$
+\end_inset
+
+ mit topologischem Raum 
+\begin_inset Formula $Z$
+\end_inset
+
+.
+ Satz 44 
+\begin_inset Formula $\Longrightarrow\exists Z'_{\red}\subset Z'\subset X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Damit besitzt für ein lokal abgeschlossene Teilmenge die geordnete Menge
+ (bzgl.
+ Inklusion) von Unterschema, denen topologischen Raum 
+\begin_inset Formula $Z$
+\end_inset
+
+ umfassen, ein eindeutiges minimales Element 
+\begin_inset Formula $Z_{\red}$
+\end_inset
+
+, das 
+\series bold
+reduzierte Unterschema
+\series default
+ mit unterliegendem Raum 
+\begin_inset Formula $Z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Chapter
+Faserprodukte
+\end_layout
+
+\begin_layout Section
+Der 
+\begin_inset Quotes gld
+\end_inset
+
+Punkte-Funktor
+\begin_inset Quotes grd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Kontravarianter Funktor, 
+\begin_inset Formula $\forall X\in\sch$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{align*}
+h_{X}:(\sch)^{\op} & \longrightarrow\set\\
+S & \longmapsto h_{X}(S):=\Hom_{\sch}(S,X)\\
+(f:T\rightarrow S) & \longmapsto(\Hom(S,X)\overset{f^{\ast}}{\rightarrow}\Hom(T,X),\ g\mapsto g\circ f)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f^{\ast}=h_{X}(S)$
+\end_inset
+
+ heißen 
+\begin_inset Formula $S$
+\end_inset
+
+-wertige Punkte von 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ 
+\series bold
+Notation: 
+\series default
+
+\begin_inset Formula $X(S)$
+\end_inset
+
+, 
+\begin_inset Formula $X(R)$
+\end_inset
+
+, falls 
+\begin_inset Formula $S=\Spec R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Relative Version:
+\series default
+ 
+\begin_inset Formula $X\in\schs0$
+\end_inset
+
+, 
+\begin_inset Formula $S_{0}$
+\end_inset
+
+ fixes Schemata.
+\begin_inset Formula 
+\begin{align*}
+\schs0 & \longrightarrow\set\\
+S & \longmapsto\Hom_{S_{0}}(S,X)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Notation: 
+\begin_inset Formula $X_{S_{0}}(S)$
+\end_inset
+
+, 
+\begin_inset Formula $X_{R_{0}}(S)$
+\end_inset
+
+, 
+\begin_inset Formula $X_{S_{0}}(R)$
+\end_inset
+
+, 
+\begin_inset Formula $X_{R_{0}}(R)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Sei 
+\begin_inset Formula $k$
+\end_inset
+
+ algebraisch abgeschlossen, 
+\begin_inset Formula $X/k$
+\end_inset
+
+ von endlichem Typ, 
+\begin_inset Formula $x\in X_{k}(k)$
+\end_inset
+
+.
+ Dann ist
+\begin_inset Formula 
+\[
+\im(\Spec k\overset{x}{\longrightarrow}X)\in X
+\]
+
+\end_inset
+
+abgeschlossener Punkt.
+ 
+\begin_inset Formula $x\mapsto\im(x)$
+\end_inset
+
+ liefert Bijektion, 
+\begin_inset Formula $X_{k}(k)\rightarrow|X|$
+\end_inset
+
+ Menge der abgeschlossenen Punkte.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Sei 
+\begin_inset Formula $X=\mathbb{A}^{n}=\Spec(\mathbb{Z}[T_{1},\ldots T_{n}])$
+\end_inset
+
+.
+ Dann:
+\begin_inset Formula 
+\begin{align*}
+\mathbb{A}^{n}(S) & =\Hom_{\sch}(S,\mathbb{A}^{n})=\Hom_{\ring}(\mathbb{Z}[T_{1},\ldots,T_{n}],\mathcal{O}_{S}(S))\\
+ & =\Gamma(S,\mathcal{O}_{S})^{n}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Sei 
+\begin_inset Formula $X=\Spec(R[T_{1},\ldots,T_{n})/(f_{1},\ldots,f_{m}))$
+\end_inset
+
+, 
+\begin_inset Formula $S$
+\end_inset
+
+ ein 
+\begin_inset Formula $R$
+\end_inset
+
+-Schema.
+ Dann:
+\begin_inset Formula 
+\begin{align*}
+X_{R}(S) & =\Hom_{R\text{-Alg}}(R[I]/(f),\mathcal{O}_{S}(S))\\
+ & =\{s\in\mathcal{O}_{S}(S)^{n}\mid f_{1}(s)=\cdots=f_{m}(s)=0\}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Sei 
+\begin_inset Formula $X=\Spec\mathbb{Z}[T,T^{-1}]$
+\end_inset
+
+.
+ Dann:
+\begin_inset Formula 
+\[
+X(S)=\Hom(\mathbb{Z}[T,T^{-1}],\mathcal{O}_{S}(S))=\Gamma(S,\mathcal{O}_{S})^{\times}.
+\]
+
+\end_inset
+
+Hier sogar 
+\begin_inset Formula $h_{X}:\sch\rightarrow\grp$
+\end_inset
+
+.
+ 
+\begin_inset Formula $X$
+\end_inset
+
+ ist eine abelsche Gruppe.
+\end_layout
+
+\begin_layout Section
+Yoneda-Lemma
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Ziel:
+\series default
+ 
+\begin_inset Formula $h_{X}$
+\end_inset
+
+ beschreibt 
+\begin_inset Formula $X$
+\end_inset
+
+ eindeutig.
+\end_layout
+
+\begin_layout Standard
+Erinnerung: 
+\begin_inset Formula $\mathcal{F},\mathcal{G}:\mathcal{A}\rightarrow\mathcal{B}$
+\end_inset
+
+ Funktoren, natürliche Transformation 
+\begin_inset Formula $f\in\Hom(\mathcal{F},\mathcal{G})$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+f=\{f(X):\mathcal{F}(X):\rightarrow\mathcal{G}(X))_{X\in\mathcal{A}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Wir erhalten Kategorien: 
+\begin_inset Formula $\func(\mathcal{A},\mathcal{B})$
+\end_inset
+
+, 
+\series bold
+hier: 
+\series default
+
+\begin_inset Formula $\mathcal{C}=\schs0$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{C}=\func(\mathcal{C}^{\op},\set)$
+\end_inset
+
+.
+ Wir erhalten einen Funktor
+\begin_inset Formula 
+\begin{align*}
+\mathcal{C} & \longrightarrow\hat{\mathcal{C}},\\
+X & \longmapsto h_{X},\\
+f & \longmapsto\text{Pullback }f^{\ast}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+
+Sei 
+\begin_inset Formula $X\in\mathcal{C}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathcal{F}\in\hat{\mathcal{C}}$
+\end_inset
+
+.
+ Dann ist die Abbildung
+\begin_inset Formula 
+\begin{align*}
+\Hom_{\hat{C}}(h_{X},\mathcal{F}) & \longrightarrow\mathcal{F}(X)\\
+\alpha & \longmapsto\alpha(X)(\id_{X})\in\Hom(h_{X}(X),\mathcal{F}(X))
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition
+bijektiv und funktoriell.
+\end_layout
+
+\begin_layout Standard
+Insbesondere ist der obige Funktor 
+\begin_inset Formula $\mathcal{C}\rightarrow\hat{\mathcal{C}}$
+\end_inset
+
+ volltreu (wähle 
+\begin_inset Formula $\mathcal{F}=h_{Y}$
+\end_inset
+
+!)
+\end_layout
+
+\begin_layout Proof
+Umkehrabbildung:
+\begin_inset Formula 
+\begin{align*}
+\mathcal{F}(X) & \longrightarrow\Hom_{\hat{\mathcal{C}}}(h_{X},\mathcal{F})\\
+\xi & \longmapsto\alpha_{\xi}=(\alpha_{\xi}(Y))_{Y\in\schs0}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+mit
+\begin_inset Formula 
+\begin{align*}
+\alpha_{\xi}(Y):\Hom(Y,X)=h_{X}(Y) & \longrightarrow\mathcal{F}(Y)\\
+f & \longmapsto\mathcal{F}(f)(\xi)\in\Hom(\mathcal{F}(X),\mathcal{F}(Y))
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Faserprodukte in beliebigen Kategorien
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ eine Kategorie, 
+\begin_inset Formula $S\in\obj(\mathcal{C})$
+\end_inset
+
+, 
+\begin_inset Formula $f:X\rightarrow S$
+\end_inset
+
+, 
+\begin_inset Formula $g:Y\rightarrow S$
+\end_inset
+
+ Morphismen.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+
+Ein Tupel 
+\begin_inset Formula $(Z,p,q)$
+\end_inset
+
+ mit 
+\begin_inset Formula $Z\in\obj(\mathcal{C})$
+\end_inset
+
+ und Morphismen 
+\begin_inset Formula $p:Z\rightarrow X$
+\end_inset
+
+, 
+\begin_inset Formula $q:Z\rightarrow Y$
+\end_inset
+
+, 
+\begin_inset Formula $f\circ p=g\circ q$
+\end_inset
+
+, hei
+\size small
+ßt 
+\series bold
+Faserprodukt
+\series default
+ von 
+\begin_inset Formula $X$
+\end_inset
+
+ und 
+\begin_inset Formula $Y$
+\end_inset
+
+ über 
+\begin_inset Formula $S$
+\end_inset
+
+ (bzw.
+ von 
+\begin_inset Formula $f,g$
+\end_inset
+
+), falls für jedes 
+\begin_inset Formula $T\in\obj(\mathcal{C})$
+\end_inset
+
+ und Paare 
+\begin_inset Formula $(u:T\rightarrow X,v:T\rightarrow Y)$
+\end_inset
+
+ von Morphismen mit 
+\begin_inset Formula $f\circ u=g\circ v$
+\end_inset
+
+ genau ein Morphismus 
+\begin_inset Formula $w:T\rightarrow Z$
+\end_inset
+
+ existiert mit 
+\begin_inset Formula $p\circ w=u$
+\end_inset
+
+, 
+\begin_inset Formula $g\circ w=v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Notation: 
+\series default
+
+\begin_inset Formula $X\times_{S}Y$
+\end_inset
+
+ oder 
+\begin_inset Formula $X\times_{f,S,g}Y:=Z$
+\end_inset
+
+, 
+\begin_inset Formula $(u,v)_{S}:=w$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+\xymatrix{T\ar@/^{1pc}/[rrd]^{u}\ar@/_{1pc}/[ddr]_{v}\ar[dr]|-{\exists_{1}}\\
+ & X\times_{S}Y\ar[r]^{p}\ar[d]^{q} & X\ar[d]^{f}\\
+ & Y\ar[r]_{g} & S
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ist 
+\begin_inset Formula $S$
+\end_inset
+
+ ein finales Objekt in 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+, so ist 
+\begin_inset Formula $X\times_{S}Y=X\times Y$
+\end_inset
+
+ das kategorielle Produkt.
+\end_layout
+
+\begin_layout Example
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathcal{C}=\set$
+\end_inset
+
+.
+ 
+\begin_inset Formula $X\times_{S}Y=\{(x,y)\in X\times Y\mid f(x)=g(x)(\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathcal{C}=\Top$
+\end_inset
+
+, 
+\begin_inset Formula $f:X\rightarrow S$
+\end_inset
+
+, 
+\begin_inset Formula $g:Y\rightarrow S$
+\end_inset
+
+ stetige Abbildungen.
+ Versehe 
+\begin_inset Formula $\{(x,y)\mid f(x)=g(y)\}\subset X\times Y$
+\end_inset
+
+ mit der Topologie induziert von der Produkttopologie auf 
+\begin_inset Formula $X\times Y$
+\end_inset
+
+.
+ Dies ist ein Faserprodukt in 
+\begin_inset Formula $\Top$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
