@@ -1,0 +1,113 @@
+%% LyX 2.3.2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[oneside,ngerman]{book}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage[all]{xy}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\theoremstyle{plain}
+\ifx\thechapter\undefined
+	\newtheorem{thm}{\protect\theoremname}
+\else
+	\newtheorem{thm}{\protect\theoremname}[chapter]
+\fi
+\theoremstyle{plain}
+\newtheorem{prop}[thm]{\protect\propositionname}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+%% User-specified commands
+\DeclareMathOperator{\rad}{rad}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\maxspec}{MaxSpec}
+\DeclareMathOperator{\Quot}{Quot}
+\DeclareMathOperator{\im}{\mathrm{im}}
+\DeclareMathOperator{\Hom}{\mathrm{Hom}}
+\DeclareMathOperator{\Mor}{\mathrm{Mor}}
+\DeclareMathOperator{\id}{\mathrm{id}}
+\DeclareMathOperator{\res}{res}
+\DeclareMathOperator{\Abb}{Abb}
+\DeclareMathOperator{\nil}{nil}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\red}{red}
+\DeclareMathOperator{\op}{op}
+\DeclareMathOperator{\obj}{Obj}
+
+%%sets
+\DeclareMathOperator{\CC}{\mathbb{C}}
+\DeclareMathOperator{\RR}{\mathbb{R}}
+\DeclareMathOperator{\QQ}{\mathbb{Q}}
+\DeclareMathOperator{\ZZ}{\mathbb{Z}}
+\DeclareMathOperator{\NN}{\mathbb{N}}
+
+%% categories
+\DeclareMathOperator{\ouv}{\mathcal{O}uv}
+\DeclareMathOperator{\set}{\underline{Set}}
+\DeclareMathOperator{\ab}{\underline{Ab}}
+\DeclareMathOperator{\cattop}{\underline{Top}}
+\DeclareMathOperator{\cring}{\underline{CRing}}
+\DeclareMathOperator{\ring}{\underline{Ring}}
+\DeclareMathOperator{\psh}{\underline{\mathcal{PS}h}}
+\DeclareMathOperator{\sh}{\underline{\mathcal{S}h}}
+\DeclareMathOperator{\aff}{\underline{Aff}}
+\DeclareMathOperator{\sch}{\underline{Sch}}
+\DeclareMathOperator{\schs}{\underline{Sch/S}}
+\DeclareMathOperator{\schsn}{\underline{Sch/S_{0}}}
+\DeclareMathOperator{\pres}{\underline{Prevar/S}}
+\DeclareMathOperator{\prek}{\underline{Prevar/k}}
+\DeclareMathOperator{\affk}{\underline{AffVar/k}}
+\DeclareMathOperator{\topcp}{\underline{TopCP}}
+\DeclareMathOperator{\Top}{\underline{Top}}
+\DeclareMathOperator{\grp}{\underline{Grp}}
+\DeclareMathOperator{\func}{\underline{Func}}
+
+\makeatother
+
+\usepackage{babel}
+\providecommand{\propositionname}{Satz}
+\providecommand{\theoremname}{Theorem}
+
+\begin{document}
+Sei $X,X'\in\schs$, $f:X'\rightarrow X$ Morphismus in $\schs$,
+$g:=f\times_{S}\id_{Y}$.
+\[
+\xymatrix{Z'=X'\times_{S}Y\ar[r]^{g}\ar[d]_{p'} & Z=X\times_{S}Y\ar[r]^{q}\ar[d]_{p'} & Y\ar[d]\\
+X'\ar[r]^{f} & X\ar[r] & S
+}
+\]
+
+kommutiert. Da $q\circ g=q'$ Projektion auf $Y$ ist, ist das große
+und damit auch beide Diagramme kartesisch. (Proposition 10)
+\begin{prop}[14]
+$f$ induziert einen Homömorphismus von $X'$ auf $f(X')$ und:
+\begin{enumerate}
+\item $f_{x'}^{\#}:\mathcal{O}_{X,f(x')}\rightarrow\mathcal{O}_{X',x'}$
+sei surjektiv $\forall x'\in X'$ und es existiert eine offene affine
+Umgebung $U'$ von $f(x')$, sodass $f^{-1}(U')$ quasi-kompakt ist,
+oder
+\item $f_{x'}^{\#}$ ist bijektiv $\forall x'\in X'$.
+\end{enumerate}
+Dann gilt:
+\begin{enumerate}
+\item $g$ ist ein Homöomorphismus von $Z'$ auf $g(Z')=p^{-1}(f(X'))$.
+\item $\forall z'\in Z'$ haben wir das induzierte Diagramm für lokale Ringe:
+\[
+\xymatrix{\mathcal{O}_{Z',z'}\ar[d] & \mathcal{O}_{Z,g(z')}\ar[l]^{g_{z'}^{\#}}\ar[d]^{p_{g(z)}^{\#}}\\
+\mathcal{O}_{X',p'(z')} & \mathcal{O}_{X,p(g(z'))}\ar[l]^{f_{p'(z')}}
+}
+\]
+\end{enumerate}
+\begin{itemize}
+\item $g_{z'}^{\#}$ ist surjektiv;
+\item $\ker(g_{z'}^{\#})$ ist von $p_{g(z')}^{\#}(\ker f_{p'(z')}^{\#})$
+erzeugt.
+\end{itemize}
+\end{prop}
+
+
+\end{document}
