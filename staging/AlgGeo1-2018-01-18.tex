@@ -7,6 +7,8 @@
 \setcounter{tocdepth}{3}
 \usepackage{amsmath}
 \usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{stmaryrd}
 \usepackage[all]{xy}
 
 \makeatletter
@@ -19,6 +21,16 @@
 \fi
 \theoremstyle{plain}
 \newtheorem{prop}[thm]{\protect\propositionname}
+\theoremstyle{plain}
+\newtheorem*{lem*}{\protect\lemmaname}
+\theoremstyle{definition}
+\newtheorem*{example*}{\protect\examplename}
+\theoremstyle{plain}
+\newtheorem{lem}[thm]{\protect\lemmaname}
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{\protect\definitionname}
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{\protect\remarkname}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
 %% User-specified commands
@@ -32,13 +44,13 @@
 \DeclareMathOperator{\id}{\mathrm{id}}
 \DeclareMathOperator{\res}{res}
 \DeclareMathOperator{\Abb}{Abb}
-\DeclareMathOperator{\nil}{nil}
 \DeclareMathOperator{\supp}{supp}
 \DeclareMathOperator{\red}{red}
 \DeclareMathOperator{\op}{op}
 \DeclareMathOperator{\obj}{Obj}
+\DeclareMathOperator{\nil}{nil}
 
-%%sets
+%% sets
 \DeclareMathOperator{\CC}{\mathbb{C}}
 \DeclareMathOperator{\RR}{\mathbb{R}}
 \DeclareMathOperator{\QQ}{\mathbb{Q}}
@@ -56,6 +68,7 @@
 \DeclareMathOperator{\sh}{\underline{\mathcal{S}h}}
 \DeclareMathOperator{\aff}{\underline{Aff}}
 \DeclareMathOperator{\sch}{\underline{Sch}}
+\DeclareMathOperator{\schk}{\underline{Sch/k}}
 \DeclareMathOperator{\schs}{\underline{Sch/S}}
 \DeclareMathOperator{\schsn}{\underline{Sch/S_{0}}}
 \DeclareMathOperator{\pres}{\underline{Prevar/S}}
@@ -69,7 +82,11 @@
 \makeatother
 
 \usepackage{babel}
+\providecommand{\definitionname}{Definition}
+\providecommand{\examplename}{Beispiel}
+\providecommand{\lemmaname}{Lemma}
 \providecommand{\propositionname}{Satz}
+\providecommand{\remarkname}{Bemerkung}
 \providecommand{\theoremname}{Theorem}
 
 \begin{document}
@@ -109,5 +126,276 @@ erzeugt.
 \end{itemize}
 \end{prop}
 
+\begin{proof}
+(1), (2) lassen sich lokal bzgl. $S,Y,X$ verifizieren. Ohne Einschränkung
+sei $S=\Spec R$, $X=\Spec A$, $Y=\Spec B$ affin, $X'$ quasi-kompakt.
+\[
+f\leftrightarrow\xymatrix{A\ar[r]^{\varphi}\ar@{->>}[rd]_{\varphi_{1}} & \Gamma(X,\mathcal{O}_{X})\\
+ & A/\ker\varphi\ar@{^{(}->}[u]^{\varphi_{2}}
+}
+\quad R\text{-Algebren}
+\]
 
+$f$ faktorisiert sich als
+\[
+\xymatrix{X'\ar[r]^{f_{1}} & \Spec(A/\ker\varphi)\ar[r]^{f_{2}} & \Spec(A)=X}
+.
+\]
+
+Dann ist $f_{2}$ eine abgeschlossene Immersion, also surjektiv auf
+Halmen $(f_{p})_{2}$, und ein Homeomorphismus auf einer abgeschlossenen
+Teilmenge in $X$. In Situation $I$ erfüllt daher mit $f$ auch $f_{1}$
+Voraussetzung (1). Daher reicht es die folgenden 2 Fälle zu beweisen.
+\begin{enumerate}
+\item $f$ ist eine abgeschlossene Immersion ($\hat{=}$ $f_{2}$ Voraussetzung
+(1))
+\item $f_{x'}^{\#}$ ist bijektiv für alle $x'\in X'$ ($\hat{=}$ $f_{1}$
+Voraussetzung (1) + Voraussetzung (2)).
+\end{enumerate}
+\begin{lem*}
+Sei:
+\[
+\xymatrix{A\ar@{^{(}->}[r] & \Gamma(X,\mathcal{O}_{X})\\
+X'\ar[r]^{f} & \Spec(A)
+}
+,\quad X'\text{ quasi-kompakt}
+\]
+
+Dann ist $f_{x'}^{\#}$ injektiv für alle $x\in X'$.
+\end{lem*}
+\textbf{Vorüberlegung. }Sei $Z$ ein Schemata und $t\in\Gamma(Z,\mathcal{O}_{Z})$,
+$Z_{T}:=\{z\mid t(z)\neq0\}\subset Z$ offen. Die Einschränkung
+\[
+\xymatrix{\Gamma(Z,\mathcal{O}_{Z})\ar[r]\ar[d] & \Gamma(Z_{t},\mathcal{O}_{Z})\\
+\Gamma(Z,\mathcal{O}_{Z})_{t}\ar@{^{(}-->}[ur]_{\rho_{t}}
+}
+\]
+
+definiert einen Homomorphismus $\rho_{t}$. Dieser ist injektiv, falls
+$Z$ quasi-kompakt, \textbf{denn} $Z=\bigcup U_{i}$ ist endliche
+offene affine Überdeckung. Sei $C_{i}=\mathcal{O}_{Z}(U_{i})$, $t_{i}=t|_{U_{i}}$.
+$\Longrightarrow(\prod_{i}C_{i})_{t}=\prod_{i}(C_{i})_{t_{i}}$ da
+$i$ endlich. Wir erhalten das kommutative Diagramm:
+\[
+\xymatrix{\mathcal{O}_{Z}(Z)\ar[r]\ar@{^{(}-}[d]_{\text{Garbe}} & \Gamma(Z,\mathcal{cO}_{Z})_{t}\ar[r]^{\rho_{t}}\ar@{^{(}-}[d] & \Gamma(Z_{t},\mathcal{O}_{Z})\ar@{^{(}-}[d]^{\text{Garbe}}\\
+\prod_{i}C_{i}\ar[r] & \prod_{i}(C_{i})_{t_{i}}\ar[r]_{\cong} & \prod_{i}\Gamma(D(t_{i}),\mathcal{O}_{U_{i}})
+}
+\]
+\begin{proof}[Beweis (Lemma)]
+Sei $\mathfrak{p}\subset A\cong f(x')$. Für alle $s\in A\backslash\mathfrak{p}$
+sei
+\[
+\varphi_{s}:A_{s}\longrightarrow\Gamma(X',\mathcal{O}_{X'})_{\varphi(s)}
+\]
+
+der injektive Homomorphismus aus $\varphi$ durch Lokalisierung in
+$s$, und sei $\psi_{s}$ die injektive Komposition
+\[
+\xymatrix{\psi_{s}:A_{s}\ar[r]^{\varphi_{s}} & \Gamma(X',\mathcal{O}_{X'})_{\varphi(s)}\ar[r]^{\rho_{\varphi(s)}} & \Gamma(X'_{\varphi(s)},\mathcal{O}_{X'}).}
+\]
+
+Dann ist $X'_{\varphi(s)}=f^{-1}(D(s))$. Da für $s\in A\backslash\mathfrak{p}$
+die $D(s)$ eine offene Umgebungsbasis von $f(x)'$, und da $f$ ein
+Homeomorphismus auf sein Bild ist, bilden die $X'_{\varphi(s)}$ eine
+offene Umgebungsbasis von $x'$. $\Longrightarrow\underset{\underset{s}{\longrightarrow}}{\lim}\ \Gamma(X'_{\varphi(s)},\mathcal{O}_{X'})=\mathcal{O}_{X',x'}$
+und $\underset{\underset{s}{\longrightarrow}}{\lim}\psi_{s}=f_{x'}^{\#}$
+$\Longrightarrow f_{x'}^{\#}$ injektiv.
+\end{proof}
+Zu 1.) Sei $\xymatrix{X'=\Spec(A/\mathfrak{a})\ar[r]^{f} & \Spec(A)=X}
+,$ $\mathfrak{a}\subset A$ Ideal. Proposition 11 $\Longrightarrow Z,Z'$
+affin, und $g$ entspricht $R$-Algebren
+\[
+\xymatrix{A\otimes_{R}B\ar@{->>}[r]^{``g``} & A/\mathfrak{a}\otimes_{R}B\\
+A\ar[u]^{``p``}\ar[r]_{``f``} & A/\mathfrak{a}\ar[u]_{p'}
+}
+\]
+
+und $``p``(\ker``f``)\subset A\otimes_{R}B=\ker``g``$ $\Longrightarrow g$
+ist Homöomorphismus auf $g(Z')=p^{-1}(f(x'))$, $x'\in X'$. $\checkmark$\medskip{}
+
+Zu 2.) Es ist $f^{\#}:f^{-1}\mathcal{O}_{X}\rightarrow\mathcal{O}_{X'}$
+ein Isomorphismus bzgl. $(X',\mathcal{O}_{X'})\cong(f(x'),\mathcal{O}_{X}|_{f(x')})$
+Isomorphismus lokal geringter Räume. Leicht zu verifizieren: $(p^{-1}(f(x')),\mathcal{O}_{Z}|_{p^{-1}(f(x'))})$
+ist ein Faserprodukt von $X'$ mit $Z$ über $X$ in der Kategorie
+lokal geringter Räume, also erst recht in $\sch$. (vgl. Zusatz in
+Theorem (Existenz $X\times_{S}Y$)). $\Longrightarrow g$ Isomorphismus
+\[
+\xymatrix{(Z',\mathcal{O}_{Z})\ar[r]^{\cong} & (p^{-1}(f(x')),\mathcal{O}_{Z}|_{p^{-1}(f(x'))})}
+.
+\]
+\end{proof}
+\begin{example*}
+Proposition 14 gilt in folgenden Situationen.
+\begin{enumerate}
+\item $f$ ist eine Immersion von Schemata.
+\item $f$ ist der kanonische Morphismus $\Spec\mathcal{O}_{X,x}\rightarrow X$
+für ein $x\in X$, vgl. (5.4), (2.11).
+\item $f$ ist der kanonische Morphismus $\Spec\kappa(x)\rightarrow X$
+für ein $x\in X$.
+\item Komposition von Morphismen, die Proposition 14 erfüllen (und Proposition
+10).
+\end{enumerate}
+\end{example*}
+
+\section{Beispiele}
+
+\paragraph{Produkte affiner Räume}
+
+Sei $R$ ein Ring, und $\mathbb{A}_{R}^{n}=\Spec(R[T_{1},\ldots,T_{n}])$
+der affine Raum über $R$. Für $n,m\geq0$ haben wir 
+\[
+R[T_{1},\ldots,T_{n}]\otimes_{R}R[T_{n+1},\ldots,T_{n+m}]\cong R[T_{1},\ldots,T_{n+m}]
+\]
+
+und deshalb nach Proposition 11
+\[
+\mathbb{A}_{R}^{n}\times_{R}\mathbb{A}_{R}^{m}\cong\mathbb{A}_{R}^{n+m}.
+\]
+
+
+\paragraph{Produkte von Prävarietäten}
+
+Sei $k$ ein algebraisch abgeschlossener Körper, und $X$ ein $k$-Schema
+endlichen Typs. Nach 3.14 ist $X_{k}(k)=X_{0}$ (abgeschlossene Punkte
+von $X$).
+\begin{align*}
+x:\Spec k & \longrightarrow X\longrightarrow\text{Bild}\\
+\text{\{Integ. Sch. v.e.T./}k\} & \longleftrightarrow\text{\{Präv./}k\}\\
+X & \longmapsto\{X_{0},\mathcal{O}_{X}|_{X_{0}}\}
+\end{align*}
+
+\begin{lem}[15]
+Sei $k$ ein Körper und seien $X,Y$ integre $k$-Schemata. Dann
+ist $X\times_{k}Y$ ein integres $k$-Schemata.
+\end{lem}
+
+Beweis: später. Falls $X,Y$ integral von endlichem Typ über $k$
+sind, dann ist auch $X\times_{k}Y$ integral von endlichem Typ über
+$k$. Denn: $X=\bigcup_{\text{endl.}}X_{i}$, $Y=\bigcup_{\text{endl.}}Y_{j}$
+$\Longrightarrow X\times_{k}Y=\bigcup_{i,j}X_{i}\times_{k}Y_{i}$.
+$\Longrightarrow X=\Spec A$, $Y=\Spec B$ mit $A,B$ endlich erzeugte
+$k$-Algebras. $\Longrightarrow X\times_{k}Y=\Spec A\otimes_{k}B$
+endlich erzeugte $k$-Algebra.\medskip{}
+
+Seien $X_{0}$ und $Y_{0}$ die Prävarietäten zu $X$ bzw. $Y$, und
+$Z_{0}$ die Prävarietät zu $X\times_{k}Y$. Dann gilt nach der universellen
+Eigenschaft des Faserprodukts:
+\[
+Z_{0}=(X\times_{k}Y)_{k}(k)=X_{k}(k)\times Y_{k}(k)=X_{0}\times Y_{0},
+\]
+
+d.h. das Faserprodukt von 2 Prävarietäten $X_{0},Y_{0}$ ist wieder
+eine Prävarietät $Z_{0}$ (als volle Unterkategorie von $\schk$)
+mit $Z_{0}=X_{0}\times Y_{0}$ (als Mengen). Die Projektionen $Z_{0}\rightarrow X_{0}$
+und $Z_{0}\rightarrow Y_{0}$ sind stetig, aber im Allgemeinen ist
+die Topologie auf $Z_{0}$ \textbf{feiner }als die Produkttopologie
+von $X_{0}$ und $Y_{0}$.
+
+\section{Basiswechsel}
+
+Sei $\mathcal{C}$ eine beliebige Kategorie mit Faserprodukten (z.B.
+$\sch$), $u:S'\rightarrow S$ ein Morphismus in $\mathcal{C}$, $X\rightarrow S$
+ein $S$-Objekt. $\Longrightarrow q:X\times_{S}S'\rightarrow S'$
+ist ein $S'$-Objekt. Bezeichne $u^{\ast}(X)=:q$ oder $X_{(s')}$
+\textbf{Urbild} oder \textbf{Basiswechsel} von $X$ bzgl. $u$.\medskip{}
+
+Sei $f:X\rightarrow Y$ Morphismus von $S$-Objekten. $\Longrightarrow f\times_{S}\id_{S'}:X\times_{S}S'\rightarrow Y\times_{S}S'$
+ist ein Morphismus von $S'$-Objekten. Bezeichne $f\times_{S}\id_{S'}=:u^{*}(f)=:f_{(s')}$
+der \textbf{Basiswechsel von $f$ bzgl. $u$}. Wir erhalten einen
+kontravarianten Funktor
+\[
+u^{\ast}:\mathcal{C}/S\longrightarrow\mathcal{C}/S'
+\]
+
+der Kategorie von $S$-Objekten in $\mathcal{C}$ zu der Kategorie
+der $S'$-Objekten in $\mathcal{C}$. Nenne $u^{\ast}$ den \textbf{Basiswechsel
+bzgl. $u$}.
+
+\paragraph{Transitivität des Basiswechsels}
+
+Sei $u':S''\rightarrow S'$ ein weiterer Morphismus in $\mathcal{C}$.
+Nach Proposition 10 ist $(u\circ u')^{\ast}\cong u'^{\ast}\circ u^{\ast}$
+ein Isomorphismus von Funktoren. Sei
+\[
+\xymatrix{T\ar[r]^{h}\ar[rd] & S'\ar[d]^{u}\\
+ & S
+}
+\in\mathcal{C}/S'.
+\]
+
+Wir können $T$ als $S$-Objekt auffassen durch $u\circ h$. Sei $p:X_{(S')}\rightarrow X$
+die erste Projektion. Dann erhalten wir zueinander inverse Bijektionen,
+funktoriell in $T$ und $X$:
+\begin{align*}
+t & \longmapsto p\circ\\
+\hom_{S'}(T,X_{(S')}) & \longleftrightarrow\hom_{S}(T,X)\\
+(t,h)_{S'} & \longmapsfrom t
+\end{align*}
+
+\begin{defn}[16]
+Sei $\mathbb{P}$ eine Eigenschaft von Morphismen in $\mathcal{C}$,
+sodass $\id_{X}$ $\mathbb{P}$ erfüllt für alle $X\in\mathcal{C}$.
+\begin{enumerate}
+\item $\mathbb{P}$ heißt \textbf{stabil}
+\begin{enumerate}
+\item \textbf{unter Komposition}, wenn mit $f:X\rightarrow Y$ und $g:Y\rightarrow Z$
+auch $g\circ f$ $\mathbb{P}$ erfüllt.
+\item \textbf{unter Basiswechsel}, wenn mit $f:X\rightarrow S$ auch $f_{(S')}:X_{(S')}\rightarrow S'$
+für alle Morphismen $S'\rightarrow S$, $\mathbb{P}$ erfüllt.
+\end{enumerate}
+\item Wir sagen, dass $f:X\rightarrow S$ $\mathbb{P}$ \textbf{universell}
+erfüllt, falls $f_{(S')}$ $\mathbb{P}$ erfüllt für alle $S'\rightarrow S$.
+\end{enumerate}
+\end{defn}
+
+\begin{rem}[17]
+Sei $\mathbb{P}$ stabil unter Komposition. Dann sind äquivalent:
+\begin{enumerate}
+\item $\forall S\in\mathcal{C}$, $\forall S$-Morphismen $f:X'\rightarrow X$,
+$g:Y'\rightarrow Y$, die $\mathbb{P}$ erfüllen, erfüllt auch $f\times_{S}g$
+$\mathbb{P}$.
+\item $\mathbb{P}$ ist stabil unter Basiswechsel.
+\end{enumerate}
+\end{rem}
+
+\begin{proof}
+\mbox{}
+\begin{itemize}
+\item[$(i)\Rightarrow(ii)$.] $f_{(S')}=f\times_{S}\id_{S'}$.
+\item[$(ii)\Rightarrow(i)$.] Seien $f,g$ Morphismen (wie in 1) die $\mathbb{P}$ erfüllen. Da
+$f\times_{S}g=(f\times_{S}\id_{Y})\circ(\id_{X}\times_{S}g)$ sei
+ohne Einschränkung $g=\id_{Y}$.
+\begin{align*}
+f_{(X\times_{S}Y)}=f\times_{S}\id_{Y}: & X'\times_{S}Y=X'\underbrace{\times_{X}}_{\text{bzgl. }f}(X\times_{S}Y)\rightarrow X\times_{S}Y
+\end{align*}
+erfüllt $\mathbb{P}$.
+\end{itemize}
+In $\sch$ sind fast alle betrachteten Eigenschaften von Morphismen
+stabil unter Komposition, aber nicht unbedingt unter Basiswechsel,
+z.B. injektiv oder abgeschlossen.
+\end{proof}
+\begin{example*}
+Es ist
+\begin{align*}
+f:X=\Spec\mathbb{Q}(\xi_{p}) & \longrightarrow\Spec\mathbb{Q}=S\\
+u:S' & \longrightarrow\Spec\mathbb{Q}
+\end{align*}
+
+Homöomorphismus, d.h. injektiv, aber
+\begin{align*}
+f_{(S')}:X\times_{S}S' & \longrightarrow\underbrace{S'=\Spec\mathbb{Q}(\xi_{p})}_{1\text{ Punkt}}
+\end{align*}
+
+ist nicht injektiv:
+\[
+\Spec(\mathbb{Q}(\xi_{p})\otimes\mathbb{Q}_{p})\cong\underbrace{\prod^{p-1}\mathbb{Q}(\xi_{p})}_{p-1\text{ Punkte}}.
+\]
+\end{example*}
+\textbf{Warnung.} Absolute Eigenschaften von Schemata sind oft nicht
+kompatibel mit Basiswechsel.
+
+Sei $k=\mathbb{F}_{p}(t)$ (nicht perfekt!), $K=\bigcup_{n\geq1}\mathbb{F}_{p}(t^{\frac{1}{p^{n}}})$
+perfekter Abschluss von $k$, $A:=K\otimes_{k}K$. Man kann zeigen:
+$\nil(A)$ ist \emph{nicht} endlich erzeugt, d.h. $\Spec(A)$, $A$
+ist nicht reduzibel und nicht noethersch.
 \end{document}

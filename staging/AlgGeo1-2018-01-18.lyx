@@ -17,13 +17,13 @@
 \DeclareMathOperator{\id}{\mathrm{id}}
 \DeclareMathOperator{\res}{res}
 \DeclareMathOperator{\Abb}{Abb}
-\DeclareMathOperator{\nil}{nil}
 \DeclareMathOperator{\supp}{supp}
 \DeclareMathOperator{\red}{red}
 \DeclareMathOperator{\op}{op}
 \DeclareMathOperator{\obj}{Obj}
+\DeclareMathOperator{\nil}{nil}
 
-%%sets
+%% sets
 \DeclareMathOperator{\CC}{\mathbb{C}}
 \DeclareMathOperator{\RR}{\mathbb{R}}
 \DeclareMathOperator{\QQ}{\mathbb{Q}}
@@ -41,6 +41,7 @@
 \DeclareMathOperator{\sh}{\underline{\mathcal{S}h}}
 \DeclareMathOperator{\aff}{\underline{Aff}}
 \DeclareMathOperator{\sch}{\underline{Sch}}
+\DeclareMathOperator{\schk}{\underline{Sch/k}}
 \DeclareMathOperator{\schs}{\underline{Sch/S}}
 \DeclareMathOperator{\schsn}{\underline{Sch/S_{0}}}
 \DeclareMathOperator{\pres}{\underline{Prevar/S}}
@@ -287,5 +288,1388 @@ Dann gilt:
 \end_layout
 
 \end_deeper
+\begin_layout Proof
+(1), (2) lassen sich lokal bzgl.
+ 
+\begin_inset Formula $S,Y,X$
+\end_inset
+
+ verifizieren.
+ Ohne Einschränkung sei 
+\begin_inset Formula $S=\Spec R$
+\end_inset
+
+, 
+\begin_inset Formula $X=\Spec A$
+\end_inset
+
+, 
+\begin_inset Formula $Y=\Spec B$
+\end_inset
+
+ affin, 
+\begin_inset Formula $X'$
+\end_inset
+
+ quasi-kompakt.
+\begin_inset Formula 
+\[
+f\leftrightarrow\xymatrix{A\ar[r]^{\varphi}\ar@{->>}[rd]_{\varphi_{1}} & \Gamma(X,\mathcal{O}_{X})\\
+ & A/\ker\varphi\ar@{^{(}->}[u]^{\varphi_{2}}
+}
+\quad R\text{-Algebren}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $f$
+\end_inset
+
+ faktorisiert sich als
+\begin_inset Formula 
+\[
+\xymatrix{X'\ar[r]^{f_{1}} & \Spec(A/\ker\varphi)\ar[r]^{f_{2}} & \Spec(A)=X}
+.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Dann ist 
+\begin_inset Formula $f_{2}$
+\end_inset
+
+ eine abgeschlossene Immersion, also surjektiv auf Halmen 
+\begin_inset Formula $(f_{p})_{2}$
+\end_inset
+
+, und ein Homeomorphismus auf einer abgeschlossenen Teilmenge in 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ In Situation 
+\begin_inset Formula $I$
+\end_inset
+
+ erfüllt daher mit 
+\begin_inset Formula $f$
+\end_inset
+
+ auch 
+\begin_inset Formula $f_{1}$
+\end_inset
+
+ Voraussetzung (1).
+ Daher reicht es die folgenden 2 Fälle zu beweisen.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $f$
+\end_inset
+
+ ist eine abgeschlossene Immersion (
+\begin_inset Formula $\hat{=}$
+\end_inset
+
+ 
+\begin_inset Formula $f_{2}$
+\end_inset
+
+ Voraussetzung (1))
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $f_{x'}^{\#}$
+\end_inset
+
+ ist bijektiv für alle 
+\begin_inset Formula $x'\in X'$
+\end_inset
+
+ (
+\begin_inset Formula $\hat{=}$
+\end_inset
+
+ 
+\begin_inset Formula $f_{1}$
+\end_inset
+
+ Voraussetzung (1) + Voraussetzung (2)).
+\end_layout
+
+\begin_layout Lemma*
+Sei:
+\begin_inset Formula 
+\[
+\xymatrix{A\ar@{^{(}->}[r] & \Gamma(X,\mathcal{O}_{X})\\
+X'\ar[r]^{f} & \Spec(A)
+}
+,\quad X'\text{ quasi-kompakt}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma*
+Dann ist 
+\begin_inset Formula $f_{x'}^{\#}$
+\end_inset
+
+ injektiv für alle 
+\begin_inset Formula $x\in X'$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+
+\series bold
+Vorüberlegung.
+ 
+\series default
+Sei 
+\begin_inset Formula $Z$
+\end_inset
+
+ ein Schemata und 
+\begin_inset Formula $t\in\Gamma(Z,\mathcal{O}_{Z})$
+\end_inset
+
+, 
+\begin_inset Formula $Z_{T}:=\{z\mid t(z)\neq0\}\subset Z$
+\end_inset
+
+ offen.
+ Die Einschränkung
+\begin_inset Formula 
+\[
+\xymatrix{\Gamma(Z,\mathcal{O}_{Z})\ar[r]\ar[d] & \Gamma(Z_{t},\mathcal{O}_{Z})\\
+\Gamma(Z,\mathcal{O}_{Z})_{t}\ar@{^{(}-->}[ur]_{\rho_{t}}
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+definiert einen Homomorphismus 
+\begin_inset Formula $\rho_{t}$
+\end_inset
+
+.
+ Dieser ist injektiv, falls 
+\begin_inset Formula $Z$
+\end_inset
+
+ quasi-kompakt, 
+\series bold
+denn
+\series default
+ 
+\begin_inset Formula $Z=\bigcup U_{i}$
+\end_inset
+
+ ist endliche offene affine Überdeckung.
+ Sei 
+\begin_inset Formula $C_{i}=\mathcal{O}_{Z}(U_{i})$
+\end_inset
+
+, 
+\begin_inset Formula $t_{i}=t|_{U_{i}}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\Longrightarrow(\prod_{i}C_{i})_{t}=\prod_{i}(C_{i})_{t_{i}}$
+\end_inset
+
+ da 
+\begin_inset Formula $i$
+\end_inset
+
+ endlich.
+ Wir erhalten das kommutative Diagramm:
+\begin_inset Formula 
+\[
+\xymatrix{\mathcal{O}_{Z}(Z)\ar[r]\ar@{^{(}-}[d]_{\text{Garbe}} & \Gamma(Z,\mathcal{cO}_{Z})_{t}\ar[r]^{\rho_{t}}\ar@{^{(}-}[d] & \Gamma(Z_{t},\mathcal{O}_{Z})\ar@{^{(}-}[d]^{\text{Garbe}}\\
+\prod_{i}C_{i}\ar[r] & \prod_{i}(C_{i})_{t_{i}}\ar[r]_{\cong} & \prod_{i}\Gamma(D(t_{i}),\mathcal{O}_{U_{i}})
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Proof
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Beweis (Lemma)
+\end_layout
+
+\end_inset
+
+Sei 
+\begin_inset Formula $\mathfrak{p}\subset A\cong f(x')$
+\end_inset
+
+.
+ Für alle 
+\begin_inset Formula $s\in A\backslash\mathfrak{p}$
+\end_inset
+
+ sei
+\begin_inset Formula 
+\[
+\varphi_{s}:A_{s}\longrightarrow\Gamma(X',\mathcal{O}_{X'})_{\varphi(s)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+der injektive Homomorphismus aus 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ durch Lokalisierung in 
+\begin_inset Formula $s$
+\end_inset
+
+, und sei 
+\begin_inset Formula $\psi_{s}$
+\end_inset
+
+ die injektive Komposition
+\begin_inset Formula 
+\[
+\xymatrix{\psi_{s}:A_{s}\ar[r]^{\varphi_{s}} & \Gamma(X',\mathcal{O}_{X'})_{\varphi(s)}\ar[r]^{\rho_{\varphi(s)}} & \Gamma(X'_{\varphi(s)},\mathcal{O}_{X'}).}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Dann ist 
+\begin_inset Formula $X'_{\varphi(s)}=f^{-1}(D(s))$
+\end_inset
+
+.
+ Da für 
+\begin_inset Formula $s\in A\backslash\mathfrak{p}$
+\end_inset
+
+ die 
+\begin_inset Formula $D(s)$
+\end_inset
+
+ eine offene Umgebungsbasis von 
+\begin_inset Formula $f(x)'$
+\end_inset
+
+, und da 
+\begin_inset Formula $f$
+\end_inset
+
+ ein Homeomorphismus auf sein Bild ist, bilden die 
+\begin_inset Formula $X'_{\varphi(s)}$
+\end_inset
+
+ eine offene Umgebungsbasis von 
+\begin_inset Formula $x'$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\Longrightarrow\underset{\underset{s}{\longrightarrow}}{\lim}\ \Gamma(X'_{\varphi(s)},\mathcal{O}_{X'})=\mathcal{O}_{X',x'}$
+\end_inset
+
+ und 
+\begin_inset Formula $\underset{\underset{s}{\longrightarrow}}{\lim}\psi_{s}=f_{x'}^{\#}$
+\end_inset
+
+ 
+\begin_inset Formula $\Longrightarrow f_{x'}^{\#}$
+\end_inset
+
+ injektiv.
+\end_layout
+
+\begin_layout Standard
+Zu 1.) Sei 
+\begin_inset Formula $\xymatrix{X'=\Spec(A/\mathfrak{a})\ar[r]^{f} & \Spec(A)=X}
+,$
+\end_inset
+
+ 
+\begin_inset Formula $\mathfrak{a}\subset A$
+\end_inset
+
+ Ideal.
+ Proposition 11 
+\begin_inset Formula $\Longrightarrow Z,Z'$
+\end_inset
+
+ affin, und 
+\begin_inset Formula $g$
+\end_inset
+
+ entspricht 
+\begin_inset Formula $R$
+\end_inset
+
+-Algebren
+\begin_inset Formula 
+\[
+\xymatrix{A\otimes_{R}B\ar@{->>}[r]^{``g``} & A/\mathfrak{a}\otimes_{R}B\\
+A\ar[u]^{``p``}\ar[r]_{``f``} & A/\mathfrak{a}\ar[u]_{p'}
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+und 
+\begin_inset Formula $``p``(\ker``f``)\subset A\otimes_{R}B=\ker``g``$
+\end_inset
+
+ 
+\begin_inset Formula $\Longrightarrow g$
+\end_inset
+
+ ist Homöomorphismus auf 
+\begin_inset Formula $g(Z')=p^{-1}(f(x'))$
+\end_inset
+
+, 
+\begin_inset Formula $x'\in X'$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\checkmark$
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Zu 2.) Es ist 
+\begin_inset Formula $f^{\#}:f^{-1}\mathcal{O}_{X}\rightarrow\mathcal{O}_{X'}$
+\end_inset
+
+ ein Isomorphismus bzgl.
+ 
+\begin_inset Formula $(X',\mathcal{O}_{X'})\cong(f(x'),\mathcal{O}_{X}|_{f(x')})$
+\end_inset
+
+ Isomorphismus lokal geringter Räume.
+ Leicht zu verifizieren: 
+\begin_inset Formula $(p^{-1}(f(x')),\mathcal{O}_{Z}|_{p^{-1}(f(x'))})$
+\end_inset
+
+ ist ein Faserprodukt von 
+\begin_inset Formula $X'$
+\end_inset
+
+ mit 
+\begin_inset Formula $Z$
+\end_inset
+
+ über 
+\begin_inset Formula $X$
+\end_inset
+
+ in der Kategorie lokal geringter Räume, also erst recht in 
+\begin_inset Formula $\sch$
+\end_inset
+
+.
+ (vgl.
+ Zusatz in Theorem (Existenz 
+\begin_inset Formula $X\times_{S}Y$
+\end_inset
+
+)).
+ 
+\begin_inset Formula $\Longrightarrow g$
+\end_inset
+
+ Isomorphismus 
+\begin_inset Formula 
+\[
+\xymatrix{(Z',\mathcal{O}_{Z})\ar[r]^{\cong} & (p^{-1}(f(x')),\mathcal{O}_{Z}|_{p^{-1}(f(x'))})}
+.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+Proposition 14 gilt in folgenden Situationen.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $f$
+\end_inset
+
+ ist eine Immersion von Schemata.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $f$
+\end_inset
+
+ ist der kanonische Morphismus 
+\begin_inset Formula $\Spec\mathcal{O}_{X,x}\rightarrow X$
+\end_inset
+
+ für ein 
+\begin_inset Formula $x\in X$
+\end_inset
+
+, vgl.
+ (5.4), (2.11).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $f$
+\end_inset
+
+ ist der kanonische Morphismus 
+\begin_inset Formula $\Spec\kappa(x)\rightarrow X$
+\end_inset
+
+ für ein 
+\begin_inset Formula $x\in X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Komposition von Morphismen, die Proposition 14 erfüllen (und Proposition
+ 10).
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Beispiele
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Produkte affiner Räume
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $R$
+\end_inset
+
+ ein Ring, und 
+\begin_inset Formula $\mathbb{A}_{R}^{n}=\Spec(R[T_{1},\ldots,T_{n}])$
+\end_inset
+
+ der affine Raum über 
+\begin_inset Formula $R$
+\end_inset
+
+.
+ Für 
+\begin_inset Formula $n,m\geq0$
+\end_inset
+
+ haben wir 
+\begin_inset Formula 
+\[
+R[T_{1},\ldots,T_{n}]\otimes_{R}R[T_{n+1},\ldots,T_{n+m}]\cong R[T_{1},\ldots,T_{n+m}]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+und deshalb nach Proposition 11
+\begin_inset Formula 
+\[
+\mathbb{A}_{R}^{n}\times_{R}\mathbb{A}_{R}^{m}\cong\mathbb{A}_{R}^{n+m}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Produkte von Prävarietäten
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $k$
+\end_inset
+
+ ein algebraisch abgeschlossener Körper, und 
+\begin_inset Formula $X$
+\end_inset
+
+ ein 
+\begin_inset Formula $k$
+\end_inset
+
+-Schema endlichen Typs.
+ Nach 3.14 ist 
+\begin_inset Formula $X_{k}(k)=X_{0}$
+\end_inset
+
+ (abgeschlossene Punkte von 
+\begin_inset Formula $X$
+\end_inset
+
+).
+\begin_inset Formula 
+\begin{align*}
+x:\Spec k & \longrightarrow X\longrightarrow\text{Bild}\\
+\text{\{Integ. Sch. v.e.T./}k\} & \longleftrightarrow\text{\{Präv./}k\}\\
+X & \longmapsto\{X_{0},\mathcal{O}_{X}|_{X_{0}}\}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+15
+\end_layout
+
+\end_inset
+
+Sei 
+\begin_inset Formula $k$
+\end_inset
+
+ ein Körper und seien 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ integre 
+\begin_inset Formula $k$
+\end_inset
+
+-Schemata.
+ Dann ist 
+\begin_inset Formula $X\times_{k}Y$
+\end_inset
+
+ ein integres 
+\begin_inset Formula $k$
+\end_inset
+
+-Schemata.
+\end_layout
+
+\begin_layout Standard
+Beweis: später.
+ Falls 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ integral von endlichem Typ über 
+\begin_inset Formula $k$
+\end_inset
+
+ sind, dann ist auch 
+\begin_inset Formula $X\times_{k}Y$
+\end_inset
+
+ integral von endlichem Typ über 
+\begin_inset Formula $k$
+\end_inset
+
+.
+ Denn: 
+\begin_inset Formula $X=\bigcup_{\text{endl.}}X_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $Y=\bigcup_{\text{endl.}}Y_{j}$
+\end_inset
+
+ 
+\begin_inset Formula $\Longrightarrow X\times_{k}Y=\bigcup_{i,j}X_{i}\times_{k}Y_{i}$
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Korollar 13?
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\Longrightarrow X=\Spec A$
+\end_inset
+
+, 
+\begin_inset Formula $Y=\Spec B$
+\end_inset
+
+ mit 
+\begin_inset Formula $A,B$
+\end_inset
+
+ endlich erzeugte 
+\begin_inset Formula $k$
+\end_inset
+
+-Algebras.
+ 
+\begin_inset Formula $\Longrightarrow X\times_{k}Y=\Spec A\otimes_{k}B$
+\end_inset
+
+ endlich erzeugte 
+\begin_inset Formula $k$
+\end_inset
+
+-Algebra.
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Seien 
+\begin_inset Formula $X_{0}$
+\end_inset
+
+ und 
+\begin_inset Formula $Y_{0}$
+\end_inset
+
+ die Prävarietäten zu 
+\begin_inset Formula $X$
+\end_inset
+
+ bzw.
+ 
+\begin_inset Formula $Y$
+\end_inset
+
+, und 
+\begin_inset Formula $Z_{0}$
+\end_inset
+
+ die Prävarietät zu 
+\begin_inset Formula $X\times_{k}Y$
+\end_inset
+
+.
+ Dann gilt nach der universellen Eigenschaft des Faserprodukts:
+\begin_inset Formula 
+\[
+Z_{0}=(X\times_{k}Y)_{k}(k)=X_{k}(k)\times Y_{k}(k)=X_{0}\times Y_{0},
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+d.h.
+ das Faserprodukt von 2 Prävarietäten 
+\begin_inset Formula $X_{0},Y_{0}$
+\end_inset
+
+ ist wieder eine Prävarietät 
+\begin_inset Formula $Z_{0}$
+\end_inset
+
+ (als volle Unterkategorie von 
+\begin_inset Formula $\schk$
+\end_inset
+
+) mit 
+\begin_inset Formula $Z_{0}=X_{0}\times Y_{0}$
+\end_inset
+
+ (als Mengen).
+ Die Projektionen 
+\begin_inset Formula $Z_{0}\rightarrow X_{0}$
+\end_inset
+
+ und 
+\begin_inset Formula $Z_{0}\rightarrow Y_{0}$
+\end_inset
+
+ sind stetig, aber im Allgemeinen ist die Topologie auf 
+\begin_inset Formula $Z_{0}$
+\end_inset
+
+ 
+\series bold
+feiner 
+\series default
+als die Produkttopologie von 
+\begin_inset Formula $X_{0}$
+\end_inset
+
+ und 
+\begin_inset Formula $Y_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Basiswechsel
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+16
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ eine beliebige Kategorie mit Faserprodukten (z.B.
+ 
+\begin_inset Formula $\sch$
+\end_inset
+
+), 
+\begin_inset Formula $u:S'\rightarrow S$
+\end_inset
+
+ ein Morphismus in 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+, 
+\begin_inset Formula $X\rightarrow S$
+\end_inset
+
+ ein 
+\begin_inset Formula $S$
+\end_inset
+
+-Objekt.
+ 
+\begin_inset Formula $\Longrightarrow q:X\times_{S}S'\rightarrow S'$
+\end_inset
+
+ ist ein 
+\begin_inset Formula $S'$
+\end_inset
+
+-Objekt.
+ Bezeichne 
+\begin_inset Formula $u^{\ast}(X)=:q$
+\end_inset
+
+ oder 
+\begin_inset Formula $X_{(s')}$
+\end_inset
+
+ 
+\series bold
+Urbild
+\series default
+ oder 
+\series bold
+Basiswechsel
+\series default
+ von 
+\begin_inset Formula $X$
+\end_inset
+
+ bzgl.
+ 
+\begin_inset Formula $u$
+\end_inset
+
+.
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $f:X\rightarrow Y$
+\end_inset
+
+ Morphismus von 
+\begin_inset Formula $S$
+\end_inset
+
+-Objekten.
+ 
+\begin_inset Formula $\Longrightarrow f\times_{S}\id_{S'}:X\times_{S}S'\rightarrow Y\times_{S}S'$
+\end_inset
+
+ ist ein Morphismus von 
+\begin_inset Formula $S'$
+\end_inset
+
+-Objekten.
+ Bezeichne 
+\begin_inset Formula $f\times_{S}\id_{S'}=:u^{*}(f)=:f_{(s')}$
+\end_inset
+
+ der 
+\series bold
+Basiswechsel von 
+\begin_inset Formula $f$
+\end_inset
+
+ bzgl.
+ 
+\begin_inset Formula $u$
+\end_inset
+
+
+\series default
+.
+ Wir erhalten einen kontravarianten Funktor
+\begin_inset Formula 
+\[
+u^{\ast}:\mathcal{C}/S\longrightarrow\mathcal{C}/S'
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+der Kategorie von 
+\begin_inset Formula $S$
+\end_inset
+
+-Objekten in 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ zu der Kategorie der 
+\begin_inset Formula $S'$
+\end_inset
+
+-Objekten in 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+.
+ Nenne 
+\begin_inset Formula $u^{\ast}$
+\end_inset
+
+ den 
+\series bold
+Basiswechsel bzgl.
+ 
+\begin_inset Formula $u$
+\end_inset
+
+
+\series default
+.
+\end_layout
+
+\begin_layout Paragraph
+Transitivität des Basiswechsels
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $u':S''\rightarrow S'$
+\end_inset
+
+ ein weiterer Morphismus in 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+.
+ Nach Proposition 10 ist 
+\begin_inset Formula $(u\circ u')^{\ast}\cong u'^{\ast}\circ u^{\ast}$
+\end_inset
+
+ ein Isomorphismus von Funktoren.
+ Sei
+\begin_inset Formula 
+\[
+\xymatrix{T\ar[r]^{h}\ar[rd] & S'\ar[d]^{u}\\
+ & S
+}
+\in\mathcal{C}/S'.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Wir können 
+\begin_inset Formula $T$
+\end_inset
+
+ als 
+\begin_inset Formula $S$
+\end_inset
+
+-Objekt auffassen durch 
+\begin_inset Formula $u\circ h$
+\end_inset
+
+.
+ Sei 
+\begin_inset Formula $p:X_{(S')}\rightarrow X$
+\end_inset
+
+ die erste Projektion.
+ Dann erhalten wir zueinander inverse Bijektionen, funktoriell in 
+\begin_inset Formula $T$
+\end_inset
+
+ und 
+\begin_inset Formula $X$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{align*}
+t & \longmapsto p\circ\\
+\hom_{S'}(T,X_{(S')}) & \longleftrightarrow\hom_{S}(T,X)\\
+(t,h)_{S'} & \longmapsfrom t
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+16
+\end_layout
+
+\end_inset
+
+Sei 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ eine Eigenschaft von Morphismen in 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+, sodass 
+\begin_inset Formula $\id_{X}$
+\end_inset
+
+ 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ erfüllt für alle 
+\begin_inset Formula $X\in\mathcal{C}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ heißt 
+\series bold
+stabil
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\series bold
+unter Komposition
+\series default
+, wenn mit 
+\begin_inset Formula $f:X\rightarrow Y$
+\end_inset
+
+ und 
+\begin_inset Formula $g:Y\rightarrow Z$
+\end_inset
+
+ auch 
+\begin_inset Formula $g\circ f$
+\end_inset
+
+ 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ erfüllt.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+unter Basiswechsel
+\series default
+, wenn mit 
+\begin_inset Formula $f:X\rightarrow S$
+\end_inset
+
+ auch 
+\begin_inset Formula $f_{(S')}:X_{(S')}\rightarrow S'$
+\end_inset
+
+ für alle Morphismen 
+\begin_inset Formula $S'\rightarrow S$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ erfüllt.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Wir sagen, dass 
+\begin_inset Formula $f:X\rightarrow S$
+\end_inset
+
+ 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ 
+\series bold
+universell
+\series default
+ erfüllt, falls 
+\begin_inset Formula $f_{(S')}$
+\end_inset
+
+ 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ erfüllt für alle 
+\begin_inset Formula $S'\rightarrow S$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Remark
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+17
+\end_layout
+
+\end_inset
+
+Sei 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ stabil unter Komposition.
+ Dann sind äquivalent:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\forall S\in\mathcal{C}$
+\end_inset
+
+, 
+\begin_inset Formula $\forall S$
+\end_inset
+
+-Morphismen 
+\begin_inset Formula $f:X'\rightarrow X$
+\end_inset
+
+, 
+\begin_inset Formula $g:Y'\rightarrow Y$
+\end_inset
+
+, die 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ erfüllen, erfüllt auch 
+\begin_inset Formula $f\times_{S}g$
+\end_inset
+
+ 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ ist stabil unter Basiswechsel.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $(i)\Rightarrow(ii)$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $f_{(S')}=f\times_{S}\id_{S'}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $(ii)\Rightarrow(i)$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+Seien 
+\begin_inset Formula $f,g$
+\end_inset
+
+ Morphismen (wie in 1) die 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ erfüllen.
+ Da 
+\begin_inset Formula $f\times_{S}g=(f\times_{S}\id_{Y})\circ(\id_{X}\times_{S}g)$
+\end_inset
+
+ sei ohne Einschränkung 
+\begin_inset Formula $g=\id_{Y}$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{align*}
+f_{(X\times_{S}Y)}=f\times_{S}\id_{Y}: & X'\times_{S}Y=X'\underbrace{\times_{X}}_{\text{bzgl. }f}(X\times_{S}Y)\rightarrow X\times_{S}Y
+\end{align*}
+
+\end_inset
+
+erfüllt 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+In 
+\begin_inset Formula $\sch$
+\end_inset
+
+ sind fast alle betrachteten Eigenschaften von Morphismen stabil unter Kompositi
+on, aber nicht unbedingt unter Basiswechsel, z.B.
+ injektiv oder abgeschlossen.
+\end_layout
+
+\begin_layout Example*
+Es ist
+\begin_inset Formula 
+\begin{align*}
+f:X=\Spec\mathbb{Q}(\xi_{p}) & \longrightarrow\Spec\mathbb{Q}=S\\
+u:S' & \longrightarrow\Spec\mathbb{Q}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+Homöomorphismus, d.h.
+ injektiv, aber
+\begin_inset Formula 
+\begin{align*}
+f_{(S')}:X\times_{S}S' & \longrightarrow\underbrace{S'=\Spec\mathbb{Q}(\xi_{p})}_{1\text{ Punkt}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+ist nicht injektiv:
+\begin_inset Formula 
+\[
+\Spec(\mathbb{Q}(\xi_{p})\otimes\mathbb{Q}_{p})\cong\underbrace{\prod^{p-1}\mathbb{Q}(\xi_{p})}_{p-1\text{ Punkte}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Warnung.
+
+\series default
+ Absolute Eigenschaften von Schemata sind oft nicht kompatibel mit Basiswechsel.
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $k=\mathbb{F}_{p}(t)$
+\end_inset
+
+ (nicht perfekt!), 
+\begin_inset Formula $K=\bigcup_{n\geq1}\mathbb{F}_{p}(t^{\frac{1}{p^{n}}})$
+\end_inset
+
+ perfekter Abschluss von 
+\begin_inset Formula $k$
+\end_inset
+
+, 
+\begin_inset Formula $A:=K\otimes_{k}K$
+\end_inset
+
+.
+ Man kann zeigen: 
+\begin_inset Formula $\nil(A)$
+\end_inset
+
+ ist 
+\emph on
+nicht
+\emph default
+ endlich erzeugt, d.h.
+ 
+\begin_inset Formula $\Spec(A)$
+\end_inset
+
+, 
+\begin_inset Formula $A$
+\end_inset
+
+ ist nicht reduzibel und nicht noethersch.
+\end_layout
+
 \end_body
 \end_document
