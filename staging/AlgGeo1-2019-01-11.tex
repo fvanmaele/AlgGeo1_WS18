@@ -1,0 +1,363 @@
+%% LyX 2.3.2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[oneside,ngerman]{book}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage[all]{xy}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\theoremstyle{plain}
+\ifx\thechapter\undefined
+	\newtheorem{thm}{\protect\theoremname}
+\else
+	\newtheorem{thm}{\protect\theoremname}[chapter]
+\fi
+\theoremstyle{plain}
+\newtheorem{prop}[thm]{\protect\propositionname}
+\theoremstyle{plain}
+\newtheorem{cor}[thm]{\protect\corollaryname}
+\theoremstyle{plain}
+\newtheorem{lem}[thm]{\protect\lemmaname}
+\theoremstyle{definition}
+\newtheorem{example}[thm]{\protect\examplename}
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{\protect\definitionname}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+%% User-specified commands
+\DeclareMathOperator{\rad}{rad}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\maxspec}{MaxSpec}
+\DeclareMathOperator{\Quot}{Quot}
+\DeclareMathOperator{\im}{\mathrm{im}}
+\DeclareMathOperator{\Hom}{\mathrm{Hom}}
+\DeclareMathOperator{\Mor}{\mathrm{Mor}}
+\DeclareMathOperator{\id}{\mathrm{id}}
+\DeclareMathOperator{\res}{res}
+\DeclareMathOperator{\Abb}{Abb}
+\DeclareMathOperator{\nil}{nil}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\red}{red}
+\DeclareMathOperator{\op}{op}
+\DeclareMathOperator{\obj}{Obj}
+
+%%sets
+\DeclareMathOperator{\CC}{\mathbb{C}}
+\DeclareMathOperator{\RR}{\mathbb{R}}
+\DeclareMathOperator{\QQ}{\mathbb{Q}}
+\DeclareMathOperator{\ZZ}{\mathbb{Z}}
+\DeclareMathOperator{\NN}{\mathbb{N}}
+
+%% categories
+\DeclareMathOperator{\ouv}{\mathcal{O}uv}
+\DeclareMathOperator{\set}{\underline{Set}}
+\DeclareMathOperator{\ab}{\underline{Ab}}
+\DeclareMathOperator{\cattop}{\underline{Top}}
+\DeclareMathOperator{\cring}{\underline{CRing}}
+\DeclareMathOperator{\ring}{\underline{Ring}}
+\DeclareMathOperator{\psh}{\underline{\mathcal{PS}h}}
+\DeclareMathOperator{\sh}{\underline{\mathcal{S}h}}
+\DeclareMathOperator{\aff}{\underline{Aff}}
+\DeclareMathOperator{\sch}{\underline{Sch}}
+\DeclareMathOperator{\schs}{\underline{Sch/S}}
+\DeclareMathOperator{\schs0}{\underline{Sch/S_{0}}}
+\DeclareMathOperator{\pres}{\underline{Prevar/S}}
+\DeclareMathOperator{\prek}{\underline{Prevar/k}}
+\DeclareMathOperator{\affk}{\underline{AffVar/k}}
+\DeclareMathOperator{\topcp}{\underline{TopCP}}
+\DeclareMathOperator{\Top}{\underline{Top}}
+\DeclareMathOperator{\grp}{\underline{Grp}}
+\DeclareMathOperator{\func}{\underline{Func}}
+
+\makeatother
+
+\usepackage{babel}
+\providecommand{\corollaryname}{Korollar}
+\providecommand{\definitionname}{Definition}
+\providecommand{\examplename}{Beispiel}
+\providecommand{\lemmaname}{Lemma}
+\providecommand{\propositionname}{Satz}
+\providecommand{\theoremname}{Theorem}
+
+\begin{document}
+\begin{prop}[44]
+\mbox{}
+\begin{enumerate}
+\item Der geringte Raum $X_{\red}=(X,\mathcal{O}_{X}/\mathcal{N})$ ist
+ein Schema, also ein abgeschlossenes Unterschema von $X$ mit demselben
+topologischen Raum wie $X$.
+\item Falls $X'\subset X$ ein weiteres solches Unterschema ist, dann gibt
+es eine abgeschlossene Einbettung $f:X_{\red}\rightarrow X'$, sodass
+das Diagramm
+\[
+\xymatrix{X_{\red}\ar@{^{(}->}[r]\ar[d] & X\\
+X'\ar@{^{(}->}[ur]
+}
+\]
+kommutiert.
+\item $X_{\red}$ ist reduziert und heißt das \textbf{unterliegend reduzierte
+Unterschema von $X$.}
+\item Falls $X=\Spec A$ affin, gilt $X_{\red}=\Spec(A/\nil(A))$.
+\end{enumerate}
+\end{prop}
+
+\begin{proof}
+Ohne Einschränkung sei $X=\Spec A$ $\Longrightarrow U\mapsto\nil(\Gamma(U,\mathcal{O}_{X}))$
+ist bereits eine Garbe, da 
+\[
+\nil(\mathcal{O}_{X}(D(f))=\nil(A_{f})=\nil(A)A_{f}
+\]
+
+für alle $f\in A$. $\Longrightarrow X_{\red}=\Spec(A/\nil A)$ offensichtlich
+reduziert.\textbf{ Universelle Eigenschaft:} zu zeigen $\mathcal{O}_{X}\rightarrow\mathcal{O}_{X}/\mathcal{N}$
+faktorisiert:
+\[
+\xymatrix{\mathcal{O}_{X}\ar[r]\ar[rd] & \mathcal{O}_{X}/\mathcal{N}\\
+ & \mathcal{O}_{X'}\ar[u]
+}
+,
+\]
+
+d.h. $\ker(\mathcal{O}_{X}\rightarrow\mathcal{O}_{X'})\subset\mathcal{N}$.
+Es reicht zu zeigen:
+\[
+\ker(\mathcal{O}_{X}(U)\rightarrow\mathcal{O}_{X'}(U))\subset\Gamma(U,\mathcal{N})
+\]
+
+für alle $U$ offen affin. Ohne Einschränkung $X=\Spec A$, $X'$
+abgeschlossenes Unterschema $\Longrightarrow$ affin: $X'=\Spec B$.
+
+Zu zeigen: $\ker(A\rightarrow B)\subset\nil A$. Da nach Voraussetzung
+$\Spec B\rightarrow\Spec A$ bijektiv ist, folgt:
+\[
+\ker(A\rightarrow B)\subset\bigcap_{\mathfrak{g}\in\Spec A}\mathfrak{g}=\nil A
+\]
+\end{proof}
+\begin{cor}[45]
+$(X_{\red},i_{X}:X_{red}\rightarrow X)$ ist durch die universelle
+Eigenschaft eindeutig bis auf eindeutige Isomorphie bestimmt.
+\end{cor}
+
+\begin{lem}[46]
+Jede Einbettung $i:Z\rightarrow X$ ist ein Monomorphismus in $\sch$.
+\end{lem}
+
+\begin{proof}
+\mbox{}
+\begin{itemize}
+\item Stetige Abbildung $Z\hookrightarrow X$ klar.
+\item Die Garbenabbildung $i_{Y}^{\#}$ ist surjektiv.
+\end{itemize}
+\end{proof}
+%
+\begin{proof}[Beweis von Korollar 45]
+Sei $X'_{\red}$ ein weiteres Schema mit universeller Eigenschaft
+\[
+\exists f:X_{\red}\rightarrow X'_{\red},\quad g:X'_{\red}\rightarrow X_{\red}
+\]
+
+so dass
+\[
+\xymatrix{X_{\red}\ar[r]^{f}\ar[rd]_{i_{X}} & X'_{\red}\ar[r]^{g}\ar[d]^{i_{X'}} & X_{\red}\ar[ld]^{i_{X}}\\
+ & X
+}
+,\quad i_{X}\circ(g\circ f)=i_{X}\circ\id_{X_{\red}}
+\]
+
+$i_{X}$ Monomorphismus $\Longrightarrow g\circ f=\id_{X_{\red}}=f\circ g$.
+Auf $(X_{\red},i_{X})=\{\id\}$ $\Longrightarrow$ Eindeutig.
+\end{proof}
+$(\cdot)_{\red}$ ist ein Funktor, wie die folgende Proposition zeigt:
+\begin{prop}[47]
+Sei $f:X\rightarrow Y$ ein Schemata-Morphismus. Dann gibt es:
+\[
+\xymatrix{X_{\red}\ar[r]^{f_{\red}} & Y_{\red}\\
+X_{\red}\ar@{^{(}->}[r]^{i_{X}}\ar[d]_{f_{\red}} & X\ar[d]^{f}\\
+Y_{\red}\ar@{^{(}->}[r]_{i_{Y}} & Y
+}
+,\quad\text{d.d.}
+\]
+
+Für weitere Morphismen $g:Y\rightarrow Z$ gilt
+\[
+(g\circ f)_{\red}=g_{\red}\circ f_{\red}.
+\]
+\end{prop}
+
+\begin{proof}
+$i_{Y}$ Monomorphismus $\Longrightarrow f_{\red}$ eindeutig. \textbf{Existenz:
+}Nach Verklebungs-Lemma $\Longrightarrow$ ohne Einschränkung $X=\Spec A$,
+$Y=\Spec B$, $f\hat{=}\ \varphi:B\rightarrow A$.
+
+$\Longrightarrow\varphi(\nil(B))\subset\nil(A)$
+
+$\Longrightarrow\varphi_{\red}:B/\nil(B)\rightarrow A/\nil(A)$
+
+$\Longrightarrow f_{\red}:\Spec(A/\nil(A))\rightarrow\Spec(B/\nil(B))$.
+\end{proof}
+\begin{prop}[48]
+Sei $X$ Schemata, $Z\subset X$ lokal abgeschlossene Teilmenge.
+Dann existiert ein eindeutig bestimmtes reduziertes Unterschema mit
+topologischem Raum $Z$.
+\end{prop}
+
+\begin{proof}
+Eindeutigkeit: Korollar 45. Existenz: Verklebungslemma $\Longrightarrow$
+ohne Einschränkung $X=\Spec A$ affin und $Z\subset X$ abgeschlossen
+(sonst Überdeckung von $X$ zu $Z\subset_{\text{abg.}}U\subset_{\text{abg.}}X$)
+$\Longrightarrow\exists\mathfrak{a}\subset A$ so dass $Z=V(\mathfrak{A})$
+$\Longrightarrow Z'=\Spec(A/\mathfrak{a})$ ist abgeschlossenes Unterschema
+von $X$ mit topologischem Raum $Z$. Satz 44 $\Longrightarrow\exists Z'_{\red}\subset Z'\subset X$.
+\end{proof}
+Damit besitzt für ein lokal abgeschlossene Teilmenge die geordnete
+Menge (bzgl. Inklusion) von Unterschema, denen topologischen Raum
+$Z$ umfassen, ein eindeutiges minimales Element $Z_{\red}$, das
+\textbf{reduzierte Unterschema} mit unterliegendem Raum $Z$.
+
+\chapter{Faserprodukte}
+
+\section{Der ,,Punkte-Funktor``}
+
+Kontravarianter Funktor, $\forall X\in\sch$,
+\begin{align*}
+h_{X}:(\sch)^{\op} & \longrightarrow\set\\
+S & \longmapsto h_{X}(S):=\Hom_{\sch}(S,X)\\
+(f:T\rightarrow S) & \longmapsto(\Hom(S,X)\overset{f^{\ast}}{\rightarrow}\Hom(T,X),\ g\mapsto g\circ f)
+\end{align*}
+
+$f^{\ast}=h_{X}(S)$ heißen $S$-wertige Punkte von $X$. \textbf{Notation:
+}$X(S)$, $X(R)$, falls $S=\Spec R$.
+
+\textbf{Relative Version:} $X\in\schs0$, $S_{0}$ fixes Schemata.
+\begin{align*}
+\schs0 & \longrightarrow\set\\
+S & \longmapsto\Hom_{S_{0}}(S,X)
+\end{align*}
+
+\textbf{Notation: $X_{S_{0}}(S)$, $X_{R_{0}}(S)$, $X_{S_{0}}(R)$,
+$X_{R_{0}}(R)$}
+\begin{example}
+Sei $k$ algebraisch abgeschlossen, $X/k$ von endlichem Typ, $x\in X_{k}(k)$.
+Dann ist
+\[
+\im(\Spec k\overset{x}{\longrightarrow}X)\in X
+\]
+abgeschlossener Punkt. $x\mapsto\im(x)$ liefert Bijektion, $X_{k}(k)\rightarrow|X|$
+Menge der abgeschlossenen Punkte.
+\end{example}
+
+\begin{example}
+Sei $X=\mathbb{A}^{n}=\Spec(\mathbb{Z}[T_{1},\ldots T_{n}])$. Dann:
+\begin{align*}
+\mathbb{A}^{n}(S) & =\Hom_{\sch}(S,\mathbb{A}^{n})=\Hom_{\ring}(\mathbb{Z}[T_{1},\ldots,T_{n}],\mathcal{O}_{S}(S))\\
+ & =\Gamma(S,\mathcal{O}_{S})^{n}
+\end{align*}
+\end{example}
+
+\begin{example}
+Sei $X=\Spec(R[T_{1},\ldots,T_{n})/(f_{1},\ldots,f_{m}))$, $S$ ein
+$R$-Schema. Dann:
+\begin{align*}
+X_{R}(S) & =\Hom_{R\text{-Alg}}(R[I]/(f),\mathcal{O}_{S}(S))\\
+ & =\{s\in\mathcal{O}_{S}(S)^{n}\mid f_{1}(s)=\cdots=f_{m}(s)=0\}
+\end{align*}
+\end{example}
+
+\begin{example}
+Sei $X=\Spec\mathbb{Z}[T,T^{-1}]$. Dann:
+\[
+X(S)=\Hom(\mathbb{Z}[T,T^{-1}],\mathcal{O}_{S}(S))=\Gamma(S,\mathcal{O}_{S})^{\times}.
+\]
+Hier sogar $h_{X}:\sch\rightarrow\grp$. $X$ ist eine abelsche Gruppe.
+\end{example}
+
+
+\section{Yoneda-Lemma}
+
+\textbf{Ziel:} $h_{X}$ beschreibt $X$ eindeutig.
+
+Erinnerung: $\mathcal{F},\mathcal{G}:\mathcal{A}\rightarrow\mathcal{B}$
+Funktoren, natürliche Transformation $f\in\Hom(\mathcal{F},\mathcal{G})$:
+\[
+f=\{f(X):\mathcal{F}(X):\rightarrow\mathcal{G}(X))_{X\in\mathcal{A}}.
+\]
+
+Wir erhalten Kategorien: $\func(\mathcal{A},\mathcal{B})$, \textbf{hier:
+}$\mathcal{C}=\schs0$, $\hat{C}=\func(\mathcal{C}^{\op},\set)$.
+Wir erhalten einen Funktor
+\begin{align*}
+\mathcal{C} & \longrightarrow\hat{\mathcal{C}},\\
+X & \longmapsto h_{X},\\
+f & \longmapsto\text{Pullback }f^{\ast}.
+\end{align*}
+
+\begin{prop}[5]
+Sei $X\in\mathcal{C}$, $\mathcal{F}\in\hat{\mathcal{C}}$. Dann
+ist die Abbildung
+\begin{align*}
+\Hom_{\hat{C}}(h_{X},\mathcal{F}) & \longrightarrow\mathcal{F}(X)\\
+\alpha & \longmapsto\alpha(X)(\id_{X})\in\Hom(h_{X}(X),\mathcal{F}(X))
+\end{align*}
+
+bijektiv und funktoriell.
+\end{prop}
+
+Insbesondere ist der obige Funktor $\mathcal{C}\rightarrow\hat{\mathcal{C}}$
+volltreu (wähle $\mathcal{F}=h_{Y}$!)
+\begin{proof}
+Umkehrabbildung:
+\begin{align*}
+\mathcal{F}(X) & \longrightarrow\Hom_{\hat{\mathcal{C}}}(h_{X},\mathcal{F})\\
+\xi & \longmapsto\alpha_{\xi}=(\alpha_{\xi}(Y))_{Y\in\schs0}
+\end{align*}
+
+mit
+\begin{align*}
+\alpha_{\xi}(Y):\Hom(Y,X)=h_{X}(Y) & \longrightarrow\mathcal{F}(Y)\\
+f & \longmapsto\mathcal{F}(f)(\xi)\in\Hom(\mathcal{F}(X),\mathcal{F}(Y))
+\end{align*}
+\end{proof}
+
+\section{Faserprodukte in beliebigen Kategorien}
+
+Sei $\mathcal{C}$ eine Kategorie, $S\in\obj(\mathcal{C})$, $f:X\rightarrow S$,
+$g:Y\rightarrow S$ Morphismen.
+\begin{defn}[6]
+Ein Tupel $(Z,p,q)$ mit $Z\in\obj(\mathcal{C})$ und Morphismen
+$p:Z\rightarrow X$, $q:Z\rightarrow Y$, $f\circ p=g\circ q$, hei{\small{}ßt
+}\textbf{\small{}Faserprodukt}{\small{} von $X$ und $Y$ über $S$
+(bzw. von $f,g$), falls für jedes $T\in\obj(\mathcal{C})$ und Paare
+$(u:T\rightarrow X,v:T\rightarrow Y)$ von Morphismen mit $f\circ u=g\circ v$
+genau ein Morphismus $w:T\rightarrow Z$ existiert mit $p\circ w=u$,
+$g\circ w=v$.}{\small\par}
+\end{defn}
+
+\textbf{Notation: }$X\times_{S}Y$ oder $X\times_{f,S,g}Y:=Z$, $(u,v)_{S}:=w$.
+\[
+\xymatrix{T\ar@/^{1pc}/[rrd]^{u}\ar@/_{1pc}/[ddr]_{v}\ar[dr]|-{\exists_{1}}\\
+ & X\times_{S}Y\ar[r]^{p}\ar[d]^{q} & X\ar[d]^{f}\\
+ & Y\ar[r]_{g} & S
+}
+\]
+
+Ist $S$ ein finales Objekt in $\mathcal{C}$, so ist $X\times_{S}Y=X\times Y$
+das kategorielle Produkt.
+\begin{example}[7]
+\mbox{}
+\begin{enumerate}
+\item $\mathcal{C}=\set$. $X\times_{S}Y=\{(x,y)\in X\times Y\mid f(x)=g(x)(\}$.
+\item $\mathcal{C}=\Top$, $f:X\rightarrow S$, $g:Y\rightarrow S$ stetige
+Abbildungen. Versehe $\{(x,y)\mid f(x)=g(y)\}\subset X\times Y$ mit
+der Topologie induziert von der Produkttopologie auf $X\times Y$.
+Dies ist ein Faserprodukt in $\Top$.
+\end{enumerate}
+\end{example}
+
+
+\end{document}
