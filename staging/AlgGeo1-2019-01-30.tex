@@ -26,6 +26,8 @@
 \newtheorem{prop}[thm]{\protect\propositionname}
 \theoremstyle{definition}
 \newtheorem{defn}[thm]{\protect\definitionname}
+\theoremstyle{plain}
+\newtheorem{cor}[thm]{\protect\corollaryname}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
 %% User-specified commands
@@ -78,6 +80,7 @@
 \makeatother
 
 \usepackage{babel}
+\providecommand{\corollaryname}{Korollar}
 \providecommand{\definitionname}{Definition}
 \providecommand{\examplename}{Beispiel}
 \providecommand{\propositionname}{Satz}
@@ -234,5 +237,37 @@ Vergleiche: Lin, ,,Algebraic Geometry and Arithmetic curves``, Prop
 24, 3.16, 3.32, (3.9).
 \begin{proof}[Beweis (Skizze)]
 \end{proof}
+\begin{prop}[42]
+Sei $f:X\rightarrow Y$ surjektiver Morphismus von $S$-Schemata,
+und $Y$ separiert von endlichem Typ über $S$, sowie $X$ eigentlich
+über $S$. Dann ist $Y$ eigentlich über $S$.
+\end{prop}
+
+\begin{proof}
+$f$ surjektiv $\Longrightarrow\forall T\rightarrow S$ ist $f_{(T)}:X_{T}\rightarrow Y_{T}$
+surjektiv.
+
+$\Longrightarrow\xymatrix{A\underset{\text{abg.}}{\subset}Y_{T}\ar[r] & T\\
+ & \varphi^{-1}(A)\underset{\text{abg.}}{\subset}X_{T}\ar@{->>}[ul]_{\varphi}\ar[u]_{X\text{ eig.}\Rightarrow\text{abg.}}
+}
+$
+
+$\Longrightarrow Y_{T}\rightarrow T$ abgeschlossen.
+
+$\Longrightarrow Y\rightarrow S$ universal abgeschlossen.
+\end{proof}
+\begin{prop}[43]
+Sei $X$ eigentliches Schema über $S=\Spec A$. Dann ist $\mathcal{O}_{X}(X)$
+ganz über $A$. Ist $X=\Spec B$ affin, so ist $B$ endlich über $A$.
+\end{prop}
+
+\begin{proof}
+Lin, 3.17/3.18.
+\end{proof}
+\begin{cor}
+Sei $X$ reduzierte eigentliche Varietät über $k$. Dann ist $\mathcal{O}_{X}(X)$
+endlich-dimensionaler $k$-Vektorraum.
+\end{cor}
+
 
 \end{document}

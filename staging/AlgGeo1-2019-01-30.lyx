@@ -904,6 +904,169 @@ Beweis (Skizze)
 \end_inset
 
 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+42
+\end_layout
+
+\end_inset
+
+Sei 
+\begin_inset Formula $f:X\rightarrow Y$
+\end_inset
+
+ surjektiver Morphismus von 
+\begin_inset Formula $S$
+\end_inset
+
+-Schemata, und 
+\begin_inset Formula $Y$
+\end_inset
+
+ separiert von endlichem Typ über 
+\begin_inset Formula $S$
+\end_inset
+
+, sowie 
+\begin_inset Formula $X$
+\end_inset
+
+ eigentlich über 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ Dann ist 
+\begin_inset Formula $Y$
+\end_inset
+
+ eigentlich über 
+\begin_inset Formula $S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $f$
+\end_inset
+
+ surjektiv 
+\begin_inset Formula $\Longrightarrow\forall T\rightarrow S$
+\end_inset
+
+ ist 
+\begin_inset Formula $f_{(T)}:X_{T}\rightarrow Y_{T}$
+\end_inset
+
+ surjektiv.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Longrightarrow\xymatrix{A\underset{\text{abg.}}{\subset}Y_{T}\ar[r] & T\\
+ & \varphi^{-1}(A)\underset{\text{abg.}}{\subset}X_{T}\ar@{->>}[ul]_{\varphi}\ar[u]_{X\text{ eig.}\Rightarrow\text{abg.}}
+}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Longrightarrow Y_{T}\rightarrow T$
+\end_inset
+
+ abgeschlossen.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Longrightarrow Y\rightarrow S$
+\end_inset
+
+ universal abgeschlossen.
+\end_layout
+
+\begin_layout Proposition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+43
+\end_layout
+
+\end_inset
+
+Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ eigentliches Schema über 
+\begin_inset Formula $S=\Spec A$
+\end_inset
+
+.
+ Dann ist 
+\begin_inset Formula $\mathcal{O}_{X}(X)$
+\end_inset
+
+ ganz über 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Ist 
+\begin_inset Formula $X=\Spec B$
+\end_inset
+
+ affin, so ist 
+\begin_inset Formula $B$
+\end_inset
+
+ endlich über 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Lin, 3.17/3.18.
+\end_layout
+
+\begin_layout Corollary
+Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ reduzierte eigentliche Varietät über 
+\begin_inset Formula $k$
+\end_inset
+
+.
+ Dann ist 
+\begin_inset Formula $\mathcal{O}_{X}(X)$
+\end_inset
+
+ endlich-dimensionaler 
+\begin_inset Formula $k$
+\end_inset
+
+-Vektorraum.
 \end_layout
 
 \end_body
