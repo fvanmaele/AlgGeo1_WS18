@@ -9,6 +9,7 @@
 %% User-specified commands
 \DeclareMathOperator{\rad}{rad}
 \DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Specm}{Specm}
 \DeclareMathOperator{\maxspec}{MaxSpec}
 \DeclareMathOperator{\Quot}{Quot}
 \DeclareMathOperator{\im}{\mathrm{im}}
@@ -22,6 +23,7 @@
 \DeclareMathOperator{\op}{op}
 \DeclareMathOperator{\obj}{Obj}
 \DeclareMathOperator{\nil}{nil}
+\DeclareMathOperator{\codim}{codim}
 
 %% sets
 \DeclareMathOperator{\CC}{\mathbb{C}}
@@ -219,6 +221,16 @@ Zum Beispiel: abelsche Varietäten, etwa elliptische Kurven.
 
 \begin_layout Chapter
 Dimensionen
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -324,12 +336,247 @@ mbox{}
 
 \begin_deeper
 \begin_layout Enumerate
-\begin_inset Note Note
+Sei 
+\begin_inset Formula $X=\Spec A$
+\end_inset
+
+ affines Schemata.
+ Dann haben wir eine Inklusions-erhaltended Bijektion
+\begin_inset Formula 
+\[
+\{\text{irred. abg. TM. von }X\}\leftrightarrow\{\text{Primid. von }A\}
+\]
+
+\end_inset
+
+also 
+\begin_inset Formula $\dim X=\dim A$
+\end_inset
+
+, wobei
+\begin_inset Formula 
+\[
+\dim A:=\sup\{l\in\mathbb{N}_{0}\mid\exists\mathfrak{p}_{0}\subsetneq\mathfrak{p}_{1}\subsetneq\cdots\subsetneq\mathfrak{p}_{l}\text{\,Kette von Primid. von }A\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Es ist 
+\begin_inset Formula $\dim\mathbb{A}_{A}^{n}\geq\dim A+n$
+\end_inset
+
+, Gleichheit falls 
+\begin_inset Formula $A$
+\end_inset
+
+ noethersch.
+ Denn: 
+\begin_inset Formula $\dim A[X]\geq\dim A+1$
+\end_inset
+
+, Gleichheit falls 
+\begin_inset Formula $A$
+\end_inset
+
+ noethersch.
+\end_layout
+
+\end_deeper
+\begin_layout Definition
+\begin_inset Argument 1
 status open
 
 \begin_layout Plain Layout
-TODO
+3
 \end_layout
+
+\end_inset
+
+Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ topologischer Raum, 
+\begin_inset Formula $x\in X$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+\dim_{x}X:=\inf\{\dim U\mid x\in U\subset X\text{ offen}\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+heißt 
+\series bold
+Dimension von 
+\begin_inset Formula $X$
+\end_inset
+
+ bei 
+\begin_inset Formula $x$
+\end_inset
+
+
+\series default
+.
+\end_layout
+
+\begin_layout Example
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+
+Sei 
+\begin_inset Formula $\mathcal{O}$
+\end_inset
+
+ DBR, 
+\begin_inset Formula $y=(0)$
+\end_inset
+
+, 
+\begin_inset Formula $s=\mathfrak{m}\in\Spec\mathcal{O}=X$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\{s\}\subset X$
+\end_inset
+
+ hat maximale Länge (
+\begin_inset Formula $X$
+\end_inset
+
+ irreduzibel, da 
+\begin_inset Formula $\mathcal{O}$
+\end_inset
+
+ integer) 
+\begin_inset Formula $\Longrightarrow1=\dim X=\dim_{S}X$
+\end_inset
+
+, 
+\begin_inset Formula $\dim\{y\}=\dim_{y}X$
+\end_inset
+
+, da 
+\begin_inset Formula $\{y\}$
+\end_inset
+
+ offen.
+\end_layout
+
+\begin_layout Lemma
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+
+Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ ein topologischer Raum.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Für 
+\begin_inset Formula $Y\subset X$
+\end_inset
+
+ Teilmenge ist 
+\begin_inset Formula $\dim Y\leq\dim X$
+\end_inset
+
+.
+ Ist 
+\begin_inset Formula $X$
+\end_inset
+
+ irreduzibel, 
+\begin_inset Formula $\dim X<\infty$
+\end_inset
+
+, und 
+\begin_inset Formula $Y\subsetneq X$
+\end_inset
+
+ eine echte abgeschlossene Teilmenge, dann ist 
+\begin_inset Formula $\dim Y<\dim X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+(Dimension ist lokal) Sei 
+\begin_inset Formula $X=\bigcup_{\alpha}U_{\alpha}$
+\end_inset
+
+ eine offene Überdeckung.
+ Dann ist
+\begin_inset Formula 
+\[
+\dim X=\sup_{\alpha}\dim U_{\alpha}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $I$
+\end_inset
+
+ die Menge der irreduziblen Komponenten von 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Dann ist
+\begin_inset Formula 
+\[
+\dim X=\sup_{Y\in I}\dim Y.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ ein Schema.
+ Dann ist
+\begin_inset Formula 
+\[
+\dim X=\sup_{x\in X}\dim\mathcal{O}_{X,x}.
+\]
 
 \end_inset
 
@@ -337,5 +584,283 @@ TODO
 \end_layout
 
 \end_deeper
+\begin_layout Proof
+[Gortz, Lemma 5.7].
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+Unlesbar in den vorhandenen Mitschrieben, und zum Großteil vorhanden in
+ der angegeben Quelle.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $Y\subset X$
+\end_inset
+
+ irreduzibel abgeschlossen.
+ Die 
+\series bold
+Kodimension
+\series default
+ von 
+\begin_inset Formula $Y$
+\end_inset
+
+ in 
+\begin_inset Formula $X$
+\end_inset
+
+ ist das Supremum:
+\begin_inset Formula 
+\[
+\codim_{X}Y:=\sup\{l\in\mathbb{N}_{0}\mid Y_{0}\supsetneq Y_{1}\supsetneq\cdots\supsetneq Y_{l}=Y\}
+\]
+
+\end_inset
+
+mir 
+\begin_inset Formula $Y_{0},\ldots,Y_{l}$
+\end_inset
+
+ irreduzibel abgeschlossen.
+\end_layout
+
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $Y\subset X$
+\end_inset
+
+ abgeschlossen.
+ Dann ist:
+\begin_inset Formula 
+\[
+\codim_{X}Y=\inf_{Z\text{ irred. Komp. in }Y}\codim_{X}Z
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Remark
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $Z\subset X$
+\end_inset
+
+ irreduzibel abgeschlossen.
+ Dann ist
+\begin_inset Formula 
+\[
+\codim_{X}Z+\dim_{X}Z\leq\dim X.
+\]
+
+\end_inset
+
+Im Allgemeinen gilt 
+\begin_inset Quotes gld
+\end_inset
+
+
+\begin_inset Formula $=$
+\end_inset
+
+
+\begin_inset Quotes grd
+\end_inset
+
+ nicht.
+\end_layout
+
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $\mathfrak{p}\in\Spec A$
+\end_inset
+
+.
+ Dann ist
+\begin_inset Formula 
+\[
+\dim A_{\mathfrak{p}}=\codim_{\Spec A}V(\mathfrak{p})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Ganze Morphismen
+\end_layout
+
+\begin_layout Lemma
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+8, Going up
+\end_layout
+
+\end_inset
+
+Sei 
+\begin_inset Formula $\varphi:A\rightarrow B$
+\end_inset
+
+ ganzer, injektiver Ringhomomorphismus.
+ Dann ist
+\begin_inset Formula 
+\[
+\varphi^{\ast}:\Spec B\longrightarrow\Spec A
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+surjektiv, und 
+\begin_inset Formula $\dim A=\dim B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Corollary
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+9
+\end_layout
+
+\end_inset
+
+Seien 
+\begin_inset Formula $X=\Spec B$
+\end_inset
+
+, 
+\begin_inset Formula $Y=\Spec A$
+\end_inset
+
+ affine Schemata, 
+\begin_inset Formula $\varphi:A\rightarrow B$
+\end_inset
+
+ ganzer und injektiver Ringhomomorphismus, und 
+\begin_inset Formula $f:X\rightarrow Y$
+\end_inset
+
+ der entsprechende Schema-Morphismus.
+ Falls 
+\begin_inset Formula $Z=V(\mathfrak{b})\subseteq X$
+\end_inset
+
+ abgeschlossen mit 
+\begin_inset Formula $\mathfrak{b}\subseteq B$
+\end_inset
+
+ Ideal, dann ist 
+\begin_inset Formula $f(Z)=V(\varphi^{-1}(\mathfrak{b}))$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Corollary
+Insbesondere ist 
+\begin_inset Formula $f$
+\end_inset
+
+ abgeschlossen, und 
+\begin_inset Formula $\dim f(Z)=\dim Z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $f(V(\mathfrak{b}))\subset V(\varphi^{-1}(\mathfrak{b}))$
+\end_inset
+
+ dicht, 
+\begin_inset Formula $A/\varphi^{-1}(\mathfrak{b})\hookrightarrow B/\mathfrak{b}$
+\end_inset
+
+ ganz.
+ Lemma 8 
+\begin_inset Formula $\Longrightarrow\overline{f}:Z\rightarrow V(\varphi^{-1}(\mathfrak{b}))$
+\end_inset
+
+ surjektiv mit gleicher Dimension.
+\end_layout
+
 \end_body
 \end_document

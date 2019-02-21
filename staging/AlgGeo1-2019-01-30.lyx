@@ -881,8 +881,8 @@ Erfüllt
 
 \end_deeper
 \end_deeper
-\begin_layout Standard
-Vergleiche: Lin, 
+\begin_layout Proof
+Siehe Lin, 
 \begin_inset Quotes gld
 \end_inset
 
@@ -893,22 +893,21 @@ Algebraic Geometry and Arithmetic curves
 , Prop 24, 3.16, 3.32, (3.9).
 \end_layout
 
-\begin_layout Proof
-\begin_inset Argument 1
+\begin_layout Standard
+\begin_inset Note Comment
 status open
 
 \begin_layout Plain Layout
-Beweis (Skizze)
-\end_layout
-
+Die Beweis 
+\begin_inset Quotes gld
 \end_inset
 
+Skizze
+\begin_inset Quotes grd
+\end_inset
 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO
+ aus der Vorlesung wurde hier ausgelassen, da unlesbar in den vorhandenen
+ Mitschrieben.
 \end_layout
 
 \end_inset
