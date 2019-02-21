@@ -1,0 +1,130 @@
+%% LyX 2.3.2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[oneside,ngerman]{book}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage[all]{xy}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\theoremstyle{plain}
+\ifx\thechapter\undefined
+	\newtheorem{thm}{\protect\theoremname}
+\else
+	\newtheorem{thm}{\protect\theoremname}[chapter]
+\fi
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{\protect\definitionname}
+\theoremstyle{definition}
+\newtheorem{example}[thm]{\protect\examplename}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+%% User-specified commands
+\DeclareMathOperator{\rad}{rad}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\maxspec}{MaxSpec}
+\DeclareMathOperator{\Quot}{Quot}
+\DeclareMathOperator{\im}{\mathrm{im}}
+\DeclareMathOperator{\Hom}{\mathrm{Hom}}
+\DeclareMathOperator{\Mor}{\mathrm{Mor}}
+\DeclareMathOperator{\id}{\mathrm{id}}
+\DeclareMathOperator{\res}{res}
+\DeclareMathOperator{\Abb}{Abb}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\red}{red}
+\DeclareMathOperator{\op}{op}
+\DeclareMathOperator{\obj}{Obj}
+\DeclareMathOperator{\nil}{nil}
+
+%% sets
+\DeclareMathOperator{\CC}{\mathbb{C}}
+\DeclareMathOperator{\RR}{\mathbb{R}}
+\DeclareMathOperator{\QQ}{\mathbb{Q}}
+\DeclareMathOperator{\ZZ}{\mathbb{Z}}
+\DeclareMathOperator{\NN}{\mathbb{N}}
+
+%% categories
+\DeclareMathOperator{\ouv}{\mathcal{O}uv}
+\DeclareMathOperator{\set}{\underline{Set}}
+\DeclareMathOperator{\ab}{\underline{Ab}}
+\DeclareMathOperator{\cattop}{\underline{Top}}
+\DeclareMathOperator{\cring}{\underline{CRing}}
+\DeclareMathOperator{\ring}{\underline{Ring}}
+\DeclareMathOperator{\psh}{\underline{\mathcal{PS}h}}
+\DeclareMathOperator{\sh}{\underline{\mathcal{S}h}}
+\DeclareMathOperator{\aff}{\underline{Aff}}
+\DeclareMathOperator{\sch}{\underline{Sch}}
+\DeclareMathOperator{\schk}{\underline{Sch/k}}
+\DeclareMathOperator{\schs}{\underline{Sch/S}}
+\DeclareMathOperator{\schsn}{\underline{Sch/S_{0}}}
+\DeclareMathOperator{\schz}{\underline{Sch/\mathbb{Z}}}
+\DeclareMathOperator{\pres}{\underline{Prevar/S}}
+\DeclareMathOperator{\prek}{\underline{Prevar/k}}
+\DeclareMathOperator{\affk}{\underline{AffVar/k}}
+\DeclareMathOperator{\topcp}{\underline{TopCP}}
+\DeclareMathOperator{\Top}{\underline{Top}}
+\DeclareMathOperator{\grp}{\underline{Grp}}
+\DeclareMathOperator{\func}{\underline{Func}}
+
+\makeatother
+
+\usepackage{babel}
+\providecommand{\definitionname}{Definition}
+\providecommand{\examplename}{Beispiel}
+\providecommand{\theoremname}{Theorem}
+
+\begin{document}
+\begin{thm}[45]
+Sei $\mathcal{O}_{K}$ Bewertungsring, $K=\Quot(\mathcal{O}_{X})$,
+$X/\mathcal{O}_{K}$ eigentlich. Dann ist $X_{\mathcal{O}_{K}}(\mathcal{O}_{K})\rightarrow X_{K}(K)$
+bijektiv.
+\end{thm}
+
+\textbf{Bewertungskriterium }(vgl. Hartshorne, Lin 3.26)
+\[
+\xymatrix{\Spec K\ar[r]\ar[d] & X\ar[d]^{f}\\
+\Spec\mathcal{O}_{K}\ar@{-->}[ur]|-{\exists!}\ar[r] & Y
+}
+\]
+
+$f$ eigentlich $\Longleftrightarrow$ universelle Eigenschaft oben
+erfüllt. (Theorem auf $X\times_{Y}\Spec\mathcal{O}_{K}\rightarrow\Spec\mathcal{O}_{K}$).
+\begin{thm}[46, Lin III 3.30]
+Jeder projektive Morphismus ist eigentlich.
+\end{thm}
+
+Zum Beispiel: abelsche Varietäten, etwa elliptische Kurven. Theorem
+46 $\Longrightarrow E(\mathbb{Q}_{p})=E(\mathbb{Z}_{p})$.
+
+\chapter{Dimensionen}
+
+\section{Allgemeine Schemata}
+\begin{defn}[1]
+Für einen topologischen Raum $X$ ist die (Krull-)Dimension das Supremum
+der Länge aller Ketten
+\[
+Z_{0}\subsetneq Z_{1}\subsetneq\cdots\subsetneq Z_{n}\subseteq X
+\]
+
+irreduzibler abgeschlossener Teilmengen $Z_{i}$. $X$ sei \textbf{von
+Dimension $n$}, falls alle irreduzible Komponenten von $X$ die Dimension
+$n$ haben ($\dim\emptyset=-\infty$, sonst $\dim X\in\mathbb{N}\cup\{+\infty\}$).
+
+Die Dimension eines Schemas ist per Definition die Dimension des unterliegenden
+topologischen Raums, also $\dim X=\dim X_{\red}$.
+\end{defn}
+
+\begin{example}[2]
+\mbox{}
+\begin{enumerate}
+\item 
+\end{enumerate}
+\end{example}
+
+
+\end{document}

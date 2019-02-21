@@ -1,0 +1,341 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+%% User-specified commands
+\DeclareMathOperator{\rad}{rad}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\maxspec}{MaxSpec}
+\DeclareMathOperator{\Quot}{Quot}
+\DeclareMathOperator{\im}{\mathrm{im}}
+\DeclareMathOperator{\Hom}{\mathrm{Hom}}
+\DeclareMathOperator{\Mor}{\mathrm{Mor}}
+\DeclareMathOperator{\id}{\mathrm{id}}
+\DeclareMathOperator{\res}{res}
+\DeclareMathOperator{\Abb}{Abb}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\red}{red}
+\DeclareMathOperator{\op}{op}
+\DeclareMathOperator{\obj}{Obj}
+\DeclareMathOperator{\nil}{nil}
+
+%% sets
+\DeclareMathOperator{\CC}{\mathbb{C}}
+\DeclareMathOperator{\RR}{\mathbb{R}}
+\DeclareMathOperator{\QQ}{\mathbb{Q}}
+\DeclareMathOperator{\ZZ}{\mathbb{Z}}
+\DeclareMathOperator{\NN}{\mathbb{N}}
+
+%% categories
+\DeclareMathOperator{\ouv}{\mathcal{O}uv}
+\DeclareMathOperator{\set}{\underline{Set}}
+\DeclareMathOperator{\ab}{\underline{Ab}}
+\DeclareMathOperator{\cattop}{\underline{Top}}
+\DeclareMathOperator{\cring}{\underline{CRing}}
+\DeclareMathOperator{\ring}{\underline{Ring}}
+\DeclareMathOperator{\psh}{\underline{\mathcal{PS}h}}
+\DeclareMathOperator{\sh}{\underline{\mathcal{S}h}}
+\DeclareMathOperator{\aff}{\underline{Aff}}
+\DeclareMathOperator{\sch}{\underline{Sch}}
+\DeclareMathOperator{\schk}{\underline{Sch/k}}
+\DeclareMathOperator{\schs}{\underline{Sch/S}}
+\DeclareMathOperator{\schsn}{\underline{Sch/S_{0}}}
+\DeclareMathOperator{\schz}{\underline{Sch/\mathbb{Z}}}
+\DeclareMathOperator{\pres}{\underline{Prevar/S}}
+\DeclareMathOperator{\prek}{\underline{Prevar/k}}
+\DeclareMathOperator{\affk}{\underline{AffVar/k}}
+\DeclareMathOperator{\topcp}{\underline{TopCP}}
+\DeclareMathOperator{\Top}{\underline{Top}}
+\DeclareMathOperator{\grp}{\underline{Grp}}
+\DeclareMathOperator{\func}{\underline{Func}}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+theorems-ams-extended
+theorems-chap
+\end_modules
+\maintain_unincluded_children false
+\language ngerman
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style german
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+45
+\end_layout
+
+\end_inset
+
+Sei 
+\begin_inset Formula $\mathcal{O}_{K}$
+\end_inset
+
+ Bewertungsring, 
+\begin_inset Formula $K=\Quot(\mathcal{O}_{X})$
+\end_inset
+
+, 
+\begin_inset Formula $X/\mathcal{O}_{K}$
+\end_inset
+
+ eigentlich.
+ Dann ist 
+\begin_inset Formula $X_{\mathcal{O}_{K}}(\mathcal{O}_{K})\rightarrow X_{K}(K)$
+\end_inset
+
+ bijektiv.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Bewertungskriterium 
+\series default
+(vgl.
+ Hartshorne, Lin 3.26)
+\begin_inset Formula 
+\[
+\xymatrix{\Spec K\ar[r]\ar[d] & X\ar[d]^{f}\\
+\Spec\mathcal{O}_{K}\ar@{-->}[ur]|-{\exists!}\ar[r] & Y
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f$
+\end_inset
+
+ eigentlich 
+\begin_inset Formula $\Longleftrightarrow$
+\end_inset
+
+ universelle Eigenschaft oben erfüllt.
+ (Theorem auf 
+\begin_inset Formula $X\times_{Y}\Spec\mathcal{O}_{K}\rightarrow\Spec\mathcal{O}_{K}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+46, Lin III 3.30
+\end_layout
+
+\end_inset
+
+Jeder projektive Morphismus ist eigentlich.
+\end_layout
+
+\begin_layout Standard
+Zum Beispiel: abelsche Varietäten, etwa elliptische Kurven.
+ Theorem 46 
+\begin_inset Formula $\Longrightarrow E(\mathbb{Q}_{p})=E(\mathbb{Z}_{p})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Chapter
+Dimensionen
+\end_layout
+
+\begin_layout Section
+Allgemeine Schemata
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+
+Für einen topologischen Raum 
+\begin_inset Formula $X$
+\end_inset
+
+ ist die (Krull-)Dimension das Supremum der Länge aller Ketten
+\begin_inset Formula 
+\[
+Z_{0}\subsetneq Z_{1}\subsetneq\cdots\subsetneq Z_{n}\subseteq X
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+irreduzibler abgeschlossener Teilmengen 
+\begin_inset Formula $Z_{i}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $X$
+\end_inset
+
+ sei 
+\series bold
+von Dimension 
+\begin_inset Formula $n$
+\end_inset
+
+
+\series default
+, falls alle irreduzible Komponenten von 
+\begin_inset Formula $X$
+\end_inset
+
+ die Dimension 
+\begin_inset Formula $n$
+\end_inset
+
+ haben (
+\begin_inset Formula $\dim\emptyset=-\infty$
+\end_inset
+
+, sonst 
+\begin_inset Formula $\dim X\in\mathbb{N}\cup\{+\infty\}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Definition
+Die Dimension eines Schemas ist per Definition die Dimension des unterliegenden
+ topologischen Raums, also 
+\begin_inset Formula $\dim X=\dim X_{\red}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
