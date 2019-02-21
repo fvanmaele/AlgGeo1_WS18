@@ -44,6 +44,7 @@
 \DeclareMathOperator{\schk}{\underline{Sch/k}}
 \DeclareMathOperator{\schs}{\underline{Sch/S}}
 \DeclareMathOperator{\schsn}{\underline{Sch/S_{0}}}
+\DeclareMathOperator{\schz}{\underline{Sch/\mathbb{Z}}}
 \DeclareMathOperator{\pres}{\underline{Prevar/S}}
 \DeclareMathOperator{\prek}{\underline{Prevar/k}}
 \DeclareMathOperator{\affk}{\underline{AffVar/k}}
@@ -129,9 +130,1532 @@ theorems-chap
 
 \begin_body
 
-\begin_layout Standard
+\begin_layout Section
+Fasern von Morphismen
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
+\begin_layout Standard
+
+\series bold
+Ziel:
+\series default
+ 
+\begin_inset Formula $\xymatrix{X\ar[d]^{f}\supset f^{-1}(s)\\
+S\ni s
+}
+$
+\end_inset
+
+ als Schema.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+18
+\end_layout
+
+\end_inset
+
+Für den kanonischen Morphismus 
+\begin_inset Formula $\Spec(\kappa(s))$
+\end_inset
+
+ nennen wir
+\begin_inset Formula 
+\[
+X_{s}:=X\otimes_{S}\kappa(s)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+die 
+\series bold
+Faser von 
+\begin_inset Formula $f$
+\end_inset
+
+ in 
+\begin_inset Formula $s$
+\end_inset
+
+
+\series default
+, ein 
+\begin_inset Formula $\kappa(s)$
+\end_inset
+
+-Schema.
+ Proposition 14 
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\xymatrix{X_{s}\ar[r]\ar[d] & S\times_{S}X\ar[r]^{q=\id_{X}}\ \ \ar[d]_{f} & X\ar[d]\\
+\Spec\kappa(s)\ar[r]_{\text{canon.}} & S\ar[r]_{\id_{S}} & S
+}
+\qquad\text{kommutativ,}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+besagt 
+\begin_inset Formula $X_{s}\cong f^{-1}(s)$
+\end_inset
+
+ (=homoömorph zu Bild(canon)), d.h.
+ wir können 
+\begin_inset Formula $f^{-1}(s)$
+\end_inset
+
+ als Schema auffassen.
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+Denkweise
+\series default
+: 
+\begin_inset Formula $\xymatrix{X\ar[d]_{f}\\
+S
+}
+\cong$
+\end_inset
+
+ Familie von 
+\begin_inset Formula $\kappa(s)$
+\end_inset
+
+-Schemata 
+\begin_inset Formula $X_{s}$
+\end_inset
+
+, parametrisiert durch Punkte von 
+\begin_inset Formula $S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+19
+\end_layout
+
+\end_inset
+
+Sei 
+\begin_inset Formula $k$
+\end_inset
+
+ algebraisch abgeschlossen.
+\begin_inset Formula 
+\[
+X(k):=\{(u,t,s)\in\mathbb{A}^{3}(k)\mid ut=s\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Da 
+\begin_inset Formula $UT-s\in k[U,T,S]$
+\end_inset
+
+ irreduzibel ist, ist 
+\begin_inset Formula $X(k)$
+\end_inset
+
+ eine affine Varietät.
+ 
+\begin_inset Formula $\leftrightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $X=\Spec(k[U,T,S]/(UT-S)$
+\end_inset
+
+ ist ganzes 
+\begin_inset Formula $k$
+\end_inset
+
+-Schema.
+ Sei 
+\begin_inset Formula $S=\mathbb{A}^{1}$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{align*}
+X & \longrightarrow S\\
+(u,t,s) & \longmapsto s
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Projektion.
+ 
+\begin_inset Formula $s\in\mathbb{A}^{1}(k)$
+\end_inset
+
+, 
+\begin_inset Formula $X_{s}=\Spec A_{s}$
+\end_inset
+
+, 
+\begin_inset Formula 
+\begin{align*}
+A_{s} & =k[U,T,S]/(UT-S)\otimes_{k[S]}k[S]/(S-s)\\
+ & \cong k[U,T]/(UT-S).
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $UT-s\in k[U,T]$
+\end_inset
+
+ irreduzibel für 
+\begin_inset Formula $s\neq0$
+\end_inset
+
+, reduzibel für 
+\begin_inset Formula $s=0$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\Longrightarrow X\rightarrow S$
+\end_inset
+
+ definiert Familie 
+\begin_inset Formula $X_{s}$
+\end_inset
+
+ von 
+\begin_inset Formula $k$
+\end_inset
+
+-Schemata, sodass 
+\begin_inset Formula $X_{0}$
+\end_inset
+
+ reduzibel, 
+\begin_inset Formula $X_{s}$
+\end_inset
+
+ irreduzibel für 
+\begin_inset Formula $s\neq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Lemma
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+20
+\end_layout
+
+\end_inset
+
+Sei das Diagramm
+\begin_inset Formula 
+\[
+\xymatrix{ & X\times_{S}Y\ar[ld]_{p}\ar[rd]^{q}\\
+x\in X\ar[rd]_{f} &  & Y\ni y\ar[ld]^{g}\\
+\Spec\kappa(x)\ar[u]^{\xi} & S & \Spec\kappa(y)\ar[u]_{\psi}
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+Dann gilt:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Es gibt ein 
+\begin_inset Formula $z\in X\times_{S}Y$
+\end_inset
+
+ mit 
+\begin_inset Formula $p(z)=x$
+\end_inset
+
+, 
+\begin_inset Formula $q(z)=y$
+\end_inset
+
+, genau dann wenn 
+\begin_inset Formula $f(x)=g(y).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Es gelte 
+\begin_inset Formula $(1)$
+\end_inset
+
+, setze 
+\begin_inset Formula $s:=f(x)=g(y)$
+\end_inset
+
+.
+ Dann ist
+\begin_inset Formula 
+\begin{align*}
+\zeta:=\xi\times_{S}\psi:Z:=\Spec(\kappa(x)\otimes_{\kappa(s)}\kappa(y)) & \longrightarrow X\times_{S}Y
+\end{align*}
+
+\end_inset
+
+ein Homöomorphismus von 
+\begin_inset Formula $Z$
+\end_inset
+
+ auf Teilraum 
+\begin_inset Formula $\zeta(Z)=p^{-1}(x)\cap q^{-1}(y)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Setze 
+\begin_inset Formula $Z:=p^{-1}(x)\times_{(X\times_{S}Y)}q^{-1}(y)$
+\end_inset
+
+, und betrachte:
+\begin_inset Formula 
+\[
+\xymatrix{ &  & Z\ar[rd]^{g'}\ar[ld]_{f'}\\
+ & p^{-1}(x)\ar[rd]\ar[ld] &  & q^{-1}(y)\ar[ld]\ar[rd]\\
+\Spec\kappa(s)\ar[rd] &  & X\times_{S}Y\ar[ld]\ar[rd] &  & \Spec\kappa(y)\ar[ld]\\
+ & X\ar[rd] &  & Y\ar[ld]\\
+ &  & S
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Wende Proposition 14 zweifach an 
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+g'(Z)=i^{-1}(p^{-1}(x))=q^{-1}(y)\cap p^{-1}(x).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Eigenschaften von Schemata-Morphismen
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Notation
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+21
+\end_layout
+
+\end_inset
+
+Sei 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ Eigenschaft von Morphismen von Schemata.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ heißt 
+\series bold
+lokal im Ziel
+\series default
+, falls für alle Morphismen 
+\begin_inset Formula $f$
+\end_inset
+
+ und alle offenen Überdeckungen 
+\begin_inset Formula $S=\bigcup_{j\in J}S_{j}$
+\end_inset
+
+ gilt:
+\begin_inset Formula 
+\[
+f:X\rightarrow S\text{ erfüllt }\mathbb{P}\Longleftrightarrow f|_{f^{-1}(S_{j})}:f^{-1}(S_{j}):S_{j}\text{ erfüllt }\mathbb{P}\ \forall j\in J
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ heißt 
+\series bold
+lokal in der Quelle
+\series default
+, falls für alle 
+\begin_inset Formula $f:X\rightarrow Y$
+\end_inset
+
+ und alle offenen Überdeckungen 
+\begin_inset Formula $X=\bigcup_{i\in I}U_{i}$
+\end_inset
+
+ gilt:
+\begin_inset Formula 
+\[
+f\text{ erfüllt }\mathbb{P}\Longleftrightarrow f|_{U_{i}}:U_{i}\rightarrow Y\text{ erfüllt }\mathbb{P}\ \forall i\in I
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Definition*
+Ein Morphismus 
+\begin_inset Formula $f:X\rightarrow Y$
+\end_inset
+
+ von Schemata heißt 
+\series bold
+(treu)flach
+\series default
+, falls 
+\begin_inset Formula $\forall x\in X$
+\end_inset
+
+ die Abbildung
+\begin_inset Formula 
+\[
+\mathcal{O}_{Y,f(x)}\longrightarrow\mathcal{O}_{X,x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition*
+(treu)flach ist.
+\end_layout
+
+\begin_layout Proposition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+22
+\end_layout
+
+\end_inset
+
+Die folgende Eigenschaft von Schemata-Morphismen sind:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+stabil unter Komposition: 
+\begin_inset Quotes gld
+\end_inset
+
+injektiv
+\begin_inset Quotes grd
+\end_inset
+
+, 
+\begin_inset Quotes gld
+\end_inset
+
+surjektiv
+\begin_inset Quotes grd
+\end_inset
+
+, 
+\begin_inset Quotes gld
+\end_inset
+
+bijektiv
+\begin_inset Quotes grd
+\end_inset
+
+, 
+\begin_inset Quotes gld
+\end_inset
+
+homöomorph
+\begin_inset Quotes grd
+\end_inset
+
+, 
+\begin_inset Quotes gld
+\end_inset
+
+flach
+\begin_inset Quotes grd
+\end_inset
+
+, 
+\begin_inset Quotes gld
+\end_inset
+
+treuflach
+\begin_inset Quotes grd
+\end_inset
+
+, 
+\begin_inset Quotes gld
+\end_inset
+
+offen
+\begin_inset Quotes grd
+\end_inset
+
+, 
+\begin_inset Quotes gld
+\end_inset
+
+abgeschlossen
+\begin_inset Quotes grd
+\end_inset
+
+, 
+\begin_inset Quotes gld
+\end_inset
+
+offene Immersion
+\begin_inset Quotes grd
+\end_inset
+
+, 
+\begin_inset Quotes gld
+\end_inset
+
+abgeschlossene Immersion
+\begin_inset Quotes grd
+\end_inset
+
+, 
+\begin_inset Quotes gld
+\end_inset
+
+Immersion
+\begin_inset Quotes grd
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+stabil unter Basiswechsel: 
+\begin_inset Quotes gld
+\end_inset
+
+surjektiv
+\begin_inset Quotes grd
+\end_inset
+
+, 
+\begin_inset Quotes gld
+\end_inset
+
+offene Immersion
+\begin_inset Quotes grd
+\end_inset
+
+, 
+\begin_inset Quotes gld
+\end_inset
+
+abgeschlossene Immersion
+\begin_inset Quotes grd
+\end_inset
+
+, 
+\begin_inset Quotes gld
+\end_inset
+
+Immersion
+\begin_inset Quotes grd
+\end_inset
+
+, 
+\begin_inset Quotes gld
+\end_inset
+
+flach
+\begin_inset Quotes grd
+\end_inset
+
+, 
+\begin_inset Quotes gld
+\end_inset
+
+treuflach
+\begin_inset Quotes grd
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+lokal bzgl.
+ Ziel: 
+\begin_inset Quotes gld
+\end_inset
+
+surjektiv
+\begin_inset Quotes grd
+\end_inset
+
+, 
+\begin_inset Quotes gld
+\end_inset
+
+bijektiv
+\begin_inset Quotes grd
+\end_inset
+
+, 
+\begin_inset Quotes gld
+\end_inset
+
+homöomorph
+\begin_inset Quotes grd
+\end_inset
+
+, 
+\begin_inset Quotes gld
+\end_inset
+
+offen
+\begin_inset Quotes grd
+\end_inset
+
+, 
+\begin_inset Quotes gld
+\end_inset
+
+abgeschlossen
+\begin_inset Quotes grd
+\end_inset
+
+, 
+\begin_inset Quotes gld
+\end_inset
+
+offene Immersion
+\begin_inset Quotes grd
+\end_inset
+
+, 
+\begin_inset Quotes gld
+\end_inset
+
+abgeschlossene Immersion
+\begin_inset Quotes grd
+\end_inset
+
+, 
+\begin_inset Quotes gld
+\end_inset
+
+Immersion
+\begin_inset Quotes grd
+\end_inset
+
+, 
+\begin_inset Quotes gld
+\end_inset
+
+flach
+\begin_inset Quotes grd
+\end_inset
+
+, 
+\begin_inset Quotes gld
+\end_inset
+
+treuflach
+\begin_inset Quotes grd
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+lokal bzgl.
+ Quelle: 
+\begin_inset Quotes gld
+\end_inset
+
+offen
+\begin_inset Quotes grd
+\end_inset
+
+, 
+\begin_inset Quotes gld
+\end_inset
+
+flach
+\begin_inset Quotes grd
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Die Fälle 
+\begin_inset Formula $(1)$
+\end_inset
+
+, 
+\begin_inset Formula $(3)$
+\end_inset
+
+, 
+\begin_inset Formula $(4)$
+\end_inset
+
+ sind klar.
+ Der Fall 
+\begin_inset Formula $(2)$
+\end_inset
+
+ für offene/abgeschlossene Immersionen wird in Abschnitt 9 behandelt.
+ Lemma 20 
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+ 
+\begin_inset Quotes gld
+\end_inset
+
+surjektiv
+\begin_inset Quotes grd
+\end_inset
+
+ stabil unter Basiswechsel.
+\begin_inset Formula 
+\[
+\xymatrix{X\times_{S}Y\ar[r]^{q} & Y & y\ar@{|->}[d]\\
+X\ar@{->>}[r]^{f} & S & s\\
+\exists x\ar@/_{1pc}/@{|->}[rru]
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Sei 
+\begin_inset Formula $X\rightarrow S$
+\end_inset
+
+ (treu)flach und 
+\begin_inset Formula $S'\rightarrow S$
+\end_inset
+
+ beliebig.
+ Sei in Fall 
+\begin_inset Formula $(3)$
+\end_inset
+
+, 
+\begin_inset Formula $(4)$
+\end_inset
+
+ ohne Einschränkung 
+\begin_inset Formula $X=\Spec A$
+\end_inset
+
+, 
+\begin_inset Formula $S=\Spec R$
+\end_inset
+
+, 
+\begin_inset Formula $S'=\Spec R'$
+\end_inset
+
+, 
+\begin_inset Formula $A$
+\end_inset
+
+ (treu)flache 
+\begin_inset Formula $R$
+\end_inset
+
+-Algebra.
+ 
+\begin_inset Formula $\Longrightarrow A\otimes_{R}R'$
+\end_inset
+
+ (treu)flache 
+\begin_inset Formula $R'$
+\end_inset
+
+-Algebra, d.h.
+ 
+\begin_inset Formula $f_{(S')}$
+\end_inset
+
+ ist treuflach.
+\begin_inset Formula 
+\[
+(A\otimes_{R}R')\otimes_{R'}M\cong A\otimes_{R}M
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+23
+\end_layout
+
+\end_inset
+
+Die folgende Eigenschaften sind stabil unter Komposition, stabil unter Basiswech
+sel und lokal bzgl.
+ Ziel:
+\end_layout
+
+\begin_layout Corollary
+\begin_inset Quotes gld
+\end_inset
+
+universal injektiv
+\begin_inset Quotes grd
+\end_inset
+
+, 
+\begin_inset Quotes gld
+\end_inset
+
+universal bijektiv
+\begin_inset Quotes grd
+\end_inset
+
+, 
+\begin_inset Quotes gld
+\end_inset
+
+universal homöomorph
+\begin_inset Quotes grd
+\end_inset
+
+, 
+\begin_inset Quotes gld
+\end_inset
+
+universell offen
+\begin_inset Quotes grd
+\end_inset
+
+, 
+\begin_inset Quotes gld
+\end_inset
+
+universell abgeschlossen
+\begin_inset Quotes grd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Urbilder und Schema-theoretische Schnitte von Unterschemata
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+9
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $f:X\rightarrow Y$
+\end_inset
+
+ ein Morphismus von Schemata und 
+\begin_inset Formula $i:Z\rightarrow Y$
+\end_inset
+
+ eine Immersion.
+\begin_inset Formula 
+\[
+\xymatrix{Z\times_{Y}X\ar[r]\ar[d]_{i_{(X)}} & Z\ar[d]^{i}\\
+X\ar[r]_{f} & Y
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Proposition 14 
+\begin_inset Formula $\Longrightarrow i_{(X)}$
+\end_inset
+
+ ist surjektiv auf Halmen, Homöomorphismus von 
+\begin_inset Formula $Z\times_{Y}X$
+\end_inset
+
+ auf lokal abgeschlossene Teilmenge 
+\begin_inset Formula $f^{-1}(Z)$
+\end_inset
+
+ (genau 
+\begin_inset Formula $f^{-1}(i(Z))$
+\end_inset
+
+), d.h.
+ 
+\begin_inset Formula $i_{(X)}$
+\end_inset
+
+ ist Immersion.
+ Fasse 
+\begin_inset Formula $Z\times_{Y}X$
+\end_inset
+
+ als Unterschema von 
+\begin_inset Formula $X$
+\end_inset
+
+ auf, das 
+\series bold
+Urbild von 
+\begin_inset Formula $Z$
+\end_inset
+
+ unter 
+\begin_inset Formula $f$
+\end_inset
+
+
+\series default
+.
+\end_layout
+
+\begin_layout Remark*
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Ist 
+\begin_inset Formula $Z\subset Y$
+\end_inset
+
+ offenes Unterschema, so auch 
+\begin_inset Formula $f^{-1}(Z)\subset X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Ist 
+\begin_inset Formula $Z=V(\mathfrak{p})$
+\end_inset
+
+ abgeschlossenes Unterschema, 
+\begin_inset Formula $\mathfrak{p}\subset\mathcal{O}_{Y}$
+\end_inset
+
+ Idealgarbe, so auch 
+\begin_inset Formula 
+\begin{align*}
+f^{-1}(Z) & =V(f^{\ast^{-1}}(\mathfrak{p})\mathcal{O}_{X})\\
+ & =\text{Bild}(f^{\ast^{-1}}(\mathfrak{p})\rightarrow f^{\ast^{-1}}\mathcal{O}_{Y}\rightarrow\mathcal{O}_{X}).
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Remark*
+
+\series bold
+Spezialfall
+\series default
+: Durchschnitt von 2 Unterschemata 
+\begin_inset Formula $i:Y\rightarrow X$
+\end_inset
+
+, 
+\begin_inset Formula $j:Z\rightarrow X$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+Y\cap Z:=Y\times_{X}Z=i^{-1}(Z)=j^{-1}(Y)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark*
+heißt 
+\series bold
+(Schema-theoretischer) Durchschnitt von 
+\begin_inset Formula $Y$
+\end_inset
+
+ und 
+\begin_inset Formula $Z$
+\end_inset
+
+ in 
+\begin_inset Formula $X$
+\end_inset
+
+
+\series default
+.
+\end_layout
+
+\begin_layout Subsubsection*
+Universelle Eigenschaft (aus univ.
+ Eig.
+ Faserprodukt)
+\end_layout
+
+\begin_layout Standard
+Ein Morphismus 
+\begin_inset Formula $h:T\rightarrow X$
+\end_inset
+
+ faktorisiert durch 
+\begin_inset Formula $Y\cap Z$
+\end_inset
+
+ genau dann wenn 
+\begin_inset Formula $h$
+\end_inset
+
+ faktorisiert durch 
+\begin_inset Formula $Y$
+\end_inset
+
+ und 
+\begin_inset Formula $Z$
+\end_inset
+
+.
+ Sind 
+\begin_inset Formula $Y=V(\mathfrak{p})$
+\end_inset
+
+, 
+\begin_inset Formula $Z=V(\mathfrak{q})$
+\end_inset
+
+ abgeschlossene Unterschemata, so folgt:
+\begin_inset Formula 
+\begin{align*}
+V(\mathfrak{p})\cap V(\mathfrak{q}) & =V(\mathfrak{p}+\mathfrak{q})\\
+A/\mathfrak{p}\otimes_{A}A/\mathfrak{q} & \cong A/\mathfrak{q+}\mathfrak{p}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula $f_{1},\ldots,f_{r},g_{1},\ldots,g_{s}\in R[X_{0},\ldots,X_{n}]$
+\end_inset
+
+ homogene Polynome.
+ Dann ist:
+\begin_inset Formula 
+\[
+V_{+}(f_{1},\ldots,f_{r})\cap V_{+}(g_{1},\ldots,g_{s})=V_{+}(f_{1},\ldots,f_{r},g_{1},\ldots,g_{s})\subseteq\mathbb{P}_{R}^{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Affine und projektive Räume über beliebige Basen
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathbb{A}^{n}:=\mathbb{A}_{\mathbb{Z}}^{n}$
+\end_inset
+
+, 
+\begin_inset Formula $S$
+\end_inset
+
+ beliebiges Schema.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathbb{A}_{S}^{n}:=\mathbb{A}^{n}\times_{\mathbb{Z}}S$
+\end_inset
+
+ 
+\series bold
+affiner Raum der relativen Dimension 
+\begin_inset Formula $n$
+\end_inset
+
+ über 
+\begin_inset Formula $S$
+\end_inset
+
+
+\series default
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathbb{P}_{S}^{n}:=\mathbb{P}^{n}\times_{\mathbb{Z}}S$
+\end_inset
+
+ 
+\series bold
+projektiver Raum der relativen Dimension 
+\begin_inset Formula $n$
+\end_inset
+
+ über 
+\begin_inset Formula $S$
+\end_inset
+
+
+\series default
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $S=\Spec R$
+\end_inset
+
+ affin:
+\begin_inset Formula 
+\begin{align*}
+\mathbb{A}_{S}^{n} & =\Spec(\mathbb{Z}[T_{1},\ldots,T_{n}]\otimes_{\mathbb{Z}}R)=\Spec(R[T_{1},\ldots,T_{n}])\\
+ & =\mathbb{A}_{R}^{n}\text{ wie zuvor!}\\
+\mathbb{P}_{S}^{n} & =\mathbb{P}_{R}^{n}\text{ analog.}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathbb{A}_{n}^{S}\times_{S}S'=\mathbb{A}^{n}\times_{\mathbb{Z}}S\times_{S}S'=\mathbb{A}_{S'}^{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathbb{P}_{S}^{n}\times_{S}S'=\mathbb{P}_{S'}^{n}$
+\end_inset
+
+ für einen beliebigen Basiswechsel 
+\begin_inset Formula $S'\rightarrow S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ ein beliebiges Schema.
+\begin_inset Formula 
+\begin{align*}
+\Gamma(X,\mathcal{O}_{X}) & =\Hom_{\ring}(\mathbb{Z}[T],\Gamma(X,\mathcal{O}_{X}))\\
+ & =\Hom_{\schz}(X,\mathbb{A}_{\mathbb{Z}}^{1})\\
+\varphi(T) & \mapsfrom\varphi
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ ein 
+\begin_inset Formula $S$
+\end_inset
+
+-Schema.
+\begin_inset Formula 
+\[
+\Gamma(X,\mathcal{O}_{X})=\Hom_{\schs}(X,\mathbb{A}_{S}^{1})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Diagonal, Graph und Kern in beliebigen Kategorien
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ Kategorie mit Faserprodukten, 
+\begin_inset Formula $S\in\mathcal{C}$
+\end_inset
+
+, 
+\begin_inset Formula $X,T\in\mathcal{C}/S$
+\end_inset
+
+, 
+\begin_inset Formula $X_{S}(T)$
+\end_inset
+
+ Menge der 
+\begin_inset Formula $S$
+\end_inset
+
+-Morphismen.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+24
+\end_layout
+
+\end_inset
+
+Der Morphismus
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\Delta_{X/S}:=\Delta_{u}:=(\id_{X},\id_{X}):X\rightarrow X\times_{S}X$
+\end_inset
+
+, 
+\begin_inset Formula $u:X\rightarrow S$
+\end_inset
+
+, heißt 
+\series bold
+Diagonale 
+\series default
+(diagonaler Morphismus) 
+\series bold
+von 
+\begin_inset Formula $X$
+\end_inset
+
+ über 
+\begin_inset Formula $S$
+\end_inset
+
+
+\series default
+.
+\end_layout
+
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $f:X\rightarrow Y\in$
+\end_inset
+
+ Morph/
+\begin_inset Formula $S$
+\end_inset
+
+.
+ Der Morphismus
+\begin_inset Formula 
+\[
+\Gamma_{j}:=(\id_{X},f)_{S}:X\longrightarrow X\times_{S}Y
+\]
+
+\end_inset
+
+heißt der 
+\series bold
+Graph(morphismus) von 
+\begin_inset Formula $f$
+\end_inset
+
+
+\series default
+.
+\end_layout
+
+\begin_layout Enumerate
+Seien 
+\begin_inset Formula $f,g:X\rightarrow Y\in$
+\end_inset
+
+ Morph/
+\begin_inset Formula $S$
+\end_inset
+
+.
+ Ein 
+\begin_inset Formula $S$
+\end_inset
+
+-Monomorphismus 
+\begin_inset Formula $i:K\rightarrow X$
+\end_inset
+
+ heißt 
+\series bold
+(Differenzen)kern
+\series default
+ von 
+\begin_inset Formula $f$
+\end_inset
+
+ und 
+\begin_inset Formula $g$
+\end_inset
+
+, falls für alle 
+\begin_inset Formula $T\in\mathcal{C}/S$
+\end_inset
+
+ die Abbildung 
+\begin_inset Formula $i(T):K_{S}(T)\rightarrow X_{S}(T)$
+\end_inset
+
+ injektiv ist mit
+\begin_inset Formula 
+\[
+\text{Bild}(i(T))=\{x\in X_{S}(T)\mid f(T)(x)=g(T)(x)\}.
+\]
+
+\end_inset
+
+Beizchne 
+\begin_inset Formula $K(f,g)_{S}$
+\end_inset
+
+ oder 
+\begin_inset Formula $\ker(f,g)$
+\end_inset
+
+, 
+\begin_inset Formula $i$
+\end_inset
+
+ 
+\begin_inset Quotes gld
+\end_inset
+
+kanonisch
+\begin_inset Quotes grd
+\end_inset
+
+.
+ Mit anderen Worten, 
+\begin_inset Formula $\ker(f,g)$
+\end_inset
+
+ separiert den Funktor
+\begin_inset Formula 
+\begin{align*}
+\mathcal{C}/S & \longrightarrow\sch\\
+T & \longmapsto\{x\in X_{S}(T)\mid f(T)(x)=g(T)(x)\}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_body
 \end_document

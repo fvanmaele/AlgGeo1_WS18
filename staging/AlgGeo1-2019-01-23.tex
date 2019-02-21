@@ -1,0 +1,382 @@
+%% LyX 2.3.2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[oneside,ngerman]{book}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{stmaryrd}
+\usepackage[all]{xy}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\theoremstyle{plain}
+\ifx\thechapter\undefined
+	\newtheorem{thm}{\protect\theoremname}
+\else
+	\newtheorem{thm}{\protect\theoremname}[chapter]
+\fi
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{\protect\definitionname}
+\theoremstyle{definition}
+\newtheorem{example}[thm]{\protect\examplename}
+\theoremstyle{plain}
+\newtheorem{lem}[thm]{\protect\lemmaname}
+\theoremstyle{remark}
+\newtheorem{notation}[thm]{\protect\notationname}
+\theoremstyle{definition}
+\newtheorem*{defn*}{\protect\definitionname}
+\theoremstyle{plain}
+\newtheorem{prop}[thm]{\protect\propositionname}
+\theoremstyle{plain}
+\newtheorem{cor}[thm]{\protect\corollaryname}
+\theoremstyle{remark}
+\newtheorem*{rem*}{\protect\remarkname}
+\theoremstyle{definition}
+\newtheorem*{example*}{\protect\examplename}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+%% User-specified commands
+\DeclareMathOperator{\rad}{rad}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\maxspec}{MaxSpec}
+\DeclareMathOperator{\Quot}{Quot}
+\DeclareMathOperator{\im}{\mathrm{im}}
+\DeclareMathOperator{\Hom}{\mathrm{Hom}}
+\DeclareMathOperator{\Mor}{\mathrm{Mor}}
+\DeclareMathOperator{\id}{\mathrm{id}}
+\DeclareMathOperator{\res}{res}
+\DeclareMathOperator{\Abb}{Abb}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\red}{red}
+\DeclareMathOperator{\op}{op}
+\DeclareMathOperator{\obj}{Obj}
+\DeclareMathOperator{\nil}{nil}
+
+%% sets
+\DeclareMathOperator{\CC}{\mathbb{C}}
+\DeclareMathOperator{\RR}{\mathbb{R}}
+\DeclareMathOperator{\QQ}{\mathbb{Q}}
+\DeclareMathOperator{\ZZ}{\mathbb{Z}}
+\DeclareMathOperator{\NN}{\mathbb{N}}
+
+%% categories
+\DeclareMathOperator{\ouv}{\mathcal{O}uv}
+\DeclareMathOperator{\set}{\underline{Set}}
+\DeclareMathOperator{\ab}{\underline{Ab}}
+\DeclareMathOperator{\cattop}{\underline{Top}}
+\DeclareMathOperator{\cring}{\underline{CRing}}
+\DeclareMathOperator{\ring}{\underline{Ring}}
+\DeclareMathOperator{\psh}{\underline{\mathcal{PS}h}}
+\DeclareMathOperator{\sh}{\underline{\mathcal{S}h}}
+\DeclareMathOperator{\aff}{\underline{Aff}}
+\DeclareMathOperator{\sch}{\underline{Sch}}
+\DeclareMathOperator{\schk}{\underline{Sch/k}}
+\DeclareMathOperator{\schs}{\underline{Sch/S}}
+\DeclareMathOperator{\schsn}{\underline{Sch/S_{0}}}
+\DeclareMathOperator{\schz}{\underline{Sch/\mathbb{Z}}}
+\DeclareMathOperator{\pres}{\underline{Prevar/S}}
+\DeclareMathOperator{\prek}{\underline{Prevar/k}}
+\DeclareMathOperator{\affk}{\underline{AffVar/k}}
+\DeclareMathOperator{\topcp}{\underline{TopCP}}
+\DeclareMathOperator{\Top}{\underline{Top}}
+\DeclareMathOperator{\grp}{\underline{Grp}}
+\DeclareMathOperator{\func}{\underline{Func}}
+
+\makeatother
+
+\usepackage{babel}
+\providecommand{\corollaryname}{Korollar}
+\providecommand{\definitionname}{Definition}
+\providecommand{\examplename}{Beispiel}
+\providecommand{\lemmaname}{Lemma}
+\providecommand{\notationname}{Notation}
+\providecommand{\propositionname}{Satz}
+\providecommand{\remarkname}{Bemerkung}
+\providecommand{\theoremname}{Theorem}
+
+\begin{document}
+
+\section{Fasern von Morphismen}
+
+\textbf{Ziel:} $\xymatrix{X\ar[d]^{f}\supset f^{-1}(s)\\
+S\ni s
+}
+$ als Schema.
+\begin{defn}[18]
+Für den kanonischen Morphismus $\Spec(\kappa(s))$ nennen wir
+\[
+X_{s}:=X\otimes_{S}\kappa(s)
+\]
+
+die \textbf{Faser von $f$ in $s$}, ein $\kappa(s)$-Schema. Proposition
+14 $\Longrightarrow$
+\[
+\xymatrix{X_{s}\ar[r]\ar[d] & S\times_{S}X\ar[r]^{q=\id_{X}}\ \ \ar[d]_{f} & X\ar[d]\\
+\Spec\kappa(s)\ar[r]_{\text{canon.}} & S\ar[r]_{\id_{S}} & S
+}
+\qquad\text{kommutativ,}
+\]
+
+besagt $X_{s}\cong f^{-1}(s)$ (=homoömorph zu Bild(canon)), d.h.
+wir können $f^{-1}(s)$ als Schema auffassen.
+
+\textbf{Denkweise}: $\xymatrix{X\ar[d]_{f}\\
+S
+}
+\cong$ Familie von $\kappa(s)$-Schemata $X_{s}$, parametrisiert durch
+Punkte von $S$.
+\end{defn}
+
+\begin{example}[19]
+Sei $k$ algebraisch abgeschlossen.
+\[
+X(k):=\{(u,t,s)\in\mathbb{A}^{3}(k)\mid ut=s\}
+\]
+
+Da $UT-s\in k[U,T,S]$ irreduzibel ist, ist $X(k)$ eine affine Varietät.
+$\leftrightarrow$ $X=\Spec(k[U,T,S]/(UT-S)$ ist ganzes $k$-Schema.
+Sei $S=\mathbb{A}^{1}$,
+\begin{align*}
+X & \longrightarrow S\\
+(u,t,s) & \longmapsto s
+\end{align*}
+
+Projektion. $s\in\mathbb{A}^{1}(k)$, $X_{s}=\Spec A_{s}$, 
+\begin{align*}
+A_{s} & =k[U,T,S]/(UT-S)\otimes_{k[S]}k[S]/(S-s)\\
+ & \cong k[U,T]/(UT-S).
+\end{align*}
+
+$UT-s\in k[U,T]$ irreduzibel für $s\neq0$, reduzibel für $s=0$.
+$\Longrightarrow X\rightarrow S$ definiert Familie $X_{s}$ von $k$-Schemata,
+sodass $X_{0}$ reduzibel, $X_{s}$ irreduzibel für $s\neq0$.
+\end{example}
+
+\begin{lem}[20]
+Sei das Diagramm
+\[
+\xymatrix{ & X\times_{S}Y\ar[ld]_{p}\ar[rd]^{q}\\
+x\in X\ar[rd]_{f} &  & Y\ni y\ar[ld]^{g}\\
+\Spec\kappa(x)\ar[u]^{\xi} & S & \Spec\kappa(y)\ar[u]_{\psi}
+}
+\]
+
+Dann gilt:
+\begin{enumerate}
+\item Es gibt ein $z\in X\times_{S}Y$ mit $p(z)=x$, $q(z)=y$, genau dann
+wenn $f(x)=g(y).$
+\item Es gelte $(1)$, setze $s:=f(x)=g(y)$. Dann ist
+\begin{align*}
+\zeta:=\xi\times_{S}\psi:Z:=\Spec(\kappa(x)\otimes_{\kappa(s)}\kappa(y)) & \longrightarrow X\times_{S}Y
+\end{align*}
+ein Homöomorphismus von $Z$ auf Teilraum $\zeta(Z)=p^{-1}(x)\cap q^{-1}(y)$.
+\end{enumerate}
+\end{lem}
+
+\begin{proof}
+Setze $Z:=p^{-1}(x)\times_{(X\times_{S}Y)}q^{-1}(y)$, und betrachte:
+\[
+\xymatrix{ &  & Z\ar[rd]^{g'}\ar[ld]_{f'}\\
+ & p^{-1}(x)\ar[rd]\ar[ld] &  & q^{-1}(y)\ar[ld]\ar[rd]\\
+\Spec\kappa(s)\ar[rd] &  & X\times_{S}Y\ar[ld]\ar[rd] &  & \Spec\kappa(y)\ar[ld]\\
+ & X\ar[rd] &  & Y\ar[ld]\\
+ &  & S
+}
+\]
+
+Wende Proposition 14 zweifach an $\Longrightarrow$
+\[
+g'(Z)=i^{-1}(p^{-1}(x))=q^{-1}(y)\cap p^{-1}(x).
+\]
+\end{proof}
+
+\section{Eigenschaften von Schemata-Morphismen}
+\begin{notation}[21]
+Sei $\mathbb{P}$ Eigenschaft von Morphismen von Schemata.
+\begin{enumerate}
+\item $\mathbb{P}$ heißt \textbf{lokal im Ziel}, falls für alle Morphismen
+$f$ und alle offenen Überdeckungen $S=\bigcup_{j\in J}S_{j}$ gilt:
+\[
+f:X\rightarrow S\text{ erfüllt }\mathbb{P}\Longleftrightarrow f|_{f^{-1}(S_{j})}:f^{-1}(S_{j}):S_{j}\text{ erfüllt }\mathbb{P}\ \forall j\in J
+\]
+\item $\mathbb{P}$ heißt \textbf{lokal in der Quelle}, falls für alle $f:X\rightarrow Y$
+und alle offenen Überdeckungen $X=\bigcup_{i\in I}U_{i}$ gilt:
+\[
+f\text{ erfüllt }\mathbb{P}\Longleftrightarrow f|_{U_{i}}:U_{i}\rightarrow Y\text{ erfüllt }\mathbb{P}\ \forall i\in I
+\]
+\end{enumerate}
+\end{notation}
+
+\begin{defn*}
+Ein Morphismus $f:X\rightarrow Y$ von Schemata heißt \textbf{(treu)flach},
+falls $\forall x\in X$ die Abbildung
+\[
+\mathcal{O}_{Y,f(x)}\longrightarrow\mathcal{O}_{X,x}
+\]
+
+(treu)flach ist.
+\end{defn*}
+\begin{prop}[22]
+Die folgende Eigenschaft von Schemata-Morphismen sind:
+\begin{enumerate}
+\item stabil unter Komposition: ,,injektiv``, ,,surjektiv``, ,,bijektiv``,
+,,homöomorph``, ,,flach``, ,,treuflach``, ,,offen``, ,,abgeschlossen``,
+,,offene Immersion``, ,,abgeschlossene Immersion``, ,,Immersion``;
+\item stabil unter Basiswechsel: ,,surjektiv``, ,,offene Immersion``,
+,,abgeschlossene Immersion``, ,,Immersion``, ,,flach``, ,,treuflach``;
+\item lokal bzgl. Ziel: ,,surjektiv``, ,,bijektiv``, ,,homöomorph``,
+,,offen``, ,,abgeschlossen``, ,,offene Immersion``, ,,abgeschlossene
+Immersion``, ,,Immersion``, ,,flach``, ,,treuflach``;
+\item lokal bzgl. Quelle: ,,offen``, ,,flach``.
+\end{enumerate}
+\end{prop}
+
+\begin{proof}
+Die Fälle $(1)$, $(3)$, $(4)$ sind klar. Der Fall $(2)$ für offene/abgeschlossene
+Immersionen wird in Abschnitt 9 behandelt. Lemma 20 $\Longrightarrow$
+,,surjektiv`` stabil unter Basiswechsel.
+\[
+\xymatrix{X\times_{S}Y\ar[r]^{q} & Y & y\ar@{|->}[d]\\
+X\ar@{->>}[r]^{f} & S & s\\
+\exists x\ar@/_{1pc}/@{|->}[rru]
+}
+\]
+
+Sei $X\rightarrow S$ (treu)flach und $S'\rightarrow S$ beliebig.
+Sei in Fall $(3)$, $(4)$ ohne Einschränkung $X=\Spec A$, $S=\Spec R$,
+$S'=\Spec R'$, $A$ (treu)flache $R$-Algebra. $\Longrightarrow A\otimes_{R}R'$
+(treu)flache $R'$-Algebra, d.h. $f_{(S')}$ ist treuflach.
+\[
+(A\otimes_{R}R')\otimes_{R'}M\cong A\otimes_{R}M
+\]
+\end{proof}
+\begin{cor}[23]
+Die folgende Eigenschaften sind stabil unter Komposition, stabil
+unter Basiswechsel und lokal bzgl. Ziel:
+
+,,universal injektiv``, ,,universal bijektiv``, ,,universal homöomorph``,
+,,universell offen``, ,,universell abgeschlossen``.
+\end{cor}
+
+
+\section{Urbilder und Schema-theoretische Schnitte von Unterschemata}
+
+Sei $f:X\rightarrow Y$ ein Morphismus von Schemata und $i:Z\rightarrow Y$
+eine Immersion.
+\[
+\xymatrix{Z\times_{Y}X\ar[r]\ar[d]_{i_{(X)}} & Z\ar[d]^{i}\\
+X\ar[r]_{f} & Y
+}
+\]
+
+Proposition 14 $\Longrightarrow i_{(X)}$ ist surjektiv auf Halmen,
+Homöomorphismus von $Z\times_{Y}X$ auf lokal abgeschlossene Teilmenge
+$f^{-1}(Z)$ (genau $f^{-1}(i(Z))$), d.h. $i_{(X)}$ ist Immersion.
+Fasse $Z\times_{Y}X$ als Unterschema von $X$ auf, das \textbf{Urbild
+von $Z$ unter $f$}.
+\begin{rem*}
+\mbox{}
+\begin{enumerate}
+\item Ist $Z\subset Y$ offenes Unterschema, so auch $f^{-1}(Z)\subset X$.
+\item Ist $Z=V(\mathfrak{p})$ abgeschlossenes Unterschema, $\mathfrak{p}\subset\mathcal{O}_{Y}$
+Idealgarbe, so auch 
+\begin{align*}
+f^{-1}(Z) & =V(f^{\ast^{-1}}(\mathfrak{p})\mathcal{O}_{X})\\
+ & =\text{Bild}(f^{\ast^{-1}}(\mathfrak{p})\rightarrow f^{\ast^{-1}}\mathcal{O}_{Y}\rightarrow\mathcal{O}_{X}).
+\end{align*}
+\end{enumerate}
+\textbf{Spezialfall}: Durchschnitt von 2 Unterschemata $i:Y\rightarrow X$,
+$j:Z\rightarrow X$:
+\[
+Y\cap Z:=Y\times_{X}Z=i^{-1}(Z)=j^{-1}(Y)
+\]
+
+heißt \textbf{(Schema-theoretischer) Durchschnitt von $Y$ und $Z$
+in $X$}.
+\end{rem*}
+
+\subsubsection*{Universelle Eigenschaft (aus univ. Eig. Faserprodukt)}
+
+Ein Morphismus $h:T\rightarrow X$ faktorisiert durch $Y\cap Z$ genau
+dann wenn $h$ faktorisiert durch $Y$ und $Z$. Sind $Y=V(\mathfrak{p})$,
+$Z=V(\mathfrak{q})$ abgeschlossene Unterschemata, so folgt:
+\begin{align*}
+V(\mathfrak{p})\cap V(\mathfrak{q}) & =V(\mathfrak{p}+\mathfrak{q})\\
+A/\mathfrak{p}\otimes_{A}A/\mathfrak{q} & \cong A/\mathfrak{q+}\mathfrak{p}
+\end{align*}
+
+\begin{example*}
+$f_{1},\ldots,f_{r},g_{1},\ldots,g_{s}\in R[X_{0},\ldots,X_{n}]$
+homogene Polynome. Dann ist:
+\[
+V_{+}(f_{1},\ldots,f_{r})\cap V_{+}(g_{1},\ldots,g_{s})=V_{+}(f_{1},\ldots,f_{r},g_{1},\ldots,g_{s})\subseteq\mathbb{P}_{R}^{n}
+\]
+\end{example*}
+
+\section{Affine und projektive Räume über beliebige Basen}
+\begin{itemize}
+\item[] $\mathbb{A}^{n}:=\mathbb{A}_{\mathbb{Z}}^{n}$, $S$ beliebiges Schema.
+\item[] $\mathbb{A}_{S}^{n}:=\mathbb{A}^{n}\times_{\mathbb{Z}}S$ \textbf{affiner
+Raum der relativen Dimension $n$ über $S$}.
+\item[] $\mathbb{P}_{S}^{n}:=\mathbb{P}^{n}\times_{\mathbb{Z}}S$ \textbf{projektiver
+Raum der relativen Dimension $n$ über $S$}.
+\item[] $S=\Spec R$ affin:
+\begin{align*}
+\mathbb{A}_{S}^{n} & =\Spec(\mathbb{Z}[T_{1},\ldots,T_{n}]\otimes_{\mathbb{Z}}R)=\Spec(R[T_{1},\ldots,T_{n}])\\
+ & =\mathbb{A}_{R}^{n}\text{ wie zuvor!}\\
+\mathbb{P}_{S}^{n} & =\mathbb{P}_{R}^{n}\text{ analog.}
+\end{align*}
+\item[] $\mathbb{A}_{n}^{S}\times_{S}S'=\mathbb{A}^{n}\times_{\mathbb{Z}}S\times_{S}S'=\mathbb{A}_{S'}^{n}$
+\item[] $\mathbb{P}_{S}^{n}\times_{S}S'=\mathbb{P}_{S'}^{n}$ für einen beliebigen
+Basiswechsel $S'\rightarrow S$.
+\end{itemize}
+Sei $X$ ein beliebiges Schema.
+\begin{align*}
+\Gamma(X,\mathcal{O}_{X}) & =\Hom_{\ring}(\mathbb{Z}[T],\Gamma(X,\mathcal{O}_{X}))\\
+ & =\Hom_{\schz}(X,\mathbb{A}_{\mathbb{Z}}^{1})\\
+\varphi(T) & \mapsfrom\varphi
+\end{align*}
+
+Sei $X$ ein $S$-Schema.
+\[
+\Gamma(X,\mathcal{O}_{X})=\Hom_{\schs}(X,\mathbb{A}_{S}^{1})
+\]
+
+
+\section{Diagonal, Graph und Kern in beliebigen Kategorien}
+
+Sei $\mathcal{C}$ Kategorie mit Faserprodukten, $S\in\mathcal{C}$,
+$X,T\in\mathcal{C}/S$, $X_{S}(T)$ Menge der $S$-Morphismen.
+\begin{defn}[24]
+Der Morphismus
+\begin{enumerate}
+\item $\Delta_{X/S}:=\Delta_{u}:=(\id_{X},\id_{X}):X\rightarrow X\times_{S}X$,
+$u:X\rightarrow S$, heißt \textbf{Diagonale }(diagonaler Morphismus)
+\textbf{von $X$ über $S$}.
+\item Sei $f:X\rightarrow Y\in$ Morph/$S$. Der Morphismus
+\[
+\Gamma_{j}:=(\id_{X},f)_{S}:X\longrightarrow X\times_{S}Y
+\]
+heißt der \textbf{Graph(morphismus) von $f$}.
+\item Seien $f,g:X\rightarrow Y\in$ Morph/$S$. Ein $S$-Monomorphismus
+$i:K\rightarrow X$ heißt \textbf{(Differenzen)kern} von $f$ und
+$g$, falls für alle $T\in\mathcal{C}/S$ die Abbildung $i(T):K_{S}(T)\rightarrow X_{S}(T)$
+injektiv ist mit
+\[
+\text{Bild}(i(T))=\{x\in X_{S}(T)\mid f(T)(x)=g(T)(x)\}.
+\]
+Beizchne $K(f,g)_{S}$ oder $\ker(f,g)$, $i$ ,,kanonisch``. Mit
+anderen Worten, $\ker(f,g)$ separiert den Funktor
+\begin{align*}
+\mathcal{C}/S & \longrightarrow\sch\\
+T & \longmapsto\{x\in X_{S}(T)\mid f(T)(x)=g(T)(x)\}
+\end{align*}
+\end{enumerate}
+\end{defn}
+
+
+\end{document}
