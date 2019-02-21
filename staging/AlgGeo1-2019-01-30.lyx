@@ -1,0 +1,910 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+%% User-specified commands
+\DeclareMathOperator{\rad}{rad}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\maxspec}{MaxSpec}
+\DeclareMathOperator{\Quot}{Quot}
+\DeclareMathOperator{\im}{\mathrm{im}}
+\DeclareMathOperator{\Hom}{\mathrm{Hom}}
+\DeclareMathOperator{\Mor}{\mathrm{Mor}}
+\DeclareMathOperator{\id}{\mathrm{id}}
+\DeclareMathOperator{\res}{res}
+\DeclareMathOperator{\Abb}{Abb}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\red}{red}
+\DeclareMathOperator{\op}{op}
+\DeclareMathOperator{\obj}{Obj}
+\DeclareMathOperator{\nil}{nil}
+
+%% sets
+\DeclareMathOperator{\CC}{\mathbb{C}}
+\DeclareMathOperator{\RR}{\mathbb{R}}
+\DeclareMathOperator{\QQ}{\mathbb{Q}}
+\DeclareMathOperator{\ZZ}{\mathbb{Z}}
+\DeclareMathOperator{\NN}{\mathbb{N}}
+
+%% categories
+\DeclareMathOperator{\ouv}{\mathcal{O}uv}
+\DeclareMathOperator{\set}{\underline{Set}}
+\DeclareMathOperator{\ab}{\underline{Ab}}
+\DeclareMathOperator{\cattop}{\underline{Top}}
+\DeclareMathOperator{\cring}{\underline{CRing}}
+\DeclareMathOperator{\ring}{\underline{Ring}}
+\DeclareMathOperator{\psh}{\underline{\mathcal{PS}h}}
+\DeclareMathOperator{\sh}{\underline{\mathcal{S}h}}
+\DeclareMathOperator{\aff}{\underline{Aff}}
+\DeclareMathOperator{\sch}{\underline{Sch}}
+\DeclareMathOperator{\schk}{\underline{Sch/k}}
+\DeclareMathOperator{\schs}{\underline{Sch/S}}
+\DeclareMathOperator{\schsn}{\underline{Sch/S_{0}}}
+\DeclareMathOperator{\schz}{\underline{Sch/\mathbb{Z}}}
+\DeclareMathOperator{\pres}{\underline{Prevar/S}}
+\DeclareMathOperator{\prek}{\underline{Prevar/k}}
+\DeclareMathOperator{\affk}{\underline{AffVar/k}}
+\DeclareMathOperator{\topcp}{\underline{TopCP}}
+\DeclareMathOperator{\Top}{\underline{Top}}
+\DeclareMathOperator{\grp}{\underline{Grp}}
+\DeclareMathOperator{\func}{\underline{Func}}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+theorems-ams-extended
+theorems-chap
+\end_modules
+\maintain_unincluded_children false
+\language ngerman
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style german
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Example
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+35
+\end_layout
+
+\end_inset
+
+Sei 
+\begin_inset Formula $S$
+\end_inset
+
+ beliebiges Schema, 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+.
+ Dann ist 
+\begin_inset Formula $\mathbb{A}_{S}^{n}$
+\end_inset
+
+ separiert über 
+\begin_inset Formula $S$
+\end_inset
+
+, ebenso jedes Unterschema, denn 
+\begin_inset Formula $\mathbb{A}_{S}^{n}=\mathbb{A}_{\mathbb{Z}}^{n}\times_{\Spec\mathbb{Z}}S$
+\end_inset
+
+ und 
+\begin_inset Quotes gld
+\end_inset
+
+separiert
+\begin_inset Quotes grd
+\end_inset
+
+ ist stabil unter Basiswechsel nach Proposition 34.
+\end_layout
+
+\begin_layout Proposition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+36
+\end_layout
+
+\end_inset
+
+Sei 
+\begin_inset Formula $S=\Spec R$
+\end_inset
+
+ affin und 
+\begin_inset Formula $X$
+\end_inset
+
+ ein 
+\begin_inset Formula $S$
+\end_inset
+
+-Schema.
+ Dann sind äquivalent:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $X$
+\end_inset
+
+ ist separiert.
+\end_layout
+
+\begin_layout Enumerate
+Für je zwei offene affine 
+\begin_inset Formula $U,V\subseteq X$
+\end_inset
+
+ ist 
+\begin_inset Formula $U\cap V$
+\end_inset
+
+ affin, und
+\begin_inset Formula 
+\begin{align*}
+\rho_{U,V}:\mathcal{O}_{X}(U)\otimes_{R}\mathcal{O}_{X}(V) & \longrightarrow\mathcal{O}_{X}(U\cap V),\\
+s\otimes t & \longmapsto s|_{U\cap V}\cdot t|_{V\cap U}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Es gibt eine offene affine Überdeckung 
+\begin_inset Formula $X=\bigcup_{i\in I}U_{i}$
+\end_inset
+
+, sodass 
+\begin_inset Formula $\forall i,j\in I$
+\end_inset
+
+: 
+\begin_inset Formula $\rho_{U,V}$
+\end_inset
+
+ ist surjektiv.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Für alle offene affine 
+\begin_inset Formula $U,V\subseteq X$
+\end_inset
+
+ gilt:
+\begin_inset Formula 
+\[
+U\cap V=\Delta_{X/S}^{-1}(U\times_{S}V).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Quotes gld
+\end_inset
+
+abgeschlossene Immersion
+\begin_inset Quotes grd
+\end_inset
+
+ ist lokal auf dem Ziel, daher: 
+\begin_inset Formula $\Delta_{X/S}$
+\end_inset
+
+ ist abgeschlossene Immersion
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Longleftrightarrow$
+\end_inset
+
+ für alle 
+\begin_inset Formula $U,V\subseteq X$
+\end_inset
+
+ offen affin ist
+\begin_inset Formula 
+\[
+U\cap V\xrightarrow{\Delta_{X/S}|_{U\cap V}}U\times_{S}V
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+abgeschlossene Immersion.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Longleftrightarrow$
+\end_inset
+
+ für jede offene affine Überdeckung 
+\begin_inset Formula $X=\bigcup_{i\in I}U_{i}$
+\end_inset
+
+ und alle 
+\begin_inset Formula $i,j\in I$
+\end_inset
+
+ ist
+\begin_inset Formula 
+\[
+U_{i}\cap U_{j}\longrightarrow U_{i}\times_{S}U_{j}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+abgeschlossene Immersion.
+ Sind 
+\begin_inset Formula $U=\Spec A$
+\end_inset
+
+, 
+\begin_inset Formula $V=\Spec B$
+\end_inset
+
+ affin, so ist auch
+\begin_inset Formula 
+\[
+U\times_{S}V=\Spec(A\otimes_{R}B)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+affin.
+ Daher:
+\begin_inset Formula 
+\[
+U\cap V\longrightarrow U\times_{S}V
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+abgeschlossene Immersion.
+ 
+\begin_inset Formula $\Longleftrightarrow\rho_{U,V}$
+\end_inset
+
+ surjektiv.
+\end_layout
+
+\begin_layout Example
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+37
+\end_layout
+
+\end_inset
+
+Für jedes Schema 
+\begin_inset Formula $S$
+\end_inset
+
+ und 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ ist 
+\begin_inset Formula $\mathbb{P}_{S}^{n}$
+\end_inset
+
+ separiert über 
+\begin_inset Formula $S$
+\end_inset
+
+, denn 
+\begin_inset Quotes gld
+\end_inset
+
+separiert
+\begin_inset Quotes grd
+\end_inset
+
+ ist lokal auf dem Ziel (Proposition 34), daher ohne Einschränkung 
+\begin_inset Formula $S=\Spec R$
+\end_inset
+
+ affin.
+ Sei 
+\begin_inset Formula $\mathbb{P}_{R}^{n}=\bigcup_{i=0}^{n}U_{i}$
+\end_inset
+
+ mit 
+\begin_inset Formula $U_{i}=\Spec R\left[\frac{X_{0}}{X_{i}},\ldots,\frac{\widehat{X_{i}}}{X_{i}},\ldots,\frac{X_{n}}{X_{i}}\right]$
+\end_inset
+
+ und
+\begin_inset Formula 
+\begin{align*}
+\rho_{U_{i},U_{j}}:R & \left[\frac{X_{0}}{X_{i}},\ldots,\frac{\widehat{X_{i}}}{X_{i}},\ldots,\frac{X_{n}}{X_{i}}\right]\otimes_{R}R\left[\frac{X_{0}}{X_{j}},\ldots,\frac{\widehat{X_{j}}}{X_{j}},\ldots,\frac{X_{n}}{X_{j}}\right]\\
+ & \longrightarrow R\left[\frac{X_{0}}{X_{i}},\ldots,\frac{\widehat{X_{i}}}{X_{i}},\ldots,\frac{X_{n}}{X_{i}}\right]\left[\frac{X_{i}}{X_{j}}\right]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+ist surjektiv.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+38
+\end_layout
+
+\end_inset
+
+Sei 
+\begin_inset Formula $k$
+\end_inset
+
+ algebraisch abgeschlossener Körper, 
+\begin_inset Formula $X$
+\end_inset
+
+ Prävarietät über 
+\begin_inset Formula $k$
+\end_inset
+
+, d.h.
+ ganzes Schema von endlichem Typ über 
+\begin_inset Formula $k$
+\end_inset
+
+.
+ 
+\begin_inset Formula $X$
+\end_inset
+
+ heißt 
+\series bold
+Varietät
+\series default
+, wenn 
+\begin_inset Formula $X$
+\end_inset
+
+ separabel ist.
+ Affine Prävarietäten sind also automatisch Varietäten.
+ 
+\begin_inset Formula $\mathbb{P}^{n}(k)$
+\end_inset
+
+ ist Varietät (Beispiel 37) 
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+ Jede quasi-projektive Prävarietät ist eine Varietät!
+\end_layout
+
+\begin_layout Section
+Eigentliche Morphismen
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+14
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(eng.
+ 
+\begin_inset Quotes gld
+\end_inset
+
+proper
+\begin_inset Quotes grd
+\end_inset
+
+)
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ist 
+\begin_inset Formula $f:X\rightarrow Y$
+\end_inset
+
+ stetige Abbildung zwischen topologischen Räume, dann heißt 
+\begin_inset Formula $f$
+\end_inset
+
+ 
+\series bold
+eigentlich
+\series default
+, wenn die Urbilder kompakter Mengen kompat sind.
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $X$
+\end_inset
+
+ Hausdorff, 
+\begin_inset Formula $Y$
+\end_inset
+
+ lokal kompakt.
+ Dann ist 
+\begin_inset Formula $f$
+\end_inset
+
+ eigentlich 
+\begin_inset Formula $\Longleftrightarrow f$
+\end_inset
+
+ universell abgeschlossen.
+ (Bourbaki, Topologie générale, 
+\begin_inset Formula $I$
+\end_inset
+
+.10 nr.
+ 3, Prop.
+ 7)
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+39
+\end_layout
+
+\end_inset
+
+Ein Morphismus 
+\begin_inset Formula $f:X\rightarrow Y$
+\end_inset
+
+ von Schemata heißt 
+\series bold
+eigentlich
+\series default
+, wenn:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $f$
+\end_inset
+
+ von endlichem Typ.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $f$
+\end_inset
+
+ separiert.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $f$
+\end_inset
+
+ universell abgeschlossen.
+\end_layout
+
+\end_deeper
+\begin_layout Definition
+Ein 
+\begin_inset Formula $Y$
+\end_inset
+
+-Schema heißt 
+\series bold
+eigentlich
+\series default
+, wenn der Strukturmorphismus eigentlich ist.
+ 
+\begin_inset Quotes gld
+\end_inset
+
+eigentlich
+\begin_inset Quotes grd
+\end_inset
+
+ ist lokal auf dem Ziel.
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $f:X\rightarrow Y$
+\end_inset
+
+ heißt von 
+\series bold
+endlichem Typ
+\series default
+, wenn 
+\begin_inset Formula $\forall U\subset Y$
+\end_inset
+
+ offen eine Überdeckung 
+\begin_inset Formula $f^{-1}(U)=\bigcup_{i=1}^{n}V_{i}$
+\end_inset
+
+ existiert, sodass 
+\begin_inset Formula $\forall i:\mathcal{O}_{X}(V_{i})$
+\end_inset
+
+ ist endlich erzeugte 
+\begin_inset Formula $\mathcal{O}_{Y}(U)$
+\end_inset
+
+-Algebra.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+40
+\end_layout
+
+\end_inset
+
+Ein Morphismus 
+\begin_inset Formula $f:X\rightarrow Y$
+\end_inset
+
+ heißt 
+\series bold
+projektiv
+\series default
+, wenn er sich faktorisieren lässt als
+\begin_inset Formula 
+\[
+\xymatrix{X\ar[rr]^{f}\ar[rd]_{\text{abg. Imm.}}^{g} &  & Y\\
+ & \mathbb{P}_{Y}^{n}\ar[ur]_{\text{kan. Morph.}}
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+für ein 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proposition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+41
+\end_layout
+
+\end_inset
+
+Sei 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ eine der folgenden Eigenschaften:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+I.
+\end_layout
+
+\end_inset
+
+von endlichem Typ;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+II.
+\end_layout
+
+\end_inset
+
+eigentlich;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+III.
+\end_layout
+
+\end_inset
+
+projektiv.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+IV.
+\end_layout
+
+\end_inset
+
+(separiert)
+\end_layout
+
+\end_deeper
+\begin_layout Proposition
+Dann gilt:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Abgeschlossene Immersionen erfüllen 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ ist stabil unter Komposition.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ ist stabil unter Basiswechsel.
+\end_layout
+
+\begin_layout Enumerate
+Falls 
+\begin_inset Formula $f:X\rightarrow Z$
+\end_inset
+
+, 
+\begin_inset Formula $g:Y\rightarrow Z$
+\end_inset
+
+ 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ erfüllen, dann auch 
+\begin_inset Formula $X\times_{Z}Y\rightarrow Z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Erfüllt 
+\begin_inset Formula $X\xrightarrow{f}Y\xrightarrow{g}Z$
+\end_inset
+
+ 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+, so auch 
+\begin_inset Formula $f$
+\end_inset
+
+, falls:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $f$
+\end_inset
+
+ quasi-kompakt (d.h.
+ 
+\begin_inset Formula $Y$
+\end_inset
+
+ hat offene affine Überdeckung, deren Urbilder quasi-kompakt sind).
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $g$
+\end_inset
+
+ separiert, im Falle II, III.
+\end_layout
+
+\begin_layout Itemize
+(stetig im Fall IV)
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+Vergleiche: Lin, 
+\begin_inset Quotes gld
+\end_inset
+
+Algebraic Geometry and Arithmetic curves
+\begin_inset Quotes grd
+\end_inset
+
+, Prop 24, 3.16, 3.32, (3.9).
+\end_layout
+
+\begin_layout Proof
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Beweis (Skizze)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
