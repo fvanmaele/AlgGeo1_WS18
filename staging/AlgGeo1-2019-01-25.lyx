@@ -1,0 +1,1311 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+%% User-specified commands
+\DeclareMathOperator{\rad}{rad}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\maxspec}{MaxSpec}
+\DeclareMathOperator{\Quot}{Quot}
+\DeclareMathOperator{\im}{\mathrm{im}}
+\DeclareMathOperator{\Hom}{\mathrm{Hom}}
+\DeclareMathOperator{\Mor}{\mathrm{Mor}}
+\DeclareMathOperator{\id}{\mathrm{id}}
+\DeclareMathOperator{\res}{res}
+\DeclareMathOperator{\Abb}{Abb}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\red}{red}
+\DeclareMathOperator{\op}{op}
+\DeclareMathOperator{\obj}{Obj}
+\DeclareMathOperator{\nil}{nil}
+
+%% sets
+\DeclareMathOperator{\CC}{\mathbb{C}}
+\DeclareMathOperator{\RR}{\mathbb{R}}
+\DeclareMathOperator{\QQ}{\mathbb{Q}}
+\DeclareMathOperator{\ZZ}{\mathbb{Z}}
+\DeclareMathOperator{\NN}{\mathbb{N}}
+
+%% categories
+\DeclareMathOperator{\ouv}{\mathcal{O}uv}
+\DeclareMathOperator{\set}{\underline{Set}}
+\DeclareMathOperator{\ab}{\underline{Ab}}
+\DeclareMathOperator{\cattop}{\underline{Top}}
+\DeclareMathOperator{\cring}{\underline{CRing}}
+\DeclareMathOperator{\ring}{\underline{Ring}}
+\DeclareMathOperator{\psh}{\underline{\mathcal{PS}h}}
+\DeclareMathOperator{\sh}{\underline{\mathcal{S}h}}
+\DeclareMathOperator{\aff}{\underline{Aff}}
+\DeclareMathOperator{\sch}{\underline{Sch}}
+\DeclareMathOperator{\schk}{\underline{Sch/k}}
+\DeclareMathOperator{\schs}{\underline{Sch/S}}
+\DeclareMathOperator{\schsn}{\underline{Sch/S_{0}}}
+\DeclareMathOperator{\schz}{\underline{Sch/\mathbb{Z}}}
+\DeclareMathOperator{\pres}{\underline{Prevar/S}}
+\DeclareMathOperator{\prek}{\underline{Prevar/k}}
+\DeclareMathOperator{\affk}{\underline{AffVar/k}}
+\DeclareMathOperator{\topcp}{\underline{TopCP}}
+\DeclareMathOperator{\Top}{\underline{Top}}
+\DeclareMathOperator{\grp}{\underline{Grp}}
+\DeclareMathOperator{\func}{\underline{Func}}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+theorems-ams-extended
+theorems-chap
+\end_modules
+\maintain_unincluded_children false
+\language ngerman
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style german
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Example
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+25
+\end_layout
+
+\end_inset
+
+In der Kategorie 
+\begin_inset Formula $\mathcal{C}=\set$
+\end_inset
+
+ gilt für:
+\begin_inset Formula 
+\[
+\xymatrix{X\ar[r]^{f,g}\ar[rd]_{u} & Y\ar[d]^{v}\\
+ & S
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\begin{array}{rl}
+\Delta_{u}:X & \longrightarrow X\times X=\{(x,x')\in X\times X\mid u(x)=u(x')\}\\
+x & \longmapsto(x,x)
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\begin{array}{rl}
+\Gamma_{j}:X & \longrightarrow X\times_{S}Y=\{(x,y)\in X\times Y\mid u(x)=v(y)\}\\
+x & \longmapsto(x,f(x))
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\ker(f,g)=\{x\in X\mid f(x)=g(x)\}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Example
+Da 
+\begin_inset Formula $p\circ\Gamma_{j}=\id_{X}$
+\end_inset
+
+, sind 
+\begin_inset Formula $\Gamma_{j}$
+\end_inset
+
+ und 
+\begin_inset Formula $\Delta_{X/S}=\Gamma_{\id_{X}}$
+\end_inset
+
+ Monomorphismen.
+\end_layout
+
+\begin_layout Proposition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+26
+\end_layout
+
+\end_inset
+
+Seien 
+\begin_inset Formula $f,g:X\rightarrow Y$
+\end_inset
+
+ 
+\begin_inset Formula $S$
+\end_inset
+
+-Morphismen.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\Delta_{X/S}=\Gamma_{\id_{X}}$
+\end_inset
+
+,
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $\Gamma_{f}=\ker(\xymatrix{X\times_{S}Y\ar@<1ex>[r]^{q}\ar@<-1ex>[r]_{f\circ p} & Y}
+)\longrightarrow X\times_{S}Y$
+\end_inset
+
+ kanonisch.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Alle Rechtecke des folgenden kommutativen Diagramms sind kartesisch:
+\begin_inset Formula 
+\[
+\xymatrix{\ker(f,g)\ar[r]^{\text{canon.}}\ar[d] & X\ar[r]^{f}\ar[d]_{\Gamma_{f}} & Y\ar[d]^{\Delta_{Y/S}}\\
+X\ar[r]_{\Gamma_{g}} & X\times_{S}Y\ar[r]_{f\times\id_{S}} & Y\times_{S}Y
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $s:S\rightarrow X$
+\end_inset
+
+ ein Schnitt von 
+\begin_inset Formula $f$
+\end_inset
+
+ (
+\begin_inset Formula $f\circ s=\id_{S}$
+\end_inset
+
+).
+ Dann ist das folgende Diagramm kartesisch:
+\begin_inset Formula 
+\[
+\xymatrix{S\ar[r]^{s}\ar[d]_{s} & X\ar[d]^{\Gamma_{s\circ f}}\\
+X\ar[r]_{\Delta_{X/S}} & \quad X\times_{S}X
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Nach dem Yoneda-Lemma reicht es, denn Fall 
+\begin_inset Formula $\mathcal{C}=\set$
+\end_inset
+
+ zu verifizieren.
+ Dies ist elementar aufgrund der Beschreibung in Beispiel 25.
+\end_layout
+
+\begin_layout Standard
+Insbesondere existiert 
+\begin_inset Formula $\ker(f,g)$
+\end_inset
+
+ stets!
+\end_layout
+
+\begin_layout Section
+Diagonal für Schemata
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+12
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+27
+\end_layout
+
+\end_inset
+
+Für affine 
+\begin_inset Formula $S$
+\end_inset
+
+-Schemata
+\begin_inset Formula 
+\begin{align*}
+X & =\Spec(B)\overset{u}{\longrightarrow}S=\Spec(R)\\
+Y & =\Spec(A)\overset{v}{\longrightarrow}S
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition
+und 
+\begin_inset Formula $S$
+\end_inset
+
+-Morphismus 
+\begin_inset Formula $f=\Spec\varphi:X\rightarrow Y$
+\end_inset
+
+ zu einem 
+\begin_inset Formula $R$
+\end_inset
+
+-Algebra Morphismus 
+\begin_inset Formula $\varphi:A\rightarrow B$
+\end_inset
+
+, entsprechen 
+\begin_inset Formula $\Delta_{X/S}$
+\end_inset
+
+ und 
+\begin_inset Formula $\Gamma_{f}$
+\end_inset
+
+ den folgenden surjektiven Ringhomomorphismen:
+\begin_inset Formula 
+\[
+\begin{array}{rl}
+\Delta_{B/R}:B\otimes_{R}B & \longrightarrow B\\
+b\otimes b' & \longmapsto bb'
+\end{array},\qquad\begin{array}{rl}
+\Gamma_{\varphi}:A\otimes_{R}B & \longrightarrow B\\
+a\otimes b & \longmapsto\varphi(a)b
+\end{array}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition
+Insbesondere sind 
+\begin_inset Formula $\Delta_{X/S}$
+\end_inset
+
+, 
+\begin_inset Formula $\Gamma_{j}$
+\end_inset
+
+ abgeschlossene Immersionen.
+\end_layout
+
+\begin_layout Standard
+Im allgemeinen sind 
+\begin_inset Formula $\Delta_{X/S}$
+\end_inset
+
+, 
+\begin_inset Formula $\Gamma_{f}$
+\end_inset
+
+ Immersionen (nicht notwendig abgeschlossen!): Seien 
+\begin_inset Formula $Z,Z'\subset X$
+\end_inset
+
+ Unterschemata.
+ 
+\begin_inset Formula $\Longrightarrow Z\times_{S}Z'\subset X\times_{S}X$
+\end_inset
+
+ Unterschemata (Immersionen und stabil unter Basiswechsel und Komposition),
+ und
+\begin_inset Formula 
+\[
+Z\cap Z'=\Delta_{X/S}^{-1}(Z\times_{S}Z')\qquad(*)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition
+Seien 
+\begin_inset Formula $X,Y\in\schs$
+\end_inset
+
+, 
+\begin_inset Formula $f,g:X\rightarrow Y$
+\end_inset
+
+ 
+\begin_inset Formula $S$
+\end_inset
+
+-Morphismen.
+ Dann sind 
+\begin_inset Formula $\Delta_{X/S}$
+\end_inset
+
+, 
+\begin_inset Formula $\Gamma_{f}$
+\end_inset
+
+, 
+\begin_inset Formula $\ker(f,g)\rightarrow X$
+\end_inset
+
+ Immersionen.
+\end_layout
+
+\begin_layout Proof
+Es reicht zu zeigen: 
+\begin_inset Formula $\Delta_{X/S}$
+\end_inset
+
+ ist eine Immersion (und 
+\begin_inset Formula $(2)$
+\end_inset
+
+ in Proposition 26, da 
+\begin_inset Quotes gld
+\end_inset
+
+Immersion
+\begin_inset Quotes grd
+\end_inset
+
+ stabil ist unter Basiswechsel) lokal bzgl.
+ Ziel.
+ Sei also ohne Einschränkung 
+\begin_inset Formula $S$
+\end_inset
+
+ affin.
+ Falls 
+\begin_inset Formula $X=\bigcup_{i\in I}U_{i}$
+\end_inset
+
+ offene Überdeckung, dann ist 
+\begin_inset Formula $\Delta_{X/S}(X)=\bigcup_{i\in I}U_{i}\times_{S}U_{i}$
+\end_inset
+
+ offene Überdeckung.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+LyX 2.3 broke stretch in xymatrix...
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\xymatrix{X\ar[r]_{\text{abg. Imm.}} & \bigcup_{i\in I}(U_{i}\times_{S}U_{i})\ar@{^{(}->}_{\text{off. Imm.}}[r] & X\times_{S}X}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $(*)\Longrightarrow$
+\end_inset
+
+ ohne Einschränkung, 
+\begin_inset Formula $X$
+\end_inset
+
+ affin.
+ Wende nun Proposition 27 an.
+\end_layout
+
+\begin_layout Standard
+Das Unterschema
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X\cong\Delta_{X/S}(X)\subset X\times_{S}X$
+\end_inset
+
+ heißt die 
+\series bold
+Diagonale von 
+\begin_inset Formula $X\times_{S}X$
+\end_inset
+
+
+\series default
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\Gamma_{f}(X)\subset X\times_{S}Y$
+\end_inset
+
+ heißt der 
+\series bold
+Graph von 
+\begin_inset Formula $f$
+\end_inset
+
+
+\series default
+.
+\end_layout
+
+\begin_layout Remark
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+29
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Ein Unterschema 
+\begin_inset Formula $T\subset X\times_{S}Y$
+\end_inset
+
+ ist der Graph eines 
+\begin_inset Formula $S$
+\end_inset
+
+-Morphismus 
+\begin_inset Formula $f:X\rightarrow Y$
+\end_inset
+
+ genau dann, wenn 
+\begin_inset Formula $p|_{T}:T\rightarrow X\times_{S}Y\underset{p}{\rightarrow}X$
+\end_inset
+
+ ein Isomorphismus ist, 
+\emph on
+denn 
+\emph default
+
+\begin_inset Formula $f=q\circ(p|_{T})^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Im Allgemeinen ist die mengentheoretische Inklusion
+\begin_inset Formula 
+\[
+\Delta_{X/S}(X)\subset\{z\in X\times_{S}X\mid f(z)=g(z)\}
+\]
+
+\end_inset
+
+
+\emph on
+keine
+\emph default
+ Gleichheit!
+\end_layout
+
+\end_deeper
+\begin_layout Section
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+13
+\end_layout
+
+\end_inset
+
+Separierte Morphismen
+\end_layout
+
+\begin_layout Standard
+Erinnerung: Für einen topologischen Raum 
+\begin_inset Formula $X$
+\end_inset
+
+ sind äquivalent:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $X$
+\end_inset
+
+ ist Hausdorff.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\Delta\subset X\times X$
+\end_inset
+
+ ist abgeschlossen bzgl.
+ der Produkttopolgie.
+\end_layout
+
+\begin_layout Enumerate
+Für jedes Paar von stetigen Abbildungen 
+\begin_inset Formula $f,g:Y\rightarrow X$
+\end_inset
+
+ ist 
+\begin_inset Formula $\ker(f,g)\subset X$
+\end_inset
+
+ abgeschlossen.
+\end_layout
+
+\begin_layout Enumerate
+Für jeder stetige Morphismus 
+\begin_inset Formula $f:Y\rightarrow X$
+\end_inset
+
+ ist 
+\begin_inset Formula $\Gamma_{f}\subset X\times Y$
+\end_inset
+
+ abgeschlossen.
+\end_layout
+
+\begin_layout Standard
+Für ein Schema 
+\begin_inset Formula $X$
+\end_inset
+
+ ist der unterliegende topologische Raum selten Hausdorff, aber 
+\begin_inset Formula $(2)-(4)$
+\end_inset
+
+ geben sinnvolle Konzepte für Schemata (im Allgemeinen ist die Produkttopologie
+ ungleich der Faserprodukttopologie).
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+30
+\end_layout
+
+\end_inset
+
+Ein Morphismus 
+\begin_inset Formula $v:Y\rightarrow S$
+\end_inset
+
+ von Schemata heißt separiert, falls folgende äquivalente Bedingungen erfüllt
+ sind.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\Delta_{Y/S}$
+\end_inset
+
+ ist eine 
+\emph on
+abgeschlossene
+\emph default
+ Immersion.
+\end_layout
+
+\begin_layout Enumerate
+Für jedees Paar 
+\begin_inset Formula $f,g:X\rightarrow Y$
+\end_inset
+
+ ist 
+\begin_inset Formula $\ker(f,g)\subset X$
+\end_inset
+
+ ein abgeschlossenes Unterschema.
+\end_layout
+
+\begin_layout Enumerate
+Für jeden 
+\begin_inset Formula $S$
+\end_inset
+
+-Morphismus 
+\begin_inset Formula $f:X\rightarrow Y$
+\end_inset
+
+ ist 
+\begin_inset Formula $\Gamma_{f}$
+\end_inset
+
+ eine abgeschlossene Immersion.
+\end_layout
+
+\end_deeper
+\begin_layout Definition
+Dann heißt auch 
+\begin_inset Formula $Y$
+\end_inset
+
+ ist 
+\series bold
+separiert über 
+\begin_inset Formula $S$
+\end_inset
+
+
+\series default
+.
+ Ein Schema 
+\begin_inset Formula $Y$
+\end_inset
+
+ heißt 
+\series bold
+separiert
+\series default
+, falls es separiert über 
+\begin_inset Formula $\mathbb{Z}$
+\end_inset
+
+ ist.
+\end_layout
+
+\begin_layout Proof
+Die Äquivalenz folgt nach Proposition 26, und dass 
+\begin_inset Quotes gld
+\end_inset
+
+abgeschlossene Immersion
+\begin_inset Quotes grd
+\end_inset
+
+ stabil unter Basiswechsel ist.
+\end_layout
+
+\begin_layout Standard
+Nach Proposition 27 ist jeder Morphismus zwischen affinen Schemata separiert.
+ Insbesondere ist jedes affine Schemata separiert.
+\end_layout
+
+\begin_layout Proposition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+31
+\end_layout
+
+\end_inset
+
+Seien 
+\begin_inset Formula $X,Y\in\schs$
+\end_inset
+
+, 
+\begin_inset Formula $Y$
+\end_inset
+
+ separiert über 
+\begin_inset Formula $S$
+\end_inset
+
+, 
+\begin_inset Formula $U\subset X$
+\end_inset
+
+ offenes dichtes Unterschema, 
+\begin_inset Formula $f,g:X\rightarrow Y$
+\end_inset
+
+ 
+\begin_inset Formula $S$
+\end_inset
+
+-Morphismus mit 
+\begin_inset Formula $f|_{U}=g|_{U}$
+\end_inset
+
+.
+ Dann ist 
+\begin_inset Formula $f|_{X_{\red}}=g|_{X_{\red}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Nach Voraussetzung ist 
+\begin_inset Formula $U\subseteq\ker(f,g)$
+\end_inset
+
+.
+ Da 
+\begin_inset Formula $Y$
+\end_inset
+
+ separiert ist über 
+\begin_inset Formula $S$
+\end_inset
+
+, ist 
+\begin_inset Formula $\ker(f,g)\subset X$
+\end_inset
+
+ abgeschlossenes Unterschema.
+ Da 
+\begin_inset Formula $U$
+\end_inset
+
+ dicht ist in 
+\begin_inset Formula $X$
+\end_inset
+
+, ist der unterliegende topologische Raum von 
+\begin_inset Formula $\ker(f,g)$
+\end_inset
+
+ gleich 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\Longrightarrow X_{\red}\subseteq\ker(f,g)$
+\end_inset
+
+ als Schema.
+\end_layout
+
+\begin_layout Example
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+32
+\end_layout
+
+\end_inset
+
+Sei
+\begin_inset Formula 
+\[
+\,\xymatrix{\ar@{-}[r] & :\ar@{-}[r] & \,}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+affine Gerade mit Doppelpunkt (siehe Beispiel 11, III.5) ist 
+\emph on
+nicht
+\emph default
+ separiert: 
+\begin_inset Formula $V\subset U$
+\end_inset
+
+ offen, nicht abgeschlossen.
+\begin_inset Formula 
+\[
+j,j':U\longrightarrow U\cup_{V}U\quad\Rightarrow\quad\ker(j,j')=V\subset U\subset X\text{\,nicht abg.!}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+33
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ sei eine Eigenschaft von Morphismen, sodass gilt:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+stabil unter Komposition und Basiswechsel;
+\end_layout
+
+\begin_layout Itemize
+jede (abgeschlossene) Immersion erfült 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Remark
+Für jedes kommutative Diagramm:
+\begin_inset Formula 
+\[
+\xymatrix{X\ar[r]^{f}\ar[rd]_{u} & Y\ar[d]^{v}\\
+ & S
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+mit 
+\begin_inset Formula $u$
+\end_inset
+
+ erfüllt 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ (und 
+\begin_inset Formula $v$
+\end_inset
+
+ seperariert) 
+\begin_inset Formula $\Longrightarrow f$
+\end_inset
+
+ erfüllt 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+, da:
+\begin_inset Formula 
+\[
+f:X\xrightarrow[\text{(abg.) Imm. erfüllt }\mathbb{P}]{\Gamma_{f}}X\times_{S}Y\xrightarrow[\text{Basisw. erfüllt }\mathbb{P}]{q}Y
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+erfüllt 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+, wegen stabil unter Komposition.
+\end_layout
+
+\begin_layout Proposition
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Jeder Monomorphismsu von Schemata (insbesondere jede Immersion) ist separiert.
+\end_layout
+
+\begin_layout Enumerate
+Die Eigenschaft 
+\begin_inset Quotes gld
+\end_inset
+
+separiert
+\begin_inset Quotes grd
+\end_inset
+
+ ist stabil unter Komposition, stabil unter Basiswechsel, und lokal bzgl.
+ Ziel.
+\end_layout
+
+\begin_layout Enumerate
+Ist die Komposition 
+\begin_inset Formula $X\rightarrow Y\rightarrow Z$
+\end_inset
+
+ zweier Morphismen separiert, so auch 
+\begin_inset Formula $X\rightarrow Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $f:X\rightarrow Y$
+\end_inset
+
+ ist seperariert genau dann, wenn 
+\begin_inset Formula $f_{\red}:X_{\red}\rightarrow Y_{\red}$
+\end_inset
+
+ separiert ist.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Wenn 
+\begin_inset Formula $f$
+\end_inset
+
+ Monomorphismus ist (d.h.
+ injektiv auf 
+\begin_inset Formula $T$
+\end_inset
+
+-wertigen Punkten für alle Schemata 
+\begin_inset Formula $T$
+\end_inset
+
+), dann ist 
+\begin_inset Formula $\Delta_{f}$
+\end_inset
+
+ Isomorphismus (d.h.
+ bijektiv auf allen 
+\begin_inset Formula $T$
+\end_inset
+
+-wertigen Punkte für alle 
+\begin_inset Formula $T$
+\end_inset
+
+).
+ Insbesondere ist 
+\begin_inset Formula $\Delta_{f}$
+\end_inset
+
+ eine abgeschlossene Immersion.
+\end_layout
+
+\begin_layout Enumerate
+Seien 
+\begin_inset Formula $f:X\rightarrow Y$
+\end_inset
+
+, 
+\begin_inset Formula $g:Y\rightarrow Z$
+\end_inset
+
+ separierte Schemata-Morphismen, 
+\begin_inset Formula $p,q:X\times_{Y}X\rightarrow X$
+\end_inset
+
+ die zwei Projektionen.
+ Das folgende Diagramm ist kommutativ, und das rechte Viereck ist kartesisch
+ (überprüfe in 
+\begin_inset Formula $\set$
+\end_inset
+
+):
+\begin_inset Formula 
+\[
+\xymatrix{X\ar[r]^{\Delta_{f}}\ar[rd]_{\Delta_{g\circ f}} & X\times_{Y}X\ar[r]^{f\circ p=f\circ q}\ar[d]|-{(p,q)_{Z}} & Y\ar[d]^{\Delta_{g}}\\
+ & X\times_{Z}X\ar[r]_{f\times f} & Y\times_{Z}Y.
+}
+\]
+
+\end_inset
+
+Da 
+\begin_inset Formula $\Delta_{g}$
+\end_inset
+
+ abgeschlossene Immersion, ist 
+\begin_inset Formula $(p,q)_{Z}$
+\end_inset
+
+ abgeschlossene Immersion 
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+ die Komposition 
+\begin_inset Formula $\Delta_{g\circ f}$
+\end_inset
+
+ ist abgeschlossene Immersion 
+\begin_inset Formula $\Longrightarrow g\circ f$
+\end_inset
+
+ ist separiert.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $\Delta_{f}$
+\end_inset
+
+ abgeschlossene Immersion 
+\begin_inset Formula $\Longrightarrow\Delta_{f_{(S')}}$
+\end_inset
+
+ ist abgeschlossene Immersion.
+ Dies zeigt das 
+\begin_inset Quotes gld
+\end_inset
+
+separiert
+\begin_inset Quotes grd
+\end_inset
+
+ abgeschlossen ist unter Basiswechsel.
+ Weiter ist 
+\begin_inset Quotes gld
+\end_inset
+
+separiert
+\begin_inset Quotes grd
+\end_inset
+
+ lokal bzgl.
+ Ziel, da dies gilt für 
+\begin_inset Quotes gld
+\end_inset
+
+abgeschlossene Immersion
+\begin_inset Quotes grd
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Folgt aus (1), (2) nach Bemerkung 33.
+ (
+\begin_inset Formula $u=``\circ"$
+\end_inset
+
+, 
+\begin_inset Formula $v=Y\rightarrow Z$
+\end_inset
+
+, 
+\begin_inset Formula $f:X\rightarrow Y$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+Sei 
+\begin_inset Formula $f:X\rightarrow S$
+\end_inset
+
+ Morphismus, 
+\begin_inset Formula $i:X_{\red}\rightarrow X$
+\end_inset
+
+ kanonische Immersion.
+ Dann ist 
+\begin_inset Formula $i$
+\end_inset
+
+ surjektive Immersion, also ein universeller Homöomorphismus.
+ Identifizieren von 
+\begin_inset Formula $X_{\red}\times_{S_{\red}}X_{\red}$
+\end_inset
+
+ mit 
+\begin_inset Formula $X_{\red}\times_{S}X_{\red}$
+\end_inset
+
+ liefert 
+\begin_inset Formula $\Delta_{f}\circ i=(i\times_{S}i)\circ\Delta_{f_{\red}}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\Longrightarrow\Delta_{f}$
+\end_inset
+
+ ist abgeschlossene Immersion genau dann wenn 
+\begin_inset Formula $\Delta_{f_{\red}}$
+\end_inset
+
+ abgeschlossene Immersion.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
