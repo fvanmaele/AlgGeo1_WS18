@@ -1,0 +1,58 @@
+\section{Offene Unterschemata}
+
+Erinnerung: $X=\Spec A$ affin $\Longrightarrow(D(f),\mathcal{O}_{X|D(f)})$
+auch affin, und $D(f)$ Basis der Topologie.
+\begin{prop}[2]
+  Sei $X$ ein Schemata.
+  \begin{enumerate}
+  \item Ist $U\subset X$ eine offene Teilmenge, dann ist der lokal geringte
+    Raum $(U,\mathcal{O}_{X\mid U})$ wieder ein Schemata. $U$ heißt
+    ein \textbf{offenes Unterschemata}. Ist $U$ affin, dann heißt $U$
+    \textbf{affines offenes Schemata}.
+  \item Die zugrundlegenden topologische Räume der affinen offene Unterschemata
+    bilden eine Basis der Topologie.
+  \end{enumerate}
+\end{prop}
+
+\begin{proof}
+  Es gibt eine Überdeckung $(U_{i})$ von $X$, d.d. $(U_{i},\mathcal{O}_{X|U_{i}})$
+  affine Schemata, $\cong\Spec A$. Es gilt:
+  \[
+    U=\bigcup_{i}(U\cap U_{i})=\bigcup_{i,j\in I_{i}}D(f_{ij})
+  \]
+
+  wobei die letzte Gleichheit gilt wegen $\Spec(A_{i})\supset U\cap U_{i}=\bigcup_{j\in I_{i}}D(f_{ij})$,
+  $f_{ij}\in A_{i}$.
+\end{proof}
+Zu $U\subset X$ offen gibt es einen kanonischen Morphismus von Schemata
+\[
+  (j,j^{\flat}):(U,\mathcal{O}_{X|U)}\longrightarrow(X,\mathcal{O}_{X})
+\]
+
+via der Inklusion $j:U\hookrightarrow X$ und $j^{\flat}:\mathcal{O}_{X}\rightarrow j_{\ast}(\mathcal{O}_{X\mid U})$.
+Für $V\subseteq X$ offen ergibt $\res_{V\cap U}^{V}$ einen Ringhomomorphismus:
+\[
+  \Gamma(V,\mathcal{O}_{X})\rightarrow\Gamma(V\cap U,\mathcal{O}_{X})=\Gamma(j^{-1}(V),\mathcal{O}_{X|U})=\Gamma(V,j_{\ast}\mathcal{O}_{X|U}).
+\]
+
+Eine affine offene Überdeckung eines Schematas $X$ ist eine Überdeckung
+$X=\bigcup U_{i}$, sodass alle $U_{i}$ affine offene Unterschemata
+sind.
+\begin{lem}[3]
+  Sei $X$ ein Schemata, und seien $U,V\subset X$ affin offene Unterschemata.
+  Dann existiert für jedes $x\in U\cap V$ eine Umgebung $x\in W\subset U\cap V$
+  offenes Unterschema, welches gleichzeitig prinzipal offen in $U$
+  \emph{und} $V$ ist.
+\end{lem}
+
+\begin{proof}
+  Sei ohne Einschränkung $V\subset U$ (sonst ersetze $V$ durch eine
+  prinzipiale offene Teilmenge von $V$ welche $x$ enthält). Wähle:
+  \[
+    \xymatrix{f\in\Gamma(U,\mathcal{O}_{X})\ar[d]^{\res} & \text{d.d. }x\in D(f)\subset V\\
+      f|_{V}\in\Gamma(V,\mathcal{O}_{X}) & D_{U}(f)=D_{V}(f|_{V})
+    }
+  \]
+
+  denn $\Gamma(U,\mathcal{O}_{X})_{f}=\mathcal{O}_{X}(D_{U}(f)$, $\Gamma(V,\mathcal{O}_{X})_{f|_{V}}=\mathcal{O}_{X}(D_{V}|f_{|_{V}})$.
+\end{proof}

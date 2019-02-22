@@ -1,0 +1,62 @@
+\section{Generische Punkte }
+\begin{prop}[18]
+  Die Abbildung
+  \begin{align*}
+    X & \longrightarrow\{Z\subset X\mid\text{abg., irred.}\}\\
+    x & \longmapsto\overline{\{x\}}
+  \end{align*}
+
+  ist eine Bijektion, d.h. jede irreduzible abgeschlossene Teilmenge
+  enthält genau einen generischen Punkt.
+\end{prop}
+
+\begin{proof}
+  Gilt für affine Schemata nach Korollar II.7. Sei $Z\subset X$ irreduzibel,
+  abgeschlossen sowie $U\subset X$ affin offen mit $Z\cap U\neq\emptyset$.
+
+  $\Longrightarrow\overline{Z\cap U}^{X}=Z$, da $Z$ irreduzibel.
+
+  $\Longrightarrow Z\cap U$ irreduzibel mit generischen Punkt $x$,
+  $\overline{\{x\}}^{Z\cap U}=Z\cap U$.
+
+  $\Longrightarrow\overline{\{x\}}^{X}=Z$.
+
+  Umgekehrt: Sei $z\in Z$ generischer Punkt.
+
+  $\Longrightarrow[U\subset X$ offen mit $U\cap Z\neq\emptyset$ $\Rightarrow z\in U]$
+  d.h. Eindeutigkeit im affinen Fall impliziert allgemeiner Fall.
+\end{proof}
+``Generische Punkte reduzieren gewisse Aussagen auf das Studium von
+\emph{einem} Punkt''.
+\begin{prop}[19]
+  Sei $f:X\rightarrow Y$ offener Morphismus von Schemata. Sei $Y=\overline{\{\eta\}}^{Y}$
+  irreduzibel. Dann:
+  \[
+    f^{-1}(\eta)\text{ irreduzibel}\Leftrightarrow X\text{ irreduzibel}
+  \]
+\end{prop}
+
+\begin{proof}
+  $f$ offen $\Rightarrow\overline{\{f^{-1}(x)\}}=f^{-1}(\overline{\{\eta\}})=f^{-1}(Y)=X$.
+  Mit Lemma I.14: $Z$ irreduzibel $\Leftrightarrow\overline{Z}$ irreduzibel.
+\end{proof}
+Topologische Räume von Schemata sind fast nie Hausdorffsch, aber:
+\begin{prop}[20]
+  Sei $X$ Schema. Dann ist der unterliegende topologische Raum ein
+  $T_{0}$-Raum, d.h.
+  \[
+    \forall x\neq y\in X\ \exists U\subset X\text{ offen, mit \textbf{entweder }}x\in U\text{ oder }y\in U.
+  \]
+\end{prop}
+
+\begin{proof}
+  Ohne Einschränkung: $X$ affin, $x=\mathfrak{p}_{x}$, $y=\mathfrak{p}_{y}\in\Spec(\Gamma(X,\mathcal{O}_{X}))$.
+  Falls $\mathfrak{p}_{x}\subsetneq\mathfrak{p}_{y}$ wähle
+  \[
+    \mathfrak{p}_{x}\in U=X\backslash\underbrace{V(\mathfrak{p}_{y})}_{\ni\mathfrak{p}_{y}}
+  \]
+
+  andernfalls $\exists f\in\mathfrak{p}_{x}\backslash\mathfrak{p}_{y}$,
+  d.h. $U=D(f)$ enthält $y$ aber nicht $x$.
+\end{proof}
+Später: Separiertheit von Schemata als ``Hausdorffsch''-Ersatz.

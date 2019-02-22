@@ -1,0 +1,51 @@
+\section{Sehr dichte Teilmengen}
+\begin{defn}[29]
+  Sei $X$ topologischer Raum. Eine Teilmenge $Y\subset X$ heißt \textbf{sehr
+    dicht}, falls die folgenden äquivalenten Bedingungen gelten:
+  \begin{enumerate}
+  \item $U\mapsto U\cap Y$ definiert eine Bijektion:
+    \[
+      \{\text{offenen Teilmengen in }X\}\leftrightarrow\{\text{offene Teilmengen in }Y\}.
+    \]
+  \item $F\mapsto F\cap Y$ definiert eine Bijektion:
+    \[
+      \{\text{abgeschlossene Teilmengen in }X\}\leftrightarrow\{\text{abgeschlossene Teilmengen in }Y\}.
+    \]
+  \item Für alle $F\subseteq X$ abgeschlossen gilt: $F=\overline{F\cap Y}$.
+  \item Jede lokal abgeschlossene Teilmenge $Z\neq\emptyset$ von $X$ enthält
+    einen Punkt aus $Y$.
+  \end{enumerate}
+\end{defn}
+
+\begin{proof}
+  Die Äquivalenz von $(i)$, $(ii)$ und $(iii)$ ist klar.
+  \begin{itemize}
+  \item[$(iii)\Rightarrow(iv)$] Für abgeschlossene Teilmengen $F'\subsetneq F$ von $X$ setze $Z:=F\backslash F'$.
+    Angenommen $(F\cap Y)\backslash(F'\cap Y)=Z\cap Y=\emptyset$. $\Longrightarrow F\cap Y=F'\cap Y$.
+    $(iii)\Longrightarrow F=F'$, Widerspruch.
+  \item[$(iv)\Rightarrow(ii)$] Sei $F,F'\subset X$ abgeschlossen mit $F\cap Y=F'\cap Y$. $\Longleftrightarrow((F\cup F')\backslash(F\cap F'))\cap Y=\emptyset$.
+    $\Longrightarrow(F\cup F')\backslash(F\cap F')=\emptyset$. $\Longrightarrow F=F'$.
+  \end{itemize}
+\end{proof}
+\begin{prop}[30]
+  Sei $X$ l.v.e.T über $k$ algebraisch abgeschlossen. Dann ist $|X|$
+  sehr dicht in $X$.
+\end{prop}
+
+\begin{proof}
+  Zeige: Bedingung $(iv)$. Sei $\emptyset\neq A\subset X$ lokal abgeschlossen.
+  Ohne Einschränkung: 
+  \[
+    A\subset_{\text{abg. }}U=\Spec A\subset_{\text{off.}}X.
+  \]
+
+  Nach Voraussetzung ist $A$ endlich-erzeugte $k$-Algebra. $\emptyset\neq A=V(\mathfrak{a})$
+  mit $\mathfrak{a}\subset\mathfrak{m}\subset A$ für ein maximales
+  Ideal $\mathfrak{m}$. $\Longrightarrow V(\mathfrak{a})$ enthält
+  abgeschlossenen Punkt $x\in\mathfrak{m}$. Proposition 28 $\Longrightarrow x$
+  ist abgeschlossen in $X$, da $\kappa(x)=k$%
+  \begin{comment}
+    unlesbar
+  \end{comment}
+  . $\Longrightarrow A\cap|X|\neq\emptyset$.
+\end{proof}

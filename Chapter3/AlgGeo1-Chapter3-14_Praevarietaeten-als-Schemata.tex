@@ -1,0 +1,156 @@
+\section{Prävarietäten als Schemata}
+
+Wir wollen einen Funktor von der Kategorie der Prävarietäten in die
+Kategorie der Schemata sodass, wenn wir eine geweissen Unterkategorie
+von $\sh$ betrachten, eine Äquivalenz von Kategorien entsteht.\medskip{}
+
+\textbf{Erinnerung: }$k=\overline{k}$: $\mathbb{A}_{k}^{2}=\Spec(k[X,Y])$
+besteht aus
+\begin{itemize}
+\item Punte des $\mathbb{A}^{2}(k)$ $\leadsto$ maximale Ideale, 0-dimensionale
+  Teilmengen.
+\item Irreduzible Kurve $f(x,y)=0$ $\leadsto$ Primideale, 1-dimensionale
+  Teilmengen.
+\item Generischer Punkt 0 $\leadsto$ 2-dimensionale Teilmengen.
+\end{itemize}
+Wie können wir die zusätzlichen Punkte für den Funktor
+\[
+  \pres\longrightarrow\schs
+\]
+
+präzisieren? Sei $X$ ein topologischer Raum, in dem alle Punkte abgeschlossen
+sind. Betrachte 
+\[
+  t(X)=\{Z\subset X\mid Z\text{ irreduzibel abgeschlossen}\},
+\]
+
+versehen mit der Topologie: I$t(X)\supset t(Z)$, $Z\subseteq_{\text{abg.}}X$
+bilden die abgeschlossenen Mengen. Überprüfe: $Z_{1},Z_{2},Z_{i}\subset X$
+abgeschlossen $\Longrightarrow t(\cap_{i}Z_{i})=\cap_{i}t(Z_{i})$,
+$t(Z_{1}\cup Z_{2})=t(Z_{i})\cup t(Z_{2})$. Ist $f:X\rightarrow Y$
+stetig, so auch
+\begin{align*}
+  t(f):t(X) & \longrightarrow t(Y)\\
+  Z & \longmapsto\overline{f(Z)}
+\end{align*}
+
+denn:
+\begin{enumerate}
+\item $\overline{f(Z)}$ irreduzibel: Sei $\overline{f(Z)}=A_{1}\cup A_{2}$,
+  $A_{i}\neq\emptyset$. Dann existiert $z_{1},z_{2}\in Z$ mit $f(z_{i})\in A_{i}$,
+  denn sonst gilt $f(z)\subseteq A_{1}$. $Z\subseteq f^{-1}(f(Z))$
+  abgeschlossen. $\Longrightarrow Z=(f^{-1}(A_{1})\cap Z)\cup(f^{-1}(A_{2}\cap Z))$,
+  Widerspruch.
+\item Sei $t(Y')\subseteq t(Y)$ abgeschlossen. $t(f)^{-1}(t(Y))=\{Z\in t(X)$,
+  $\overline{f(Z)}\in t(Y')\}$ denn:
+  \begin{itemize}
+  \item[,,$\subseteq$``] $\overline{f(Z)}\subset Y'$ $\Longrightarrow Z\in f^{-1}(\overline{f(Z))}\subset f^{-1}(Y)=t(f^{-1}(Y))$
+  \item[,,$\supseteq$``] $z\in f^{-1}(Y)$ abgeschlossen $\Longrightarrow f(Z)\in\overline{f(Z)}\subset\overline{Y'}\subset Y'$.
+  \end{itemize}
+\end{enumerate}
+Wir erhalten einen Funktor
+\[
+  t:\topcp\longrightarrow\Top
+\]
+
+Die irreduziblen Mengen von $f(X)$ sind gerade die $t(X)$, $Z\subseteq X$
+irreduzibel. $Z\in t(Z)$ ist der eindeutige generische Punkt. Sei
+\begin{align*}
+  \alpha_{X}:X & \longrightarrow t(X)\\
+  x & \longmapsto\{x\}\text{ irred. abg.}
+\end{align*}
+
+So ist die Abbildung
+\begin{align*}
+  \text{\{abg. Tm. von }f(X)\} & \longrightarrow\text{\{abg. Tm. von }X\}\\
+  A=t(Z) & \longmapsto\alpha_{X}^{-1}(A)=\{x\in X:\{x\}\in t(Z)\}=Z
+\end{align*}
+
+eine Bijektion. $\Longrightarrow\alpha_{X}$ ist Homömorphismus von
+$X$ auf die abgeschlossenen Punkte $|t(X)|$ von $t(X)$ {[}irred.
+abg. Teilmengen $Z$ von $X$, die in $t(X)$ abgeschlossen sind.{]}
+
+Es ist $\{Z\}=t(Z')$ für ein $Z'\subset X$ abgeschlossen. $\Longrightarrow$
+Nur ein Punkt $x\in X$ in $Z$, sonst $\{x\}\subsetneq Z\subset Z'$
+beide in $t(Z')$.
+
+Es ist $|t(X)|\subset t(Y)$ eine sehr dichte Menge (Bijektion oben).
+\begin{thm}[31]
+  Der Funktor $X\mapsto(t(X),(\alpha_{X})_{\ast}\mathcal{O}_{X})$
+  induziert eine Äquivalenz von Kategorien:
+  \begin{align*}
+    t:\{\prek\} & \overset{1:1}{\longleftrightarrow}\text{\{integere }k\text{-Schemata v. endl. Typ\}}\\
+    \{\affk\} & \overset{1:1}{\longleftrightarrow}\text{\{affine }k\text{-Schemata v. endl. Typ}\}
+  \end{align*}
+\end{thm}
+
+\begin{proof}
+  Ist $X$ eine affine Varietät über $k$ mit $\Gamma(X)=A$, so ist
+  $X=\maxspec(A)$. $\Longrightarrow t(X)=\Spec A$ (vgl Kapitel I),
+  $\mathcal{O}_{X}(D(f))=A_{f}$, $f\in A$. $\Longrightarrow$ Behauptung
+  im affinen Fall.
+
+  Ist $f:X\rightarrow Y$ Morphismus von Prävarietäten, so erhalten
+  wir 
+  \begin{align*}
+    t(f):t(X) & \longrightarrow t(Y),\\
+    (\alpha_{Y})_{\ast}\mathcal{O}_{Y} & \longrightarrow t(f)_{\ast}((\alpha_{X})_{\ast}\mathcal{O}_{X})
+  \end{align*}
+
+  Morphismus lokal geringter Räume, da ein Morphismus von Garben auf
+  $X$ und $Y$ durch Komposition von Abbildungen gegeben ist!
+
+  Quasi-inverser Funktor $(X,\mathcal{O}_{X})\mapsto(X(k),\mathcal{O}_{X(k)}=\alpha^{-1}\mathcal{O}_{X})$
+  geringter Raum. \textbf{(1)} $\alpha^{-1}(U)=U\cap(X)\overset{1:1}{\longleftrightarrow}U$
+  offene Teilmenge. \textbf{Behauptung}: Bild $(X(k),\mathcal{O}_{X(k)})$
+  ist Raum mit Funktionen: Sei $V\subseteq U\subseteq X$ offen. \textbf{(2)}
+  Das Diagramm
+  \[
+    \xymatrix{\mathcal{O}_{X(k)}(U\cap X(k))\ar[d]_{\res}\ar[r] & \Abb(U\cap X(\xi),\xi)\ar[d]^{\res}\\
+      \mathcal{O}_{X(k)}(V\cap X(k))\ar@{^{(}->}[r] & \Abb(V\cap X(k),k)
+    }
+  \]
+
+  kommutiert. Dazu $f\in\mathcal{O}_{X(k)}(U\cap X(k))\overset{(1)}{=}\mathcal{O}_{X}(U)$,
+  wir assoziieren es der Abbildung 
+  \[
+    U\cap X(k)\longrightarrow k,\quad x\mapsto f(x):=\pi_{x}(f),
+  \]
+
+  mit
+  \[
+    \xymatrix{\pi_{x}:\mathcal{O}_{X}(U)\ar[r]\ar[d]^{\res} & \mathcal{O}_{X,x}\ar[r] & \kappa(x)=k\\
+      \mathcal{O}_{X}(V)\ar[ur]
+    }
+  \]
+
+  $\Longrightarrow(2)$. \textbf{(3)} $f,g$ mit derselben Funktion
+  \[
+    f\equiv g:U'\rightarrow k\overset{!}{\Longrightarrow}f=g
+  \]
+
+  Garbenaxiom $\Longrightarrow$ kann lokal überprüft werden: $U=\Spec A$
+  und $\pi_{x}(f)=\pi_{x}(g)$ für alle $x\in\maxspec$ 
+  \[
+    \Longrightarrow f-g\in\bigcap_{\mathfrak{m}\in\maxspec(A)}\mathfrak{m}=\nil(A)=0,
+  \]
+
+  da $A$ lokal reduzierte $k$-Algebra. Da sich $X$ durch endlich
+  viele affine Schemata der Form $\Spec A$, $A$ integer endlich erzeugte
+  $k$-Algebra, überdecken lässt, ist der Raum mit Funktion $X(k)$
+  eine Prävarietät. Die Konstruktion ist funktoriell, da jede Menge
+  von Schemata von endlichem Typ über $K$ abgeschlossene Punkte auf
+  abgeschlossene Punkt schickt nach Proposition 28.
+
+  Um zu zeigen, dass beide Funktoren Quasi-Inverse zueinander sind,
+  benutze den affinen (Varietät/Schemata) Fall, so wie die Garbenaxiome.
+\end{proof}
+\begin{rem*}[32]
+  \mbox{}Es gilt:
+
+  \begin{align*}
+    \kappa(x) & =\kappa(X(k))\\
+    \mathbb{A}_{k}^{n} & \longleftrightarrow\mathbb{A}(k)\\
+    \mathbb{P}_{k}^{n} & \longleftrightarrow\mathbb{P}^{n}(k)
+  \end{align*}
+\end{rem*}

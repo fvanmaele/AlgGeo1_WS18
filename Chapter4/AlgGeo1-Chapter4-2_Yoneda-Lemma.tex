@@ -1,0 +1,45 @@
+\section{Yoneda-Lemma}
+
+\textbf{Ziel:} $h_{X}$ beschreibt $X$ eindeutig.
+
+Erinnerung: $\mathcal{F},\mathcal{G}:\mathcal{A}\rightarrow\mathcal{B}$
+Funktoren, natürliche Transformation $f\in\Hom(\mathcal{F},\mathcal{G})$:
+\[
+  f=\{f(X):\mathcal{F}(X):\rightarrow\mathcal{G}(X))_{X\in\mathcal{A}}.
+\]
+
+Wir erhalten Kategorien: $\func(\mathcal{A},\mathcal{B})$, \textbf{hier:
+}$\mathcal{C}=\schs0$, $\hat{C}=\func(\mathcal{C}^{\op},\set)$.
+Wir erhalten einen Funktor
+\begin{align*}
+  \mathcal{C} & \longrightarrow\hat{\mathcal{C}},\\
+  X & \longmapsto h_{X},\\
+  f & \longmapsto\text{Pullback }f^{\ast}.
+\end{align*}
+
+\begin{prop}[5]
+  Sei $X\in\mathcal{C}$, $\mathcal{F}\in\hat{\mathcal{C}}$. Dann
+  ist die Abbildung
+  \begin{align*}
+    \Hom_{\hat{C}}(h_{X},\mathcal{F}) & \longrightarrow\mathcal{F}(X)\\
+    \alpha & \longmapsto\alpha(X)(\id_{X})\in\Hom(h_{X}(X),\mathcal{F}(X))
+  \end{align*}
+
+  bijektiv und funktoriell.
+\end{prop}
+
+Insbesondere ist der obige Funktor $\mathcal{C}\rightarrow\hat{\mathcal{C}}$
+volltreu (wähle $\mathcal{F}=h_{Y}$!)
+\begin{proof}
+  Umkehrabbildung:
+  \begin{align*}
+    \mathcal{F}(X) & \longrightarrow\Hom_{\hat{\mathcal{C}}}(h_{X},\mathcal{F})\\
+    \xi & \longmapsto\alpha_{\xi}=(\alpha_{\xi}(Y))_{Y\in\schs0}
+  \end{align*}
+
+  mit
+  \begin{align*}
+    \alpha_{\xi}(Y):\Hom(Y,X)=h_{X}(Y) & \longrightarrow\mathcal{F}(Y)\\
+    f & \longmapsto\mathcal{F}(f)(\xi)\in\Hom(\mathcal{F}(X),\mathcal{F}(Y))
+  \end{align*}
+\end{proof}

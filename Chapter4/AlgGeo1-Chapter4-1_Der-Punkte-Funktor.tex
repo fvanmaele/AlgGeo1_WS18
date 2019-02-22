@@ -1,0 +1,56 @@
+\chapter{Faserprodukte}
+
+\section{Der ,,Punkte-Funktor``}
+
+Kontravarianter Funktor, $\forall X\in\sch$,
+\begin{align*}
+  h_{X}:(\sch)^{\op} & \longrightarrow\set\\
+  S & \longmapsto h_{X}(S):=\Hom_{\sch}(S,X)\\
+  (f:T\rightarrow S) & \longmapsto(\Hom(S,X)\overset{f^{\ast}}{\rightarrow}\Hom(T,X),\ g\mapsto g\circ f)
+\end{align*}
+
+$f^{\ast}=h_{X}(S)$ heißen $S$-wertige Punkte von $X$. \textbf{Notation:
+}$X(S)$, $X(R)$, falls $S=\Spec R$.
+
+\textbf{Relative Version:} $X\in\schs0$, $S_{0}$ fixes Schemata.
+\begin{align*}
+  \schs0 & \longrightarrow\set\\
+  S & \longmapsto\Hom_{S_{0}}(S,X)
+\end{align*}
+
+\textbf{Notation: $X_{S_{0}}(S)$, $X_{R_{0}}(S)$, $X_{S_{0}}(R)$,
+  $X_{R_{0}}(R)$}
+\begin{example}
+  Sei $k$ algebraisch abgeschlossen, $X/k$ von endlichem Typ, $x\in X_{k}(k)$.
+  Dann ist
+  \[
+    \im(\Spec k\overset{x}{\longrightarrow}X)\in X
+  \]
+  abgeschlossener Punkt. $x\mapsto\im(x)$ liefert Bijektion, $X_{k}(k)\rightarrow|X|$
+  Menge der abgeschlossenen Punkte.
+\end{example}
+
+\begin{example}
+  Sei $X=\mathbb{A}^{n}=\Spec(\mathbb{Z}[T_{1},\ldots T_{n}])$. Dann:
+  \begin{align*}
+    \mathbb{A}^{n}(S) & =\Hom_{\sch}(S,\mathbb{A}^{n})=\Hom_{\ring}(\mathbb{Z}[T_{1},\ldots,T_{n}],\mathcal{O}_{S}(S))\\
+                      & =\Gamma(S,\mathcal{O}_{S})^{n}
+  \end{align*}
+\end{example}
+
+\begin{example}
+  Sei $X=\Spec(R[T_{1},\ldots,T_{n})/(f_{1},\ldots,f_{m}))$, $S$ ein
+  $R$-Schema. Dann:
+  \begin{align*}
+    X_{R}(S) & =\Hom_{R\text{-Alg}}(R[I]/(f),\mathcal{O}_{S}(S))\\
+             & =\{s\in\mathcal{O}_{S}(S)^{n}\mid f_{1}(s)=\cdots=f_{m}(s)=0\}
+  \end{align*}
+\end{example}
+
+\begin{example}
+  Sei $X=\Spec\mathbb{Z}[T,T^{-1}]$. Dann:
+  \[
+    X(S)=\Hom(\mathbb{Z}[T,T^{-1}],\mathcal{O}_{S}(S))=\Gamma(S,\mathcal{O}_{S})^{\times}.
+  \]
+  Hier sogar $h_{X}:\sch\rightarrow\grp$. $X$ ist eine abelsche Gruppe.
+\end{example}

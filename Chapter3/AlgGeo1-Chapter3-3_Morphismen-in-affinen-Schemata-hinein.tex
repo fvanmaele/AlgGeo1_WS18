@@ -1,0 +1,72 @@
+
+\section{Morphismen in affinen Schemata hinein}
+\begin{prop}[4]
+  Sei $X$ ein Schemata, $Y=\Spec B$ ein affines Schemata. Dann ist
+  die Abbildung
+  \begin{align*}
+    \Hom(X,Y) & \overset{\cong}{\longrightarrow}\Hom_{\ring}(B,\Gamma(X,\mathcal{O}_{X})),\\
+    (f,f^{\flat}) & \longmapsto f_{Y}^{\flat}
+  \end{align*}
+
+  eine Bijektion.
+\end{prop}
+
+\begin{prop}[5, Verkleben von Morphismen]
+  Seien $X,Y$ lokal geringte Räume. Für $U\subset X$ offen definiert
+  \[
+    \mathcal{F}:U\mapsto\Hom(U,Y)=\{(U,\mathcal{O}_{X|U})\rightarrow(Y,\mathcal{O}_{Y})\ \text{Morph. lokal ger. Räume\}}
+  \]
+
+  eine Garbe von Mengen auf $X$, d.h.
+  \begin{enumerate}
+  \item für eine offene Überdeckung $X=\bigcup_{i}U$, eine Familie $f_{i}:U_{i}\rightarrow Y_{i}$
+    verkleben zu Morphismen
+    \[
+      f:X\rightarrow Y\Longleftrightarrow f_{i}|_{U_{i}\cap U_{j}}=f_{j}|_{U_{i}\cap U_{j}}
+    \]
+  \item $f$ ist eindeutig bestimmt.
+  \end{enumerate}
+\end{prop}
+
+\begin{rem*}
+  $\mathcal{G}:U\mapsto\Hom_{\ring}(B,\Gamma(U,\mathcal{O}_{X}))$ ist
+  Garbe von Mengen.
+\end{rem*}
+\begin{proof}[Beweis von Proposition 5]
+  Verkleben topologischer Räume + stetige Abbildung klar. $\checkmark$
+
+  $\mathcal{O}_{Y}\rightarrow f_{\ast}\mathcal{O}_{X}$ lässt sich ebenfalls
+  verkleben.
+\end{proof}
+% 
+\begin{proof}[Beweis von Proposition 4]
+  $X=\bigcup_{i}U_{i}$ sei eine affine offene Überdeckung. Nach Proposition
+  2.35 ist $\Hom(U,Y)\rightarrow\Hom(B,\Gamma(U,\mathcal{O}_{X}))$
+  eine Bijektion. Für $V\subset U_{i}\cap U_{j}$ kommutiert das Diagramm
+  \[
+    \xymatrix{\Hom(U,Y)\ar[r]^{\cong}\ar[d] & \Hom(B,\Gamma(U,\mathcal{O}_{X})\ar[d]\\
+      \Hom(V,Y)\ar[r]^{\cong} & \Hom(B,\Gamma(V,\mathcal{O}_{X}))
+    }
+  \]
+
+  da $\Gamma(-)$ funktoriell ist. Es folgt, dass $\mathcal{F}\rightarrow\mathcal{G}$
+  ein Morphismus von Garben ist mit $\varphi_{U}:\mathcal{F}(U)\overset{\cong}{\rightarrow}\mathcal{G}(U)$
+  für alle $U\in\mathcal{B}$, und $F\overset{\cong}{\rightarrow}\mathcal{G}$
+  als Garbe. Somit $\mathcal{F}(X)\cong\mathcal{G}(X)$.
+\end{proof}
+$V\subset X$ offen beliebig, $\varphi_{V}=\underset{\underset{U\in B_{V}}{\longleftarrow}}{\lim}\varphi_{U}$.
+
+Da $\mathbb{Z}$ kofinales Objekt in der Kategorie der Ringe ist ($\mathbb{Z}\overset{\exists_{1}}{\rightarrow}R$
+für beliebige Ringe $R$), gilt:
+\begin{cor}[6]
+  Sei $X$ ein Schemata. $X$ besitzt einen eindeutig bestimmten Morphismus
+  $X\rightarrow\Spec(\mathbb{Z})$, d.h. $\Spec(\mathbb{Z})$ ist ein
+  terminales Objekt in der Kategorie der Schemata: Jedes Schemata ist
+  ein $\mathbb{Z}$-Schemata.
+\end{cor}
+
+Weiterhin:
+\begin{align*}
+  \Hom(X,\underbrace{\Spec\mathbb{Z}[T]}_{\mathbb{A}_{\mathbb{Z}}^{1}}) & =\Hom_{\ring}(\mathbb{Z}[T],\mathcal{O}_{X}(X))=\Gamma(X,\mathcal{O}_{X})\\
+  \Hom_{R}(X,\underbrace{\Spec R[T]}_{\mathbb{A}_{R}^{1}}) & =\Gamma(X,\mathcal{O}_{X})\text{ als }R\text{-Algebra für }R\text{-Schemata }X
+\end{align*}

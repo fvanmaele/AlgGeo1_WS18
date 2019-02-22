@@ -1,0 +1,125 @@
+\section{Verkleben von Schemata und disjunkte Vereinigung}
+\begin{defn}
+  Ein \textbf{Verklebe-Datum} von Schemata besteht aus:
+  \begin{itemize}
+  \item einer Indexierung $I$;
+  \item ein Schemata $U_{i}$ für $i\in I$;
+  \item ein affines Unterschemata $U_{ij}\subset U$ für alle $i,j\in I$;
+  \item einen Isomorphismus $U_{ij}\stackrel[\cong]{\varphi_{ji}}{\longrightarrow}U_{ji}$
+    für alle $(i,j)\in I\times I$, sodass:
+    \begin{enumerate}
+    \item $U_{ii}=U_{i}$ für alle $i\in I$;
+    \item (Kozykel-Bedingung): $\varphi_{kj}\circ\varphi_{ji}=\varphi_{ki}$
+      auf $U_{ij}\cap U_{ik}$, für alle $i,j,k\in I$.
+    \end{enumerate}
+  \end{itemize}
+\end{defn}
+
+Für die Kozykel-Bedingung soll implizit gelten:
+\begin{align*}
+  \varphi_{ji}(U_{ij}\cap U_{ik}) & \subseteq U_{jk}\\
+  i=j=k & \Rightarrow\varphi_{ii}=\id_{U_{i}},\\
+  \varphi_{ij}^{-1} & =\varphi_{ji},\text{ und}\\
+  \varphi_{ji}:U_{ij}\cap U_{ik} & \overset{\cong}{\rightarrow}U_{ji}\cap U_{jk}
+\end{align*}
+
+\begin{prop}[9]
+  Zu einem Verklebe-Datum $((U_{i})_{i\in I},(U_{ij})_{i,j\in I},(\varphi_{ij})_{i,j\in I})$
+  gibt es ein Schemata $X$ zusammen mit Morphismen $\psi_{i}:U_{i}\rightarrow X$,
+  sodass
+  \begin{itemize}
+  \item für alle $i\in I$ induziert $\psi_{i}$ einen Isomorphismus von $U_{i}$
+    auf offene Unterschemata von $X$;
+  \item $\psi_{j}\circ\varphi_{ji}=\psi_{i}$ auf $U_{ij}$ für alle $i,j\in I$;
+  \item $X=\bigcup_{i}\psi_{i}(U)$;
+  \item $\psi_{i}(U_{i})\cap\psi_{j}=\psi_{i}(U_{ij})=\psi_{j}(U_{ji})$ für
+    alle $i,j\in I$.
+  \end{itemize}
+  $(X,\psi_{i\in I})$ ist eindeutig bis auf eindeutige Isomorphie bestimmt.
+\end{prop}
+
+Zusammen mit Proposition 5 folgt die universelle Eigenschaft: Für
+$(T,\xi_{i}:U_{i}\rightarrow T)$ mit $\xi_{i}$ welche Isomorphismen
+\[
+  U_{i}\overset{\cong}{\rightarrow}\text{\{offenes Unterschemata von }T\}
+\]
+
+induzieren, sodass $\xi_{j}\circ\varphi_{ji}=\xi_{i}$ auf $U_{ij}$
+für alle $i,j\in I$, dann gibt es einen eindeutigen Morphismus $\xi:X\rightarrow T$
+mit $\xi\circ\psi_{i}=\xi_{i}$ für alle $i\in I$. ($\Longrightarrow$
+Eindeutigkeit von Proposition 9)
+
+Als topologischer Raum: $\coprod_{i\in I}U_{i}/\sim$ mit $x_{i}\in U_{i}\sim x_{j}\in U_{j}:\Leftrightarrow x_{i}\in U_{ij}$,
+$x_{j}\in U_{ji}$ und $x_{j}=\varphi_{ji}(x_{i})$. Nach Eigenschaft
+$(b)$ ist $\sim$ eine Äquivalenzrelation. Dann sind $\psi_{i}:U_{i}\rightarrow X$
+injektiv. Ferner haben wir $\forall i,j\in I$ die Eigenschaft $\psi_{i}(U_{i})=\psi_{i}(U_{i})\cap\psi_{j}(U_{j})$.
+
+$X$ hat also als topologischer Raum die Quotiententopologie, d.h.
+die feinste Topologie sodass alle Abbildungen $\psi_{i}$ stetig sind.
+$U\subset X$ offen genau dann, wenn $\psi_{i}^{-1}(U)\subset U_{i}$
+dort offen sind $\forall i\in I$. Insbesondere sind $\psi_{i}(U_{i})$
+und $\psi_{i}(U_{j})=\psi_{i}(U_{i})\cap\psi_{j}(U_{j})$ offen in
+$X$.
+
+Als lokal geringter Raum: ``Verkleben der Strukturgarben auf $U_{i}$''.
+$\mathcal{O}_{X}$ ist eindeutig auf einer Basis $B$ der Topologie
+definiert. Ohne Einschränkung reicht es hier, die Schnitte nur auf
+$U\subset X$ offen mit $U\subset\psi_{i}(U_{i})$ für ein $i\in I$.
+In dem Fall:
+\[
+  \mathcal{O}_{X}(U)=\mathcal{O}_{U_{i}}(\psi_{i}^{-1}(U))
+\]
+
+Für $U\subset\psi_{i}(U_{i})\cap\psi_{j}(U_{j})$
+\[
+  \xymatrix{U_{ij}\ar@{^{(}->}[r]\ar[d]_{\cong} & U_{i}\\
+    U_{ji}\ar@{^{(}->}[r] & U_{i} & X\supset U
+  }
+\]
+
+Dann gilt:
+
+\[
+  \mathcal{O}_{U_{i}}(\psi_{i}^{-1}(U))=\mathcal{O}_{U_{ij}}(\psi_{i}^{-1}(U))\cong\mathcal{O}_{U_{ji}}(\psi_{j}^{-1}(U))=\mathcal{O}_{U_{j}}(\psi_{j}^{-1}(U))
+\]
+
+Es folgt: $\mathcal{O}_{X}(U)$ unabhängig von Wahlen von $i$! Wir
+halten damit $\mathcal{O}_{X}$ Ringgarbe auf $X$, sodass $(X,\mathcal{O}_{X})$
+lokal geringter Raum da $(U_{i},\mathcal{O}_{U_{i}})$ lokal geringter
+Raum $\forall i\in I$, $U_{i}\xrightarrow[\psi_{i}]{\cong}(\psi_{i}(U_{i}),\mathcal{O}_{X}|_{\psi_{i}(U_{i})})$
+als lokal geringter Raum. Damit ist $X$ ein Schema und $X=\cup U_{i}$.
+
+Spezialfall: $U_{ij}=\emptyset$ für alle $i\neq j\in I$, $\coprod U_{i}$
+``disjunkte Vereinigung''.
+\end{proof}
+\begin{example}[10]
+  $X_{1},\ldots,X_{n}$ affine Schemata, $X_{i}=\Spec A_{i}$. Dann
+  ist
+  \[
+    \coprod X_{i}\cong\Spec\left(\prod_{i=1}^{n}A_{i}\right)\text{ offen}.
+  \]
+
+  (nicht für unendlich viele affin!)
+\end{example}
+
+\begin{example}[11]
+  $I=\{1,2\}$, $U_{12}\subset U_{1}\xrightarrow{\varphi}U_{21}\subset U_{2}$.
+  \[
+    X\underset{\text{offen}}{\subset}V=U_{1}\cup_{\varphi}U_{2},
+  \]
+
+  $\Gamma(V,\mathcal{O}_{X})=\{(s_{1},s_{2})\in\Gamma(V\cap U_{1},\mathcal{O}_{U_{1}})\times\Gamma(V\cap U_{2},\mathcal{O}_{U_{2}})\}$,
+  $\varphi^{\flat}(S_{2}|_{U_{21}\cap V})=S_{1}|_{U_{12}\cap V}$.
+\end{example}
+
+\textbf{Affine Gerade mit Doppelpunkt}: $k$ Körper.
+\begin{align*}
+  U_{1} & =U_{2}=\mathbb{A}_{k}^{1}=\Spec(k[T])\cong x\text{ abg.}\\
+  U_{12} & :=U_{1}\backslash\{x\}\\
+  U_{21} & :=U_{2}\backslash\{x\},\ \varphi=\id
+\end{align*}
+
+$X=U_{1}\cup_{\varphi}U_{2}$.  
+\begin{xca*}
+  $X$ ist \textbf{nicht} affin!
+\end{xca*}

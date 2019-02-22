@@ -1,0 +1,88 @@
+\section{Beispiele}
+\begin{example}[36, Integritätsbereiche]
+  Sei $A$ integer, $K=\Quot(A)$. Sei $X=\Spec A$, $\eta=(0)$. Dann
+  ist$\overline{\{\eta\}}=\Spec X$, d.h. jede nicht-leere offene Menge
+  $U\subset X$ enthält $\eta$. Es folgt: $\mathcal{O}_{X,y}=A_{(0)}=K$.
+  Für alle $f\in A$ gilt nach Definition 
+  \[
+    \mathcal{O}_{X}(D(f))=A_{f}\subset U.
+  \]
+
+  Sei $U\subset X$ beliebig offen. Es folgt:
+  \[
+    \mathcal{O}_{X}(U)=\underset{\underset{D(f)\subset U}{\longleftarrow}}{\lim}\mathcal{O}_{X}(D(f)=\bigcap_{\underset{D(f)\subset U}{f\in A}}A_{f}\subseteq K.
+  \]
+
+  Wie im Beweis von Satz 1.37 ist $a_{F}=\bigcap_{\mathfrak{p}\in D(f)}A_{\mathfrak{p}},$
+  also $\mathcal{O}_{X}(U)=\bigcap_{x\in U}\mathcal{O}_{X,x}$.
+\end{example}
+
+\begin{example}[37, Prinzipal offene Unterschemata affiner Schemata]
+  Sei $X=\Spec A$, $f\in A$. Sei $j:\Spec A_{f}\rightarrow\Spec A$
+  induziert von $A\rightarrow A_{f}$. $\Longrightarrow j:\Spec A_{j}\rightarrow D(f)$
+  ist Homoömorphismus (Proposition 2.12). Für alle $x\in D(f)$ ist
+  $j_{x}^{\#}$ der kanonische Isomorphismus $A_{\mathfrak{p}_{x}}\overset{\cong}{\rightarrow}(A_{f})_{\mathfrak{p}_{x}}$.
+  $\Longrightarrow(j,j^{\#})$ induziert einen Isomorphismus $\Spec A_{f}\cong(D(f),\mathcal{O}_{X|D(f)})$.
+\end{example}
+
+\begin{example}[38, Abgeschlossene Unterschemata affiner Schemata]
+  Sei $X=\Spec A$ und $\mathfrak{a}$ ein Ideal von $A$. Sei $\imath:\Spec A/\mathfrak{a}\rightarrow\Spec A$
+  der von $A\rightarrow A/\mathfrak{a}$ induzierte Morphismus affiner
+  Schemata. Nach Proposition 2.12 induziert $\imath$ einen Homöomorphismus
+  $\Spec A/\mathfrak{a}\overset{\cong}{\rightarrow}V(\mathfrak{a})\subseteq\Spec A$.
+  Sei $\overline{\mathfrak{p}_{x}}$ das Bild von $\mathfrak{p}_{x}$
+  in $A/\mathfrak{a}$. Für alle $x\in V(\mathfrak{a})$ ist der Morphismus
+  $i_{x}^{\flat}$ der kanonische Homomorphismus $A_{\mathfrak{p}_{x}}\rightarrow(A/\mathfrak{a})_{\overline{\mathfrak{p_{x}}}}$.
+  ($=0$, falls $x\in V(\mathfrak{a})$, also $\mathfrak{a}\notin f_{x}$.)
+  Schreibe kurz $V(\mathfrak{a})$ für den lokal geringten Raum 
+  \begin{align*}
+    \left(V(\mathfrak{a}),\imath_{x}(\mathcal{O}_{\Spec A/\mathfrak{a}})|_{V(\mathfrak{a})}\right) & \stackrel[\imath]{\cong}{\longleftarrow}\Spec(A/\mathfrak{a})
+  \end{align*}
+
+  Da $x\in V(\mathfrak{a})$, ist $\imath_{x}(\mathcal{O}_{\Spec A/\mathfrak{a}})|_{V(\mathfrak{a})}\overset{\cong}{\longrightarrow}i_{x}\mathcal{O}_{\Spec A/\mathfrak{a}}$.
+\end{example}
+
+\begin{example}[39]
+  Sei $B$ ein Ring und $\mathfrak{b}\subset B$ Ideal. $V(\mathfrak{b}^{n})=V(\mathfrak{b})\subset\Spec B$
+  als abgeschlossene Teilmenge hängt \emph{nicht }von $n\geq1$ ab,
+  aber $\Spec(B/\mathfrak{b}^{n})=V(\mathfrak{b}^{n})$ als offenes
+  Schemata sehr wohl!
+
+  Etwa: $B=k[T]$, $b=(T)$ mit $k$ ein algebraisch abgeschlossener
+  Körper. Für die abgeschlossenen Punkte von $\mathbb{A}_{k}^{1}=\Spec k[T]$
+  gilt:
+  \begin{align*}
+    \Spec(k[T]) & \longleftrightarrow k\\
+    \mathfrak{b} & \longleftrightarrow0
+  \end{align*}
+
+  Sei $A=k[T]/(T^{n})$, $X=\Spec A=\{x\}$. Es gilt: 
+  \begin{align*}
+    \mathcal{O}_{X}(X) & =\mathcal{O}_{X,x}=A\\
+    \kappa(x) & =k\\
+    n>1:\ 0\neq\mathfrak{m}_{x} & =T\mod T^{n}
+  \end{align*}
+
+  Betrachte $X\subset\mathbb{A}_{k}^{1}$ als abgeschlossenes ,,Unterschemata``
+  welches ,,konzentriert in einem Punkt`` ist. $B=k[T]$ ist $k$-Algebra
+  von Funktionen auf $\mathbb{A}^{1}(k)$. (vgl. Beispiel 2.14.) Die
+  Einschränkung einer solchen Funktion $f\in k[T]$ auf $X$ ist gegeben
+  durch $k[T]\rightarrow k[T]/(T^{n})$. Wir unterscheiden:
+  \begin{itemize}
+  \item[$n=1$.] $k[T]/(T^{n})=k$, $f\mapsto f(0)$.
+  \item[$n>1$.] $k[T]/(T^{n})\neq k$, $f\mapsto$ (,,Taylor-Entwicklung`` von
+    $A$ um 0 der Länge $n-1$). $\{x\}\subset\mathbb{A}_{k}^{1}$ hat
+    ,,infinitesimale Ausdehnung der Länge $n-1$ in $\mathbb{A}_{k}^{1}$``
+  \end{itemize}
+  Sei nun $\mathbb{A}_{k}^{2}:=\Spec(k[T,U])$ betrachtet als $\{(u,t)\mid u,f\in k\}=k^{2}$.
+  Sei $\mathfrak{a}_{1}=(U)$, $\mathfrak{a}_{2}=(U-T^{n})$. Diese
+  definieren:
+  \[
+    X_{1}=\{u,t)\in\mathbb{A}^{2}(k)\mid u=0\},\quad X_{2}=\{(u,t)\in\mathbb{A}^{2}(k)\mid u=t^{n}\}.
+  \]
+
+  Es ist $X_{1}\cap X_{2}=\{(0,0)\}$ als Menge. Aber für $n>1$ treffen
+  sich beide Mengen \emph{nicht} transversal! Als affine Schemata wird
+  später der Schnitt als $\Spec k[T,U]/(\mathfrak{a}_{1}+\mathfrak{a}_{2})$
+  definiert, also eine präzisere Beschreibung als Durchschnitt.
+\end{example}

@@ -1,0 +1,34 @@
+\section{Faserprodukte in beliebigen Kategorien}
+
+Sei $\mathcal{C}$ eine Kategorie, $S\in\obj(\mathcal{C})$, $f:X\rightarrow S$,
+$g:Y\rightarrow S$ Morphismen.
+\begin{defn}[6]
+  Ein Tupel $(Z,p,q)$ mit $Z\in\obj(\mathcal{C})$ und Morphismen
+  $p:Z\rightarrow X$, $q:Z\rightarrow Y$, $f\circ p=g\circ q$, hei{\small{}ßt
+  }\textbf{\small{}Faserprodukt}{\small{} von $X$ und $Y$ über $S$
+    (bzw. von $f,g$), falls für jedes $T\in\obj(\mathcal{C})$ und Paare
+    $(u:T\rightarrow X,v:T\rightarrow Y)$ von Morphismen mit $f\circ u=g\circ v$
+    genau ein Morphismus $w:T\rightarrow Z$ existiert mit $p\circ w=u$,
+    $g\circ w=v$.}{\small\par}
+\end{defn}
+
+\textbf{Notation: }$X\times_{S}Y$ oder $X\times_{f,S,g}Y:=Z$, $(u,v)_{S}:=w$.
+\[
+  \xymatrix{T\ar@/^{1pc}/[rrd]^{u}\ar@/_{1pc}/[ddr]_{v}\ar[dr]|-{\exists_{1}}\\
+    & X\times_{S}Y\ar[r]^{p}\ar[d]^{q} & X\ar[d]^{f}\\
+    & Y\ar[r]_{g} & S
+  }
+\]
+
+Ist $S$ ein finales Objekt in $\mathcal{C}$, so ist $X\times_{S}Y=X\times Y$
+das kategorielle Produkt.
+\begin{example}[7]
+  \mbox{}
+  \begin{enumerate}
+  \item $\mathcal{C}=\set$. $X\times_{S}Y=\{(x,y)\in X\times Y\mid f(x)=g(x)(\}$.
+  \item $\mathcal{C}=\Top$, $f:X\rightarrow S$, $g:Y\rightarrow S$ stetige
+    Abbildungen. Versehe $\{(x,y)\mid f(x)=g(y)\}\subset X\times Y$ mit
+    der Topologie induziert von der Produkttopologie auf $X\times Y$.
+    Dies ist ein Faserprodukt in $\Top$.
+  \end{enumerate}
+\end{example}

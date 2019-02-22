@@ -1,0 +1,80 @@
+\section{Unterschemata und Einbettung}
+
+Offene und abgeschlossene Unterschemata sind Spezialfälle von \emph{lokal
+  abgeschlossene} Unterschemata.
+\begin{defn}[37]
+  \mbox{}
+  \begin{enumerate}
+  \item Sei $X$ ein Schemata. Ein \textbf{Unterschemata} von $X$ ist ein
+    Schemata $(Y,\mathcal{O}_{Y})$, so dass $Y\subset X$ eine lokal
+    abgeschlossene Teilmenge von $X$ ist, und $Y$ ein abgeschlossenes
+    Unterschemata von dem offenen Unterschemata $U=X\backslash(\overline{Y}\backslash Y)\subseteq X$
+    ist. Wir haben dann einen natürlichen Morphismus $Y\rightarrow X$
+    von Schemata.
+  \item Eine \textbf{Einbettung} $i:Y\rightarrow X$ ist ein Morphismus von
+    Schemata, dessen unterlegende stetige Abbildung ein Homöomorphismus
+    von $Y$ auf eine lokale abgeschlossene Teilmenge von $X$ ist, und
+    sodass für alle $y\in Y$ : 
+    \[
+      i_{y}^{\#}:\mathcal{O}_{X,i(y)}\rightarrow\mathcal{O}_{Y,y}
+    \]
+    surjektiv ist.
+  \end{enumerate}
+\end{defn}
+
+\begin{rem}[38]
+  \mbox{}
+  \begin{enumerate}
+  \item Ist $Y$ ein Unterschemata von $X$, dann ist $Y\hookrightarrow X$
+    eine Einbettung. Umgekehrt bestimmt jede Einbettung einen Isomorphismus
+    seiner Quelle mit einem eindeutigen Unterschemata seines Ziels.
+  \item Ist $Y$ ein Unterschemata von $X$, wessen unterliegende Teilmenge
+    abgeschlossen in $X$ ist, dann ist $Y$ ein abgeschlossenes Unterschemata
+    von $X$.
+  \item Das Analogon von $(ii)$ für offene Unterschemata ist i.A. falsch.
+  \item Jede Einbettung $i:Y\hookrightarrow X$ faktorisiert als:
+    \[
+      \xymatrix{Y\ar@{^{(}->}[r]^{i}\ar@{^{(}->}[rd] & X\\
+        & U=X\backslash(\overline{i(Y)}\backslash i(Y))\ar@{^{(}->}[u]
+      }
+    \]
+  \end{enumerate}
+\end{rem}
+
+\begin{defn}[39]
+  Sei $X$ ein Schemata und $Z,Z'$ Unterschemata. Wir sagen $Z'$
+  \textbf{majorisiert} $Z$, wenn die Inklusion $Z\hookrightarrow X$
+  faktorisiert als:
+  \[
+    \xymatrix{Z\ar@{^{(}->}[r]\ar[rd] & X\\
+      & Z'\ar@{^{(}->}[u]
+    }
+    .
+  \]
+\end{defn}
+
+\begin{rem}[40]
+  Sei \textbf{P} die Eigenschaft eines Schemata-Morphismus, eine affine
+  Einbettung, bzw. abgeschlossene Einbettung, bzw. Einbettung zu sein.
+  Dann:
+  \begin{enumerate}
+  \item Die Eigenschaft \textbf{P} ist lokal auf der Basis, d.h. für $f:Z\rightarrow X$
+    Morphismus, $X=\bigcup_{i\in I}U_{i}$ offene Überdeckung hat $f$
+    die Eigenschaft \textbf{P} $\Longleftrightarrow\forall i$ hat $f^{-1}(U_{i})\rightarrow U_{i}$
+    die Eigenschaft \textbf{P}.
+  \item Die Komposition zweier Morphismen mit Eigenschaft \textbf{P} hat Eigenschaft
+    \textbf{P}.
+  \end{enumerate}
+\end{rem}
+
+\begin{example}[41]
+  \mbox{}
+  \begin{enumerate}
+  \item Sei $I\subseteq R[T_{0},\ldots,T_{n}]$ homogenes Ideal. Dann ist
+    $V_{+}(I)\subseteq\mathbb{P}_{R}^{n}$ ein abgeschlossenes Unterschemata
+    von $\mathbb{P}_{R}^{n}$. (Nach Bemerkung 40.1, denn $V_{+}(I)\cap U_{i}\subseteq U_{i}$
+    abgeschlossen.)
+  \item Alle Unterschemata eines $k$-Schematas $X$ von endlichem Typ sind
+    selbst von endlichem Typ. 
+  \end{enumerate}
+\end{example}

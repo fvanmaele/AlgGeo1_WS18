@@ -1,0 +1,95 @@
+\section{Noethersche Schemata }
+\begin{defn}[14]
+  Ein Schema heißt \textbf{lokal noethersch}, falls eine affine offene
+  Überdeckung $X=\bigcup U_{i}$ existiert, d.d. alle $\Gamma(U_{i},\mathcal{O}_{X})$
+  (affine Koordinatenringe) \textbf{noethersch} sind. $X$ heißt \textbf{noethersch},
+  falls zusätlich quasi-kompakt.
+\end{defn}
+
+Faktum: Lokalisierung noetherscher Ringe bleiben noethersch.
+
+$\Rightarrow a)$ Jedes lokal noethersche Schema besitzt eine Basis
+der Topologie aus noetherschen affin offenen Unterschemata.
+
+b) $X$ lokal noethersch. Dann ist $\mathcal{O}_{X,x}$ noethersch
+$\forall x\in X$.
+
+Für offene Schemata gilt ferner: lokal noethersch $\Rightarrow$ noethersch.
+
+\begin{prop}[15]
+  Für $X\subset\Spec A$ affin gilt:
+  \[
+    X\text{ noethersch }\Leftrightarrow A\text{ noethersch}
+  \]
+\end{prop}
+
+\begin{proof}
+  \mbox{}
+  \begin{casenv}
+  \item[``$\Leftarrow$''] $X$ überdeckt sich selbst mit $\Gamma(X,\mathcal{O}_{X})=A$ noethersch.
+  \item[``$\Rightarrow$''] Sei $I\subset A$ beliebiges Ideal. Zu zeigen: $I$ ist endlich erzeugt.
+    Nach Voraussetzung ist
+    \[
+      X=\bigcup_{i=1}^{n}\Spec A_{i},\quad A_{i}\text{ noethersch}.
+    \]
+    Ohne Einschränking: $A_{i}=A_{f_{i}}$ und noethersch. Daraus folgt:
+    $J_{i}=IA_{f_{i}}=I_{f_{i}}$ sind endlich erzeugt, Behauptung folgt
+    aus Lemma 16.
+  \end{casenv}
+\end{proof}
+\begin{lem}[16]
+  $\Spec(A)=\cup_{i\in I}D(f_{i})$, $\#I<\infty$, $M$ $A$-Modul.
+  Dann:
+  \[
+    M\text{ e.e. über }A\Leftrightarrow M_{f_{i}}\text{ e.e. }A_{f_{i}}\text{-Modul }\forall i\in I.
+  \]
+\end{lem}
+
+\begin{proof}
+  \mbox{}
+  \begin{casenv}
+  \item[``$\Rightarrow$'' ] Endlich erzeugt heißt $A^{n}\twoheadrightarrow M$, Lokalisierung
+    exakt also $A_{f_{i}}^{n}\twoheadrightarrow M_{f_{i}}$ exakt.
+  \item[``$\Leftarrow$''] $M_{f_{i}}$ werden von $\frac{m_{ij}}{f_{i}^{n_{ij}}}$, $j=1,\ldots,r_{i}$,
+    $m_{ij}\in M$, $n_{ij}\in\mathbb{N}_{0}$ als $A_{f_{i}}$-Modul
+    erzeugt.
+
+    $\Rightarrow N:=\langle m_{ij}\rangle_{A}\subset M$ ist endlich erzeugt
+    und $N_{f_{i}}=M_{f_{i}}$.
+
+    $\Rightarrow(M/N)_{\mathfrak{p}}=(M_{f_{i}}/N_{f_{i}})_{\mathfrak{p}}=0$
+    für alle Primideale $\mathfrak{p}\in\Spec A$.
+
+    $\Rightarrow$ (Lokal-Global-Prinzip aus der kommutativen Algebra)
+    $N=M$.
+
+  \end{casenv}
+\end{proof}
+\begin{rem*}
+  $X$ noethersches Schema. Dann ist $X$ als topologischer Raum noethersch.
+\end{rem*}
+\begin{proof}
+  Für $X$ affin klar, sonst $X=\cup_{i=1}^{r}X_{i}$, $X_{i}=\Spec(A_{i})$
+  noethersch. Sei
+  \[
+    X\supseteq Z_{1}\supseteq\cdots\supseteq Z_{n}\supseteq\cdots
+  \]
+
+  absteigende Kette abgeschlossener Teilmengen. $(Z_{j}\cap X_{i})_{j}$
+  absteigende Kette abgeschlossener Teilmengen in $X_{i}$.
+
+  $\Longrightarrow$ (endliche Überdeckung) $\exists N$ d.d. $Z_{j}\cap X_{i}=Z_{N}\cap X_{i}$
+  für alle $j\geq N$.
+
+  $\Longrightarrow Z_{j}=Z_{N}$.
+\end{proof}
+\begin{cor}[17]
+  Sei $X$ (lokal) noethersches Schema, $U\subset X$ offenes Unterschema.
+  Dann ist $U$ ein (lokal) noethersches Schema.
+\end{cor}
+
+\begin{proof}
+  Lokal noethersch $X=\bigcup U_{i}$, $U_{i}\cap U=\bigcup D(f_{i})$.
+  Sei $X$ noethersch. Dann ist der topologische Raum $X$ noethersch.
+  Nach Lemma $I.20$ ist dann jede offene Teilmenge quasi-kompakt.
+\end{proof}

@@ -1,0 +1,92 @@
+\section{Reduzierte und ganze Schemata }
+\begin{defn}[21]
+  Ein Schema $X$ heißt 
+  \begin{enumerate}
+  \item \textbf{reduziert}, falls alle $\mathcal{O}_{X,x}$, $x\in X$, reduzierte
+    Ringe sind.
+  \item \textbf{ganz}, falls $X$ reduziert und irreduzibel ist.
+  \end{enumerate}
+\end{defn}
+
+\begin{prop}[22]
+  \mbox{}
+  \begin{enumerate}
+  \item $X$ schema ist reduziert (ganz) $\Leftrightarrow\Gamma(U,\mathcal{O}_{X})$
+    reduziert (integer) für alle $U\subseteq X$ offen.
+  \item Sei $X$ ganz. Dann ist der Halm $\mathcal{O}_{X,x}$ integer $\forall x\in X$.
+    (Die Umkehrung ist im Allgemeinen falsch!)
+  \end{enumerate}
+\end{prop}
+
+\begin{proof}
+  \mbox{}
+  \begin{enumerate}
+  \item \textbf{reduzibel,} ``$\Rightarrow$''. $f\in\Gamma(U,\mathcal{O}_{X})$
+    mit $f^{n}=0$. Angenommen, $f\neq0$. Dann gibt es ein $x\in U$
+    mit $f_{x}\neq0$ in $\mathcal{O}_{X,x}$, $f_{x}^{n}=0$. Widerspruch
+
+    \textbf{reduzibel,} ``$\Leftarrow$''. Sei $\overline{f}\in\mathcal{O}_{X,x}$
+    nilpotent. Dann gibt es ein $x\in U\subset X$ offen und $f\in\Gamma(U,\mathcal{O}_{X})$
+    mit $f_{x}=\overline{f}$. Ohne Einschränkng: $f$ nilpotent (mit
+    $U$ verkleinern sodass $f^{n}|_{U}=0$). Nach Voraussetzung ist dann
+    $f=0$, also $\overline{f}=0$.
+
+    \textbf{ganz,} ``$\Rightarrow$''. Sei $X$ ganz. Dann ist $U\subset X$
+    offen ganz nach den Definitionen. Daher reicht es zu zeigen, dass
+    $\Gamma(X,\mathcal{O}_{X})$ integer ist. Seien $f,g\in\mathcal{O}_{X}(X)$
+    mit $fg=0$. Dann ist $X=V(f)\cup V(g)$. $X$ ist irreduzibel, also
+    etwa $X=V(f)$. \emph{Behauptung}: $f=0$.
+
+    Da Verschwinden aufgrund des Garbenaxioms eine lokale Frage ist, setze
+    ohne Einschränking $X=\Spec A$ affin. Es folgt: $f\in\bigcap_{\Spec A}\mathfrak{p}=\sqrt{(0)}=0$.
+
+    \textbf{ganz, }``$\Leftarrow$''. $\Gamma(U,\mathcal{O}_{X})$ integer,
+    also reduziert. Nach (1, reduziert) ist $X$ reduziert. Angenommen
+    es gibt $\emptyset\neq U_{1},U_{2}\subset X$ offen mit $\emptyset=U_{1}\cap U_{2}$.
+    Nach den Garbenaxiomen enthält dann $\Gamma(U_{1}\cup U_{2},\mathcal{O}_{X})=\Gamma(U_{1},\mathcal{O}_{X})\times\Gamma(U_{2},\mathcal{O}_{X}$)
+    Nullteiler $(1,0)\cdot(0,1)=0$. Widerspruch.
+  \item Folgt aus 1, da $A$ integer, $0\notin S$. Es folgt: $A_{S}$ integer
+    ($\subseteq\Quot(A)$).
+  \end{enumerate}
+\end{proof}
+\begin{rem*}
+  $X=\Spec A$ ganz $\Leftrightarrow A$ integer, $\eta\in X$ generischer
+  Punkt $\Leftrightarrow(0)\subset A$. Es ist $\mathcal{O}_{X,\eta}=A_{(0)}=\Quot(A)$,
+  d.h. für jedes ganze Schema $X$ gilt: $\mathcal{O}_{X,\eta}$ ist
+  Körper (mit generischer Punkt $\eta$).
+\end{rem*}
+\begin{defn}[23]
+  $X$ ganz, $\eta\in X$ generischer Punkt. Dann heißt $K(X):=\mathcal{O}_{X,\eta}$
+  der \textbf{Funktionenkörper} von $X$.
+\end{defn}
+
+\begin{prop}[24]
+  Sei $X$ noethersches irreduzibles Schema, $\eta\in X$ generischer
+  Punkt. Dann sind äquivalent:
+  \begin{enumerate}
+  \item $\mathcal{O}_{X,\eta}$ ist reduziert.
+  \item $\exists\emptyset\neq U\subset X$ reduziertes offenes Unterschema.
+  \end{enumerate}
+  Für $(ii)$ sagt man auch: $\mathcal{O}_{X,x}$ ist \textbf{generisch}
+  reduziert.
+\end{prop}
+
+\begin{proof}
+  \mbox{}
+  \begin{itemize}
+  \item[$``\Rightarrow"$] Sei ohne Einschränkung $X=\Spec A$ affin, $A$ nach Voraussetzung
+    noethersch, $\eta\leftrightarrow\mathfrak{p}$ eindeutiges minimales
+    Primideal ($A$ irreduzibel). $\Longrightarrow\mathfrak{p}=(f_{1},\ldots,f_{n})_{A}$
+    endlich erzeugt. $\Longrightarrow\frac{f_{i}}{1}\in\nil(A_{\mathfrak{p}})=(0)\subset A_{\mathfrak{p}}=\mathcal{O}_{X,\eta}$,
+    da $\mathcal{O}_{X,\eta}$ reduziert. $\exists g\in A\backslash\mathfrak{p}$
+    $\Longrightarrow$ d.d. $\frac{f_{1}}{1}=0\sim A_{g}$. $\Longrightarrow0=\nil(A)_{g}=\nil(A_{g})$,
+    d.h. $A_{g}$ ist reduziert, d.h. $U:=D(g)$.
+  \item[$``\Leftarrow"$] $\emptyset\neq U\subset X$ reduziert offen. $\Longrightarrow\eta\in U$
+    s.d. $\mathcal{O}_{X,x}=\mathcal{O}_{X,\eta}$ reduziert.
+  \end{itemize}
+\end{proof}
+\begin{rem*}
+  Analog zeigt man: $X$ noethersches Schema und $\mathcal{O}_{X,x}$
+  reduzibel für ein $x\in X$ $\Longrightarrow\exists x\in U\subset X$
+  offen, d.d. $U$ reduziert ist.
+\end{rem*}

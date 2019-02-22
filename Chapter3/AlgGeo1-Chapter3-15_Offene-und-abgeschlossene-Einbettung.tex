@@ -1,0 +1,135 @@
+\section*{Unterschemata und Immersion (Einbettungen)}
+
+\section{Offene und abgeschlossene Einbettung}
+\begin{defn}[33]
+  Ein Morphismus $j:Y\rightarrow X$ von Schemata heißt \textbf{offene
+    Einbettung}, falls die unterliegende stetige Abbildung ein Homöomorphismus
+  von $Y$ auf eine \emph{offene} Menge $U\subset X$ ist, sowie der
+  Garbenhomomorphismus $\mathcal{O}_{X}\rightarrow j_{\ast}\mathcal{O}_{Y}$
+  einen Isomorphismus $\mathcal{O}_{X|U}\cong j_{\ast}\mathcal{O}_{Y}$
+  von Garben über $U$ induziert.
+\end{defn}
+
+,,$j$ induziert Isomorphismus zu $Y$ und offenen Unterschemata
+$U$``
+\begin{defn}[34]
+  Sei $(X,\mathcal{O}_{X})$ ein geringter Raum. Eine Untergarbe $\mathcal{I}\subset\mathcal{O}_{X}$
+  heißt \textbf{Idealgarbe}, falls $\Gamma(U,\mathcal{I})\unlhd\Gamma(U,\mathcal{O}_{X})$
+  Ideal ist für alle $U\subseteq X$ offen. Es bezeichne $\mathcal{O}_{X}/\mathcal{I}$
+  die Quotientengarbe assoziiert von der Prägarbe $U\mapsto\mathcal{O}_{X}(U)/\mathcal{I}(U)$.
+  Dies ist eine Prägarbe mit $\mathcal{O}_{X}\rightarrow\mathcal{O}_{X}/\mathcal{I}$
+  surjektiv, denn auf Halme:
+  \[
+    \underset{\underset{x\in U}{\longrightarrow}}{\lim}(\mathcal{O}_{X}(U)\twoheadrightarrow\mathcal{O}_{X}(U)/\mathcal{I}(U))=\mathcal{O}_{X,x}\twoheadrightarrow(\mathcal{O}_{X}/\mathcal{I})_{x}.
+  \]
+\end{defn}
+
+\begin{defn}[35]
+  Sei $X$ ein Schemata.
+  \begin{enumerate}
+  \item Ein \textbf{abgeschlossenes Unterschemata von $X$ }ist gegeben durch
+    eine abgeschlossene Menge $Z\subseteq X$ ($i:Z\rightarrow X$ Inklusion),
+    sowie eine Garbe $\mathcal{O}_{Z}$ auf $Z$, sodass $(Z,\mathcal{O}_{Z})$
+    ein Schemata und $i_{\ast}\mathcal{O}_{Z}\cong\mathcal{O}_{X}/I$
+    für eine Idealgarbe $I\subset\mathcal{O}_{X}$.
+  \item Ein Morphismus $i:Z\rightarrow X$ von Schemata heißt \textbf{abgeschlossene
+      Einbettung}, falls die unterliegende stetige Abbildung einen Homöomorphismus
+    zwischen $Z$ und eine abgeschlossene Teilmenge von $X$ ist, und
+    der Garbenhomomorphismus $i^{\flat}:\mathcal{O}_{X}\rightarrow i_{\ast}\mathcal{O}_{X}$
+    surjektiv ist.
+  \end{enumerate}
+  Ist $Z\subseteq X$ ein abgeschlossenes Unterschemata wie in (1),
+  so ist $(i,i^{\flat})$ eine abgeschlossene Einbettung. Umgekehrt
+  bestimmt jede abgeschlossene Einbettung einen Isomorphismus von seiner
+  Quelle auf ein eindeutiges abgeschlossenes Unterschemata seines Ziels.
+
+  \textbf{Warnung:} Nicht für jede Idealgarbe $\mathcal{I}$ ist
+  \[
+    (Z=\supp\mathcal{O}_{X}/\mathcal{I},\mathcal{O}_{X}/\mathcal{I})
+  \]
+
+  ein Schema. Später: gilt gdw. $\mathcal{I}$ quasi-kompakt ist.
+\end{defn}
+
+\begin{thm}[36]
+  Sei $X=\Spec A$. Dann ist die Abbildung
+  \begin{align*}
+    \text{\{Ideale }A\} & \overset{1:1}{\longleftrightarrow}\{\text{abg. Unterschemata von }X\}\\
+    \mathfrak{a} & \longmapsto V(\mathfrak{a})\cong\Spec(A/\mathfrak{a})
+  \end{align*}
+
+  eine Bijektion. Insbesondere ist jedes abgeschlossene Unterschemata
+  eines affinen Schematas affin.
+\end{thm}
+
+\begin{proof}
+  Sei $Z$ ein abgeschlossenes Unterschemata, $i:Z\hookrightarrow X$
+  Inklusion. Definition $\Longrightarrow\mathcal{O}_{X}\twoheadrightarrow i_{\ast}\mathcal{O}_{Z}$
+  surjektiv. Sei:
+  \[
+    \mathcal{I}_{Z}:=\ker(\mathcal{O}_{X}(X)\rightarrow\Gamma(X,i_{\ast}\mathcal{O}_{Z})=\Gamma(Z,\mathcal{O}_{Z}))\unlhd A
+  \]
+
+  Ideal. Falls $Z$ von der Form $V(\mathfrak{a})$ ist (was zu zeigen
+  ist!) gilt $\mathcal{I}_{Z}=\mathfrak{a}$. Daher reicht z.z. $Z=V(\mathcal{I}_{Z})$.
+  \textbf{Dazu:
+    \[
+      \xymatrix{A\ar[r]^{\varphi}\ar@{->>}[dr] & \Gamma(Z,\mathcal{O}_{Z})\\
+        & A/\mathcal{I}_{Z}\ar@{^{(}->}[u]
+      }
+    \]
+  }
+
+  faktorisiert per Definition. $\Longrightarrow$ Das Diagramm
+  \[
+    \xymatrix{Z\ar@{^{(}->}[r]^{i}\ar[rd] & X\\
+      & \Spec(A/\mathcal{I}_{Z})\ar@{^{(}->}[u]
+    }
+  \]
+
+  kommutiert. Es ist $\Mor(Z,\Spec A)=\Hom(A,\Gamma(Z,\mathcal{O}_{Z}))$,
+  ohne Einschränkung: $\mathcal{I}_{Z}=0$ (sonst ersetze $A$ durch
+  $A/\mathcal{I}_{Z}$). Zu zeigen: $Z\hookrightarrow X=V(\mathfrak{a})$
+  ist ein Isomorphismus.
+
+  Wir wissen: die unterliegende stetige Abbildung topologischer Räume
+  ist injektiv und abgeschlossen. ($A\subset_{\text{abg.}}Z\subset X$
+  $\Longrightarrow A\subset X$ abg.) Bleibt zu zeigen: surjektiv.
+
+  Sei $U\subseteq Z$ offen mit $(U,\mathcal{O}_{X|U})$ affin. So gilt:
+  \begin{align*}
+    U\subset U\backslash D(\varphi(s)|_{U}) & =V_{U}(\varphi(s)|_{U})\\
+                                            & =\varphi(s)|_{U}\in\mathcal{O}_{Z}(U)\text{ nilpotent}.
+  \end{align*}
+
+  Endliche Überdeckung von $Z$ durch affine Schemata $\Longrightarrow\varphi(s^{N})=0$.
+  $\varphi$ injektiv $\Longrightarrow s^{N}=0$ bzw. $V(s)=X$. $Z$
+  abgeschlossen in $X$ $\Longrightarrow i(Z)=X$.
+
+  \textbf{Behauptung: }Der Homomorphismus von Garben $\mathcal{O}_{X}\rightarrow\mathcal{O}_{Z}$
+  ist bijektiv. Reicht zu zeigen: injektiv (da surjektiv nach Voraussetzung).
+
+  Sei $x\in X$ beliebig, $\mathcal{O}_{X,x}=A_{\mathfrak{p}_{x}}$.
+  Sei $\frac{g}{1}\in\ker(\mathcal{O}_{X,x}\rightarrow\mathcal{O}_{Z,x}$).
+  Überdecke
+  \[
+    Z=U\cup\bigcup_{i\in I}U_{i},\quad\#I<\infty
+  \]
+
+  mit:
+  \begin{enumerate}
+  \item $(U,\mathcal{O}_{Z\mid U})$, $(U_{i},\mathcal{O}_{Z\mid U_{i})}$
+    affin für alle $i\in I$;
+  \item $x\in U$, $\varphi(g)|_{U}=0$.
+  \end{enumerate}
+  Wähle $s\in A$ mit $x\in D(s)\subseteq U$. \textbf{Behauptung: }$\varphi(s^{N}g)=0$
+  für $N>0$. Mit $\varphi$ injektiv folgt dann $s^{N}g=0$, und $\frac{g}{1}=0$
+  in $\mathcal{O}_{X,x}$ da $s$ eine Einheit ist in $\mathcal{O}_{X,x}$.
+  \begin{itemize}
+  \item Nach (2) ist $\varphi(g)=0$, d.h. $\varphi(s\cdot g)|_{U}=\varphi(s)|_{U}\cdot\underbrace{\varphi(g)|_{U}}_{=0}=0$.
+  \item $D_{U_{i}}(\varphi(s)|_{U_{i}})=D(s)\cap U_{i}\subseteq U\cap U_{i}$,
+    also $\varphi(g)|_{D_{U_{i}}(\varphi(s)|_{U_{i}})}=0$, d.h. $\frac{\varphi(g)}{1}=0$
+    in $\mathcal{O}_{Z}(U_{i})_{\varphi(s)|_{U_{i}}}$. $\Longleftrightarrow\varphi(s)|_{U_{i}}^{N_{i}}\varphi(g)=\varphi(s^{N_{i}}g)=0$
+    (Die Indexmenge $I$ ist endlich). Setze $N:=\max_{i\in I}\{1,N_{i}\}$.
+  \end{itemize}
+\end{proof}

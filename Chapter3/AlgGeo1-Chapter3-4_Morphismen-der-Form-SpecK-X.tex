@@ -1,0 +1,51 @@
+\section{Morphismen der Form $\Spec(K)\rightarrow X$}
+
+Sei $X$ ein Schemata und sei $x\in U\subset X$ offene affine Umgebung
+von $x$, z.B. $U=\Spec A$. Sei $\mathfrak{p}=\mathfrak{p}_{x}\subset A$.
+Es folgt: $\mathcal{O}_{X,x}=\mathcal{O}_{U,x}=A_{\mathfrak{p}}$,
+und der Homomorphismus $A\rightarrow A_{\mathfrak{p}}$ induziert
+\[
+  j_{x}:\Spec\mathcal{O}_{X,x}=\Spec A_{\mathfrak{p}}\longrightarrow\Spec A=U\subset X
+\]
+
+Morphismus von Schemata, welcher nach Proposition 2 unabhängig von
+$U$ ist. Nach Proposition 2.22 ist
+\begin{align*}
+  j_{x}:\Spec\mathcal{O}_{X,x}\overset{\cong}{\longrightarrow}Z & =\{x'\in X\mid x'\text{ Verallgemeinerung von }x\}\\
+  (x\in\{x'\}\Leftrightarrow\mathfrak{p}_{x'}\subset\mathfrak{p}_{x})\  & =\bigcap_{x\in U\subseteq_{\text{off.}}X}U
+\end{align*}
+
+Sei $\kappa(x)=\mathcal{O}_{X,x}/\mathfrak{m}_{x}$. Die Abbildung
+$\mathcal{O}_{X,x}\rightarrow\kappa(x)$ induziert einen Morphismus
+von Schemata
+\begin{align*}
+  i_{x}:\Spec\kappa(x) & \longrightarrow\Spec\mathcal{O}_{X,x}\longrightarrow X\\
+  \{\text{pt}\} & \longmapsto x
+\end{align*}
+
+Nun sei $K$ ein beliebiger Körper, und $f:\Spec K\rightarrow X$
+ein beliebiger Morphismus mit $f(\text{\{pt\}})=x\in X$. Dieser induziert
+einen lokalen Homomorphismus
+\[
+  \xymatrix{\mathcal{O}_{X,x}\ar[r]\ar[d] & K=\mathcal{O}_{\Spec(K),(0)}\\
+    \kappa(x)\ar[ur]_{\imath}
+  }
+\]
+
+d.h. $f$ faktorisiert als $f=i_{x}\circ(\Spec\imath):\Spec K\rightarrow\Spec\kappa(x)\rightarrow X$.
+Damit haben wir:
+\begin{prop}[7]
+  Die Abbildung
+  \[
+    \Hom(\Spec K,X)\longrightarrow\{(x,\imath):x\in X,\ \imath:\kappa(x)\rightarrow K\}
+  \]
+
+  ist eine Bijektion.
+\end{prop}
+
+\begin{proof}
+  Umgekehrt bilden wir:
+  \[
+    (x,\imath:\kappa(x)\rightarrow K)\longrightarrow(\Spec K\overset{\Spec\imath}{\rightarrow}\Spec\kappa(x)\overset{i_{x}}{\rightarrow}X).
+  \]
+\end{proof}

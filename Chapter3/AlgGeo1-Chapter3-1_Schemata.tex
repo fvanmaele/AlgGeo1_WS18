@@ -1,0 +1,26 @@
+\chapter{Schemata}
+
+= Verkleben affiner Schemata
+
+\section{Schemata}
+\begin{defn}
+  Ein Schemata ist ein lokal geringter Raum $(X,\mathcal{O}_{X})$,
+  der eine offene Überdeckung $(U_{i})_{i\in I}$ besitzt, so dass alle
+  lokal geringten Räume $(U_{i},\mathcal{O}_{X|U_{i}})$ affine Schemata
+  sind. Für ein Schemata $S$ bezeichne $\schs$ die \textbf{Kategorie
+    der Schemata über $S$} oder $S$-Schemata. Die Objekte dieser Kategorie
+  sind Morphismen $X\rightarrow S$ von Schemata, und die Morphismen
+  $\Hom(X\rightarrow S,Y\rightarrow S)$ sind Morphismen $X\rightarrow Y$
+  von Schemata so dass
+  \[
+    \xymatrix{X\ar[rr]\ar[dr] &  & Y\ar[dl]\\
+      & S
+    }
+  \]
+
+  kommutiert. $X\rightarrow S$ heißt \textbf{Strukturmorphismus} des
+  $S$-Schematas $X$. Ist $S=\Spec R$ affin, spricht man auch von
+  $R$-Schemata oder Schemata über $R$. Die Menge der Morphismen $X\rightarrow Y$
+  in $\schs$ bezeichnen wir mitt $\Hom_{S}(X,Y)$ bzw. $\Hom_{R}(X,Y)$
+  falls $S=\Spec R$ affin ist.
+\end{defn}

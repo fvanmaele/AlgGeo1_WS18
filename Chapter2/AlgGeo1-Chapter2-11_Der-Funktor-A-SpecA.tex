@@ -1,0 +1,99 @@
+\section{Der Funktor $A\protect\mapsto(\Spec A,\mathcal{O}_{\Spec A})$}
+\begin{defn}[34]
+  Ein lokal geringter Raum $(X,\mathcal{O}_{X})$ heißt \textbf{affines
+    Schema}, falls ein Ring $A$ existiert d.d
+  \[
+    (X,\mathcal{O}_{X})\cong(\Spec A,\mathcal{O}_{\Spec A})
+  \]
+
+  Ein \textbf{Morphismus affiner Schemata} ist ein Morphismus lokal
+  geringter Räume. Bezeichne $\aff$ die Kategorie der affinen Schemata.
+  \begin{align*}
+    \varphi:A & \longrightarrow B & \text{Ringhom.}\\
+    f:X:=\Spec A & \longrightarrow Y:=\Spec A & \text{stetige Abb.}
+  \end{align*}
+\end{defn}
+
+\textbf{Ziel: }Definiere $(f,f^{\flat}):X\rightarrow Y$ mit $f:=^{a}\varphi$
+Morphismus von lokal geringter Räume und
+\[
+  f_{\Spec A}^{\flat}=\varphi:A=\mathcal{O}_{\Spec A}(\Spec A)\rightarrow f_{\ast}\mathcal{O}_{\Spec B}(\Spec B)=B
+\]
+
+Dazu: Für $s\in A$ gilt $f^{-1}(D(s))=D(\varphi(s))$ nach Proposition
+2.10. Definiere 
+\[
+  f_{D(s)}^{\flat}:\mathcal{O}_{Y}(D(s))=A_{s}\rightarrow B_{\varphi(s)}=f_{\ast}\mathcal{O}_{X}(D(s))
+\]
+
+als die von $\varphi$ induzierte Abbildung. $f^{\flat}$ ist kompatibel
+mit $\res_{D(t)}^{D(s)}$ für prinzipal offene Mengen $D(t)\subseteq D(s)$.
+$B$ Basis $\Longrightarrow f^{\flat}:\mathcal{O}_{Y}\rightarrow f_{\ast}\mathcal{O}_{X}$
+Homomorphismus von Ringgarben. Für $s=1$ erhalten wir $f_{\Spec A}^{\flat}=\varphi$!
+
+Für $x\in X$ gilt:
+\[
+  \xymatrix{f^{\sharp}:\mathcal{O}_{Y,f(x)}=A_{\varphi^{-1}(\mathfrak{p}_{x})=\mathfrak{p}_{f(x)}}\ar[r] & B_{\mathfrak{p}_{x}}=\mathcal{O}_{X,x}\\
+    A\ar[u]\ar[r]^{\varphi} & B\ar[u]
+  }
+  \qquad(*)
+\]
+
+ist der von $\varphi$ induzierte Homomophismus. $f_{x}^{\sharp}$
+is lokal:
+\[
+  \varphi(\varphi^{-1}(\mathfrak{p}_{x}))\subseteq\mathfrak{p}_{x}
+\]
+
+\textbf{Bezeichne}: $^{a}\varphi$ für $\Spec(\varphi)=(f,f^{\flat})$,
+$^{a}(\psi\circ\varphi)=^{a}\varphi\circ^{a}\psi$. Wir erhalten einen
+kontravarianten Funktor
+\[
+  \Spec:\underline{Ring}\longrightarrow\aff.
+\]
+
+Für $f:(X,\mathcal{O}_{X})\rightarrow(Y,\mathcal{O}_{Y})$ Morphismus
+von geringten Räumen erhalten wir einen Ringhomomorphismus
+\[
+  \Gamma(f):=f_{Y}^{\flat}:\Gamma(Y,\mathcal{O}_{Y})=\mathcal{O}_{Y}(Y)\rightarrow\Gamma(X,\mathcal{O}_{X})=(f_{\ast}\mathcal{O}_{X})(Y)=\mathcal{O}_{X}(X).
+\]
+
+So erhalten wir einen kontravarianten Funktor
+\[
+  \Gamma:\aff\longrightarrow\underline{Ring}.
+\]
+
+\begin{thm}[35]
+  Die Funktoren $\Spec$ und $\Gamma$ definieren eine Anti-Äquivalenz
+  zwischen der Kateogire der Ringe und der Kategorie der affinen Schemata.
+\end{thm}
+
+\begin{proof}
+  $\Spec$ ist essentiell surjektiv per Definition. $\Gamma\circ\Spec$
+  ist isomorph zu $\id_{\underline{Ring}}$ nach Konstruktion.Zu zeigen:
+  \[
+    \Hom_{\underline{Ring}}(A,B)\stackrel[\Gamma]{\Spec}{\rightleftharpoons}\Hom_{\aff}(\Spec B,\Spec A)
+  \]
+
+  sind zueinander invers. Es fehlt die Verkettung $\Spec\circ\Gamma=\id_{\aff}$.
+  Sei $f\in\Hom_{\aff}(\Spec B,\Spec A)$, $\varphi:=\Gamma(f)$, $^{a}\varphi=f$.
+  Für $\mathfrak{p}_{x}\in\Spec B=X$ ist $f_{x}^{\sharp}$ der eindeutig
+  bestimmte Ringhomomorphismus, welcher das Diagramm
+  \[
+    \xymatrix{A\ar[r]^{f_{\Spec A}^{\flat}=\Gamma(f)=\varphi}\ar[d]_{\imath_{A}} & B\ar[d]^{\imath_{B}}\supset\imath_{B}^{-1}(\mathfrak{p}_{x}B_{\mathfrak{p}_{x}})=\mathfrak{p}_{x}\\
+      A_{\mathfrak{p}_{f(x)}}\ar[r]_{f_{x}^{\#}\text{ lokal}} & B_{\mathfrak{p}_{x}}\underset{\max}{\supset}\mathfrak{p}_{x}B_{\mathfrak{p}_{x}}
+    }
+    \qquad(**)
+  \]
+
+  kommutieren lässt. Es gilt:
+  \begin{align*}
+    \mathfrak{p}_{f(x)}A_{\mathfrak{p}_{f(x)}} & \supseteq(f_{x}^{\sharp})^{-1}(\mathfrak{p}_{x}B\mathfrak{p}_{x})=\mathfrak{p}_{f(x)}A_{\mathfrak{p}_{f(x)}}\\
+    \mathfrak{p}_{f(x)} & =\imath_{A}^{-1}(\mathfrak{p}_{f(x)}A\mathfrak{p}_{f(x)})\subset A
+  \end{align*}
+
+  $f_{x}^{\#}$ lokal $\Longrightarrow f_{x}^{\#}(\mathfrak{p}_{f(x)}A_{\mathfrak{p}_{f(x)}})\subset\mathfrak{p}_{x}B_{\mathfrak{p}_{x}}$
+  $\Longrightarrow^{a}\varphi=f$ als stetige Abbildung. Wegen $(*)$
+  lässt auch $(^{a}\varphi)_{x}^{\#}$ das Diagramm $(**)$ kommutieren.
+  Proposition $\Longrightarrow(^{a}\varphi)^{\#}=f^{\#}$.
+\end{proof}
