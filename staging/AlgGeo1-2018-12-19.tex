@@ -1,0 +1,268 @@
+%% LyX 2.3.2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[oneside,ngerman]{book}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\usepackage{verbatim}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\theoremstyle{plain}
+\ifx\thechapter\undefined
+	\newtheorem{thm}{\protect\theoremname}
+\else
+	\newtheorem{thm}{\protect\theoremname}[chapter]
+\fi
+\theoremstyle{plain}
+\newtheorem{prop}[thm]{\protect\propositionname}
+\theoremstyle{remark}
+\newtheorem*{rem*}{\protect\remarkname}
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{\protect\definitionname}
+\theoremstyle{plain}
+\newtheorem{lem}[thm]{\protect\lemmaname}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+%% User-specified commands
+\DeclareMathOperator{\rad}{rad}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Specm}{Specm}
+\DeclareMathOperator{\maxspec}{MaxSpec}
+\DeclareMathOperator{\Quot}{Quot}
+\DeclareMathOperator{\im}{\mathrm{im}}
+\DeclareMathOperator{\Hom}{\mathrm{Hom}}
+\DeclareMathOperator{\Mor}{\mathrm{Mor}}
+\DeclareMathOperator{\id}{\mathrm{id}}
+\DeclareMathOperator{\res}{res}
+\DeclareMathOperator{\Abb}{Abb}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\red}{red}
+\DeclareMathOperator{\op}{op}
+\DeclareMathOperator{\obj}{Obj}
+\DeclareMathOperator{\nil}{nil}
+
+%% sets
+\DeclareMathOperator{\CC}{\mathbb{C}}
+\DeclareMathOperator{\RR}{\mathbb{R}}
+\DeclareMathOperator{\QQ}{\mathbb{Q}}
+\DeclareMathOperator{\ZZ}{\mathbb{Z}}
+\DeclareMathOperator{\NN}{\mathbb{N}}
+
+%% categories
+\DeclareMathOperator{\ouv}{\mathcal{O}uv}
+\DeclareMathOperator{\set}{\underline{Set}}
+\DeclareMathOperator{\ab}{\underline{Ab}}
+\DeclareMathOperator{\cattop}{\underline{Top}}
+\DeclareMathOperator{\cring}{\underline{CRing}}
+\DeclareMathOperator{\ring}{\underline{Ring}}
+\DeclareMathOperator{\psh}{\underline{\mathcal{PS}h}}
+\DeclareMathOperator{\sh}{\underline{\mathcal{S}h}}
+\DeclareMathOperator{\aff}{\underline{Aff}}
+\DeclareMathOperator{\sch}{\underline{Sch}}
+\DeclareMathOperator{\schk}{\underline{Sch/k}}
+\DeclareMathOperator{\schs}{\underline{Sch/S}}
+\DeclareMathOperator{\schsn}{\underline{Sch/S_{0}}}
+\DeclareMathOperator{\schz}{\underline{Sch/\mathbb{Z}}}
+\DeclareMathOperator{\pres}{\underline{Prevar/S}}
+\DeclareMathOperator{\prek}{\underline{Prevar/k}}
+\DeclareMathOperator{\affk}{\underline{AffVar/k}}
+\DeclareMathOperator{\topcp}{\underline{TopCP}}
+\DeclareMathOperator{\Top}{\underline{Top}}
+\DeclareMathOperator{\grp}{\underline{Grp}}
+\DeclareMathOperator{\func}{\underline{Func}}
+
+\makeatother
+
+\usepackage{babel}
+\providecommand{\definitionname}{Definition}
+\providecommand{\lemmaname}{Lemma}
+\providecommand{\propositionname}{Satz}
+\providecommand{\remarkname}{Bemerkung}
+\providecommand{\theoremname}{Theorem}
+
+\begin{document}
+\begin{prop}[24]
+Sei $X$ noethersches irreduzibles Schema, $\eta\in X$ generischer
+Punkt. Dann sind äquivalent:
+\begin{enumerate}
+\item $\mathcal{O}_{X,\eta}$ ist reduziert.
+\item $\exists\emptyset\neq U\subset X$ reduziertes offenes Unterschema.
+\end{enumerate}
+Für $(ii)$ sagt man auch: $\mathcal{O}_{X,x}$ ist \textbf{generisch}
+reduziert.
+\end{prop}
+
+\begin{proof}
+\mbox{}
+\begin{itemize}
+\item[$``\Rightarrow"$] Sei ohne Einschränkung $X=\Spec A$ affin, $A$ nach Voraussetzung
+noethersch, $\eta\leftrightarrow\mathfrak{p}$ eindeutiges minimales
+Primideal ($A$ irreduzibel). $\Longrightarrow\mathfrak{p}=(f_{1},\ldots,f_{n})_{A}$
+endlich erzeugt. $\Longrightarrow\frac{f_{i}}{1}\in\nil(A_{\mathfrak{p}})=(0)\subset A_{\mathfrak{p}}=\mathcal{O}_{X,\eta}$,
+da $\mathcal{O}_{X,\eta}$ reduziert. $\exists g\in A\backslash\mathfrak{p}$
+$\Longrightarrow$ d.d. $\frac{f_{1}}{1}=0\sim A_{g}$. $\Longrightarrow0=\nil(A)_{g}=\nil(A_{g})$,
+d.h. $A_{g}$ ist reduziert, d.h. $U:=D(g)$.
+\item[$``\Leftarrow"$] $\emptyset\neq U\subset X$ reduziert offen. $\Longrightarrow\eta\in U$
+s.d. $\mathcal{O}_{X,x}=\mathcal{O}_{X,\eta}$ reduziert.
+\end{itemize}
+\end{proof}
+\begin{rem*}
+Analog zeigt man: $X$ noethersches Schema und $\mathcal{O}_{X,x}$
+reduzibel für ein $x\in X$ $\Longrightarrow\exists x\in U\subset X$
+offen, d.d. $U$ reduziert ist.
+\end{rem*}
+
+\section*{Prävarietäten als Schema}
+
+\textbf{Ziel: }``$X$ affine Varietät $\mapsto\Spec\Gamma(X,\mathcal{O}_{X})$``
+(kein generischer Punkt, $\neq$ Schema). Verklebe zu: ``$X$ Prävarietät
+über $k$ $\mapsto k$-Schema``. Welches Bild hat dieser Funktor?
+
+\section{Schemata von endlichem Typ über $k$}
+
+Sei $X$ affine Varietät über $k$, $k$ algebraisch Abgeschlossen.
+Dann ist $A=\Gamma(X,\mathcal{O}_{X})$ eine endlich erzeugte $k$-Algebra.
+\begin{defn}[25]
+Sei $k$ Körper, $X\rightarrow\Spec(k)$ $k$-Schema. $X$ heißt:
+\begin{itemize}
+\item \textbf{lokal von endlichem Typ}, (l.v.e.T./$k$), falls eine affine
+offene Überdeckung $X=\bigcup_{i\in I}U_{i}$ existiert, $U_{i}=\Spec A_{i}$,
+mit $A_{i}$ endlich erzeugte $k$-Algebra für alle $i$.
+\item \textbf{von endlichem Typ} (v.e.T$/k$), falls $X$ lokal von endlichem
+Typ und quasi-kompakt ist.
+\end{itemize}
+\end{defn}
+
+\begin{rem*}
+Jedes $k$-Schema welches (lokal) von endlichem Typ ist, ist (lokal)
+noethersch. (Da jede endlich erzeugte $k$-Algebra noethersch ist.)
+\end{rem*}
+\begin{prop}[26]
+Sei $X$ $l.v.e.T/k$, $U\subset X$ offen affin. Dann ist $B:=\Gamma(U,\mathcal{O}_{X})$
+eine endlich erzeugte $k$-Algebra.
+\end{prop}
+
+\begin{proof}
+$U=\bigcup_{i=1}^{n}D(f_{i})$, $f_{i}\in B$ geeignet nach Lemma
+3.3. $B$ ist endlich erzeugte $k$-Algebra $\Longrightarrow B_{f_{i}}=B\left[\frac{1}{f_{i}}\right]$
+ist endlich erzeugte $k$-Algebra. Mit dem folgenden Lemma für $A=k$
+folgt die Behauptung.
+\end{proof}
+\begin{lem}[28]
+Sei $A$ ein Ring und $B$ eine $A$-Algebra, $\mathcal{L}:A\rightarrow B$
+Ringhomomrphismus, $f_{1},\ldots,f_{n}\in B$ mit $(f_{1},\ldots,f_{n})=(1)$,
+und so dass $B_{f_{i}}$ eine endlich erzeugte $A$-Algebra ist $\forall i$.
+Dann ist $B$ eine endlich erzeugte $A$-Algebra.
+\end{lem}
+
+\begin{proof}
+(Vergleiche Lemma 16.) Nach Voraussetzung gibt es ein $g_{i}\in B$
+mit $\sum_{i}g_{i}f_{i}=1$. Da $B_{f_{i}}$ endlich erzeugt $\forall i$,
+gibt es $b_{ij}$, $j\in J$ endlich, welche $B_{f_{i}}$ als $A$-Algebra
+erzeugen. Setze $b_{ij}=c_{ij}/f_{i}^{m}$ mit $c_{ij}\in B$ für
+$m\geq0$ geeignet (unabhäng von $i,j$).
+
+Sei $C:=A$-Unteralgebra von $B$, erzeugt von $g_{i},f_{i},c_{ij}$,
+d.h. endlich erzeugt über $A$. \emph{Behauptung}: $C=B$.
+
+Sei $b\in B$. $\Longrightarrow$ $\exists N\gg0$ mit $f_{i}^{N}b\in C$
+für alle $i$. Da $\sum_{i}g_{i}f_{i}=1$, ist $(f_{1},\ldots,f_{n})_{C}=(1)$.
+Lemma 2.4 $\Longrightarrow$ $(f_{i}^{N},\ldots,f_{n}^{N})_{C}=(1)$.
+$\Longrightarrow$ $\exists u_{1},\ldots,u_{n}\in C$ sodass $\sum_{i}u_{i}f_{i}^{N}=1$.
+$\Longrightarrow b=\sum_{i}u_{i}\underbrace{f_{i}^{N}b}_{\in C}\in C$.
+\end{proof}
+\begin{prop}[28]
+Sei $k$ algebraisch abgeschlossen, $X$ $k$-Schema l.v.e.T.$/k$.
+Dann besteht die Menge der abgeschlossenen Punkte $|X|$ genau aus
+den Punkten mit $\kappa(x)=k$, d.h. nach Proposition 7 gilt
+\[
+|X|=X(k)=\Hom_{k}(\Spec k,X).
+\]
+\end{prop}
+
+\begin{proof}
+Hilbert'scher Nullstellensatz $\Longrightarrow(x\in X$ abgeschlossen
+$\Rightarrow\kappa(x)=k$). Daher reicht es zu zeigen: ($x\in X$
+\emph{nicht} abgeschlossen, d.h. $\mathfrak{p}_{x}$ maximal $\Rightarrow\kappa(x)\neq k$).
+Dazu: $\exists x\in U=\Spec(A)\subset X$ offen, mit $x$ \emph{nicht
+abgeschlossen} in $U$. $\Longleftrightarrow\mathfrak{p}=\mathfrak{p}_{x}\in\Spec(A)$
+\emph{nicht} maximal, d.h. $A/\mathfrak{p}_{x}$ ist \emph{kein} Körper.
+$\Longrightarrow k\rightarrow(A/\mathfrak{p}_{x})\hookrightarrow\Quot(A/\mathfrak{p}_{x})=\kappa(x)$
+ist \emph{echte} Inklusion.
+
+Behauptung: $\kappa(x)$ ist nicht algebraisch abgeschlossen, d.h.
+nicht abstrakt isomorph zu $k$. Denn: \emph{Noether-Normalisierung}:
+
+$A/\mathfrak{p}$ ist endlich über $k[X_{1},\ldots,X_{n}]$. Nach
+Lemma I.9 folgt $n>0$ (mit $A/\mathfrak{p}$ über $k$ ganz $\Longrightarrow A/\mathfrak{p}$
+Körper). $\Longrightarrow\kappa(x)$ ist endliche Erweiterung von
+$k(X_{1},\ldots,X_{n})$, $n>0$. $\Longrightarrow k$ nicht algebraisch
+abgeschlossen ($[k(X_{1},\ldots,X_{n})(\sqrt[n]{X_{1}}):k(X)]\rightarrow\infty$,
+$n\rightarrow\infty$)
+\end{proof}
+\begin{rem*}
+Im Allgemeinen $\exists x\in U\subset X$ offen mit $\{x\}\subset U$
+abgeschlossen, aber $\{x\}\subset X$ \emph{nicht} abgeschlossen ($X=\Spec\mathcal{O}$,
+$\mathcal{O}$ DVR, $U=\{x\}$, $x=\eta$ generischer Punkt.) Für
+$X$ lokal von endlichem Typ über $k$ (nicht notwendig algebraisch
+abgeschlossen) kann nach der Proposition \emph{nicht} geschehen.
+\end{rem*}
+
+\section{Sehr dichte Teilmengen}
+\begin{defn}[29]
+Sei $X$ topologischer Raum. Eine Teilmenge $Y\subset X$ heißt \textbf{sehr
+dicht}, falls die folgenden äquivalenten Bedingungen gelten:
+\begin{enumerate}
+\item $U\mapsto U\cap Y$ definiert eine Bijektion:
+\[
+\{\text{offenen Teilmengen in }X\}\leftrightarrow\{\text{offene Teilmengen in }Y\}.
+\]
+\item $F\mapsto F\cap Y$ definiert eine Bijektion:
+\[
+\{\text{abgeschlossene Teilmengen in }X\}\leftrightarrow\{\text{abgeschlossene Teilmengen in }Y\}.
+\]
+\item Für alle $F\subseteq X$ abgeschlossen gilt: $F=\overline{F\cap Y}$.
+\item Jede lokal abgeschlossene Teilmenge $Z\neq\emptyset$ von $X$ enthält
+einen Punkt aus $Y$.
+\end{enumerate}
+\end{defn}
+
+\begin{proof}
+Die Äquivalenz von $(i)$, $(ii)$ und $(iii)$ ist klar.
+\begin{itemize}
+\item[$(iii)\Rightarrow(iv)$] Für abgeschlossene Teilmengen $F'\subsetneq F$ von $X$ setze $Z:=F\backslash F'$.
+Angenommen $(F\cap Y)\backslash(F'\cap Y)=Z\cap Y=\emptyset$. $\Longrightarrow F\cap Y=F'\cap Y$.
+$(iii)\Longrightarrow F=F'$, Widerspruch.
+\item[$(iv)\Rightarrow(ii)$] Sei $F,F'\subset X$ abgeschlossen mit $F\cap Y=F'\cap Y$. $\Longleftrightarrow((F\cup F')\backslash(F\cap F'))\cap Y=\emptyset$.
+$\Longrightarrow(F\cup F')\backslash(F\cap F')=\emptyset$. $\Longrightarrow F=F'$.
+\end{itemize}
+\end{proof}
+\begin{prop}[30]
+Sei $X$ l.v.e.T über $k$ algebraisch abgeschlossen. Dann ist $|X|$
+sehr dicht in $X$.
+\end{prop}
+
+\begin{proof}
+Zeige: Bedingung $(iv)$. Sei $\emptyset\neq A\subset X$ lokal abgeschlossen.
+Ohne Einschränkung: 
+\[
+A\subset_{\text{abg. }}U=\Spec A\subset_{\text{off.}}X.
+\]
+
+Nach Voraussetzung ist $A$ endlich-erzeugte $k$-Algebra. $\emptyset\neq A=V(\mathfrak{a})$
+mit $\mathfrak{a}\subset\mathfrak{m}\subset A$ für ein maximales
+Ideal $\mathfrak{m}$. $\Longrightarrow V(\mathfrak{a})$ enthält
+abgeschlossenen Punkt $x\in\mathfrak{m}$. Proposition 28 $\Longrightarrow x$
+ist abgeschlossen in $X$, da $\kappa(x)=k$%
+\begin{comment}
+unlesbar
+\end{comment}
+. $\Longrightarrow A\cap|X|\neq\emptyset$.
+\end{proof}
+
+\end{document}

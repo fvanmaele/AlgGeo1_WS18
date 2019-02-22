@@ -1,0 +1,136 @@
+%% LyX 2.3.2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[oneside,english]{book}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\theoremstyle{plain}
+\ifx\thechapter\undefined
+	\newtheorem{thm}{\protect\theoremname}
+\else
+	\newtheorem{thm}{\protect\theoremname}[chapter]
+\fi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\DeclareMathOperator{\Spec}{Spec}
+
+\makeatother
+
+\usepackage{babel}
+\providecommand{\theoremname}{Theorem}
+
+\begin{document}
+
+\chapter*{Das Ringsprektrum als lokal geringter Raum}
+
+Ziel: volltreuer Funktor
+\begin{align*}
+\text{Ringe} & \longrightarrow\text{Kategorie lokal geringter Räume}\\
+A & \longmapsto(\Spec A,\mathcal{O}_{\Spec A})
+\end{align*}
+
+
+\section{Die Strukturgarbe auf Spec A}
+
+Sei $X:=\Spec(A)$, $\mathcal{B}=\{D(f)\mid f\in A\}$ Basis der Topologie.
+
+\textbf{Vorgegeben:} Definiere Prägarbe $\mathcal{O}_{X}$ auf $\mathcal{B}$,
+die Garbenaxiome bzgl. $\mathcal{B}$ erfüllt.
+
+\textbf{Wähle:} $\mathcal{O}_{X}(X)=A$ (vgl. Prävarietäten) bzw.
+$\mathcal{O}_{X}(D(f))=A_{f}$, da
+\begin{align*}
+\imath_{j}:A & \longrightarrow A_{f}\\
+a & \longmapsto\frac{a}{1}
+\end{align*}
+
+einen Homöomorphismus $D(f)\xrightarrow{\sim}\Spec(A_{f})$ induziert.
+(``Funktionen mit möglichen Polen in $V(f)$).
+
+\subsection{Wohldefiniertheit}
+
+$D(f)=D(g)\Rightarrow A_{f}=A_{g}$ kanonisch. Dazu: 
+\begin{align*}
+D(f)\subset D(g) & \Leftrightarrow\exists n\geq1\text{ d.d. }f^{n}\in A_{g}
+\end{align*}
+
+
+\subsection{Induzierte Abbildung}
+
+\[
+\mathcal{O}_{X}(D(g))\rightarrow\mathcal{O}_{X}(D(f)),\ \rho_{f,g}=:\text{res}_{D(f)}^{D(g)}
+\]
+
+Dies definiert eine Prägarbe auf $\mathcal{B}$.
+\begin{thm}[orig. 33]
+Die Prägarbe $\mathcal{O}_{X}$ ist eine Garbe auf $\mathcal{B}$.
+Die induzierte Garbe auf $X$ (Proposition 20) werde auch mit $\mathcal{O}_{X}$
+bezeichnet. Da
+\[
+\mathcal{O}_{X,x}:=\underset{\underset{D(f)\ni x}{\longrightarrow}}{\lim}\mathcal{O}_{X}(D(f))=\underset{\underset{f\in\mathfrak{p}_{x}}{\longrightarrow}}{\lim}A_{f}=A_{\mathfrak{p}_{x}}
+\]
+mit $(X,\mathcal{O}_{X})=(\Spec A,\mathcal{O}_{\Spec A})$ (kurz $\Spec A$)
+ein lokal geringter Raum.
+\end{thm}
+
+\begin{proof}
+Sei $D(f)=\bigcup_{i\in I}D(f_{i})$ Überdeckung in $\mathcal{B}$.
+Zu zeigen:
+\begin{enumerate}
+\item $s\in\mathcal{O}_{X}(D(f))$ mit $s|_{D(f_{i})}=0$, $i\in I$.
+
+$\overset{!}{\Rightarrow}s=0$.
+\item $s_{i}\in\mathcal{O}_{X}(D(f_{i}))$, $i\in I$, mit $s_{i}|_{D(f_{i})\cap D(f_{j})}=s_{j}|_{D(f_{i})\cap D(f_{j})}$
+$\forall i,j\in I$.
+
+$\overset{!}{\Rightarrow}\exists s\in\mathcal{O}_{X}(D(f))$ mit $s|_{D(f_{i})}=s_{i}$
+$\forall i\in I$.
+\end{enumerate}
+Ohne Einschränkung:
+\begin{itemize}
+\item $I$ endlich, da $D(f)$ quasi-kompakt.
+\item $f=1$, $D(f)=X$ (mit $(A_{f},\mathcal{O}_{X}|_{D(f)})$ statt $(A,\mathcal{O}_{X})$
+betrachtet) 
+\[
+X=\bigcup_{i\in I}D(f_{i})\Leftrightarrow(f_{i}\mid i\in I)=A
+\]
+Es folgt: $b_{i}=b_{i}(n)\in A$ d.d. $\sum_{i\in I}b_{i}f_{i}^{n}=1$
+\textbf{Zerlegung der 1}. (z)
+\item[Zu 1.] Sei $s=a\in A$ d.d. $0=\frac{a}{1}\in A_{f}$, $\forall i\in I$.
+$I$ endlich, also $\exists n\geq1$ d.d. $f_{i}^{n}a=0$ $\forall i\in I$.
+Mit $(z)$ folgt
+\[
+a=\left(\sum_{i\in I}b_{i}f_{i}^{n}\right)a=0
+\]
+\item[Zu 2.] $s_{i}=\frac{a_{i}}{f_{i}^{n}}$ für $n$ geeignet, unabhängig von
+$i\in I$ (endlich). Nach Voraussetzung:
+\[
+\frac{a_{i}}{f_{i}^{n}}=\frac{a_{j}}{f_{j}^{n}}\in A_{f_{i}f_{j}},\quad D(f_{i})\cap D(f_{j})=D(f_{i}f_{j})
+\]
+Es folgt: $\exists m\geq1$ d.d. $(f_{i}f_{j})^{m}(f_{j}^{n}a_{i}-f_{i}^{n}a_{j})=0$
+$\forall i,j$.
+\begin{align*}
+\frac{a_{i}}{f_{i}^{n}} & =\frac{f_{i}^{m}a_{i}}{f_{i}^{n+m}}=:\frac{a_{i}'}{f_{i}^{n'}},\quad n'=n+m
+\end{align*}
+Ohne Einschränkung: $f_{j}^{n}a_{i}=f_{i}^{n}a_{j}$ $\forall i,j\in I$,
+({*}) denn:
+\begin{align*}
+f_{j}^{m+n}f_{i}a_{i} & =f_{i}^{m+n}f_{j}^{m}a_{j}\\
+f_{j}^{n'}a_{i}' & =f_{i}^{n'}a_{j}'
+\end{align*}
+Setze $s:=\sum_{j\in I}b_{j}a_{j}\in A$ ($(z)$). Es folgt:
+\[
+f_{i}^{n}s=f_{i}^{n}\sum b_{i}a_{j}=\sum b_{j}(f_{i}^{n}a_{j})\overset{(*)}{=}\left(\sum b_{i}f_{i}^{n}\right)a_{i}\overset{(z)}{=}a_{i}
+\]
+also $\frac{s}{1}=\frac{a_{i}}{f^{n}}=s_{i}$.
+\end{itemize}
+\end{proof}
+
+\end{document}
