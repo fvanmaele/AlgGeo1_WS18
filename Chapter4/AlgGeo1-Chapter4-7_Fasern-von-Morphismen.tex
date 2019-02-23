@@ -1,0 +1,93 @@
+\section{Fasern von Morphismen}
+
+\textbf{Ziel:} $\xymatrix{X\ar[d]^{f}\supset f^{-1}(s)\\
+  S\ni s
+}
+$ als Schema.
+\begin{defn}[18]
+  Für den kanonischen Morphismus $\Spec(\kappa(s))$ nennen wir
+  \[
+    X_{s}:=X\otimes_{S}\kappa(s)
+  \]
+
+  die \textbf{Faser von $f$ in $s$}, ein $\kappa(s)$-Schema. Proposition
+  14 $\Longrightarrow$
+  \[
+    \xymatrix{X_{s}\ar[r]\ar[d] & S\times_{S}X\ar[r]^{q=\id_{X}}\ \ \ar[d]_{f} & X\ar[d]\\
+      \Spec\kappa(s)\ar[r]_{\text{canon.}} & S\ar[r]_{\id_{S}} & S
+    }
+    \qquad\text{kommutativ,}
+  \]
+
+  besagt $X_{s}\cong f^{-1}(s)$ (=homoömorph zu Bild(canon)), d.h.
+  wir können $f^{-1}(s)$ als Schema auffassen.
+
+  \textbf{Denkweise}: $\xymatrix{X\ar[d]_{f}\\
+    S
+  }
+  \cong$ Familie von $\kappa(s)$-Schemata $X_{s}$, parametrisiert durch
+  Punkte von $S$.
+\end{defn}
+
+\begin{example}[19]
+  Sei $k$ algebraisch abgeschlossen.
+  \[
+    X(k):=\{(u,t,s)\in\mathbb{A}^{3}(k)\mid ut=s\}
+  \]
+
+  Da $UT-s\in k[U,T,S]$ irreduzibel ist, ist $X(k)$ eine affine Varietät.
+  $\leftrightarrow$ $X=\Spec(k[U,T,S]/(UT-S)$ ist ganzes $k$-Schema.
+  Sei $S=\mathbb{A}^{1}$,
+  \begin{align*}
+    X & \longrightarrow S\\
+    (u,t,s) & \longmapsto s
+  \end{align*}
+
+  Projektion. $s\in\mathbb{A}^{1}(k)$, $X_{s}=\Spec A_{s}$, 
+  \begin{align*}
+    A_{s} & =k[U,T,S]/(UT-S)\otimes_{k[S]}k[S]/(S-s)\\
+          & \cong k[U,T]/(UT-S).
+  \end{align*}
+
+  $UT-s\in k[U,T]$ irreduzibel für $s\neq0$, reduzibel für $s=0$.
+  $\Longrightarrow X\rightarrow S$ definiert Familie $X_{s}$ von $k$-Schemata,
+  sodass $X_{0}$ reduzibel, $X_{s}$ irreduzibel für $s\neq0$.
+\end{example}
+
+\begin{lem}[20]
+  Sei das Diagramm
+  \[
+    \xymatrix{ & X\times_{S}Y\ar[ld]_{p}\ar[rd]^{q}\\
+      x\in X\ar[rd]_{f} &  & Y\ni y\ar[ld]^{g}\\
+      \Spec\kappa(x)\ar[u]^{\xi} & S & \Spec\kappa(y)\ar[u]_{\psi}
+    }
+  \]
+
+  Dann gilt:
+  \begin{enumerate}
+  \item Es gibt ein $z\in X\times_{S}Y$ mit $p(z)=x$, $q(z)=y$, genau dann
+    wenn $f(x)=g(y).$
+  \item Es gelte $(1)$, setze $s:=f(x)=g(y)$. Dann ist
+    \begin{align*}
+      \zeta:=\xi\times_{S}\psi:Z:=\Spec(\kappa(x)\otimes_{\kappa(s)}\kappa(y)) & \longrightarrow X\times_{S}Y
+    \end{align*}
+    ein Homöomorphismus von $Z$ auf Teilraum $\zeta(Z)=p^{-1}(x)\cap q^{-1}(y)$.
+  \end{enumerate}
+\end{lem}
+
+\begin{proof}
+  Setze $Z:=p^{-1}(x)\times_{(X\times_{S}Y)}q^{-1}(y)$, und betrachte:
+  \[
+    \xymatrix{ &  & Z\ar[rd]^{g'}\ar[ld]_{f'}\\
+      & p^{-1}(x)\ar[rd]\ar[ld] &  & q^{-1}(y)\ar[ld]\ar[rd]\\
+      \Spec\kappa(s)\ar[rd] &  & X\times_{S}Y\ar[ld]\ar[rd] &  & \Spec\kappa(y)\ar[ld]\\
+      & X\ar[rd] &  & Y\ar[ld]\\
+      &  & S
+    }
+  \]
+
+  Wende Proposition 14 zweifach an $\Longrightarrow$
+  \[
+    g'(Z)=i^{-1}(p^{-1}(x))=q^{-1}(y)\cap p^{-1}(x).
+  \]
+\end{proof}

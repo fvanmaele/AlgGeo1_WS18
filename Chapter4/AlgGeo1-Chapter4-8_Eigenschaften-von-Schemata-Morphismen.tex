@@ -1,0 +1,67 @@
+\section{Eigenschaften von Schemata-Morphismen}
+\begin{notation}[21]
+  Sei $\mathbb{P}$ Eigenschaft von Morphismen von Schemata.
+  \begin{enumerate}
+  \item $\mathbb{P}$ heißt \textbf{lokal im Ziel}, falls für alle Morphismen
+    $f$ und alle offenen Überdeckungen $S=\bigcup_{j\in J}S_{j}$ gilt:
+    \[
+      f:X\rightarrow S\text{ erfüllt }\mathbb{P}\Longleftrightarrow f|_{f^{-1}(S_{j})}:f^{-1}(S_{j}):S_{j}\text{ erfüllt }\mathbb{P}\ \forall j\in J
+    \]
+  \item $\mathbb{P}$ heißt \textbf{lokal in der Quelle}, falls für alle $f:X\rightarrow Y$
+    und alle offenen Überdeckungen $X=\bigcup_{i\in I}U_{i}$ gilt:
+    \[
+      f\text{ erfüllt }\mathbb{P}\Longleftrightarrow f|_{U_{i}}:U_{i}\rightarrow Y\text{ erfüllt }\mathbb{P}\ \forall i\in I
+    \]
+  \end{enumerate}
+\end{notation}
+
+\begin{defn*}
+  Ein Morphismus $f:X\rightarrow Y$ von Schemata heißt \textbf{(treu)flach},
+  falls $\forall x\in X$ die Abbildung
+  \[
+    \mathcal{O}_{Y,f(x)}\longrightarrow\mathcal{O}_{X,x}
+  \]
+
+  (treu)flach ist.
+\end{defn*}
+\begin{prop}[22]
+  Die folgende Eigenschaft von Schemata-Morphismen sind:
+  \begin{enumerate}
+  \item stabil unter Komposition: ,,injektiv``, ,,surjektiv``, ,,bijektiv``,
+    ,,homöomorph``, ,,flach``, ,,treuflach``, ,,offen``, ,,abgeschlossen``,
+    ,,offene Immersion``, ,,abgeschlossene Immersion``, ,,Immersion``;
+  \item stabil unter Basiswechsel: ,,surjektiv``, ,,offene Immersion``,
+    ,,abgeschlossene Immersion``, ,,Immersion``, ,,flach``, ,,treuflach``;
+  \item lokal bzgl. Ziel: ,,surjektiv``, ,,bijektiv``, ,,homöomorph``,
+    ,,offen``, ,,abgeschlossen``, ,,offene Immersion``, ,,abgeschlossene
+    Immersion``, ,,Immersion``, ,,flach``, ,,treuflach``;
+  \item lokal bzgl. Quelle: ,,offen``, ,,flach``.
+  \end{enumerate}
+\end{prop}
+
+\begin{proof}
+  Die Fälle $(1)$, $(3)$, $(4)$ sind klar. Der Fall $(2)$ für offene/abgeschlossene
+  Immersionen wird in Abschnitt 9 behandelt. Lemma 20 $\Longrightarrow$
+  ,,surjektiv`` stabil unter Basiswechsel.
+  \[
+    \xymatrix{X\times_{S}Y\ar[r]^{q} & Y & y\ar@{|->}[d]\\
+      X\ar@{->>}[r]^{f} & S & s\\
+      \exists x\ar@/_{1pc}/@{|->}[rru]
+    }
+  \]
+
+  Sei $X\rightarrow S$ (treu)flach und $S'\rightarrow S$ beliebig.
+  Sei in Fall $(3)$, $(4)$ ohne Einschränkung $X=\Spec A$, $S=\Spec R$,
+  $S'=\Spec R'$, $A$ (treu)flache $R$-Algebra. $\Longrightarrow A\otimes_{R}R'$
+  (treu)flache $R'$-Algebra, d.h. $f_{(S')}$ ist treuflach.
+  \[
+    (A\otimes_{R}R')\otimes_{R'}M\cong A\otimes_{R}M
+  \]
+\end{proof}
+\begin{cor}[23]
+  Die folgende Eigenschaften sind stabil unter Komposition, stabil
+  unter Basiswechsel und lokal bzgl. Ziel:
+
+  ,,universal injektiv``, ,,universal bijektiv``, ,,universal homöomorph``,
+  ,,universell offen``, ,,universell abgeschlossen``.
+\end{cor}

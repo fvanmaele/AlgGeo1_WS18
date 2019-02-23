@@ -1,0 +1,219 @@
+%% LyX 2.3.2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[oneside,ngerman]{book}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\usepackage{verbatim}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage[all]{xy}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\theoremstyle{plain}
+\ifx\thechapter\undefined
+	\newtheorem{thm}{\protect\theoremname}
+\else
+	\newtheorem{thm}{\protect\theoremname}[chapter]
+\fi
+\theoremstyle{plain}
+\newtheorem{prop}[thm]{\protect\propositionname}
+\theoremstyle{plain}
+\newtheorem{cor}[thm]{\protect\corollaryname}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+%% User-specified commands
+\DeclareMathOperator{\rad}{rad}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Specm}{Specm}
+\DeclareMathOperator{\maxspec}{MaxSpec}
+\DeclareMathOperator{\Quot}{Quot}
+\DeclareMathOperator{\im}{\mathrm{im}}
+\DeclareMathOperator{\Hom}{\mathrm{Hom}}
+\DeclareMathOperator{\Mor}{\mathrm{Mor}}
+\DeclareMathOperator{\id}{\mathrm{id}}
+\DeclareMathOperator{\res}{res}
+\DeclareMathOperator{\Abb}{Abb}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\red}{red}
+\DeclareMathOperator{\op}{op}
+\DeclareMathOperator{\obj}{Obj}
+\DeclareMathOperator{\nil}{nil}
+
+%% sets
+\DeclareMathOperator{\CC}{\mathbb{C}}
+\DeclareMathOperator{\RR}{\mathbb{R}}
+\DeclareMathOperator{\QQ}{\mathbb{Q}}
+\DeclareMathOperator{\ZZ}{\mathbb{Z}}
+\DeclareMathOperator{\NN}{\mathbb{N}}
+
+%% categories
+\DeclareMathOperator{\ouv}{\mathcal{O}uv}
+\DeclareMathOperator{\set}{\underline{Set}}
+\DeclareMathOperator{\ab}{\underline{Ab}}
+\DeclareMathOperator{\cattop}{\underline{Top}}
+\DeclareMathOperator{\cring}{\underline{CRing}}
+\DeclareMathOperator{\ring}{\underline{Ring}}
+\DeclareMathOperator{\psh}{\underline{\mathcal{PS}h}}
+\DeclareMathOperator{\sh}{\underline{\mathcal{S}h}}
+\DeclareMathOperator{\aff}{\underline{Aff}}
+\DeclareMathOperator{\sch}{\underline{Sch}}
+\DeclareMathOperator{\schk}{\underline{Sch/k}}
+\DeclareMathOperator{\schs}{\underline{Sch/S}}
+\DeclareMathOperator{\schsn}{\underline{Sch/S_{0}}}
+\DeclareMathOperator{\schz}{\underline{Sch/\mathbb{Z}}}
+\DeclareMathOperator{\pres}{\underline{Prevar/S}}
+\DeclareMathOperator{\prek}{\underline{Prevar/k}}
+\DeclareMathOperator{\affk}{\underline{AffVar/k}}
+\DeclareMathOperator{\topcp}{\underline{TopCP}}
+\DeclareMathOperator{\Top}{\underline{Top}}
+\DeclareMathOperator{\grp}{\underline{Grp}}
+\DeclareMathOperator{\func}{\underline{Func}}
+
+\makeatother
+
+\usepackage{babel}
+\providecommand{\corollaryname}{Korollar}
+\providecommand{\propositionname}{Satz}
+\providecommand{\theoremname}{Theorem}
+
+\begin{document}
+\textbf{Ab jetzt: }Alle Faserprodukte mögen in $\mathcal{C}$ existieren.
+
+Sei Morphismus $h:T\rightarrow S$ in $\mathcal{C}$, ein \textbf{$S$-Objekt}.
+(kurz $T$, \textbf{$h$ Strukturmorphismus} von $T$.)\medskip{}
+
+Für $S$-Objekte $h:T\rightarrow S$ und $f:X\rightarrow S$ schreibe
+$\Hom_{S}(T,X):=X_{S}(T)$ für Morphismen $w:T\rightarrow X$ mit
+$f\circ w=h$, die \textbf{$S$-Morphismen}. Nenne $X_{S}(T)$ die
+\textbf{Menge der $T$-wertigen Punkte von $X$ (über $S$)}. Dies
+definiert eine Kategorie $\mathcal{C}/S$ mit finalem Objekt $\id_{S}$.\medskip{}
+
+\textbf{Faserprodukt }$X\times_{S}Y$ ist Produkt von $S$-Objekten
+$f$ und $g$ in $\mathcal{C}/S$.
+\begin{align*}
+(X\times_{S}Y)(T) & =X_{S}(T)\times Y_{S}(T)\\
+\text{(UAE)\ }\Hom_{S}(T,X\times_{S}Y) & \overset{\sim}{\longrightarrow}\Hom_{S}(T,X)\times\Hom_{S}(T,Y)\\
+w & \longmapsto(p\circ w,q\circ w)
+\end{align*}
+
+für alle $h:T\rightarrow S$.
+
+\subsection*{Funktorialität}
+
+Seien $X,Y,X',Y'\in\mathcal{C}/S$, $u:X\rightarrow X'$, $v:Y\rightarrow Y'$
+$S$-Morphismus. $\Longrightarrow\exists_{1}$ Morphismus $u\times_{S}v$
+(oder nur $u\times v$): $X\times_{S}Y\rightarrow X'\times_{S}Y'$.
+d.d.
+\[
+\xymatrix{X\times_{S}Y\ar[rd]|-{u\times v}\ar[r]^{p}\ar[d]_{q} & X\ar[rd]^{u}\\
+Y\ar[rd]_{v} & X'\times Y'\ar[r]\ar[d] & X'\ar[d]\\
+ & Y'\ar[r] & S
+}
+\qquad\text{kommutiert.}
+\]
+
+Setze $u\times v:=(u\circ p,v\circ q)_{S}$ (Universelle Eigenschaft
+von $X'\times_{S}Y'$!)\medskip{}
+
+\textbf{Yoneda-Lemma:}
+\[
+f:X\rightarrow Y\in\Mor(\mathcal{C}/S)\leftrightarrow(f_{S}(T):X_{S}(T)\rightarrow Y_{S}(T))_{T\in\mathcal{C}/S}\text{ funktoriell in }T
+\]
+
+\begin{prop}[8, Eigenschaften des Faserprodukts]
+Sei $X,Y,Z\in\mathcal{C}/S$. Dann gibt es \textbf{kanonische Isomorphismen}
+(funktoriell in $X,Y,Z$),
+\begin{enumerate}
+\item $X\times_{S}S\xrightarrow{\sim}X$
+\item $X\times_{S}Y\xrightarrow{\sim}Y\times_{S}X$
+\item $(X\times_{S}Y)\times_{S}Z\xrightarrow{\sim}X\times_{S}(Y\times_{S}Z)$
+\end{enumerate}
+auf $T$-wertigen Punkten, für alle $h:T\rightarrow S$ $S$-Objekt,
+gegeben durch:
+\begin{align*}
+X_{S}(T)\times S_{S}(T) & \xrightarrow{\sim}X_{S}(T), & (x,h)\mapsto x,\\
+X_{S}(T)\times Y_{S}(T) & \xrightarrow{\sim}Y_{S}(T)\times X_{S}(T), & (x,y)\mapsto(y,x),\\
+(X_{S}(T)\times Y_{S}(T))\times Z_{S}(T) & \xrightarrow{\sim}X_{S}(T)\times(Y_{S}(T)\times Z_{S}(T)), & ((x,y),z)\mapsto(x,(y,z)).
+\end{align*}
+\end{prop}
+
+Sei $Z\in\mathcal{C}/S$. Ein kommutatives Diagramm in $\mathcal{C}$:
+\[
+\xymatrix{Z\ar[r]^{u}\ar[d]_{v}\ar@{}[dr]|{\square} & X\ar[d]^{f}\\
+Y\ar[r]_{g} & S
+}
+\]
+
+heißt \textbf{kartesisch} falls $(u,v)_{S}:Z\rightarrow X\times_{S}Y$
+ein Isomorphismus ist (und dabei automatisch in $\mathcal{C}/S$).
+\[
+\xymatrix{Z\ar[d]_{u}\ar@{-->}[rd]|-{(u,v)_{S}}\ar[r]^{v} & Y\\
+X & X\times_{S}Y\ar[l]^{p}\ar[u]_{q}
+}
+\]
+
+Nach dem Yoneda-Lemma ist dies äquivalent dazu, dass das Diagramm:
+\[
+\xymatrix{\Hom_{\mathcal{C}}(T,Z)\ar[r]^{u(T)}\ar[d]_{v(T)} & \Hom_{\mathcal{C}}(T,X)\ar[d]^{f(T)}\\
+\Hom_{\mathcal{C}}(T,Y)\ar[r]_{g(T)} & \Hom_{\mathcal{C}}(T,S)
+}
+\qquad(*)
+\]
+
+kartesisch ist für alle $T\in\mathcal{C}$ (Beispiel 4.7). Dies ist
+äquivalent zu: %
+\begin{comment}
+Pfeile klappen hier nicht besonders gut, evt. Isomorphismus $\Hom_{\mathcal{C}}(T,Z)\rightarrow\cdots$
+benennen.
+\end{comment}
+\[
+\xymatrix{\Hom_{\mathcal{C}}(T,Z)\overset{!}{\cong}\ar[r]\ar[d]_{s}^{(u,v)_{S}(T)} & \Hom_{\mathcal{C}}(T,X)\times_{\Hom_{\mathcal{C}}(T,S)}\Hom_{\mathcal{C}}(T,Y)\\
+\Hom_{\mathcal{C}}(T,X\times_{S}Y)\ar[ur]_{f\mapsto(p\circ h,q\circ h)}
+}
+\]
+
+mit $\Hom_{\mathcal{C}}(T,X)\times_{\Hom_{\mathcal{C}}(T,S)}\Hom_{\mathcal{C}}(T,Y):=\{(h_{1},h_{2})\mid f\circ f_{1}=g\circ h_{2}\}$.
+\begin{comment}
+Hier ist noch ein weiteres Diagramm, mit sich kreuzenden Pfeilen.
+\end{comment}
+
+\begin{prop}[10]
+Sei das Diagramm
+\[
+\xymatrix{X''\ar[r]^{g'}\ar[d] & X'\ar[r]^{g}\ar[d]\ar@{}[dr]|{\square} & X\ar[d]\\
+S''\ar[r]_{f'} & S'\ar[r]_{f} & S
+}
+\]
+
+kommutativ, mit rechts ein kartesisches Diagramm. Dann gilt:
+\[
+\xymatrix{X''\ar[r]\ar[d]\ar@{}[dr]|{\square} & X'\ar[d]\\
+S''\ar[r] & S'
+}
+\quad\Longleftrightarrow\quad\xymatrix{X''\ar[r]\ar[d]\ar@{}[dr]|{\square} & X\ar[d]\\
+S''\ar[r] & S
+}
+\]
+\end{prop}
+
+\begin{proof}
+Zeige in der Kategorie $\mathcal{C}=\set$, und wende das Yoneda-Lemma,
+$(*)$ an.
+\end{proof}
+
+\section{Faserprodukte von Schemata}
+\begin{prop}[11]
+\end{prop}
+
+\begin{thm}[12]
+\end{thm}
+
+\begin{cor}[13]
+\end{cor}
+
+
+\end{document}

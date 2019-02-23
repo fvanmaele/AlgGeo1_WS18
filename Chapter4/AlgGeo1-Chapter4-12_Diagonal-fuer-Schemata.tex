@@ -1,0 +1,71 @@
+\section{Diagonal für Schemata}
+\begin{prop}[27]
+  Für affine $S$-Schemata
+  \begin{align*}
+    X & =\Spec(B)\overset{u}{\longrightarrow}S=\Spec(R)\\
+    Y & =\Spec(A)\overset{v}{\longrightarrow}S
+  \end{align*}
+
+  und $S$-Morphismus $f=\Spec\varphi:X\rightarrow Y$ zu einem $R$-Algebra
+  Morphismus $\varphi:A\rightarrow B$, entsprechen $\Delta_{X/S}$
+  und $\Gamma_{f}$ den folgenden surjektiven Ringhomomorphismen:
+  \[
+    \begin{array}{rl}
+      \Delta_{B/R}:B\otimes_{R}B & \longrightarrow B\\
+      b\otimes b' & \longmapsto bb'
+    \end{array},\qquad
+    \begin{array}{rl}
+      \Gamma_{\varphi}:A\otimes_{R}B & \longrightarrow B\\
+      a\otimes b & \longmapsto\varphi(a)b
+    \end{array}.
+  \]
+  
+  Insbesondere sind $\Delta_{X/S}$, $\Gamma_{j}$ abgeschlossene Immersionen.
+\end{prop}
+
+Im allgemeinen sind $\Delta_{X/S}$, $\Gamma_{f}$ Immersionen (nicht
+notwendig abgeschlossen!): Seien $Z,Z'\subset X$ Unterschemata. $\Longrightarrow Z\times_{S}Z'\subset X\times_{S}X$
+Unterschemata (Immersionen und stabil unter Basiswechsel und Komposition),
+und
+\[
+  Z\cap Z'=\Delta_{X/S}^{-1}(Z\times_{S}Z')\qquad(*)
+\]
+
+\begin{prop}
+  Seien $X,Y\in\schs$, $f,g:X\rightarrow Y$ $S$-Morphismen. Dann
+  sind $\Delta_{X/S}$, $\Gamma_{f}$, $\ker(f,g)\rightarrow X$ Immersionen.
+\end{prop}
+
+\begin{proof}
+  Es reicht zu zeigen: $\Delta_{X/S}$ ist eine Immersion (und $(2)$
+  in Proposition 26, da ,,Immersion`` stabil ist unter Basiswechsel)
+  lokal bzgl. Ziel. Sei also ohne Einschränkung $S$ affin. Falls $X=\bigcup_{i\in I}U_{i}$
+  offene Überdeckung, dann ist $\Delta_{X/S}(X)=\bigcup_{i\in I}U_{i}\times_{S}U_{i}$
+  offene Überdeckung. 
+  \[
+    \xymatrix{X\ar[r]_{\text{abg. Imm.}} & \bigcup_{i\in I}(U_{i}\times_{S}U_{i})\ar@{^{(}->}_{\text{off. Imm.}}[r] & X\times_{S}X}
+  \]
+  
+  $(*)\Longrightarrow$ ohne Einschränkung, $X$ affin. Wende nun Proposition
+  27 an.
+\end{proof}
+Das Unterschema
+\begin{itemize}
+\item $X\cong\Delta_{X/S}(X)\subset X\times_{S}X$ heißt die \textbf{Diagonale
+    von $X\times_{S}X$}.
+\item $\Gamma_{f}(X)\subset X\times_{S}Y$ heißt der \textbf{Graph von $f$}.
+\end{itemize}
+
+\begin{rem}[29]
+  \mbox{}
+  \begin{enumerate}
+  \item Ein Unterschema $T\subset X\times_{S}Y$ ist der Graph eines $S$-Morphismus
+    $f:X\rightarrow Y$ genau dann, wenn $p|_{T}:T\rightarrow X\times_{S}Y\underset{p}{\rightarrow}X$
+    ein Isomorphismus ist, \emph{denn }$f=q\circ(p|_{T})^{-1}$.
+  \item Im Allgemeinen ist die mengentheoretische Inklusion
+    \[
+      \Delta_{X/S}(X)\subset\{z\in X\times_{S}X\mid f(z)=g(z)\}
+    \]
+    \emph{keine} Gleichheit!
+  \end{enumerate}
+\end{rem}

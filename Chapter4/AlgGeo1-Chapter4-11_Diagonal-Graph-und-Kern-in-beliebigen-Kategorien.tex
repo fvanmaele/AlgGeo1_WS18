@@ -1,0 +1,85 @@
+\section{Diagonal, Graph und Kern in beliebigen Kategorien}
+
+Sei $\mathcal{C}$ Kategorie mit Faserprodukten, $S\in\mathcal{C}$,
+$X,T\in\mathcal{C}/S$, $X_{S}(T)$ Menge der $S$-Morphismen.
+\begin{defn}[24]
+  Der Morphismus
+  \begin{enumerate}
+  \item $\Delta_{X/S}:=\Delta_{u}:=(\id_{X},\id_{X}):X\rightarrow X\times_{S}X$,
+    $u:X\rightarrow S$, heißt \textbf{Diagonale }(diagonaler Morphismus)
+    \textbf{von $X$ über $S$}.
+  \item Sei $f:X\rightarrow Y\in$ Morph/$S$. Der Morphismus
+    \[
+      \Gamma_{j}:=(\id_{X},f)_{S}:X\longrightarrow X\times_{S}Y
+    \]
+    heißt der \textbf{Graph(morphismus) von $f$}.
+  \item Seien $f,g:X\rightarrow Y\in$ Morph/$S$. Ein $S$-Monomorphismus
+    $i:K\rightarrow X$ heißt \textbf{(Differenzen)kern} von $f$ und
+    $g$, falls für alle $T\in\mathcal{C}/S$ die Abbildung $i(T):K_{S}(T)\rightarrow X_{S}(T)$
+    injektiv ist mit
+    \[
+      \text{Bild}(i(T))=\{x\in X_{S}(T)\mid f(T)(x)=g(T)(x)\}.
+    \]
+    Beizchne $K(f,g)_{S}$ oder $\ker(f,g)$, $i$ ,,kanonisch``. Mit
+    anderen Worten, $\ker(f,g)$ separiert den Funktor
+    \begin{align*}
+      \mathcal{C}/S & \longrightarrow\sch\\
+      T & \longmapsto\{x\in X_{S}(T)\mid f(T)(x)=g(T)(x)\}
+    \end{align*}
+  \end{enumerate}
+\end{defn}
+
+\begin{example}[25]
+  In der Kategorie $\mathcal{C}=\set$ gilt für:
+  \[
+    \xymatrix{X\ar[r]^{f,g}\ar[rd]_{u} & Y\ar[d]^{v}\\
+      & S
+    }
+  \]
+  \begin{itemize}
+  \item[]
+    $\begin{array}{rl}
+       \Delta_{u}:X & \longrightarrow X\times X=\{(x,x')\in X\times X\mid u(x)=u(x')\}\\
+       x & \longmapsto(x,x)
+     \end{array}$
+   \item[]
+     $\begin{array}{rl}
+        \Gamma_{j}:X & \longrightarrow X\times_{S}Y=\{(x,y)\in X\times Y\mid u(x)=v(y)\}\\
+        x & \longmapsto(x,f(x))
+      \end{array}$
+    \item[]
+      $\ker(f,g)=\{x\in X\mid f(x)=g(x)\}$
+    \end{itemize}
+    Da $p\circ\Gamma_{j}=\id_{X}$, sind $\Gamma_{j}$ und $\Delta_{X/S}=\Gamma_{\id_{X}}$
+    Monomorphismen.
+\end{example}
+
+\begin{prop}[26]
+  Seien $f,g:X\rightarrow Y$ $S$-Morphismen.
+  \begin{enumerate}
+  \item $\Delta_{X/S}=\Gamma_{\id_{X}}$,
+    
+    $\Gamma_{f}=\ker(\xymatrix{X\times_{S}Y\ar@<1ex>[r]^{q}\ar@<-1ex>[r]_{f\circ p} & Y}
+    )\longrightarrow X\times_{S}Y$ kanonisch.
+  \item Alle Rechtecke des folgenden kommutativen Diagramms sind kartesisch:
+    \[
+      \xymatrix{\ker(f,g)\ar[r]^{\text{canon.}}\ar[d] & X\ar[r]^{f}\ar[d]_{\Gamma_{f}} & Y\ar[d]^{\Delta_{Y/S}}\\
+        X\ar[r]_{\Gamma_{g}} & X\times_{S}Y\ar[r]_{f\times\id_{S}} & Y\times_{S}Y
+      }
+    \]
+  \item Sei $s:S\rightarrow X$ ein Schnitt von $f$ ($f\circ s=\id_{S}$).
+    Dann ist das folgende Diagramm kartesisch:
+    \[
+      \xymatrix{S\ar[r]^{s}\ar[d]_{s} & X\ar[d]^{\Gamma_{s\circ f}}\\
+        X\ar[r]_{\Delta_{X/S}} & \quad X\times_{S}X
+      }
+    \]
+  \end{enumerate}
+\end{prop}
+
+\begin{proof}
+  Nach dem Yoneda-Lemma reicht es, denn Fall $\mathcal{C}=\set$ zu
+  verifizieren. Dies ist elementar aufgrund der Beschreibung in Beispiel
+  25.
+\end{proof}
+Insbesondere existiert $\ker(f,g)$ stets!

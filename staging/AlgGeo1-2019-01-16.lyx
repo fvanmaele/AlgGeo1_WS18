@@ -133,6 +133,585 @@ theorems-chap
 
 \begin_layout Standard
 
+\series bold
+Ab jetzt: 
+\series default
+Alle Faserprodukte mögen in 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ existieren.
+\end_layout
+
+\begin_layout Standard
+Sei Morphismus 
+\begin_inset Formula $h:T\rightarrow S$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+, ein 
+\series bold
+
+\begin_inset Formula $S$
+\end_inset
+
+-Objekt
+\series default
+.
+ (kurz 
+\begin_inset Formula $T$
+\end_inset
+
+, 
+\series bold
+
+\begin_inset Formula $h$
+\end_inset
+
+ Strukturmorphismus
+\series default
+ von 
+\begin_inset Formula $T$
+\end_inset
+
+.)
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Für 
+\begin_inset Formula $S$
+\end_inset
+
+-Objekte 
+\begin_inset Formula $h:T\rightarrow S$
+\end_inset
+
+ und 
+\begin_inset Formula $f:X\rightarrow S$
+\end_inset
+
+ schreibe 
+\begin_inset Formula $\Hom_{S}(T,X):=X_{S}(T)$
+\end_inset
+
+ für Morphismen 
+\begin_inset Formula $w:T\rightarrow X$
+\end_inset
+
+ mit 
+\begin_inset Formula $f\circ w=h$
+\end_inset
+
+, die 
+\series bold
+
+\begin_inset Formula $S$
+\end_inset
+
+-Morphismen
+\series default
+.
+ Nenne 
+\begin_inset Formula $X_{S}(T)$
+\end_inset
+
+ die 
+\series bold
+Menge der 
+\begin_inset Formula $T$
+\end_inset
+
+-wertigen Punkte von 
+\begin_inset Formula $X$
+\end_inset
+
+ (über 
+\begin_inset Formula $S$
+\end_inset
+
+)
+\series default
+.
+ Dies definiert eine Kategorie 
+\begin_inset Formula $\mathcal{C}/S$
+\end_inset
+
+ mit finalem Objekt 
+\begin_inset Formula $\id_{S}$
+\end_inset
+
+.
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Faserprodukt 
+\series default
+
+\begin_inset Formula $X\times_{S}Y$
+\end_inset
+
+ ist Produkt von 
+\begin_inset Formula $S$
+\end_inset
+
+-Objekten 
+\begin_inset Formula $f$
+\end_inset
+
+ und 
+\begin_inset Formula $g$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathcal{C}/S$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{align*}
+(X\times_{S}Y)(T) & =X_{S}(T)\times Y_{S}(T)\\
+\text{(UAE)\ }\Hom_{S}(T,X\times_{S}Y) & \overset{\sim}{\longrightarrow}\Hom_{S}(T,X)\times\Hom_{S}(T,Y)\\
+w & \longmapsto(p\circ w,q\circ w)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+für alle 
+\begin_inset Formula $h:T\rightarrow S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+Funktorialität
+\end_layout
+
+\begin_layout Standard
+Seien 
+\begin_inset Formula $X,Y,X',Y'\in\mathcal{C}/S$
+\end_inset
+
+, 
+\begin_inset Formula $u:X\rightarrow X'$
+\end_inset
+
+, 
+\begin_inset Formula $v:Y\rightarrow Y'$
+\end_inset
+
+ 
+\begin_inset Formula $S$
+\end_inset
+
+-Morphismus.
+ 
+\begin_inset Formula $\Longrightarrow\exists_{1}$
+\end_inset
+
+ Morphismus 
+\begin_inset Formula $u\times_{S}v$
+\end_inset
+
+ (oder nur 
+\begin_inset Formula $u\times v$
+\end_inset
+
+): 
+\begin_inset Formula $X\times_{S}Y\rightarrow X'\times_{S}Y'$
+\end_inset
+
+.
+ d.d.
+\begin_inset Formula 
+\[
+\xymatrix{X\times_{S}Y\ar[rd]|-{u\times v}\ar[r]^{p}\ar[d]_{q} & X\ar[rd]^{u}\\
+Y\ar[rd]_{v} & X'\times Y'\ar[r]\ar[d] & X'\ar[d]\\
+ & Y'\ar[r] & S
+}
+\qquad\text{kommutiert.}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Setze 
+\begin_inset Formula $u\times v:=(u\circ p,v\circ q)_{S}$
+\end_inset
+
+ (Universelle Eigenschaft von 
+\begin_inset Formula $X'\times_{S}Y'$
+\end_inset
+
+!)
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Yoneda-Lemma:
+\series default
+
+\begin_inset Formula 
+\[
+f:X\rightarrow Y\in\Mor(\mathcal{C}/S)\leftrightarrow(f_{S}(T):X_{S}(T)\rightarrow Y_{S}(T))_{T\in\mathcal{C}/S}\text{ funktoriell in }T
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+8, Eigenschaften des Faserprodukts
+\end_layout
+
+\end_inset
+
+Sei 
+\begin_inset Formula $X,Y,Z\in\mathcal{C}/S$
+\end_inset
+
+.
+ Dann gibt es 
+\series bold
+kanonische Isomorphismen
+\series default
+ (funktoriell in 
+\begin_inset Formula $X,Y,Z$
+\end_inset
+
+),
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $X\times_{S}S\xrightarrow{\sim}X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $X\times_{S}Y\xrightarrow{\sim}Y\times_{S}X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(X\times_{S}Y)\times_{S}Z\xrightarrow{\sim}X\times_{S}(Y\times_{S}Z)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Proposition
+auf 
+\begin_inset Formula $T$
+\end_inset
+
+-wertigen Punkten, für alle 
+\begin_inset Formula $h:T\rightarrow S$
+\end_inset
+
+ 
+\begin_inset Formula $S$
+\end_inset
+
+-Objekt, gegeben durch:
+\begin_inset Formula 
+\begin{align*}
+X_{S}(T)\times S_{S}(T) & \xrightarrow{\sim}X_{S}(T), & (x,h)\mapsto x,\\
+X_{S}(T)\times Y_{S}(T) & \xrightarrow{\sim}Y_{S}(T)\times X_{S}(T), & (x,y)\mapsto(y,x),\\
+(X_{S}(T)\times Y_{S}(T))\times Z_{S}(T) & \xrightarrow{\sim}X_{S}(T)\times(Y_{S}(T)\times Z_{S}(T)), & ((x,y),z)\mapsto(x,(y,z)).
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sei 
+\begin_inset Formula $Z\in\mathcal{C}/S$
+\end_inset
+
+.
+ Ein kommutatives Diagramm in 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\xymatrix{Z\ar[r]^{u}\ar[d]_{v}\ar@{}[dr]|{\square} & X\ar[d]^{f}\\
+Y\ar[r]_{g} & S
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+heißt 
+\series bold
+kartesisch
+\series default
+ falls 
+\begin_inset Formula $(u,v)_{S}:Z\rightarrow X\times_{S}Y$
+\end_inset
+
+ ein Isomorphismus ist (und dabei automatisch in 
+\begin_inset Formula $\mathcal{C}/S$
+\end_inset
+
+).
+\begin_inset Formula 
+\[
+\xymatrix{Z\ar[d]_{u}\ar@{-->}[rd]|-{(u,v)_{S}}\ar[r]^{v} & Y\\
+X & X\times_{S}Y\ar[l]^{p}\ar[u]_{q}
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nach dem Yoneda-Lemma ist dies äquivalent dazu, dass das Diagramm:
+\begin_inset Formula 
+\[
+\xymatrix{\Hom_{\mathcal{C}}(T,Z)\ar[r]^{u(T)}\ar[d]_{v(T)} & \Hom_{\mathcal{C}}(T,X)\ar[d]^{f(T)}\\
+\Hom_{\mathcal{C}}(T,Y)\ar[r]_{g(T)} & \Hom_{\mathcal{C}}(T,S)
+}
+\qquad(*)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+kartesisch ist für alle 
+\begin_inset Formula $T\in\mathcal{C}$
+\end_inset
+
+ (Beispiel 4.7).
+ Dies ist äquivalent zu: 
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+Pfeile klappen hier nicht besonders gut, evt.
+ Isomorphismus 
+\begin_inset Formula $\Hom_{\mathcal{C}}(T,Z)\rightarrow\cdots$
+\end_inset
+
+ benennen.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\xymatrix{\Hom_{\mathcal{C}}(T,Z)\overset{!}{\cong}\ar[r]\ar[d]_{s}^{(u,v)_{S}(T)} & \Hom_{\mathcal{C}}(T,X)\times_{\Hom_{\mathcal{C}}(T,S)}\Hom_{\mathcal{C}}(T,Y)\\
+\Hom_{\mathcal{C}}(T,X\times_{S}Y)\ar[ur]_{f\mapsto(p\circ h,q\circ h)}
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+mit 
+\begin_inset Formula $\Hom_{\mathcal{C}}(T,X)\times_{\Hom_{\mathcal{C}}(T,S)}\Hom_{\mathcal{C}}(T,Y):=\{(h_{1},h_{2})\mid f\circ f_{1}=g\circ h_{2}\}$
+\end_inset
+
+.
+ 
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+Hier ist noch ein weiteres Diagramm, mit sich kreuzenden Pfeilen.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+
+Sei das Diagramm
+\begin_inset Formula 
+\[
+\xymatrix{X''\ar[r]^{g'}\ar[d] & X'\ar[r]^{g}\ar[d]\ar@{}[dr]|{\square} & X\ar[d]\\
+S''\ar[r]_{f'} & S'\ar[r]_{f} & S
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition
+kommutativ, mit rechts ein kartesisches Diagramm.
+ Dann gilt:
+\begin_inset Formula 
+\[
+\xymatrix{X''\ar[r]\ar[d]\ar@{}[dr]|{\square} & X'\ar[d]\\
+S''\ar[r] & S'
+}
+\quad\Longleftrightarrow\quad\xymatrix{X''\ar[r]\ar[d]\ar@{}[dr]|{\square} & X\ar[d]\\
+S''\ar[r] & S
+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Zeige in der Kategorie 
+\begin_inset Formula $\mathcal{C}=\set$
+\end_inset
+
+, und wende das Yoneda-Lemma, 
+\begin_inset Formula $(*)$
+\end_inset
+
+ an.
+\end_layout
+
+\begin_layout Section
+Faserprodukte von Schemata
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+11
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+12
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+13
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body

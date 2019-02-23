@@ -1,0 +1,53 @@
+\section{Beispiele}
+
+\paragraph{Produkte affiner Räume}
+
+Sei $R$ ein Ring, und $\mathbb{A}_{R}^{n}=\Spec(R[T_{1},\ldots,T_{n}])$
+der affine Raum über $R$. Für $n,m\geq0$ haben wir 
+\[
+  R[T_{1},\ldots,T_{n}]\otimes_{R}R[T_{n+1},\ldots,T_{n+m}]\cong R[T_{1},\ldots,T_{n+m}]
+\]
+
+und deshalb nach Proposition 11
+\[
+  \mathbb{A}_{R}^{n}\times_{R}\mathbb{A}_{R}^{m}\cong\mathbb{A}_{R}^{n+m}.
+\]
+
+
+\paragraph{Produkte von Prävarietäten}
+
+Sei $k$ ein algebraisch abgeschlossener Körper, und $X$ ein $k$-Schema
+endlichen Typs. Nach 3.14 ist $X_{k}(k)=X_{0}$ (abgeschlossene Punkte
+von $X$).
+\begin{align*}
+  x:\Spec k & \longrightarrow X\longrightarrow\text{Bild}\\
+  \text{\{Integ. Sch. v.e.T./}k\} & \longleftrightarrow\text{\{Präv./}k\}\\
+  X & \longmapsto\{X_{0},\mathcal{O}_{X}|_{X_{0}}\}
+\end{align*}
+
+\begin{lem}[15]
+  Sei $k$ ein Körper und seien $X,Y$ integre $k$-Schemata. Dann
+  ist $X\times_{k}Y$ ein integres $k$-Schemata.
+\end{lem}
+
+Beweis: später. Falls $X,Y$ integral von endlichem Typ über $k$
+sind, dann ist auch $X\times_{k}Y$ integral von endlichem Typ über
+$k$. Denn: $X=\bigcup_{\text{endl.}}X_{i}$, $Y=\bigcup_{\text{endl.}}Y_{j}$
+$\Longrightarrow X\times_{k}Y=\bigcup_{i,j}X_{i}\times_{k}Y_{i}$.
+$\Longrightarrow X=\Spec A$, $Y=\Spec B$ mit $A,B$ endlich erzeugte
+$k$-Algebras. $\Longrightarrow X\times_{k}Y=\Spec A\otimes_{k}B$
+endlich erzeugte $k$-Algebra.\medskip{}
+
+Seien $X_{0}$ und $Y_{0}$ die Prävarietäten zu $X$ bzw. $Y$, und
+$Z_{0}$ die Prävarietät zu $X\times_{k}Y$. Dann gilt nach der universellen
+Eigenschaft des Faserprodukts:
+\[
+  Z_{0}=(X\times_{k}Y)_{k}(k)=X_{k}(k)\times Y_{k}(k)=X_{0}\times Y_{0},
+\]
+
+d.h. das Faserprodukt von 2 Prävarietäten $X_{0},Y_{0}$ ist wieder
+eine Prävarietät $Z_{0}$ (als volle Unterkategorie von $\schk$)
+mit $Z_{0}=X_{0}\times Y_{0}$ (als Mengen). Die Projektionen $Z_{0}\rightarrow X_{0}$
+und $Z_{0}\rightarrow Y_{0}$ sind stetig, aber im Allgemeinen ist
+die Topologie auf $Z_{0}$ \textbf{feiner }als die Produkttopologie
+von $X_{0}$ und $Y_{0}$.

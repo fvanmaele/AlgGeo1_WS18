@@ -1,0 +1,156 @@
+\section{Faserprodukte von Schemata}
+\begin{prop}[11]
+\end{prop}
+
+\begin{thm}[12]
+\end{thm}
+
+\begin{cor}[13]
+\end{cor}
+
+Sei $X,X'\in\schs$, $f:X'\rightarrow X$ Morphismus in $\schs$,
+$g:=f\times_{S}\id_{Y}$.
+\[
+  \xymatrix{Z'=X'\times_{S}Y\ar[r]^{g}\ar[d]_{p'} & Z=X\times_{S}Y\ar[r]^{q}\ar[d]_{p'} & Y\ar[d]\\
+    X'\ar[r]^{f} & X\ar[r] & S
+  }
+\]
+
+kommutiert. Da $q\circ g=q'$ Projektion auf $Y$ ist, ist das große
+und damit auch beide Diagramme kartesisch. (Proposition 10)
+\begin{prop}[14]
+  $f$ induziert einen Homömorphismus von $X'$ auf $f(X')$ und:
+  \begin{enumerate}
+  \item $f_{x'}^{\#}:\mathcal{O}_{X,f(x')}\rightarrow\mathcal{O}_{X',x'}$
+    sei surjektiv $\forall x'\in X'$ und es existiert eine offene affine
+    Umgebung $U'$ von $f(x')$, sodass $f^{-1}(U')$ quasi-kompakt ist,
+    oder
+  \item $f_{x'}^{\#}$ ist bijektiv $\forall x'\in X'$.
+  \end{enumerate}
+  Dann gilt:
+  \begin{enumerate}
+  \item $g$ ist ein Homöomorphismus von $Z'$ auf $g(Z')=p^{-1}(f(X'))$.
+  \item $\forall z'\in Z'$ haben wir das induzierte Diagramm für lokale Ringe:
+    \[
+      \xymatrix{\mathcal{O}_{Z',z'}\ar[d] & \mathcal{O}_{Z,g(z')}\ar[l]^{g_{z'}^{\#}}\ar[d]^{p_{g(z)}^{\#}}\\
+        \mathcal{O}_{X',p'(z')} & \mathcal{O}_{X,p(g(z'))}\ar[l]^{f_{p'(z')}}
+      }
+    \]
+  \end{enumerate}
+  \begin{itemize}
+  \item $g_{z'}^{\#}$ ist surjektiv;
+  \item $\ker(g_{z'}^{\#})$ ist von $p_{g(z')}^{\#}(\ker f_{p'(z')}^{\#})$
+    erzeugt.
+  \end{itemize}
+\end{prop}
+
+\begin{proof}
+  (1), (2) lassen sich lokal bzgl. $S,Y,X$ verifizieren. Ohne Einschränkung
+  sei $S=\Spec R$, $X=\Spec A$, $Y=\Spec B$ affin, $X'$ quasi-kompakt.
+  \[
+    f\leftrightarrow\xymatrix{A\ar[r]^{\varphi}\ar@{->>}[rd]_{\varphi_{1}} & \Gamma(X,\mathcal{O}_{X})\\
+      & A/\ker\varphi\ar@{^{(}->}[u]^{\varphi_{2}}
+    }
+    \quad R\text{-Algebren}
+  \]
+
+  $f$ faktorisiert sich als
+  \[
+    \xymatrix{X'\ar[r]^{f_{1}} & \Spec(A/\ker\varphi)\ar[r]^{f_{2}} & \Spec(A)=X}
+    .
+  \]
+
+  Dann ist $f_{2}$ eine abgeschlossene Immersion, also surjektiv auf
+  Halmen $(f_{p})_{2}$, und ein Homeomorphismus auf einer abgeschlossenen
+  Teilmenge in $X$. In Situation $I$ erfüllt daher mit $f$ auch $f_{1}$
+  Voraussetzung (1). Daher reicht es die folgenden 2 Fälle zu beweisen.
+  \begin{enumerate}
+  \item $f$ ist eine abgeschlossene Immersion ($\hat{=}$ $f_{2}$ Voraussetzung
+    (1))
+  \item $f_{x'}^{\#}$ ist bijektiv für alle $x'\in X'$ ($\hat{=}$ $f_{1}$
+    Voraussetzung (1) + Voraussetzung (2)).
+  \end{enumerate}
+  \begin{lem*}
+    Sei:
+    \[
+      \xymatrix{A\ar@{^{(}->}[r] & \Gamma(X,\mathcal{O}_{X})\\
+        X'\ar[r]^{f} & \Spec(A)
+      }
+      ,\quad X'\text{ quasi-kompakt}
+    \]
+
+    Dann ist $f_{x'}^{\#}$ injektiv für alle $x\in X'$.
+  \end{lem*}
+  \textbf{Vorüberlegung. }Sei $Z$ ein Schemata und $t\in\Gamma(Z,\mathcal{O}_{Z})$,
+  $Z_{T}:=\{z\mid t(z)\neq0\}\subset Z$ offen. Die Einschränkung
+  \[
+    \xymatrix{\Gamma(Z,\mathcal{O}_{Z})\ar[r]\ar[d] & \Gamma(Z_{t},\mathcal{O}_{Z})\\
+      \Gamma(Z,\mathcal{O}_{Z})_{t}\ar@{^{(}-->}[ur]_{\rho_{t}}
+    }
+  \]
+
+  definiert einen Homomorphismus $\rho_{t}$. Dieser ist injektiv, falls
+  $Z$ quasi-kompakt, \textbf{denn} $Z=\bigcup U_{i}$ ist endliche
+  offene affine Überdeckung. Sei $C_{i}=\mathcal{O}_{Z}(U_{i})$, $t_{i}=t|_{U_{i}}$.
+  $\Longrightarrow(\prod_{i}C_{i})_{t}=\prod_{i}(C_{i})_{t_{i}}$ da
+  $i$ endlich. Wir erhalten das kommutative Diagramm:
+  \[
+    \xymatrix{\mathcal{O}_{Z}(Z)\ar[r]\ar@{^{(}-}[d]_{\text{Garbe}} & \Gamma(Z,\mathcal{cO}_{Z})_{t}\ar[r]^{\rho_{t}}\ar@{^{(}-}[d] & \Gamma(Z_{t},\mathcal{O}_{Z})\ar@{^{(}-}[d]^{\text{Garbe}}\\
+      \prod_{i}C_{i}\ar[r] & \prod_{i}(C_{i})_{t_{i}}\ar[r]_{\cong} & \prod_{i}\Gamma(D(t_{i}),\mathcal{O}_{U_{i}})
+    }
+  \]
+  \begin{proof}[Beweis (Lemma)]
+    Sei $\mathfrak{p}\subset A\cong f(x')$. Für alle $s\in A\backslash\mathfrak{p}$
+    sei
+    \[
+      \varphi_{s}:A_{s}\longrightarrow\Gamma(X',\mathcal{O}_{X'})_{\varphi(s)}
+    \]
+
+    der injektive Homomorphismus aus $\varphi$ durch Lokalisierung in
+    $s$, und sei $\psi_{s}$ die injektive Komposition
+    \[
+      \xymatrix{\psi_{s}:A_{s}\ar[r]^{\varphi_{s}} & \Gamma(X',\mathcal{O}_{X'})_{\varphi(s)}\ar[r]^{\rho_{\varphi(s)}} & \Gamma(X'_{\varphi(s)},\mathcal{O}_{X'}).}
+    \]
+
+    Dann ist $X'_{\varphi(s)}=f^{-1}(D(s))$. Da für $s\in A\backslash\mathfrak{p}$
+    die $D(s)$ eine offene Umgebungsbasis von $f(x)'$, und da $f$ ein
+    Homeomorphismus auf sein Bild ist, bilden die $X'_{\varphi(s)}$ eine
+    offene Umgebungsbasis von $x'$. $\Longrightarrow\underset{\underset{s}{\longrightarrow}}{\lim}\ \Gamma(X'_{\varphi(s)},\mathcal{O}_{X'})=\mathcal{O}_{X',x'}$
+    und $\underset{\underset{s}{\longrightarrow}}{\lim}\psi_{s}=f_{x'}^{\#}$
+    $\Longrightarrow f_{x'}^{\#}$ injektiv.
+  \end{proof}
+  Zu 1.) Sei $\xymatrix{X'=\Spec(A/\mathfrak{a})\ar[r]^{f} & \Spec(A)=X}
+  ,$ $\mathfrak{a}\subset A$ Ideal. Proposition 11 $\Longrightarrow Z,Z'$
+  affin, und $g$ entspricht $R$-Algebren
+  \[
+    \xymatrix{A\otimes_{R}B\ar@{->>}[r]^{``g``} & A/\mathfrak{a}\otimes_{R}B\\
+      A\ar[u]^{``p``}\ar[r]_{``f``} & A/\mathfrak{a}\ar[u]_{p'}
+    }
+  \]
+
+  und $``p``(\ker``f``)\subset A\otimes_{R}B=\ker``g``$ $\Longrightarrow g$
+  ist Homöomorphismus auf $g(Z')=p^{-1}(f(x'))$, $x'\in X'$. $\checkmark$\medskip{}
+
+  Zu 2.) Es ist $f^{\#}:f^{-1}\mathcal{O}_{X}\rightarrow\mathcal{O}_{X'}$
+  ein Isomorphismus bzgl. $(X',\mathcal{O}_{X'})\cong(f(x'),\mathcal{O}_{X}|_{f(x')})$
+  Isomorphismus lokal geringter Räume. Leicht zu verifizieren: $(p^{-1}(f(x')),\mathcal{O}_{Z}|_{p^{-1}(f(x'))})$
+  ist ein Faserprodukt von $X'$ mit $Z$ über $X$ in der Kategorie
+  lokal geringter Räume, also erst recht in $\sch$. (vgl. Zusatz in
+  Theorem (Existenz $X\times_{S}Y$)). $\Longrightarrow g$ Isomorphismus
+  \[
+    \xymatrix{(Z',\mathcal{O}_{Z})\ar[r]^{\cong} & (p^{-1}(f(x')),\mathcal{O}_{Z}|_{p^{-1}(f(x'))})}
+    .
+  \]
+\end{proof}
+\begin{example*}
+  Proposition 14 gilt in folgenden Situationen.
+  \begin{enumerate}
+  \item $f$ ist eine Immersion von Schemata.
+  \item $f$ ist der kanonische Morphismus $\Spec\mathcal{O}_{X,x}\rightarrow X$
+    für ein $x\in X$, vgl. (5.4), (2.11).
+  \item $f$ ist der kanonische Morphismus $\Spec\kappa(x)\rightarrow X$
+    für ein $x\in X$.
+  \item Komposition von Morphismen, die Proposition 14 erfüllen (und Proposition
+    10).
+  \end{enumerate}
+\end{example*}

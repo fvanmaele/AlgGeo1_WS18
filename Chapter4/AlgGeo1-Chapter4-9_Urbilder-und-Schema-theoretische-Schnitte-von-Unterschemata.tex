@@ -1,0 +1,53 @@
+\section{Urbilder und Schema-theoretische Schnitte von Unterschemata}
+
+Sei $f:X\rightarrow Y$ ein Morphismus von Schemata und $i:Z\rightarrow Y$
+eine Immersion.
+\[
+  \xymatrix{Z\times_{Y}X\ar[r]\ar[d]_{i_{(X)}} & Z\ar[d]^{i}\\
+    X\ar[r]_{f} & Y
+  }
+\]
+
+Proposition 14 $\Longrightarrow i_{(X)}$ ist surjektiv auf Halmen,
+Homöomorphismus von $Z\times_{Y}X$ auf lokal abgeschlossene Teilmenge
+$f^{-1}(Z)$ (genau $f^{-1}(i(Z))$), d.h. $i_{(X)}$ ist Immersion.
+Fasse $Z\times_{Y}X$ als Unterschema von $X$ auf, das \textbf{Urbild
+  von $Z$ unter $f$}.
+\begin{rem*}
+  \mbox{}
+  \begin{enumerate}
+  \item Ist $Z\subset Y$ offenes Unterschema, so auch $f^{-1}(Z)\subset X$.
+  \item Ist $Z=V(\mathfrak{p})$ abgeschlossenes Unterschema, $\mathfrak{p}\subset\mathcal{O}_{Y}$
+    Idealgarbe, so auch 
+    \begin{align*}
+      f^{-1}(Z) & =V(f^{\ast^{-1}}(\mathfrak{p})\mathcal{O}_{X})\\
+                & =\text{Bild}(f^{\ast^{-1}}(\mathfrak{p})\rightarrow f^{\ast^{-1}}\mathcal{O}_{Y}\rightarrow\mathcal{O}_{X}).
+    \end{align*}
+  \end{enumerate}
+  \textbf{Spezialfall}: Durchschnitt von 2 Unterschemata $i:Y\rightarrow X$,
+  $j:Z\rightarrow X$:
+  \[
+    Y\cap Z:=Y\times_{X}Z=i^{-1}(Z)=j^{-1}(Y)
+  \]
+
+  heißt \textbf{(Schema-theoretischer) Durchschnitt von $Y$ und $Z$
+    in $X$}.
+\end{rem*}
+
+\subsubsection*{Universelle Eigenschaft (aus univ. Eig. Faserprodukt)}
+
+Ein Morphismus $h:T\rightarrow X$ faktorisiert durch $Y\cap Z$ genau
+dann wenn $h$ faktorisiert durch $Y$ und $Z$. Sind $Y=V(\mathfrak{p})$,
+$Z=V(\mathfrak{q})$ abgeschlossene Unterschemata, so folgt:
+\begin{align*}
+  V(\mathfrak{p})\cap V(\mathfrak{q}) & =V(\mathfrak{p}+\mathfrak{q})\\
+  A/\mathfrak{p}\otimes_{A}A/\mathfrak{q} & \cong A/\mathfrak{q+}\mathfrak{p}
+\end{align*}
+
+\begin{example*}
+  $f_{1},\ldots,f_{r},g_{1},\ldots,g_{s}\in R[X_{0},\ldots,X_{n}]$
+  homogene Polynome. Dann ist:
+  \[
+    V_{+}(f_{1},\ldots,f_{r})\cap V_{+}(g_{1},\ldots,g_{s})=V_{+}(f_{1},\ldots,f_{r},g_{1},\ldots,g_{s})\subseteq\mathbb{P}_{R}^{n}
+  \]
+\end{example*}

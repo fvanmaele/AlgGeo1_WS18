@@ -1,0 +1,123 @@
+\section{Eigentliche Morphismen}
+
+(eng. ,,proper``)\medskip{}
+
+Ist $f:X\rightarrow Y$ stetige Abbildung zwischen topologischen Räume,
+dann heißt $f$ \textbf{eigentlich}, wenn die Urbilder kompakter Mengen
+kompat sind.
+
+Sei $X$ Hausdorff, $Y$ lokal kompakt. Dann ist $f$ eigentlich $\Longleftrightarrow f$
+universell abgeschlossen. (Bourbaki, Topologie générale, $I$.10 nr.
+3, Prop. 7)
+\begin{defn}[39]
+  Ein Morphismus $f:X\rightarrow Y$ von Schemata heißt \textbf{eigentlich},
+  wenn:
+  \begin{enumerate}
+  \item $f$ von endlichem Typ.
+  \item $f$ separiert.
+  \item $f$ universell abgeschlossen.
+  \end{enumerate}
+  Ein $Y$-Schema heißt \textbf{eigentlich}, wenn der Strukturmorphismus
+  eigentlich ist. ,,eigentlich`` ist lokal auf dem Ziel.\medskip{}
+\end{defn}
+
+\noindent\shadowbox{\begin{minipage}[t]{1\columnwidth - 2\fboxsep - 2\fboxrule - \shadowsize}%
+    $f:X\rightarrow Y$ heißt von \textbf{endlichem Typ}, wenn $\forall U\subset Y$
+    offen eine Überdeckung $f^{-1}(U)=\bigcup_{i=1}^{n}V_{i}$ existiert,
+    sodass $\forall i:\mathcal{O}_{X}(V_{i})$ ist endlich erzeugte $\mathcal{O}_{Y}(U)$-Algebra.%
+  \end{minipage}}
+\begin{defn}[40]
+  Ein Morphismus $f:X\rightarrow Y$ heißt \textbf{projektiv}, wenn
+  er sich faktorisieren lässt als
+  \[
+    \xymatrix{X\ar[rr]^{f}\ar[rd]_{\text{abg. Imm.}}^{g} &  & Y\\
+      & \mathbb{P}_{Y}^{n}\ar[ur]_{\text{kan. Morph.}}
+    }
+  \]
+
+  für ein $n\in\mathbb{N}$.
+\end{defn}
+
+\begin{prop}[41]
+  Sei $\mathbb{P}$ eine der folgenden Eigenschaften:
+  \begin{itemize}
+  \item[I.] von endlichem Typ;
+  \item[II.] eigentlich;
+  \item[III.] projektiv.
+  \item[IV.] (separiert)
+  \end{itemize}
+  Dann gilt:
+  \begin{enumerate}
+  \item Abgeschlossene Immersionen erfüllen $\mathbb{P}$.
+  \item $\mathbb{P}$ ist stabil unter Komposition.
+  \item $\mathbb{P}$ ist stabil unter Basiswechsel.
+  \item Falls $f:X\rightarrow Z$, $g:Y\rightarrow Z$ $\mathbb{P}$ erfüllen,
+    dann auch $X\times_{Z}Y\rightarrow Z$.
+  \item Erfüllt $X\xrightarrow{f}Y\xrightarrow{g}Z$ $\mathbb{P}$, so auch
+    $f$, falls:
+    \begin{itemize}
+    \item $f$ quasi-kompakt (d.h. $Y$ hat offene affine Überdeckung, deren
+      Urbilder quasi-kompakt sind).
+    \item $g$ separiert, im Falle II, III.
+    \item (stetig im Fall IV)
+    \end{itemize}
+  \end{enumerate}
+\end{prop}
+
+Vergleiche: Lin, ,,Algebraic Geometry and Arithmetic curves``, Prop
+24, 3.16, 3.32, (3.9).
+\begin{proof}[Beweis (Skizze)]
+\end{proof}
+\begin{prop}[42]
+  Sei $f:X\rightarrow Y$ surjektiver Morphismus von $S$-Schemata,
+  und $Y$ separiert von endlichem Typ über $S$, sowie $X$ eigentlich
+  über $S$. Dann ist $Y$ eigentlich über $S$.
+\end{prop}
+
+\begin{proof}
+  $f$ surjektiv $\Longrightarrow\forall T\rightarrow S$ ist $f_{(T)}:X_{T}\rightarrow Y_{T}$
+  surjektiv.
+
+  $\Longrightarrow\xymatrix{A\underset{\text{abg.}}{\subset}Y_{T}\ar[r] & T\\
+    & \varphi^{-1}(A)\underset{\text{abg.}}{\subset}X_{T}\ar@{->>}[ul]_{\varphi}\ar[u]_{X\text{ eig.}\Rightarrow\text{abg.}}
+  }
+  $
+
+  $\Longrightarrow Y_{T}\rightarrow T$ abgeschlossen.
+
+  $\Longrightarrow Y\rightarrow S$ universal abgeschlossen.
+\end{proof}
+\begin{prop}[43]
+  Sei $X$ eigentliches Schema über $S=\Spec A$. Dann ist $\mathcal{O}_{X}(X)$
+  ganz über $A$. Ist $X=\Spec B$ affin, so ist $B$ endlich über $A$.
+\end{prop}
+
+\begin{proof}
+  Lin, 3.17/3.18.
+\end{proof}
+\begin{cor}
+  Sei $X$ reduzierte eigentliche Varietät über $k$. Dann ist $\mathcal{O}_{X}(X)$
+  endlich-dimensionaler $k$-Vektorraum.
+\end{cor}
+
+\begin{thm}[45]
+  Sei $\mathcal{O}_{K}$ Bewertungsring, $K=\Quot(\mathcal{O}_{X})$,
+  $X/\mathcal{O}_{K}$ eigentlich. Dann ist $X_{\mathcal{O}_{K}}(\mathcal{O}_{K})\rightarrow X_{K}(K)$
+  bijektiv.
+\end{thm}
+
+\textbf{Bewertungskriterium }(vgl. Hartshorne, Lin 3.26)
+\[
+  \xymatrix{\Spec K\ar[r]\ar[d] & X\ar[d]^{f}\\
+    \Spec\mathcal{O}_{K}\ar@{-->}[ur]|-{\exists!}\ar[r] & Y
+  }
+\]
+
+$f$ eigentlich $\Longleftrightarrow$ universelle Eigenschaft oben
+erfüllt. (Theorem auf $X\times_{Y}\Spec\mathcal{O}_{K}\rightarrow\Spec\mathcal{O}_{K}$).
+\begin{thm}[46, Lin III 3.30]
+  Jeder projektive Morphismus ist eigentlich.
+\end{thm}
+
+Zum Beispiel: abelsche Varietäten, etwa elliptische Kurven. Theorem
+46 $\Longrightarrow E(\mathbb{Q}_{p})=E(\mathbb{Z}_{p})$.

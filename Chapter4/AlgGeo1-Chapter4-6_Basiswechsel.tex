@@ -1,0 +1,107 @@
+\section{Basiswechsel}
+
+Sei $\mathcal{C}$ eine beliebige Kategorie mit Faserprodukten (z.B.
+$\sch$), $u:S'\rightarrow S$ ein Morphismus in $\mathcal{C}$, $X\rightarrow S$
+ein $S$-Objekt. $\Longrightarrow q:X\times_{S}S'\rightarrow S'$
+ist ein $S'$-Objekt. Bezeichne $u^{\ast}(X)=:q$ oder $X_{(s')}$
+\textbf{Urbild} oder \textbf{Basiswechsel} von $X$ bzgl. $u$.\medskip{}
+
+Sei $f:X\rightarrow Y$ Morphismus von $S$-Objekten. $\Longrightarrow f\times_{S}\id_{S'}:X\times_{S}S'\rightarrow Y\times_{S}S'$
+ist ein Morphismus von $S'$-Objekten. Bezeichne $f\times_{S}\id_{S'}=:u^{*}(f)=:f_{(s')}$
+der \textbf{Basiswechsel von $f$ bzgl. $u$}. Wir erhalten einen
+kontravarianten Funktor
+\[
+  u^{\ast}:\mathcal{C}/S\longrightarrow\mathcal{C}/S'
+\]
+
+der Kategorie von $S$-Objekten in $\mathcal{C}$ zu der Kategorie
+der $S'$-Objekten in $\mathcal{C}$. Nenne $u^{\ast}$ den \textbf{Basiswechsel
+  bzgl. $u$}.
+
+\paragraph{Transitivität des Basiswechsels}
+
+Sei $u':S''\rightarrow S'$ ein weiterer Morphismus in $\mathcal{C}$.
+Nach Proposition 10 ist $(u\circ u')^{\ast}\cong u'^{\ast}\circ u^{\ast}$
+ein Isomorphismus von Funktoren. Sei
+\[
+  \xymatrix{T\ar[r]^{h}\ar[rd] & S'\ar[d]^{u}\\
+    & S
+  }
+  \in\mathcal{C}/S'.
+\]
+
+Wir können $T$ als $S$-Objekt auffassen durch $u\circ h$. Sei $p:X_{(S')}\rightarrow X$
+die erste Projektion. Dann erhalten wir zueinander inverse Bijektionen,
+funktoriell in $T$ und $X$:
+\begin{align*}
+  t & \longmapsto p\circ\\
+  \hom_{S'}(T,X_{(S')}) & \longleftrightarrow\hom_{S}(T,X)\\
+  (t,h)_{S'} & \longmapsfrom t
+\end{align*}
+
+\begin{defn}[16]
+  Sei $\mathbb{P}$ eine Eigenschaft von Morphismen in $\mathcal{C}$,
+  sodass $\id_{X}$ $\mathbb{P}$ erfüllt für alle $X\in\mathcal{C}$.
+  \begin{enumerate}
+  \item $\mathbb{P}$ heißt \textbf{stabil}
+    \begin{enumerate}
+    \item \textbf{unter Komposition}, wenn mit $f:X\rightarrow Y$ und $g:Y\rightarrow Z$
+      auch $g\circ f$ $\mathbb{P}$ erfüllt.
+    \item \textbf{unter Basiswechsel}, wenn mit $f:X\rightarrow S$ auch $f_{(S')}:X_{(S')}\rightarrow S'$
+      für alle Morphismen $S'\rightarrow S$, $\mathbb{P}$ erfüllt.
+    \end{enumerate}
+  \item Wir sagen, dass $f:X\rightarrow S$ $\mathbb{P}$ \textbf{universell}
+    erfüllt, falls $f_{(S')}$ $\mathbb{P}$ erfüllt für alle $S'\rightarrow S$.
+  \end{enumerate}
+\end{defn}
+
+\begin{rem}[17]
+  Sei $\mathbb{P}$ stabil unter Komposition. Dann sind äquivalent:
+  \begin{enumerate}
+  \item $\forall S\in\mathcal{C}$, $\forall S$-Morphismen $f:X'\rightarrow X$,
+    $g:Y'\rightarrow Y$, die $\mathbb{P}$ erfüllen, erfüllt auch $f\times_{S}g$
+    $\mathbb{P}$.
+  \item $\mathbb{P}$ ist stabil unter Basiswechsel.
+  \end{enumerate}
+\end{rem}
+
+\begin{proof}
+  \mbox{}
+  \begin{itemize}
+  \item[$(i)\Rightarrow(ii)$.] $f_{(S')}=f\times_{S}\id_{S'}$.
+  \item[$(ii)\Rightarrow(i)$.] Seien $f,g$ Morphismen (wie in 1) die $\mathbb{P}$ erfüllen. Da
+    $f\times_{S}g=(f\times_{S}\id_{Y})\circ(\id_{X}\times_{S}g)$ sei
+    ohne Einschränkung $g=\id_{Y}$.
+    \begin{align*}
+      f_{(X\times_{S}Y)}=f\times_{S}\id_{Y}: & X'\times_{S}Y=X'\underbrace{\times_{X}}_{\text{bzgl. }f}(X\times_{S}Y)\rightarrow X\times_{S}Y
+    \end{align*}
+    erfüllt $\mathbb{P}$.
+  \end{itemize}
+  In $\sch$ sind fast alle betrachteten Eigenschaften von Morphismen
+  stabil unter Komposition, aber nicht unbedingt unter Basiswechsel,
+  z.B. injektiv oder abgeschlossen.
+\end{proof}
+\begin{example*}
+  Es ist
+  \begin{align*}
+    f:X=\Spec\mathbb{Q}(\xi_{p}) & \longrightarrow\Spec\mathbb{Q}=S\\
+    u:S' & \longrightarrow\Spec\mathbb{Q}
+  \end{align*}
+
+  Homöomorphismus, d.h. injektiv, aber
+  \begin{align*}
+    f_{(S')}:X\times_{S}S' & \longrightarrow\underbrace{S'=\Spec\mathbb{Q}(\xi_{p})}_{1\text{ Punkt}}
+  \end{align*}
+
+  ist nicht injektiv:
+  \[
+    \Spec(\mathbb{Q}(\xi_{p})\otimes\mathbb{Q}_{p})\cong\underbrace{\prod^{p-1}\mathbb{Q}(\xi_{p})}_{p-1\text{ Punkte}}.
+  \]
+\end{example*}
+\textbf{Warnung.} Absolute Eigenschaften von Schemata sind oft nicht
+kompatibel mit Basiswechsel.
+
+Sei $k=\mathbb{F}_{p}(t)$ (nicht perfekt!), $K=\bigcup_{n\geq1}\mathbb{F}_{p}(t^{\frac{1}{p^{n}}})$
+perfekter Abschluss von $k$, $A:=K\otimes_{k}K$. Man kann zeigen:
+$\nil(A)$ ist \emph{nicht} endlich erzeugt, d.h. $\Spec(A)$, $A$
+ist nicht reduzibel und nicht noethersch.
