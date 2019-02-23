@@ -129,3 +129,82 @@ separiert. Insbesondere ist jedes affine Schemata separiert.
     wenn $\Delta_{f_{\red}}$ abgeschlossene Immersion.
   \end{enumerate}
 \end{proof}
+
+\begin{example}[35]
+  Sei $S$ beliebiges Schema, $n\in\mathbb{N}$. Dann ist $\mathbb{A}_{S}^{n}$
+  separiert über $S$, ebenso jedes Unterschema, denn $\mathbb{A}_{S}^{n}=\mathbb{A}_{\mathbb{Z}}^{n}\times_{\Spec\mathbb{Z}}S$
+  und ,,separiert`` ist stabil unter Basiswechsel nach Proposition
+  34.
+\end{example}
+
+\begin{prop}[36]
+  Sei $S=\Spec R$ affin und $X$ ein $S$-Schema. Dann sind äquivalent:
+  \begin{enumerate}
+  \item $X$ ist separiert.
+  \item Für je zwei offene affine $U,V\subseteq X$ ist $U\cap V$ affin,
+    und
+    \begin{align*}
+      \rho_{U,V}:\mathcal{O}_{X}(U)\otimes_{R}\mathcal{O}_{X}(V) & \longrightarrow\mathcal{O}_{X}(U\cap V),\\
+      s\otimes t & \longmapsto s|_{U\cap V}\cdot t|_{V\cap U}.
+    \end{align*}
+  \item Es gibt eine offene affine Überdeckung $X=\bigcup_{i\in I}U_{i}$,
+    sodass $\forall i,j\in I$: $\rho_{U,V}$ ist surjektiv.
+  \end{enumerate}
+\end{prop}
+
+\begin{proof}
+  Für alle offene affine $U,V\subseteq X$ gilt:
+  \[
+    U\cap V=\Delta_{X/S}^{-1}(U\times_{S}V).
+  \]
+
+  ,,abgeschlossene Immersion`` ist lokal auf dem Ziel, daher: $\Delta_{X/S}$
+  ist abgeschlossene Immersion
+
+  $\Longleftrightarrow$ für alle $U,V\subseteq X$ offen affin ist
+  \[
+    U\cap V\xrightarrow{\Delta_{X/S}|_{U\cap V}}U\times_{S}V
+  \]
+
+  abgeschlossene Immersion.
+
+  $\Longleftrightarrow$ für jede offene affine Überdeckung $X=\bigcup_{i\in I}U_{i}$
+  und alle $i,j\in I$ ist
+  \[
+    U_{i}\cap U_{j}\longrightarrow U_{i}\times_{S}U_{j}
+  \]
+
+  abgeschlossene Immersion. Sind $U=\Spec A$, $V=\Spec B$ affin, so
+  ist auch
+  \[
+    U\times_{S}V=\Spec(A\otimes_{R}B)
+  \]
+
+  affin. Daher:
+  \[
+    U\cap V\longrightarrow U\times_{S}V
+  \]
+
+  abgeschlossene Immersion. $\Longleftrightarrow\rho_{U,V}$ surjektiv.
+\end{proof}
+\begin{example}[37]
+  Für jedes Schema $S$ und $n\in\mathbb{N}$ ist $\mathbb{P}_{S}^{n}$
+  separiert über $S$, denn ,,separiert`` ist lokal auf dem Ziel (Proposition
+  34), daher ohne Einschränkung $S=\Spec R$ affin. Sei $\mathbb{P}_{R}^{n}=\bigcup_{i=0}^{n}U_{i}$
+  mit $U_{i}=\Spec R\left[\frac{X_{0}}{X_{i}},\ldots,\frac{\widehat{X_{i}}}{X_{i}},\ldots,\frac{X_{n}}{X_{i}}\right]$
+  und
+  \begin{align*}
+    \rho_{U_{i},U_{j}}:R & \left[\frac{X_{0}}{X_{i}},\ldots,\frac{\widehat{X_{i}}}{X_{i}},\ldots,\frac{X_{n}}{X_{i}}\right]\otimes_{R}R\left[\frac{X_{0}}{X_{j}},\ldots,\frac{\widehat{X_{j}}}{X_{j}},\ldots,\frac{X_{n}}{X_{j}}\right]\\
+                         & \longrightarrow R\left[\frac{X_{0}}{X_{i}},\ldots,\frac{\widehat{X_{i}}}{X_{i}},\ldots,\frac{X_{n}}{X_{i}}\right]\left[\frac{X_{i}}{X_{j}}\right]
+  \end{align*}
+
+  ist surjektiv.
+\end{example}
+
+\begin{example}[38]
+  Sei $k$ algebraisch abgeschlossener Körper, $X$ Prävarietät über
+  $k$, d.h. ganzes Schema von endlichem Typ über $k$. $X$ heißt \textbf{Varietät},
+  wenn $X$ separabel ist. Affine Prävarietäten sind also automatisch
+  Varietäten. $\mathbb{P}^{n}(k)$ ist Varietät (Beispiel 37) $\Longrightarrow$
+  Jede quasi-projektive Prävarietät ist eine Varietät!
+\end{example}

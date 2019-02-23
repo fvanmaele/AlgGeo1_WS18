@@ -1,4 +1,4 @@
-latex = AlgGeo1.tex Chapter1/*.tex Chapter2/*.tex
+latex = AlgGeo1.tex Chapter*/*.tex
 
 .PHONY: scripts
 scripts:
