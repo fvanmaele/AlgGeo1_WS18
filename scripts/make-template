@@ -1,0 +1,19 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+
+use Sort::Key::Natural "natsort";
+use open ":encoding(utf8)", ":std";
+
+while (<STDIN>) {
+    if (/^%%% template:chapter(\d+)/) {
+	my $num = $1;
+
+	for my $val (natsort <Chapter$num/*.tex>) {
+	    $val =~ s/\.tex$//;
+	    print "\\include{$val}\n"
+	}
+    } else {
+	print;
+    }
+}
